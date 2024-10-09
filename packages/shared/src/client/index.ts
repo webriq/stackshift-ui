@@ -7,6 +7,8 @@
  */
 
 // client component exports
+export * from "./link";
+export * from "./image";
 export * from "./button";
 export * from "./demo";
 export * from "./drawer-button";

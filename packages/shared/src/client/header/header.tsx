@@ -16,8 +16,8 @@ export function Header(logoProps: LogoProps) {
   const [open, setOpen] = useState(false);
   return (
     <header className={styles.header}>
+      <p>This is the header component</p>
       <div>
-        <Button>I am a button from library</Button>
         <DrawerButton {...{ open, setOpen }} />
         <Logo {...logoProps} />
         <nav className={open ? styles.open : ""}>
@@ -31,6 +31,8 @@ export function Header(logoProps: LogoProps) {
           <ThemeSwitch />
         </nav>
       </div>
+
+      <Button>I am a button from library</Button>
     </header>
   );
 }
