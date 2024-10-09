@@ -13,7 +13,7 @@
 - [ ] Install dependencies using `pnpm`
   - Run `pnpm i` to install dependencies; the `rebrand` script will automatically rebrand the repo, adjust workflows, and create a commit
 - [ ] Make sure you run `node scripts/rebrand.js` from the root directory to rebrand your repo.
-- [ ] Run `pnpmplop`, and follow prompts to generate server or client components for your library
+- [ ] Run `pnpm plop`, and follow prompts to generate server or client components for your library
 - [ ] 🌟 Enable [private vulnerability reporting](https://github.com/webriq/stackshift-ui/security)(https://github.com/webriq/stackshift-ui/security)(https://github.com/stackshift-ui/stackshift-ui/security)(https://github.com/github.com-webriq:webriq/stackshift-ui.git/security)
 - [ ] Set up `CodeCov`
   - Visit Codecov and set up your repo
