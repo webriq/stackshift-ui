@@ -1,6 +1,6 @@
 {
-  "owner": "react18-tools",
-  "repo": "turborepo-template",
-  "packageName": "react18-loaders",
-  "title": "React 18 Loaders"
+  "packageName": "stackshift-ui.git",
+  "owner": "github.com-webriq:webriq",
+  "repo": "stackshift-ui.git",
+  "title": "Stackshift Ui.git"
 }
