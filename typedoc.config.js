@@ -1,7 +1,7 @@
 /** @type {import('typedoc').TypeDocOptions} */
 module.exports = {
   tsconfig: "tsconfig.docs.json",
-  name: "Stackshift Ui.git",
+  name: "StackShift UI",
   entryPoints: ["./lib/src"],
   exclude: ["**/*.test.tsx", "**/index.ts", "**/declaration.d.ts"],
   entryPointStrategy: "Expand",

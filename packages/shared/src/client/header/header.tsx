@@ -1,8 +1,9 @@
 import { useState } from "react";
+import { Logo, LogoProps } from "../../server";
+import { Button } from "../button";
+import { DrawerButton } from "../drawer-button";
 import styles from "./header.module.scss";
 import ThemeSwitch from "./theme-switch";
-import { DrawerButton } from "../drawer-button";
-import { Logo, LogoProps } from "../../server";
 
 /**
  * # Header
@@ -16,15 +17,16 @@ export function Header(logoProps: LogoProps) {
   return (
     <header className={styles.header}>
       <div>
+        <Button>I am a button from library</Button>
         <DrawerButton {...{ open, setOpen }} />
         <Logo {...logoProps} />
         <nav className={open ? styles.open : ""}>
           <a
-            href="https://mayank-chaudhari.vercel.app/"
+            href="https://stackshift-ui.webriq.com/"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.author}>
-            By Mayank Chaudhari
+            By WebriQ
           </a>
           <ThemeSwitch />
         </nav>

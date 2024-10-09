@@ -45,7 +45,7 @@
     "r18gs": "^2.0.0",
     "react-live": "^4.1.7",
     "react18-loaders": "latest",
-    "stackshift-ui.git": "workspace:*"
+    "stackshift-ui": "workspace:*"
   },
   "peerDependencies": {
     "@types/react": "16.8 - 19",

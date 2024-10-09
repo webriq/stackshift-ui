@@ -13,11 +13,11 @@
 - [ ] Install dependencies using `pnpm`
   - Run `pnpm i` to install dependencies; the `rebrand` script will automatically rebrand the repo, adjust workflows, and create a commit
 - [ ] Make sure you run `node scripts/rebrand.js` from the root directory to rebrand your repo.
-- [ ] Run `yarn plop`, and follow prompts to generate server or client components for your library
-- [ ] 🌟 Enable [private vulnerability reporting](https://github.com/github.com-webriq:webriq/stackshift-ui.git/security)
+- [ ] Run `pnpmplop`, and follow prompts to generate server or client components for your library
+- [ ] 🌟 Enable [private vulnerability reporting](https://github.com/webriq/stackshift-ui/security)(https://github.com/webriq/stackshift-ui/security)(https://github.com/stackshift-ui/stackshift-ui/security)(https://github.com/github.com-webriq:webriq/stackshift-ui.git/security)
 - [ ] Set up `CodeCov`
   - Visit Codecov and set up your repo
-  - Create [repository secret]((https://github.com/github.com-webriq:webriq/stackshift-ui.git/settings/secrets/actions)) for `CODECOV_TOKEN`
+  - Create [repository secret](<(https://github.com/webriq/stackshift-ui/settings/secrets/actions)>)((https://github.com/webriq/stackshift-ui/settings/secrets/actions))((https://github.com/stackshift-ui/stackshift-ui/settings/secrets/actions))((https://github.com/github.com-webriq:webriq/stackshift-ui.git/settings/secrets/actions)) for `CODECOV_TOKEN`
 - [ ] Set up `CodeClimate`
   - Visit CodeClimate and set up your repo
   - Create [repository secret] for `CC_TEST_REPORTER_ID`
@@ -31,7 +31,7 @@
 - [ ] Create your library and update examples
 - [ ] Update README as required
 - [ ] Set up GitHub pages to deploy docs
-  - Go to [repo settings](https://github.com/github.com-webriq:webriq/stackshift-ui.git/settings/pages) -> pages (On the left panel); Select deploy from a branch; Then Select `main` and `/docs`
+  - Go to [repo settings](https://github.com/webriq/stackshift-ui/settings/pages)(https://github.com/webriq/stackshift-ui/settings/pages)(https://github.com/stackshift-ui/stackshift-ui/settings/pages)(https://github.com/github.com-webriq:webriq/stackshift-ui.git/settings/pages) -> pages (On the left panel); Select deploy from a branch; Then Select `main` and `/docs`
 - [ ] (Optional) Set up [Deepsource](https://app.deepsource.com/login) for static code analysis
 - [ ] Push your changes/Create PR and see your library being automatically tested and published
 - [ ] Optionally deploy your examples to Vercel.
@@ -49,4 +49,4 @@ Go to [repository settings] and configure the following:
 
 <hr />
 
-<p align="center" style="text-align:center">with 💖 by <a href="https://mayank-chaudhari.vercel.app" target="_blank">Mayank Kumar Chaudhari</a></p>
+<p align="center" style="text-align:center">with 💖 by <a href="https://stackshift-ui.webriq.com" target="_blank">WebriQ</a></p>

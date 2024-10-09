@@ -33,7 +33,7 @@ This TurboRepo comprises the following packages/examples, all written in [TypeSc
 
 ## Automated File Generation
 
-Simply execute `yarn turbo gen` and follow the prompts to automatically generate your new component along with a test file and dependency linking, adhering to best practices.
+Simply execute `pnpmturbo gen` and follow the prompts to automatically generate your new component along with a test file and dependency linking, adhering to best practices.
 
 ### Build
 
@@ -88,8 +88,8 @@ Explore more about TurboRepo and Next.js through the following links:
 
 > Quick tip: Remove all stale branches with `git branch --merged main | grep -v '^[ *]*main$' | xargs git branch -d`
 
-> <img src="https://raw.githubusercontent.com/mayank1513/mayank1513/main/popper.png" style="height: 20px"/> Consider enrolling in [our courses](https://mayank-chaudhari.vercel.app/courses) or [sponsoring](https://github.com/sponsors/mayank1513) our work.
+> <img src="https://raw.githubusercontent.com/mayank1513/mayank1513/main/popper.png" style="height: 20px"/> Consider enrolling in [our courses](https://stackshift-ui.webriq.com/courses) or [sponsoring](https://github.com/sponsors/mayank1513) our work.
 
 <hr />
 
-<p align="center" style="text-align:center">with 💖 by <a href="https://mayank-chaudhari.vercel.app" target="_blank">Mayank Kumar Chaudhari</a></p>
+<p align="center" style="text-align:center">with 💖 by <a href="https://stackshift-ui.webriq.com" target="_blank">WebriQ</a></p>

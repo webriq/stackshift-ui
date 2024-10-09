@@ -1,9 +1,9 @@
-import MyButton from "./button";
-import { LandingPage } from "@repo/shared/dist/server";
 import { Demo } from "@repo/shared";
+import { LandingPage } from "@repo/shared/dist/server";
+import MyButton from "./button";
 
 export const metadata = {
-  title: "Stackshift Ui.git",
+  title: "Stackshift UI",
 };
 
 /** next.js landing page */

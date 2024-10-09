@@ -161,5 +161,5 @@ execSync("pnpm i");
 
 // clean lib/src and craete commit
 execSync(
-  'rm -rf ./lib/src/ && git add . && git commit -m "Rebrand 💖 <a href="https://mayank-chaudhari.vercel.app" target="_blank">Mayank Kumar Chaudhari</a> [skip ci]" && turbo telemetry disable',
+  'rm -rf ./lib/src/ && git add . && git commit -m "Rebrand 💖 <a href="https://stackshift-ui.webriq.com" target="_blank">WebriQ</a> [skip ci]" && turbo telemetry disable',
 );

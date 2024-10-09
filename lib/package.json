@@ -1,6 +1,6 @@
 {
-  "name": "stackshift-ui.git",
-  "author": "Mayank Kumar Chaudhari <https://mayank-chaudhari.vercel.app>",
+  "name": "stackshift-ui",
+  "author": "WebriQ <https://stackshift-ui.webriq.com>",
   "private": false,
   "version": "0.0.0",
   "description": "",
@@ -8,9 +8,9 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "repository": "github:github.com-webriq:webriq/stackshift-ui.git",
-  "bugs": "https://github.com/github.com-webriq:webriq/stackshift-ui.git/issues",
-  "homepage": "https://github.com/github.com-webriq:webriq/stackshift-ui.git/#readme",
+  "repository": "github:webriq/stackshift-ui",
+  "bugs": "https://github.com/webriq/stackshift-ui/issues",
+  "homepage": "https://github.com/webriq/stackshift-ui/#readme",
   "sideEffects": false,
   "files": [
     "dist/**"
@@ -56,23 +56,7 @@
       "optional": true
     }
   },
-  "funding": [
-    {
-      "type": "github",
-      "url": "https://github.com/sponsors/github.com-webriq:webriq"
-    },
-    {
-      "type": "github",
-      "url": "https://github.com/sponsors/mayank1513"
-    }
-  ],
   "keywords": [
-    "React",
-    "React Loaders",
-    "React 18",
-    "React 19",
-    "Next.js",
-    "Next.js 14",
     "Next.js 15",
     "React server components",
     "Customizable",

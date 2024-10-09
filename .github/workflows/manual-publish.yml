@@ -6,7 +6,7 @@ on:
 
 jobs:
   publish:
-    if: github.event.repository.owner.login == 'github.com-webriq:webriq'
+    if: github.event.repository.owner.login == 'webriq:webriq'
     runs-on: ubuntu-latest
     permissions:
       contents: write

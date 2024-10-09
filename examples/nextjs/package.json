@@ -20,7 +20,7 @@
     "react-mouse-trails": "^0.0.4",
     "react18-loaders": "latest",
     "webgl-generative-particles": "^0.0.1",
-    "stackshift-ui.git": "workspace:*"
+    "stackshift-ui": "workspace:*"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.2.13",

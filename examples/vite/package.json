@@ -18,7 +18,7 @@
     "react-mouse-trails": "^0.0.4",
     "react18-loaders": "latest",
     "react18-themes": "^3.2.0",
-    "stackshift-ui.git": "workspace:*"
+    "stackshift-ui": "workspace:*"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
