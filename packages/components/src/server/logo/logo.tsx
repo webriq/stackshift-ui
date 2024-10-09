@@ -1,6 +1,6 @@
+import rebrandingConfig from "@stackshift-ui/scripts/rebrand.config.json";
 import { FC, HTMLProps } from "react";
 import styles from "./logo.module.scss";
-import rebrandingConfig from "@repo/scripts/rebrand.config.json";
 
 const { repo } = rebrandingConfig;
 

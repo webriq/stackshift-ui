@@ -1,10 +1,10 @@
-import React, { useCallback } from "react";
-import "./styles.css";
-import { Bars1 } from "react18-loaders/dist/server";
-import { LoaderContainer, useLoader } from "react18-loaders";
-import { LandingPage, Layout } from "@repo/shared/dist/server";
+import { Demo, Header } from "@stackshift-ui/components";
+import { LandingPage, Layout } from "@stackshift-ui/components/dist/server";
 import { Core } from "nextjs-darkmode";
-import { Demo, Header } from "@repo/shared";
+import React, { useCallback } from "react";
+import { LoaderContainer, useLoader } from "react18-loaders";
+import { Bars1 } from "react18-loaders/dist/server";
+import "./styles.css";
 
 /** Vite App */
 function App(): JSX.Element {

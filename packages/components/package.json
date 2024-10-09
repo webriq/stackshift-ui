@@ -1,5 +1,5 @@
 {
-  "name": "@repo/shared",
+  "name": "@stackshift-ui/components",
   "version": "0.0.0",
   "private": true,
   "sideEffects": false,
@@ -18,8 +18,8 @@
     "test": "vitest run --coverage"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@stackshift-ui/eslint-config": "workspace:*",
+    "@stackshift-ui/typescript-config": "workspace:*",
     "@testing-library/react": "^16.0.1",
     "@types/node": "^22.7.0",
     "@types/react": "^18.3.9",
@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "@mayank1513/fork-me": "^2.1.2",
-    "@repo/scripts": "workspace:*",
+    "@stackshift-ui/scripts": "workspace:*",
     "nextjs-darkmode": "^1.0.4",
     "nextjs-themes": "^4.0.3",
     "r18gs": "^2.0.0",

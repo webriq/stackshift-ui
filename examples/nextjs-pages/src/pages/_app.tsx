@@ -1,5 +1,5 @@
 import "@/styles/globals.css";
-import { ComponentProvider } from "@repo/shared";
+import { ComponentProvider } from "@stackshift-ui/components";
 import type { AppProps } from "next/app";
 
 import { Button, Image, Link } from "@/components/index";

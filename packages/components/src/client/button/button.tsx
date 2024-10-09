@@ -7,12 +7,12 @@ export interface ButtonProps extends HTMLProps<HTMLButtonElement> {
 }
 
 const displayName = "Button";
-export const Button = ({ children, ...props }: ButtonProps) => {
+export const Button = ({ children, type, ...props }: ButtonProps) => {
   const { [displayName]: Component = "button" } = useComponents();
 
   const className = [props.className, styles["button"]].filter(Boolean).join(" ");
   return (
-    <Component {...props} className={className} data-testid="button">
+    <Component type="button" {...props} className={className} data-testid="button">
       {children}
     </Component>
   );

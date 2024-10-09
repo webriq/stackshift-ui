@@ -1,10 +1,10 @@
-import type { MetaFunction, LinksFunction } from "@remix-run/node";
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
+import { Header } from "@stackshift-ui/components";
+import { Layout } from "@stackshift-ui/components/dist/server";
 import { Analytics } from "@vercel/analytics/react";
-import styles from "./styles.css";
-import { Layout } from "@repo/shared/dist/server";
 import { Core } from "nextjs-darkmode";
-import { Header } from "@repo/shared";
+import styles from "./styles.css";
 
 /** Page metadata */
 export const meta: MetaFunction = () => [

@@ -1,9 +1,9 @@
+import featured from "@stackshift-ui/scripts/featured.json";
+import rebrandingConfig from "@stackshift-ui/scripts/rebrand.config.json";
 import { ReactNode } from "react";
-import styles from "./landing-page.module.scss";
 import { Cards } from "../cards";
 import { Logo } from "../logo";
-import featured from "@repo/scripts/featured.json";
-import rebrandingConfig from "@repo/scripts/rebrand.config.json";
+import styles from "./landing-page.module.scss";
 
 interface LandingPageProps {
   title: string;

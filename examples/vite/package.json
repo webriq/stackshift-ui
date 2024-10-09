@@ -11,7 +11,7 @@
     "lint": "eslint src/"
   },
   "dependencies": {
-    "@repo/shared": "workspace:*",
+    "@stackshift-ui/components": "workspace:*",
     "nextjs-darkmode": "^1.0.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -21,8 +21,8 @@
     "stackshift-ui": "workspace:*"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@stackshift-ui/eslint-config": "workspace:*",
+    "@stackshift-ui/typescript-config": "workspace:*",
     "@types/react": "^18.3.9",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",

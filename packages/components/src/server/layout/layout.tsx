@@ -1,5 +1,5 @@
 import { ForkMe } from "@mayank1513/fork-me/server";
-import config from "@repo/scripts/rebrand.config.json";
+import config from "@stackshift-ui/scripts/rebrand.config.json";
 import { ReactNode } from "react";
 import styles from "./layout.module.scss";
 

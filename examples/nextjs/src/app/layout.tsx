@@ -1,12 +1,12 @@
-import "./styles.css";
-import "react18-loaders/dist/index.css";
-import { Core } from "nextjs-darkmode";
-import { Layout } from "@repo/shared/dist/server";
-import { GlobalLoader, Header } from "@repo/shared";
+import { GlobalLoader, Header } from "@stackshift-ui/components";
+import { Layout } from "@stackshift-ui/components/dist/server";
 import { Inter } from "next/font/google";
 import Link from "next/link";
+import { Core } from "nextjs-darkmode";
 import { MouseTrail } from "react-mouse-trails";
+import "react18-loaders/dist/index.css";
 import { Particles } from "webgl-generative-particles/react";
+import "./styles.css";
 
 const inter = Inter({ subsets: ["latin"] });
 

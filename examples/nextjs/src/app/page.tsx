@@ -1,5 +1,5 @@
-import { Demo } from "@repo/shared";
-import { LandingPage } from "@repo/shared/dist/server";
+import { Demo } from "@stackshift-ui/components";
+import { LandingPage } from "@stackshift-ui/components/dist/server";
 import MyButton from "./button";
 
 export const metadata = {

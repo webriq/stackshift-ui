@@ -1,5 +1,5 @@
 import { default as LocalButton } from "@/components/Button";
-import { Button, Header, Image, Link } from "@repo/shared";
+import { Button, Header, Image, Link } from "@stackshift-ui/components";
 import { default as NextLink } from "next/link";
 
 export default function Home() {
