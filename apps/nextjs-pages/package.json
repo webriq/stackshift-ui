@@ -1,0 +1,32 @@
+{
+  "name": "@example/nextjs-pages",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@stackshift-ui/system": "workspace:*",
+    "@stackshift-ui/react": "workspace:*",
+    "react": "^18",
+    "react-dom": "^18",
+    "next": "14.2.15"
+  },
+  "peerDependencies": {
+    "@stackshift-ui/system": ">=0.0.0",
+    "@stackshift-ui/react": ">=0.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.15"
+  }
+}

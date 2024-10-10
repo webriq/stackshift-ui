@@ -1,5 +1,14 @@
 packages:
-  - "examples/*"
-  - "packages/*"
+  - "apps/*"
+  - "packages/components/common/*"
+  - "packages/components/sections/*"
+  - "packages/components/core/*"
+  - "packages/config/*"
+  - "packages/core/*"
+  - "packages/shared/*"
   - "lib"
   - "scripts"
+
+hoistPatterns:
+  - "react"
+  - "react-dom"

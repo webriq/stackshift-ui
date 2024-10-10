@@ -1,6 +1,6 @@
 {
-  "packageName": "stackshift-ui",
-  "owner": "webriq",
-  "repo": "stackshift-ui",
+  "packageName": "components-library",
+  "owner": "stackshift-ui",
+  "repo": "components-library",
   "title": "StackShift UI"
 }
