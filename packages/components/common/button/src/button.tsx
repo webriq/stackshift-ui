@@ -10,7 +10,11 @@ export const Button = ({ children, type, ...props }: ButtonProps) => {
   const { [displayName]: Component = "button" } = useStackShiftUIComponents();
 
   return (
-    <Component type="button" {...props} data-testid={displayName}>
+    <Component
+      className="mb-4 bg-orange-200 text-white"
+      type="button"
+      {...props}
+      data-testid={displayName}>
       {children}
     </Component>
   );
