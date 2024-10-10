@@ -15,7 +15,6 @@ interface ComponentProviderProps {
 }
 
 export const ComponentProvider: React.FC<ComponentProviderProps> = ({ components, children }) => {
-  console.log("🚀 ComponentProvider ~ components tsup-ui 222:", components);
   return <ComponentContext.Provider value={components}>{children}</ComponentContext.Provider>;
 };
 

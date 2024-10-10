@@ -7,11 +7,10 @@ export interface ButtonProps extends HTMLProps<HTMLButtonElement> {
 
 const displayName = "Button";
 export const Button = ({ children, type, ...props }: ButtonProps) => {
-  console.log("useComponents 111 43242", useComponents);
   const { [displayName]: Component = "button" } = useComponents();
 
   return (
-    <Component type="button" {...props} data-testid="button">
+    <Component type="button" {...props} data-testid={displayName}>
       {children}
     </Component>
   );
