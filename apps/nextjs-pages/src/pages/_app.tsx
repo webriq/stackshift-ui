@@ -6,7 +6,7 @@ import { Button, Image, Link } from "@/components/index";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <StackShiftUIProvider components={{ Link, Image }}>
+    <StackShiftUIProvider components={{ Button, Link, Image }}>
       <Component {...pageProps} />
     </StackShiftUIProvider>
   );
