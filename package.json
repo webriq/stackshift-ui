@@ -4,14 +4,15 @@
   "scripts": {
     "build": "turbo build",
     "clean": "turbo clean",
-    "dev": "turbo dev",
+    "dev": "pnpm next:pages",
     "doc": "node scripts/doc.js && typedoc",
     "format": "prettier --write \"**/*.{ts,tsx,md,css,scss}\"",
     "lint": "turbo lint",
     "test": "turbo test",
     "typecheck": "turbo typecheck",
     "preinstall": "node scripts/update-pm.js",
-    "rebrand": "node scripts/rebrand.js"
+    "rebrand": "node scripts/rebrand.js",
+    "next:pages": "pnpm --filter @stackshift-ui/next-pages dev"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.8",
