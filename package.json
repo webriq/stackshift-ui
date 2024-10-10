@@ -30,7 +30,8 @@
     "typedoc-plugin-missing-exports": "^3.0.0",
     "typedoc-plugin-rename-defaults": "^0.7.1",
     "typedoc-plugin-zod": "^1.2.1",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "concurrently": "^7.6.0"
   },
   "packageManager": "pnpm@9.12.1",
   "engines": {
