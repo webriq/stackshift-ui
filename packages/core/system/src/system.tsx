@@ -14,9 +14,12 @@ interface ComponentProviderProps {
   children: ReactNode;
 }
 
-export const ComponentProvider: React.FC<ComponentProviderProps> = ({ components, children }) => {
+export const StackShiftUIProvider: React.FC<ComponentProviderProps> = ({
+  components,
+  children,
+}) => {
   return <ComponentContext.Provider value={components}>{children}</ComponentContext.Provider>;
 };
 
 // Hook to use the components
-export const useComponents = () => useContext(ComponentContext);
+export const useStackShiftUIComponents = () => useContext(ComponentContext);

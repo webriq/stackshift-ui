@@ -1,4 +1,4 @@
-import { useComponents } from "@stackshift-ui/system";
+import { useStackShiftUIComponents } from "@stackshift-ui/system";
 import type { HTMLProps, ReactNode } from "react";
 
 export interface ImageProps extends HTMLProps<HTMLImageElement> {
@@ -17,7 +17,7 @@ export interface ImageProps extends HTMLProps<HTMLImageElement> {
  */
 const displayName = "Image";
 export const Image = ({ children, ...props }: ImageProps) => {
-  const components = useComponents();
+  const components = useStackShiftUIComponents();
   const { [displayName]: Component = "img" } = components;
 
   return (

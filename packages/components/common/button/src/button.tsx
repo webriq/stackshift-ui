@@ -1,4 +1,4 @@
-import { useComponents } from "@stackshift-ui/system";
+import { useStackShiftUIComponents } from "@stackshift-ui/system";
 import type { HTMLProps, ReactNode } from "react";
 
 export interface ButtonProps extends HTMLProps<HTMLButtonElement> {
@@ -7,7 +7,7 @@ export interface ButtonProps extends HTMLProps<HTMLButtonElement> {
 
 const displayName = "Button";
 export const Button = ({ children, type, ...props }: ButtonProps) => {
-  const { [displayName]: Component = "button" } = useComponents();
+  const { [displayName]: Component = "button" } = useStackShiftUIComponents();
 
   return (
     <Component type="button" {...props} data-testid={displayName}>

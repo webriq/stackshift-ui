@@ -1,4 +1,4 @@
-import { useComponents } from "@stackshift-ui/system";
+import { useStackShiftUIComponents } from "@stackshift-ui/system";
 import type { HTMLProps, ReactNode } from "react";
 
 export interface LinkProps extends HTMLProps<HTMLLinkElement> {
@@ -17,7 +17,7 @@ export interface LinkProps extends HTMLProps<HTMLLinkElement> {
  */
 const displayName = "Link";
 export const Link = ({ children, ...props }: LinkProps) => {
-  const components = useComponents();
+  const components = useStackShiftUIComponents();
   const { [displayName]: Component = "span" } = components;
 
   return (

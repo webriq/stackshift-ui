@@ -21,6 +21,7 @@
     "@stackshift-ui/button": "workspace:*",
     "@stackshift-ui/image": "workspace:*",
     "@stackshift-ui/link": "workspace:*",
+    "@stackshift-ui/system": "workspace:*",
     "@stackshift-ui/eslint-config": "workspace:*",
     "@stackshift-ui/typescript-config": "workspace:*",
     "@testing-library/react": "^16.0.1",
