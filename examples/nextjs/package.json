@@ -18,8 +18,7 @@
     "react-dom": "^18.3.1",
     "react-mouse-trails": "^0.0.4",
     "react18-loaders": "latest",
-    "webgl-generative-particles": "^0.0.1",
-    "stackshift-ui": "workspace:*"
+    "webgl-generative-particles": "^0.0.1"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.2.13",

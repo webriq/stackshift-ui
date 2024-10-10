@@ -5,8 +5,6 @@ packages:
   - "packages/components/core/*"
   - "packages/config/*"
   - "packages/core/*"
-  - "packages/shared/*"
-  - "lib"
   - "scripts"
 
 hoistPatterns:

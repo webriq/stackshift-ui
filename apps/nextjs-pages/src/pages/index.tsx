@@ -18,7 +18,7 @@ export default function Home() {
           If the overrides works, the below components should match with the default ones above.
         </p>
 
-        <Button className="mb-4">Local Orange Button</Button>
+        <Button className="mb-4 bg-orange-500 text-white">Button from @stackshift-ui/react</Button>
         <br />
         <Link href="/anotherpage" className="text-blue-500 hover:underline">
           Go to another page
