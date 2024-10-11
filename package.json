@@ -5,8 +5,8 @@
     "build": "turbo build",
     "clean": "turbo clean",
     "dev": "turbo run dev",
-    "storybook": "turbo run dev --filter @example/storybook",
-    "demo": "turbo run dev --filter @example/nextjs-pages",
+    "storybook": "turbo run dev --filter @apps/storybook",
+    "demo": "turbo run dev --filter @apps/nextjs-pages",
     "doc": "node scripts/doc.js && typedoc",
     "format": "prettier --write \"**/*.{ts,tsx,md,css,scss}\"",
     "lint": "turbo lint",
@@ -14,7 +14,7 @@
     "typecheck": "turbo typecheck",
     "preinstall": "node scripts/update-pm.js",
     "rebrand": "node scripts/rebrand.js",
-    "next:pages": "pnpm --filter @example/nextjs-pages dev"
+    "next:pages": "pnpm --filter @apps/nextjs-pages dev"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.9",
