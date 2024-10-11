@@ -1,6 +1,5 @@
 import { YoutubeVideo } from "@stackshift-ui/react";
 import type { Meta, StoryObj } from "@storybook/react";
-import React from "react";
 
 const meta = {
   title: "Common/Youtube Video",

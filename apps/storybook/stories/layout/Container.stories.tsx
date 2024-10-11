@@ -1,6 +1,5 @@
 import { Container, Section } from "@stackshift-ui/react";
 import type { Meta, StoryObj } from "@storybook/react";
-import React from "react";
 
 const meta: Meta<typeof Container> = {
   title: "Layout/Container",

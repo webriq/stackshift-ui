@@ -1,6 +1,5 @@
 import { HowItWorks } from "@stackshift-ui/react";
 import type { Meta, StoryObj } from "@storybook/react";
-import React from "react";
 
 const meta: Meta<typeof HowItWorks> = {
   title: "Components/How It Works",

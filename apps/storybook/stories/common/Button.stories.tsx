@@ -7,17 +7,12 @@ const meta: Meta<typeof Button> = {
   tags: ["autodocs"],
   args: {
     children: "Submit",
+    type: "button",
+    variant: "solid",
     link: {
-      externalLink: null,
-      internalLink: "initial-values-test",
-      label: "About Us",
-      linkInternal: {
-        _ref: "020142ce-cf61-4671-a5db-80b13a08f2d4",
-        _type: "reference",
-      },
-      linkTarget: "_self",
-      linkType: "linkInternal",
-      type: "linkInternal",
+      href: "initial-values-test",
+      target: "_self",
+      type: "internal",
     },
   },
   argTypes: {

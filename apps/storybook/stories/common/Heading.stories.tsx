@@ -1,6 +1,5 @@
 import { Heading } from "@stackshift-ui/react";
 import type { Meta, StoryObj } from "@storybook/react";
-import React from "react";
 
 const meta: Meta<typeof Heading> = {
   title: "Common/Heading",

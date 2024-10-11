@@ -1,22 +1,4 @@
 {
-  "compilerOptions": {
-    "jsx": "react"
-  },
-  "compilerOptions": {
-    "jsx": "react"
-  },
-  "compilerOptions": {
-    "jsx": "react"
-  },
-  "compilerOptions": {
-    "jsx": "react"
-  },
-  "compilerOptions": {
-    "jsx": "react"
-  },
-  "compilerOptions": {
-    "jsx": "react"
-  },
   "exclude": ["dist", "build", "node_modules"],
   "extends": "@stackshift-ui/typescript-config/react-app.json",
   "include": ["."]
