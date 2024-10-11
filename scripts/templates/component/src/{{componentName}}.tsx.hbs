@@ -1,0 +1,27 @@
+import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
+import type { ElementType, HTMLProps, ReactNode } from "react";
+
+export interface {{capitalize componentName}}Props extends Omit<HTMLProps<HTMLElement>, "as"> {
+  children?: ReactNode;
+  className?: string;
+  as?: ElementType;
+}
+
+const displayName = "{{capitalize componentName}}";
+
+export const {{capitalize componentName}}: React.FC<{{capitalize componentName}}Props> = ({
+  children,
+  className,
+  as,
+  ...props
+}) => {
+  const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
+
+  return (
+    <Component as={as} className={className} {...props} data-testid={displayName}>
+      {children}
+    </Component>
+  );
+};
+
+{{capitalize componentName}}.displayName = displayName;

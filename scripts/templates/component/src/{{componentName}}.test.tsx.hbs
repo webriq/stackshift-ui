@@ -8,6 +8,6 @@ describe.concurrent("{{kebabCase componentName}}", () => {
 	test("Dummy test - test if renders without errors", ({ expect }) => {
 		const clx = "my-class";
 		render(<{{capitalize componentName}} className={clx} />);
-		expect(screen.getByTestId("{{kebabCase componentName}}").classList).toContain(clx);
+		expect(screen.getByTestId("{ kebabCase name }}").classList).toContain(clx);
 	});
 });

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export interface {{ pascalCase name }}Options {
+export interface {{capitalize componentName}}Options {
   /** this is a dummy option */
   dummy?: string;
 }
@@ -16,7 +16,7 @@ export interface {{ pascalCase name }}Options {
  * @source - Source code
  */
 
-export const {{ camelCase name }} = (options?: {{ pascalCase name }}Options) => {
+export const {{ camelCase name }} = (options?: {{capitalize componentName}}Options) => {
   const [value, setValue] = useState(0);
   return {
     value, setValue
