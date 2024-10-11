@@ -4,7 +4,7 @@
   "scripts": {
     "build": "turbo build",
     "clean": "turbo clean",
-    "dev": "turbo run dev",
+    "dev": "turbo run dev --filter=@stackshift-ui/storybook",
     "doc": "node scripts/doc.js && typedoc",
     "format": "prettier --write \"**/*.{ts,tsx,md,css,scss}\"",
     "lint": "turbo lint",
