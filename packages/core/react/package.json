@@ -18,11 +18,6 @@
     "test": "vitest run --coverage"
   },
   "devDependencies": {
-    "@stackshift-ui/button": "workspace:*",
-    "@stackshift-ui/image": "workspace:*",
-    "@stackshift-ui/link": "workspace:*",
-    "@stackshift-ui/card": "workspace:*",
-    "@stackshift-ui/system": "workspace:*",
     "@stackshift-ui/eslint-config": "workspace:*",
     "@stackshift-ui/typescript-config": "workspace:*",
     "@testing-library/react": "^16.0.1",
@@ -41,6 +36,16 @@
     "vitest": "^2.1.1"
   },
   "dependencies": {
+    "@stackshift-ui/button": "workspace:*",
+    "@stackshift-ui/image": "workspace:*",
+    "@stackshift-ui/link": "workspace:*",
+    "@stackshift-ui/card": "workspace:*",
+    "@stackshift-ui/system": "workspace:*",
+    "@stackshift-ui/container": "workspace:*",
+    "@stackshift-ui/flex": "workspace:*",
+    "@stackshift-ui/grid": "workspace:*",
+    "@stackshift-ui/grid-item": "workspace:*",
+    "@stackshift-ui/section": "workspace:*",
     "@stackshift-ui/scripts": "workspace:*"
   },
   "peerDependencies": {

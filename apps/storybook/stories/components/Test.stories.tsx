@@ -1,5 +1,5 @@
-import { Meta } from "@storybook/react/*";
-import { Button } from "@stackshift/ui/button";
+import { Meta } from "@storybook/react";
+import { Button } from "@stackshift-ui/button";
 
 const meta: Meta<typeof Button> = {
   component: Button,

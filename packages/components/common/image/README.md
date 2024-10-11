@@ -1,15 +1,15 @@
-# @stackshift-ui/button
+# @stackshift-ui/image
 
 Buttons allow users to perform actions and choose with a single tap.
 
-Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/button) for more information.
+Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/image) for more information.
 
 ## Installation
 
 ```sh
-yarn add @stackshift-ui/button
+yarn add @stackshift-ui/image
 # or
-npm i @stackshift-ui/button
+npm i @stackshift-ui/image
 ```
 
 ## Contribution

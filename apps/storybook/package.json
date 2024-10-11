@@ -16,7 +16,9 @@
     "type-check": "npx tsc --noEmit"
   },
   "dependencies": {
+    "@portabletext/react": "^3.1.0",
     "@stackshift-ui/react": "workspace:*",
+    "deepmerge": "^4.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -25,6 +27,7 @@
     "@stackshift-ui/eslint-config": "workspace:*",
     "@stackshift-ui/typescript-config": "workspace:*",
     "@storybook/addon-actions": "^8.2.7",
+    "@storybook/addon-docs": "^8.3.5",
     "@storybook/addon-essentials": "^8.2.7",
     "@storybook/addon-links": "^8.2.7",
     "@storybook/react": "^8.2.7",
