@@ -33,8 +33,8 @@ const config = {
       resolve: {
         alias: [
           {
-            find: "ui",
-            replacement: resolve(__dirname, "../../../packages/stackshift/"),
+            find: "react",
+            replacement: resolve(__dirname, "../../../packages/core/react"),
           },
         ],
       },
