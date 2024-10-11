@@ -1,0 +1,43 @@
+{
+  "name": "@example/storybook",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build --docs",
+    "preview-storybook": "serve storybook-static",
+    "clean": "rm -rf .turbo && rm -rf node_modules storybook-static .turbo",
+    "lint": "eslint ../**/*.stories.tsx --max-warnings 0",
+    "upgrade": "npx storybook@latest upgrade && npx storybook automigrate",
+    "check": "npx storybook doctor",
+    "chromatic": "npx chromatic --project-token=chpt_e1fe37492ef1527 --only-changed",
+    "type-check": "npx tsc --noEmit"
+  },
+  "dependencies": {
+    "@stackshift-ui/react": "workspace:*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1",
+    "@stackshift-ui/eslint-config": "workspace:*",
+    "@stackshift-ui/typescript-config": "workspace:*",
+    "@storybook/addon-actions": "^8.2.7",
+    "@storybook/addon-essentials": "^8.2.7",
+    "@storybook/addon-links": "^8.2.7",
+    "@storybook/react": "^8.2.7",
+    "@storybook/react-vite": "^8.2.7",
+    "@types/node": "^22.0.2",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.18",
+    "chromatic": "^11.0.8",
+    "eslint": "^8.57.0",
+    "postcss": "^8.4.35",
+    "serve": "^14.2.1",
+    "storybook": "^8.2.7",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3",
+    "vite": "^5.1.4"
+  }
+}
