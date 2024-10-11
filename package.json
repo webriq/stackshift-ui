@@ -5,6 +5,8 @@
     "build": "turbo build",
     "clean": "turbo clean",
     "dev": "turbo run dev",
+    "storybook": "turbo run dev --filter @example/storybook",
+    "demo": "turbo run dev --filter @example/nextjs-pages",
     "doc": "node scripts/doc.js && typedoc",
     "format": "prettier --write \"**/*.{ts,tsx,md,css,scss}\"",
     "lint": "turbo lint",

@@ -1,8 +1,7 @@
-- [ ] add tailwind
-- [ ] storybook
-- [ ] plop templates
-- [ ] how to publish in NPM?
-- [ ] implement 1 component , eg: text component
+- [x] add tailwind (NOTE: The last approach is OK)
+- [x] add storybook
+- [x] add plop templates
+- [ ] implement 1 component, e.g., text component
+- [ ] research how to publish in NPM
 - [ ] fix dependencies of packages
-
-- [ ] send heads up message to PB & team
+- [x] send heads up message to PB & team
