@@ -42,6 +42,7 @@
   "dependencies": {
     "@stackshift-ui/scripts": "workspace:*",
     "@stackshift-ui/system": "workspace:*",
+    "@stackshift-ui/flex": "workspace:*",
     "classnames": "^2.5.1"
   },
   "peerDependencies": {

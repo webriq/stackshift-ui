@@ -184,6 +184,9 @@ importers:
 
   packages/components/common/badge:
     dependencies:
+      '@stackshift-ui/flex':
+        specifier: workspace:*
+        version: link:../../layout/flex
       '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
@@ -262,7 +265,7 @@ importers:
         version: link:../../../core/system
       next:
         specifier: 10 - 14
-        version: 14.2.13(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+        version: 14.2.13(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -609,7 +612,7 @@ importers:
         version: link:../../../core/system
       next:
         specifier: 10 - 14
-        version: 14.2.13(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+        version: 14.2.13(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -676,7 +679,7 @@ importers:
         version: link:../../../core/system
       next:
         specifier: 10 - 14
-        version: 14.2.13(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+        version: 14.2.13(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -1193,7 +1196,7 @@ importers:
         version: link:../system
       next:
         specifier: 10 - 14
-        version: 14.2.13(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+        version: 14.2.13(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
       react:
         specifier: 16.8 - 19
         version: 18.3.1
@@ -1257,7 +1260,7 @@ importers:
         version: link:../../../scripts
       next:
         specifier: 10 - 14
-        version: 14.2.13(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+        version: 14.2.13(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
       nextjs-darkmode:
         specifier: ^1.0.4
         version: 1.0.4(@types/react@18.3.9)(next@14.2.13(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1)
@@ -10253,7 +10256,7 @@ snapshots:
       '@types/react': 18.3.9
       react: 18.3.1
     optionalDependencies:
-      next: 14.2.13(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+      next: 14.2.13(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
 
   esbuild-plugin-react18@0.2.5(@types/react@18.3.9)(next@14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1):
     dependencies:
@@ -12630,7 +12633,7 @@ snapshots:
 
   neo-async@2.6.2: {}
 
-  next@14.2.13(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3):
+  next@14.2.13(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3):
     dependencies:
       '@next/env': 14.2.13
       '@swc/helpers': 0.5.5
@@ -12640,7 +12643,7 @@ snapshots:
       postcss: 8.4.31
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
-      styled-jsx: 5.1.1(@babel/core@7.25.2)(react@18.3.1)
+      styled-jsx: 5.1.1(react@18.3.1)
     optionalDependencies:
       '@next/swc-darwin-arm64': 14.2.13
       '@next/swc-darwin-x64': 14.2.13
@@ -12667,7 +12670,7 @@ snapshots:
       postcss: 8.4.31
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
-      styled-jsx: 5.1.1(@babel/core@7.25.2)(react@18.3.1)
+      styled-jsx: 5.1.1(react@18.3.1)
     optionalDependencies:
       '@next/swc-darwin-arm64': 14.2.15
       '@next/swc-darwin-x64': 14.2.15
@@ -13233,21 +13236,21 @@ snapshots:
       '@types/react': 18.3.9
       react: 18.3.1
     optionalDependencies:
-      next: 14.2.13(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+      next: 14.2.13(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
 
   r18gs@2.0.0(@types/react@18.3.9)(next@14.2.13(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1):
     dependencies:
       '@types/react': 18.3.9
       react: 18.3.1
     optionalDependencies:
-      next: 14.2.13(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+      next: 14.2.13(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
 
   r18gs@2.0.0-alpha.0(@types/react@18.3.9)(next@14.2.13(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1):
     dependencies:
       '@types/react': 18.3.9
       react: 18.3.1
     optionalDependencies:
-      next: 14.2.13(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+      next: 14.2.13(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
 
   range-parser@1.2.0: {}
 
@@ -13334,7 +13337,7 @@ snapshots:
       r18gs: 1.1.3(@types/react@18.3.9)(next@14.2.13(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1)
       react: 18.3.1
     optionalDependencies:
-      next: 14.2.13(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+      next: 14.2.13(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
 
   react@18.3.1:
     dependencies:
@@ -13919,12 +13922,10 @@ snapshots:
 
   strip-json-comments@3.1.1: {}
 
-  styled-jsx@5.1.1(@babel/core@7.25.2)(react@18.3.1):
+  styled-jsx@5.1.1(react@18.3.1):
     dependencies:
       client-only: 0.0.1
       react: 18.3.1
-    optionalDependencies:
-      '@babel/core': 7.25.2
 
   sucrase@3.35.0:
     dependencies:
