@@ -23,12 +23,20 @@ function toKebabCase(str) {
     .replace(/ +/g, "-");
 }
 
-const workspaces = ["components/common", "components/sections", "core", "hooks", "utilities"];
+const workspaces = [
+  "components/common",
+  "components/sections",
+  "components/layout",
+  "core",
+  "hooks",
+  "utilities",
+];
 const generators = ["component", "package", "hook"];
 
 const defaultOutDirs = {
   component: "components/common",
   section: "components/sections",
+  layout: "components/layout",
   hook: "hooks",
   package: "utilities",
 };
