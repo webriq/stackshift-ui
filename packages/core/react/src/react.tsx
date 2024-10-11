@@ -4,6 +4,8 @@ export * from "@stackshift-ui/image";
 export * from "@stackshift-ui/link";
 export * from "@stackshift-ui/system";
 export * from "@stackshift-ui/card";
+export * from "@stackshift-ui/checkbox";
+export * from "@stackshift-ui/checkbox-group";
 
 //Components
 
