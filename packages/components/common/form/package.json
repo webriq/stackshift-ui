@@ -49,7 +49,9 @@
     "next": "10 - 14",
     "react": "16.8 - 19",
     "react-dom": "16.8 - 19",
-    "@stackshift-ui/system": ">=0.0.0"
+    "@stackshift-ui/system": ">=0.0.0",
+    "@stackshift-ui/scripts": ">=0.0.0",
+    "@stackshift-ui/webriq-form": ">=0.0.0"
   },
   "peerDependenciesMeta": {
     "next": {

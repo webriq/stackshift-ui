@@ -7,7 +7,10 @@ function getAbsolutePath(value) {
 const config = {
   stories: [
     "../welcome.mdx", // first page to open when storybook is running
-    "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+    // TODO: Replace line 11-12 with the commented line below once all packages are defined for all stories added
+    "../stories/common/*.stories.@(js|jsx|mjs|ts|tsx)",
+    "../stories/layout/*.stories.@(js|jsx|mjs|ts|tsx)",
+    //"../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
 
   addons: [
@@ -34,7 +37,11 @@ const config = {
         alias: [
           {
             find: "react",
-            replacement: resolve(__dirname, "../../../packages/core/react/"),
+            replacement: resolve(__dirname, "../../../packages/core/react"),
+          },
+          {
+            find: "system",
+            replacement: resolve(__dirname, "../../../packages/core/system"),
           },
         ],
       },

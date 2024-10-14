@@ -1,4 +1,5 @@
 "use client";
 
 // component exports
-export * from "./blockstyle";
+export { Blockstyle } from "./blockstyle";
+export { defaultBlockStyle } from "./defaultBlockStyle";

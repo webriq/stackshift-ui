@@ -1,14 +1,14 @@
-import { SocialIcon, Socials } from "@stackshift-ui/react";
+import { SocialIcons } from "@stackshift-ui/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof SocialIcon> = {
+const meta: Meta<typeof SocialIcons> = {
   title: "Common/Social Icons",
-  component: SocialIcon,
+  component: SocialIcons,
   tags: ["autodocs"],
-} satisfies Meta<typeof SocialIcon>;
+} satisfies Meta<typeof SocialIcons>;
 
 export default meta;
-type Story = StoryObj<typeof SocialIcon>;
+type Story = StoryObj<typeof SocialIcons>;
 
 export const AllIcons: Story = {
   render: () => {
@@ -16,7 +16,7 @@ export const AllIcons: Story = {
     return (
       <div className="flex gap-4">
         {icons.map((i, index) => (
-          <SocialIcon social={i as Socials} key={index} />
+          <SocialIcons social={i} key={index} />
         ))}
       </div>
     );

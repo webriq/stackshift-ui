@@ -4,6 +4,6 @@
     "lib": ["dom", "ES2015"],
     "types": ["node"]
   },
-  "include": ["./lib/src/**/*.*"],
-  "exclude": ["**/*.test.tsx", "**/index.ts", "dist", "build", "node_modules"]
+  "include": ["packages"],
+  "exclude": ["**/*.test.tsx", "dist", "build", "node_modules"]
 }
