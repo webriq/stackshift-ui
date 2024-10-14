@@ -1,12 +1,8 @@
 {
   "extends": "@stackshift-ui/typescript-config/react-library.json",
   "compilerOptions": {
-    "baseUrl": ".", // Set baseUrl for the root of the project
     "lib": ["dom", "ES2015"],
-    "types": ["vitest", "node"],
-    "paths": {
-      "@common-types": ["common/types.ts"]
-    }
+    "types": ["vitest", "node"]
   },
   "include": ["."],
   "exclude": ["dist", "build", "node_modules"]
