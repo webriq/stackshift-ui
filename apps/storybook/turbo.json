@@ -13,7 +13,7 @@
       "dependsOn": ["^build-storybook-docs"]
     },
     "storybook": {
-      "dependsOn": ["^build", "^storybook"]
+      "dependsOn": ["^build"]
     }
   }
 }
