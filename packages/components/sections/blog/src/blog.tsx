@@ -3,6 +3,9 @@ import { SectionsProps, BlogPost, LabeledRoute } from "./types";
 
 const Variants = {
   variant_a: lazy(() => import("./blog_a")),
+  variant_b: lazy(() => import("./blog_b")),
+  variant_c: lazy(() => import("./blog_c")),
+  variant_d: lazy(() => import("./blog_d")),
 };
 
 export interface BlogProps {
