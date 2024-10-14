@@ -19,6 +19,7 @@ export * from "@stackshift-ui/stats-card";
 export * from "@stackshift-ui/social-icons";
 export * from "@stackshift-ui/text";
 export * from "@stackshift-ui/textarea";
+export * from "@stackshift-ui/swiper-pagination";
 export * from "@stackshift-ui/system";
 export * from "@stackshift-ui/webriq-form";
 
