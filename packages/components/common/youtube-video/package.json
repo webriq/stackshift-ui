@@ -1,5 +1,6 @@
 {
-  "name": "@stackshift-ui/image",
+  "name": "@stackshift-ui/youtube-video",
+  "description": "",
   "version": "0.0.0",
   "private": true,
   "sideEffects": false,
@@ -9,6 +10,7 @@
   "files": [
     "dist/**"
   ],
+  "author": "WebriQ <info@webriq.com>",
   "scripts": {
     "build": "tsup && tsc -p tsconfig-build.json",
     "clean": "rm -rf dist",
@@ -39,14 +41,14 @@
   },
   "dependencies": {
     "@stackshift-ui/scripts": "workspace:*",
-    "@stackshift-ui/system": "workspace:*",
-    "@stackshift-ui/link": "workspace:*"
+    "@stackshift-ui/system": "workspace:*"
   },
   "peerDependencies": {
     "@types/react": "16.8 - 19",
     "next": "10 - 14",
     "react": "16.8 - 19",
-    "react-dom": "16.8 - 19"
+    "react-dom": "16.8 - 19",
+    "@stackshift-ui/system": ">=0.0.0"
   },
   "peerDependenciesMeta": {
     "next": {

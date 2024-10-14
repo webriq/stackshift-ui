@@ -58,6 +58,7 @@
     "@stackshift-ui/text": "workspace:*",
     "@stackshift-ui/textarea": "workspace:*",
     "@stackshift-ui/webriq-form": "workspace:*",
+    "@stackshift-ui/youtube-video": "workspace:*",
     "@stackshift-ui/system": "workspace:*",
     "@stackshift-ui/container": "workspace:*",
     "@stackshift-ui/flex": "workspace:*",

@@ -1,24 +1,14 @@
 import { useStackShiftUIComponents } from "@stackshift-ui/system";
-import type { HTMLProps, ReactNode } from "react";
+import type { AnchorHTMLAttributes, ReactNode } from "react";
 
-export interface LinkProps extends HTMLProps<HTMLLinkElement> {
+export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   children?: ReactNode;
 }
 
-/**
- *
- *
- * @example
- * ```tsx
- * <Link />
- * ```
- *
- * @source - Source code
- */
 const displayName = "Link";
 export const Link = ({ children, ...props }: LinkProps) => {
   const components = useStackShiftUIComponents();
-  const { [displayName]: Component = "span" } = components;
+  const { [displayName]: Component = "a" } = components;
 
   return (
     <Component {...props} data-testid="link">
