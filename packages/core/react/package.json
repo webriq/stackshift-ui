@@ -54,6 +54,7 @@
     "@stackshift-ui/select": "workspace:*",
     "@stackshift-ui/stats-card": "workspace:*",
     "@stackshift-ui/social-icons": "workspace:*",
+    "@stackshift-ui/swiper-button": "workspace:*",
     "@stackshift-ui/swiper-pagination": "workspace:*",
     "@stackshift-ui/text": "workspace:*",
     "@stackshift-ui/textarea": "workspace:*",

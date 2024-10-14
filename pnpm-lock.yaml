@@ -2380,6 +2380,9 @@ importers:
       '@stackshift-ui/stats-card':
         specifier: workspace:*
         version: link:../../components/common/stats-card
+      '@stackshift-ui/swiper-button':
+        specifier: workspace:*
+        version: link:../../components/common/swiper-button
       '@stackshift-ui/swiper-pagination':
         specifier: workspace:*
         version: link:../../components/common/swiper-pagination
