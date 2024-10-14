@@ -22,6 +22,7 @@ export * from "@stackshift-ui/textarea";
 export * from "@stackshift-ui/swiper-pagination";
 export * from "@stackshift-ui/system";
 export * from "@stackshift-ui/webriq-form";
+export * from "@stackshift-ui/youtube-video";
 
 //Components
 
