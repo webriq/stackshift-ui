@@ -6,17 +6,7 @@ import { Radio } from "../../radio/dist";
 import { RadioGroup } from "@stackshift-ui/radio-group";
 import { Select } from "@stackshift-ui/select";
 import { Textarea } from "@stackshift-ui/textarea";
-
-export type FormTypes =
-  | "inputText"
-  | "inputEmail"
-  | "inputPassword"
-  | "inputNumber"
-  | "textarea"
-  | "inputFile"
-  | "inputRadio"
-  | "inputCheckbox"
-  | "inputSelect";
+import { FormTypes, Variant } from "./types";
 
 type FormFieldProps = {
   type?: FormTypes;
@@ -31,8 +21,6 @@ type FormFieldProps = {
   noLabel?: boolean;
   [key: string]: any;
 };
-
-type Variant = "primary" | "secondary" | "outline";
 
 export const FormField = ({
   type = "textarea",

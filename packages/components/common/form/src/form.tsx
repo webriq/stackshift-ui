@@ -1,20 +1,6 @@
 import React from "react";
 import { WebriQForm } from "@stackshift-ui/webriq-form";
-
-interface LabeledRoute extends ConditionalLink {
-  ariaLabel?: string;
-  label?: string;
-  linkTarget?: string;
-  linkType?: string;
-  _type?: string;
-  linkInternal?: any;
-}
-
-interface ConditionalLink {
-  type?: string;
-  internalLink?: string | null;
-  externalLink?: string | null;
-}
+import { LabeledRoute } from "./types";
 
 export type FormProps = {
   className?: string;
