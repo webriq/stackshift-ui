@@ -76,6 +76,7 @@
     "@stackshift-ui/logo-cloud": "workspace:*",
     "@stackshift-ui/how-it-works": "workspace:*",
     "@stackshift-ui/team": "workspace:*",
+    "@stackshift-ui/testimonial": "workspace:*",
     "@stackshift-ui/scripts": "workspace:*"
   },
   "peerDependencies": {
