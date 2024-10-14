@@ -27,6 +27,7 @@ export * from "@stackshift-ui/webriq-form";
 export * from "@stackshift-ui/youtube-video";
 
 //Components
+export * from "@stackshift-ui/app-promo";
 
 //Layout
 export * from "@stackshift-ui/container";
