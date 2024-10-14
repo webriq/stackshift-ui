@@ -10,14 +10,14 @@ type TextSize = "sm" | "md" | "lg";
 export interface InputProps extends Omit<HTMLProps<HTMLInputElement>, "as"> {
   noLabel?: boolean;
   label?: string;
-  ariaLabel: string;
+  ariaLabel?: string;
   required?: boolean;
-  name: string;
+  name?: string;
   labelClass?: string;
   placeholder?: string;
   type?: InputType;
   variant?: Variant;
-  onChange?: () => void;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   textSize?: TextSize;
   [key: string]: any;
   children?: ReactNode;

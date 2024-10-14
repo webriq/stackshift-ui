@@ -68,6 +68,7 @@
     "@stackshift-ui/grid-item": "workspace:*",
     "@stackshift-ui/section": "workspace:*",
     "@stackshift-ui/app-promo": "workspace:*",
+    "@stackshift-ui/blog": "workspace:*",
     "@stackshift-ui/scripts": "workspace:*"
   },
   "peerDependencies": {
