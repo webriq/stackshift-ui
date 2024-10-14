@@ -8,10 +8,10 @@ type Variant = "primary";
 export interface RadioProps extends Omit<HTMLProps<HTMLInputElement>, "as"> {
   name: string;
   ariaLabel: string;
-  variant: Variant;
+  variant?: Variant;
   item: string;
   labelClass?: string;
-  onChange: () => void;
+  onChange?: () => void;
   [key: string]: any;
   children?: ReactNode;
   className?: string;

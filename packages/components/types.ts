@@ -1,8 +1,6 @@
 // import { PortableTextComponents } from "@portabletext/react";
 // import { PortableTextBlock } from "sanity";
 
-export type StyleVariants<T extends string> = Record<T, string>;
-
 export type Socials = "facebook" | "instagram" | "youtube" | "linkedin" | "twitter";
 export interface MainImage {
   image: string;

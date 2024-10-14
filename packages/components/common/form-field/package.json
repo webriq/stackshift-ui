@@ -1,5 +1,6 @@
 {
-  "name": "@stackshift-ui/react",
+  "name": "@stackshift-ui/form-field",
+  "description": "",
   "version": "0.0.0",
   "private": true,
   "sideEffects": false,
@@ -9,6 +10,7 @@
   "files": [
     "dist/**"
   ],
+  "author": "WebriQ <info@webriq.com>",
   "scripts": {
     "build": "tsup && tsc -p tsconfig-build.json",
     "clean": "rm -rf dist",
@@ -30,40 +32,25 @@
     "esbuild-plugin-react18": "^0.2.5",
     "esbuild-plugin-react18-css": "^0.0.4",
     "jsdom": "^25.0.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "tsup": "^8.3.0",
     "typescript": "^5.6.2",
     "vite-tsconfig-paths": "^5.0.1",
     "vitest": "^2.1.1"
   },
   "dependencies": {
-    "@stackshift-ui/button": "workspace:*",
-    "@stackshift-ui/image": "workspace:*",
-    "@stackshift-ui/link": "workspace:*",
-    "@stackshift-ui/avatar": "workspace:*",
-    "@stackshift-ui/badge": "workspace:*",
-    "@stackshift-ui/card": "workspace:*",
+    "@stackshift-ui/scripts": "workspace:*",
+    "@stackshift-ui/system": "workspace:*",
     "@stackshift-ui/checkbox": "workspace:*",
     "@stackshift-ui/checkbox-group": "workspace:*",
-    "@stackshift-ui/form": "workspace:*",
-    "@stackshift-ui/form-field": "workspace:*",
-    "@stackshift-ui/heading": "workspace:*",
     "@stackshift-ui/input": "workspace:*",
     "@stackshift-ui/input-file": "workspace:*",
     "@stackshift-ui/radio": "workspace:*",
     "@stackshift-ui/radio-group": "workspace:*",
     "@stackshift-ui/select": "workspace:*",
-    "@stackshift-ui/stats-card": "workspace:*",
-    "@stackshift-ui/social-icons": "workspace:*",
-    "@stackshift-ui/text": "workspace:*",
     "@stackshift-ui/textarea": "workspace:*",
-    "@stackshift-ui/webriq-form": "workspace:*",
-    "@stackshift-ui/system": "workspace:*",
-    "@stackshift-ui/container": "workspace:*",
-    "@stackshift-ui/flex": "workspace:*",
-    "@stackshift-ui/grid": "workspace:*",
-    "@stackshift-ui/grid-item": "workspace:*",
-    "@stackshift-ui/section": "workspace:*",
-    "@stackshift-ui/scripts": "workspace:*"
+    "classnames": "^2.5.1"
   },
   "peerDependencies": {
     "@types/react": "16.8 - 19",

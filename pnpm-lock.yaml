@@ -64,7 +64,7 @@ importers:
         version: link:../../packages/core/system
       next:
         specifier: 14.2.15
-        version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+        version: 14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
       react:
         specifier: ^18
         version: 18.3.1
@@ -198,7 +198,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+        version: 14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -271,7 +271,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+        version: 14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -408,7 +408,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+        version: 14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -478,7 +478,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+        version: 14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -548,7 +548,171 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+        version: 14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+    devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
+      '@testing-library/react':
+        specifier: ^16.0.1
+        version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@types/node':
+        specifier: ^22.7.0
+        version: 22.7.5
+      '@types/react':
+        specifier: ^18.3.9
+        version: 18.3.9
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.0
+      '@vitejs/plugin-react':
+        specifier: ^4.3.1
+        version: 4.3.1(vite@5.4.8(@types/node@22.7.5)(sass@1.79.3)(terser@5.34.1))
+      '@vitest/coverage-v8':
+        specifier: ^2.1.1
+        version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(sass@1.79.3)(terser@5.34.1))
+      esbuild-plugin-rdi:
+        specifier: ^0.0.0
+        version: 0.0.0
+      esbuild-plugin-react18:
+        specifier: ^0.2.5
+        version: 0.2.5(@types/react@18.3.9)(next@14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1)
+      esbuild-plugin-react18-css:
+        specifier: ^0.0.4
+        version: 0.0.4
+      jsdom:
+        specifier: ^25.0.1
+        version: 25.0.1
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+      tsup:
+        specifier: ^8.3.0
+        version: 8.3.0(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.2)(yaml@2.5.1)
+      typescript:
+        specifier: ^5.6.2
+        version: 5.6.2
+      vite-tsconfig-paths:
+        specifier: ^5.0.1
+        version: 5.0.1(typescript@5.6.2)(vite@5.4.8(@types/node@22.7.5)(sass@1.79.3)(terser@5.34.1))
+      vitest:
+        specifier: ^2.1.1
+        version: 2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(sass@1.79.3)(terser@5.34.1)
+
+  packages/components/common/form:
+    dependencies:
+      '@stackshift-ui/scripts':
+        specifier: workspace:*
+        version: link:../../../../scripts
+      '@stackshift-ui/system':
+        specifier: workspace:*
+        version: link:../../../core/system
+      '@stackshift-ui/webriq-form':
+        specifier: workspace:*
+        version: link:../webriq-form
+      next:
+        specifier: 10 - 14
+        version: 14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+    devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
+      '@testing-library/react':
+        specifier: ^16.0.1
+        version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@types/node':
+        specifier: ^22.7.0
+        version: 22.7.5
+      '@types/react':
+        specifier: ^18.3.9
+        version: 18.3.9
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.0
+      '@vitejs/plugin-react':
+        specifier: ^4.3.1
+        version: 4.3.1(vite@5.4.8(@types/node@22.7.5)(sass@1.79.3)(terser@5.34.1))
+      '@vitest/coverage-v8':
+        specifier: ^2.1.1
+        version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(sass@1.79.3)(terser@5.34.1))
+      esbuild-plugin-rdi:
+        specifier: ^0.0.0
+        version: 0.0.0
+      esbuild-plugin-react18:
+        specifier: ^0.2.5
+        version: 0.2.5(@types/react@18.3.9)(next@14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1)
+      esbuild-plugin-react18-css:
+        specifier: ^0.0.4
+        version: 0.0.4
+      jsdom:
+        specifier: ^25.0.1
+        version: 25.0.1
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+      tsup:
+        specifier: ^8.3.0
+        version: 8.3.0(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.2)(yaml@2.5.1)
+      typescript:
+        specifier: ^5.6.2
+        version: 5.6.2
+      vite-tsconfig-paths:
+        specifier: ^5.0.1
+        version: 5.0.1(typescript@5.6.2)(vite@5.4.8(@types/node@22.7.5)(sass@1.79.3)(terser@5.34.1))
+      vitest:
+        specifier: ^2.1.1
+        version: 2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(sass@1.79.3)(terser@5.34.1)
+
+  packages/components/common/form-field:
+    dependencies:
+      '@stackshift-ui/checkbox':
+        specifier: workspace:*
+        version: link:../checkbox
+      '@stackshift-ui/checkbox-group':
+        specifier: workspace:*
+        version: link:../checkbox-group
+      '@stackshift-ui/input':
+        specifier: workspace:*
+        version: link:../input
+      '@stackshift-ui/input-file':
+        specifier: workspace:*
+        version: link:../input-file
+      '@stackshift-ui/radio':
+        specifier: workspace:*
+        version: link:../radio
+      '@stackshift-ui/radio-group':
+        specifier: workspace:*
+        version: link:../radio-group
+      '@stackshift-ui/scripts':
+        specifier: workspace:*
+        version: link:../../../../scripts
+      '@stackshift-ui/select':
+        specifier: workspace:*
+        version: link:../select
+      '@stackshift-ui/system':
+        specifier: workspace:*
+        version: link:../../../core/system
+      '@stackshift-ui/textarea':
+        specifier: workspace:*
+        version: link:../textarea
+      classnames:
+        specifier: ^2.5.1
+        version: 2.5.1
+      next:
+        specifier: 10 - 14
+        version: 14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -618,7 +782,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+        version: 14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -755,7 +919,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+        version: 14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -825,7 +989,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+        version: 14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -962,7 +1126,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+        version: 14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -1032,7 +1196,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+        version: 14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -1102,7 +1266,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+        version: 14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -1172,7 +1336,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+        version: 14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
       react-icons:
         specifier: ^5.3.0
         version: 5.3.0(react@18.3.1)
@@ -1248,7 +1412,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+        version: 14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -1318,7 +1482,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+        version: 14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -1388,7 +1552,74 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+        version: 14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+    devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
+      '@testing-library/react':
+        specifier: ^16.0.1
+        version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@types/node':
+        specifier: ^22.7.0
+        version: 22.7.5
+      '@types/react':
+        specifier: ^18.3.9
+        version: 18.3.9
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.0
+      '@vitejs/plugin-react':
+        specifier: ^4.3.1
+        version: 4.3.1(vite@5.4.8(@types/node@22.7.5)(sass@1.79.3)(terser@5.34.1))
+      '@vitest/coverage-v8':
+        specifier: ^2.1.1
+        version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(sass@1.79.3)(terser@5.34.1))
+      esbuild-plugin-rdi:
+        specifier: ^0.0.0
+        version: 0.0.0
+      esbuild-plugin-react18:
+        specifier: ^0.2.5
+        version: 0.2.5(@types/react@18.3.9)(next@14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1)
+      esbuild-plugin-react18-css:
+        specifier: ^0.0.4
+        version: 0.0.4
+      jsdom:
+        specifier: ^25.0.1
+        version: 25.0.1
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+      tsup:
+        specifier: ^8.3.0
+        version: 8.3.0(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.2)(yaml@2.5.1)
+      typescript:
+        specifier: ^5.6.2
+        version: 5.6.2
+      vite-tsconfig-paths:
+        specifier: ^5.0.1
+        version: 5.0.1(typescript@5.6.2)(vite@5.4.8(@types/node@22.7.5)(sass@1.79.3)(terser@5.34.1))
+      vitest:
+        specifier: ^2.1.1
+        version: 2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(sass@1.79.3)(terser@5.34.1)
+
+  packages/components/common/webriq-form:
+    dependencies:
+      '@stackshift-ui/scripts':
+        specifier: workspace:*
+        version: link:../../../../scripts
+      '@stackshift-ui/system':
+        specifier: workspace:*
+        version: link:../../../core/system
+      next:
+        specifier: 10 - 14
+        version: 14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -1458,7 +1689,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+        version: 14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -1528,7 +1759,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+        version: 14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -1598,7 +1829,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+        version: 14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -1668,7 +1899,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+        version: 14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -1738,7 +1969,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+        version: 14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -1858,6 +2089,9 @@ importers:
 
   packages/core/react:
     dependencies:
+      '@stackshift-ui/avatar':
+        specifier: workspace:*
+        version: link:../../components/common/avatar
       '@stackshift-ui/badge':
         specifier: workspace:*
         version: link:../../components/common/badge
@@ -1879,6 +2113,12 @@ importers:
       '@stackshift-ui/flex':
         specifier: workspace:*
         version: link:../../components/layout/flex
+      '@stackshift-ui/form':
+        specifier: workspace:*
+        version: link:../../components/common/form
+      '@stackshift-ui/form-field':
+        specifier: workspace:*
+        version: link:../../components/common/form-field
       '@stackshift-ui/grid':
         specifier: workspace:*
         version: link:../../components/layout/grid
@@ -1891,21 +2131,51 @@ importers:
       '@stackshift-ui/image':
         specifier: workspace:*
         version: link:../../components/common/image
+      '@stackshift-ui/input':
+        specifier: workspace:*
+        version: link:../../components/common/input
+      '@stackshift-ui/input-file':
+        specifier: workspace:*
+        version: link:../../components/common/input-file
       '@stackshift-ui/link':
         specifier: workspace:*
         version: link:../../components/common/link
+      '@stackshift-ui/radio':
+        specifier: workspace:*
+        version: link:../../components/common/radio
+      '@stackshift-ui/radio-group':
+        specifier: workspace:*
+        version: link:../../components/common/radio-group
       '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../scripts
       '@stackshift-ui/section':
         specifier: workspace:*
         version: link:../../components/layout/section
+      '@stackshift-ui/select':
+        specifier: workspace:*
+        version: link:../../components/common/select
+      '@stackshift-ui/social-icons':
+        specifier: workspace:*
+        version: link:../../components/common/social-icons
+      '@stackshift-ui/stats-card':
+        specifier: workspace:*
+        version: link:../../components/common/stats-card
       '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../system
+      '@stackshift-ui/text':
+        specifier: workspace:*
+        version: link:../../components/common/text
+      '@stackshift-ui/textarea':
+        specifier: workspace:*
+        version: link:../../components/common/textarea
+      '@stackshift-ui/webriq-form':
+        specifier: workspace:*
+        version: link:../../components/common/webriq-form
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+        version: 14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
       react:
         specifier: 16.8 - 19
         version: 18.3.1
@@ -10977,7 +11247,7 @@ snapshots:
       '@types/react': 18.3.9
       react: 18.3.1
     optionalDependencies:
-      next: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+      next: 14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
 
   esbuild-register@3.6.0(esbuild@0.23.1):
     dependencies:
@@ -13357,7 +13627,7 @@ snapshots:
       postcss: 8.4.31
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
-      styled-jsx: 5.1.1(@babel/core@7.25.2)(react@18.3.1)
+      styled-jsx: 5.1.1(react@18.3.1)
     optionalDependencies:
       '@next/swc-darwin-arm64': 14.2.13
       '@next/swc-darwin-x64': 14.2.13
@@ -13374,7 +13644,7 @@ snapshots:
       - '@babel/core'
       - babel-plugin-macros
 
-  next@14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3):
+  next@14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3):
     dependencies:
       '@next/env': 14.2.15
       '@swc/helpers': 0.5.5
@@ -13384,7 +13654,7 @@ snapshots:
       postcss: 8.4.31
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
-      styled-jsx: 5.1.1(@babel/core@7.25.2)(react@18.3.1)
+      styled-jsx: 5.1.1(react@18.3.1)
     optionalDependencies:
       '@next/swc-darwin-arm64': 14.2.15
       '@next/swc-darwin-x64': 14.2.15
@@ -14640,12 +14910,10 @@ snapshots:
 
   strip-json-comments@3.1.1: {}
 
-  styled-jsx@5.1.1(@babel/core@7.25.2)(react@18.3.1):
+  styled-jsx@5.1.1(react@18.3.1):
     dependencies:
       client-only: 0.0.1
       react: 18.3.1
-    optionalDependencies:
-      '@babel/core': 7.25.2
 
   sucrase@3.35.0:
     dependencies:
