@@ -30,6 +30,7 @@ export * from "@stackshift-ui/youtube-video";
 export * from "@stackshift-ui/app-promo";
 export * from "@stackshift-ui/blog";
 export * from "@stackshift-ui/contact";
+export * from "@stackshift-ui/faqs";
 
 //Layout
 export * from "@stackshift-ui/container";
