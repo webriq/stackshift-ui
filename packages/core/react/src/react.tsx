@@ -44,6 +44,7 @@ export {
 // export * from "@stackshift-ui/statistics";
 // export * from '@stackshift-ui/newsletter';
 // export * from "@stackshift-ui/logo-cloud";
+// export * from "@stackshift-ui/how-it-works";
 
 // Layout
 export { Container } from "@stackshift-ui/container";
