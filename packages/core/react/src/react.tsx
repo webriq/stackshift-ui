@@ -1,6 +1,7 @@
 //Common
 export * from "@stackshift-ui/avatar";
 export * from "@stackshift-ui/badge";
+export * from "@stackshift-ui/blockstyle";
 export * from "@stackshift-ui/button";
 export * from "@stackshift-ui/card";
 export * from "@stackshift-ui/checkbox";

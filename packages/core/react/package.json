@@ -41,6 +41,7 @@
     "@stackshift-ui/link": "workspace:*",
     "@stackshift-ui/avatar": "workspace:*",
     "@stackshift-ui/badge": "workspace:*",
+    "@stackshift-ui/blockstyle": "workspace:*",
     "@stackshift-ui/card": "workspace:*",
     "@stackshift-ui/checkbox": "workspace:*",
     "@stackshift-ui/checkbox-group": "workspace:*",
