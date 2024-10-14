@@ -53,8 +53,7 @@
     "@types/react": "16.8 - 19",
     "next": "10 - 14",
     "react": "16.8 - 19",
-    "react-dom": "16.8 - 19",
-    "@stackshift-ui/system": ">=0.0.0"
+    "react-dom": "16.8 - 19"
   },
   "peerDependenciesMeta": {
     "next": {
