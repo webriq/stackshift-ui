@@ -29,6 +29,7 @@ export * from "@stackshift-ui/youtube-video";
 //Components
 export * from "@stackshift-ui/app-promo";
 export * from "@stackshift-ui/blog";
+export * from "@stackshift-ui/contact";
 
 //Layout
 export * from "@stackshift-ui/container";

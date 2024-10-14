@@ -2521,6 +2521,115 @@ importers:
         specifier: ^2.1.1
         version: 2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(sass@1.79.3)(terser@5.34.1)
 
+  packages/components/sections/contact:
+    dependencies:
+      '@portabletext/react':
+        specifier: ^3.1.0
+        version: 3.1.0(react@18.3.1)
+      '@stackshift-ui/button':
+        specifier: workspace:*
+        version: link:../../common/button
+      '@stackshift-ui/card':
+        specifier: workspace:*
+        version: link:../../common/card
+      '@stackshift-ui/container':
+        specifier: workspace:*
+        version: link:../../layout/container
+      '@stackshift-ui/flex':
+        specifier: workspace:*
+        version: link:../../layout/flex
+      '@stackshift-ui/form':
+        specifier: workspace:*
+        version: link:../../common/form
+      '@stackshift-ui/form-field':
+        specifier: workspace:*
+        version: link:../../common/form-field
+      '@stackshift-ui/heading':
+        specifier: workspace:*
+        version: link:../../common/heading
+      '@stackshift-ui/image':
+        specifier: workspace:*
+        version: link:../../common/image
+      '@stackshift-ui/link':
+        specifier: workspace:*
+        version: link:../../common/link
+      '@stackshift-ui/scripts':
+        specifier: workspace:*
+        version: link:../../../../scripts
+      '@stackshift-ui/section':
+        specifier: workspace:*
+        version: link:../../layout/section
+      '@stackshift-ui/social-icons':
+        specifier: workspace:*
+        version: link:../../common/social-icons
+      '@stackshift-ui/system':
+        specifier: workspace:*
+        version: link:../../../core/system
+      '@stackshift-ui/text':
+        specifier: workspace:*
+        version: link:../../common/text
+      classnames:
+        specifier: ^2.5.1
+        version: 2.5.1
+      next:
+        specifier: 10 - 14
+        version: 14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+    devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
+      '@testing-library/react':
+        specifier: ^16.0.1
+        version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@types/node':
+        specifier: ^22.7.0
+        version: 22.7.5
+      '@types/react':
+        specifier: ^18.3.9
+        version: 18.3.9
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.0
+      '@vitejs/plugin-react':
+        specifier: ^4.3.1
+        version: 4.3.1(vite@5.4.8(@types/node@22.7.5)(sass@1.79.3)(terser@5.34.1))
+      '@vitest/coverage-v8':
+        specifier: ^2.1.1
+        version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(sass@1.79.3)(terser@5.34.1))
+      esbuild-plugin-rdi:
+        specifier: ^0.0.0
+        version: 0.0.0
+      esbuild-plugin-react18:
+        specifier: ^0.2.5
+        version: 0.2.5(@types/react@18.3.9)(next@14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1)
+      esbuild-plugin-react18-css:
+        specifier: ^0.0.4
+        version: 0.0.4
+      jsdom:
+        specifier: ^25.0.1
+        version: 25.0.1
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+      tsup:
+        specifier: ^8.3.0
+        version: 8.3.0(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.2)(yaml@2.5.1)
+      typescript:
+        specifier: ^5.6.2
+        version: 5.6.2
+      vite-tsconfig-paths:
+        specifier: ^5.0.1
+        version: 5.0.1(typescript@5.6.2)(vite@5.4.8(@types/node@22.7.5)(sass@1.79.3)(terser@5.34.1))
+      vitest:
+        specifier: ^2.1.1
+        version: 2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(sass@1.79.3)(terser@5.34.1)
+
   packages/config/config-eslint:
     dependencies:
       eslint:
@@ -2611,6 +2720,9 @@ importers:
       '@stackshift-ui/checkbox-group':
         specifier: workspace:*
         version: link:../../components/common/checkbox-group
+      '@stackshift-ui/contact':
+        specifier: workspace:*
+        version: link:../../components/sections/contact
       '@stackshift-ui/container':
         specifier: workspace:*
         version: link:../../components/layout/container
