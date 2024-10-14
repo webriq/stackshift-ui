@@ -43,6 +43,7 @@ export {
 // export * from "@stackshift-ui/faqs";
 // export * from "@stackshift-ui/statistics";
 // export * from '@stackshift-ui/newsletter';
+// export * from "@stackshift-ui/logo-cloud";
 
 // Layout
 export { Container } from "@stackshift-ui/container";
