@@ -1,4 +1,5 @@
 //Common
+export * from "@stackshift-ui/avatar";
 export * from "@stackshift-ui/badge";
 export * from "@stackshift-ui/button";
 export * from "@stackshift-ui/card";
@@ -6,7 +7,16 @@ export * from "@stackshift-ui/checkbox";
 export * from "@stackshift-ui/checkbox-group";
 export * from "@stackshift-ui/heading";
 export * from "@stackshift-ui/image";
+export * from "@stackshift-ui/input";
+export * from "@stackshift-ui/input-file";
 export * from "@stackshift-ui/link";
+export * from "@stackshift-ui/radio";
+export * from "@stackshift-ui/radio-group";
+export * from "@stackshift-ui/select";
+export * from "@stackshift-ui/stats-card";
+export * from "@stackshift-ui/social-icons";
+export * from "@stackshift-ui/text";
+export * from "@stackshift-ui/textarea";
 export * from "@stackshift-ui/system";
 
 //Components
