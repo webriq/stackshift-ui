@@ -49,8 +49,7 @@
     "@stackshift-ui/radio": "workspace:*",
     "@stackshift-ui/radio-group": "workspace:*",
     "@stackshift-ui/select": "workspace:*",
-    "@stackshift-ui/textarea": "workspace:*",
-    "classnames": "^2.5.1"
+    "@stackshift-ui/textarea": "workspace:*"
   },
   "peerDependencies": {
     "@types/react": "16.8 - 19",
