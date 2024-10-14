@@ -847,9 +847,6 @@ importers:
 
   packages/components/common/image:
     dependencies:
-      '@stackshift-ui/link':
-        specifier: workspace:*
-        version: link:../link
       '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts

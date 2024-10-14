@@ -39,8 +39,7 @@
   },
   "dependencies": {
     "@stackshift-ui/scripts": "workspace:*",
-    "@stackshift-ui/system": "workspace:*",
-    "@stackshift-ui/link": "workspace:*"
+    "@stackshift-ui/system": "workspace:*"
   },
   "peerDependencies": {
     "@types/react": "16.8 - 19",
