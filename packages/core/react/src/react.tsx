@@ -31,6 +31,7 @@ export * from "@stackshift-ui/app-promo";
 export * from "@stackshift-ui/blog";
 export * from "@stackshift-ui/contact";
 export * from "@stackshift-ui/faqs";
+export * from "@stackshift-ui/statistics";
 
 //Layout
 export * from "@stackshift-ui/container";
