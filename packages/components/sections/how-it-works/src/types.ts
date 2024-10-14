@@ -248,9 +248,6 @@ export interface Variants {
   stats?: StatItems[] | null;
   teams?: Team[] | null;
   testimonials?: Testimonial[] | null;
-  firstColumn?: PortableTextBlock[];
-  secondColumn?: PortableTextBlock[];
-  thirdColumn?: PortableTextBlock[];
   selectStripeAccount?: string;
   annualBilling?: string;
   monthlyBilling?: string;
