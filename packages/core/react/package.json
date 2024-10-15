@@ -79,6 +79,7 @@
     "@stackshift-ui/testimonial": "workspace:*",
     "@stackshift-ui/footer": "workspace:*",
     "@stackshift-ui/portfolio": "workspace:*",
+    "@stackshift-ui/features": "workspace:*",
     "@stackshift-ui/scripts": "workspace:*"
   },
   "peerDependencies": {
