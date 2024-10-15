@@ -14,7 +14,7 @@
     "typecheck": "turbo typecheck",
     "preinstall": "node scripts/update-pm.js",
     "rebrand": "node scripts/rebrand.js",
-    "next:pages": "pnpm --filter @apps/nextjs-pages dev"
+    "next:pages": "turbo run dev --filter @apps/storybook"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.9",

@@ -10,12 +10,12 @@ const ComponentContext = createContext<Components>({});
 
 // Create a provider that allows passing custom components
 interface ComponentProviderProps {
-  components: Components;
+  components?: Components;
   children: ReactNode;
 }
 
 export const StackShiftUIProvider: React.FC<ComponentProviderProps> = ({
-  components,
+  components = {},
   children,
 }) => {
   return <ComponentContext.Provider value={components}>{children}</ComponentContext.Provider>;

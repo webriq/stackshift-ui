@@ -11,13 +11,13 @@
       "dependsOn": ["^build"]
     },
     "lint": {
-      "dependsOn": ["^lint"]
+      "dependsOn": []
     },
     "typecheck": {
-      "dependsOn": ["^build"]
+      "dependsOn": []
     },
     "dev": {
-      "cache": false,
+      "dependsOn": ["^build"],
       "persistent": true
     },
     "clean": {

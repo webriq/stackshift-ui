@@ -22,8 +22,8 @@ jobs:
           node-version: 20
       - name: Setup Git
         run: |
-          git config --global user.name "mayank1513"
-          git config --global user.email "mayank.srmu@gmail.com"
+          git config --global user.name webriq
+          git config --global user.email "info@webriq.com"
           git fetch
           git checkout main
           git pull
