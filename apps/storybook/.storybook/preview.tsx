@@ -2,7 +2,8 @@ import { StackShiftUIProvider } from "@stackshift-ui/react";
 import type { Preview } from "@storybook/react";
 import React from "react";
 import "../../nextjs-pages/src/styles/globals.css";
-import "./style.css";
+//TODO: Comment out styling due to build error
+// import "./style.css";
 
 const decorators: Preview["decorators"] = [
   Story => (
