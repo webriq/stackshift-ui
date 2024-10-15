@@ -1,8 +1,8 @@
 import { Checkbox } from "@webriq-test/checkbox";
 import { CheckboxGroup } from "@webriq-test/checkbox-group";
-import { InputFile } from "@webriq-test/input-file";
 import { Input } from "@webriq-test/input";
-import { Radio } from "../../radio/dist";
+import { InputFile } from "@webriq-test/input-file";
+import { Radio } from "@webriq-test/radio";
 import { RadioGroup } from "@webriq-test/radio-group";
 import { Select } from "@webriq-test/select";
 import { Textarea } from "@webriq-test/textarea";

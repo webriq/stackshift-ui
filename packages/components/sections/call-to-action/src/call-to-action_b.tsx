@@ -1,17 +1,17 @@
-import React from "react";
 import { Button } from "@webriq-test/button";
+import { Container } from "@webriq-test/container";
+import { Flex } from "@webriq-test/flex";
 import { Form } from "@webriq-test/form";
 import { Heading } from "@webriq-test/heading";
-import { Input } from "@webriq-test/input";
-import { Text } from "@webriq-test/text";
 import { Image } from "@webriq-test/image";
+import { Input } from "@webriq-test/input";
 import { Link } from "@webriq-test/link";
 import { Section } from "@webriq-test/section";
-import { Container } from "@webriq-test/container";
-import { Flex } from "../../../layout/flex/dist";
-import { logoLink, thankYouPageLink } from "./helper";
+import { Text } from "@webriq-test/text";
+import React from "react";
 import { CTAProps } from ".";
-import { Form as iForm, Logo } from "./types";
+import { logoLink, thankYouPageLink } from "./helper";
+import { Logo, Form as iForm } from "./types";
 
 export default function CallToAction_B({ logo, title, plainText, form }: CTAProps) {
   return (
