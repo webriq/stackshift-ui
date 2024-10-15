@@ -10,7 +10,9 @@ fs.writeFileSync(path.resolve(__dirname, "../package.json"), JSON.stringify(pack
 
 // commit to repo
 try {
-  execSync("git add ./package.json && git commit -m 'Update package.json with pnpm version'");
+  execSync(
+    "git add ./package.json && git commit -m 'chore: automated update of package.json with pnpm version'",
+  );
 } catch {
   // no changesets to be applied
 }
