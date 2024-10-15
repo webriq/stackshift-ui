@@ -47,6 +47,7 @@ export {
 // export * from "@stackshift-ui/how-it-works";
 // export * from "@stackshift-ui/team";
 // export * from "@stackshift-ui/testimonial";
+// export * from "@stackshift-ui/footer";
 
 // Layout
 export { Container } from "@stackshift-ui/container";
