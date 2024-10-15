@@ -1,5 +1,5 @@
-import { Faqs } from "@webriq-test/react";
 import type { Meta, StoryObj } from "@storybook/react";
+import { Faqs } from "@webriq-test/react";
 
 const meta: Meta<typeof Faqs> = {
   title: "Components/FAQs",
@@ -8,30 +8,132 @@ const meta: Meta<typeof Faqs> = {
 } satisfies Meta<typeof Faqs>;
 
 export default meta;
-type Story = StoryObj<typeof Faqs>;
 
-export const Primary: Story = {
-  render: props => <Faqs {...props} />,
+const Template: StoryObj<typeof Faqs> = {
+  render: args => <Faqs {...args} />,
+};
+
+export const VariantA: StoryObj<typeof Faqs> = {
+  ...Template,
   args: {
-    subtitle: "Dolor sit amet consectutar",
-    title: "Frequently Asked Questions",
-    faqs: [
-      {
-        question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
-        answer: "Nullam euismod orci sed tristique placerat.",
+    data: {
+      variant: "variant_a",
+      variants: {
+        subtitle: "Dolor sit amet consectutar",
+        title: "Frequently Asked Questions",
+        faqs: [
+          {
+            question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
+            answer: "Nullam euismod orci sed tristique placerat.",
+          },
+          {
+            question: "Nunc maximus odio sit amet eros faucibus?",
+            answer: "Vivamus quis ultricies est. Duis nec hendrerit magna.",
+          },
+          {
+            question: "Nam feugiat ex eget sapien lobortis?",
+            answer: "Ut vel orci gravida, hendrerit enim non, gravida turpis.",
+          },
+          {
+            question: "In hac habitasse platea dictumst?",
+            answer: "Praesent non lectus porttitor, scelerisque nulla nec, ornare neque.",
+          },
+        ],
       },
-      {
-        question: "Nunc maximus odio sit amet eros faucibus?",
-        answer: "Vivamus quis ultricies est. Duis nec hendrerit magna.",
+    },
+  },
+};
+
+export const VariantB: StoryObj<typeof Faqs> = {
+  ...Template,
+  args: {
+    data: {
+      variant: "variant_b",
+      variants: {
+        subtitle: "Dolor sit amet consectutar",
+        title: "Frequently Asked Questions",
+        faqsWithCategories: [
+          {
+            category: "General",
+            askedQuestions: [
+              {
+                question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
+                answer: "Nullam euismod orci sed tristique placerat.",
+              },
+              {
+                question: "Nunc maximus odio sit amet eros faucibus?",
+                answer: "Vivamus quis ultricies est. Duis nec hendrerit magna.",
+              },
+            ],
+          },
+          {
+            category: "Payments",
+            askedQuestions: [
+              {
+                question: "Nam feugiat ex eget sapien lobortis?",
+                answer: "Ut vel orci gravida, hendrerit enim non, gravida turpis.",
+              },
+              {
+                question: "In hac habitasse platea dictumst?",
+                answer: "Praesent non lectus porttitor, scelerisque nulla nec, ornare neque.",
+              },
+            ],
+          },
+          {
+            category: "Returns",
+            askedQuestions: [
+              {
+                question: "Nam feugiat ex eget sapien lobortis?",
+                answer: "Ut vel orci gravida, hendrerit enim non, gravida turpis.",
+              },
+            ],
+          },
+          {
+            category: "Refunds",
+            askedQuestions: [
+              {
+                question: "Nam feugiat ex eget sapien lobortis?",
+                answer: "Ut vel orci gravida, hendrerit enim non, gravida turpis.",
+              },
+              {
+                question: "In hac habitasse platea dictumst?",
+                answer: "Praesent non lectus porttitor, scelerisque nulla nec, ornare neque.",
+              },
+            ],
+          },
+        ],
       },
-      {
-        question: "Nam feugiat ex eget sapien lobortis?",
-        answer: "Ut vel orci gravida, hendrerit enim non, gravida turpis.",
+    },
+  },
+};
+
+export const VariantC: StoryObj<typeof Faqs> = {
+  ...Template,
+  args: {
+    data: {
+      variant: "variant_c",
+      variants: {
+        subtitle: "Dolor sit amet consectutar",
+        title: "Frequently Asked Questions",
+        faqs: [
+          {
+            question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
+            answer: "Nullam euismod orci sed tristique placerat.",
+          },
+          {
+            question: "Nunc maximus odio sit amet eros faucibus?",
+            answer: "Vivamus quis ultricies est. Duis nec hendrerit magna.",
+          },
+          {
+            question: "Nam feugiat ex eget sapien lobortis?",
+            answer: "Ut vel orci gravida, hendrerit enim non, gravida turpis.",
+          },
+          {
+            question: "In hac habitasse platea dictumst?",
+            answer: "Praesent non lectus porttitor, scelerisque nulla nec, ornare neque.",
+          },
+        ],
       },
-      {
-        question: "In hac habitasse platea dictumst?",
-        answer: "Praesent non lectus porttitor, scelerisque nulla nec, ornare neque.",
-      },
-    ],
+    },
   },
 };

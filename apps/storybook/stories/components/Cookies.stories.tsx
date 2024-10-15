@@ -1,5 +1,5 @@
-import { Cookies } from "@webriq-test/react";
 import type { Meta, StoryObj } from "@storybook/react";
+import { Cookies } from "@webriq-test/react";
 
 const meta: Meta<typeof Cookies> = {
   title: "Components/Cookies",
@@ -8,32 +8,40 @@ const meta: Meta<typeof Cookies> = {
 } satisfies Meta<typeof Cookies>;
 
 export default meta;
-type Story = StoryObj<typeof Cookies>;
 
-export const Primary: Story = {
+const Template: StoryObj<typeof Cookies> = {
   render: args => <Cookies {...args} />,
+};
+
+export const VariantA: StoryObj<typeof Cookies> = {
+  ...Template,
   args: {
-    title: "Cookie Policy",
-    description:
-      "Cookies help us deliver our services. By using our services, you agree to our use of cookies.",
-    allowCookieBtn: "Allow",
-    denyCookieBtn: "Decline",
-    config: {
-      enableAnalytics: true,
-      cookiePolicy: {
-        siteName: "My Website",
-        cookiePolicyPage: {
-          linkTarget: "_blank",
-          label: "Cookie Policy Page",
+    data: {
+      variant: "variant_a",
+      variants: {
+        title: "Cookie Policy",
+        description:
+          "Cookies help us deliver our services. By using our services, you agree to our use of cookies.",
+        allowCookieBtn: "Allow",
+        denyCookieBtn: "Decline",
+        config: {
+          enableAnalytics: true,
+          cookiePolicy: {
+            siteName: "My Website",
+            cookiePolicyPage: {
+              linkTarget: "_blank",
+              label: "Cookie Policy Page",
+            },
+            consentModal: {
+              position: "bottom left",
+            },
+          },
         },
-        consentModal: {
-          position: "bottom left",
+        contactLink: {
+          label: "Contact Us",
+          linkTarget: "_self",
         },
       },
-    },
-    contactLink: {
-      label: "Contact Us",
-      linkTarget: "_self",
     },
   },
 };
