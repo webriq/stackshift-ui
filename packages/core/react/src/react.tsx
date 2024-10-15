@@ -52,6 +52,7 @@ export {
 // export * from "@stackshift-ui/features"
 // export * from "@stackshift-ui/navigation";
 // export * from "@stackshift-ui/text-component";
+// export * from "@stackshift-ui/cookies";
 
 // Layout
 export { Container } from "@stackshift-ui/container";

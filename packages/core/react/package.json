@@ -70,6 +70,7 @@
     "@stackshift-ui/section": "workspace:*",
     "@stackshift-ui/app-promo": "workspace:*",
     "@stackshift-ui/blog": "workspace:*",
+    "@stackshift-ui/cookies": "workspace:*",
     "@stackshift-ui/contact": "workspace:*",
     "@stackshift-ui/faqs": "workspace:*",
     "@stackshift-ui/statistics": "workspace:*",
