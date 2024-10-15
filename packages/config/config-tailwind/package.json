@@ -1,0 +1,13 @@
+{
+  "name": "@webriq-test/tailwind-config",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    "./tailwind": "./tailwind.config.ts",
+    "./styles.css": "./styles.css"
+  },
+  "devDependencies": {
+    "@webriq-test/typescript-config": "workspace:*",
+    "tailwindcss": "^3.4.1"
+  }
+}

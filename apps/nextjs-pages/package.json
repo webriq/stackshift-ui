@@ -17,9 +17,11 @@
   },
   "peerDependencies": {
     "@webriq-test/system": ">=0.0.0",
-    "@webriq-test/react": ">=0.0.0"
+    "@webriq-test/react": ">=0.0.0",
+    "@webriq-test/tailwind-config": ">=0.0.0"
   },
   "devDependencies": {
+    "@webriq-test/tailwind-config": "workspace:*",
     "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",

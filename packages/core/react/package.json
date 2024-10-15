@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@webriq-test/eslint-config": "workspace:*",
+    "@webriq-test/tailwind-config": "workspace:*",
     "@webriq-test/typescript-config": "workspace:*",
     "@testing-library/react": "^16.0.1",
     "@types/node": "^22.7.0",

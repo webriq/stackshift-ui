@@ -1,9 +1,7 @@
-import { StackShiftUIProvider } from "@webriq-test/react";
 import type { Preview } from "@storybook/react";
+import { StackShiftUIProvider } from "@webriq-test/react";
+import "@webriq-test/tailwind-config/styles.css";
 import React from "react";
-import "../../nextjs-pages/src/styles/globals.css";
-//TODO: Comment out styling due to build error
-// import "./style.css";
 
 const decorators: Preview["decorators"] = [
   Story => (

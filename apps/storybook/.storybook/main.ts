@@ -1,8 +1,4 @@
-import { dirname, join, resolve } from "path";
-
-function getAbsolutePath(value) {
-  return dirname(require.resolve(join(value, "package.json")));
-}
+import { resolve } from "path";
 
 const config = {
   stories: [
@@ -10,14 +6,10 @@ const config = {
     "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
 
-  addons: [
-    getAbsolutePath("@storybook/addon-links"),
-    getAbsolutePath("@storybook/addon-essentials"),
-    getAbsolutePath("@chromatic-com/storybook"),
-  ],
+  addons: ["@storybook/addon-links", "@storybook/addon-essentials", "@chromatic-com/storybook"],
 
   framework: {
-    name: getAbsolutePath("@storybook/react-vite"),
+    name: "@storybook/react-vite",
     options: {},
   },
 
@@ -25,7 +17,7 @@ const config = {
     disableTelemetry: true, // 👈 Disables telemetry
   },
 
-  async viteFinal(config, { configType }) {
+  async viteFinal(config) {
     // customize the Vite config here
     return {
       ...config,

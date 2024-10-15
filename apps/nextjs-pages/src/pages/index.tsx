@@ -5,22 +5,24 @@ import { default as NextLink } from "next/link";
 export default function Home() {
   return (
     <>
-      <section className="my-12 p-6 bg-gray-100 rounded-lg shadow-md">
-        <LocalButton className="mb-4">Local Orange Button</LocalButton>
+      <section className="my-12 p-6 bg-background rounded-lg shadow-md">
+        <LocalButton className="mb-4 bg-primary rounded-base">Local Orange Button</LocalButton>
         <br />
-        <NextLink href="/anotherpage" className="text-blue-500 hover:underline">
+        <NextLink href="/anotherpage" className="text-secondary hover:underline">
           Go to another page
         </NextLink>
       </section>
 
-      <section className="mt-8 p-6 bg-white rounded-lg shadow-md">
+      <section className="mt-8 p-6 bg-background rounded-lg shadow-md">
         <p className="text-sm text-gray-500 mb-4">
           If the overrides works, the below components should match with the default ones above.
         </p>
 
-        <Button className="mb-4 bg-orange-500 text-white">Button from @webriq-test/react</Button>
+        <Button className="mb-4 bg-primary text-white rounded-base">
+          Button from @webriq-test/react
+        </Button>
         <br />
-        <Link href="/anotherpage" className="text-blue-500 hover:underline">
+        <Link href="/anotherpage" className="text-secondary hover:underline">
           Go to another page
         </Link>
         <Image
