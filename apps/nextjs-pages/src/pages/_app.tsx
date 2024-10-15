@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import "vanilla-cookieconsent/dist/cookieconsent.css";
 import { StackShiftUIProvider } from "@stackshift-ui/system";
 import type { AppProps } from "next/app";
 
