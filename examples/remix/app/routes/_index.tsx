@@ -1,5 +1,5 @@
-import { Demo } from "@stackshift-ui/components";
-import { LandingPage } from "@stackshift-ui/components/dist/server";
+import { Demo } from "@webriq-test/components";
+import { LandingPage } from "@webriq-test/components/dist/server";
 
 /** Remix App */
 export default function Index(): JSX.Element {

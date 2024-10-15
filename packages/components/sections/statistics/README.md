@@ -1,15 +1,13 @@
-# @stackshift-ui/statistics
-
-
+# @webriq-test/statistics
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/statistics) for more information.
 
 ## Installation
 
 ```sh
-yarn add @stackshift-ui/statistics
+yarn add @webriq-test/statistics
 # or
-npm i @stackshift-ui/statistics
+npm i @webriq-test/statistics
 ```
 
 ## Contribution

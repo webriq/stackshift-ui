@@ -1,15 +1,13 @@
-# @stackshift-ui/cookies
-
-
+# @webriq-test/cookies
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/cookies) for more information.
 
 ## Installation
 
 ```sh
-yarn add @stackshift-ui/cookies
+yarn add @webriq-test/cookies
 # or
-npm i @stackshift-ui/cookies
+npm i @webriq-test/cookies
 ```
 
 ## Contribution

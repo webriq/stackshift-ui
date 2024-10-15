@@ -1,15 +1,13 @@
-# @stackshift-ui/container
-
-
+# @webriq-test/container
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/container) for more information.
 
 ## Installation
 
 ```sh
-yarn add @stackshift-ui/container
+yarn add @webriq-test/container
 # or
-npm i @stackshift-ui/container
+npm i @webriq-test/container
 ```
 
 ## Contribution

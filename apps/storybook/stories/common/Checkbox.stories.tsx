@@ -1,4 +1,4 @@
-import { Checkbox } from "@stackshift-ui/react";
+import { Checkbox } from "@webriq-test/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Checkbox> = {

@@ -1,15 +1,13 @@
-# @stackshift-ui/contact
-
-
+# @webriq-test/contact
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/contact) for more information.
 
 ## Installation
 
 ```sh
-yarn add @stackshift-ui/contact
+yarn add @webriq-test/contact
 # or
-npm i @stackshift-ui/contact
+npm i @webriq-test/contact
 ```
 
 ## Contribution

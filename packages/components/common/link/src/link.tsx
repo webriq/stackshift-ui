@@ -1,4 +1,4 @@
-import { useStackShiftUIComponents } from "@stackshift-ui/system";
+import { useStackShiftUIComponents } from "@webriq-test/system";
 import type { AnchorHTMLAttributes, ReactNode } from "react";
 
 export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {

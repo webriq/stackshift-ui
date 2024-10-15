@@ -1,15 +1,13 @@
-# @stackshift-ui/faqs
-
-
+# @webriq-test/faqs
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/faqs) for more information.
 
 ## Installation
 
 ```sh
-yarn add @stackshift-ui/faqs
+yarn add @webriq-test/faqs
 # or
-npm i @stackshift-ui/faqs
+npm i @webriq-test/faqs
 ```
 
 ## Contribution

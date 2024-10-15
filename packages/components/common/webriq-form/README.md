@@ -1,15 +1,13 @@
-# @stackshift-ui/webriq-form
-
-
+# @webriq-test/webriq-form
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/webriq-form) for more information.
 
 ## Installation
 
 ```sh
-yarn add @stackshift-ui/webriq-form
+yarn add @webriq-test/webriq-form
 # or
-npm i @stackshift-ui/webriq-form
+npm i @webriq-test/webriq-form
 ```
 
 ## Contribution

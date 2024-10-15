@@ -1,4 +1,4 @@
-import { StatsCard } from "@stackshift-ui/react";
+import { StatsCard } from "@webriq-test/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const ARGS = {

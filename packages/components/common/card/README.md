@@ -1,15 +1,13 @@
-# @stackshift-ui/card
-
-
+# @webriq-test/card
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/card) for more information.
 
 ## Installation
 
 ```sh
-yarn add @stackshift-ui/card
+yarn add @webriq-test/card
 # or
-npm i @stackshift-ui/card
+npm i @webriq-test/card
 ```
 
 ## Contribution

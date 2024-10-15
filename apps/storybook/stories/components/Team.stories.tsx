@@ -1,4 +1,4 @@
-import { Team } from "@stackshift-ui/react";
+import { Team } from "@webriq-test/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Team> = {

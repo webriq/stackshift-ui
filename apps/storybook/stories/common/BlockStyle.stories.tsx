@@ -1,5 +1,5 @@
 import { PortableText } from "@portabletext/react";
-import { defaultBlockStyle, Heading } from "@stackshift-ui/react";
+import { defaultBlockStyle, Heading } from "@webriq-test/react";
 import type { Meta, StoryObj } from "@storybook/react";
 import deepmerge from "deepmerge";
 

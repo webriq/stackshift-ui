@@ -1,5 +1,5 @@
 {
-  "name": "@stackshift-ui/jest-presets",
+  "name": "@webriq-test/jest-presets",
   "version": "0.0.0",
   "private": true,
   "license": "MIT",

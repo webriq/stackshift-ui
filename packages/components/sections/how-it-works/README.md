@@ -1,15 +1,13 @@
-# @stackshift-ui/how-it-works
-
-
+# @webriq-test/how-it-works
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/how-it-works) for more information.
 
 ## Installation
 
 ```sh
-yarn add @stackshift-ui/how-it-works
+yarn add @webriq-test/how-it-works
 # or
-npm i @stackshift-ui/how-it-works
+npm i @webriq-test/how-it-works
 ```
 
 ## Contribution

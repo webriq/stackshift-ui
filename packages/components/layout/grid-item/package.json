@@ -1,5 +1,5 @@
 {
-  "name": "@stackshift-ui/grid-item",
+  "name": "@webriq-test/grid-item",
   "description": "",
   "version": "0.0.0",
   "private": true,
@@ -20,8 +20,8 @@
     "test": "vitest run --coverage"
   },
   "devDependencies": {
-    "@stackshift-ui/eslint-config": "workspace:*",
-    "@stackshift-ui/typescript-config": "workspace:*",
+    "@webriq-test/eslint-config": "workspace:*",
+    "@webriq-test/typescript-config": "workspace:*",
     "@testing-library/react": "^16.0.1",
     "@types/node": "^22.7.0",
     "@types/react": "^18.3.9",
@@ -40,12 +40,12 @@
     "vitest": "^2.1.1"
   },
   "dependencies": {
-    "@stackshift-ui/scripts": "workspace:*",
-    "@stackshift-ui/system": "workspace:*",
+    "@webriq-test/scripts": "workspace:*",
+    "@webriq-test/system": "workspace:*",
     "classnames": "^2.5.1"
   },
   "peerDependencies": {
-    "@stackshift-ui/system": ">=0.0.0",
+    "@webriq-test/system": ">=0.0.0",
     "@types/react": "16.8 - 19",
     "next": "10 - 14",
     "react": "16.8 - 19",

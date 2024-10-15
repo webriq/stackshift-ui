@@ -1,14 +1,14 @@
 import React from "react";
 import { CTAProps } from ".";
-import { SigninSignup_A } from "@stackshift-ui/signin-signup";
-import { Button } from "@stackshift-ui/button";
-import { Link } from "@stackshift-ui/link";
-import { Image } from "@stackshift-ui/image";
-import { Heading } from "@stackshift-ui/heading";
-import { Text } from "@stackshift-ui/text";
-import { Section } from "@stackshift-ui/section";
-import { Container } from "@stackshift-ui/container";
-import { Flex } from "@stackshift-ui/flex";
+import { SigninSignup_A } from "@webriq-test/signin-signup";
+import { Button } from "@webriq-test/button";
+import { Link } from "@webriq-test/link";
+import { Image } from "@webriq-test/image";
+import { Heading } from "@webriq-test/heading";
+import { Text } from "@webriq-test/text";
+import { Section } from "@webriq-test/section";
+import { Container } from "@webriq-test/container";
+import { Flex } from "@webriq-test/flex";
 import { Form as iForm, LabeledRoute, LabeledRouteWithKey, Logo } from "./types";
 import { logoLink } from "./helper";
 

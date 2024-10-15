@@ -1,4 +1,4 @@
-import { Testimonial } from "@stackshift-ui/react";
+import { Testimonial } from "@webriq-test/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Testimonial> = {

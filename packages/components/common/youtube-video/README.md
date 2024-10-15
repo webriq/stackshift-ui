@@ -1,15 +1,13 @@
-# @stackshift-ui/youtube-video
-
-
+# @webriq-test/youtube-video
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/youtube-video) for more information.
 
 ## Installation
 
 ```sh
-yarn add @stackshift-ui/youtube-video
+yarn add @webriq-test/youtube-video
 # or
-npm i @stackshift-ui/youtube-video
+npm i @webriq-test/youtube-video
 ```
 
 ## Contribution

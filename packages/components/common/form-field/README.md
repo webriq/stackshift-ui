@@ -1,15 +1,13 @@
-# @stackshift-ui/form-field
-
-
+# @webriq-test/form-field
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/form-field) for more information.
 
 ## Installation
 
 ```sh
-yarn add @stackshift-ui/form-field
+yarn add @webriq-test/form-field
 # or
-npm i @stackshift-ui/form-field
+npm i @webriq-test/form-field
 ```
 
 ## Contribution

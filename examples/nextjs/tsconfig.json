@@ -1,6 +1,6 @@
 {
   "exclude": ["node_modules"],
-  "extends": "@stackshift-ui/typescript-config/nextjs.json",
+  "extends": "@webriq-test/typescript-config/nextjs.json",
   "compilerOptions": {
     "outDir": "dist",
     "plugins": [

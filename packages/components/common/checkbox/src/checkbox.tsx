@@ -1,4 +1,4 @@
-import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
+import { DefaultComponent, useStackShiftUIComponents } from "@webriq-test/system";
 import type { ElementType, HTMLProps } from "react";
 import cn from "classnames";
 

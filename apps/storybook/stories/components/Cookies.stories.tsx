@@ -1,4 +1,4 @@
-import { Cookies } from "@stackshift-ui/react";
+import { Cookies } from "@webriq-test/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Cookies> = {

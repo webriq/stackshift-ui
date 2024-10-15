@@ -1,9 +1,9 @@
 import { Fragment, useEffect, useRef, useState } from "react";
-import { Button } from "@stackshift-ui/button";
-import { Link } from "@stackshift-ui/link";
-import { Image } from "@stackshift-ui/image";
-import { Section } from "@stackshift-ui/section";
-import { Flex } from "@stackshift-ui/flex";
+import { Button } from "@webriq-test/button";
+import { Link } from "@webriq-test/link";
+import { Image } from "@webriq-test/image";
+import { Section } from "@webriq-test/section";
+import { Flex } from "@webriq-test/flex";
 import { LabeledRouteWithKey, Logo } from "./types";
 import { blockStyle } from "./helper/blockStyle";
 import { PortableText } from "@portabletext/react";

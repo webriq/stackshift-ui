@@ -1,15 +1,13 @@
-# @stackshift-ui/select
-
-
+# @webriq-test/select
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/select) for more information.
 
 ## Installation
 
 ```sh
-yarn add @stackshift-ui/select
+yarn add @webriq-test/select
 # or
-npm i @stackshift-ui/select
+npm i @webriq-test/select
 ```
 
 ## Contribution

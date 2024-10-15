@@ -1,4 +1,4 @@
-import { SigninSignup } from "@stackshift-ui/react";
+import { SigninSignup } from "@webriq-test/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof SigninSignup> = {

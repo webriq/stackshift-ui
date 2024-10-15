@@ -1,4 +1,4 @@
-import { Card } from "@stackshift-ui/react";
+import { Card } from "@webriq-test/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Card> = {

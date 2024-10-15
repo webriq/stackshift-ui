@@ -1,11 +1,11 @@
 import React from "react";
-import { Avatar } from "@stackshift-ui/avatar";
-import { Card } from "@stackshift-ui/card";
-import { Heading } from "@stackshift-ui/heading";
-import { Text } from "@stackshift-ui/text";
-import { Section } from "@stackshift-ui/section";
-import { Container } from "@stackshift-ui/container";
-import { Flex } from "@stackshift-ui/flex";
+import { Avatar } from "@webriq-test/avatar";
+import { Card } from "@webriq-test/card";
+import { Heading } from "@webriq-test/heading";
+import { Text } from "@webriq-test/text";
+import { Section } from "@webriq-test/section";
+import { Container } from "@webriq-test/container";
+import { Flex } from "@webriq-test/flex";
 import { Team as iTeam } from "./types";
 import { MemberTextProps, TeamsProps } from ".";
 

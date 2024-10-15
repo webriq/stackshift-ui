@@ -1,5 +1,5 @@
 import { default as LocalButton } from "@/components/Button";
-import { Button, Image, Link } from "@stackshift-ui/react";
+import { Button, Image, Link } from "@webriq-test/react";
 import { default as NextLink } from "next/link";
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
           If the overrides works, the below components should match with the default ones above.
         </p>
 
-        <Button className="mb-4 bg-orange-500 text-white">Button from @stackshift-ui/react</Button>
+        <Button className="mb-4 bg-orange-500 text-white">Button from @webriq-test/react</Button>
         <br />
         <Link href="/anotherpage" className="text-blue-500 hover:underline">
           Go to another page

@@ -1,15 +1,13 @@
-# @stackshift-ui/textarea
-
-
+# @webriq-test/textarea
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/textarea) for more information.
 
 ## Installation
 
 ```sh
-yarn add @stackshift-ui/textarea
+yarn add @webriq-test/textarea
 # or
-npm i @stackshift-ui/textarea
+npm i @webriq-test/textarea
 ```
 
 ## Contribution

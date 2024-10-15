@@ -1,15 +1,13 @@
-# @stackshift-ui/testimonial
-
-
+# @webriq-test/testimonial
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/testimonial) for more information.
 
 ## Installation
 
 ```sh
-yarn add @stackshift-ui/testimonial
+yarn add @webriq-test/testimonial
 # or
-npm i @stackshift-ui/testimonial
+npm i @webriq-test/testimonial
 ```
 
 ## Contribution

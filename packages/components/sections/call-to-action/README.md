@@ -1,15 +1,13 @@
-# @stackshift-ui/call-to-action
-
-
+# @webriq-test/call-to-action
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/call-to-action) for more information.
 
 ## Installation
 
 ```sh
-yarn add @stackshift-ui/call-to-action
+yarn add @webriq-test/call-to-action
 # or
-npm i @stackshift-ui/call-to-action
+npm i @webriq-test/call-to-action
 ```
 
 ## Contribution

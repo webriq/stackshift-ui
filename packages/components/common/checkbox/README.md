@@ -1,15 +1,13 @@
-# @stackshift-ui/checkbox
-
-
+# @webriq-test/checkbox
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/checkbox) for more information.
 
 ## Installation
 
 ```sh
-yarn add @stackshift-ui/checkbox
+yarn add @webriq-test/checkbox
 # or
-npm i @stackshift-ui/checkbox
+npm i @webriq-test/checkbox
 ```
 
 ## Contribution

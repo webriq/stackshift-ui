@@ -1,4 +1,4 @@
-import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
+import { DefaultComponent, useStackShiftUIComponents } from "@webriq-test/system";
 import type { ElementType, HTMLProps, ReactNode } from "react";
 import { PortableText } from "@portabletext/react";
 import { defaultBlockStyle } from "./defaultBlockStyle";

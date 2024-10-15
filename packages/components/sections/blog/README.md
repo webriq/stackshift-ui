@@ -1,15 +1,13 @@
-# @stackshift-ui/blog
-
-
+# @webriq-test/blog
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/blog) for more information.
 
 ## Installation
 
 ```sh
-yarn add @stackshift-ui/blog
+yarn add @webriq-test/blog
 # or
-npm i @stackshift-ui/blog
+npm i @webriq-test/blog
 ```
 
 ## Contribution

@@ -1,5 +1,5 @@
 {
-  "name": "@stackshift-ui/logger",
+  "name": "@webriq-test/logger",
   "version": "0.0.0",
   "private": true,
   "main": "./dist/index.js",
@@ -15,12 +15,12 @@
     "test": "jest"
   },
   "jest": {
-    "preset": "@stackshift-ui/jest-presets/node"
+    "preset": "@webriq-test/jest-presets/node"
   },
   "devDependencies": {
-    "@stackshift-ui/eslint-config": "workspace:*",
-    "@stackshift-ui/jest-presets": "workspace:*",
-    "@stackshift-ui/typescript-config": "workspace:*",
+    "@webriq-test/eslint-config": "workspace:*",
+    "@webriq-test/jest-presets": "workspace:*",
+    "@webriq-test/typescript-config": "workspace:*",
     "@types/jest": "^29.5.13",
     "@types/node": "^22.7.0",
     "jest": "^29.7.0",

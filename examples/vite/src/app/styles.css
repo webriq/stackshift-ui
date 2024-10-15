@@ -1,7 +1,7 @@
 @import "react18-loaders/dist";
 @import "nextjs-darkmode/css";
-@import "@stackshift-ui/components/dist/global.css";
-@import "@stackshift-ui/components/dist";
+@import "@webriq-test/components/dist/global.css";
+@import "@webriq-test/components/dist";
 
 .container {
   min-height: 100vh;

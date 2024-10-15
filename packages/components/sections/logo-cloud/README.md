@@ -1,15 +1,13 @@
-# @stackshift-ui/logo-cloud
-
-
+# @webriq-test/logo-cloud
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/logo-cloud) for more information.
 
 ## Installation
 
 ```sh
-yarn add @stackshift-ui/logo-cloud
+yarn add @webriq-test/logo-cloud
 # or
-npm i @stackshift-ui/logo-cloud
+npm i @webriq-test/logo-cloud
 ```
 
 ## Contribution

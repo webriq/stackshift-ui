@@ -1,15 +1,13 @@
-# @stackshift-ui/features
-
-
+# @webriq-test/features
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/features) for more information.
 
 ## Installation
 
 ```sh
-yarn add @stackshift-ui/features
+yarn add @webriq-test/features
 # or
-npm i @stackshift-ui/features
+npm i @webriq-test/features
 ```
 
 ## Contribution

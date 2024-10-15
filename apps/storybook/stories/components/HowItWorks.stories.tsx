@@ -1,4 +1,4 @@
-import { HowItWorks } from "@stackshift-ui/react";
+import { HowItWorks } from "@webriq-test/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof HowItWorks> = {

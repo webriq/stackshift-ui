@@ -1,15 +1,13 @@
-# @stackshift-ui/signin-signup
-
-
+# @webriq-test/signin-signup
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/signin-signup) for more information.
 
 ## Installation
 
 ```sh
-yarn add @stackshift-ui/signin-signup
+yarn add @webriq-test/signin-signup
 # or
-npm i @stackshift-ui/signin-signup
+npm i @webriq-test/signin-signup
 ```
 
 ## Contribution

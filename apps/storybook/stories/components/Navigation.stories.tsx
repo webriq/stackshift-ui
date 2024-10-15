@@ -1,4 +1,4 @@
-import { Navigation } from "@stackshift-ui/react";
+import { Navigation } from "@webriq-test/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Navigation> = {

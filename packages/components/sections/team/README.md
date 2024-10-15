@@ -1,15 +1,13 @@
-# @stackshift-ui/team
-
-
+# @webriq-test/team
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/team) for more information.
 
 ## Installation
 
 ```sh
-yarn add @stackshift-ui/team
+yarn add @webriq-test/team
 # or
-npm i @stackshift-ui/team
+npm i @webriq-test/team
 ```
 
 ## Contribution

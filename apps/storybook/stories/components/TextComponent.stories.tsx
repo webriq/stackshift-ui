@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { TextComponent } from "@stackshift-ui/react";
+import { TextComponent } from "@webriq-test/react";
 
 const meta: Meta<typeof TextComponent> = {
   title: "Components/Text Component",

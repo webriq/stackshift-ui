@@ -1,6 +1,6 @@
-import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
+import { DefaultComponent, useStackShiftUIComponents } from "@webriq-test/system";
 import type { ElementType, HTMLProps, ReactNode } from "react";
-import { Button } from "@stackshift-ui/button";
+import { Button } from "@webriq-test/button";
 import cn from "classnames";
 
 type Variant = "variant_a" | "variant_b";

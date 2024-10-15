@@ -1,7 +1,7 @@
-import { Image } from "@stackshift-ui/image";
-import { Section } from "@stackshift-ui/section";
-import { Container } from "@stackshift-ui/container";
-import { Flex } from "@stackshift-ui/flex";
+import { Image } from "@webriq-test/image";
+import { Section } from "@webriq-test/section";
+import { Container } from "@webriq-test/container";
+import { Flex } from "@webriq-test/flex";
 import { Images } from "./types";
 import { LogoCloudProps } from ".";
 

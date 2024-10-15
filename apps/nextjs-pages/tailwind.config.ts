@@ -8,7 +8,7 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "../storybook/stories/**/*.{js,ts,jsx,tsx,mdx}",
-    path.join(path.dirname(require.resolve("@stackshift-ui/react/")), "**/*.{js,ts,jsx,tsx,mdx}"),
+    path.join(path.dirname(require.resolve("@webriq-test/react/")), "**/*.{js,ts,jsx,tsx,mdx}"),
   ],
   theme: {
     extend: {

@@ -1,6 +1,6 @@
-import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
+import { DefaultComponent, useStackShiftUIComponents } from "@webriq-test/system";
 import type { ElementType, HTMLProps, ReactNode } from "react";
-import { Flex } from "@stackshift-ui/flex";
+import { Flex } from "@webriq-test/flex";
 import cn from "classnames";
 
 export interface BadgeProps extends Omit<HTMLProps<HTMLElement>, "as"> {

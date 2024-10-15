@@ -1,4 +1,4 @@
-import { CallToAction } from "@stackshift-ui/react";
+import { CallToAction } from "@webriq-test/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof CallToAction> = {

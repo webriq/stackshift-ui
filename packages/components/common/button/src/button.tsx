@@ -1,7 +1,7 @@
-import { useStackShiftUIComponents } from "@stackshift-ui/system";
+import { useStackShiftUIComponents } from "@webriq-test/system";
 import type { ButtonHTMLAttributes, AnchorHTMLAttributes, ReactNode } from "react";
 import { LabeledRoute, StyleVariants } from "./types";
-import { Link } from "@stackshift-ui/link";
+import { Link } from "@webriq-test/link";
 import { extractLink } from "./helper";
 
 import cn from "classnames";

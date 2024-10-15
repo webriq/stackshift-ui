@@ -1,15 +1,13 @@
-# @stackshift-ui/app-promo
-
-
+# @webriq-test/app-promo
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/app-promo) for more information.
 
 ## Installation
 
 ```sh
-yarn add @stackshift-ui/app-promo
+yarn add @webriq-test/app-promo
 # or
-npm i @stackshift-ui/app-promo
+npm i @webriq-test/app-promo
 ```
 
 ## Contribution

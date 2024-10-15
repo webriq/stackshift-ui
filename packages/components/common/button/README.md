@@ -1,4 +1,4 @@
-# @stackshift-ui/button
+# @webriq-test/button
 
 Buttons allow users to perform actions and choose with a single tap.
 
@@ -7,9 +7,9 @@ Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/compon
 ## Installation
 
 ```sh
-yarn add @stackshift-ui/button
+yarn add @webriq-test/button
 # or
-npm i @stackshift-ui/button
+npm i @webriq-test/button
 ```
 
 ## Contribution

@@ -1,15 +1,13 @@
-# @stackshift-ui/portfolio
-
-
+# @webriq-test/portfolio
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/portfolio) for more information.
 
 ## Installation
 
 ```sh
-yarn add @stackshift-ui/portfolio
+yarn add @webriq-test/portfolio
 # or
-npm i @stackshift-ui/portfolio
+npm i @webriq-test/portfolio
 ```
 
 ## Contribution

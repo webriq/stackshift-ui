@@ -1,7 +1,7 @@
-import { Heading } from "@stackshift-ui/heading";
-import { Text } from "@stackshift-ui/text";
-import { Link } from "@stackshift-ui/link";
-import { Image } from "@stackshift-ui/image";
+import { Heading } from "@webriq-test/heading";
+import { Text } from "@webriq-test/text";
+import { Link } from "@webriq-test/link";
+import { Image } from "@webriq-test/image";
 import { PortableTextComponents } from "@portabletext/react";
 
 export type MyPortableTextComponents = PortableTextComponents & {

@@ -1,4 +1,4 @@
-import { Input } from "@stackshift-ui/react";
+import { Input } from "@webriq-test/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Input> = {

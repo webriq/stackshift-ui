@@ -1,5 +1,5 @@
-import { GlobalLoader, Header } from "@stackshift-ui/components";
-import { Layout } from "@stackshift-ui/components/dist/server";
+import { GlobalLoader, Header } from "@webriq-test/components";
+import { Layout } from "@webriq-test/components/dist/server";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import { Core } from "nextjs-darkmode";

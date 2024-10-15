@@ -1,5 +1,5 @@
 {
-  "name": "@stackshift-ui/logo-cloud",
+  "name": "@webriq-test/logo-cloud",
   "description": "",
   "version": "0.0.0",
   "private": true,
@@ -20,8 +20,8 @@
     "test": "vitest run --coverage"
   },
   "devDependencies": {
-    "@stackshift-ui/eslint-config": "workspace:*",
-    "@stackshift-ui/typescript-config": "workspace:*",
+    "@webriq-test/eslint-config": "workspace:*",
+    "@webriq-test/typescript-config": "workspace:*",
     "@testing-library/react": "^16.0.1",
     "@types/node": "^22.7.0",
     "@types/react": "^18.3.9",
@@ -40,15 +40,15 @@
     "vitest": "^2.1.1"
   },
   "dependencies": {
-    "@stackshift-ui/scripts": "workspace:*",
-    "@stackshift-ui/system": "workspace:*",
-    "@stackshift-ui/button": "workspace:*",
-    "@stackshift-ui/heading": "workspace:*",
-    "@stackshift-ui/text": "workspace:*",
-    "@stackshift-ui/image": "workspace:*",
-    "@stackshift-ui/section": "workspace:*",
-    "@stackshift-ui/container": "workspace:*",
-    "@stackshift-ui/flex": "workspace:*"
+    "@webriq-test/scripts": "workspace:*",
+    "@webriq-test/system": "workspace:*",
+    "@webriq-test/button": "workspace:*",
+    "@webriq-test/heading": "workspace:*",
+    "@webriq-test/text": "workspace:*",
+    "@webriq-test/image": "workspace:*",
+    "@webriq-test/section": "workspace:*",
+    "@webriq-test/container": "workspace:*",
+    "@webriq-test/flex": "workspace:*"
   },
   "peerDependencies": {
     "@types/react": "16.8 - 19",

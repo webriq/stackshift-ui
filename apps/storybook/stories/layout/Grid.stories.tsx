@@ -1,4 +1,4 @@
-import { Grid, GridItem } from "@stackshift-ui/react";
+import { Grid, GridItem } from "@webriq-test/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Grid> = {

@@ -1,4 +1,4 @@
-import { Button, Flex } from "@stackshift-ui/react";
+import { Button, Flex } from "@webriq-test/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Flex> = {

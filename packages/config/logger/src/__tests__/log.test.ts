@@ -2,7 +2,7 @@ import { log } from "..";
 
 jest.spyOn(global.console, "log");
 
-describe("@stackshift-ui/logger", () => {
+describe("@webriq-test/logger", () => {
   it("prints a message", () => {
     log("hello");
     // eslint-disable-next-line no-console -- testing console

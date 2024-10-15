@@ -1,15 +1,13 @@
-# @stackshift-ui/stats-card
-
-
+# @webriq-test/stats-card
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/stats-card) for more information.
 
 ## Installation
 
 ```sh
-yarn add @stackshift-ui/stats-card
+yarn add @webriq-test/stats-card
 # or
-npm i @stackshift-ui/stats-card
+npm i @webriq-test/stats-card
 ```
 
 ## Contribution

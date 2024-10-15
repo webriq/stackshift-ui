@@ -1,15 +1,13 @@
-# @stackshift-ui/section
-
-
+# @webriq-test/section
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/section) for more information.
 
 ## Installation
 
 ```sh
-yarn add @stackshift-ui/section
+yarn add @webriq-test/section
 # or
-npm i @stackshift-ui/section
+npm i @webriq-test/section
 ```
 
 ## Contribution

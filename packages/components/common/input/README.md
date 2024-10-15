@@ -1,15 +1,13 @@
-# @stackshift-ui/input
-
-
+# @webriq-test/input
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/input) for more information.
 
 ## Installation
 
 ```sh
-yarn add @stackshift-ui/input
+yarn add @webriq-test/input
 # or
-npm i @stackshift-ui/input
+npm i @webriq-test/input
 ```
 
 ## Contribution

@@ -1,5 +1,5 @@
 import { MyPortableTextComponents } from "../types";
-import { Text } from "@stackshift-ui/text";
+import { Text } from "@webriq-test/text";
 
 // block styling as props to `serializers` of the PortableText component
 export const blockStyle: MyPortableTextComponents = {

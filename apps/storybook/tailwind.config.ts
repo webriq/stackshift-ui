@@ -1,6 +1,6 @@
 // tailwind config is required for editor support
 
-//import sharedConfig from "@stackshift-ui/react/tailwind-config";
+//import sharedConfig from "@webriq-test/react/tailwind-config";
 import sharedTWConfig from "../nextjs-pages/tailwind.config";
 import type { Config } from "tailwindcss";
 

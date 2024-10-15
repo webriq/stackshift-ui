@@ -9,15 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@stackshift-ui/system": "workspace:*",
-    "@stackshift-ui/react": "workspace:*",
+    "@webriq-test/system": "workspace:*",
+    "@webriq-test/react": "workspace:*",
     "react": "^18",
     "react-dom": "^18",
     "next": "14.2.15"
   },
   "peerDependencies": {
-    "@stackshift-ui/system": ">=0.0.0",
-    "@stackshift-ui/react": ">=0.0.0"
+    "@webriq-test/system": ">=0.0.0",
+    "@webriq-test/react": ">=0.0.0"
   },
   "devDependencies": {
     "typescript": "^5",

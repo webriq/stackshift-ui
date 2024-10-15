@@ -1,11 +1,11 @@
 import React from "react";
-import { Text } from "@stackshift-ui/text";
-import { Heading } from "@stackshift-ui/heading";
-import { Button } from "@stackshift-ui/button";
-import { Image } from "@stackshift-ui/image";
-import { Link } from "@stackshift-ui/link";
-import { Section } from "@stackshift-ui/section";
-import { Container } from "@stackshift-ui/container";
+import { Text } from "@webriq-test/text";
+import { Heading } from "@webriq-test/heading";
+import { Button } from "@webriq-test/button";
+import { Image } from "@webriq-test/image";
+import { Link } from "@webriq-test/link";
+import { Section } from "@webriq-test/section";
+import { Container } from "@webriq-test/container";
 import { LabeledRoute, Logo } from "./types";
 import { CTAProps } from ".";
 import { logoLink } from "./helper";

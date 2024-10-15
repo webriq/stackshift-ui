@@ -1,4 +1,4 @@
-import { Textarea } from "@stackshift-ui/react";
+import { Textarea } from "@webriq-test/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Textarea> = {

@@ -1,4 +1,4 @@
-import { Header } from "@stackshift-ui/react";
+import { Header } from "@webriq-test/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Header> = {

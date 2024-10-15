@@ -1,5 +1,5 @@
-import { Demo, Header } from "@stackshift-ui/components";
-import { LandingPage, Layout } from "@stackshift-ui/components/dist/server";
+import { Demo, Header } from "@webriq-test/components";
+import { LandingPage, Layout } from "@webriq-test/components/dist/server";
 import { Core } from "nextjs-darkmode";
 import React, { useCallback } from "react";
 import { LoaderContainer, useLoader } from "react18-loaders";

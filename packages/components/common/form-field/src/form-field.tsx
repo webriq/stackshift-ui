@@ -1,11 +1,11 @@
-import { Checkbox } from "@stackshift-ui/checkbox";
-import { CheckboxGroup } from "@stackshift-ui/checkbox-group";
-import { InputFile } from "@stackshift-ui/input-file";
-import { Input } from "@stackshift-ui/input";
+import { Checkbox } from "@webriq-test/checkbox";
+import { CheckboxGroup } from "@webriq-test/checkbox-group";
+import { InputFile } from "@webriq-test/input-file";
+import { Input } from "@webriq-test/input";
 import { Radio } from "../../radio/dist";
-import { RadioGroup } from "@stackshift-ui/radio-group";
-import { Select } from "@stackshift-ui/select";
-import { Textarea } from "@stackshift-ui/textarea";
+import { RadioGroup } from "@webriq-test/radio-group";
+import { Select } from "@webriq-test/select";
+import { Textarea } from "@webriq-test/textarea";
 import { FormTypes, Variant } from "./types";
 
 type FormFieldProps = {

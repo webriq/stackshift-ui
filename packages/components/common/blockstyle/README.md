@@ -1,15 +1,13 @@
-# @stackshift-ui/blockstyle
-
-
+# @webriq-test/blockstyle
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/blockstyle) for more information.
 
 ## Installation
 
 ```sh
-yarn add @stackshift-ui/blockstyle
+yarn add @webriq-test/blockstyle
 # or
-npm i @stackshift-ui/blockstyle
+npm i @webriq-test/blockstyle
 ```
 
 ## Contribution

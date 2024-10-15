@@ -1,7 +1,7 @@
-import { Heading } from "@stackshift-ui/heading";
-import { Section } from "@stackshift-ui/section";
-import { Container } from "@stackshift-ui/container";
-import { Flex } from "@stackshift-ui/flex";
+import { Heading } from "@webriq-test/heading";
+import { Section } from "@webriq-test/section";
+import { Container } from "@webriq-test/container";
+import { Flex } from "@webriq-test/flex";
 import { TextComponentProps } from ".";
 import { PortableText } from "@portabletext/react";
 import { textComponentBlockStyling } from "./helper";

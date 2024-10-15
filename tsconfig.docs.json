@@ -1,5 +1,5 @@
 {
-  "extends": "@stackshift-ui/typescript-config/react-library.json",
+  "extends": "@webriq-test/typescript-config/react-library.json",
   "compilerOptions": {
     "lib": ["dom", "ES2015"],
     "types": ["node"]

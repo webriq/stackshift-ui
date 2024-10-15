@@ -1,15 +1,13 @@
-# @stackshift-ui/radio
-
-
+# @webriq-test/radio
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/radio) for more information.
 
 ## Installation
 
 ```sh
-yarn add @stackshift-ui/radio
+yarn add @webriq-test/radio
 # or
-npm i @stackshift-ui/radio
+npm i @webriq-test/radio
 ```
 
 ## Contribution
