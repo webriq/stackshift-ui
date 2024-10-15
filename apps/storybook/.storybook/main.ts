@@ -7,10 +7,7 @@ function getAbsolutePath(value) {
 const config = {
   stories: [
     "../welcome.mdx", // first page to open when storybook is running
-    // TODO: Replace line 11-12 with the commented line below once all packages are defined for all stories added
-    "../stories/common/*.stories.@(js|jsx|mjs|ts|tsx)",
-    "../stories/layout/*.stories.@(js|jsx|mjs|ts|tsx)",
-    //"../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+    "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
 
   addons: [

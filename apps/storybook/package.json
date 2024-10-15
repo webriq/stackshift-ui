@@ -18,6 +18,7 @@
   "dependencies": {
     "@portabletext/react": "^3.1.0",
     "@stackshift-ui/react": "workspace:*",
+    "@stackshift-ui/system": "workspace:*",
     "deepmerge": "^4.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
