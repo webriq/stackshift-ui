@@ -265,7 +265,7 @@ export interface Variants {
     enableAnalytics: boolean;
     cookiePolicy?: {
       siteName: string;
-      cookiePolicyPage: Reference;
+      cookiePolicyPage?: any;
     };
     consentModalPosition?: string;
   };
