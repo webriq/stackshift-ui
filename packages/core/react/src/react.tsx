@@ -51,6 +51,7 @@ export {
 // export * from "@stackshift-ui/portfolio";
 // export * from "@stackshift-ui/features"
 // export * from "@stackshift-ui/navigation";
+// export * from "@stackshift-ui/text-component";
 
 // Layout
 export { Container } from "@stackshift-ui/container";
