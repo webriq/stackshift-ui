@@ -82,6 +82,7 @@
     "@stackshift-ui/portfolio": "workspace:*",
     "@stackshift-ui/features": "workspace:*",
     "@stackshift-ui/navigation": "workspace:*",
+    "@stackshift-ui/signin-signup": "workspace:*",
     "@stackshift-ui/text-component": "workspace:*",
     "@stackshift-ui/scripts": "workspace:*"
   },
