@@ -1,6 +1,6 @@
 import { DefaultComponent, useStackShiftUIComponents } from "@webriq-test/system";
-import type { ElementType, HTMLProps, ReactNode } from "react";
 import cn from "classnames";
+import type { ElementType, HTMLProps, ReactNode } from "react";
 
 type StyleVariants<T extends string> = Record<T, string>;
 type Variant = "primary" | "outline" | "secondary";
@@ -35,7 +35,7 @@ export const Textarea: React.FC<TextareaProps> = ({
   noLabel,
   children,
   className,
-  as,
+  as = "textarea",
   ...props
 }) => {
   const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
@@ -54,13 +54,16 @@ export const Textarea: React.FC<TextareaProps> = ({
   const variantClass = variants[variant] ?? primary;
 
   return (
-    <Component as={as} className={className} {...props} data-testid={displayName}>
+    <>
       {!noLabel && (
         <label htmlFor={name} className={labelClass}>
           {label || name}
         </label>
       )}
-      <textarea
+      <Component
+        as={as}
+        {...props}
+        data-testid={displayName}
         onChange={onChange}
         aria-label={ariaLabel || name}
         className={cn(variantClass, className)}
@@ -70,7 +73,7 @@ export const Textarea: React.FC<TextareaProps> = ({
         id={name}
         {...props}
       />
-    </Component>
+    </>
   );
 };
 
