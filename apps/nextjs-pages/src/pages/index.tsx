@@ -18,9 +18,7 @@ export default function Home() {
           If the overrides works, the below components should match with the default ones above.
         </p>
 
-        <Button className="mb-3" variant="outline">
-          Button from @webriq-test/react
-        </Button>
+        <Button className="mb-3">Button from @webriq-test/react</Button>
         <br />
         <Link href="/anotherpage" className="text-secondary hover:underline">
           Go to another page
