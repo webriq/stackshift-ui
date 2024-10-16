@@ -1,11 +1,10 @@
-import { useStackShiftUIComponents } from "@webriq-test/system";
-import type { ButtonHTMLAttributes, AnchorHTMLAttributes, ReactNode } from "react";
-import { LabeledRoute, StyleVariants } from "./types";
 import { Link } from "@webriq-test/link";
-import { extractLink } from "./helper";
-
+import { useStackShiftUIComponents } from "@webriq-test/system";
 import cn from "classnames";
+import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "react";
 import { FaSpinner } from "react-icons/fa";
+import { extractLink } from "./helper";
+import { type LabeledRoute, type StyleVariants } from "./types";
 
 type Variant =
   | "outline"
@@ -45,7 +44,7 @@ type Props = ButtonProps | LinkProps;
 
 const displayName = "Button";
 
-export const Button = ({ children, ...props }: Props) => {
+export function Button({ children, ...props }: Props) {
   const { [displayName]: Component = "button" } = useStackShiftUIComponents();
 
   const sizes = {
@@ -78,7 +77,7 @@ export const Button = ({ children, ...props }: Props) => {
   const custom = `inline-block bg-primary hover:bg-primary/50 ${buttonSize} ${buttonRadius} text-gray-50 font-bold transition duration-200`;
   const outline = `${commonStyles} ${buttonSize} ${buttonRadius} bg-white hover:bg-primary/50 outline outline-1 text-primary outline-primary`;
   const ghost = `${commonStyles} ${buttonRadius} ${buttonSize} bg-transparent hover:bg-primary/50 text-primary`;
-  const link = `transition-200 text-primary hover:text-primary/50 underline ${buttonRadius} ${cn(buttonSize, "px-0 py-0")}`;
+  const linkType = `transition-200 text-primary hover:text-primary/50 underline ${buttonRadius} ${cn(buttonSize, "px-0 py-0")}`;
   const unstyled = ``;
   const swiper_pagination = `mr-1 ${isActive ? "bg-primary" : "bg-gray-200"} rounded-full p-1 focus:outline-none`;
   const tab = `mx-auto mb-1 w-auto px-4 py-2 rounded duration-200 transition focus:outline-none font-bold ${
@@ -91,7 +90,7 @@ export const Button = ({ children, ...props }: Props) => {
   const variants: StyleVariants<Variant> = {
     outline,
     ghost,
-    link,
+    link: linkType,
     custom,
     solid,
     addToWishlist,
@@ -103,15 +102,15 @@ export const Button = ({ children, ...props }: Props) => {
   const variantClass = variants[variant ?? "solid"];
 
   if (props.as === "link") {
-    const { link, ariaLabel, radius, ...rest } = props as LinkProps;
+    const { link, ...rest } = props as LinkProps;
 
     return (
       <Link
         className={cn(variantClass, className)}
         aria-label={ariaLabel}
         href={extractLink(link)}
-        target={link?.linkTarget}
-        rel={link?.linkTarget === "_blank" ? "noopener noreferrer" : ""}
+        target={link.linkTarget}
+        rel={link.linkTarget === "_blank" ? "noopener noreferrer" : ""}
         {...rest}>
         {children}
       </Link>
@@ -132,4 +131,4 @@ export const Button = ({ children, ...props }: Props) => {
       {loading ? Loader : children}
     </Component>
   );
-};
+}

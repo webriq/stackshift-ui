@@ -1,6 +1,6 @@
 // tailwind config is required for editor support
 
-import sharedTWConfig from "@webriq-test/tailwind-config/tailwind";
+import sharedTWConfig from "@webriq-test/tailwind-config";
 import path from "path";
 import type { Config } from "tailwindcss";
 

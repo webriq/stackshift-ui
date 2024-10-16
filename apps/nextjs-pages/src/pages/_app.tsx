@@ -1,5 +1,5 @@
-import { StackShiftUIProvider } from "@webriq-test/system";
-import "@webriq-test/tailwind-config/styles.css";
+import "@/styles/globals.css";
+import { StackShiftUIProvider } from "@webriq-test/react";
 import type { AppProps } from "next/app";
 import "vanilla-cookieconsent/dist/cookieconsent.css";
 

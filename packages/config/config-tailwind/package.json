@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
-    "./tailwind": "./tailwind.config.ts",
-    "./styles.css": "./styles.css"
+    ".": "./tailwind.config.ts"
   },
   "devDependencies": {
     "@webriq-test/typescript-config": "workspace:*",

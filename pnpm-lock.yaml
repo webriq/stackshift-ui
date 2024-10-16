@@ -81,9 +81,6 @@ importers:
       '@types/react-dom':
         specifier: ^18
         version: 18.3.0
-      '@webriq-test/tailwind-config':
-        specifier: workspace:*
-        version: link:../../packages/config/config-tailwind
       eslint:
         specifier: ^8.0.0
         version: 8.57.1
@@ -4378,9 +4375,6 @@ importers:
       '@webriq-test/eslint-config':
         specifier: workspace:*
         version: link:../../config/config-eslint
-      '@webriq-test/tailwind-config':
-        specifier: workspace:*
-        version: link:../../config/config-tailwind
       '@webriq-test/typescript-config':
         specifier: workspace:*
         version: link:../../config/config-typescript
