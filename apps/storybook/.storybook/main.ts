@@ -1,4 +1,4 @@
-import { resolve } from "path";
+import { dirname, join, resolve } from "path";
 
 const config = {
   stories: [
@@ -6,10 +6,14 @@ const config = {
     "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
 
-  addons: ["@storybook/addon-links", "@storybook/addon-essentials", "@chromatic-com/storybook"],
+  addons: [
+    getAbsolutePath("@storybook/addon-links"),
+    getAbsolutePath("@storybook/addon-essentials"),
+    getAbsolutePath("@chromatic-com/storybook"),
+  ],
 
   framework: {
-    name: "@storybook/react-vite",
+    name: getAbsolutePath("@storybook/react-vite"),
     options: {},
   },
 
@@ -37,9 +41,7 @@ const config = {
     };
   },
 
-  docs: {
-    autodocs: true,
-  },
+  docs: {},
 
   typescript: {
     reactDocgen: "react-docgen-typescript",
@@ -47,3 +49,7 @@ const config = {
 };
 
 export default config;
+
+function getAbsolutePath(value: string): any {
+  return dirname(require.resolve(join(value, "package.json")));
+}
