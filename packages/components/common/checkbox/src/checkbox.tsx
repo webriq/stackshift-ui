@@ -1,6 +1,6 @@
 import { DefaultComponent, useStackShiftUIComponents } from "@webriq-test/system";
-import type { ElementType, HTMLProps } from "react";
 import cn from "classnames";
+import type { ElementType, HTMLProps } from "react";
 
 export type StyleVariants<T extends string> = Record<T, string>;
 type Variant = "primary";

@@ -1,7 +1,7 @@
 import { DefaultComponent, useStackShiftUIComponents } from "@webriq-test/system";
+import cn from "classnames";
 import type { ElementType, HTMLProps, ReactNode } from "react";
 import { useState } from "react";
-import cn from "classnames";
 
 type StyleVariants<T extends string> = Record<T, string>;
 type Variant = "primary" | "outline";
@@ -55,7 +55,9 @@ export const InputFile: React.FC<InputFileProps> = ({
   };
 
   return (
-    <div className={"relative rounded bg-white px-2 w-full"}>
+    <div
+      className={"relative rounded bg-white px-2 w-full"}
+      data-testid={displayName?.toLowerCase()}>
       <input
         aria-label={ariaLabel ?? "Attach file"}
         className="absolute w-full h-full opacity-0 cursor-pointer"

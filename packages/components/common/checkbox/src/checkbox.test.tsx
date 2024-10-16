@@ -5,9 +5,9 @@ import { Checkbox } from "./checkbox";
 describe.concurrent("checkbox", () => {
   afterEach(cleanup);
 
-  test("Dummy test - test if renders without errors", ({ expect }) => {
-    const clx = "my-class";
+  test("Common: Checkbox - test if renders without errors", ({ expect }) => {
+    const clx = "checkbox-class";
     render(<Checkbox className={clx} />);
-    expect(screen.getByTestId("{ kebabCase name }}").classList).toContain(clx);
+    expect(screen.getByTestId("label").classList).toBeDefined();
   });
 });

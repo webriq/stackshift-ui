@@ -3,11 +3,11 @@ import { afterEach, describe, test } from "vitest";
 import { Container } from "./container";
 
 describe.concurrent("container", () => {
-	afterEach(cleanup);
+  afterEach(cleanup);
 
-	test("Dummy test - test if renders without errors", ({ expect }) => {
-		const clx = "my-class";
-		render(<Container className={clx} />);
-		expect(screen.getByTestId("{ kebabCase name }}").classList).toContain(clx);
-	});
+  test("Layout: Container - test if renders without errors", ({ expect }) => {
+    const clx = "container-class";
+    render(<Container className={clx} />);
+    expect(screen.getByTestId("div").classList).toContain(clx);
+  });
 });

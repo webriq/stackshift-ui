@@ -1,7 +1,7 @@
 import { DefaultComponent, useStackShiftUIComponents } from "@webriq-test/system";
-import type { ElementType, HTMLProps, ReactNode } from "react";
-import { FaFacebook, FaYoutube, FaLinkedin } from "react-icons/fa";
 import cn from "classnames";
+import type { ElementType, HTMLProps, ReactNode } from "react";
+import { FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa";
 
 type Socials = "facebook" | "instagram" | "youtube" | "linkedin" | "twitter";
 
@@ -66,7 +66,11 @@ export const SocialIcons: React.FC<SocialIconsProps> = ({
   const commonClass = `w-8 h-8 text-primary-foreground`;
 
   return (
-    <Component as={as} className={cn(commonClass, className)} {...props} data-testid={displayName}>
+    <Component
+      as={as}
+      className={cn(commonClass, className)}
+      {...props}
+      data-testid={displayName.toLowerCase()}>
       {children}
     </Component>
   );

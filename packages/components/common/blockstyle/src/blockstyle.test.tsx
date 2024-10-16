@@ -3,11 +3,12 @@ import { afterEach, describe, test } from "vitest";
 import { Blockstyle } from "./blockstyle";
 
 describe.concurrent("blockstyle", () => {
-	afterEach(cleanup);
+  afterEach(cleanup);
 
-	test("Dummy test - test if renders without errors", ({ expect }) => {
-		const clx = "my-class";
-		render(<Blockstyle className={clx} />);
-		expect(screen.getByTestId("{ kebabCase name }}").classList).toContain(clx);
-	});
+  test("Common: Blockstyle - test if renders without errors", ({ expect }) => {
+    const clx = "blockStyle-class";
+    render(<Blockstyle className={clx} />);
+
+    expect(screen.getByTestId("div").classList).toContain(clx);
+  });
 });

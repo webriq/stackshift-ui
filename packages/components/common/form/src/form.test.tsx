@@ -3,11 +3,11 @@ import { afterEach, describe, test } from "vitest";
 import { Form } from "./form";
 
 describe.concurrent("form", () => {
-	afterEach(cleanup);
+  afterEach(cleanup);
 
-	test("Dummy test - test if renders without errors", ({ expect }) => {
-		const clx = "my-class";
-		render(<Form className={clx} />);
-		expect(screen.getByTestId("{ kebabCase name }}").classList).toContain(clx);
-	});
+  test("Common: Form - test if renders without errors", ({ expect }) => {
+    const clx = "form-class";
+    render(<Form className={clx} />);
+    expect(screen.getByTestId("stackshift-form").classList).toContain(clx);
+  });
 });

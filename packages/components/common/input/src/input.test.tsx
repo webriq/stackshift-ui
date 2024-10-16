@@ -3,11 +3,11 @@ import { afterEach, describe, test } from "vitest";
 import { Input } from "./input";
 
 describe.concurrent("input", () => {
-	afterEach(cleanup);
+  afterEach(cleanup);
 
-	test("Dummy test - test if renders without errors", ({ expect }) => {
-		const clx = "my-class";
-		render(<Input className={clx} />);
-		expect(screen.getByTestId("{ kebabCase name }}").classList).toContain(clx);
-	});
+  test("Common: Input - test if renders without errors", ({ expect }) => {
+    const clx = "input-class";
+    render(<Input className={clx} />);
+    expect(screen.getByTestId("input").classList).toContain(clx);
+  });
 });

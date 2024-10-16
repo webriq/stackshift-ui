@@ -3,11 +3,11 @@ import { afterEach, describe, test } from "vitest";
 import { RadioGroup } from "./radio-group";
 
 describe.concurrent("radio-group", () => {
-	afterEach(cleanup);
+  afterEach(cleanup);
 
-	test("Dummy test - test if renders without errors", ({ expect }) => {
-		const clx = "my-class";
-		render(<RadioGroup className={clx} />);
-		expect(screen.getByTestId("{ kebabCase name }}").classList).toContain(clx);
-	});
+  test("Common: Radio Group - test if renders without errors", ({ expect }) => {
+    const clx = "radiogroup-class";
+    render(<RadioGroup className={clx} name="stackshift-radiogroup" />);
+    expect(screen.getByTestId("div").classList).toContain(clx);
+  });
 });

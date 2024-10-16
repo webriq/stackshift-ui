@@ -2,12 +2,18 @@ import { cleanup, render, screen } from "@testing-library/react";
 import { afterEach, describe, test } from "vitest";
 import { StatsCard } from "./stats-card";
 
-describe.concurrent("stats-card", () => {
-	afterEach(cleanup);
+const ARGS = {
+  LABEL: "Total Revenue",
+  VALUE: "$33,261",
+  ICON: "https://cdn.sanity.io/images/9itgab5x/staging/97b6696849c90facc200537fd780b03d373e5212-980x830.png",
+};
 
-	test("Dummy test - test if renders without errors", ({ expect }) => {
-		const clx = "my-class";
-		render(<StatsCard className={clx} />);
-		expect(screen.getByTestId("{ kebabCase name }}").classList).toContain(clx);
-	});
+describe.concurrent("stats-card", () => {
+  afterEach(cleanup);
+
+  test("Common: Stats Card - test if renders without errors", ({ expect }) => {
+    const clx = "statscard-class";
+    render(<StatsCard className={clx} icon={ARGS.ICON} value={ARGS.VALUE} label={ARGS.LABEL} />);
+    expect(screen.getByTestId("div").classList).toContain(clx);
+  });
 });

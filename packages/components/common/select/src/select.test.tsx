@@ -3,11 +3,18 @@ import { afterEach, describe, test } from "vitest";
 import { Select } from "./select";
 
 describe.concurrent("select", () => {
-	afterEach(cleanup);
+  afterEach(cleanup);
 
-	test("Dummy test - test if renders without errors", ({ expect }) => {
-		const clx = "my-class";
-		render(<Select className={clx} />);
-		expect(screen.getByTestId("{ kebabCase name }}").classList).toContain(clx);
-	});
+  test("Common: Select - test if renders without errors", ({ expect }) => {
+    const clx = "select-class";
+    render(
+      <Select
+        className={clx}
+        name="stackshift-select"
+        ariaLabel="stackshift select"
+        items={["Option 1", "Option 2", "Option 3"]}
+      />,
+    );
+    expect(screen.getByTestId("select").classList).toContain(clx);
+  });
 });

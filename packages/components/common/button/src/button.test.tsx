@@ -3,11 +3,11 @@ import { afterEach, describe, test } from "vitest";
 import { Button } from "./button";
 
 describe.concurrent("button", () => {
-	afterEach(cleanup);
+  afterEach(cleanup);
 
-	test("Dummy test - test if renders without errors", ({ expect }) => {
-		const clx = "my-class";
-		render(<Button className={clx} />);
-		expect(screen.getByTestId("button").classList).toContain(clx);
-	});
+  test("Common: Button - test if renders without errors", ({ expect }) => {
+    const clx = "button-class";
+    render(<Button className={clx} />);
+    expect(screen.getByTestId("button").classList).toContain(clx);
+  });
 });

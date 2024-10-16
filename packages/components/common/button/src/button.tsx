@@ -127,6 +127,7 @@ export function Button({ children, ...props }: Props) {
       disabled={disabled ?? loading}
       className={cn(variantClass, className)}
       aria-label={ariaLabel}
+      data-testid={displayName.toLowerCase()}
       type={type}>
       {loading ? Loader : children}
     </Component>

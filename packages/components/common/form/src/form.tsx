@@ -1,5 +1,5 @@
-import React from "react";
 import { WebriQForm } from "@webriq-test/webriq-form";
+import React from "react";
 import { LabeledRoute } from "./types";
 
 export type FormProps = {
@@ -15,6 +15,7 @@ export const Form = ({ id, name, thankyouPage, className, children }: FormProps)
     <WebriQForm
       method="POST"
       data-form-id={id}
+      data-testid="stackshift-form"
       name={name ?? "Form"}
       className={className}
       data-thankyou-url={thankyouPage}

@@ -3,11 +3,11 @@ import { afterEach, describe, test } from "vitest";
 import { Grid } from "./grid";
 
 describe.concurrent("grid", () => {
-	afterEach(cleanup);
+  afterEach(cleanup);
 
-	test("Dummy test - test if renders without errors", ({ expect }) => {
-		const clx = "my-class";
-		render(<Grid className={clx} />);
-		expect(screen.getByTestId("{ kebabCase name }}").classList).toContain(clx);
-	});
+  test("Layout: Grid - test if renders without errors", ({ expect }) => {
+    const clx = "grid-class";
+    render(<Grid className={clx} />);
+    expect(screen.getByTestId("div").classList).toContain(clx);
+  });
 });

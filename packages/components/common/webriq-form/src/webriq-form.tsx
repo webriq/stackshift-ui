@@ -81,6 +81,7 @@ class WebriQForm extends React.Component<WebriQFormProps> {
         className={className}
         method="POST"
         data-form-id={formId}
+        data-testid="webriq-form"
         data-thankyou-url={redirectURL}
         // eslint-disable-next-line react/no-unknown-property
         webriq="true"

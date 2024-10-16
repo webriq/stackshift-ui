@@ -1,7 +1,7 @@
-import { DefaultComponent, useStackShiftUIComponents } from "@webriq-test/system";
-import type { ElementType, HTMLProps, ReactNode } from "react";
 import { Button } from "@webriq-test/button";
+import { DefaultComponent, useStackShiftUIComponents } from "@webriq-test/system";
 import cn from "classnames";
+import type { ElementType, HTMLProps, ReactNode } from "react";
 
 type Variant = "variant_a" | "variant_b";
 
@@ -51,6 +51,7 @@ export const SwiperButton: React.FC<SwiperButtonProps> = ({
       variant="unstyled"
       onClick={onClick}
       className={cn(classes, className)}
+      data-testid={displayName.toLowerCase()}
       ariaLabel={ariaLabel}
       {...props}>
       {children ? children : <Element type={type} />}

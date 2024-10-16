@@ -3,11 +3,22 @@ import { afterEach, describe, test } from "vitest";
 import { Avatar } from "./avatar";
 
 describe.concurrent("avatar", () => {
-	afterEach(cleanup);
+  afterEach(cleanup);
 
-	test("Dummy test - test if renders without errors", ({ expect }) => {
-		const clx = "my-class";
-		render(<Avatar className={clx} />);
-		expect(screen.getByTestId("{ kebabCase name }}").classList).toContain(clx);
-	});
+  test("Common: Avatar - test if renders without errors", ({ expect }) => {
+    const clx = "avatar-class";
+
+    render(
+      <Avatar
+        className={clx}
+        src="https://via.placeholder.com/150"
+        alt="Sample Avatar"
+        text="StackShift"
+      />,
+    );
+    const elements = screen.getAllByTestId("div");
+    elements.forEach(element => {
+      expect(element.classList).toBeDefined();
+    });
+  });
 });

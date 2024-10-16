@@ -3,11 +3,11 @@ import { afterEach, describe, test } from "vitest";
 import { YoutubeVideo } from "./youtube-video";
 
 describe.concurrent("youtube-video", () => {
-	afterEach(cleanup);
+  afterEach(cleanup);
 
-	test("Dummy test - test if renders without errors", ({ expect }) => {
-		const clx = "my-class";
-		render(<YoutubeVideo className={clx} />);
-		expect(screen.getByTestId("{ kebabCase name }}").classList).toContain(clx);
-	});
+  test("Common: YouTube Video - test if renders without errors", ({ expect }) => {
+    const clx = "aspect-video";
+    render(<YoutubeVideo className={clx} />);
+    expect(screen.getByTestId("div").classList).toContain(clx);
+  });
 });
