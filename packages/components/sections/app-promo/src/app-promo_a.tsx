@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import { Container } from "@webriq-test/container";
+import { Flex } from "@webriq-test/flex";
 import { Heading } from "@webriq-test/heading";
-import { SwiperButton } from "@webriq-test/swiper-button";
-import { Text } from "@webriq-test/text";
 import { Image } from "@webriq-test/image";
 import { Link } from "@webriq-test/link";
 import { Section } from "@webriq-test/section";
-import { Container } from "@webriq-test/container";
-import { Flex } from "@webriq-test/flex";
-import { Images, Logo } from "./types";
+import { SwiperButton } from "@webriq-test/swiper-button";
+import { Text } from "@webriq-test/text";
+import React, { useState } from "react";
 import { AppPromoProps } from ".";
 import { logoLink } from "./helper";
+import { Images, Logo } from "./types";
 
 export default function AppPromo_A({ logo, subtitle, title, images = [] }: AppPromoProps) {
   //for image carousel
@@ -59,13 +59,7 @@ function LogoSection({ logo }: { logo?: Logo }) {
       href={logoLink(logo)}
       target={logo?.linkTarget}
       rel={logo?.linkTarget === "_blank" ? "noopener noreferrer" : ""}>
-      <Image
-        src={logo?.image}
-        alt={logo?.alt ?? "appPromo-logo"}
-        width={56}
-        height={56}
-        className="inline-block p-5 mb-8 rounded-lg"
-      />
+      <Image src={logo?.image} width={50} height={56} alt={logo?.alt ?? "appPromo-logo"} />
     </Link>
   );
 }
