@@ -3,10 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
-    ".": "./tailwind.config.ts"
+    "./tailwind": "./tailwind.config.ts",
+    "./postcss": "./postcss.config.js"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.4.1"
   },
   "devDependencies": {
-    "@webriq-test/typescript-config": "workspace:*",
-    "tailwindcss": "^3.4.1"
+    "@webriq-test/typescript-config": "workspace:*"
   }
 }

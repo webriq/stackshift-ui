@@ -1,7 +1,13 @@
 import type { Config } from "tailwindcss";
 
-// We want each package to be responsible for its own content.
-const config: Omit<Config, "content"> = {
+const config = {
+  content: [
+    "./src/**/*.{ts,tsx}",
+    "../../../apps/nextjs-pages/**/*.{ts,tsx}",
+    "../../../apps/storybook/**/*.{ts,tsx}",
+    "../../components/**/*.{ts,tsx}",
+    "../../core/**/*.{ts,tsx}",
+  ],
   theme: {
     extend: {
       colors: {
@@ -57,6 +63,6 @@ const config: Omit<Config, "content"> = {
       },
     },
   },
-  plugins: [],
-};
+} satisfies Config;
+
 export default config;

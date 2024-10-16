@@ -1,12 +1,8 @@
-//import sharedTWConfig from "@webriq-test/tailwind-config";
+//import sharedTWConfig from "@webriq-test/tailwind-config/tailwind";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: [
-    "./src/pages/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@webriq-test/react/dist/*.ts",
-  ],
+  content: ["./src/**/*.{ts,tsx}", "../../packages/components/**/*.{ts,tsx}"],
   //presets: [sharedTWConfig],
   theme: {
     extend: {
@@ -63,7 +59,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
 };
 
 export default config;

@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <section className="my-12 p-6 bg-background rounded-lg shadow-md">
-        <LocalButton className="mb-4 text-white py-3 px-6 bg-secondary">Local Button</LocalButton>
+        <LocalButton>Local Button</LocalButton>
         <br />
         <NextLink href="/anotherpage" className="text-blue-500 hover:underline">
           Go to another page
@@ -18,7 +18,7 @@ export default function Home() {
           If the overrides works, the below components should match with the default ones above.
         </p>
 
-        <Button variant="solid" className="text-white py-3 px-6 rounded-global">
+        <Button className="mb-3" variant="outline">
           Button from @webriq-test/react
         </Button>
         <br />

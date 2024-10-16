@@ -1,11 +1,12 @@
-import { Button } from "@webriq-test/react";
 import type { Meta, StoryObj } from "@storybook/react";
+import { Button } from "@webriq-test/react";
 
 const meta: Meta<typeof Button> = {
   title: "Common/Button",
   component: Button,
   tags: ["autodocs"],
   args: {
+    className: "py-3 px-6 rounded-global",
     children: "Submit",
     type: "button",
     variant: "solid",
@@ -29,6 +30,7 @@ type Story = StoryObj<typeof Button>;
 export const Solid: Story = {
   args: {
     variant: "solid",
+    //className: "bg-primary",
   },
 };
 
