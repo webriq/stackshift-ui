@@ -1,6 +1,6 @@
 import { lazy } from "react";
-import { SectionsProps } from "./types";
 import { PortableTextBlock } from "sanity";
+import { SectionsProps } from "./types";
 
 const Variants = {
   variant_a: lazy(() => import("./text_a")),

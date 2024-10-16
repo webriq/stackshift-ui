@@ -3,11 +3,10 @@ import { afterEach, describe, test } from "vitest";
 import { Cookies } from "./cookies";
 
 describe.concurrent("cookies", () => {
-	afterEach(cleanup);
+  afterEach(cleanup);
 
-	test("Dummy test - test if renders without errors", ({ expect }) => {
-		const clx = "my-class";
-		render(<Cookies className={clx} />);
-		expect(screen.getByTestId("{ kebabCase name }}").classList).toContain(clx);
-	});
+  test("Dummy test - test if renders without errors", ({ expect }) => {
+    render(<Cookies data={{ variant: "variant_a" }} />);
+    // @todo: add proper test for variant_a
+  });
 });

@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 
 import * as CookieConsent from "vanilla-cookieconsent";
-import { extractLink } from "./helper";
 import { CookiesProps } from ".";
+import { extractLink } from "./helper";
 
 export default function Cookies_A({
   title,
@@ -11,6 +11,7 @@ export default function Cookies_A({
   denyCookieBtn,
   config,
   contactLink,
+  ...props
 }: CookiesProps) {
   const siteName = config?.cookiePolicy?.siteName;
   const cookieConfigLink = config?.cookiePolicy?.cookiePolicyPage;
@@ -89,7 +90,7 @@ export default function Cookies_A({
     CookieConsent.run(cookieConfigOptions);
   }, []);
 
-  return <></>;
+  return <div {...props} />;
 }
 
 export { Cookies_A };

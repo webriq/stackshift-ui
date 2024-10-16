@@ -20,14 +20,14 @@
     "test": "vitest run --coverage"
   },
   "devDependencies": {
-    "@webriq-test/eslint-config": "workspace:*",
-    "@webriq-test/typescript-config": "workspace:*",
     "@testing-library/react": "^16.0.1",
     "@types/node": "^22.7.0",
     "@types/react": "^18.3.9",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
     "@vitest/coverage-v8": "^2.1.1",
+    "@webriq-test/eslint-config": "workspace:*",
+    "@webriq-test/typescript-config": "workspace:*",
     "esbuild-plugin-rdi": "^0.0.0",
     "esbuild-plugin-react18": "^0.2.5",
     "esbuild-plugin-react18-css": "^0.0.4",
@@ -41,17 +41,18 @@
   },
   "dependencies": {
     "@portabletext/react": "^3.1.0",
-    "@webriq-test/scripts": "workspace:*",
-    "@webriq-test/system": "workspace:*",
-    "@webriq-test/heading": "workspace:*",
-    "@webriq-test/section": "workspace:*",
+    "@testing-library/jest-dom": "^6.5.0",
     "@webriq-test/container": "workspace:*",
     "@webriq-test/flex": "workspace:*",
+    "@webriq-test/heading": "workspace:*",
+    "@webriq-test/scripts": "workspace:*",
+    "@webriq-test/section": "workspace:*",
+    "@webriq-test/system": "workspace:*",
     "sanity": "^3.60.0"
   },
   "peerDependencies": {
-    "@webriq-test/system": ">=0.0.0",
     "@types/react": "16.8 - 19",
+    "@webriq-test/system": ">=0.0.0",
     "next": "10 - 14",
     "react": "16.8 - 19",
     "react-dom": "16.8 - 19"

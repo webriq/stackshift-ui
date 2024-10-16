@@ -3,8 +3,8 @@
 
 import { lazy } from "react";
 
-import { SectionsProps } from "./types";
 import { ConsentModalPosition } from "vanilla-cookieconsent";
+import { SectionsProps } from "./types";
 
 const Variants = {
   variant_a: lazy(() => import("./cookies_a")),
@@ -43,7 +43,7 @@ export const Cookies: React.FC<SectionsProps> = ({ data }) => {
     contactLink: data?.variants?.contactLink ?? undefined,
   };
 
-  return Variant ? <Variant {...props} /> : null;
+  return Variant ? <Variant {...props} data-testid={displayName} /> : null;
 };
 
 Cookies.displayName = displayName;
