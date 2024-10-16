@@ -1,6 +1,9 @@
 import { dirname, join, resolve } from "path";
 
 const config = {
+  features: {
+    backgroundsStoryGlobals: true,
+  },
   stories: [
     "../welcome.mdx", // first page to open when storybook is running
     "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
