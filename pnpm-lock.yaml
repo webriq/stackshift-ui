@@ -196,6 +196,9 @@ importers:
       '@webriq-test/flex':
         specifier: workspace:*
         version: link:../../layout/flex
+      '@webriq-test/image':
+        specifier: workspace:*
+        version: link:../image
       '@webriq-test/scripts':
         specifier: workspace:*
         version: link:../../../../scripts

@@ -1,8 +1,9 @@
+import { Flex } from "@webriq-test/flex";
+import { Image } from "@webriq-test/image";
 import { DefaultComponent, useStackShiftUIComponents } from "@webriq-test/system";
+import cn from "classnames";
 import type { ElementType, HTMLProps, ReactNode } from "react";
 import { useState } from "react";
-import { Flex } from "@webriq-test/flex";
-import cn from "classnames";
 
 type ImageSize = "sm" | "md" | "lg" | "xl";
 
@@ -60,10 +61,12 @@ export const Avatar: React.FC<AvatarProps> = ({
         </Flex>
       )}
       {src && (
-        <img
+        <Image
           className="object-cover object-center w-[100%] h-[100%]"
           src={src}
           alt={alt}
+          width={100}
+          height={100}
           onLoad={() => setLoaded(true)}
         />
       )}
@@ -79,10 +82,12 @@ export const Avatar: React.FC<AvatarProps> = ({
         </Flex>
       )}
       {src && (
-        <img
+        <Image
           className="object-cover object-center w-[100%] h-[100%]"
           src={src}
           alt={alt}
+          width={100}
+          height={100}
           onLoad={() => setLoaded(true)}
         />
       )}

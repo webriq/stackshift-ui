@@ -43,6 +43,7 @@
     "@webriq-test/scripts": "workspace:*",
     "@webriq-test/system": "workspace:*",
     "@webriq-test/flex": "workspace:*",
+    "@webriq-test/image": "workspace:*",
     "classnames": "^2.5.1"
   },
   "peerDependencies": {
