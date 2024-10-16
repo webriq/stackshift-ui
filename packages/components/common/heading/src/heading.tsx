@@ -1,6 +1,6 @@
 import { DefaultComponent, useStackShiftUIComponents } from "@webriq-test/system";
-import type { ElementType, HTMLProps, ReactNode } from "react";
 import cn from "classnames";
+import type { ElementType, HTMLProps, ReactNode } from "react";
 
 type StyleVariants<T extends string> = Record<T, string>;
 type Type = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
@@ -24,7 +24,7 @@ export interface HeadingProps extends Omit<HTMLProps<HTMLElement>, "as"> {
   fontSize?: fontSize;
   children?: ReactNode;
   className?: string;
-  as?: ElementType;
+  // as?: ElementType;
 }
 
 const displayName = "Heading";
@@ -37,7 +37,7 @@ export const Heading: React.FC<HeadingProps> = ({
   fontSize = "3xl",
   children,
   className,
-  as,
+  // as,
   ...props
 }) => {
   const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
@@ -84,7 +84,11 @@ export const Heading: React.FC<HeadingProps> = ({
   const variantClass = variants[Element] ?? variants.h1;
 
   return (
-    <Component as={as} className={cn(variantClass, className)} {...props} data-testid={displayName}>
+    <Component
+      as={type}
+      className={cn(variantClass, className)}
+      {...props}
+      data-testid={displayName}>
       {children}
     </Component>
   );
