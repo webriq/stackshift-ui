@@ -20,7 +20,7 @@ const { version: VERSION, name } = require("../packages/core/react/package.json"
 let LATEST_VERSION = "0.0.-1";
 
 try {
-  LATEST_VERSION = execSync(`npm view ${name} version`).toString().trim() ?? "0.0.-1";
+  LATEST_VERSION = execSync(`npm view ${name} version`).toString().trim() ?? "0.0.5";
 } catch {
   // empty
 }
