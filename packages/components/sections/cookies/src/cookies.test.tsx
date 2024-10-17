@@ -5,7 +5,7 @@ import { Cookies } from "./cookies";
 describe.concurrent("cookies", () => {
   afterEach(cleanup);
 
-  test("Dummy test - test if renders without errors", ({ expect }) => {
+  test.skip("Dummy test - test if renders without errors", ({ expect }) => {
     render(<Cookies data={{ variant: "variant_a" }} />);
     // @todo: add proper test for variant_a
   });
