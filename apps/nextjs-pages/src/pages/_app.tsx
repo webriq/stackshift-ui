@@ -1,7 +1,6 @@
 import "@/styles/globals.css";
 import { StackShiftUIProvider } from "@webriq-test/react";
 import type { AppProps } from "next/app";
-import "vanilla-cookieconsent/dist/cookieconsent.css";
 
 import { Button, Image, Link } from "@/components/index";
 
