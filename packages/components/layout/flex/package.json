@@ -1,8 +1,8 @@
 {
   "name": "@webriq-test/flex",
   "description": "",
-  "version": "0.0.0",
-  "private": true,
+  "version": "3.0.0",
+  "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
