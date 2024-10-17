@@ -1,5 +1,13 @@
 # @webriq-test/header
 
+## 1.0.1
+
+### Patch Changes
+
+- Updated dependencies
+  - @webriq-test/flex@4.0.0
+  - @webriq-test/signin-signup@1.0.1
+
 ## 1.0.0
 
 ### Major Changes

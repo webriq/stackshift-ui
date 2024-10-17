@@ -1,5 +1,12 @@
 # @webriq-test/newsletter
 
+## 1.0.1
+
+### Patch Changes
+
+- Updated dependencies
+  - @webriq-test/flex@4.0.0
+
 ## 1.0.0
 
 ### Major Changes

@@ -1,5 +1,32 @@
 # @webriq-test/react
 
+## 1.0.1
+
+### Patch Changes
+
+- Updated dependencies
+  - @webriq-test/flex@4.0.0
+  - @webriq-test/avatar@1.0.1
+  - @webriq-test/badge@1.0.1
+  - @webriq-test/app-promo@1.0.1
+  - @webriq-test/blog@1.0.1
+  - @webriq-test/call-to-action@1.0.1
+  - @webriq-test/contact@1.0.1
+  - @webriq-test/faqs@1.0.1
+  - @webriq-test/features@1.0.1
+  - @webriq-test/footer@1.0.1
+  - @webriq-test/header@1.0.1
+  - @webriq-test/how-it-works@1.0.1
+  - @webriq-test/logo-cloud@1.0.1
+  - @webriq-test/navigation@1.0.1
+  - @webriq-test/newsletter@1.0.1
+  - @webriq-test/portfolio@1.0.1
+  - @webriq-test/signin-signup@1.0.1
+  - @webriq-test/statistics@1.0.1
+  - @webriq-test/team@1.0.1
+  - @webriq-test/testimonial@1.0.1
+  - @webriq-test/text-component@1.0.1
+
 ## 1.0.0
 
 ### Major Changes
