@@ -22,8 +22,8 @@ export const VariantA: StoryObj<typeof Cookies> = {
         title: "Cookie Policy",
         description:
           "Cookies help us deliver our services. By using our services, you agree to our use of cookies.",
-        allowCookieBtn: "Allow",
-        denyCookieBtn: "Decline",
+        acceptButtonLabel: "Allow",
+        declineButtonLabel: "Decline",
         config: {
           enableAnalytics: true,
           cookiePolicy: {
@@ -32,10 +32,8 @@ export const VariantA: StoryObj<typeof Cookies> = {
               linkTarget: "_blank",
               label: "Cookie Policy Page",
             },
-            consentModal: {
-              position: "bottom left",
-            },
           },
+          consentModalPosition: "bottom left",
         },
         contactLink: {
           label: "Contact Us",
