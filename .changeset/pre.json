@@ -1,9 +1,7 @@
 {
-  "mode": "pre",
+  "mode": "exit",
   "tag": "next",
   "initialVersions": {
-    "@apps/nextjs-pages": "0.1.0",
-    "@apps/storybook": "0.0.1",
     "@webriq-test/avatar": "0.0.0",
     "@webriq-test/badge": "0.0.0",
     "@webriq-test/blockstyle": "0.0.0",
@@ -62,7 +60,5 @@
     "@webriq-test/system": "0.0.0",
     "@webriq-test/scripts": "0.0.0"
   },
-  "changesets": [
-    "release-info"
-  ]
+  "changesets": ["release-info"]
 }
