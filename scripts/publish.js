@@ -16,11 +16,11 @@ try {
   // no changesets to be applied
 }
 
-const { version: VERSION, name } = require("../packages/core/react/package.json");
+const { version: VERSION, name } = require("../packages/components/layout/flex/package.json");
 let LATEST_VERSION = "0.0.-1";
 
 try {
-  LATEST_VERSION = execSync(`npm view ${name} version`).toString().trim() ?? "0.0.5";
+  LATEST_VERSION = execSync(`npm view ${name} version`).toString().trim() ?? "0.0.1";
 } catch {
   // empty
 }
