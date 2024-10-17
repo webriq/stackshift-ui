@@ -14,7 +14,10 @@
     "typecheck": "turbo typecheck",
     "preinstall": "node scripts/update-pm.js",
     "rebrand": "node scripts/rebrand.js",
-    "next:pages": "turbo run dev --filter @apps/storybook"
+    "next:pages": "turbo run dev --filter @apps/storybook",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.9",
