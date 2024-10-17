@@ -10,7 +10,7 @@ try {
 try {
   execSync("pnpm changeset version");
   execSync(
-    `git add . && git commit -m "Apply changesets and update CHANGELOG" && git push origin ${process.env.BRANCH}`,
+    `git add . && git commit -m "Apply changesets and update CHANGELOG" && git push origin main`,
   );
 } catch {
   // no changesets to be applied
