@@ -16,7 +16,7 @@ try {
   // no changesets to be applied
 }
 
-const { version: VERSION, name } = require("../lib/package.json");
+const { version: VERSION, name } = require("../packages/core/react/package.json");
 let LATEST_VERSION = "0.0.-1";
 
 try {
