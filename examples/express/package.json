@@ -1,7 +1,7 @@
 {
   "name": "@example/express",
   "version": "0.0.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "start": "node dist/index.js",
     "dev": "tsup --watch --onSuccess \"node dist/index.js\"",

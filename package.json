@@ -1,6 +1,6 @@
 {
   "name": "turborepo-template",
-  "private": true,
+  "private": false,
   "scripts": {
     "build": "turbo build",
     "clean": "turbo clean",

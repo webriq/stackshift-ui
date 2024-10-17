@@ -1,7 +1,7 @@
 {
   "name": "@webriq-test/tailwind-config",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "exports": {
     "./tailwind": "./tailwind.config.ts",
     "./postcss": "./postcss.config.js"

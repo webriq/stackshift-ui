@@ -2,7 +2,7 @@
   "name": "@webriq-test/select",
   "description": "",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

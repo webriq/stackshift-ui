@@ -2,7 +2,7 @@
   "name": "@webriq-test/header",
   "description": "",
   "version": "1.0.1",
-  "private": true,
+  "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

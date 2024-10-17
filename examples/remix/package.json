@@ -1,7 +1,7 @@
 {
   "name": "@example/remix",
   "version": "0.0.0",
-  "private": true,
+  "private": false,
   "sideEffects": false,
   "scripts": {
     "build": "remix build",
