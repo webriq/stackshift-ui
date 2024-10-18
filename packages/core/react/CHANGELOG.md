@@ -1,5 +1,12 @@
 # @webriq-test/react
 
+## 2.0.2
+
+### Patch Changes
+
+- Updated dependencies
+  - @webriq-test/text-component@3.0.0
+
 ## 2.0.1
 
 ### Patch Changes

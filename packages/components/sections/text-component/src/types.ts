@@ -1,5 +1,5 @@
 import { PortableTextComponents } from "@portabletext/react";
-import { PortableTextBlock } from "sanity";
+import { PortableTextBlock } from "@portabletext/types";
 
 export type StyleVariants<T extends string> = Record<T, string>;
 

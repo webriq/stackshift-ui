@@ -1,8 +1,8 @@
-import { Heading } from "@webriq-test/heading";
-import { Section } from "@webriq-test/section";
+import { PortableText } from "@portabletext/react";
 import { Container } from "@webriq-test/container";
 import { Flex } from "@webriq-test/flex";
-import { PortableText } from "@portabletext/react";
+import { Heading } from "@webriq-test/heading";
+import { Section } from "@webriq-test/section";
 import { TextComponentProps } from ".";
 import { textComponentBlockStyling } from "./helper";
 

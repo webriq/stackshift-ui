@@ -1,5 +1,11 @@
 # @webriq-test/text-component
 
+## 3.0.0
+
+### Major Changes
+
+- update text component portable text types instead of sanity
+
 ## 2.0.0
 
 ### Major Changes

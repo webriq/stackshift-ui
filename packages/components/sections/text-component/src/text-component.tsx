@@ -1,5 +1,5 @@
+import { PortableTextBlock } from "@portabletext/types";
 import { lazy } from "react";
-import { PortableTextBlock } from "sanity";
 import { SectionsProps } from "./types";
 
 const Variants = {
