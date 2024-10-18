@@ -1,12 +1,11 @@
 import { lazy } from "react";
-import { SectionsProps, Logo, LabeledRouteWithKey, LabeledRoute } from "./types";
+import { LabeledRoute, LabeledRouteWithKey, Logo, SectionsProps } from "./types";
 
 const Variants = {
   variant_a: lazy(() => import("./navigation_a")),
   variant_b: lazy(() => import("./navigation_b")),
   variant_c: lazy(() => import("./navigation_c")),
   variant_d: lazy(() => import("./navigation_d")),
-  variant_e: lazy(() => import("./navigation_e")),
 };
 
 export interface ResponsiveNavLinksProps {

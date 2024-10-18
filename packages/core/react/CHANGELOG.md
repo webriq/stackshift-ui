@@ -1,5 +1,12 @@
 # @webriq-test/react
 
+## 2.0.1
+
+### Patch Changes
+
+- Updated dependencies
+  - @webriq-test/navigation@3.0.0
+
 ## 2.0.0
 
 ### Major Changes

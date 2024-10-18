@@ -1,5 +1,11 @@
 # @webriq-test/navigation
 
+## 3.0.0
+
+### Major Changes
+
+- remove navigation variant e in import
+
 ## 2.0.0
 
 ### Major Changes
