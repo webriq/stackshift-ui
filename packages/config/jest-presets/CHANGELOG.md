@@ -1,5 +1,11 @@
 # @stackshift-ui/jest-presets
 
+## 2.0.0
+
+### Major Changes
+
+- Release package version
+
 ## 1.0.0
 
 ### Major Changes
