@@ -1,5 +1,13 @@
 # @stackshift-ui/react
 
+## 3.0.1
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/navigation@2.0.0
+  - @stackshift-ui/header@2.0.0
+
 ## 3.0.0
 
 ### Major Changes

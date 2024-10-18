@@ -1,5 +1,11 @@
 # @stackshift-ui/navigation
 
+## 2.0.0
+
+### Major Changes
+
+- apply bg-secondary colors on buttons
+
 ## 1.0.0
 
 ### Major Changes

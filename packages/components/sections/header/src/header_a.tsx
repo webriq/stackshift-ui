@@ -1,10 +1,10 @@
-import React from "react";
-import { Text } from "@stackshift-ui/text";
 import { Button } from "@stackshift-ui/button";
-import { Heading } from "@stackshift-ui/heading";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
+import { Heading } from "@stackshift-ui/heading";
+import { Section } from "@stackshift-ui/section";
+import { Text } from "@stackshift-ui/text";
+import React from "react";
 import { ButtonProps, HeaderProps } from ".";
 
 export default function Header_A({
@@ -71,7 +71,7 @@ function Buttons({
         <Button
           as="link"
           link={secondaryButton}
-          className="text-black bg-white hover:bg-gray-50 inline-block rounded-l-xl rounded-t-xl font-bold transition duration-200 px-3 py-4"
+          className="bg-secondary hover:bg-secondary/50 inline-block rounded-l-xl rounded-t-xl font-bold transition duration-200 px-3 py-4"
           ariaLabel={secondaryButton?.label}>
           {secondaryButton?.label}
         </Button>

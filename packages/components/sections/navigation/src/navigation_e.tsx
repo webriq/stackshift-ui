@@ -1,14 +1,14 @@
-import { Fragment, useEffect, useRef, useState } from "react";
-import { Button } from "@stackshift-ui/button";
-import { Link } from "@stackshift-ui/link";
-import { Image } from "@stackshift-ui/image";
-import { Section } from "@stackshift-ui/section";
-import { Flex } from "@stackshift-ui/flex";
-import { LabeledRouteWithKey, Logo } from "./types";
-import { blockStyle } from "./helper/blockStyle";
 import { PortableText } from "@portabletext/react";
+import { Button } from "@stackshift-ui/button";
+import { Flex } from "@stackshift-ui/flex";
+import { Image } from "@stackshift-ui/image";
+import { Link } from "@stackshift-ui/link";
+import { Section } from "@stackshift-ui/section";
+import { Fragment, useEffect, useRef, useState } from "react";
 import { NavigationProps, ResponsiveNavLinksProps } from ".";
 import { logoLink } from "./helper";
+import { blockStyle } from "./helper/blockStyle";
+import { LabeledRouteWithKey, Logo } from "./types";
 
 export default function Navigation_E({ banner, logo, links }: NavigationProps) {
   const [menu, setMenu] = useState<boolean>(false);
