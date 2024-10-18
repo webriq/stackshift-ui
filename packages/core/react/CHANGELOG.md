@@ -1,5 +1,68 @@
 # @webriq-test/react
 
+## 2.0.0
+
+### Major Changes
+
+- ee1982e: bump packages version
+
+### Minor Changes
+
+- remove navigation e
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [ee1982e]
+  - @webriq-test/navigation@2.0.0
+  - @webriq-test/avatar@2.0.0
+  - @webriq-test/badge@2.0.0
+  - @webriq-test/blockstyle@2.0.0
+  - @webriq-test/button@2.0.0
+  - @webriq-test/card@2.0.0
+  - @webriq-test/checkbox@2.0.0
+  - @webriq-test/checkbox-group@2.0.0
+  - @webriq-test/form@2.0.0
+  - @webriq-test/form-field@2.0.0
+  - @webriq-test/heading@2.0.0
+  - @webriq-test/image@2.0.0
+  - @webriq-test/input@2.0.0
+  - @webriq-test/input-file@2.0.0
+  - @webriq-test/link@2.0.0
+  - @webriq-test/radio@2.0.0
+  - @webriq-test/radio-group@2.0.0
+  - @webriq-test/select@2.0.0
+  - @webriq-test/social-icons@2.0.0
+  - @webriq-test/stats-card@2.0.0
+  - @webriq-test/swiper-button@2.0.0
+  - @webriq-test/swiper-pagination@2.0.0
+  - @webriq-test/text@2.0.0
+  - @webriq-test/textarea@2.0.0
+  - @webriq-test/webriq-form@2.0.0
+  - @webriq-test/youtube-video@2.0.0
+  - @webriq-test/container@2.0.0
+  - @webriq-test/grid@2.0.0
+  - @webriq-test/grid-item@2.0.0
+  - @webriq-test/section@2.0.0
+  - @webriq-test/app-promo@2.0.0
+  - @webriq-test/blog@2.0.0
+  - @webriq-test/call-to-action@2.0.0
+  - @webriq-test/contact@2.0.0
+  - @webriq-test/cookies@3.0.0
+  - @webriq-test/faqs@2.0.0
+  - @webriq-test/features@2.0.0
+  - @webriq-test/footer@2.0.0
+  - @webriq-test/header@2.0.0
+  - @webriq-test/how-it-works@2.0.0
+  - @webriq-test/logo-cloud@2.0.0
+  - @webriq-test/newsletter@2.0.0
+  - @webriq-test/portfolio@2.0.0
+  - @webriq-test/signin-signup@2.0.0
+  - @webriq-test/statistics@2.0.0
+  - @webriq-test/team@2.0.0
+  - @webriq-test/testimonial@2.0.0
+  - @webriq-test/text-component@2.0.0
+
 ## 1.0.1
 
 ### Patch Changes

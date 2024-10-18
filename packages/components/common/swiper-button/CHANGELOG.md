@@ -1,5 +1,16 @@
 # @webriq-test/swiper-button
 
+## 2.0.0
+
+### Major Changes
+
+- ee1982e: bump packages version
+
+### Patch Changes
+
+- Updated dependencies [ee1982e]
+  - @webriq-test/button@2.0.0
+
 ## 1.0.0
 
 ### Major Changes

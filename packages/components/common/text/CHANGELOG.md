@@ -1,5 +1,11 @@
 # @webriq-test/text
 
+## 2.0.0
+
+### Major Changes
+
+- ee1982e: bump packages version
+
 ## 1.0.0
 
 ### Major Changes

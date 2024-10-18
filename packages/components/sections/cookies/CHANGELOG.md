@@ -1,5 +1,11 @@
 # @webriq-test/cookies
 
+## 3.0.0
+
+### Major Changes
+
+- ee1982e: bump packages version
+
 ## 1.0.0
 
 ### Major Changes

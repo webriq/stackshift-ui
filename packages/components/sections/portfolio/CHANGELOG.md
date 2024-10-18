@@ -1,5 +1,21 @@
 # @webriq-test/portfolio
 
+## 2.0.0
+
+### Major Changes
+
+- ee1982e: bump packages version
+
+### Patch Changes
+
+- Updated dependencies [ee1982e]
+  - @webriq-test/button@2.0.0
+  - @webriq-test/heading@2.0.0
+  - @webriq-test/image@2.0.0
+  - @webriq-test/text@2.0.0
+  - @webriq-test/container@2.0.0
+  - @webriq-test/section@2.0.0
+
 ## 1.0.1
 
 ### Patch Changes
