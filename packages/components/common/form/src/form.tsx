@@ -1,4 +1,4 @@
-import { WebriQForm } from "@webriq-test/webriq-form";
+import { WebriQForm } from "@stackshift-ui/webriq-form";
 import React from "react";
 import { LabeledRoute } from "./types";
 

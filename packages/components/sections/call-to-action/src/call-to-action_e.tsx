@@ -1,6 +1,6 @@
-import { SigninSignup_A } from "@webriq-test/signin-signup";
-import { Section } from "@webriq-test/section";
-import { Container } from "@webriq-test/container";
+import { SigninSignup_A } from "@stackshift-ui/signin-signup";
+import { Section } from "@stackshift-ui/section";
+import { Container } from "@stackshift-ui/container";
 import { CTAProps } from ".";
 
 export default function CallToAction_E({ form, formLinks, signInLink }: CTAProps) {

@@ -1,4 +1,4 @@
-# @webriq-test/logger
+# @stackshift-ui/logger
 
 ## 1.0.0
 

@@ -1,6 +1,6 @@
 {
   "exclude": ["node_modules"],
-  "extends": "@webriq-test/typescript-config/vite.json",
+  "extends": "@stackshift-ui/typescript-config/vite.json",
   "compilerOptions": {
     "rootDir": ".",
     "outDir": "dist"

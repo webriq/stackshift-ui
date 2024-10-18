@@ -1,4 +1,4 @@
-# @webriq-test/system
+# @stackshift-ui/system
 
 ## 1.0.0
 
@@ -9,4 +9,4 @@
 ### Patch Changes
 
 - Updated dependencies [9655df5]
-  - @webriq-test/scripts@1.0.0
+  - @stackshift-ui/scripts@1.0.0

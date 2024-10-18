@@ -1,4 +1,4 @@
-import { YoutubeVideo } from "@webriq-test/react";
+import { YoutubeVideo } from "@stackshift-ui/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

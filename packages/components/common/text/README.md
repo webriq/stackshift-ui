@@ -1,13 +1,13 @@
-# @webriq-test/text
+# @stackshift-ui/text
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/text) for more information.
 
 ## Installation
 
 ```sh
-yarn add @webriq-test/text
+yarn add @stackshift-ui/text
 # or
-npm i @webriq-test/text
+npm i @stackshift-ui/text
 ```
 
 ## Contribution

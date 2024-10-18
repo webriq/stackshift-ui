@@ -1,13 +1,13 @@
-# @webriq-test/footer
+# @stackshift-ui/footer
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/footer) for more information.
 
 ## Installation
 
 ```sh
-yarn add @webriq-test/footer
+yarn add @stackshift-ui/footer
 # or
-npm i @webriq-test/footer
+npm i @stackshift-ui/footer
 ```
 
 ## Contribution

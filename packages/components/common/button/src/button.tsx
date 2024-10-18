@@ -1,5 +1,5 @@
-import { Link } from "@webriq-test/link";
-import { useStackShiftUIComponents } from "@webriq-test/system";
+import { Link } from "@stackshift-ui/link";
+import { useStackShiftUIComponents } from "@stackshift-ui/system";
 import cn from "classnames";
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "react";
 import { FaSpinner } from "react-icons/fa";

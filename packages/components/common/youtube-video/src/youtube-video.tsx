@@ -1,4 +1,4 @@
-import { DefaultComponent, useStackShiftUIComponents } from "@webriq-test/system";
+import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
 import type { ElementType, HTMLProps, ReactNode } from "react";
 
 export interface YoutubeVideoProps extends Omit<HTMLProps<HTMLElement>, "as"> {

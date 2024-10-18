@@ -1,5 +1,5 @@
 {
-  "extends": "@webriq-test/typescript-config/remix.json",
+  "extends": "@stackshift-ui/typescript-config/remix.json",
   "compilerOptions": {
     "rootDir": ".",
     "outDir": "dist",

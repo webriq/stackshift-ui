@@ -1,4 +1,4 @@
-import { log } from "@webriq-test/logger";
+import { log } from "@stackshift-ui/logger";
 import { createServer } from "./server";
 
 const port = process.env.PORT || 5001;

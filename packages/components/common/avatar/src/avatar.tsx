@@ -1,6 +1,6 @@
-import { Flex } from "@webriq-test/flex";
-import { Image } from "@webriq-test/image";
-import { DefaultComponent, useStackShiftUIComponents } from "@webriq-test/system";
+import { Flex } from "@stackshift-ui/flex";
+import { Image } from "@stackshift-ui/image";
+import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
 import cn from "classnames";
 import type { ElementType, HTMLProps, ReactNode } from "react";
 import { useState } from "react";

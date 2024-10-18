@@ -1,4 +1,4 @@
-# @webriq-test/jest-presets
+# @stackshift-ui/jest-presets
 
 ## 1.0.0
 

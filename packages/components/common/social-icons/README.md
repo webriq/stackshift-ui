@@ -1,13 +1,13 @@
-# @webriq-test/social-icons
+# @stackshift-ui/social-icons
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/social-icons) for more information.
 
 ## Installation
 
 ```sh
-yarn add @webriq-test/social-icons
+yarn add @stackshift-ui/social-icons
 # or
-npm i @webriq-test/social-icons
+npm i @stackshift-ui/social-icons
 ```
 
 ## Contribution

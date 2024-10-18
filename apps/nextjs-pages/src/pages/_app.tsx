@@ -1,5 +1,5 @@
 import "@/styles/globals.css";
-import { StackShiftUIProvider } from "@webriq-test/react";
+import { StackShiftUIProvider } from "@stackshift-ui/react";
 import type { AppProps } from "next/app";
 
 import { Button, Image, Link } from "@/components/index";

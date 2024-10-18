@@ -1,4 +1,4 @@
-import { Badge } from "@webriq-test/react";
+import { Badge } from "@stackshift-ui/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Badge> = {

@@ -1,1 +1,1 @@
-module.exports = require("@webriq-test/tailwind-config/postcss");
+module.exports = require("@stackshift-ui/tailwind-config/postcss");

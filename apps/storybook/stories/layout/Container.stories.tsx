@@ -1,4 +1,4 @@
-import { Container, Section } from "@webriq-test/react";
+import { Container, Section } from "@stackshift-ui/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Container> = {

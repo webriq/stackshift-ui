@@ -1,5 +1,5 @@
-import { Button } from "@webriq-test/button";
-import { DefaultComponent, useStackShiftUIComponents } from "@webriq-test/system";
+import { Button } from "@stackshift-ui/button";
+import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
 import cn from "classnames";
 import type { ElementType, HTMLProps, ReactNode } from "react";
 

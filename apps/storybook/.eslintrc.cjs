@@ -1,4 +1,4 @@
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
-  extends: ["@webriq-test/react-eslintconfig/storybook.js"],
+  extends: ["@stackshift-ui/react-eslintconfig/storybook.js"],
 };

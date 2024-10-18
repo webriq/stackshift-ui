@@ -1,13 +1,13 @@
-# @webriq-test/swiper-pagination
+# @stackshift-ui/swiper-pagination
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/swiper-pagination) for more information.
 
 ## Installation
 
 ```sh
-yarn add @webriq-test/swiper-pagination
+yarn add @stackshift-ui/swiper-pagination
 # or
-npm i @webriq-test/swiper-pagination
+npm i @stackshift-ui/swiper-pagination
 ```
 
 ## Contribution

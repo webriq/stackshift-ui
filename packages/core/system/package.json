@@ -1,5 +1,5 @@
 {
-  "name": "@webriq-test/system",
+  "name": "@stackshift-ui/system",
   "version": "1.0.0",
   "private": false,
   "sideEffects": false,
@@ -18,8 +18,8 @@
     "test": "vitest run --coverage"
   },
   "devDependencies": {
-    "@webriq-test/eslint-config": "workspace:*",
-    "@webriq-test/typescript-config": "workspace:*",
+    "@stackshift-ui/eslint-config": "workspace:*",
+    "@stackshift-ui/typescript-config": "workspace:*",
     "@testing-library/react": "^16.0.1",
     "@types/node": "^22.7.0",
     "@types/react": "^18.3.9",
@@ -36,7 +36,7 @@
     "vitest": "^2.1.1"
   },
   "dependencies": {
-    "@webriq-test/scripts": "workspace:*",
+    "@stackshift-ui/scripts": "workspace:*",
     "nextjs-darkmode": "^1.0.4",
     "nextjs-themes": "^4.0.3",
     "r18gs": "^2.0.0",

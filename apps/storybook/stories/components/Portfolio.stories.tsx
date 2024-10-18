@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Portfolio } from "@webriq-test/react";
+import { Portfolio } from "@stackshift-ui/react";
 
 const meta: Meta<typeof Portfolio> = {
   title: "Components/Portfolio",

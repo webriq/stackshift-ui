@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { CallToAction } from "@webriq-test/react";
+import { CallToAction } from "@stackshift-ui/react";
 
 const meta: Meta<typeof CallToAction> = {
   title: "Components/Call To Action",

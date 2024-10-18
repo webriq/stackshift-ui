@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Card } from "@webriq-test/card";
-import { Text } from "@webriq-test/text";
-import { SwiperButton } from "@webriq-test/swiper-button";
-import { Heading } from "@webriq-test/heading";
-import { Section } from "@webriq-test/section";
-import { Container } from "@webriq-test/container";
-import { Flex } from "@webriq-test/flex";
+import { Card } from "@stackshift-ui/card";
+import { Text } from "@stackshift-ui/text";
+import { SwiperButton } from "@stackshift-ui/swiper-button";
+import { Heading } from "@stackshift-ui/heading";
+import { Section } from "@stackshift-ui/section";
+import { Container } from "@stackshift-ui/container";
+import { Flex } from "@stackshift-ui/flex";
 import { Testimonial as iTestimonial } from "./types";
 import { TestimonialProps } from ".";
 

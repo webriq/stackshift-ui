@@ -1,13 +1,13 @@
-# @webriq-test/badge
+# @stackshift-ui/badge
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/badge) for more information.
 
 ## Installation
 
 ```sh
-yarn add @webriq-test/badge
+yarn add @stackshift-ui/badge
 # or
-npm i @webriq-test/badge
+npm i @stackshift-ui/badge
 ```
 
 ## Contribution

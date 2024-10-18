@@ -1,13 +1,13 @@
-# @webriq-test/newsletter
+# @stackshift-ui/newsletter
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/newsletter) for more information.
 
 ## Installation
 
 ```sh
-yarn add @webriq-test/newsletter
+yarn add @stackshift-ui/newsletter
 # or
-npm i @webriq-test/newsletter
+npm i @stackshift-ui/newsletter
 ```
 
 ## Contribution

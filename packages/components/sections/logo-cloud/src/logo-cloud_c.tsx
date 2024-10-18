@@ -1,9 +1,9 @@
-import { Button } from "@webriq-test/button";
-import { Heading } from "@webriq-test/heading";
-import { Image } from "@webriq-test/image";
-import { Section } from "@webriq-test/section";
-import { Container } from "@webriq-test/container";
-import { Flex } from "@webriq-test/flex";
+import { Button } from "@stackshift-ui/button";
+import { Heading } from "@stackshift-ui/heading";
+import { Image } from "@stackshift-ui/image";
+import { Section } from "@stackshift-ui/section";
+import { Container } from "@stackshift-ui/container";
+import { Flex } from "@stackshift-ui/flex";
 import { Images, LabeledRoute } from "./types";
 import { LogoCloudProps } from ".";
 

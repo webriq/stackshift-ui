@@ -1,13 +1,13 @@
-# @webriq-test/swiper-button
+# @stackshift-ui/swiper-button
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/swiper-button) for more information.
 
 ## Installation
 
 ```sh
-yarn add @webriq-test/swiper-button
+yarn add @stackshift-ui/swiper-button
 # or
-npm i @webriq-test/swiper-button
+npm i @stackshift-ui/swiper-button
 ```
 
 ## Contribution

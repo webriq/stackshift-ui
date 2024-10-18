@@ -1,4 +1,4 @@
-import { SwiperPagination } from "@webriq-test/react";
+import { SwiperPagination } from "@stackshift-ui/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof SwiperPagination> = {

@@ -22,8 +22,8 @@
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.2.13",
-    "@webriq-test/eslint-config": "workspace:*",
-    "@webriq-test/typescript-config": "workspace:*",
+    "@stackshift-ui/eslint-config": "workspace:*",
+    "@stackshift-ui/typescript-config": "workspace:*",
     "@types/node": "^22.7.0",
     "@types/react": "^18.3.9",
     "@types/react-dom": "^18.3.0",

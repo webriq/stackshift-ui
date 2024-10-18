@@ -1,4 +1,4 @@
-# @webriq-test/typescript-config
+# @stackshift-ui/typescript-config
 
 ## 1.0.0
 

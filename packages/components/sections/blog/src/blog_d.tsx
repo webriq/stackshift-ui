@@ -1,15 +1,15 @@
 import React from "react";
 import { format } from "date-fns";
-import { Text } from "@webriq-test/text";
-import { Heading } from "@webriq-test/heading";
-import { Card } from "@webriq-test/card";
-import { Button } from "@webriq-test/button";
-import { Input } from "@webriq-test/input";
-import { Image } from "@webriq-test/image";
-import { Link } from "@webriq-test/link";
-import { Section } from "@webriq-test/section";
-import { Container } from "@webriq-test/container";
-import { Flex } from "@webriq-test/flex";
+import { Text } from "@stackshift-ui/text";
+import { Heading } from "@stackshift-ui/heading";
+import { Card } from "@stackshift-ui/card";
+import { Button } from "@stackshift-ui/button";
+import { Input } from "@stackshift-ui/input";
+import { Image } from "@stackshift-ui/image";
+import { Link } from "@stackshift-ui/link";
+import { Section } from "@stackshift-ui/section";
+import { Container } from "@stackshift-ui/container";
+import { Flex } from "@stackshift-ui/flex";
 import { SanityBody, Author, BlogPost } from "./types";
 import { BlogProps } from ".";
 

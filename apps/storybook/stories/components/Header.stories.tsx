@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Header } from "@webriq-test/react";
+import { Header } from "@stackshift-ui/react";
 
 const meta: Meta<typeof Header> = {
   title: "Components/Header",

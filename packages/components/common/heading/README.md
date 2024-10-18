@@ -1,13 +1,13 @@
-# @webriq-test/heading
+# @stackshift-ui/heading
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/heading) for more information.
 
 ## Installation
 
 ```sh
-yarn add @webriq-test/heading
+yarn add @stackshift-ui/heading
 # or
-npm i @webriq-test/heading
+npm i @stackshift-ui/heading
 ```
 
 ## Contribution

@@ -1,4 +1,4 @@
-import { Heading, Section } from "@webriq-test/react";
+import { Heading, Section } from "@stackshift-ui/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Section> = {

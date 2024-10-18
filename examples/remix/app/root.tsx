@@ -1,7 +1,7 @@
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
-import { Header } from "@webriq-test/components";
-import { Layout } from "@webriq-test/components/dist/server";
+import { Header } from "@stackshift-ui/components";
+import { Layout } from "@stackshift-ui/components/dist/server";
 import { Analytics } from "@vercel/analytics/react";
 import { Core } from "nextjs-darkmode";
 import styles from "./styles.css";

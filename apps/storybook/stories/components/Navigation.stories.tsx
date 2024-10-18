@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Navigation } from "@webriq-test/react";
+import { Navigation } from "@stackshift-ui/react";
 
 const meta: Meta<typeof Navigation> = {
   title: "Components/Navigation",

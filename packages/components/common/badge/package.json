@@ -1,7 +1,7 @@
 {
-  "name": "@webriq-test/badge",
+  "name": "@stackshift-ui/badge",
   "description": "",
-  "version": "2.0.0",
+  "version": "0.0.0",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -20,8 +20,8 @@
     "test": "vitest run --coverage"
   },
   "devDependencies": {
-    "@webriq-test/eslint-config": "workspace:*",
-    "@webriq-test/typescript-config": "workspace:*",
+    "@stackshift-ui/eslint-config": "workspace:*",
+    "@stackshift-ui/typescript-config": "workspace:*",
     "@testing-library/react": "^16.0.1",
     "@types/node": "^22.7.0",
     "@types/react": "^18.3.9",
@@ -40,9 +40,9 @@
     "vitest": "^2.1.1"
   },
   "dependencies": {
-    "@webriq-test/scripts": "workspace:*",
-    "@webriq-test/system": "workspace:*",
-    "@webriq-test/flex": "workspace:*",
+    "@stackshift-ui/scripts": "workspace:*",
+    "@stackshift-ui/system": "workspace:*",
+    "@stackshift-ui/flex": "workspace:*",
     "classnames": "^2.5.1"
   },
   "peerDependencies": {
@@ -50,7 +50,7 @@
     "next": "10 - 14",
     "react": "16.8 - 19",
     "react-dom": "16.8 - 19",
-    "@webriq-test/system": ">=0.0.0"
+    "@stackshift-ui/system": ">=0.0.0"
   },
   "peerDependenciesMeta": {
     "next": {

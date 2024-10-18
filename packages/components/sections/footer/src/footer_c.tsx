@@ -1,11 +1,11 @@
-import { Text } from "@webriq-test/text";
-import { Button } from "@webriq-test/button";
-import { SocialIcons } from "@webriq-test/social-icons";
-import { Image } from "@webriq-test/image";
-import { Link } from "@webriq-test/link";
-import { Section } from "@webriq-test/section";
-import { Container } from "@webriq-test/container";
-import { Flex } from "@webriq-test/flex";
+import { Text } from "@stackshift-ui/text";
+import { Button } from "@stackshift-ui/button";
+import { SocialIcons } from "@stackshift-ui/social-icons";
+import { Image } from "@stackshift-ui/image";
+import { Link } from "@stackshift-ui/link";
+import { Section } from "@stackshift-ui/section";
+import { Container } from "@stackshift-ui/container";
+import { Flex } from "@stackshift-ui/flex";
 
 import { logoLink } from "./helper";
 import { LabeledRoute, LabeledRouteWithKey, Logo, SocialLink, Socials } from "./types";

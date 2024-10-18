@@ -1,5 +1,5 @@
 {
-  "name": "@webriq-test/tailwind-config",
+  "name": "@stackshift-ui/tailwind-config",
   "version": "1.0.0",
   "private": false,
   "exports": {
@@ -10,6 +10,6 @@
     "tailwindcss": "^3.4.1"
   },
   "devDependencies": {
-    "@webriq-test/typescript-config": "workspace:*"
+    "@stackshift-ui/typescript-config": "workspace:*"
   }
 }

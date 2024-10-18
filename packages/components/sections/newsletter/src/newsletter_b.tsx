@@ -1,13 +1,13 @@
-import { Button } from "@webriq-test/button";
-import { Form } from "@webriq-test/form";
-import { Heading } from "@webriq-test/heading";
-import { Image } from "@webriq-test/image";
-import { Input } from "@webriq-test/input";
-import { Text } from "@webriq-test/text";
-import { Link } from "@webriq-test/link";
-import { Section } from "@webriq-test/section";
-import { Container } from "@webriq-test/container";
-import { Flex } from "@webriq-test/flex";
+import { Button } from "@stackshift-ui/button";
+import { Form } from "@stackshift-ui/form";
+import { Heading } from "@stackshift-ui/heading";
+import { Image } from "@stackshift-ui/image";
+import { Input } from "@stackshift-ui/input";
+import { Text } from "@stackshift-ui/text";
+import { Link } from "@stackshift-ui/link";
+import { Section } from "@stackshift-ui/section";
+import { Container } from "@stackshift-ui/container";
+import { Flex } from "@stackshift-ui/flex";
 import React from "react";
 
 import { Form as FormFields, Logo } from "./types";

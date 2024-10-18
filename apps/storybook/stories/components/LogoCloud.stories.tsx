@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { LogoCloud } from "@webriq-test/react";
+import { LogoCloud } from "@stackshift-ui/react";
 
 const meta: Meta<typeof LogoCloud> = {
   title: "Components/Logo Cloud",

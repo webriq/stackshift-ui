@@ -1,13 +1,13 @@
-# @webriq-test/navigation
+# @stackshift-ui/navigation
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/navigation) for more information.
 
 ## Installation
 
 ```sh
-yarn add @webriq-test/navigation
+yarn add @stackshift-ui/navigation
 # or
-npm i @webriq-test/navigation
+npm i @stackshift-ui/navigation
 ```
 
 ## Contribution

@@ -1,4 +1,4 @@
-# @webriq-test/link
+# @stackshift-ui/link
 
 Buttons allow users to perform actions and choose with a single tap.
 
@@ -7,9 +7,9 @@ Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/compon
 ## Installation
 
 ```sh
-yarn add @webriq-test/link
+yarn add @stackshift-ui/link
 # or
-npm i @webriq-test/link
+npm i @stackshift-ui/link
 ```
 
 ## Contribution

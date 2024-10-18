@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { HowItWorks } from "@webriq-test/react";
+import { HowItWorks } from "@stackshift-ui/react";
 
 const meta: Meta<typeof HowItWorks> = {
   title: "Components/How It Works",

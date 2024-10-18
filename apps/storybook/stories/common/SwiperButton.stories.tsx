@@ -1,4 +1,4 @@
-import { SwiperButton } from "@webriq-test/react";
+import { SwiperButton } from "@stackshift-ui/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof SwiperButton> = {

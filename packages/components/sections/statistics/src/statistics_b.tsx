@@ -1,7 +1,7 @@
-import { StatsCard } from "@webriq-test/stats-card";
-import { Section } from "@webriq-test/section";
-import { Container } from "@webriq-test/container";
-import { Flex } from "@webriq-test/flex";
+import { StatsCard } from "@stackshift-ui/stats-card";
+import { Section } from "@stackshift-ui/section";
+import { Container } from "@stackshift-ui/container";
+import { Flex } from "@stackshift-ui/flex";
 import { StatItems } from "./types";
 import { StatsProps } from ".";
 

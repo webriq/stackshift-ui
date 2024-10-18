@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Footer } from "@webriq-test/react";
+import { Footer } from "@stackshift-ui/react";
 
 const meta: Meta<typeof Footer> = {
   title: "Components/Footer",

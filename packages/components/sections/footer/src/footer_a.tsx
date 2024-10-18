@@ -1,12 +1,12 @@
-import { Text } from "@webriq-test/text";
-import { SocialIcons } from "@webriq-test/social-icons";
-import { Image } from "@webriq-test/image";
-import { Link } from "@webriq-test/link";
-import { Section } from "@webriq-test/section";
-import { Container } from "@webriq-test/container";
-import { Flex } from "@webriq-test/flex";
-import { Grid } from "@webriq-test/grid";
-import { GridItem } from "@webriq-test/grid-item";
+import { Text } from "@stackshift-ui/text";
+import { SocialIcons } from "@stackshift-ui/social-icons";
+import { Image } from "@stackshift-ui/image";
+import { Link } from "@stackshift-ui/link";
+import { Section } from "@stackshift-ui/section";
+import { Container } from "@stackshift-ui/container";
+import { Flex } from "@stackshift-ui/flex";
+import { Grid } from "@stackshift-ui/grid";
+import { GridItem } from "@stackshift-ui/grid-item";
 
 import { logoLink } from "./helper";
 import { ContactDetails, Logo, SocialLink, Socials } from "./types";

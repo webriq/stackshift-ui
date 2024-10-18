@@ -24,11 +24,11 @@ This TurboRepo comprises the following packages/examples, all written in [TypeSc
 - `@example/nextjs`: a [Next.js](https://nextjs.org/) app
 - `@example/vite`: a [Vite.js](https://vitest.dev) app
 - `@example/remix`: a Remix app
-- `@webriq-test/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@webriq-test/typescript-config`: `tsconfig.json`s used throughout the monorepo
-- `@webriq-test/jest-presets`: Jest presets for unit testing
-- `@webriq-test/logger`: A configurable shared logger utility
-- `@webriq-test/components`: An internal library of components utilized by the examples
+- `@stackshift-ui/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+- `@stackshift-ui/typescript-config`: `tsconfig.json`s used throughout the monorepo
+- `@stackshift-ui/jest-presets`: Jest presets for unit testing
+- `@stackshift-ui/logger`: A configurable shared logger utility
+- `@stackshift-ui/components`: An internal library of components utilized by the examples
 - `react18-loaders`: a React component library (The core package published to NPM)
 
 ## Automated File Generation

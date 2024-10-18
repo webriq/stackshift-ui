@@ -1,6 +1,6 @@
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
-  extends: ["@webriq-test/eslint-config/index.js"],
+  extends: ["@stackshift-ui/eslint-config/index.js"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     project: true,

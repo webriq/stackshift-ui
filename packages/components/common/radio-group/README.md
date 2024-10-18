@@ -1,13 +1,13 @@
-# @webriq-test/radio-group
+# @stackshift-ui/radio-group
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/radio-group) for more information.
 
 ## Installation
 
 ```sh
-yarn add @webriq-test/radio-group
+yarn add @stackshift-ui/radio-group
 # or
-npm i @webriq-test/radio-group
+npm i @stackshift-ui/radio-group
 ```
 
 ## Contribution

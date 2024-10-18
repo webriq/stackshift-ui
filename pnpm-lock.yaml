@@ -17,7 +17,7 @@ importers:
       '@types/node':
         specifier: ^22.7.5
         version: 22.7.5
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:packages/config/config-typescript
       enquirer:
@@ -56,10 +56,10 @@ importers:
 
   apps/nextjs-pages:
     dependencies:
-      '@webriq-test/react':
+      '@stackshift-ui/react':
         specifier: workspace:*
         version: link:../../packages/core/react
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../packages/core/system
       next:
@@ -81,7 +81,7 @@ importers:
       '@types/react-dom':
         specifier: ^18
         version: 18.3.0
-      '@webriq-test/tailwind-config':
+      '@stackshift-ui/tailwind-config':
         specifier: workspace:*
         version: link:../../packages/config/config-tailwind
       eslint:
@@ -105,10 +105,10 @@ importers:
       '@portabletext/react':
         specifier: ^3.1.0
         version: 3.1.0(react@18.3.1)
-      '@webriq-test/react':
+      '@stackshift-ui/react':
         specifier: workspace:*
         version: link:../../packages/core/react
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../packages/core/system
       deepmerge:
@@ -154,13 +154,13 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
         version: 4.3.2(vite@5.4.9(@types/node@22.7.5)(less@4.2.0)(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../packages/config/config-eslint
-      '@webriq-test/tailwind-config':
+      '@stackshift-ui/tailwind-config':
         specifier: workspace:*
         version: link:../../packages/config/config-tailwind
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../packages/config/config-typescript
       autoprefixer:
@@ -193,16 +193,16 @@ importers:
 
   packages/components/common/avatar:
     dependencies:
-      '@webriq-test/flex':
+      '@stackshift-ui/flex':
         specifier: workspace:*
         version: link:../../layout/flex
-      '@webriq-test/image':
+      '@stackshift-ui/image':
         specifier: workspace:*
         version: link:../image
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
       classnames:
@@ -230,10 +230,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -269,13 +269,13 @@ importers:
 
   packages/components/common/badge:
     dependencies:
-      '@webriq-test/flex':
+      '@stackshift-ui/flex':
         specifier: workspace:*
         version: link:../../layout/flex
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
       classnames:
@@ -303,10 +303,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -345,22 +345,22 @@ importers:
       '@portabletext/react':
         specifier: ^3.1.0
         version: 3.1.0(react@18.3.1)
-      '@webriq-test/heading':
+      '@stackshift-ui/heading':
         specifier: workspace:*
         version: link:../heading
-      '@webriq-test/image':
+      '@stackshift-ui/image':
         specifier: workspace:*
         version: link:../image
-      '@webriq-test/link':
+      '@stackshift-ui/link':
         specifier: workspace:*
         version: link:../link
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      '@webriq-test/text':
+      '@stackshift-ui/text':
         specifier: workspace:*
         version: link:../text
       next:
@@ -385,10 +385,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -424,13 +424,13 @@ importers:
 
   packages/components/common/button:
     dependencies:
-      '@webriq-test/link':
+      '@stackshift-ui/link':
         specifier: workspace:*
         version: link:../link
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
       classnames:
@@ -461,10 +461,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.0)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -500,10 +500,10 @@ importers:
 
   packages/components/common/card:
     dependencies:
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
       classnames:
@@ -531,10 +531,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -570,10 +570,10 @@ importers:
 
   packages/components/common/checkbox:
     dependencies:
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
       classnames:
@@ -601,10 +601,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -640,10 +640,10 @@ importers:
 
   packages/components/common/checkbox-group:
     dependencies:
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
       classnames:
@@ -671,10 +671,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -710,13 +710,13 @@ importers:
 
   packages/components/common/form:
     dependencies:
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      '@webriq-test/webriq-form':
+      '@stackshift-ui/webriq-form':
         specifier: workspace:*
         version: link:../webriq-form
       next:
@@ -741,10 +741,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -780,34 +780,34 @@ importers:
 
   packages/components/common/form-field:
     dependencies:
-      '@webriq-test/checkbox':
+      '@stackshift-ui/checkbox':
         specifier: workspace:*
         version: link:../checkbox
-      '@webriq-test/checkbox-group':
+      '@stackshift-ui/checkbox-group':
         specifier: workspace:*
         version: link:../checkbox-group
-      '@webriq-test/input':
+      '@stackshift-ui/input':
         specifier: workspace:*
         version: link:../input
-      '@webriq-test/input-file':
+      '@stackshift-ui/input-file':
         specifier: workspace:*
         version: link:../input-file
-      '@webriq-test/radio':
+      '@stackshift-ui/radio':
         specifier: workspace:*
         version: link:../radio
-      '@webriq-test/radio-group':
+      '@stackshift-ui/radio-group':
         specifier: workspace:*
         version: link:../radio-group
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/select':
+      '@stackshift-ui/select':
         specifier: workspace:*
         version: link:../select
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      '@webriq-test/textarea':
+      '@stackshift-ui/textarea':
         specifier: workspace:*
         version: link:../textarea
       next:
@@ -832,10 +832,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -871,10 +871,10 @@ importers:
 
   packages/components/common/heading:
     dependencies:
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
       classnames:
@@ -902,10 +902,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -941,10 +941,10 @@ importers:
 
   packages/components/common/image:
     dependencies:
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
       next:
@@ -969,10 +969,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.0)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -1008,10 +1008,10 @@ importers:
 
   packages/components/common/input:
     dependencies:
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
       classnames:
@@ -1039,10 +1039,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -1078,10 +1078,10 @@ importers:
 
   packages/components/common/input-file:
     dependencies:
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
       classnames:
@@ -1109,10 +1109,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -1148,10 +1148,10 @@ importers:
 
   packages/components/common/link:
     dependencies:
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
       next:
@@ -1176,10 +1176,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.0)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -1215,10 +1215,10 @@ importers:
 
   packages/components/common/radio:
     dependencies:
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
       classnames:
@@ -1246,10 +1246,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -1285,10 +1285,10 @@ importers:
 
   packages/components/common/radio-group:
     dependencies:
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
       classnames:
@@ -1316,10 +1316,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -1355,10 +1355,10 @@ importers:
 
   packages/components/common/select:
     dependencies:
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
       classnames:
@@ -1386,10 +1386,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -1425,10 +1425,10 @@ importers:
 
   packages/components/common/social-icons:
     dependencies:
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
       classnames:
@@ -1459,10 +1459,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -1498,13 +1498,13 @@ importers:
 
   packages/components/common/stats-card:
     dependencies:
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      '@webriq-test/text':
+      '@stackshift-ui/text':
         specifier: workspace:*
         version: link:../text
       classnames:
@@ -1532,10 +1532,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -1571,13 +1571,13 @@ importers:
 
   packages/components/common/swiper-button:
     dependencies:
-      '@webriq-test/button':
+      '@stackshift-ui/button':
         specifier: workspace:*
         version: link:../button
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
       classnames:
@@ -1605,10 +1605,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -1644,10 +1644,10 @@ importers:
 
   packages/components/common/swiper-pagination:
     dependencies:
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
       classnames:
@@ -1675,10 +1675,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -1714,10 +1714,10 @@ importers:
 
   packages/components/common/text:
     dependencies:
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
       classnames:
@@ -1745,10 +1745,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -1784,10 +1784,10 @@ importers:
 
   packages/components/common/textarea:
     dependencies:
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
       classnames:
@@ -1815,10 +1815,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -1854,10 +1854,10 @@ importers:
 
   packages/components/common/webriq-form:
     dependencies:
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
       next:
@@ -1882,10 +1882,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -1921,10 +1921,10 @@ importers:
 
   packages/components/common/youtube-video:
     dependencies:
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
       next:
@@ -1949,10 +1949,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -1988,10 +1988,10 @@ importers:
 
   packages/components/layout/container:
     dependencies:
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
       classnames:
@@ -2019,10 +2019,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -2058,10 +2058,10 @@ importers:
 
   packages/components/layout/flex:
     dependencies:
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
       classnames:
@@ -2089,10 +2089,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -2128,10 +2128,10 @@ importers:
 
   packages/components/layout/grid:
     dependencies:
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
       classnames:
@@ -2159,10 +2159,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -2198,10 +2198,10 @@ importers:
 
   packages/components/layout/grid-item:
     dependencies:
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
       classnames:
@@ -2229,10 +2229,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -2268,10 +2268,10 @@ importers:
 
   packages/components/layout/section:
     dependencies:
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
       classnames:
@@ -2299,10 +2299,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -2338,34 +2338,34 @@ importers:
 
   packages/components/sections/app-promo:
     dependencies:
-      '@webriq-test/container':
+      '@stackshift-ui/container':
         specifier: workspace:*
         version: link:../../layout/container
-      '@webriq-test/flex':
+      '@stackshift-ui/flex':
         specifier: workspace:*
         version: link:../../layout/flex
-      '@webriq-test/heading':
+      '@stackshift-ui/heading':
         specifier: workspace:*
         version: link:../../common/heading
-      '@webriq-test/image':
+      '@stackshift-ui/image':
         specifier: workspace:*
         version: link:../../common/image
-      '@webriq-test/link':
+      '@stackshift-ui/link':
         specifier: workspace:*
         version: link:../../common/link
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/section':
+      '@stackshift-ui/section':
         specifier: workspace:*
         version: link:../../layout/section
-      '@webriq-test/swiper-button':
+      '@stackshift-ui/swiper-button':
         specifier: workspace:*
         version: link:../../common/swiper-button
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      '@webriq-test/text':
+      '@stackshift-ui/text':
         specifier: workspace:*
         version: link:../../common/text
       next:
@@ -2390,10 +2390,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -2429,43 +2429,43 @@ importers:
 
   packages/components/sections/blog:
     dependencies:
-      '@webriq-test/badge':
+      '@stackshift-ui/badge':
         specifier: workspace:*
         version: link:../../common/badge
-      '@webriq-test/button':
+      '@stackshift-ui/button':
         specifier: workspace:*
         version: link:../../common/button
-      '@webriq-test/card':
+      '@stackshift-ui/card':
         specifier: workspace:*
         version: link:../../common/card
-      '@webriq-test/container':
+      '@stackshift-ui/container':
         specifier: workspace:*
         version: link:../../layout/container
-      '@webriq-test/flex':
+      '@stackshift-ui/flex':
         specifier: workspace:*
         version: link:../../layout/flex
-      '@webriq-test/heading':
+      '@stackshift-ui/heading':
         specifier: workspace:*
         version: link:../../common/heading
-      '@webriq-test/image':
+      '@stackshift-ui/image':
         specifier: workspace:*
         version: link:../../common/image
-      '@webriq-test/input':
+      '@stackshift-ui/input':
         specifier: workspace:*
         version: link:../../common/input
-      '@webriq-test/link':
+      '@stackshift-ui/link':
         specifier: workspace:*
         version: link:../../common/link
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/section':
+      '@stackshift-ui/section':
         specifier: workspace:*
         version: link:../../layout/section
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      '@webriq-test/text':
+      '@stackshift-ui/text':
         specifier: workspace:*
         version: link:../../common/text
       classnames:
@@ -2493,10 +2493,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       date-fns:
@@ -2535,43 +2535,43 @@ importers:
 
   packages/components/sections/call-to-action:
     dependencies:
-      '@webriq-test/button':
+      '@stackshift-ui/button':
         specifier: workspace:*
         version: link:../../common/button
-      '@webriq-test/container':
+      '@stackshift-ui/container':
         specifier: workspace:*
         version: link:../../layout/container
-      '@webriq-test/flex':
+      '@stackshift-ui/flex':
         specifier: workspace:*
         version: link:../../layout/flex
-      '@webriq-test/form':
+      '@stackshift-ui/form':
         specifier: workspace:*
         version: link:../../common/form
-      '@webriq-test/heading':
+      '@stackshift-ui/heading':
         specifier: workspace:*
         version: link:../../common/heading
-      '@webriq-test/image':
+      '@stackshift-ui/image':
         specifier: workspace:*
         version: link:../../common/image
-      '@webriq-test/input':
+      '@stackshift-ui/input':
         specifier: workspace:*
         version: link:../../common/input
-      '@webriq-test/link':
+      '@stackshift-ui/link':
         specifier: workspace:*
         version: link:../../common/link
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/section':
+      '@stackshift-ui/section':
         specifier: workspace:*
         version: link:../../layout/section
-      '@webriq-test/signin-signup':
+      '@stackshift-ui/signin-signup':
         specifier: workspace:*
         version: link:../signin-signup
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      '@webriq-test/text':
+      '@stackshift-ui/text':
         specifier: workspace:*
         version: link:../../common/text
       next:
@@ -2596,10 +2596,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -2638,46 +2638,46 @@ importers:
       '@portabletext/react':
         specifier: ^3.1.0
         version: 3.1.0(react@18.3.1)
-      '@webriq-test/button':
+      '@stackshift-ui/button':
         specifier: workspace:*
         version: link:../../common/button
-      '@webriq-test/card':
+      '@stackshift-ui/card':
         specifier: workspace:*
         version: link:../../common/card
-      '@webriq-test/container':
+      '@stackshift-ui/container':
         specifier: workspace:*
         version: link:../../layout/container
-      '@webriq-test/flex':
+      '@stackshift-ui/flex':
         specifier: workspace:*
         version: link:../../layout/flex
-      '@webriq-test/form':
+      '@stackshift-ui/form':
         specifier: workspace:*
         version: link:../../common/form
-      '@webriq-test/form-field':
+      '@stackshift-ui/form-field':
         specifier: workspace:*
         version: link:../../common/form-field
-      '@webriq-test/heading':
+      '@stackshift-ui/heading':
         specifier: workspace:*
         version: link:../../common/heading
-      '@webriq-test/image':
+      '@stackshift-ui/image':
         specifier: workspace:*
         version: link:../../common/image
-      '@webriq-test/link':
+      '@stackshift-ui/link':
         specifier: workspace:*
         version: link:../../common/link
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/section':
+      '@stackshift-ui/section':
         specifier: workspace:*
         version: link:../../layout/section
-      '@webriq-test/social-icons':
+      '@stackshift-ui/social-icons':
         specifier: workspace:*
         version: link:../../common/social-icons
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      '@webriq-test/text':
+      '@stackshift-ui/text':
         specifier: workspace:*
         version: link:../../common/text
       classnames:
@@ -2705,10 +2705,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -2744,10 +2744,10 @@ importers:
 
   packages/components/sections/cookies:
     dependencies:
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
       next:
@@ -2775,10 +2775,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -2814,34 +2814,34 @@ importers:
 
   packages/components/sections/faqs:
     dependencies:
-      '@webriq-test/button':
+      '@stackshift-ui/button':
         specifier: workspace:*
         version: link:../../common/button
-      '@webriq-test/card':
+      '@stackshift-ui/card':
         specifier: workspace:*
         version: link:../../common/card
-      '@webriq-test/container':
+      '@stackshift-ui/container':
         specifier: workspace:*
         version: link:../../layout/container
-      '@webriq-test/flex':
+      '@stackshift-ui/flex':
         specifier: workspace:*
         version: link:../../layout/flex
-      '@webriq-test/heading':
+      '@stackshift-ui/heading':
         specifier: workspace:*
         version: link:../../common/heading
-      '@webriq-test/input':
+      '@stackshift-ui/input':
         specifier: workspace:*
         version: link:../../common/input
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/section':
+      '@stackshift-ui/section':
         specifier: workspace:*
         version: link:../../layout/section
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      '@webriq-test/text':
+      '@stackshift-ui/text':
         specifier: workspace:*
         version: link:../../common/text
       classnames:
@@ -2869,10 +2869,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -2908,34 +2908,34 @@ importers:
 
   packages/components/sections/features:
     dependencies:
-      '@webriq-test/button':
+      '@stackshift-ui/button':
         specifier: workspace:*
         version: link:../../common/button
-      '@webriq-test/card':
+      '@stackshift-ui/card':
         specifier: workspace:*
         version: link:../../common/card
-      '@webriq-test/container':
+      '@stackshift-ui/container':
         specifier: workspace:*
         version: link:../../layout/container
-      '@webriq-test/flex':
+      '@stackshift-ui/flex':
         specifier: workspace:*
         version: link:../../layout/flex
-      '@webriq-test/heading':
+      '@stackshift-ui/heading':
         specifier: workspace:*
         version: link:../../common/heading
-      '@webriq-test/image':
+      '@stackshift-ui/image':
         specifier: workspace:*
         version: link:../../common/image
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/section':
+      '@stackshift-ui/section':
         specifier: workspace:*
         version: link:../../layout/section
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      '@webriq-test/text':
+      '@stackshift-ui/text':
         specifier: workspace:*
         version: link:../../common/text
       classnames:
@@ -2963,10 +2963,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -3002,40 +3002,40 @@ importers:
 
   packages/components/sections/footer:
     dependencies:
-      '@webriq-test/button':
+      '@stackshift-ui/button':
         specifier: workspace:*
         version: link:../../common/button
-      '@webriq-test/container':
+      '@stackshift-ui/container':
         specifier: workspace:*
         version: link:../../layout/container
-      '@webriq-test/flex':
+      '@stackshift-ui/flex':
         specifier: workspace:*
         version: link:../../layout/flex
-      '@webriq-test/grid':
+      '@stackshift-ui/grid':
         specifier: workspace:*
         version: link:../../layout/grid
-      '@webriq-test/grid-item':
+      '@stackshift-ui/grid-item':
         specifier: workspace:*
         version: link:../../layout/grid-item
-      '@webriq-test/image':
+      '@stackshift-ui/image':
         specifier: workspace:*
         version: link:../../common/image
-      '@webriq-test/link':
+      '@stackshift-ui/link':
         specifier: workspace:*
         version: link:../../common/link
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/section':
+      '@stackshift-ui/section':
         specifier: workspace:*
         version: link:../../layout/section
-      '@webriq-test/social-icons':
+      '@stackshift-ui/social-icons':
         specifier: workspace:*
         version: link:../../common/social-icons
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      '@webriq-test/text':
+      '@stackshift-ui/text':
         specifier: workspace:*
         version: link:../../common/text
       classnames:
@@ -3063,10 +3063,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -3102,31 +3102,31 @@ importers:
 
   packages/components/sections/header:
     dependencies:
-      '@webriq-test/button':
+      '@stackshift-ui/button':
         specifier: workspace:*
         version: link:../../common/button
-      '@webriq-test/container':
+      '@stackshift-ui/container':
         specifier: workspace:*
         version: link:../../layout/container
-      '@webriq-test/flex':
+      '@stackshift-ui/flex':
         specifier: workspace:*
         version: link:../../layout/flex
-      '@webriq-test/heading':
+      '@stackshift-ui/heading':
         specifier: workspace:*
         version: link:../../common/heading
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/section':
+      '@stackshift-ui/section':
         specifier: workspace:*
         version: link:../../layout/section
-      '@webriq-test/signin-signup':
+      '@stackshift-ui/signin-signup':
         specifier: workspace:*
         version: link:../signin-signup
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      '@webriq-test/text':
+      '@stackshift-ui/text':
         specifier: workspace:*
         version: link:../../common/text
       next:
@@ -3151,10 +3151,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -3190,31 +3190,31 @@ importers:
 
   packages/components/sections/how-it-works:
     dependencies:
-      '@webriq-test/card':
+      '@stackshift-ui/card':
         specifier: workspace:*
         version: link:../../common/card
-      '@webriq-test/container':
+      '@stackshift-ui/container':
         specifier: workspace:*
         version: link:../../layout/container
-      '@webriq-test/flex':
+      '@stackshift-ui/flex':
         specifier: workspace:*
         version: link:../../layout/flex
-      '@webriq-test/heading':
+      '@stackshift-ui/heading':
         specifier: workspace:*
         version: link:../../common/heading
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/section':
+      '@stackshift-ui/section':
         specifier: workspace:*
         version: link:../../layout/section
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      '@webriq-test/text':
+      '@stackshift-ui/text':
         specifier: workspace:*
         version: link:../../common/text
-      '@webriq-test/youtube-video':
+      '@stackshift-ui/youtube-video':
         specifier: workspace:*
         version: link:../../common/youtube-video
       classnames:
@@ -3242,10 +3242,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -3281,31 +3281,31 @@ importers:
 
   packages/components/sections/logo-cloud:
     dependencies:
-      '@webriq-test/button':
+      '@stackshift-ui/button':
         specifier: workspace:*
         version: link:../../common/button
-      '@webriq-test/container':
+      '@stackshift-ui/container':
         specifier: workspace:*
         version: link:../../layout/container
-      '@webriq-test/flex':
+      '@stackshift-ui/flex':
         specifier: workspace:*
         version: link:../../layout/flex
-      '@webriq-test/heading':
+      '@stackshift-ui/heading':
         specifier: workspace:*
         version: link:../../common/heading
-      '@webriq-test/image':
+      '@stackshift-ui/image':
         specifier: workspace:*
         version: link:../../common/image
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/section':
+      '@stackshift-ui/section':
         specifier: workspace:*
         version: link:../../layout/section
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      '@webriq-test/text':
+      '@stackshift-ui/text':
         specifier: workspace:*
         version: link:../../common/text
       next:
@@ -3330,10 +3330,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -3372,31 +3372,31 @@ importers:
       '@portabletext/react':
         specifier: ^3.1.0
         version: 3.1.0(react@18.3.1)
-      '@webriq-test/button':
+      '@stackshift-ui/button':
         specifier: workspace:*
         version: link:../../common/button
-      '@webriq-test/container':
+      '@stackshift-ui/container':
         specifier: workspace:*
         version: link:../../layout/container
-      '@webriq-test/flex':
+      '@stackshift-ui/flex':
         specifier: workspace:*
         version: link:../../layout/flex
-      '@webriq-test/image':
+      '@stackshift-ui/image':
         specifier: workspace:*
         version: link:../../common/image
-      '@webriq-test/link':
+      '@stackshift-ui/link':
         specifier: workspace:*
         version: link:../../common/link
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/section':
+      '@stackshift-ui/section':
         specifier: workspace:*
         version: link:../../layout/section
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      '@webriq-test/text':
+      '@stackshift-ui/text':
         specifier: workspace:*
         version: link:../../common/text
       next:
@@ -3421,10 +3421,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -3460,40 +3460,40 @@ importers:
 
   packages/components/sections/newsletter:
     dependencies:
-      '@webriq-test/button':
+      '@stackshift-ui/button':
         specifier: workspace:*
         version: link:../../common/button
-      '@webriq-test/container':
+      '@stackshift-ui/container':
         specifier: workspace:*
         version: link:../../layout/container
-      '@webriq-test/flex':
+      '@stackshift-ui/flex':
         specifier: workspace:*
         version: link:../../layout/flex
-      '@webriq-test/form':
+      '@stackshift-ui/form':
         specifier: workspace:*
         version: link:../../common/form
-      '@webriq-test/heading':
+      '@stackshift-ui/heading':
         specifier: workspace:*
         version: link:../../common/heading
-      '@webriq-test/image':
+      '@stackshift-ui/image':
         specifier: workspace:*
         version: link:../../common/image
-      '@webriq-test/input':
+      '@stackshift-ui/input':
         specifier: workspace:*
         version: link:../../common/input
-      '@webriq-test/link':
+      '@stackshift-ui/link':
         specifier: workspace:*
         version: link:../../common/link
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/section':
+      '@stackshift-ui/section':
         specifier: workspace:*
         version: link:../../layout/section
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      '@webriq-test/text':
+      '@stackshift-ui/text':
         specifier: workspace:*
         version: link:../../common/text
       next:
@@ -3518,10 +3518,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -3557,31 +3557,31 @@ importers:
 
   packages/components/sections/portfolio:
     dependencies:
-      '@webriq-test/button':
+      '@stackshift-ui/button':
         specifier: workspace:*
         version: link:../../common/button
-      '@webriq-test/container':
+      '@stackshift-ui/container':
         specifier: workspace:*
         version: link:../../layout/container
-      '@webriq-test/flex':
+      '@stackshift-ui/flex':
         specifier: workspace:*
         version: link:../../layout/flex
-      '@webriq-test/heading':
+      '@stackshift-ui/heading':
         specifier: workspace:*
         version: link:../../common/heading
-      '@webriq-test/image':
+      '@stackshift-ui/image':
         specifier: workspace:*
         version: link:../../common/image
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/section':
+      '@stackshift-ui/section':
         specifier: workspace:*
         version: link:../../layout/section
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      '@webriq-test/text':
+      '@stackshift-ui/text':
         specifier: workspace:*
         version: link:../../common/text
       classnames:
@@ -3609,10 +3609,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -3648,46 +3648,46 @@ importers:
 
   packages/components/sections/signin-signup:
     dependencies:
-      '@webriq-test/button':
+      '@stackshift-ui/button':
         specifier: workspace:*
         version: link:../../common/button
-      '@webriq-test/card':
+      '@stackshift-ui/card':
         specifier: workspace:*
         version: link:../../common/card
-      '@webriq-test/container':
+      '@stackshift-ui/container':
         specifier: workspace:*
         version: link:../../layout/container
-      '@webriq-test/flex':
+      '@stackshift-ui/flex':
         specifier: workspace:*
         version: link:../../layout/flex
-      '@webriq-test/form':
+      '@stackshift-ui/form':
         specifier: workspace:*
         version: link:../../common/form
-      '@webriq-test/form-field':
+      '@stackshift-ui/form-field':
         specifier: workspace:*
         version: link:../../common/form-field
-      '@webriq-test/heading':
+      '@stackshift-ui/heading':
         specifier: workspace:*
         version: link:../../common/heading
-      '@webriq-test/image':
+      '@stackshift-ui/image':
         specifier: workspace:*
         version: link:../../common/image
-      '@webriq-test/input':
+      '@stackshift-ui/input':
         specifier: workspace:*
         version: link:../../common/input
-      '@webriq-test/link':
+      '@stackshift-ui/link':
         specifier: workspace:*
         version: link:../../common/link
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/section':
+      '@stackshift-ui/section':
         specifier: workspace:*
         version: link:../../layout/section
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      '@webriq-test/text':
+      '@stackshift-ui/text':
         specifier: workspace:*
         version: link:../../common/text
       classnames:
@@ -3715,10 +3715,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -3754,31 +3754,31 @@ importers:
 
   packages/components/sections/statistics:
     dependencies:
-      '@webriq-test/button':
+      '@stackshift-ui/button':
         specifier: workspace:*
         version: link:../../common/button
-      '@webriq-test/card':
+      '@stackshift-ui/card':
         specifier: workspace:*
         version: link:../../common/card
-      '@webriq-test/container':
+      '@stackshift-ui/container':
         specifier: workspace:*
         version: link:../../layout/container
-      '@webriq-test/flex':
+      '@stackshift-ui/flex':
         specifier: workspace:*
         version: link:../../layout/flex
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/section':
+      '@stackshift-ui/section':
         specifier: workspace:*
         version: link:../../layout/section
-      '@webriq-test/stats-card':
+      '@stackshift-ui/stats-card':
         specifier: workspace:*
         version: link:../../common/stats-card
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      '@webriq-test/text':
+      '@stackshift-ui/text':
         specifier: workspace:*
         version: link:../../common/text
       classnames:
@@ -3806,10 +3806,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -3845,37 +3845,37 @@ importers:
 
   packages/components/sections/team:
     dependencies:
-      '@webriq-test/avatar':
+      '@stackshift-ui/avatar':
         specifier: workspace:*
         version: link:../../common/avatar
-      '@webriq-test/button':
+      '@stackshift-ui/button':
         specifier: workspace:*
         version: link:../../common/button
-      '@webriq-test/card':
+      '@stackshift-ui/card':
         specifier: workspace:*
         version: link:../../common/card
-      '@webriq-test/container':
+      '@stackshift-ui/container':
         specifier: workspace:*
         version: link:../../layout/container
-      '@webriq-test/flex':
+      '@stackshift-ui/flex':
         specifier: workspace:*
         version: link:../../layout/flex
-      '@webriq-test/heading':
+      '@stackshift-ui/heading':
         specifier: workspace:*
         version: link:../../common/heading
-      '@webriq-test/image':
+      '@stackshift-ui/image':
         specifier: workspace:*
         version: link:../../common/image
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/section':
+      '@stackshift-ui/section':
         specifier: workspace:*
         version: link:../../layout/section
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      '@webriq-test/text':
+      '@stackshift-ui/text':
         specifier: workspace:*
         version: link:../../common/text
       classnames:
@@ -3903,10 +3903,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -3942,40 +3942,40 @@ importers:
 
   packages/components/sections/testimonial:
     dependencies:
-      '@webriq-test/avatar':
+      '@stackshift-ui/avatar':
         specifier: workspace:*
         version: link:../../common/avatar
-      '@webriq-test/card':
+      '@stackshift-ui/card':
         specifier: workspace:*
         version: link:../../common/card
-      '@webriq-test/container':
+      '@stackshift-ui/container':
         specifier: workspace:*
         version: link:../../layout/container
-      '@webriq-test/flex':
+      '@stackshift-ui/flex':
         specifier: workspace:*
         version: link:../../layout/flex
-      '@webriq-test/heading':
+      '@stackshift-ui/heading':
         specifier: workspace:*
         version: link:../../common/heading
-      '@webriq-test/image':
+      '@stackshift-ui/image':
         specifier: workspace:*
         version: link:../../common/image
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/section':
+      '@stackshift-ui/section':
         specifier: workspace:*
         version: link:../../layout/section
-      '@webriq-test/swiper-button':
+      '@stackshift-ui/swiper-button':
         specifier: workspace:*
         version: link:../../common/swiper-button
-      '@webriq-test/swiper-pagination':
+      '@stackshift-ui/swiper-pagination':
         specifier: workspace:*
         version: link:../../common/swiper-pagination
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      '@webriq-test/text':
+      '@stackshift-ui/text':
         specifier: workspace:*
         version: link:../../common/text
       classnames:
@@ -4003,10 +4003,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -4048,22 +4048,22 @@ importers:
       '@portabletext/types':
         specifier: ^2.0.13
         version: 2.0.13
-      '@webriq-test/container':
+      '@stackshift-ui/container':
         specifier: workspace:*
         version: link:../../layout/container
-      '@webriq-test/flex':
+      '@stackshift-ui/flex':
         specifier: workspace:*
         version: link:../../layout/flex
-      '@webriq-test/heading':
+      '@stackshift-ui/heading':
         specifier: workspace:*
         version: link:../../common/heading
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
-      '@webriq-test/section':
+      '@stackshift-ui/section':
         specifier: workspace:*
         version: link:../../layout/section
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
       next:
@@ -4091,10 +4091,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
@@ -4156,7 +4156,7 @@ importers:
         specifier: ^3.4.1
         version: 3.4.13
     devDependencies:
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../config-typescript
 
@@ -4180,13 +4180,13 @@ importers:
       '@types/node':
         specifier: ^22.7.0
         version: 22.7.0
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../config-eslint
-      '@webriq-test/jest-presets':
+      '@stackshift-ui/jest-presets':
         specifier: workspace:*
         version: link:../jest-presets
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../config-typescript
       jest:
@@ -4201,157 +4201,157 @@ importers:
 
   packages/core/react:
     dependencies:
-      '@webriq-test/app-promo':
+      '@stackshift-ui/app-promo':
         specifier: workspace:*
         version: link:../../components/sections/app-promo
-      '@webriq-test/avatar':
+      '@stackshift-ui/avatar':
         specifier: workspace:*
         version: link:../../components/common/avatar
-      '@webriq-test/badge':
+      '@stackshift-ui/badge':
         specifier: workspace:*
         version: link:../../components/common/badge
-      '@webriq-test/blockstyle':
+      '@stackshift-ui/blockstyle':
         specifier: workspace:*
         version: link:../../components/common/blockstyle
-      '@webriq-test/blog':
+      '@stackshift-ui/blog':
         specifier: workspace:*
         version: link:../../components/sections/blog
-      '@webriq-test/button':
+      '@stackshift-ui/button':
         specifier: workspace:*
         version: link:../../components/common/button
-      '@webriq-test/call-to-action':
+      '@stackshift-ui/call-to-action':
         specifier: workspace:*
         version: link:../../components/sections/call-to-action
-      '@webriq-test/card':
+      '@stackshift-ui/card':
         specifier: workspace:*
         version: link:../../components/common/card
-      '@webriq-test/checkbox':
+      '@stackshift-ui/checkbox':
         specifier: workspace:*
         version: link:../../components/common/checkbox
-      '@webriq-test/checkbox-group':
+      '@stackshift-ui/checkbox-group':
         specifier: workspace:*
         version: link:../../components/common/checkbox-group
-      '@webriq-test/contact':
+      '@stackshift-ui/contact':
         specifier: workspace:*
         version: link:../../components/sections/contact
-      '@webriq-test/container':
+      '@stackshift-ui/container':
         specifier: workspace:*
         version: link:../../components/layout/container
-      '@webriq-test/cookies':
+      '@stackshift-ui/cookies':
         specifier: workspace:*
         version: link:../../components/sections/cookies
-      '@webriq-test/faqs':
+      '@stackshift-ui/faqs':
         specifier: workspace:*
         version: link:../../components/sections/faqs
-      '@webriq-test/features':
+      '@stackshift-ui/features':
         specifier: workspace:*
         version: link:../../components/sections/features
-      '@webriq-test/flex':
+      '@stackshift-ui/flex':
         specifier: workspace:*
         version: link:../../components/layout/flex
-      '@webriq-test/footer':
+      '@stackshift-ui/footer':
         specifier: workspace:*
         version: link:../../components/sections/footer
-      '@webriq-test/form':
+      '@stackshift-ui/form':
         specifier: workspace:*
         version: link:../../components/common/form
-      '@webriq-test/form-field':
+      '@stackshift-ui/form-field':
         specifier: workspace:*
         version: link:../../components/common/form-field
-      '@webriq-test/grid':
+      '@stackshift-ui/grid':
         specifier: workspace:*
         version: link:../../components/layout/grid
-      '@webriq-test/grid-item':
+      '@stackshift-ui/grid-item':
         specifier: workspace:*
         version: link:../../components/layout/grid-item
-      '@webriq-test/header':
+      '@stackshift-ui/header':
         specifier: workspace:*
         version: link:../../components/sections/header
-      '@webriq-test/heading':
+      '@stackshift-ui/heading':
         specifier: workspace:*
         version: link:../../components/common/heading
-      '@webriq-test/how-it-works':
+      '@stackshift-ui/how-it-works':
         specifier: workspace:*
         version: link:../../components/sections/how-it-works
-      '@webriq-test/image':
+      '@stackshift-ui/image':
         specifier: workspace:*
         version: link:../../components/common/image
-      '@webriq-test/input':
+      '@stackshift-ui/input':
         specifier: workspace:*
         version: link:../../components/common/input
-      '@webriq-test/input-file':
+      '@stackshift-ui/input-file':
         specifier: workspace:*
         version: link:../../components/common/input-file
-      '@webriq-test/link':
+      '@stackshift-ui/link':
         specifier: workspace:*
         version: link:../../components/common/link
-      '@webriq-test/logo-cloud':
+      '@stackshift-ui/logo-cloud':
         specifier: workspace:*
         version: link:../../components/sections/logo-cloud
-      '@webriq-test/navigation':
+      '@stackshift-ui/navigation':
         specifier: workspace:*
         version: link:../../components/sections/navigation
-      '@webriq-test/newsletter':
+      '@stackshift-ui/newsletter':
         specifier: workspace:*
         version: link:../../components/sections/newsletter
-      '@webriq-test/portfolio':
+      '@stackshift-ui/portfolio':
         specifier: workspace:*
         version: link:../../components/sections/portfolio
-      '@webriq-test/radio':
+      '@stackshift-ui/radio':
         specifier: workspace:*
         version: link:../../components/common/radio
-      '@webriq-test/radio-group':
+      '@stackshift-ui/radio-group':
         specifier: workspace:*
         version: link:../../components/common/radio-group
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../scripts
-      '@webriq-test/section':
+      '@stackshift-ui/section':
         specifier: workspace:*
         version: link:../../components/layout/section
-      '@webriq-test/select':
+      '@stackshift-ui/select':
         specifier: workspace:*
         version: link:../../components/common/select
-      '@webriq-test/signin-signup':
+      '@stackshift-ui/signin-signup':
         specifier: workspace:*
         version: link:../../components/sections/signin-signup
-      '@webriq-test/social-icons':
+      '@stackshift-ui/social-icons':
         specifier: workspace:*
         version: link:../../components/common/social-icons
-      '@webriq-test/statistics':
+      '@stackshift-ui/statistics':
         specifier: workspace:*
         version: link:../../components/sections/statistics
-      '@webriq-test/stats-card':
+      '@stackshift-ui/stats-card':
         specifier: workspace:*
         version: link:../../components/common/stats-card
-      '@webriq-test/swiper-button':
+      '@stackshift-ui/swiper-button':
         specifier: workspace:*
         version: link:../../components/common/swiper-button
-      '@webriq-test/swiper-pagination':
+      '@stackshift-ui/swiper-pagination':
         specifier: workspace:*
         version: link:../../components/common/swiper-pagination
-      '@webriq-test/system':
+      '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../system
-      '@webriq-test/team':
+      '@stackshift-ui/team':
         specifier: workspace:*
         version: link:../../components/sections/team
-      '@webriq-test/testimonial':
+      '@stackshift-ui/testimonial':
         specifier: workspace:*
         version: link:../../components/sections/testimonial
-      '@webriq-test/text':
+      '@stackshift-ui/text':
         specifier: workspace:*
         version: link:../../components/common/text
-      '@webriq-test/text-component':
+      '@stackshift-ui/text-component':
         specifier: workspace:*
         version: link:../../components/sections/text-component
-      '@webriq-test/textarea':
+      '@stackshift-ui/textarea':
         specifier: workspace:*
         version: link:../../components/common/textarea
-      '@webriq-test/webriq-form':
+      '@stackshift-ui/webriq-form':
         specifier: workspace:*
         version: link:../../components/common/webriq-form
-      '@webriq-test/youtube-video':
+      '@stackshift-ui/youtube-video':
         specifier: workspace:*
         version: link:../../components/common/youtube-video
       next:
@@ -4382,10 +4382,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.0)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../config/config-typescript
       esbuild-plugin-rdi:
@@ -4415,7 +4415,7 @@ importers:
 
   packages/core/system:
     dependencies:
-      '@webriq-test/scripts':
+      '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../scripts
       next:
@@ -4461,10 +4461,10 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.0)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@webriq-test/eslint-config':
+      '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../../config/config-eslint
-      '@webriq-test/typescript-config':
+      '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../config/config-typescript
       esbuild-plugin-rdi:

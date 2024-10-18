@@ -1,13 +1,13 @@
-# @webriq-test/grid-item
+# @stackshift-ui/grid-item
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/grid-item) for more information.
 
 ## Installation
 
 ```sh
-yarn add @webriq-test/grid-item
+yarn add @stackshift-ui/grid-item
 # or
-npm i @webriq-test/grid-item
+npm i @stackshift-ui/grid-item
 ```
 
 ## Contribution

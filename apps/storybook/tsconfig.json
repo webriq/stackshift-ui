@@ -1,5 +1,5 @@
 {
   "exclude": ["dist", "build", "node_modules"],
-  "extends": "@webriq-test/typescript-config/react-app.json",
+  "extends": "@stackshift-ui/typescript-config/react-app.json",
   "include": ["."]
 }

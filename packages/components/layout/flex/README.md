@@ -1,13 +1,13 @@
-# @webriq-test/flex
+# @stackshift-ui/flex
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/flex) for more information.
 
 ## Installation
 
 ```sh
-yarn add @webriq-test/flex
+yarn add @stackshift-ui/flex
 # or
-npm i @webriq-test/flex
+npm i @stackshift-ui/flex
 ```
 
 ## Contribution

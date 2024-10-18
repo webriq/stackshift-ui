@@ -1,13 +1,13 @@
-# @webriq-test/avatar
+# @stackshift-ui/avatar
 
 Please refer to the [documentation](https://stackshift-ui.webriq.com/docs/components/avatar) for more information.
 
 ## Installation
 
 ```sh
-yarn add @webriq-test/avatar
+yarn add @stackshift-ui/avatar
 # or
-npm i @webriq-test/avatar
+npm i @stackshift-ui/avatar
 ```
 
 ## Contribution
