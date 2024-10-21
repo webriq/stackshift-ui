@@ -1,5 +1,11 @@
 # @stackshift-ui/header
 
+## 2.1.0
+
+### Minor Changes
+
+- Sync bg color in button
+
 ## 2.0.0
 
 ### Major Changes
