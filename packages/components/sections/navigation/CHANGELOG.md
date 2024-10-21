@@ -1,5 +1,11 @@
 # @stackshift-ui/navigation
 
+## 2.0.1
+
+### Patch Changes
+
+- update navigation responsive nav links button color
+
 ## 2.0.0
 
 ### Major Changes
