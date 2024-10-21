@@ -1,5 +1,11 @@
 # @stackshift-ui/navigation
 
+## 2.0.2
+
+### Patch Changes
+
+- minor changes on classnames for navigation variant d
+
 ## 2.0.1
 
 ### Patch Changes

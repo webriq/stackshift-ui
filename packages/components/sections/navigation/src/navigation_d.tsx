@@ -131,7 +131,7 @@ function Buttons({
           as="link"
           ariaLabel={primaryButton?.label}
           link={primaryButton}
-          className="hidden lg:inline-block px-4 py-3 mb-2 text-gray-900 lg:ml-auto lg:mr-3 bg-secoondary hover:bg-secoondary/50 font-semibold rounded-l-xl rounded-t-xl">
+          className="hidden lg:inline-block px-4 py-3 mb-2 text-gray-900 lg:ml-auto lg:mr-3 bg-secondary hover:bg-secondary/50 font-semibold rounded-l-xl rounded-t-xl">
           {primaryButton?.label}
         </Button>
       )}
