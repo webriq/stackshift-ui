@@ -1,5 +1,11 @@
 # @stackshift-ui/navigation
 
+## 2.1.0
+
+### Minor Changes
+
+- update a tag to link component, bump minor navigation component"
+
 ## 2.0.2
 
 ### Patch Changes

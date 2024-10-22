@@ -1,19 +1,19 @@
-import React from "react";
+import { PortableText, PortableTextComponents } from "@portabletext/react";
 import { Button } from "@stackshift-ui/button";
+import { Container } from "@stackshift-ui/container";
+import { Flex } from "@stackshift-ui/flex";
 import { Form } from "@stackshift-ui/form";
 import { FormField } from "@stackshift-ui/form-field";
 import { Heading } from "@stackshift-ui/heading";
-import { Text } from "@stackshift-ui/text";
-import { SocialIcons } from "@stackshift-ui/social-icons";
 import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
-import { Container } from "@stackshift-ui/container";
-import { Flex } from "@stackshift-ui/flex";
-import { PortableText, PortableTextComponents } from "@portabletext/react";
+import { SocialIcons } from "@stackshift-ui/social-icons";
+import { Text } from "@stackshift-ui/text";
+import React from "react";
 
-import { SocialLink, Form as iForm, Socials as iSocials } from "./types";
-import { thankYouPageLink } from "./helper";
 import { ContactProps } from ".";
+import { thankYouPageLink } from "./helper";
+import { SocialLink, Form as iForm, Socials as iSocials } from "./types";
 
 export default function Contact_A({
   contactDescription,
@@ -124,7 +124,7 @@ function SocialLinks({ socialLinks }: { socialLinks?: SocialLink[] }) {
   return (
     <React.Fragment>
       {socialLinks?.map(social => (
-        <a
+        <Link
           aria-label={social?.socialMedia || social?.socialMediaPlatform || ""}
           className="inline-block mr-4 rounded hover:bg-gray-100"
           target="_blank"
@@ -132,7 +132,7 @@ function SocialLinks({ socialLinks }: { socialLinks?: SocialLink[] }) {
           href={social?.socialMediaLink ?? "/page-not-found"}
           key={social?._key}>
           {social?.socialMediaLink && <SocialIcons social={social.socialMedia as iSocials} />}
-        </a>
+        </Link>
       ))}
     </React.Fragment>
   );

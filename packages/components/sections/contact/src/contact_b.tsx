@@ -1,17 +1,15 @@
-// import { Text, Heading, Card, SocialIcon } from "@stackshift/components-common";
-// import { Section, Flex, Container } from "@stackshift/components-layout";
-import { Text } from "@stackshift-ui/text";
-import { Heading } from "@stackshift-ui/heading";
 import { Card } from "@stackshift-ui/card";
-import { SocialIcons } from "@stackshift-ui/social-icons";
+import { Container } from "@stackshift-ui/container";
+import { Flex } from "@stackshift-ui/flex";
+import { Heading } from "@stackshift-ui/heading";
 import { Image } from "@stackshift-ui/image";
 import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
-import { Container } from "@stackshift-ui/container";
-import { Flex } from "@stackshift-ui/flex";
-import { Socials } from "./types";
+import { SocialIcons } from "@stackshift-ui/social-icons";
+import { Text } from "@stackshift-ui/text";
 import React from "react";
 import { ContactProps } from ".";
+import { Socials } from "./types";
 
 export default function Contact_B({
   title,

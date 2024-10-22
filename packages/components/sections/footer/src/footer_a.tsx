@@ -1,16 +1,16 @@
-import { Text } from "@stackshift-ui/text";
-import { SocialIcons } from "@stackshift-ui/social-icons";
-import { Image } from "@stackshift-ui/image";
-import { Link } from "@stackshift-ui/link";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Grid } from "@stackshift-ui/grid";
 import { GridItem } from "@stackshift-ui/grid-item";
+import { Image } from "@stackshift-ui/image";
+import { Link } from "@stackshift-ui/link";
+import { Section } from "@stackshift-ui/section";
+import { SocialIcons } from "@stackshift-ui/social-icons";
+import { Text } from "@stackshift-ui/text";
 
+import { FooterProps } from ".";
 import { logoLink } from "./helper";
 import { ContactDetails, Logo, SocialLink, Socials } from "./types";
-import { FooterProps } from ".";
 
 export default function Footer_A({ logo, text, contacts, copyright, socialMedia }: FooterProps) {
   return (
@@ -127,7 +127,7 @@ function SocialMediaLink({ social, index }: { social?: SocialLink; index?: numbe
   if (!social?.socialMediaLink) return null;
 
   return (
-    <a
+    <Link
       aria-label={social?.socialMedia || social?.socialMediaPlatform || ""}
       className="inline-block p-2 mr-2 rounded bg-gray-50 hover:bg-gray-100"
       target="_blank"
@@ -145,7 +145,7 @@ function SocialMediaLink({ social, index }: { social?: SocialLink; index?: numbe
       ) : (
         <SocialIcons social={social?.socialMedia as Socials} />
       )}
-    </a>
+    </Link>
   );
 }
 

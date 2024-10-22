@@ -1,5 +1,11 @@
 # @stackshift-ui/contact
 
+## 1.1.0
+
+### Minor Changes
+
+- update a tag to link component, bump minor navigation component"
+
 ## 1.0.0
 
 ### Major Changes
