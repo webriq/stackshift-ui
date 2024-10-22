@@ -1,7 +1,7 @@
 {
   "name": "@apps/storybook",
   "version": "0.0.1",
-  "private": false,
+  "private": true,
   "scripts": {
     "dev": "pnpm run storybook",
     "storybook": "storybook dev -p 6006",
