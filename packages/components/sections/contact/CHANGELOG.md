@@ -1,5 +1,11 @@
 # @stackshift-ui/contact
 
+## 1.2.0
+
+### Minor Changes
+
+- updates on contact and navigation classnames
+
 ## 1.1.0
 
 ### Minor Changes

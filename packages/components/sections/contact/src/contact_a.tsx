@@ -155,7 +155,7 @@ function FormFields({
         <Form
           id={form?.id ?? undefined}
           name="Contact-VariantA-Form"
-          className="lg:mx-auto lg:max-w-md space-y-3 text-xs font-semibold"
+          className="lg:mx-auto lg:max-w-md text-xs space-y-3 font-semibold"
           thankyouPage={thankYouPageLink(form?.thankYouPage)}>
           {form?.fields?.map((formFields, index) => (
             <div key={index}>
