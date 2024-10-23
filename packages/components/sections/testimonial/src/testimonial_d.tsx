@@ -61,7 +61,7 @@ export default function Testimonial_D({ testimonials }: TestimonialProps) {
             />
           )}
           {testimonials?.[currentIndex] && (
-            <Card className="flex flex-wrap w-full ">
+            <Card className="flex flex-wrap w-full">
               {testimonials?.[currentIndex]?.rating && (
                 <div className="w-full py-10 text-center border-r lg:w-1/3">
                   <span className="text-5xl font-bold lg:text-6xl">

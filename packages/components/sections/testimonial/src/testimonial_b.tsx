@@ -123,7 +123,7 @@ function TestimonialItem({
   if (!testimony) return null;
 
   return (
-    <div className={`mb-4 w-full ${testimony?.length >= 3 ? "lg:w-1/3" : "lg:w-1/3"} px-3`}>
+    <div className="w-full mb-4 lg:w-1/3 px-3">
       <Card className="p-5 ">
         <QuoteIcon />
         <Text className="mb-4 leading-loose" muted>

@@ -1,14 +1,14 @@
-import React from "react";
 import { Avatar } from "@stackshift-ui/avatar";
 import { Card } from "@stackshift-ui/card";
-import { Text } from "@stackshift-ui/text";
-import { SwiperButton } from "@stackshift-ui/swiper-button";
-import { Heading } from "@stackshift-ui/heading";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
-import { Testimonial as iTestimonial } from "./types";
+import { Heading } from "@stackshift-ui/heading";
+import { Section } from "@stackshift-ui/section";
+import { SwiperButton } from "@stackshift-ui/swiper-button";
+import { Text } from "@stackshift-ui/text";
+import React from "react";
 import { TestimonialProps } from ".";
+import { Testimonial as iTestimonial } from "./types";
 
 export default function Testimonial_C({ caption, title, testimonials }: TestimonialProps) {
   const [testimony, setTestimony] = React.useState(testimonials);
