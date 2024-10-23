@@ -101,6 +101,14 @@ export default function Testimonial_D({ testimonials }: TestimonialProps) {
               </div>
             </Card>
           )}
+          {testimonials && testimonials?.length > 1 && (
+            <SwiperButton
+              type="right"
+              className="hidden lg:block p-4 mr-6 lg:mr-0"
+              onClick={() => handleSlider("next")}
+              ariaLabel="Show next testimonial"
+            />
+          )}
         </div>
       </Container>
     </Section>

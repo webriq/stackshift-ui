@@ -1,5 +1,11 @@
 # @stackshift-ui/testimonial
 
+## 1.2.0
+
+### Minor Changes
+
+- add next button on testimonial d
+
 ## 1.1.0
 
 ### Minor Changes
