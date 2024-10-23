@@ -1,5 +1,12 @@
 # @stackshift-ui/react
 
+## 3.0.9
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/testimonial@1.1.0
+
 ## 3.0.8
 
 ### Patch Changes

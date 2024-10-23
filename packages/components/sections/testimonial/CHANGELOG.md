@@ -1,5 +1,11 @@
 # @stackshift-ui/testimonial
 
+## 1.1.0
+
+### Minor Changes
+
+- added next button
+
 ## 1.0.1
 
 ### Patch Changes

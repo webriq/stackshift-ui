@@ -43,6 +43,14 @@ export default function Testimonial_D({ testimonials }: TestimonialProps) {
                 ariaLabel="Show previous testimonial"
               />
             )}
+            {testimonials && testimonials?.length > 1 && (
+              <SwiperButton
+                type="right"
+                className="p-4 mr-6 lg:order-first lg:mr-0"
+                onClick={() => handleSlider("next")}
+                ariaLabel="Show next testimonial"
+              />
+            )}
           </div>
           {testimonials && testimonials?.length > 1 && (
             <SwiperButton
