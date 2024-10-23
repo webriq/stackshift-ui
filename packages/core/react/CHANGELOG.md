@@ -1,5 +1,12 @@
 # @stackshift-ui/react
 
+## 3.0.8
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/team@1.0.1
+
 ## 3.0.7
 
 ### Patch Changes

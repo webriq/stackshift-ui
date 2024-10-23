@@ -1,5 +1,11 @@
 # @stackshift-ui/team
 
+## 1.0.1
+
+### Patch Changes
+
+- team variant d minor changes
+
 ## 1.0.0
 
 ### Major Changes

@@ -1,12 +1,12 @@
 import { Card } from "@stackshift-ui/card";
-import { Text } from "@stackshift-ui/text";
+import { Container } from "@stackshift-ui/container";
+import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
 import { Image } from "@stackshift-ui/image";
 import { Section } from "@stackshift-ui/section";
-import { Container } from "@stackshift-ui/container";
-import { Flex } from "@stackshift-ui/flex";
-import { Team as iTeam } from "./types";
+import { Text } from "@stackshift-ui/text";
 import { MemberTextProps, TeamsProps } from ".";
+import { Team as iTeam } from "./types";
 
 export default function Team_D({ caption, title, team }: TeamsProps) {
   return (
