@@ -1,13 +1,13 @@
-import React, { useState } from "react";
 import { Card } from "@stackshift-ui/card";
-import { Text } from "@stackshift-ui/text";
-import { SwiperButton } from "@stackshift-ui/swiper-button";
-import { Heading } from "@stackshift-ui/heading";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
-import { Testimonial as iTestimonial } from "./types";
+import { Heading } from "@stackshift-ui/heading";
+import { Section } from "@stackshift-ui/section";
+import { SwiperButton } from "@stackshift-ui/swiper-button";
+import { Text } from "@stackshift-ui/text";
+import React, { useState } from "react";
 import { TestimonialProps } from ".";
+import { Testimonial as iTestimonial } from "./types";
 
 export default function Testimonial_B({ caption, title, testimonials }: TestimonialProps) {
   const [testimony, setTestimony] = useState(testimonials);
@@ -139,7 +139,7 @@ function TestimonialItem({
 function QuoteIcon() {
   return (
     <svg
-      className="h-8 mb-6 text-primary"
+      className="w-8 h-8 mb-6 text-primary"
       viewBox="0 0 32 28"
       fill="none"
       xmlns="http://www.w3.org/2000/svg">

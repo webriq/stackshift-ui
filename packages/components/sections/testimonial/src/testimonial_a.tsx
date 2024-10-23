@@ -1,14 +1,14 @@
-import React from "react";
 import { Avatar } from "@stackshift-ui/avatar";
 import { Card } from "@stackshift-ui/card";
-import { Heading } from "@stackshift-ui/heading";
-import { SwiperPagination } from "@stackshift-ui/swiper-pagination";
-import { Text } from "@stackshift-ui/text";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
-import { Testimonial as iTestimonial } from "./types";
+import { Heading } from "@stackshift-ui/heading";
+import { Section } from "@stackshift-ui/section";
+import { SwiperPagination } from "@stackshift-ui/swiper-pagination";
+import { Text } from "@stackshift-ui/text";
+import React from "react";
 import { TestimonialProps } from ".";
+import { Testimonial as iTestimonial } from "./types";
 
 export default function Testimonial_A({ testimonials }: TestimonialProps) {
   const [testimony, setTestimony] = React.useState(0);
@@ -78,7 +78,7 @@ function TestimonyContent({
     <React.Fragment>
       <div className="w-full lg:w-2/3">
         <svg
-          className="h-10 mb-4 text-primary"
+          className="w-10 h-10 mb-4 text-primary"
           viewBox="0 0 32 28"
           fill="none"
           xmlns="http://www.w3.org/2000/svg">

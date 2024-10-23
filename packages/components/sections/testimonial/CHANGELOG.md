@@ -1,5 +1,11 @@
 # @stackshift-ui/testimonial
 
+## 1.0.1
+
+### Patch Changes
+
+- update testimonial quote icon classname
+
 ## 1.0.0
 
 ### Major Changes

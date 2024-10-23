@@ -1,11 +1,11 @@
-import React from "react";
 import { Card } from "@stackshift-ui/card";
-import { Text } from "@stackshift-ui/text";
-import { SwiperButton } from "@stackshift-ui/swiper-button";
-import { Image } from "@stackshift-ui/image";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
+import { Image } from "@stackshift-ui/image";
+import { Section } from "@stackshift-ui/section";
+import { SwiperButton } from "@stackshift-ui/swiper-button";
+import { Text } from "@stackshift-ui/text";
+import React from "react";
 import { TestimonialProps } from ".";
 
 export default function Testimonial_D({ testimonials }: TestimonialProps) {
@@ -41,14 +41,6 @@ export default function Testimonial_D({ testimonials }: TestimonialProps) {
                 className="p-4 mr-6 lg:order-first lg:mr-0"
                 onClick={() => handleSlider("prev")}
                 ariaLabel="Show previous testimonial"
-              />
-            )}
-            {testimonials && testimonials?.length > 1 && (
-              <SwiperButton
-                type="right"
-                className="p-4 mr-6 lg:order-first lg:mr-0"
-                onClick={() => handleSlider("next")}
-                ariaLabel="Show next testimonial"
               />
             )}
           </div>
@@ -101,14 +93,6 @@ export default function Testimonial_D({ testimonials }: TestimonialProps) {
               </div>
             </Card>
           )}
-          {testimonials && testimonials?.length > 1 && (
-            <SwiperButton
-              type="right"
-              className="p-4 mr-6 lg:mr-0"
-              onClick={() => handleSlider("next")}
-              ariaLabel="Show next testimonial"
-            />
-          )}
         </div>
       </Container>
     </Section>
@@ -130,7 +114,7 @@ function RatingIcon() {
 function QuoteIcon() {
   return (
     <svg
-      className="h-10 mb-4 text-primary"
+      className="w-10 h-10 mb-4 text-primary"
       viewBox="0 0 32 28"
       fill="none"
       xmlns="http://www.w3.org/2000/svg">
