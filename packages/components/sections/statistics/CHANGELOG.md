@@ -1,5 +1,16 @@
 # @stackshift-ui/statistics
 
+## 1.1.0
+
+### Minor Changes
+
+- adding text/background color as fallback
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/stats-card@1.1.0
+
 ## 1.0.0
 
 ### Major Changes

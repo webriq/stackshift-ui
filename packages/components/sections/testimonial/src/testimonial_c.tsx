@@ -76,7 +76,7 @@ function TestimonialSwiper({
       {testimony && testimony?.length >= 4 && (
         <SwiperButton
           type="left"
-          className="order-last p-5 mr-4 lg:order-first"
+          className="order-last p-5 mr-4 bg-white lg:order-first"
           onClick={() => slider("prev")}
           ariaLabel="Show previous testimonial"
         />
@@ -84,7 +84,7 @@ function TestimonialSwiper({
       {testimony && testimony?.length >= 4 && (
         <SwiperButton
           type="right"
-          className="order-last p-5"
+          className="order-last p-5 bg-white"
           onClick={() => slider("next")}
           ariaLabel="Show next testimonial"
         />

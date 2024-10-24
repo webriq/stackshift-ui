@@ -1,10 +1,10 @@
-import React from "react";
-import { Heading } from "@stackshift-ui/heading";
-import { Text } from "@stackshift-ui/text";
 import { Card } from "@stackshift-ui/card";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
+import { Heading } from "@stackshift-ui/heading";
+import { Section } from "@stackshift-ui/section";
+import { Text } from "@stackshift-ui/text";
+import React from "react";
 import { HowItWorksProps } from ".";
 import { ArrayOfTitleAndText } from "./types";
 
@@ -53,7 +53,7 @@ function StepItem({ index, step }: { index: number; step?: ArrayOfTitleAndText }
         <span className="inline-flex items-center justify-center w-16 h-16 mb-6 text-2xl font-bold rounded bg-secondary-foreground text-primary">
           {index + 1}
         </span>
-        <Text weight="bold" fontSize="2xl" className="mb-4">
+        <Text weight="bold" fontSize="2xl" className="text-gray-500 mb-4">
           {step?.title}
         </Text>
         <Text muted className="leading-loose">

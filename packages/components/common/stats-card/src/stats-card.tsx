@@ -1,7 +1,7 @@
 import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
-import type { ElementType, HTMLProps, ReactNode } from "react";
 import { Text } from "@stackshift-ui/text";
 import cn from "classnames";
+import type { ElementType, HTMLProps, ReactNode } from "react";
 
 type VariantType = "inline" | "stacked";
 
@@ -53,7 +53,7 @@ export const StatsCard: React.FC<StatsCardProps> = ({
         </div>
       )}
       <div>
-        <p className="text-2xl font-bold">{value}</p>
+        <p className="text-2xl text-gray-500 font-bold">{value}</p>
         <Text muted>{label}</Text>
       </div>
     </Component>

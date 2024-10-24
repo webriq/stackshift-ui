@@ -1,14 +1,14 @@
-import React from "react";
-import { Text } from "@stackshift-ui/text";
-import { Heading } from "@stackshift-ui/heading";
 import { Button } from "@stackshift-ui/button";
+import { Container } from "@stackshift-ui/container";
+import { Heading } from "@stackshift-ui/heading";
 import { Image } from "@stackshift-ui/image";
 import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
-import { Container } from "@stackshift-ui/container";
-import { LabeledRoute, Logo } from "./types";
+import { Text } from "@stackshift-ui/text";
+import React from "react";
 import { CTAProps } from ".";
 import { logoLink } from "./helper";
+import { LabeledRoute, Logo } from "./types";
 
 export default function CallToAction_A({ logo, title, plainText, button }: CTAProps) {
   return (
@@ -51,7 +51,7 @@ function HeadingAndText({ title, text }: { title?: string; text?: string }) {
           {title}
         </Heading>
       ) : null}
-      {text ? <Text className="mb-6">{text}</Text> : null}
+      {text ? <Text className="mb-6 text-gray-500">{text}</Text> : null}
     </React.Fragment>
   );
 }

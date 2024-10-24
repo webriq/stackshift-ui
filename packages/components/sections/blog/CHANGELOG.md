@@ -1,5 +1,11 @@
 # @stackshift-ui/blog
 
+## 1.1.0
+
+### Minor Changes
+
+- adding text/background color as fallback
+
 ## 1.0.0
 
 ### Major Changes

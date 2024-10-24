@@ -1,5 +1,11 @@
 # @stackshift-ui/call-to-action
 
+## 1.1.0
+
+### Minor Changes
+
+- adding text/background color as fallback
+
 ## 1.0.0
 
 ### Major Changes

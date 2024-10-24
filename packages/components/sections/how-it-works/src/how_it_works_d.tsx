@@ -1,9 +1,9 @@
-import React from "react";
-import { Heading } from "@stackshift-ui/heading";
-import { Text } from "@stackshift-ui/text";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
+import { Heading } from "@stackshift-ui/heading";
+import { Section } from "@stackshift-ui/section";
+import { Text } from "@stackshift-ui/text";
+import React from "react";
 import { HowItWorksProps } from ".";
 import { ArrayOfTitleAndText } from "./types";
 
@@ -51,7 +51,7 @@ function StepItem({ index, step }: { index: number; step?: ArrayOfTitleAndText }
         style={{ width: "69px", height: "103px" }}>
         {index + 1}
       </Text>
-      <Text weight="bold" className="xl">
+      <Text weight="bold" fontSize="xl" className="text-gray-500">
         {step?.title}
       </Text>
       <Text muted className="leading-loose">

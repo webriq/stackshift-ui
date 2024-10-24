@@ -1,17 +1,17 @@
-import React from "react";
-import { format } from "date-fns";
-import { Text } from "@stackshift-ui/text";
-import { Heading } from "@stackshift-ui/heading";
-import { Card } from "@stackshift-ui/card";
 import { Button } from "@stackshift-ui/button";
-import { Input } from "@stackshift-ui/input";
-import { Image } from "@stackshift-ui/image";
-import { Link } from "@stackshift-ui/link";
-import { Section } from "@stackshift-ui/section";
+import { Card } from "@stackshift-ui/card";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
-import { SanityBody, Author, BlogPost } from "./types";
+import { Heading } from "@stackshift-ui/heading";
+import { Image } from "@stackshift-ui/image";
+import { Input } from "@stackshift-ui/input";
+import { Link } from "@stackshift-ui/link";
+import { Section } from "@stackshift-ui/section";
+import { Text } from "@stackshift-ui/text";
+import { format } from "date-fns";
+import React from "react";
 import { BlogProps } from ".";
+import { Author, BlogPost, SanityBody } from "./types";
 
 interface BlogPostProps extends SanityBody {
   category?: string;
@@ -334,8 +334,8 @@ function Pagination({ blogsPerPage, totalBlogs, paginate, currentPage }: Paginat
             key={number}
             className={`${
               currentPage === number
-                ? "bg-secondary-foreground text-white"
-                : "bg-white hover:bg-secondary-foreground hover:text-white"
+                ? "bg-secondary-foreground text-gray-500"
+                : "bg-white hover:bg-secondary-foreground hover:text-gray-500"
             } text-primary font-medium py-2 px-4 border border-primary rounded focus:outline-none`}
             onClick={() => paginate(number)}>
             {number}

@@ -1,5 +1,20 @@
 # @stackshift-ui/react
 
+## 3.0.14
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/call-to-action@1.1.0
+  - @stackshift-ui/how-it-works@1.1.0
+  - @stackshift-ui/testimonial@1.5.0
+  - @stackshift-ui/statistics@1.1.0
+  - @stackshift-ui/app-promo@1.1.0
+  - @stackshift-ui/stats-card@1.1.0
+  - @stackshift-ui/contact@1.3.0
+  - @stackshift-ui/blog@1.1.0
+  - @stackshift-ui/faqs@1.1.0
+
 ## 3.0.13
 
 ### Patch Changes

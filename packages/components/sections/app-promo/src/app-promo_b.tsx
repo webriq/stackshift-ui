@@ -1,13 +1,13 @@
-import React from "react";
-import { Heading } from "@stackshift-ui/heading";
-import { SwiperButton } from "@stackshift-ui/swiper-button";
-import { Text } from "@stackshift-ui/text";
-import { Image } from "@stackshift-ui/image";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
-import { Images, StatItems } from "./types";
+import { Heading } from "@stackshift-ui/heading";
+import { Image } from "@stackshift-ui/image";
+import { Section } from "@stackshift-ui/section";
+import { SwiperButton } from "@stackshift-ui/swiper-button";
+import { Text } from "@stackshift-ui/text";
+import React from "react";
 import { AppPromoProps } from ".";
+import { Images, StatItems } from "./types";
 
 export default function AppPromo_B({
   subtitle,
@@ -100,7 +100,7 @@ function StatisticsData({ statistics }: { statistics?: StatItems[] }) {
             <Text muted className="mb-3">
               {items?.label}
             </Text>
-            <span className="text-xl font-bold">{items?.value}</span>
+            <span className="text-xl text-gray-500 font-bold">{items?.value}</span>
           </div>
         ))}
       </Flex>

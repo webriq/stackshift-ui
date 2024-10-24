@@ -1,5 +1,11 @@
 # @stackshift-ui/testimonial
 
+## 1.5.0
+
+### Minor Changes
+
+- adding text/background color as fallback
+
 ## 1.4.0
 
 ### Minor Changes

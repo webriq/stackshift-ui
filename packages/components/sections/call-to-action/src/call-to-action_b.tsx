@@ -54,7 +54,7 @@ function HeadingAndText({ title, text }: { title?: string; text?: string }) {
           {title}
         </Heading>
       ) : null}
-      {text ? <Text className="mb-6">{text}</Text> : null}
+      {text ? <Text className="mb-6 text-gray-500">{text}</Text> : null}
     </React.Fragment>
   );
 }

@@ -1,12 +1,12 @@
-import React, { useState } from "react";
 import { Button } from "@stackshift-ui/button";
-import { Heading } from "@stackshift-ui/heading";
-import { Text } from "@stackshift-ui/text";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
-import { AskedQuestion, FaqsWithCategory } from "./types";
+import { Heading } from "@stackshift-ui/heading";
+import { Section } from "@stackshift-ui/section";
+import { Text } from "@stackshift-ui/text";
+import React, { useState } from "react";
 import { FAQProps } from ".";
+import { AskedQuestion, FaqsWithCategory } from "./types";
 
 export default function Faqs_B({ subtitle, title, faqsWithCategories }: FAQProps) {
   const [show, setShow] = useState<boolean>(false);
@@ -158,7 +158,7 @@ function FAQItem({
         ariaLabel={content?.question || ""}
         className="flex items-center justify-between w-full font-bold text-left font-heading hover:text-gray-600 focus:outline-none"
         onClick={() => toggleView(index)}>
-        <Text fontSize="xs" weight="semibold" className="lg:text-xl">
+        <Text fontSize="xs" weight="semibold" className="text-gray-500 lg:text-xl">
           {content?.question}
         </Text>
         <ArrowIcon show={show} activeQA={activeQA} index={index} />

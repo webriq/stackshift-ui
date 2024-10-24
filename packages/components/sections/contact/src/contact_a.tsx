@@ -191,7 +191,7 @@ function FormFields({
                   defaultValue={1}
                   required
                 />
-                <span className="text-sm font-semibold">
+                <span className="text-sm text-gray-500 font-semibold">
                   <PortableText
                     value={block}
                     components={blockCustomization}
