@@ -1,5 +1,11 @@
 # @stackshift-ui/testimonial
 
+## 1.4.0
+
+### Minor Changes
+
+- test minor bump on testimonial variant b changes
+
 ## 1.3.1
 
 ### Patch Changes

@@ -101,7 +101,7 @@ function TestimonialList({ testimonials }: { testimonials?: iTestimonial[] }) {
   if (!testimonials) return null;
 
   return (
-    <div className="w-full relative">
+    <div className="relative w-full">
       <Flex wrap justify="center" className="mx-auto ">
         {testimonials.slice(0, 3).map((testimonial: iTestimonial, index: number) => (
           <TestimonialItem key={index} {...testimonial} />
@@ -123,7 +123,7 @@ function TestimonialItem({
   if (!testimony) return null;
 
   return (
-    <div className="w-full mb-4 px-3 lg:w-1/3">
+    <div className="mb-4 px-3 w-full lg:w-1/3">
       <Card className="p-5 ">
         <QuoteIcon />
         <Text className="mb-4 leading-loose" muted>
