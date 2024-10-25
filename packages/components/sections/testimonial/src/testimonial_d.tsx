@@ -94,7 +94,7 @@ export default function Testimonial_D({ testimonials }: TestimonialProps) {
                 <Text muted className="mb-10 text-xl leading-loose lg:text-2xl">
                   {testimonials[currentIndex]?.testimony}
                 </Text>
-                <Text weight="bold" className="text-2xl font-bold text-gray-500">
+                <Text weight="bold" fontSize="2xl">
                   {testimonials[currentIndex]?.name}
                 </Text>
                 <Text muted>{testimonials[currentIndex]?.jobTitle}</Text>

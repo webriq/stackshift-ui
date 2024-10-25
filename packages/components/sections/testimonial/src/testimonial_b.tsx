@@ -129,9 +129,7 @@ function TestimonialItem({
         <Text className="mb-4 leading-loose" muted>
           {testimony}
         </Text>
-        <Text weight="bold" className="text-gray-500">
-          {name}
-        </Text>
+        <Text weight="bold">{name}</Text>
         <Text muted>{jobTitle}</Text>
       </Card>
     </div>
