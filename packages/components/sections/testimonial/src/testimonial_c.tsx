@@ -126,7 +126,7 @@ function TestimonialItem({ item, index }: { item?: iTestimonial; index: number }
             alt={item?.mainImage?.alt ?? `testimonial-source-${item?.name}-profile-image`}
           />
         )}
-        <Text className="mb-1 text-2xl " weight="bold">
+        <Text className="mb-1 text-2xl text-gray-500" weight="bold">
           {item?.name}
         </Text>
         <Text muted>{item?.jobTitle}</Text>

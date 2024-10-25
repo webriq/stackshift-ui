@@ -54,7 +54,7 @@ function AvatarSection({
         />
       ) : null}
       {testimonials?.[testimony]?.name ? (
-        <Text className="text-xl">{testimonials?.[testimony]?.name}</Text>
+        <Text className="text-xl text-gray-500">{testimonials?.[testimony]?.name}</Text>
       ) : null}
       {testimonials?.[testimony]?.jobTitle ? (
         <Text className="text-primary">{testimonials?.[testimony]?.jobTitle}</Text>
