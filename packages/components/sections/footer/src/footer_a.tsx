@@ -59,7 +59,7 @@ function TextContainer({ text }: { text?: string }) {
 
   return (
     <Container className="w-full mb-5 lg:w-1/5" maxWidth={1000}>
-      <Text muted className="leading-loose">
+      <Text muted className="leading-loose text-gray-500">
         {text}
       </Text>
     </Container>
@@ -74,26 +74,26 @@ function ContactsContainer({ contacts }: { contacts?: ContactDetails[] }) {
       {contacts?.map((contact, index) => (
         <Grid columns={1} gap={4} className="lg:gap-10 md:grid-cols-3" key={index}>
           <GridItem span={1}>
-            <Text weight="bold" className="mb-4">
+            <Text weight="bold" className="mb-4 text-gray-500">
               Address
             </Text>
-            <Text muted className="mb-5">
+            <Text muted className="mb-5 text-gray-500">
               {contact?.addressInfo}
             </Text>
           </GridItem>
           <GridItem span={1}>
-            <Text weight="bold" className="mb-4">
+            <Text weight="bold" className="mb-4 text-gray-500">
               Email
             </Text>
-            <Text muted className="mb-5">
+            <Text muted className="mb-5 text-gray-500">
               {contact?.emailInfo}
             </Text>
           </GridItem>
           <GridItem span={1}>
-            <Text weight="bold" className="mb-4">
+            <Text weight="bold" className="mb-4 text-gray-500">
               Number
             </Text>
-            <Text muted className="mb-5">
+            <Text muted className="mb-5 text-gray-500">
               {contact?.contactInfo}
             </Text>
           </GridItem>

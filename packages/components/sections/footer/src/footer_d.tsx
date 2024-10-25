@@ -1,15 +1,15 @@
-import { Text } from "@stackshift-ui/text";
 import { Button } from "@stackshift-ui/button";
-import { SocialIcons } from "@stackshift-ui/social-icons";
+import { Container } from "@stackshift-ui/container";
+import { Flex } from "@stackshift-ui/flex";
 import { Image } from "@stackshift-ui/image";
 import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
-import { Container } from "@stackshift-ui/container";
-import { Flex } from "@stackshift-ui/flex";
+import { SocialIcons } from "@stackshift-ui/social-icons";
+import { Text } from "@stackshift-ui/text";
 
+import { FooterProps } from ".";
 import { logoLink } from "./helper";
 import { Logo, SocialLink, Socials } from "./types";
-import { FooterProps } from ".";
 
 export default function Footer_D({
   logo,
@@ -62,7 +62,7 @@ function TextSection({ text }: { text?: string }) {
   if (!text) return null;
 
   return (
-    <Text muted className="leading-normal ">
+    <Text muted className="leading-normal text-gray-500">
       {text}
     </Text>
   );
@@ -71,7 +71,7 @@ function TextSection({ text }: { text?: string }) {
 function CopyrightSection({ copyright }: { copyright?: string }) {
   if (!copyright) return null;
 
-  return <Text className="pt-10 text-sm">{copyright}</Text>;
+  return <Text className="pt-10 text-sm text-gray-500">{copyright}</Text>;
 }
 
 function MenuSection({ multipleMenus }: { multipleMenus?: any[] }) {
@@ -91,7 +91,7 @@ function MenuLinks({ menu }: { menu?: any }) {
   return (
     <div className="w-[200px] flex-none">
       {menu?.title && (
-        <Text weight="bold" className="mb-3">
+        <Text weight="bold" className="mb-3 text-gray-500">
           {menu?.title}
         </Text>
       )}
