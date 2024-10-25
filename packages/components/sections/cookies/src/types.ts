@@ -270,7 +270,6 @@ export interface Variants {
     consentModalPosition?: string;
   };
   contactLink?: LabeledRoute;
-  imageSrc?: string;
 }
 
 export interface Template {
