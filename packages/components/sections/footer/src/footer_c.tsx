@@ -35,7 +35,7 @@ export default function Footer_C({ logo, menu, copyright, socialMedia }: FooterP
 function CopyrightSection({ copyright }: { copyright?: string }) {
   if (!copyright) return null;
 
-  return <Text className="w-full text-sm text-center text-gray-500">{copyright}</Text>;
+  return <Text className="w-full text-sm text-center">{copyright}</Text>;
 }
 
 function LogoSection({ logo }: { logo?: Logo }) {

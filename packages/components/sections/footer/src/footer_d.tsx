@@ -62,7 +62,7 @@ function TextSection({ text }: { text?: string }) {
   if (!text) return null;
 
   return (
-    <Text muted className="leading-normal text-gray-500">
+    <Text muted className="leading-normal">
       {text}
     </Text>
   );
@@ -71,7 +71,7 @@ function TextSection({ text }: { text?: string }) {
 function CopyrightSection({ copyright }: { copyright?: string }) {
   if (!copyright) return null;
 
-  return <Text className="pt-10 text-sm text-gray-500">{copyright}</Text>;
+  return <Text className="pt-10 text-sm">{copyright}</Text>;
 }
 
 function MenuSection({ multipleMenus }: { multipleMenus?: any[] }) {
@@ -91,7 +91,7 @@ function MenuLinks({ menu }: { menu?: any }) {
   return (
     <div className="w-[200px] flex-none">
       {menu?.title && (
-        <Text weight="bold" className="mb-3 text-gray-500">
+        <Text weight="bold" className="mb-3">
           {menu?.title}
         </Text>
       )}
