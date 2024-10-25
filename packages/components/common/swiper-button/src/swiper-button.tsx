@@ -36,7 +36,7 @@ export const SwiperButton: React.FC<SwiperButtonProps> = ({
   };
 
   const Element = variantList[variant] || VariantA;
-  const commonStyle = "inline-block p-2 rounded-full shadow focus:outline-none";
+  const commonStyle = "inline-block p-2 text-primary rounded-full shadow focus:outline-none";
 
   const variantClasses = {
     variant_a: commonStyle,
