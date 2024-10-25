@@ -1,5 +1,12 @@
 # @stackshift-ui/react
 
+## 3.0.15
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/features@1.0.1
+
 ## 3.0.14
 
 ### Patch Changes

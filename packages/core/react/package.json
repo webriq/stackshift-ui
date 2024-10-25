@@ -1,6 +1,6 @@
 {
   "name": "@stackshift-ui/react",
-  "version": "3.0.14",
+  "version": "3.0.15",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",

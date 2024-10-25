@@ -1,13 +1,13 @@
-import React from "react";
-import { Heading } from "@stackshift-ui/heading";
-import { Text } from "@stackshift-ui/text";
 import { Card } from "@stackshift-ui/card";
-import { Image } from "@stackshift-ui/image";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
-import { ArrayOfImageTitleAndText } from "./types";
+import { Heading } from "@stackshift-ui/heading";
+import { Image } from "@stackshift-ui/image";
+import { Section } from "@stackshift-ui/section";
+import { Text } from "@stackshift-ui/text";
+import React from "react";
 import { FeaturesProps } from ".";
+import { ArrayOfImageTitleAndText } from "./types";
 
 export default function Features_B({ caption, title, description, features, tags }: FeaturesProps) {
   return (
@@ -103,7 +103,7 @@ function FeaturesLists({ features }: { features?: ArrayOfImageTitleAndText[] }) 
                   />
                 )}
               </span>
-              <Text weight="bold" className="mb-2 text-2xl">
+              <Text weight="bold" fontSize="2xl" className="mb-2 text-gray-500">
                 {feature?.title}
               </Text>
               <Text muted className="leading-loose">

@@ -1,13 +1,13 @@
-import React from "react";
-import { Heading } from "@stackshift-ui/heading";
-import { Text } from "@stackshift-ui/text";
 import { Card } from "@stackshift-ui/card";
-import { Image } from "@stackshift-ui/image";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
-import { ArrayOfImageTitleAndText } from "./types";
+import { Heading } from "@stackshift-ui/heading";
+import { Image } from "@stackshift-ui/image";
+import { Section } from "@stackshift-ui/section";
+import { Text } from "@stackshift-ui/text";
+import React from "react";
 import { FeaturesProps } from ".";
+import { ArrayOfImageTitleAndText } from "./types";
 
 export default function Features_D({ caption, title, features }: FeaturesProps) {
   return (
@@ -62,7 +62,7 @@ function FeatureItem({ feature }: { feature: ArrayOfImageTitleAndText }) {
             />
           )}
         </div>
-        <Text fontSize="xl" weight="bold" className="px-8 mb-4">
+        <Text fontSize="xl" weight="bold" className="px-8 mb-4 text-gray-500">
           {feature?.title}
         </Text>
         <Text muted>{feature?.plainText}</Text>

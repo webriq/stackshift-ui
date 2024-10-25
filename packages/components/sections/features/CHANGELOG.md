@@ -1,5 +1,11 @@
 # @stackshift-ui/features
 
+## 1.0.1
+
+### Patch Changes
+
+- adding text color fallback in features variants
+
 ## 1.0.0
 
 ### Major Changes
