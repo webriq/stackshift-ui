@@ -1,12 +1,12 @@
-import React from "react";
-import { Heading } from "@stackshift-ui/heading";
-import { Text } from "@stackshift-ui/text";
-import { Image } from "@stackshift-ui/image";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
-import { ArrayOfImageTitleAndText } from "./types";
+import { Heading } from "@stackshift-ui/heading";
+import { Image } from "@stackshift-ui/image";
+import { Section } from "@stackshift-ui/section";
+import { Text } from "@stackshift-ui/text";
+import React from "react";
 import { FeaturesProps } from ".";
+import { ArrayOfImageTitleAndText } from "./types";
 
 export default function Features_H({ caption, title, features, images }: FeaturesProps) {
   return (
@@ -62,8 +62,10 @@ function FeatureItem({ feature }: { feature?: ArrayOfImageTitleAndText }) {
     <Flex as="li">
       <FeatureIcon />
       <div className="max-w-xs">
-        <Text weight="bold">{feature?.title}</Text>
-        <Text muted className="leading-loose ">
+        <Text weight="bold" className="text-gray-500">
+          {feature?.title}
+        </Text>
+        <Text muted className="leading-loose">
           {feature?.plainText}
         </Text>
       </div>
