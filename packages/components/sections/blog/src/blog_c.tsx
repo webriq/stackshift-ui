@@ -1,17 +1,17 @@
-import React from "react";
-import { format } from "date-fns";
 import { Badge } from "@stackshift-ui/badge";
 import { Button } from "@stackshift-ui/button";
+import { Container } from "@stackshift-ui/container";
+import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
-import { Text } from "@stackshift-ui/text";
 import { Image } from "@stackshift-ui/image";
 import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
-import { Container } from "@stackshift-ui/container";
-import { Flex } from "@stackshift-ui/flex";
-import { BlogPost, LabeledRoute } from "./types";
-import { useMediaQuery } from "./hooks/useMediaQuery";
+import { Text } from "@stackshift-ui/text";
+import { format } from "date-fns";
+import React from "react";
 import { BlogProps } from ".";
+import { useMediaQuery } from "./hooks/useMediaQuery";
+import { BlogPost, LabeledRoute } from "./types";
 
 export default function Blog_C({ subtitle, title, posts, primaryButton }: BlogProps) {
   let blogsPerPage = 3;
@@ -48,7 +48,7 @@ function BlogPosts({ posts, blogsPerPage }: { posts?: BlogPost[]; blogsPerPage?:
   return (
     <div>
       {posts?.slice(0, blogsPerPage)?.map((post, key) => (
-        <div className="flex flex-wrap mb-8 overflow-hidden rounded-lg shadow" key={key}>
+        <div className="flex flex-wrap mb-8 overflow-hidden rounded-global shadow" key={key}>
           <BlogItem
             post={post}
             className={`${key % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}

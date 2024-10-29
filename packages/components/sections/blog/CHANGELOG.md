@@ -1,5 +1,11 @@
 # @stackshift-ui/blog
 
+## 6.0.3
+
+### Patch Changes
+
+- updated rounded-global classname
+
 ## 6.0.2
 
 ### Major Changes
