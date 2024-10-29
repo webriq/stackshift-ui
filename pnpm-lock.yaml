@@ -14,12 +14,12 @@ importers:
       '@changesets/cli':
         specifier: ^2.27.9
         version: 2.27.9
-      '@types/node':
-        specifier: ^22.7.5
-        version: 22.7.5
       '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:packages/config/config-typescript
+      '@types/node':
+        specifier: ^22.7.5
+        version: 22.7.5
       enquirer:
         specifier: ^2.4.1
         version: 2.4.1
@@ -72,6 +72,9 @@ importers:
         specifier: ^18
         version: 18.3.1(react@18.3.1)
     devDependencies:
+      '@stackshift-ui/tailwind-config':
+        specifier: workspace:*
+        version: link:../../packages/config/config-tailwind
       '@types/node':
         specifier: ^20
         version: 20.16.7
@@ -81,9 +84,6 @@ importers:
       '@types/react-dom':
         specifier: ^18
         version: 18.3.0
-      '@stackshift-ui/tailwind-config':
-        specifier: workspace:*
-        version: link:../../packages/config/config-tailwind
       eslint:
         specifier: ^8.0.0
         version: 8.57.1
@@ -124,6 +124,15 @@ importers:
       '@chromatic-com/storybook':
         specifier: ^2.0.2
         version: 2.0.2(react@18.3.1)
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/config/config-eslint
+      '@stackshift-ui/tailwind-config':
+        specifier: workspace:*
+        version: link:../../packages/config/config-tailwind
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../packages/config/config-typescript
       '@storybook/addon-actions':
         specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)
@@ -154,15 +163,6 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
         version: 4.3.2(vite@5.4.9(@types/node@22.7.5)(less@4.2.0)(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../packages/config/config-eslint
-      '@stackshift-ui/tailwind-config':
-        specifier: workspace:*
-        version: link:../../packages/config/config-tailwind
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../packages/config/config-typescript
       autoprefixer:
         specifier: ^10.4.18
         version: 10.4.20(postcss@8.4.47)
@@ -212,6 +212,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -230,12 +236,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -285,6 +285,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -303,12 +309,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -367,6 +367,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -385,12 +391,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -443,6 +443,12 @@ importers:
         specifier: ^5.3.0
         version: 5.3.0(react@18.3.1)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -461,12 +467,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.0)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -513,6 +513,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -531,12 +537,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -583,6 +583,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -601,12 +607,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -653,6 +653,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -671,12 +677,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -723,6 +723,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -741,12 +747,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -814,6 +814,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -832,12 +838,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -884,6 +884,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -902,12 +908,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -951,6 +951,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.13(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -969,12 +975,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.0)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -1021,6 +1021,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1039,12 +1045,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -1091,6 +1091,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1109,12 +1115,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -1158,6 +1158,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.13(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1176,12 +1182,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.0)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -1228,6 +1228,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1246,12 +1252,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -1298,6 +1298,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1316,12 +1322,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -1368,6 +1368,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1386,12 +1392,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -1441,6 +1441,12 @@ importers:
         specifier: ^5.3.0
         version: 5.3.0(react@18.3.1)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1459,12 +1465,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -1514,6 +1514,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1532,12 +1538,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -1587,6 +1587,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1605,12 +1611,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -1657,6 +1657,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1675,12 +1681,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -1727,6 +1727,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1745,12 +1751,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -1797,6 +1797,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1815,12 +1821,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -1864,6 +1864,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1882,12 +1888,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -1931,6 +1931,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1949,12 +1955,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -2001,6 +2001,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2019,12 +2025,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -2071,6 +2071,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2089,12 +2095,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -2141,6 +2141,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2159,12 +2165,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -2211,6 +2211,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2229,12 +2235,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -2281,6 +2281,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2299,12 +2305,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -2372,6 +2372,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2390,12 +2396,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -2475,6 +2475,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2493,12 +2499,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       date-fns:
         specifier: ^4.1.0
         version: 4.1.0
@@ -2578,6 +2578,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2596,12 +2602,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -2687,6 +2687,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2705,12 +2711,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -2757,6 +2757,12 @@ importers:
         specifier: 3.0.1
         version: 3.0.1
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2775,12 +2781,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -2851,6 +2851,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2869,12 +2875,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -2945,6 +2945,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2963,12 +2969,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -3045,6 +3045,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -3063,12 +3069,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -3114,6 +3114,9 @@ importers:
       '@stackshift-ui/heading':
         specifier: workspace:*
         version: link:../../common/heading
+      '@stackshift-ui/image':
+        specifier: workspace:*
+        version: link:../../common/image
       '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
@@ -3133,6 +3136,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -3151,12 +3160,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -3224,6 +3227,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -3242,12 +3251,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -3312,6 +3315,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -3330,12 +3339,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -3403,6 +3406,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -3421,12 +3430,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -3500,6 +3503,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -3518,12 +3527,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -3591,6 +3594,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -3609,12 +3618,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -3697,6 +3700,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -3715,12 +3724,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -3788,6 +3791,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -3806,12 +3815,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -3885,6 +3888,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -3903,12 +3912,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -3985,6 +3988,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -4003,12 +4012,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -4070,6 +4073,12 @@ importers:
         specifier: 10 - 14
         version: 14.2.15(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
       '@testing-library/jest-dom':
         specifier: ^6.5.0
         version: 6.5.0
@@ -4091,12 +4100,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.5)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -4174,12 +4177,6 @@ importers:
 
   packages/config/logger:
     devDependencies:
-      '@types/jest':
-        specifier: ^29.5.13
-        version: 29.5.13
-      '@types/node':
-        specifier: ^22.7.0
-        version: 22.7.0
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
         version: link:../config-eslint
@@ -4189,6 +4186,12 @@ importers:
       '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../config-typescript
+      '@types/jest':
+        specifier: ^29.5.13
+        version: 29.5.13
+      '@types/node':
+        specifier: ^22.7.0
+        version: 22.7.0
       jest:
         specifier: ^29.7.0
         version: 29.7.0(@types/node@22.7.0)
@@ -4364,6 +4367,12 @@ importers:
         specifier: 16.8 - 19
         version: 18.3.1(react@18.3.1)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -4382,12 +4391,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.0)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0
@@ -4443,6 +4446,12 @@ importers:
         specifier: latest
         version: 1.1.3(@types/react@18.3.9)(next@14.2.13(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1)
     devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../config/config-typescript
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -4461,12 +4470,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.1
         version: 2.1.1(vitest@2.1.1(@types/node@22.7.0)(jsdom@25.0.1)(less@4.2.0)(msw@2.4.11(typescript@5.6.2))(sass@1.79.3)(terser@5.34.1))
-      '@stackshift-ui/eslint-config':
-        specifier: workspace:*
-        version: link:../../config/config-eslint
-      '@stackshift-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../config/config-typescript
       esbuild-plugin-rdi:
         specifier: ^0.0.0
         version: 0.0.0

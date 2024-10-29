@@ -2,6 +2,7 @@ import { Button } from "@stackshift-ui/button";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
+import { Image } from "@stackshift-ui/image";
 import { Section } from "@stackshift-ui/section";
 import { Text } from "@stackshift-ui/text";
 import React from "react";
@@ -71,7 +72,7 @@ function Buttons({
         <Button
           as="link"
           link={secondaryButton}
-          className="bg-secondary hover:bg-secondary/50 inline-block rounded-l-xl rounded-t-xl font-bold transition duration-200 px-3 py-4"
+          className="bg-secondary hover:bg-secondary/50 inline-block rounded-global font-bold transition duration-200 px-3 py-4"
           ariaLabel={secondaryButton?.label}>
           {secondaryButton?.label}
         </Button>
@@ -92,8 +93,8 @@ function MainImage({ mainImage }: MainImageProps) {
 
   return (
     <div className="relative w-full max-w-md">
-      <img
-        className="overflow-hidden rounded-3xl object-cover md:rounded-br-none lg:h-[448px] relative z-10"
+      <Image
+        className="overflow-hidden rounded-global object-cover md:rounded-br-none lg:h-[448px] relative z-10"
         src={`${mainImage.image}`}
         sizes="(min-width: 520px) 448px, 90vw"
         width={448}
@@ -160,7 +161,7 @@ function ImageElement({
   height: number;
 }) {
   return (
-    <img src={src} alt={alt} className={className} style={style} width={width} height={height} />
+    <Image src={src} alt={alt} className={className} style={style} width={width} height={height} />
   );
 }
 

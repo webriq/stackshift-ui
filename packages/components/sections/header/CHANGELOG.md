@@ -1,5 +1,11 @@
 # @stackshift-ui/header
 
+## 6.0.3
+
+### Patch Changes
+
+- update rounded-global on buttons and images
+
 ## 6.0.2
 
 ### Major Changes
