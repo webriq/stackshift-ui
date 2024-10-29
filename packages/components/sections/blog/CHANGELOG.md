@@ -1,5 +1,12 @@
 # @stackshift-ui/blog
 
+## 6.0.4
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/input@6.0.3
+
 ## 6.0.3
 
 ### Patch Changes

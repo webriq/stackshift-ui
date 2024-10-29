@@ -1,5 +1,11 @@
 # @stackshift-ui/header
 
+## 6.0.4
+
+### Patch Changes
+
+- @stackshift-ui/signin-signup@6.0.3
+
 ## 6.0.3
 
 ### Patch Changes
