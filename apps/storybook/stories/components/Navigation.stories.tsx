@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import { Navigation } from "@stackshift-ui/react";
+import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Navigation> = {
   title: "Components/Navigation",
@@ -132,44 +132,6 @@ export const VariantD: StoryObj<typeof Navigation> = {
   args: {
     data: {
       variant: "variant_d",
-      variants: {
-        logo: {
-          image:
-            "https://cdn.sanity.io/images/9itgab5x/staging/7f9353c628ae4dd0bdd479d3b1407a3c242755e8-1963x833.png?fm=webp&w=96&q=75",
-        },
-        routes: [
-          {
-            label: "Start",
-          },
-          {
-            label: "About",
-          },
-          {
-            label: "Services",
-          },
-          {
-            label: "Platform",
-          },
-          {
-            label: "Testimonials",
-          },
-        ],
-        primaryButton: {
-          label: "Sign In",
-        },
-        secondaryButton: {
-          label: "Sign Up",
-        },
-      },
-    },
-  },
-};
-
-export const VariantE: StoryObj<typeof Navigation> = {
-  ...Template,
-  args: {
-    data: {
-      variant: "variant_e",
       variants: {
         logo: {
           image:
