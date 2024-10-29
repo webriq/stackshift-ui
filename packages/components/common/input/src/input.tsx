@@ -1,6 +1,6 @@
 import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
-import type { ElementType, HTMLProps, ReactNode } from "react";
 import cn from "classnames";
+import type { ElementType, HTMLProps, ReactNode } from "react";
 
 type StyleVariants<T extends string> = Record<T, string>;
 type Variant = "primary" | "outline" | "secondary";
@@ -46,7 +46,7 @@ export const Input: React.FC<InputProps> = ({
 }) => {
   const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
 
-  const commonStyle = "w-full rounded px-4 py-2 leading-loose";
+  const commonStyle = "w-full rounded-global px-4 py-2 leading-loose";
   const primary = `${commonStyle}`;
   const secondary = `${commonStyle} bg-gray-100 p-4 text-xs outline-none`;
   const outline = `${commonStyle} text-xs py-3 border border-slate-300`;

@@ -1,19 +1,19 @@
-import React from "react";
 import { Button } from "@stackshift-ui/button";
-import { Heading } from "@stackshift-ui/heading";
-import { Input } from "@stackshift-ui/input";
-import { Text } from "@stackshift-ui/text";
-import { Link } from "@stackshift-ui/link";
-import { Image } from "@stackshift-ui/image";
-import { Form } from "@stackshift-ui/form";
-import { FormField } from "@stackshift-ui/form-field";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
+import { Form } from "@stackshift-ui/form";
+import { FormField } from "@stackshift-ui/form-field";
+import { Heading } from "@stackshift-ui/heading";
+import { Image } from "@stackshift-ui/image";
+import { Input } from "@stackshift-ui/input";
+import { Link } from "@stackshift-ui/link";
+import { Section } from "@stackshift-ui/section";
+import { Text } from "@stackshift-ui/text";
+import React from "react";
 
-import { logoLink, thankYouPageLink } from "./helper";
-import { Form as iForm, LabeledRoute, LabeledRouteWithKey, Logo } from "./types";
 import { SignUpFormProps } from ".";
+import { logoLink, thankYouPageLink } from "./helper";
+import { LabeledRoute, LabeledRouteWithKey, Logo, Form as iForm } from "./types";
 
 export default function SigninSignup_A({ logo, form, formLinks, signInLink }: SignUpFormProps) {
   return (
@@ -194,7 +194,7 @@ function PasswordField({
   setShowPassword: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   return (
-    <Flex className="relative bg-gray-100 rounded">
+    <Flex className="relative">
       <Input
         className="py-4"
         textSize="sm"

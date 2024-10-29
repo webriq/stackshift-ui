@@ -1,11 +1,11 @@
 import { Button } from "@stackshift-ui/button";
+import { Container } from "@stackshift-ui/container";
+import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
 import { Image } from "@stackshift-ui/image";
 import { Section } from "@stackshift-ui/section";
-import { Container } from "@stackshift-ui/container";
-import { Flex } from "@stackshift-ui/flex";
-import { Images, LabeledRoute } from "./types";
 import { LogoCloudProps } from ".";
+import { Images, LabeledRoute } from "./types";
 
 export default function LogoCloud_C({ title, images, button }: LogoCloudProps) {
   return (
@@ -64,7 +64,7 @@ function LogoItem({ image, alt, index }: { image?: Images; alt?: string; index: 
     <div
       className="absolute flex items-center justify-center w-24 h-24 overflow-hidden rounded-full bg-gray-50"
       style={positions[index] ?? {}}>
-      <img
+      <Image
         className="object-scale-down w-16 h-16"
         src={`${image?.image}`}
         sizes="100vw"

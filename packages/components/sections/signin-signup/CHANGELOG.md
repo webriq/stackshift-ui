@@ -1,5 +1,13 @@
 # @stackshift-ui/signin-signup
 
+## 6.0.3
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/input@6.0.3
+  - @stackshift-ui/form-field@6.0.3
+
 ## 6.0.2
 
 ### Major Changes

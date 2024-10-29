@@ -1,14 +1,14 @@
-import React from "react";
-import { Heading } from "@stackshift-ui/heading";
-import { Text } from "@stackshift-ui/text";
-import { Card } from "@stackshift-ui/card";
 import { Button } from "@stackshift-ui/button";
-import { Image } from "@stackshift-ui/image";
-import { Section } from "@stackshift-ui/section";
+import { Card } from "@stackshift-ui/card";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
-import { FeaturedItem } from "./types";
+import { Heading } from "@stackshift-ui/heading";
+import { Image } from "@stackshift-ui/image";
+import { Section } from "@stackshift-ui/section";
+import { Text } from "@stackshift-ui/text";
+import React from "react";
 import { FeaturesProps } from ".";
+import { FeaturedItem } from "./types";
 
 export default function Features_E({ featuredItems }: FeaturesProps) {
   //for image carousel
@@ -47,7 +47,7 @@ function ImageSection({ featuredItems, item }: { featuredItems?: FeaturedItem[];
   return (
     <div className="mx-auto overflow-hidden rounded-md md:max-w-xl xl:max-w-4xl">
       <Image
-        className="relative object-cover"
+        className="relative object-cover rounded-global"
         src={`${featuredItems?.[item]?.mainImage?.image}`}
         sizes="100vw"
         width={896}

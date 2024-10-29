@@ -115,7 +115,7 @@ function SocialMediaLink({ social, index }: { social?: SocialLink; index?: numbe
       href={social?.socialMediaLink}
       key={index}>
       {social?.socialMediaIcon?.image ? (
-        <img
+        <Image
           className="h-6"
           src={`${social?.socialMediaIcon?.image}`}
           width={24}

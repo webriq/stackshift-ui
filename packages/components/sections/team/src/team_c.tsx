@@ -1,13 +1,13 @@
 import { Card } from "@stackshift-ui/card";
-import { Text } from "@stackshift-ui/text";
+import { Container } from "@stackshift-ui/container";
+import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
 import { Image } from "@stackshift-ui/image";
 import { Section } from "@stackshift-ui/section";
-import { Container } from "@stackshift-ui/container";
-import { Flex } from "@stackshift-ui/flex";
-import { Team as iTeam } from "./types";
+import { Text } from "@stackshift-ui/text";
 import React from "react";
 import { MemberTextProps, TeamsProps } from ".";
+import { Team as iTeam } from "./types";
 
 export default function Team_C({ caption, title, team }: TeamsProps) {
   return (
@@ -44,7 +44,7 @@ function TeamMemberCard({ team }: { team?: iTeam[] }) {
             {member.mainImage?.image && (
               <div>
                 <Image
-                  className="mb-8 h-[345px] w-full object-cover"
+                  className="mb-8 h-[345px] w-full object-cover rounded-global"
                   sizes="100vw"
                   src={`${member?.mainImage?.image}`}
                   width={345}

@@ -1,18 +1,18 @@
-import React, { useState } from "react";
 import { Button } from "@stackshift-ui/button";
 import { Card } from "@stackshift-ui/card";
-import { Heading } from "@stackshift-ui/heading";
-import { Input } from "@stackshift-ui/input";
-import { Text } from "@stackshift-ui/text";
-import { Link } from "@stackshift-ui/link";
-import { Image } from "@stackshift-ui/image";
-import { Form } from "@stackshift-ui/form";
-import { FormField } from "@stackshift-ui/form-field";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
-import { logoLink, thankYouPageLink } from "./helper";
+import { Form } from "@stackshift-ui/form";
+import { FormField } from "@stackshift-ui/form-field";
+import { Heading } from "@stackshift-ui/heading";
+import { Image } from "@stackshift-ui/image";
+import { Input } from "@stackshift-ui/input";
+import { Link } from "@stackshift-ui/link";
+import { Section } from "@stackshift-ui/section";
+import { Text } from "@stackshift-ui/text";
+import React, { useState } from "react";
 import { SignUpFormProps } from ".";
+import { logoLink, thankYouPageLink } from "./helper";
 import { LabeledRoute, Logo, Form as iForm } from "./types";
 
 export default function SigninSignup_B({ logo, form, formLinks, signInLink }: SignUpFormProps) {
@@ -117,7 +117,7 @@ function FormFields({
       {form?.fields?.slice(2)?.map((formFields, index) => (
         <div key={index} className="my-3">
           {formFields?.type === "inputPassword" ? (
-            <div className="flex bg-gray-100 rounded">
+            <div className="flex">
               <Input
                 noLabel
                 ariaLabel={formFields?.placeholder ?? formFields?.name}
