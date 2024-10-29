@@ -152,7 +152,7 @@ function ResponsiveNavLinks({
                 link={primaryButton}
                 ariaLabel={primaryButton?.label}
                 variant="outline"
-                className="block w-full px-4 py-3 mb-3 text-xs cursor-pointer font-semibold leading-loose text-center text-gray-900 rounded-l-xl rounded-t-xl bg-secondary hover:bg-secondary/50">
+                className="block w-full px-4 py-3 mb-3 text-xs cursor-pointer font-semibold leading-loose text-center text-gray-900 rounded-global bg-secondary hover:bg-secondary/50">
                 {primaryButton?.label}
               </Button>
             ) : null}
@@ -162,7 +162,7 @@ function ResponsiveNavLinks({
                 link={secondaryButton}
                 ariaLabel={secondaryButton?.label}
                 variant="solid"
-                className={`block w-full px-4 py-3 mb-2 cursor-pointer leading-loose text-xs text-center font-semibold bg-primary hover:bg-primary-foreground rounded-l-xl rounded-t-xl`}>
+                className={`block w-full px-4 py-3 mb-2 cursor-pointer leading-loose text-xs text-center font-semibold bg-primary hover:bg-primary-foreground rounded-global`}>
                 {secondaryButton?.label}
               </Button>
             ) : null}
@@ -212,7 +212,7 @@ function Buttons({
           link={primaryButton}
           ariaLabel={primaryButton?.label}
           variant="outline"
-          className="hidden lg:flex px-4 py-3 mb-2 leading-loose text-center font-semibold text-gray-900 rounded-l-xl rounded-t-xl bg-secondary hover:bg-secondary/50">
+          className="hidden lg:flex px-4 py-3 mb-2 leading-loose text-center font-semibold text-gray-900 rounded-global bg-secondary hover:bg-secondary/50">
           {primaryButton?.label}
         </Button>
       ) : null}
@@ -222,7 +222,7 @@ function Buttons({
           link={secondaryButton}
           ariaLabel={secondaryButton?.label}
           variant="solid"
-          className="hidden lg:flex px-4 py-3 mb-2 leading-loose text-center font-semibold text-white bg-primary hover:bg-primary-foreground rounded-l-xl rounded-t-xl">
+          className="hidden lg:flex px-4 py-3 mb-2 leading-loose text-center font-semibold text-white bg-primary hover:bg-primary-foreground rounded-global">
           {secondaryButton?.label}
         </Button>
       ) : null}

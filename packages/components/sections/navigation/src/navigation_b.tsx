@@ -129,7 +129,7 @@ function Buttons({
           as="link"
           ariaLabel={primaryButton?.label}
           link={primaryButton}
-          className="hidden lg:inline-block px-4 py-3 mb-2 text-gray-900 lg:ml-auto lg:mr-3 font-semibold rounded-l-xl rounded-t-xl bg-secondary hover:bg-secondary/50">
+          className="hidden lg:inline-block px-4 py-3 mb-2 text-gray-900 lg:ml-auto lg:mr-3 font-semibold rounded-global bg-secondary hover:bg-secondary/50">
           {primaryButton?.label}
         </Button>
       )}
@@ -138,7 +138,7 @@ function Buttons({
           as="link"
           ariaLabel={secondaryButton?.label}
           link={secondaryButton}
-          className="hidden lg:inline-block px-4 py-3 mb-2 leading-loose text-center text-white font-semibold bg-primary hover:bg-primary-foreground rounded-l-xl rounded-t-xl">
+          className="hidden lg:inline-block px-4 py-3 mb-2 leading-loose text-center text-white font-semibold bg-primary hover:bg-primary-foreground rounded-global">
           {secondaryButton?.label}
         </Button>
       )}
@@ -223,7 +223,7 @@ function ResponsiveNavLinks({
                   as="link"
                   ariaLabel={primaryButton?.label}
                   link={primaryButton}
-                  className="block px-4 py-3 mb-2 text-gray-900 text-center lg:ml-auto lg:mr-3 font-semibold rounded-l-xl rounded-t-xl bg-secondary hover:bg-secondary/50">
+                  className="block px-4 py-3 mb-2 text-gray-900 text-center lg:ml-auto lg:mr-3 font-semibold rounded-global bg-secondary hover:bg-secondary/50">
                   {primaryButton?.label}
                 </Button>
               )}
@@ -232,7 +232,7 @@ function ResponsiveNavLinks({
                   as="link"
                   ariaLabel={secondaryButton?.label}
                   link={secondaryButton}
-                  className="block px-4 py-3 mb-2 leading-loose text-center text-white font-semibold bg-primary hover:bg-primary-foreground rounded-l-xl rounded-t-xl">
+                  className="block px-4 py-3 mb-2 leading-loose text-center text-white font-semibold bg-primary hover:bg-primary-foreground rounded-global">
                   {secondaryButton?.label}
                 </Button>
               )}

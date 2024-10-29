@@ -1,15 +1,15 @@
 import { Button } from "@stackshift-ui/button";
+import { Container } from "@stackshift-ui/container";
+import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
-import { Text } from "@stackshift-ui/text";
 import { Image } from "@stackshift-ui/image";
 import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
-import { Container } from "@stackshift-ui/container";
-import { Flex } from "@stackshift-ui/flex";
+import { Text } from "@stackshift-ui/text";
 import { format } from "date-fns";
 
-import { BlogPost, Category, LabeledRoute } from "./types";
 import { BlogProps } from ".";
+import { BlogPost, Category, LabeledRoute } from "./types";
 
 export default function Blog_A({ subtitle, title, posts, primaryButton }: BlogProps) {
   return (
@@ -72,13 +72,13 @@ function BlogItem({ post }: { post?: BlogPost }) {
     <div className="relative w-full h-64 rounded">
       {post?.mainImage ? (
         <Image
-          className="relative object-cover w-full h-full overflow-hidden rounded"
+          className="relative object-cover w-full h-full overflow-hidden rounded-global"
           src={`${post?.mainImage}`}
           alt={`blog-variantA-image`}
           sizes="(min-width: 1540px) 740px, (min-width: 1280px) 612px, (min-width: 1040px) 484px, (min-width: 780px) 736px, (min-width: 680px) 608px, calc(94.44vw - 15px)"
         />
       ) : null}
-      <div className="absolute inset-0 bg-gray-900 rounded opacity-75" />
+      <div className="absolute inset-0 bg-gray-900 rounded-global opacity-75" />
       <div className="absolute inset-0 flex flex-col items-start p-6">
         {post?.categories ? (
           <div className="absolute flex left-5 top-5">

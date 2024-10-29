@@ -1,15 +1,15 @@
-import React from "react";
 import { Button } from "@stackshift-ui/button";
-import { Heading } from "@stackshift-ui/heading";
-import { Text } from "@stackshift-ui/text";
-import { Image } from "@stackshift-ui/image";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
+import { Heading } from "@stackshift-ui/heading";
+import { Image } from "@stackshift-ui/image";
+import { Section } from "@stackshift-ui/section";
+import { Text } from "@stackshift-ui/text";
+import React from "react";
 
-import { Content, LabeledRoute, PortfoliosWithCategories } from "./types";
-import { useMediaQuery } from "./helper";
 import { PortfolioProps } from ".";
+import { useMediaQuery } from "./helper";
+import { Content, LabeledRoute, PortfoliosWithCategories } from "./types";
 
 export default function Portfolio_D({
   caption,
@@ -128,7 +128,7 @@ function ProjectItem({ size, content }: { size?: string | null; content?: Conten
   return (
     <div className={`w-full px-4 mb-8 ${size === "lg" ? "w-full" : "lg:w-1/2"}`}>
       {content?.mainImage?.image && (
-        <div className="relative overflow-hidden rounded">
+        <div className="relative overflow-hidden rounded-global">
           <Image
             className={`object-cover w-full ${size === "lg" ? "h-128" : "h-64"}`}
             src={content?.mainImage?.image}

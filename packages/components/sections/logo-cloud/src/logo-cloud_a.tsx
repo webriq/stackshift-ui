@@ -1,11 +1,11 @@
-import React from "react";
+import { Container } from "@stackshift-ui/container";
+import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
 import { Image } from "@stackshift-ui/image";
 import { Section } from "@stackshift-ui/section";
-import { Container } from "@stackshift-ui/container";
-import { Flex } from "@stackshift-ui/flex";
-import { Images } from "./types";
+import React from "react";
 import { LogoCloudProps } from ".";
+import { Images } from "./types";
 
 export default function LogoCloud_A({ title, images }: LogoCloudProps) {
   return (
@@ -41,7 +41,7 @@ function LogoCloudImages({ images }: { images?: Images[] }) {
             <Flex
               align="center"
               justify="center"
-              className="mx-auto  h-[192px] w-[192px] rounded bg-white">
+              className="mx-auto  h-[192px] w-[192px] rounded-global bg-white">
               <Image
                 className="object-scale-down"
                 src={`${image?.image}`}

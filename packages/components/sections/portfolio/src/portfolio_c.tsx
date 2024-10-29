@@ -1,13 +1,13 @@
 import { Button } from "@stackshift-ui/button";
-import { Heading } from "@stackshift-ui/heading";
-import { Text } from "@stackshift-ui/text";
-import { Image } from "@stackshift-ui/image";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
+import { Heading } from "@stackshift-ui/heading";
+import { Image } from "@stackshift-ui/image";
+import { Section } from "@stackshift-ui/section";
+import { Text } from "@stackshift-ui/text";
 
-import { Content } from "./types";
 import { PortfolioProps } from ".";
+import { Content } from "./types";
 
 export default function Portfolio_C({
   caption,
@@ -67,7 +67,9 @@ function ProjectItem({ content }: { content: Content }) {
   return (
     <div className="relative w-full px-4 mb-8 md:w-1/2 lg:w-1/3">
       {content?.mainImage?.image && (
-        <div className="h-full overflow-hidden bg-white rounded" style={{ maxHeight: "600px" }}>
+        <div
+          className="h-full overflow-hidden bg-white rounded-global"
+          style={{ maxHeight: "600px" }}>
           <Image
             className="object-cover w-full h-80"
             src={content?.mainImage?.image}

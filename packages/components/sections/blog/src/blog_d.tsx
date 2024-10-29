@@ -140,7 +140,7 @@ function SearchInput({
       <Input
         type="text"
         aria-label="Search, find any question you want to ask..."
-        className="w-full bg-white rounded-l-lg font-heading focus:border-gray-500 focus:outline-none"
+        className="w-full bg-white rounded-global font-heading focus:border-gray-500 focus:outline-none"
         placeholder="Search posts..."
         onChange={handleSearchChange}
       />
@@ -148,7 +148,7 @@ function SearchInput({
         as="button"
         variant="unstyled"
         ariaLabel="Search button"
-        className="absolute right-0 top-0 h-full px-3 bg-white rounded-r-lg text-primary flex items-center">
+        className="absolute right-0 top-0 h-full px-3 bg-white rounded-global text-primary flex items-center">
         <svg
           className="w-6 h-6"
           fill="none"
@@ -177,7 +177,7 @@ function CategoryTab({
   setActiveTab: (category: string) => void;
 }) {
   return (
-    <Card className="w-full px-3 mb-8 bg-white lg:mb-0 lg:w-1/4" borderRadius="lg">
+    <Card className="w-full px-3 mb-8 bg-white lg:mb-0 lg:w-1/4" borderRadius="global">
       {categories && (
         <React.Fragment>
           <Heading
@@ -263,7 +263,7 @@ function PostItem({ post }: { post?: BlogPost }) {
   if (!post) return null;
   return (
     <Flex wrap className="mb-8 lg:mb-6 bg-white shadow rounded-lg">
-      <div className="w-full h-fullmb-4 lg:mb-0 lg:w-1/4">
+      <div className="w-full h-full mb-4 lg:mb-0 lg:w-1/4">
         <Image
           className="object-cover w-full h-full overflow-hidden rounded"
           src={`${post?.mainImage}`}
