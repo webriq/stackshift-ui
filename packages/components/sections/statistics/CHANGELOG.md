@@ -1,5 +1,11 @@
 # @stackshift-ui/statistics
 
+## 6.0.3
+
+### Patch Changes
+
+- updated index.tsx props adding || operator
+
 ## 6.0.2
 
 ### Major Changes

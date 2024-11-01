@@ -1,5 +1,25 @@
 # @stackshift-ui/faqs
 
+## 6.0.4
+
+### Patch Changes
+
+- updated index.tsx props adding || operator
+
+## 6.0.4
+
+### Patch Changes
+
+- updated index.tsx props adding || operator
+
+## 6.0.3
+
+### Patch Changes
+
+- update component border-global
+- Updated dependencies
+  - @stackshift-ui/input@6.0.3
+
 ## 6.0.2
 
 ### Major Changes

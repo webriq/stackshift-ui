@@ -1,5 +1,5 @@
 import { lazy } from "react";
-import { SectionsProps, BlogPost, LabeledRoute } from "./types";
+import { BlogPost, LabeledRoute, SectionsProps } from "./types";
 
 const Variants = {
   variant_a: lazy(() => import("./blog_a")),
@@ -23,7 +23,7 @@ export const Blog: React.FC<SectionsProps> = ({ data }) => {
   const props = {
     subtitle: data?.variants?.subtitle ?? undefined,
     title: data?.variants?.title ?? undefined,
-    posts: data?.variants?.posts ?? undefined,
+    posts: (data?.variants?.posts || data?.variants?.blogPosts) ?? undefined,
     primaryButton: data?.variants?.primaryButton ?? undefined,
   };
   return Variant ? <Variant {...props} /> : null;

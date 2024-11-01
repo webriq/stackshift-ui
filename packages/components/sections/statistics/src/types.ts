@@ -246,6 +246,7 @@ export interface Variants {
   youtubeLink?: string | null;
   banner?: any;
   stats?: StatItems[] | null;
+  statItems?: StatItems[] | null;
   teams?: Team[] | null;
   testimonials?: Testimonial[] | null;
   selectStripeAccount?: string;

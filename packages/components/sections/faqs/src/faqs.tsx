@@ -1,5 +1,5 @@
 import { lazy } from "react";
-import { SectionsProps, AskedQuestion, FaqsWithCategory } from "./types";
+import { AskedQuestion, FaqsWithCategory, SectionsProps } from "./types";
 
 const Variants = {
   variant_a: lazy(() => import("./faqs_a")),
@@ -23,7 +23,7 @@ export const Faqs: React.FC<SectionsProps> = ({ data }) => {
   const props = {
     subtitle: data?.variants?.subtitle ?? undefined,
     title: data?.variants?.title ?? undefined,
-    faqs: data?.variants?.faqs ?? undefined,
+    faqs: (data?.variants?.faqs || data?.variants?.askedQuestions) ?? undefined,
     faqsWithCategories: data?.variants?.faqsWithCategories ?? undefined,
   };
 

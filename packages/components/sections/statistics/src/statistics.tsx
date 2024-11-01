@@ -18,7 +18,7 @@ export const Statistics: React.FC<SectionsProps> = ({ data }) => {
   const Variant = variant && Variants[variant as keyof typeof Variants];
 
   const props = {
-    stats: data?.variants?.stats ?? undefined,
+    stats: (data?.variants?.stats || data?.variants?.statItems) ?? undefined,
   };
 
   return Variant ? <Variant {...props} /> : null;

@@ -216,6 +216,7 @@ export interface Variants {
   signinLink?: LabeledRoute | null;
   tags?: string[] | null;
   posts?: BlogPost[] | null;
+  blogPosts?: BlogPost[] | null;
   blogsPerPage?: number | null;
   form?: Form | null;
   collections?: Collection | null;

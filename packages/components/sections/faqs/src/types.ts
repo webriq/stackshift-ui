@@ -236,6 +236,7 @@ export interface Variants {
   declineButtonLabel?: string | null;
   faqsWithCategories?: FaqsWithCategory[] | null;
   faqs?: AskedQuestion[] | null;
+  askedQuestions?: AskedQuestion[] | null;
   arrayOfImageTitleAndText?: ArrayOfImageTitleAndText[] | null;
   description?: string | null;
   featuredItems?: FeaturedItem[] | null;
