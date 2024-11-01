@@ -87,7 +87,7 @@ function PromoImage({ src, alt, positionClass }: PromoImageProps) {
   if (!src) return null;
 
   return (
-    <img
+    <Image
       className={`absolute object-contain h-80 rounded-t-2xl ${positionClass}`}
       src={src}
       sizes="218px"
@@ -131,7 +131,7 @@ function MobileImageView({ image, alt }: { image: any; alt: string }) {
 
   return (
     <div className="object-contain w-1/2 mx-auto sm:hidden">
-      <img
+      <Image
         className="object-contain w-full h-full"
         src={image}
         sizes="(min-width: 520px) 224px, 45vw"

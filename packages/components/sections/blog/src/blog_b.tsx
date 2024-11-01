@@ -1,15 +1,15 @@
 import { Button } from "@stackshift-ui/button";
+import { Container } from "@stackshift-ui/container";
+import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
-import { Text } from "@stackshift-ui/text";
 import { Image } from "@stackshift-ui/image";
 import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
-import { Container } from "@stackshift-ui/container";
-import { Flex } from "@stackshift-ui/flex";
+import { Text } from "@stackshift-ui/text";
 import { format } from "date-fns";
-import { BlogPost, LabeledRoute } from "./types";
-import { useMediaQuery } from "./hooks/useMediaQuery";
 import { BlogProps } from ".";
+import { useMediaQuery } from "./hooks/useMediaQuery";
+import { BlogPost, LabeledRoute } from "./types";
 
 export default function Blog_B({ subtitle, title, posts, primaryButton }: BlogProps) {
   const blogsPerPage = 5;
@@ -70,7 +70,7 @@ function BlogItem({ post, size }: { post: BlogPost; size?: string }) {
   const breakpoints = useMediaQuery("1024");
 
   return (
-    <div className="overflow-hidden rounded shadow">
+    <div className="overflow-hidden rounded-global shadow">
       {post?.mainImage ? (
         <ImageContainer post={post} size={size} breakpoints={breakpoints} />
       ) : null}
@@ -118,7 +118,7 @@ function ImageContainer({
     <>
       {breakpoints ? (
         <Image
-          className="object-cover w-full overflow-hidden rounded-t"
+          className="object-cover w-full overflow-hidden"
           src={`${post.mainImage}`}
           sizes="100vw"
           style={{ width: "100%", height: "auto", objectFit: "cover" }}
@@ -129,7 +129,7 @@ function ImageContainer({
       ) : (
         <div className={`${size === "lg" ? "h-[44.5rem]" : "h-[12.5rem]"}`}>
           <Image
-            className="object-cover w-full overflow-hidden rounded-t"
+            className="object-cover w-full overflow-hidden rounded-t-global"
             src={`${post.mainImage}`}
             sizes="100vw"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}

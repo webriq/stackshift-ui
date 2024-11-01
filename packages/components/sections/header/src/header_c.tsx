@@ -76,7 +76,7 @@ function Buttons({
           as="link"
           ariaLabel={secondaryButton?.label}
           link={secondaryButton}
-          className="bg-secondary hover:bg-secondary/50 inline-block rounded-l-xl rounded-t-xl font-bold transition duration-200 px-3 py-4">
+          className="bg-secondary hover:bg-secondary/50 inline-block rounded-global font-bold transition duration-200 px-3 py-4">
           {secondaryButton?.label}
         </Button>
       )}

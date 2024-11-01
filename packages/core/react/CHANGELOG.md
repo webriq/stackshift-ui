@@ -44,6 +44,41 @@
 - Updated dependencies
   - @stackshift-ui/header@6.0.3
 
+## 6.0.5
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/logo-cloud@6.0.3
+  - @stackshift-ui/navigation@6.0.3
+  - @stackshift-ui/portfolio@6.0.3
+  - @stackshift-ui/features@6.0.3
+  - @stackshift-ui/contact@6.0.3
+  - @stackshift-ui/footer@6.0.3
+  - @stackshift-ui/faqs@6.0.3
+  - @stackshift-ui/team@6.0.3
+  - @stackshift-ui/input@6.0.3
+  - @stackshift-ui/form-field@6.0.3
+  - @stackshift-ui/blog@6.0.4
+  - @stackshift-ui/call-to-action@6.0.3
+  - @stackshift-ui/newsletter@6.0.3
+  - @stackshift-ui/signin-signup@6.0.3
+  - @stackshift-ui/header@6.0.4
+
+## 6.0.4
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/blog@6.0.3
+
+## 6.0.3
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/header@6.0.3
+
 ## 6.0.2
 
 ### Major Changes

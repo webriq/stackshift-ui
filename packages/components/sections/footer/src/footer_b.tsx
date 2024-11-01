@@ -137,7 +137,7 @@ function SocialMediaLink({ social }: { social?: SocialLink }) {
       href={social?.socialMediaLink}
       key={social?._key}>
       {social?.socialMediaIcon?.image ? (
-        <img
+        <Image
           className="h-6"
           src={`${social?.socialMediaIcon?.image}`}
           width={24}

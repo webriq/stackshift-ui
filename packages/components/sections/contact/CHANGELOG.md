@@ -1,5 +1,12 @@
 # @stackshift-ui/contact
 
+## 6.0.3
+
+### Patch Changes
+
+- update component border-global
+  - @stackshift-ui/form-field@6.0.3
+
 ## 6.0.2
 
 ### Major Changes

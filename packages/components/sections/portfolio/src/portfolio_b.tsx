@@ -1,14 +1,14 @@
-import React from "react";
 import { Button } from "@stackshift-ui/button";
-import { Heading } from "@stackshift-ui/heading";
-import { Text } from "@stackshift-ui/text";
-import { Image } from "@stackshift-ui/image";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
+import { Heading } from "@stackshift-ui/heading";
+import { Image } from "@stackshift-ui/image";
+import { Section } from "@stackshift-ui/section";
+import { Text } from "@stackshift-ui/text";
+import React from "react";
 
-import { Content } from "./types";
 import { PortfolioProps } from ".";
+import { Content } from "./types";
 
 export default function Portfolio_B({
   caption,
@@ -67,7 +67,7 @@ function CaptionAndTitleText({
 function ProjectItem({ content }: { content: Content }) {
   return (
     <div className="w-full px-4 mb-4 md:w-1/2 lg:w-1/3">
-      <div className="relative mx-auto overflow-hidden rounded md:mb-5">
+      <div className="relative mx-auto overflow-hidden rounded-global md:mb-5">
         {content?.mainImage?.image && (
           <Image
             className="object-cover w-full h-80"

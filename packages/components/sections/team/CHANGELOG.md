@@ -1,5 +1,11 @@
 # @stackshift-ui/team
 
+## 6.0.3
+
+### Patch Changes
+
+- update component border-global
+
 ## 6.0.2
 
 ### Major Changes

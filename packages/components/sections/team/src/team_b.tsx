@@ -1,13 +1,13 @@
-import React from "react";
-import { Card } from "@stackshift-ui/card";
 import { Button } from "@stackshift-ui/button";
-import { Text } from "@stackshift-ui/text";
-import { Image } from "@stackshift-ui/image";
-import { Section } from "@stackshift-ui/section";
+import { Card } from "@stackshift-ui/card";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
-import { Team as iTeam } from "./types";
+import { Image } from "@stackshift-ui/image";
+import { Section } from "@stackshift-ui/section";
+import { Text } from "@stackshift-ui/text";
+import React from "react";
 import { MemberTextProps, TeamsProps } from ".";
+import { Team as iTeam } from "./types";
 
 export default function Team_B({ team }: TeamsProps) {
   const [activeTab, setActiveTab] = React.useState<string | undefined>(team?.[0]?.name);
@@ -96,7 +96,7 @@ function TeamMemberCard({ member }: { member?: iTeam }) {
     <Card className="flex p-6 bg-white">
       {member.mainImage?.image && (
         <Image
-          className="object-cover overflow-hidden rounded-lg"
+          className="object-cover overflow-hidden rounded-global"
           src={`${member.mainImage.image}`}
           sizes="100vw"
           width={329}

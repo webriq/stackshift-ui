@@ -1,14 +1,14 @@
-import React from "react";
 import { Button } from "@stackshift-ui/button";
-import { Heading } from "@stackshift-ui/heading";
-import { Text } from "@stackshift-ui/text";
-import { Image } from "@stackshift-ui/image";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
+import { Heading } from "@stackshift-ui/heading";
+import { Image } from "@stackshift-ui/image";
+import { Section } from "@stackshift-ui/section";
+import { Text } from "@stackshift-ui/text";
+import React from "react";
 
-import { Content, LabeledRoute, PortfoliosWithCategories } from "./types";
 import { PortfolioProps } from ".";
+import { Content, LabeledRoute, PortfoliosWithCategories } from "./types";
 
 export default function Portfolio_A({
   caption,
@@ -116,7 +116,7 @@ function PortfolioContent({
     <Flex wrap className="mb-8">
       {portfolios?.slice(0, portfolioLength)?.map((content, index: number) => (
         <Flex className="w-full space-x-5 px-4 mb-8 sm:w-1/2 lg:w-1/4" key={content?._key}>
-          <div className="relative mx-auto h-[256px] w-[332px] overflow-hidden rounded-lg">
+          <div className="relative mx-auto h-[256px] w-[332px] overflow-hidden rounded-global">
             {content?.mainImage?.image && (
               <Image
                 className="object-cover w-full h-full"

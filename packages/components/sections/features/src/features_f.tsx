@@ -1,12 +1,12 @@
-import { Heading } from "@stackshift-ui/heading";
-import { Text } from "@stackshift-ui/text";
 import { Button } from "@stackshift-ui/button";
-import { Image } from "@stackshift-ui/image";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
-import { LabeledRoute } from "./types";
+import { Heading } from "@stackshift-ui/heading";
+import { Image } from "@stackshift-ui/image";
+import { Section } from "@stackshift-ui/section";
+import { Text } from "@stackshift-ui/text";
 import { FeaturesProps } from ".";
+import { LabeledRoute } from "./types";
 
 export default function Features_F({
   caption,
@@ -81,9 +81,9 @@ function ImageGallery({ images }: { images?: any[] }) {
     className?: string,
   ) {
     return (
-      <div className={`overflow-hidden rounded ${className}`}>
+      <div className={`overflow-hidden ${className}`}>
         <Image
-          className="object-cover w-full h-auto"
+          className="object-cover w-full h-auto rounded-global"
           src={image}
           sizes="100vw"
           width={width}

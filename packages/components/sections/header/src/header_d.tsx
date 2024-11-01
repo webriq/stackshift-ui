@@ -1,10 +1,11 @@
-import React from "react";
-import { Text } from "@stackshift-ui/text";
 import { Button } from "@stackshift-ui/button";
-import { Heading } from "@stackshift-ui/heading";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
+import { Heading } from "@stackshift-ui/heading";
+import { Image } from "@stackshift-ui/image";
+import { Section } from "@stackshift-ui/section";
+import { Text } from "@stackshift-ui/text";
+import React from "react";
 import { ButtonProps, HeaderProps } from ".";
 
 export default function Header_D({
@@ -66,7 +67,7 @@ function Buttons({
           link={primaryButton}
           ariaLabel={primaryButton?.ariaLabel ?? primaryButton?.label}
           variant="solid"
-          className="bg-primary hover:bg-primary/50 px-6 py-3 text-white">
+          className="bg-primary hover:bg-primary/50 rounded-global px-6 py-3 text-white">
           {primaryButton.label}
         </Button>
       ) : null}
@@ -76,7 +77,7 @@ function Buttons({
           link={secondaryButton}
           ariaLabel={secondaryButton.ariaLabel ?? secondaryButton?.label}
           variant="solid"
-          className="bg-secondary hover:bg-secondary/50 px-6 py-3">
+          className="bg-secondary hover:bg-secondary/50 rounded-global px-6 py-3">
           {secondaryButton.label}
         </Button>
       ) : null}
@@ -96,8 +97,9 @@ function MainImage({ mainImage }: MainImageProps) {
 
   return (
     <div className="w-full h-full">
-      <img
+      <Image
         alt={mainImage.alt ?? "header-main-image"}
+        className="rounded-global"
         height={700}
         sizes="100vw"
         src={`${mainImage?.image}`}

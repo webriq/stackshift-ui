@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import { Heading } from "@stackshift-ui/heading";
 import { Button } from "@stackshift-ui/button";
-import { Text } from "@stackshift-ui/text";
-import { Input } from "@stackshift-ui/input";
 import { Card } from "@stackshift-ui/card";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
-import { AskedQuestion } from "./types";
+import { Heading } from "@stackshift-ui/heading";
+import { Input } from "@stackshift-ui/input";
+import { Section } from "@stackshift-ui/section";
+import { Text } from "@stackshift-ui/text";
+import React, { useState } from "react";
 import { FAQProps } from ".";
+import { AskedQuestion } from "./types";
 
 export default function Faqs_A({ subtitle, title, faqs }: FAQProps) {
   const [show, setShow] = useState(false);
@@ -100,7 +100,7 @@ function SearchBar({
     <Flex justify="center" className="relative">
       <Input
         aria-label="Search, find any question you want to ask..."
-        className="p-4 text-xs bg-white rounded-lg font-heading focus:border-gray-500 focus:outline-none"
+        className="p-4 text-xs bg-white font-heading focus:border-gray-500 focus:outline-none"
         placeholder="Search, find any question you want to ask..."
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           setSearchTerm(e.target.value.toLowerCase())

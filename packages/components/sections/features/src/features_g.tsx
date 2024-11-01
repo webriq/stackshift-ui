@@ -1,10 +1,10 @@
-import React from "react";
-import { Heading } from "@stackshift-ui/heading";
-import { Text } from "@stackshift-ui/text";
-import { Image } from "@stackshift-ui/image";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
+import { Heading } from "@stackshift-ui/heading";
+import { Image } from "@stackshift-ui/image";
+import { Section } from "@stackshift-ui/section";
+import { Text } from "@stackshift-ui/text";
+import React from "react";
 import { FeaturesProps } from ".";
 
 export default function Features_G({ caption, title, description, images, tags }: FeaturesProps) {
@@ -99,9 +99,9 @@ function ImageGallery({ images }: { images?: any[] }) {
     className?: string,
   ) {
     return (
-      <div className={`overflow-hidden rounded ${className}`}>
+      <div className={`overflow-hidden ${className}`}>
         <Image
-          className="object-cover w-full h-auto"
+          className="object-cover w-full h-auto rounded-global"
           src={image}
           sizes="100vw"
           width={width}
