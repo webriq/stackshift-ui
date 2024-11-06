@@ -17,7 +17,8 @@
     "next:pages": "turbo run dev --filter @apps/storybook",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "changeset publish"
+    "release": "changeset publish",
+    "generate": "plop"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.9",
