@@ -1,5 +1,14 @@
 # @stackshift-ui/swiper-button
 
+## 6.0.3
+
+### Patch Changes
+
+- Update package.json files to include src
+- Updated dependencies
+  - @stackshift-ui/button@6.0.3
+  - @stackshift-ui/system@6.0.3
+
 ## 6.0.2
 
 ### Major Changes

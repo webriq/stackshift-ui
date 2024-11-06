@@ -1,5 +1,23 @@
 # @stackshift-ui/footer
 
+## 6.0.4
+
+### Patch Changes
+
+- Update package.json files to include src
+- Updated dependencies
+  - @stackshift-ui/social-icons@6.0.3
+  - @stackshift-ui/container@6.0.3
+  - @stackshift-ui/grid-item@6.0.3
+  - @stackshift-ui/section@6.0.3
+  - @stackshift-ui/button@6.0.3
+  - @stackshift-ui/image@6.0.3
+  - @stackshift-ui/link@6.0.3
+  - @stackshift-ui/text@6.0.3
+  - @stackshift-ui/flex@6.0.3
+  - @stackshift-ui/grid@6.0.3
+  - @stackshift-ui/system@6.0.3
+
 ## 6.0.3
 
 ### Patch Changes

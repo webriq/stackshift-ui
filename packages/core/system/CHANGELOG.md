@@ -1,5 +1,11 @@
 # @stackshift-ui/system
 
+## 6.0.3
+
+### Patch Changes
+
+- Update package.json files to include src
+
 ## 6.0.2
 
 ### Major Changes

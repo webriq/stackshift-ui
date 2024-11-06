@@ -1,5 +1,24 @@
 # @stackshift-ui/blog
 
+## 6.0.6
+
+### Patch Changes
+
+- Update package.json files to include src
+- Updated dependencies
+  - @stackshift-ui/container@6.0.3
+  - @stackshift-ui/heading@6.0.3
+  - @stackshift-ui/section@6.0.3
+  - @stackshift-ui/button@6.0.3
+  - @stackshift-ui/badge@6.0.3
+  - @stackshift-ui/image@6.0.3
+  - @stackshift-ui/input@6.0.4
+  - @stackshift-ui/card@6.0.3
+  - @stackshift-ui/link@6.0.3
+  - @stackshift-ui/text@6.0.3
+  - @stackshift-ui/flex@6.0.3
+  - @stackshift-ui/system@6.0.3
+
 ## 6.0.5
 
 ### Patch Changes
