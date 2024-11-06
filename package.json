@@ -24,6 +24,7 @@
     "@changesets/cli": "^2.27.9",
     "@types/node": "^22.7.5",
     "@stackshift-ui/typescript-config": "workspace:*",
+    "@stackshift-ui/app-promo": "workspace:*",
     "enquirer": "^2.4.1",
     "plop": "^4.0.1",
     "prettier": "^3.3.3",
