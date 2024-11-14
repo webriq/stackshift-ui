@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import { Features } from "@stackshift-ui/react";
+import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Features> = {
   title: "Components/Features",
@@ -21,11 +21,14 @@ export const VariantA: StoryObj<typeof Features> = {
       variants: {
         caption: "Dolor sit amet consectutar",
         title: "Build & Launch without problems",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.",
         arrayOfImageTitleAndText: [
           {
             mainImage: {
               image:
                 "https://cdn.sanity.io/images/9itgab5x/staging/97b6696849c90facc200537fd780b03d373e5212-980x830.png?fm=webp&w=96&q=75",
+              alt: "alt 1",
             },
             title: "Lorem ipsum dolor sit amet consectutar",
             plainText:
@@ -35,6 +38,7 @@ export const VariantA: StoryObj<typeof Features> = {
             mainImage: {
               image:
                 "https://cdn.sanity.io/images/9itgab5x/staging/d52b2d79a8c0ff7df5bac2ab9b31e4f8b35b2d49-515x485.png?fm=webp&w=96&q=75",
+              alt: "alt 2",
             },
             title: "Ut congue nec leo eget aliquam",
             plainText:
@@ -44,6 +48,7 @@ export const VariantA: StoryObj<typeof Features> = {
             mainImage: {
               image:
                 "https://cdn.sanity.io/images/9itgab5x/staging/46503b9f97de2e422010bcde0a1e33e954bca584-981x860.png?fm=webp&w=96&q=75",
+              alt: "alt 3",
             },
             title: "Proin fringilla eleifend justo pellentesque",
             plainText:
@@ -53,6 +58,7 @@ export const VariantA: StoryObj<typeof Features> = {
             mainImage: {
               image:
                 "https://cdn.sanity.io/images/9itgab5x/staging/97b6696849c90facc200537fd780b03d373e5212-980x830.png?fm=webp&w=96&q=75",
+              alt: "alt 4",
             },
             title: "Morbi sagittis ligula sit amet elit maximus",
             plainText:
@@ -84,6 +90,7 @@ export const VariantB: StoryObj<typeof Features> = {
             mainImage: {
               image:
                 "https://cdn.sanity.io/images/9itgab5x/staging/97b6696849c90facc200537fd780b03d373e5212-980x830.png?fm=webp&w=96&q=75",
+              alt: "alt 1",
             },
             title: "Lorem ipsum dolor sit amet consectutar",
             plainText:
@@ -93,6 +100,7 @@ export const VariantB: StoryObj<typeof Features> = {
             mainImage: {
               image:
                 "https://cdn.sanity.io/images/9itgab5x/staging/d52b2d79a8c0ff7df5bac2ab9b31e4f8b35b2d49-515x485.png?fm=webp&w=96&q=75",
+              alt: "alt 2",
             },
             title: "Ut congue nec leo eget aliquam",
             plainText:
@@ -102,6 +110,7 @@ export const VariantB: StoryObj<typeof Features> = {
             mainImage: {
               image:
                 "https://cdn.sanity.io/images/9itgab5x/staging/46503b9f97de2e422010bcde0a1e33e954bca584-981x860.png?fm=webp&w=96&q=75",
+              alt: "alt 3",
             },
             title: "Proin fringilla eleifend justo pellentesque",
             plainText:
@@ -111,6 +120,7 @@ export const VariantB: StoryObj<typeof Features> = {
             mainImage: {
               image:
                 "https://cdn.sanity.io/images/9itgab5x/staging/97b6696849c90facc200537fd780b03d373e5212-980x830.png?fm=webp&w=96&q=75",
+              alt: "alt 4",
             },
             title: "Morbi sagittis ligula sit amet elit maximus",
             plainText:
@@ -130,11 +140,14 @@ export const VariantC: StoryObj<typeof Features> = {
       variants: {
         caption: "Dolor sit amet consectutar",
         title: "Build & Launch without problems",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.",
         arrayOfImageTitleAndText: [
           {
             mainImage: {
               image:
                 "https://cdn.sanity.io/images/9itgab5x/staging/97b6696849c90facc200537fd780b03d373e5212-980x830.png?fm=webp&w=96&q=75",
+              alt: "alt text",
             },
             title: "Lorem ipsum dolor sit amet consectutar",
             plainText:
@@ -144,6 +157,7 @@ export const VariantC: StoryObj<typeof Features> = {
             mainImage: {
               image:
                 "https://cdn.sanity.io/images/9itgab5x/staging/d52b2d79a8c0ff7df5bac2ab9b31e4f8b35b2d49-515x485.png?fm=webp&w=96&q=75",
+              alt: "alt text",
             },
             title: "Ut congue nec leo eget aliquam",
             plainText:
@@ -153,6 +167,7 @@ export const VariantC: StoryObj<typeof Features> = {
             mainImage: {
               image:
                 "https://cdn.sanity.io/images/9itgab5x/staging/46503b9f97de2e422010bcde0a1e33e954bca584-981x860.png?fm=webp&w=96&q=75",
+              alt: "alt text",
             },
             title: "Proin fringilla eleifend justo pellentesque",
             plainText:
@@ -162,6 +177,7 @@ export const VariantC: StoryObj<typeof Features> = {
             mainImage: {
               image:
                 "https://cdn.sanity.io/images/9itgab5x/staging/97b6696849c90facc200537fd780b03d373e5212-980x830.png?fm=webp&w=96&q=75",
+              alt: "alt text",
             },
             title: "Morbi sagittis ligula sit amet elit maximus",
             plainText:
@@ -181,11 +197,14 @@ export const VariantD: StoryObj<typeof Features> = {
       variants: {
         caption: "Dolor sit amet consectutar",
         title: "Build & Launch without problems",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.",
         arrayOfImageTitleAndText: [
           {
             mainImage: {
               image:
                 "https://cdn.sanity.io/images/9itgab5x/staging/97b6696849c90facc200537fd780b03d373e5212-980x830.png?fm=webp&w=96&q=75",
+              alt: "alt text",
             },
             title: "Lorem ipsum dolor sit amet consectutar",
             plainText:
@@ -195,6 +214,7 @@ export const VariantD: StoryObj<typeof Features> = {
             mainImage: {
               image:
                 "https://cdn.sanity.io/images/9itgab5x/staging/d52b2d79a8c0ff7df5bac2ab9b31e4f8b35b2d49-515x485.png?fm=webp&w=96&q=75",
+              alt: "alt text",
             },
             title: "Ut congue nec leo eget aliquam",
             plainText:
@@ -204,6 +224,7 @@ export const VariantD: StoryObj<typeof Features> = {
             mainImage: {
               image:
                 "https://cdn.sanity.io/images/9itgab5x/staging/46503b9f97de2e422010bcde0a1e33e954bca584-981x860.png?fm=webp&w=96&q=75",
+              alt: "alt text",
             },
             title: "Proin fringilla eleifend justo pellentesque",
             plainText:
@@ -213,6 +234,7 @@ export const VariantD: StoryObj<typeof Features> = {
             mainImage: {
               image:
                 "https://cdn.sanity.io/images/9itgab5x/staging/97b6696849c90facc200537fd780b03d373e5212-980x830.png?fm=webp&w=96&q=75",
+              alt: "alt text",
             },
             title: "Morbi sagittis ligula sit amet elit maximus",
             plainText:
@@ -241,6 +263,7 @@ export const VariantE: StoryObj<typeof Features> = {
             mainImage: {
               image:
                 "https://cdn.sanity.io/images/9itgab5x/staging/3a1ef9b3424fabd086e3d7bdea95583ba9ea6363-1048x701.jpg?fm=webp&w=2048&q=75",
+              alt: "alt text",
             },
           },
           {
@@ -251,6 +274,7 @@ export const VariantE: StoryObj<typeof Features> = {
             mainImage: {
               image:
                 "https://cdn.sanity.io/images/9itgab5x/staging/2d9f87020c05fba5986084e4744c829844bf21b6-1050x700.jpg?fm=webp&w=1200&q=75",
+              alt: "alt text",
             },
           },
         ],
@@ -362,14 +386,17 @@ export const VariantH: StoryObj<typeof Features> = {
           {
             image:
               "https://cdn.sanity.io/images/9itgab5x/staging/1d0655534230a5cb4e08d8b7bd14b271c5317d82-634x951.jpg?fm=webp&w=2048&q=75",
+            alt: "alt text",
           },
           {
             image:
               "https://cdn.sanity.io/images/9itgab5x/staging/2d9f87020c05fba5986084e4744c829844bf21b6-1050x700.jpg?fm=webp&w=1200&q=75",
+            alt: "alt text",
           },
           {
             image:
               "https://cdn.sanity.io/images/9itgab5x/staging/881fdf41f1db63ed80d886037220b4fecc0c39b6-701x876.jpg?fm=webp&w=2048&q=75",
+            alt: "alt text",
           },
         ],
       },
