@@ -17,7 +17,7 @@ import { LabeledRoute, LabeledRouteWithKey, Logo, Form as iForm } from "./types"
 
 export default function SigninSignup_A({ logo, form, formLinks, signInLink }: SignUpFormProps) {
   return (
-    <Section className="py-10 bg-gray-50 lg:py-20">
+    <Section className="py-10 rounded-md bg-gray-50 lg:py-20">
       <Container maxWidth={576}>
         <LogoSection logo={logo} />
         <Container className="mb-6 text-center lg:mb-10">
@@ -76,7 +76,14 @@ function SignupForm({
   thankYouPage?: LabeledRoute;
 }) {
   if (!form?.fields) return null;
-  const [showPassword, setShowPassword] = React.useState(false);
+  const [showPasswords, setShowPasswords] = React.useState<{ [key: string]: boolean }>({});
+
+  const togglePasswordVisibility = (fieldName: string) => {
+    setShowPasswords(prev => ({
+      ...prev,
+      [fieldName]: !prev[fieldName],
+    }));
+  };
 
   return (
     <Form
@@ -84,7 +91,11 @@ function SignupForm({
       name="SignUp-VariantA-Form"
       className="form-signup"
       thankyouPage={thankYouPage}>
-      <FormFields form={form} showPassword={showPassword} setShowPassword={setShowPassword} />
+      <FormFields
+        form={form}
+        showPasswords={showPasswords}
+        togglePasswordVisibility={togglePasswordVisibility}
+      />
       <div>
         <div className="webriq-recaptcha" />
       </div>
@@ -107,12 +118,12 @@ function SignupForm({
 
 function FormFields({
   form,
-  showPassword,
-  setShowPassword,
+  showPasswords,
+  togglePasswordVisibility,
 }: {
   form?: iForm;
-  showPassword: boolean;
-  setShowPassword: React.Dispatch<React.SetStateAction<boolean>>;
+  showPasswords: { [key: string]: boolean };
+  togglePasswordVisibility: (fieldName: string) => void;
 }) {
   return (
     <>
@@ -140,11 +151,11 @@ function FormFields({
       </Flex>
       {form?.fields?.slice(2).map((formFields, index) => (
         <div key={index} className="my-3">
-          {formFields.type === "inputPassword" ? (
+          {formFields.type === "inputPassword" && formFields.name ? ( // Check if name exists
             <PasswordField
               formFields={formFields}
-              showPassword={showPassword}
-              setShowPassword={setShowPassword}
+              showPassword={showPasswords[formFields.name] || false}
+              togglePassword={() => togglePasswordVisibility(formFields.name!)}
             />
           ) : (
             <FormField
@@ -187,11 +198,11 @@ function SignInLink({ signInLink }: { signInLink?: LabeledRoute }) {
 function PasswordField({
   formFields,
   showPassword,
-  setShowPassword,
+  togglePassword,
 }: {
   formFields?: any;
   showPassword: boolean;
-  setShowPassword: React.Dispatch<React.SetStateAction<boolean>>;
+  togglePassword: () => void;
 }) {
   return (
     <Flex className="relative">
@@ -212,7 +223,7 @@ function PasswordField({
         ariaLabel={showPassword ? "Show password" : "Hide password"}
         className="absolute top-0 right-0 h-full p-2"
         type="button"
-        onClick={() => setShowPassword(!showPassword)}>
+        onClick={togglePassword}>
         <PasswordIcon showPassword={showPassword} />
       </Button>
     </Flex>

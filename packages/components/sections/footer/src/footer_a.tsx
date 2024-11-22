@@ -42,9 +42,8 @@ function LogoSection({ logo }: { logo?: Logo }) {
         target={logo?.linkTarget}
         rel={logo?.linkTarget === "_blank" ? "noopener noreferrer" : ""}>
         <Image
-          className="h-14"
           src={`${logo?.image}`}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          //   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           width={132}
           height={56}
           alt={logo?.alt ?? "footer-logo"}
@@ -86,7 +85,11 @@ function ContactsContainer({ contacts }: { contacts?: ContactDetails[] }) {
               Email
             </Text>
             <Text muted className="mb-5">
-              {contact?.emailInfo}
+              <a
+                href={`mailto:${contact?.emailInfo}`}
+                style={{ color: "inherit", textDecoration: "none" }}>
+                {contact?.emailInfo}
+              </a>
             </Text>
           </GridItem>
           <GridItem span={1}>
@@ -94,7 +97,11 @@ function ContactsContainer({ contacts }: { contacts?: ContactDetails[] }) {
               Number
             </Text>
             <Text muted className="mb-5">
-              {contact?.contactInfo}
+              <a
+                href={`tel:${contact?.contactInfo}`}
+                style={{ color: "inherit", textDecoration: "none" }}>
+                {contact?.contactInfo}
+              </a>
             </Text>
           </GridItem>
         </Grid>
@@ -129,7 +136,7 @@ function SocialMediaLink({ social, index }: { social?: SocialLink; index?: numbe
   return (
     <Link
       aria-label={social?.socialMedia || social?.socialMediaPlatform || ""}
-      className="inline-block p-2 mr-2 rounded bg-gray-50 hover:bg-gray-100"
+      className="inline-block p-2 mr-2 rounded"
       target="_blank"
       rel="noopener noreferrer"
       href={social?.socialMediaLink}

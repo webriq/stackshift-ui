@@ -99,7 +99,7 @@ function ImageGallery({ images }: { images?: any[] }) {
       <div className="mb-5 sm:mb-0 sm:w-1/2">
         {images?.[0]?.image && (
           <Image
-            className="object-cover overflow-hidden rounded-global"
+            className="object-cover overflow-hidden rounded-md"
             src={`${images?.[0]?.image}`}
             width={640}
             height={800}
@@ -109,7 +109,7 @@ function ImageGallery({ images }: { images?: any[] }) {
         )}
         {images?.[1]?.image && (
           <Image
-            className="object-cover mt-6 overflow-hidden rounded-global"
+            className="object-cover mt-6 overflow-hidden rounded-md"
             src={`${images?.[1]?.image}`}
             width={640}
             height={800}
@@ -120,7 +120,7 @@ function ImageGallery({ images }: { images?: any[] }) {
       </div>
       {images?.[2]?.image && (
         <Image
-          className="object-cover overflow-hidden rounded-global sm:ml-6 sm:w-1/2"
+          className="object-cover overflow-hidden rounded-md sm:ml-6 sm:w-1/2"
           src={`${images?.[2]?.image}`}
           width={640}
           height={800}

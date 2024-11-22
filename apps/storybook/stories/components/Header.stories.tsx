@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import { Header } from "@stackshift-ui/react";
+import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Header> = {
   title: "Components/Header",
@@ -166,6 +166,11 @@ export const VariantE: Story = {
             {
               name: "Password",
               placeholder: "Enter your password",
+              type: "inputPassword",
+            },
+            {
+              name: "Confirm Password",
+              placeholder: "Confirm Password",
               type: "inputPassword",
             },
           ],

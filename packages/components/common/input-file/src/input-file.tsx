@@ -56,7 +56,7 @@ export const InputFile: React.FC<InputFileProps> = ({
 
   return (
     <div
-      className={"relative rounded bg-white px-2 w-full"}
+      className={"relative rounded-global bg-white px-2 w-full"}
       data-testid={displayName?.toLowerCase()}>
       <input
         aria-label={ariaLabel ?? "Attach file"}

@@ -101,7 +101,7 @@ function ImageGallery({ images }: { images?: any[] }) {
     return (
       <div className={`overflow-hidden ${className}`}>
         <Image
-          className="object-cover w-full h-auto rounded-global"
+          className="object-cover w-full h-auto rounded-md"
           src={image}
           sizes="100vw"
           width={width}

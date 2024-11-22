@@ -1,11 +1,11 @@
 import React, { lazy } from "react";
 
 import {
-  SectionsProps,
   ArrayOfImageTitleAndText,
   FeaturedItem,
   Images,
   LabeledRoute,
+  SectionsProps,
 } from "./types";
 
 const Variants = {
@@ -48,7 +48,7 @@ export const Features: React.FC<SectionsProps> = ({ data }) => {
   const Variant = variant && Variants[variant as keyof typeof Variants];
 
   const props = {
-    caption: data?.variants?.caption ?? undefined,
+    caption: data?.variants?.subtitle ?? undefined,
     title: data?.variants?.title ?? undefined,
     description: data?.variants?.description ?? undefined,
     features: data?.variants?.arrayOfImageTitleAndText ?? undefined,

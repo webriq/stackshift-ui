@@ -140,7 +140,7 @@ function SearchInput({
       <Input
         type="text"
         aria-label="Search, find any question you want to ask..."
-        className="w-full bg-white rounded-global font-heading focus:border-gray-500 focus:outline-none"
+        className="w-full bg-white border rounded-global font-heading focus:border-gray-500 focus:outline-none"
         placeholder="Search posts..."
         onChange={handleSearchChange}
       />
@@ -148,7 +148,7 @@ function SearchInput({
         as="button"
         variant="unstyled"
         ariaLabel="Search button"
-        className="absolute right-0 top-0 h-full px-3 bg-white rounded-global text-primary flex items-center">
+        className="absolute right-0 top-0 h-full px-3 bg-white border-r rounded-global text-primary flex items-center">
         <svg
           className="w-6 h-6"
           fill="none"
@@ -177,7 +177,7 @@ function CategoryTab({
   setActiveTab: (category: string) => void;
 }) {
   return (
-    <Card className="w-full px-3 mb-8 bg-white lg:mb-0 lg:w-1/4" borderRadius="global">
+    <Card className="w-full px-3 mb-8 bg-white lg:mb-0 lg:w-1/4" borderRadius="md">
       {categories && (
         <React.Fragment>
           <Heading
@@ -261,6 +261,7 @@ function PostItems({
 
 function PostItem({ post }: { post?: BlogPost }) {
   if (!post) return null;
+
   return (
     <Flex wrap className="mb-8 lg:mb-6 bg-white shadow rounded-lg">
       <div className="w-full h-full mb-4 lg:mb-0 lg:w-1/4">
@@ -270,7 +271,7 @@ function PostItem({ post }: { post?: BlogPost }) {
           sizes="100vw"
           width={188}
           height={129}
-          alt={`blog-variantD-image-`}
+          alt={post?.alt ?? `blog-variantD-image-${post?.title}`}
         />
       </div>
       <div className="w-full px-3 py-2 lg:w-3/4">
@@ -336,7 +337,7 @@ function Pagination({ blogsPerPage, totalBlogs, paginate, currentPage }: Paginat
               currentPage === number
                 ? "bg-secondary-foreground text-gray-500"
                 : "bg-white hover:bg-secondary-foreground hover:text-gray-500"
-            } text-primary font-medium py-2 px-4 border border-primary rounded focus:outline-none`}
+            } text-primary font-medium py-2 px-4 border border-primary rounded-global focus:outline-none`}
             onClick={() => paginate(number)}>
             {number}
           </Button>

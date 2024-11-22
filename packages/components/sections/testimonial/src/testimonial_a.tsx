@@ -20,7 +20,7 @@ export default function Testimonial_A({ testimonials }: TestimonialProps) {
   return (
     <Section className="py-20 bg-background">
       <Container maxWidth={1280}>
-        <Card className="py-10 ">
+        <Card className="py-10" borderRadius="md">
           <Flex wrap align="center" justify="center" className="max-w-5xl p-4">
             <AvatarSection testimonials={testimonials} testimony={testimony} />
             <TestimonyContent testimonials={testimonials} testimony={testimony} slider={slider} />
@@ -42,7 +42,7 @@ function AvatarSection({
 
   return (
     <div className="w-full mb-6 text-center lg:w-1/3">
-      {testimonials?.[testimony]?.mainImage ? (
+      {testimonials?.[testimony]?.mainImage?.image ? (
         <Avatar
           className={"border-0 mx-auto"}
           size={128}
@@ -50,7 +50,7 @@ function AvatarSection({
             testimonials?.[testimony]?.mainImage?.alt ??
             `testimonial-source-${testimonials?.[testimony]?.name}-profile-image`
           }
-          src={`${testimonials?.[testimony]?.mainImage}`}
+          src={`${testimonials?.[testimony]?.mainImage?.image}`}
         />
       ) : null}
       {testimonials?.[testimony]?.name ? (

@@ -1,5 +1,11 @@
 # @stackshift-ui/faqs
 
+## 6.0.6
+
+### Patch Changes
+
+- Faqs C: Adjusted card background color to white and border radius to md
+
 ## 6.0.5
 
 ### Patch Changes

@@ -39,7 +39,7 @@ function FeatureInfo({
   return (
     <React.Fragment>
       {caption && (
-        <Text weight="bold" className="text-primary">
+        <Text weight="bold" className="text-secondary">
           {caption}
         </Text>
       )}
@@ -91,8 +91,8 @@ function FeaturesLists({ features }: { features?: ArrayOfImageTitleAndText[] }) 
           <div
             className={`w-full px-4 mb-8 md:w-1/2 ${index % 2 === 0 ? `lg:mb-0` : "lg:mt-12"}`}
             key={index}>
-            <Card className="py-6 pl-6 pr-4 mb-8">
-              <span className="inline-block p-3 mb-4 rounded-lg bg-secondary-foreground">
+            <Card className="py-6 pl-6 pr-4 mb-8 bg-white" borderRadius="md">
+              <span className="inline-block p-3 mb-4 rounded-lg bg-secondary/50">
                 {feature?.mainImage?.image && (
                   <Image
                     className="object-scale-down"

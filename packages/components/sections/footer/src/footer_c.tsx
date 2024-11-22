@@ -109,7 +109,7 @@ function SocialMediaLink({ social, index }: { social?: SocialLink; index?: numbe
   return (
     <Link
       aria-label={social?.socialMedia || social?.socialMediaPlatform || ""}
-      className="inline-block p-2 mr-2 rounded bg-gray-50 hover:bg-gray-100"
+      className="inline-block p-2 mr-2 rounded"
       target="_blank"
       rel="noopener noreferrer"
       href={social?.socialMediaLink}
@@ -118,8 +118,8 @@ function SocialMediaLink({ social, index }: { social?: SocialLink; index?: numbe
         <Image
           className="h-6"
           src={`${social?.socialMediaIcon?.image}`}
-          width={24}
-          height={24}
+          width={56}
+          height={56}
           alt={social?.socialMediaIcon?.alt ?? "contact-socialMedia-icon"}
         />
       ) : (
@@ -134,17 +134,17 @@ function BorderStyle() {
     <div className="flex w-full">
       <div className="flex w-1/3">
         <div className="w-1/3 py-1 bg-secondary" />
-        <div className="w-1/3 py-1 bg-primary-foreground" />
+        <div className="w-1/3 py-1 bg-primary" />
         <div className="w-1/3 py-1 bg-primary" />
       </div>
       <div className="flex w-1/3">
         <div className="w-1/3 py-1 bg-secondary" />
-        <div className="w-1/3 py-1 bg-primary-foreground" />
+        <div className="w-1/3 py-1 bg-primary" />
         <div className="w-1/3 py-1 bg-primary" />
       </div>
       <div className="flex w-1/3">
         <div className="w-1/3 py-1 bg-secondary" />
-        <div className="w-1/3 py-1 bg-primary-foreground" />
+        <div className="w-1/3 py-1 bg-primary" />
         <div className="w-1/3 py-1 bg-primary" />
       </div>
     </div>

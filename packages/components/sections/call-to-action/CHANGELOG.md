@@ -1,5 +1,14 @@
 # @stackshift-ui/call-to-action
 
+## 6.0.5
+
+### Patch Changes
+
+- Call to action B: Updated image size
+- Call to action C: Adjusted heading text size to 3xl, text-primary color on check icon
+- Updated dependencies
+  - @stackshift-ui/signin-signup@6.0.5
+
 ## 6.0.4
 
 ### Patch Changes

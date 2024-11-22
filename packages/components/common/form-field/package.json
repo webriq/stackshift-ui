@@ -1,7 +1,7 @@
 {
   "name": "@stackshift-ui/form-field",
   "description": "",
-  "version": "6.0.4",
+  "version": "6.0.5",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -62,11 +62,11 @@
     "@stackshift-ui/checkbox": ">=0.0.0",
     "@stackshift-ui/checkbox-group": ">=0.0.0",
     "@stackshift-ui/input": ">=0.0.0",
-    "@stackshift-ui/input-file": ">=0.0.0",
+    "@stackshift-ui/input-file": ">=6.0.4",
     "@stackshift-ui/radio": ">=0.0.0",
     "@stackshift-ui/radio-group": ">=0.0.0",
-    "@stackshift-ui/select": ">=0.0.0",
-    "@stackshift-ui/textarea": ">=0.0.0"
+    "@stackshift-ui/select": ">=6.0.4",
+    "@stackshift-ui/textarea": ">=6.0.4"
   },
   "peerDependenciesMeta": {
     "next": {

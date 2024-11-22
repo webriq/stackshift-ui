@@ -1,6 +1,6 @@
 import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
-import type { ElementType, HTMLProps, ReactNode } from "react";
 import cn from "classnames";
+import type { ElementType, HTMLProps, ReactNode } from "react";
 
 type StyleVariants<T extends string> = Record<T, string>;
 type Variant = "primary" | "outline";
@@ -42,7 +42,8 @@ export const Select: React.FC<SelectProps> = ({
 }) => {
   const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
 
-  const commonStyle = "w-full rounded bg-white p-4 text-xs font-semibold leading-none outline-none";
+  const commonStyle =
+    "w-full rounded-global bg-white p-4 text-xs font-semibold leading-none outline-none";
   const primary = `${commonStyle}`;
   const outline = `${commonStyle} border border-solid border-primary-foreground`;
 

@@ -1,10 +1,10 @@
-import React from "react";
-import { Heading } from "@stackshift-ui/heading";
-import { Text } from "@stackshift-ui/text";
 import { Card } from "@stackshift-ui/card";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
+import { Heading } from "@stackshift-ui/heading";
+import { Section } from "@stackshift-ui/section";
+import { Text } from "@stackshift-ui/text";
+import React from "react";
 import { FAQProps } from ".";
 
 export interface AskedQuestion {
@@ -56,7 +56,7 @@ function FAQItems({ faqs }: { faqs?: AskedQuestion[] }) {
 function FAQItem({ faq }: FAQItemProps) {
   return (
     <Container className="w-full px-4 mb-8 lg:w-1/2" maxWidth={1000}>
-      <Card className="h-full p-8 ">
+      <Card className="h-full p-8 bg-white" borderRadius="md">
         <Flex align="start" className="mb-6">
           <span className="inline-block p-3 mr-4 rounded-full bg-primary">
             <QuoteIcon />

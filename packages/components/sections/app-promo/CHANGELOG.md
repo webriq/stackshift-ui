@@ -1,5 +1,13 @@
 # @stackshift-ui/app-promo
 
+## 6.0.4
+
+### Patch Changes
+
+- App promo A: dynamic alt value, swiper button placement
+- App promo B: Swiper button background color, data ang images flex
+- App promo C: Check icon color to text-primary
+
 ## 6.0.3
 
 ### Patch Changes

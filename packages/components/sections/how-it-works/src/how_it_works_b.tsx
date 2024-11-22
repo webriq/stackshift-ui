@@ -1,10 +1,10 @@
-import { Heading } from "@stackshift-ui/heading";
-import { Text } from "@stackshift-ui/text";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
-import { ArrayOfTitleAndText } from "./types";
+import { Heading } from "@stackshift-ui/heading";
+import { Section } from "@stackshift-ui/section";
+import { Text } from "@stackshift-ui/text";
 import { HowItWorksProps } from ".";
+import { ArrayOfTitleAndText } from "./types";
 
 export default function HowItWorks_B({ subtitle, title, text, steps }: HowItWorksProps) {
   return (
@@ -66,7 +66,7 @@ function StepItem({ step, index }: { step: ArrayOfTitleAndText; index: number })
 
   return (
     <Flex wrap align="start" className="mb-12" key={index}>
-      <span className="inline-flex items-center justify-center w-16 h-16 mb-4 text-2xl font-bold rounded bg-secondary-foreground text-primary lg:mb-0 lg:mr-6">
+      <span className="inline-flex items-center justify-center w-16 h-16 mb-4 text-2xl font-bold rounded-global bg-secondary/50 text-primary lg:mb-0 lg:mr-6">
         {index + 1}
       </span>
       <div className="w-full lg:w-3/4">

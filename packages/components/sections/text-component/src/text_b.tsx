@@ -21,12 +21,12 @@ export default function TextComponent_B({
         )}
         <Flex wrap justify="center" className="mx-auto ">
           {firstColumn && (
-            <div className="px-5 mb-3 text-xs leading-relaxed text-justify text-gray-500 lg:mb-6 lg:w-1/4 lg:text-base">
+            <div className="px-5 mb-3 text-xs leading-relaxed text-justify text-gray-500 lg:mb-6 lg:w-1/2 lg:text-base">
               <PortableText value={firstColumn} components={textComponentBlockStyling} />
             </div>
           )}
           {secondColumn && (
-            <div className="px-5 mb-6 text-xs leading-relaxed text-justify text-gray-500 md:mb-0 lg:w-1/4 lg:text-base">
+            <div className="px-5 mb-6 text-xs leading-relaxed text-justify text-gray-500 md:mb-0 lg:w-1/2 lg:text-base">
               <PortableText
                 value={secondColumn}
                 components={textComponentBlockStyling}

@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import { Newsletter } from "@stackshift-ui/react";
+import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Newsletter> = {
   title: "Components/Newsletter",
@@ -25,6 +25,7 @@ export const VariantA: Story = {
           linkTarget: "_self",
           image:
             "https://cdn.sanity.io/images/9itgab5x/staging/b3b0a815c21cc9fd95261a2a0dd737e0827915cd-664x833.png?fm=webp&w=128&q=75",
+          alt: "alt text",
         },
         form: {
           fields: [
@@ -56,6 +57,7 @@ export const VariantB: Story = {
           linkTarget: "_self",
           image:
             "https://cdn.sanity.io/images/9itgab5x/staging/b3b0a815c21cc9fd95261a2a0dd737e0827915cd-664x833.png?fm=webp&w=128&q=75",
+          alt: "alt text",
         },
         form: {
           fields: [

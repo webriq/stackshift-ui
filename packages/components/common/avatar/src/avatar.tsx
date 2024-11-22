@@ -40,7 +40,7 @@ export const Avatar: React.FC<AvatarProps> = ({
   };
   const avatarSize = typeof size === "number" ? `${size}px` : `${sizeMap[size]}px`;
   const initials = text ? text?.split(" ")?.reduce((acc, curr) => acc + curr[0], "") : "AB";
-  const baseClass = `relative flex rounded-full aspect-square overflow-hidden border-2 border-solid border-primary-foreground`;
+  const baseClass = `relative flex rounded-full aspect-square overflow-hidden border-2 border-solid border-primary`;
 
   return (
     <Component
@@ -50,28 +50,7 @@ export const Avatar: React.FC<AvatarProps> = ({
       {...props}
       data-testid={displayName}>
       {(!loaded || !src) && (
-        <Flex align="center" justify="center" className="w-full h-full bg-primary-foreground">
-          <p
-            style={{
-              fontSize: `calc(${avatarSize}/2)`,
-            }}
-            className="text-white">
-            {initials}
-          </p>
-        </Flex>
-      )}
-      {src && (
-        <Image
-          className="object-cover object-center w-[100%] h-[100%]"
-          src={src}
-          alt={alt}
-          width={100}
-          height={100}
-          onLoad={() => setLoaded(true)}
-        />
-      )}
-      {(!loaded || !src) && (
-        <Flex align="center" justify="center" className="w-full h-full bg-primary-foreground">
+        <Flex align="center" justify="center" className="w-full h-full bg-primary">
           <p
             style={{
               fontSize: `calc(${avatarSize}/2)`,

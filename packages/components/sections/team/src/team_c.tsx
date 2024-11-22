@@ -40,11 +40,13 @@ function TeamMemberCard({ team }: { team?: iTeam[] }) {
     <Flex wrap>
       {team.map(member => (
         <div className="w-full px-3 mb-6 md:w-1/2 lg:w-1/3" key={member?.name}>
-          <Card className="w-full p-0 pb-8 overflow-hidden text-center">
+          <Card
+            className="w-full p-0 pb-8 overflow-hidden bg-white shadow-lg text-center"
+            borderRadius="md">
             {member.mainImage?.image && (
               <div>
                 <Image
-                  className="mb-8 h-[345px] w-full object-cover rounded-global"
+                  className="mb-8 h-[345px] w-full object-cover rounded-md"
                   sizes="100vw"
                   src={`${member?.mainImage?.image}`}
                   width={345}

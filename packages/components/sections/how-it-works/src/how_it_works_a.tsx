@@ -1,9 +1,9 @@
-import { Heading } from "@stackshift-ui/heading";
-import { Text } from "@stackshift-ui/text";
-import { YoutubeVideo } from "@stackshift-ui/youtube-video";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
+import { Heading } from "@stackshift-ui/heading";
+import { Section } from "@stackshift-ui/section";
+import { Text } from "@stackshift-ui/text";
+import { YoutubeVideo } from "@stackshift-ui/youtube-video";
 
 import { HowItWorksProps } from ".";
 import { ArrayOfTitleAndText } from "./types";
@@ -95,8 +95,8 @@ function StepItem({ index, step }: { index: number; step?: ArrayOfTitleAndText }
   if (!step) return null;
 
   return (
-    <div className="w-full px-5 mb-12 md:w-1/2 lg:mb-0 lg:w-1/3">
-      <span className="flex items-center justify-center w-12 h-12 mt-6 mb-6 font-bold rounded bg-secondary-foreground text-primary">
+    <div className="px-5 w-full  mb-12 md:w-1/2 lg:mb-0 lg:w-1/3">
+      <span className="flex items-center justify-center w-12 h-12 mt-6 mb-6 font-bold rounded-global bg-secondary/50 text-primary">
         {index + 1}
       </span>
       <Text weight="bold" className="mb-2 text-lg md:text-2xl">

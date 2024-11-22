@@ -145,7 +145,7 @@ function ResponsiveNavLinks({
           ) : null}
         </div>
         <div className="w-full mt-auto">
-          <Flex direction="col" className="pt-6 space-x-2">
+          <Flex direction="col" className="pt-6">
             {primaryButton?.label ? (
               <Button
                 as="link"

@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import { Statistics } from "@stackshift-ui/react";
+import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Statistics> = {
   title: "Components/Statistics",
@@ -55,6 +55,7 @@ export const VariantB: StoryObj<typeof Statistics> = {
             mainImage: {
               image:
                 "https://cdn.sanity.io/images/9itgab5x/staging/97b6696849c90facc200537fd780b03d373e5212-980x830.png?fm=webp&w=48&q=100",
+              alt: "total revenue",
             },
           },
           {
@@ -63,6 +64,7 @@ export const VariantB: StoryObj<typeof Statistics> = {
             mainImage: {
               image:
                 "https://cdn.sanity.io/images/9itgab5x/staging/d52b2d79a8c0ff7df5bac2ab9b31e4f8b35b2d49-515x485.png?fm=webp&w=48&q=100",
+              alt: "subscribers",
             },
           },
           {
@@ -71,6 +73,7 @@ export const VariantB: StoryObj<typeof Statistics> = {
             mainImage: {
               image:
                 "https://cdn.sanity.io/images/9itgab5x/staging/46503b9f97de2e422010bcde0a1e33e954bca584-981x860.png?fm=webp&w=48&q=100",
+              alt: "conversations",
             },
           },
           {
@@ -79,6 +82,7 @@ export const VariantB: StoryObj<typeof Statistics> = {
             mainImage: {
               image:
                 "https://cdn.sanity.io/images/9itgab5x/staging/97b6696849c90facc200537fd780b03d373e5212-980x830.png?fm=webp&w=48&q=100",
+              alt: "modal sale rate",
             },
           },
         ],
@@ -100,6 +104,7 @@ export const VariantC: StoryObj<typeof Statistics> = {
             mainImage: {
               image:
                 "https://cdn.sanity.io/images/9itgab5x/staging/97b6696849c90facc200537fd780b03d373e5212-980x830.png?fm=webp&w=48&q=100",
+              alt: "total revenue",
             },
           },
           {
@@ -108,6 +113,7 @@ export const VariantC: StoryObj<typeof Statistics> = {
             mainImage: {
               image:
                 "https://cdn.sanity.io/images/9itgab5x/staging/d52b2d79a8c0ff7df5bac2ab9b31e4f8b35b2d49-515x485.png?fm=webp&w=48&q=100",
+              alt: "subscribers",
             },
           },
           {
@@ -116,6 +122,7 @@ export const VariantC: StoryObj<typeof Statistics> = {
             mainImage: {
               image:
                 "https://cdn.sanity.io/images/9itgab5x/staging/46503b9f97de2e422010bcde0a1e33e954bca584-981x860.png?fm=webp&w=48&q=100",
+              alt: "conversations",
             },
           },
           {
@@ -124,6 +131,7 @@ export const VariantC: StoryObj<typeof Statistics> = {
             mainImage: {
               image:
                 "https://cdn.sanity.io/images/9itgab5x/staging/97b6696849c90facc200537fd780b03d373e5212-980x830.png?fm=webp&w=48&q=100",
+              alt: "modal sale rate",
             },
           },
         ],

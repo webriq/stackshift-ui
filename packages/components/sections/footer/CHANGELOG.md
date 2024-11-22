@@ -1,5 +1,14 @@
 # @stackshift-ui/footer
 
+## 6.0.5
+
+### Patch Changes
+
+- Removed social media link background and hover
+- Adjusted image size.
+- Footer A: Contact email and contact info are redirected to given value.
+- Footer C: Adjusted background color on border style.
+
 ## 6.0.4
 
 ### Patch Changes

@@ -39,11 +39,12 @@ export default function AppPromo_A({ logo, subtitle, title, images = [] }: AppPr
         <PromoImagesGroup images={images} />
 
         {/* mobile image view less than 640px */}
-        <MobileImageView
-          image={images[currentPosition].image}
-          alt={images[currentPosition].alt ?? `appPromo-variantA-image-${currentPosition}`}
-        />
-        <SwiperButtons arrowLeftClick={arrowLeftClick} arrowRightClick={arrowRightClick} />
+        <SwiperButtons arrowLeftClick={arrowLeftClick} arrowRightClick={arrowRightClick}>
+          <MobileImageView
+            image={images[currentPosition].image}
+            alt={images[currentPosition].alt ?? `appPromo-variantA-image-${currentPosition}`}
+          />
+        </SwiperButtons>
       </Container>
     </Section>
   );
@@ -104,21 +105,21 @@ function PromoImagesGroup({ images }: { images: Images[] }) {
       {images?.[0]?.image ? (
         <PromoImage
           src={images?.[0]?.image}
-          alt="appPromo-variantA-image-1"
+          alt={images?.[0]?.alt ?? "appPromo-variantA-image-1"}
           positionClass="bottom-0 z-20 -mb-10 transform -translate-x-1/2 left-1/2"
         />
       ) : null}
       {images?.[1]?.image ? (
         <PromoImage
           src={images?.[1]?.image}
-          alt="appPromo-variantA-image-2"
+          alt={images?.[1]?.alt ?? "appPromo-variantA-image-2"}
           positionClass="bottom-0 left-0 -mb-24"
         />
       ) : null}
       {images?.[2]?.image ? (
         <PromoImage
           src={images?.[2]?.image}
-          alt="appPromo-variantA-image-3"
+          alt={images?.[2]?.alt ?? "appPromo-variantA-image-3"}
           positionClass="bottom-0 right-0 -mb-24"
         />
       ) : null}
@@ -146,23 +147,25 @@ function MobileImageView({ image, alt }: { image: any; alt: string }) {
 function SwiperButtons({
   arrowLeftClick,
   arrowRightClick,
+  children,
 }: {
   arrowLeftClick: () => void;
   arrowRightClick: () => void;
+  children: React.ReactNode;
 }) {
   return (
-    <Flex justify="between" className="mb-16 sm:hidden">
+    <Flex justify="between" align="center" className="mb-16 sm:hidden">
       <SwiperButton
         type="left"
         ariaLabel="Left Arrow button"
-        className="order-0 md:order-0 lg:order-0 xl:order-1 2xl:order-1"
+        className="order-0 md:order-0 bg-white lg:order-0 xl:order-1 2xl:order-1"
         onClick={arrowLeftClick}
       />
-
+      {children}
       <SwiperButton
         type="right"
         ariaLabel="Right Arrow button"
-        className="order-2"
+        className="order-2 bg-white"
         onClick={arrowRightClick}
       />
     </Flex>

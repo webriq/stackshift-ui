@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import { Blog } from "@stackshift-ui/react";
+import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Blog> = {
   title: "Components/Blog",
@@ -27,52 +27,64 @@ export const VariantA: StoryObj<typeof Blog> = {
         },
         posts: [
           {
+            authors: [{ name: "John Doe" }],
             title: "Lorem ipsum dolor sit amet",
             categories: [{ title: "TRAVEL" }],
             publishedAt: "2021-11-22T03:17:00.000Z",
             link: "aenean-convalli-sapone-a-degnissimo-placerat",
             mainImage:
               "https://cdn.sanity.io/images/9itgab5x/staging/fc4752283bb0c4bf2d6f2b71411407315298952d-968x726.jpg?fm=webp&w=1200&q=75",
+            alt: "Lorem ipsum dolor sit amet",
           },
           {
+            authors: [{ name: "John Doe" }],
             title: "Vestibulum vehicle leo eget libero eleifend 2",
             categories: [{ title: "CULTURE" }],
             publishedAt: "2021-11-22T03:17:00.000Z",
             link: "vestibulum-vehicle-leo-eget-libero-eleifend",
             mainImage:
               "https://cdn.sanity.io/images/9itgab5x/staging/fc4752283bb0c4bf2d6f2b71411407315298952d-968x726.jpg?fm=webp&w=1200&q=75",
+            alt: "Vestibulum vehicle leo eget libero eleifend 2",
           },
           {
+            authors: [{ name: "John Doe" }],
             title: "Aenean convalli sapone a degnissimo placerat.",
             categories: [{ title: "TRAVEL" }],
             publishedAt: "2021-11-22T03:17:00.000Z",
             link: "aenean-convalli-sapone-a-degnissimo-placerat",
             mainImage:
               "https://cdn.sanity.io/images/9itgab5x/staging/fc4752283bb0c4bf2d6f2b71411407315298952d-968x726.jpg?fm=webp&w=1200&q=75",
+            alt: "Aenean convalli sapone a degnissimo placerat.",
           },
           {
+            authors: [{ name: "John Doe" }],
             title: "Vestibulum vehicle leo eget libero eleifend 2",
             categories: [{ title: "TRAVEL" }, { title: "CULTURE" }],
             publishedAt: "2021-11-22T03:17:00.000Z",
             link: "vestibulum-vehicle-leo-eget-libero-eleifend",
             mainImage:
               "https://cdn.sanity.io/images/9itgab5x/staging/fc4752283bb0c4bf2d6f2b71411407315298952d-968x726.jpg?fm=webp&w=1200&q=75",
+            alt: "Vestibulum vehicle leo eget libero eleifend 2",
           },
           {
+            authors: [{ name: "John Doe" }],
             title: "Aenean convalli sapone a degnissimo placerat.",
             categories: [{ title: "TRAVEL" }],
             publishedAt: "2021-11-22T03:17:00.000Z",
             link: "aenean-convalli-sapone-a-degnissimo-placerat",
             mainImage:
               "https://cdn.sanity.io/images/9itgab5x/staging/fc4752283bb0c4bf2d6f2b71411407315298952d-968x726.jpg?fm=webp&w=1200&q=75",
+            alt: "Aenean convalli sapone a degnissimo placerat.",
           },
           {
+            authors: [{ name: "John Doe" }],
             title: "Lorem ipsum dolor sit amet",
             categories: [{ title: "TRAVEL" }],
             publishedAt: "2021-11-22T03:17:00.000Z",
             link: "lorem-ipsum-dolor-sit-amet",
             mainImage:
               "https://cdn.sanity.io/images/9itgab5x/staging/fc4752283bb0c4bf2d6f2b71411407315298952d-968x726.jpg?fm=webp&w=1200&q=75",
+            alt: "Lorem ipsum dolor sit amet",
           },
         ],
       },
@@ -94,6 +106,7 @@ export const VariantB: StoryObj<typeof Blog> = {
         },
         posts: [
           {
+            authors: [{ name: "John Doe" }],
             title: "Lorem ipsum dolor sit amet",
             excerpt: "Writing sample excerpt to test Grammarly.",
             categories: [{ title: "TRAVEL" }],
@@ -101,8 +114,10 @@ export const VariantB: StoryObj<typeof Blog> = {
             link: "aenean-convalli-sapone-a-degnissimo-placerat",
             mainImage:
               "https://cdn.sanity.io/images/9itgab5x/staging/fc4752283bb0c4bf2d6f2b71411407315298952d-968x726.jpg?fm=webp&w=1200&q=75",
+            alt: "Lorem ipsum dolor sit amet",
           },
           {
+            authors: [{ name: "John Doe" }],
             title: "Vestibulum vehicle leo eget libero eleifend 2",
             excerpt: "Writing sample excerpt to test Grammarly.",
             categories: [{ title: "CULTURE" }],
@@ -110,8 +125,10 @@ export const VariantB: StoryObj<typeof Blog> = {
             link: "vestibulum-vehicle-leo-eget-libero-eleifend",
             mainImage:
               "https://cdn.sanity.io/images/9itgab5x/staging/fc4752283bb0c4bf2d6f2b71411407315298952d-968x726.jpg?fm=webp&w=1200&q=75",
+            alt: "Vestibulum vehicle leo eget libero eleifend 2",
           },
           {
+            authors: [{ name: "John Doe" }],
             title: "Aenean convalli sapone a degnissimo placerat.",
             excerpt: "Writing sample excerpt to test Grammarly.",
             categories: [{ title: "TRAVEL" }],
@@ -119,8 +136,10 @@ export const VariantB: StoryObj<typeof Blog> = {
             link: "aenean-convalli-sapone-a-degnissimo-placerat",
             mainImage:
               "https://cdn.sanity.io/images/9itgab5x/staging/fc4752283bb0c4bf2d6f2b71411407315298952d-968x726.jpg?fm=webp&w=1200&q=75",
+            alt: "Aenean convalli sapone a degnissimo placerat.",
           },
           {
+            authors: [{ name: "John Doe" }],
             title: "Vestibulum vehicle leo eget libero eleifend 2",
             excerpt: "Writing sample excerpt to test Grammarly.",
             categories: [{ title: "TRAVEL" }, { title: "CULTURE" }],
@@ -128,8 +147,10 @@ export const VariantB: StoryObj<typeof Blog> = {
             link: "vestibulum-vehicle-leo-eget-libero-eleifend",
             mainImage:
               "https://cdn.sanity.io/images/9itgab5x/staging/fc4752283bb0c4bf2d6f2b71411407315298952d-968x726.jpg?fm=webp&w=1200&q=75",
+            alt: "Vestibulum vehicle leo eget libero eleifend 2",
           },
           {
+            authors: [{ name: "John Doe" }],
             title: "Aenean convalli sapone a degnissimo placerat.",
             excerpt: "Writing sample excerpt to test Grammarly.",
             categories: [{ title: "TRAVEL" }],
@@ -137,8 +158,10 @@ export const VariantB: StoryObj<typeof Blog> = {
             link: "aenean-convalli-sapone-a-degnissimo-placerat",
             mainImage:
               "https://cdn.sanity.io/images/9itgab5x/staging/fc4752283bb0c4bf2d6f2b71411407315298952d-968x726.jpg?fm=webp&w=1200&q=75",
+            alt: "Aenean convalli sapone a degnissimo placerat.",
           },
           {
+            authors: [{ name: "John Doe" }],
             title: "Lorem ipsum dolor sit amet",
             excerpt: "Writing sample excerpt to test Grammarly.",
             categories: [{ title: "TRAVEL" }],
@@ -146,6 +169,7 @@ export const VariantB: StoryObj<typeof Blog> = {
             link: "lorem-ipsum-dolor-sit-amet",
             mainImage:
               "https://cdn.sanity.io/images/9itgab5x/staging/fc4752283bb0c4bf2d6f2b71411407315298952d-968x726.jpg?fm=webp&w=1200&q=75",
+            alt: "Lorem ipsum dolor sit amet",
           },
         ],
       },
@@ -174,6 +198,7 @@ export const VariantC: StoryObj<typeof Blog> = {
             link: "aenean-convalli-sapone-a-degnissimo-placerat",
             mainImage:
               "https://cdn.sanity.io/images/9itgab5x/staging/fc4752283bb0c4bf2d6f2b71411407315298952d-968x726.jpg?fm=webp&w=1200&q=75",
+            alt: "Lorem ipsum dolor sit amet",
           },
           {
             title: "Vestibulum vehicle leo eget libero eleifend 2",
@@ -183,6 +208,7 @@ export const VariantC: StoryObj<typeof Blog> = {
             link: "vestibulum-vehicle-leo-eget-libero-eleifend",
             mainImage:
               "https://cdn.sanity.io/images/9itgab5x/staging/fc4752283bb0c4bf2d6f2b71411407315298952d-968x726.jpg?fm=webp&w=1200&q=75",
+            alt: "Vestibulum vehicle leo eget libero eleifend 2",
           },
           {
             title: "Aenean convalli sapone a degnissimo placerat.",
@@ -192,6 +218,7 @@ export const VariantC: StoryObj<typeof Blog> = {
             link: "aenean-convalli-sapone-a-degnissimo-placerat",
             mainImage:
               "https://cdn.sanity.io/images/9itgab5x/staging/fc4752283bb0c4bf2d6f2b71411407315298952d-968x726.jpg?fm=webp&w=1200&q=75",
+            alt: "Aenean convalli sapone a degnissimo placerat.",
           },
           {
             title: "Vestibulum vehicle leo eget libero eleifend 2",
@@ -201,6 +228,7 @@ export const VariantC: StoryObj<typeof Blog> = {
             link: "vestibulum-vehicle-leo-eget-libero-eleifend",
             mainImage:
               "https://cdn.sanity.io/images/9itgab5x/staging/fc4752283bb0c4bf2d6f2b71411407315298952d-968x726.jpg?fm=webp&w=1200&q=75",
+            alt: "Vestibulum vehicle leo eget libero eleifend 2",
           },
           {
             title: "Aenean convalli sapone a degnissimo placerat.",
@@ -210,6 +238,7 @@ export const VariantC: StoryObj<typeof Blog> = {
             link: "aenean-convalli-sapone-a-degnissimo-placerat",
             mainImage:
               "https://cdn.sanity.io/images/9itgab5x/staging/fc4752283bb0c4bf2d6f2b71411407315298952d-968x726.jpg?fm=webp&w=1200&q=75",
+            alt: "Aenean convalli sapone a degnissimo placerat.",
           },
           {
             title: "Lorem ipsum dolor sit amet",
@@ -219,6 +248,7 @@ export const VariantC: StoryObj<typeof Blog> = {
             link: "lorem-ipsum-dolor-sit-amet",
             mainImage:
               "https://cdn.sanity.io/images/9itgab5x/staging/fc4752283bb0c4bf2d6f2b71411407315298952d-968x726.jpg?fm=webp&w=1200&q=75",
+            alt: "Lorem ipsum dolor sit amet",
           },
         ],
       },
@@ -249,6 +279,7 @@ export const VariantD: StoryObj<typeof Blog> = {
             authors: [{ name: "John Doe" }, { name: "Doe John" }],
             mainImage:
               "https://cdn.sanity.io/images/9itgab5x/staging/fc4752283bb0c4bf2d6f2b71411407315298952d-968x726.jpg?fm=webp&w=1200&q=75",
+            alt: "Lorem ipsum dolor sit amet",
           },
           {
             title: "Vestibulum vehicle leo eget libero eleifend 2",
@@ -258,6 +289,7 @@ export const VariantD: StoryObj<typeof Blog> = {
             link: "vestibulum-vehicle-leo-eget-libero-eleifend",
             mainImage:
               "https://cdn.sanity.io/images/9itgab5x/staging/fc4752283bb0c4bf2d6f2b71411407315298952d-968x726.jpg?fm=webp&w=1200&q=75",
+            alt: "Vestibulum vehicle leo eget libero eleifend 2",
           },
           {
             title: "Aenean convalli sapone a degnissimo placerat.",
@@ -267,6 +299,7 @@ export const VariantD: StoryObj<typeof Blog> = {
             link: "aenean-convalli-sapone-a-degnissimo-placerat",
             mainImage:
               "https://cdn.sanity.io/images/9itgab5x/staging/fc4752283bb0c4bf2d6f2b71411407315298952d-968x726.jpg?fm=webp&w=1200&q=75",
+            alt: "Aenean convalli sapone a degnissimo placerat.",
           },
           {
             title: "Vestibulum vehicle leo eget libero eleifend 2",
@@ -276,6 +309,7 @@ export const VariantD: StoryObj<typeof Blog> = {
             link: "vestibulum-vehicle-leo-eget-libero-eleifend",
             mainImage:
               "https://cdn.sanity.io/images/9itgab5x/staging/fc4752283bb0c4bf2d6f2b71411407315298952d-968x726.jpg?fm=webp&w=1200&q=75",
+            alt: "Vestibulum vehicle leo eget libero eleifend 2",
           },
           {
             title: "Aenean convalli sapone a degnissimo placerat.",
@@ -285,6 +319,7 @@ export const VariantD: StoryObj<typeof Blog> = {
             link: "aenean-convalli-sapone-a-degnissimo-placerat",
             mainImage:
               "https://cdn.sanity.io/images/9itgab5x/staging/fc4752283bb0c4bf2d6f2b71411407315298952d-968x726.jpg?fm=webp&w=1200&q=75",
+            alt: "Aenean convalli sapone a degnissimo placerat.",
           },
           {
             title: "Lorem ipsum dolor sit amet",
@@ -294,6 +329,7 @@ export const VariantD: StoryObj<typeof Blog> = {
             link: "lorem-ipsum-dolor-sit-amet",
             mainImage:
               "https://cdn.sanity.io/images/9itgab5x/staging/fc4752283bb0c4bf2d6f2b71411407315298952d-968x726.jpg?fm=webp&w=1200&q=75",
+            alt: "Lorem ipsum dolor sit amet",
           },
         ],
       },

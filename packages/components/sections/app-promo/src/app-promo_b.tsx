@@ -38,21 +38,23 @@ export default function AppPromo_B({
   return (
     <Section className="pt-16 overflow-hidden bg-background">
       <Container className="relative text-center" maxWidth={1280}>
-        <div className="w-full mt-8 lg:w-1/2">
-          <SubtitleTitleDescriptionText
-            subtitle={subtitle}
-            title={title}
-            description={description}
-          />
-          <StatisticsData statistics={statistics} />
-        </div>
-        <Flex align="center" justify="center" gap={8} className="w-full 2xl:w-1/2">
-          <ImageCarousel
-            images={images}
-            currentPosition={currentPosition}
-            arrowLeftClick={arrowLeftClick}
-            arrowRightClick={arrowRightClick}
-          />
+        <Flex justify="between" className="flex-col md:flex-row">
+          <div className="w-full mt-8 lg:w-1/2">
+            <SubtitleTitleDescriptionText
+              subtitle={subtitle}
+              title={title}
+              description={description}
+            />
+            <StatisticsData statistics={statistics} />
+          </div>
+          <Flex align="center" justify="center" gap={8} className="w-full 2xl:w-1/2">
+            <ImageCarousel
+              images={images}
+              currentPosition={currentPosition}
+              arrowLeftClick={arrowLeftClick}
+              arrowRightClick={arrowRightClick}
+            />
+          </Flex>
         </Flex>
       </Container>
     </Section>
@@ -150,6 +152,7 @@ function SwiperControls({
         variant="variant_a"
         type="left"
         ariaLabel="Left Arrow button"
+        className="bg-white"
         onClick={arrowLeftClick}
       />
       {children}
@@ -157,6 +160,7 @@ function SwiperControls({
         variant="variant_a"
         type="right"
         ariaLabel="Right Arrow button"
+        className="bg-white"
         onClick={arrowRightClick}
       />
     </React.Fragment>

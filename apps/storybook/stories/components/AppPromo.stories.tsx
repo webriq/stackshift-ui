@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from "@storybook/react";
 import { AppPromo } from "@stackshift-ui/react";
+import { Meta, StoryObj } from "@storybook/react";
 
 // Define the default export for Storybook
 const meta: Meta<typeof AppPromo> = {
@@ -22,6 +22,7 @@ export const VariantA: StoryObj<typeof AppPromo> = {
         logo: {
           image:
             "https://cdn.sanity.io/images/9itgab5x/production/140d0c9644c0aa1a5dbc817b18e9d3f8d18b43ea-125x124.png",
+          alt: "alt 1",
         },
         subtitle: "Dolor sit amet consectutar",
         title: "Build & Launch without problems",
@@ -29,18 +30,22 @@ export const VariantA: StoryObj<typeof AppPromo> = {
           {
             image:
               "https://cdn.sanity.io/images/9itgab5x/staging/e3cb72c85bf9207d44bb9e0db92cd80be5662108-274x589.png?fm=webp&w=384&q=75",
+            alt: "alt 2",
           },
           {
             image:
               "https://cdn.sanity.io/images/9itgab5x/staging/b5e5d428e809f5f6e500df911ef16ab648be35a1-283x468.png?fm=webp&w=384&q=75",
+            alt: "alt 3",
           },
           {
             image:
               "https://cdn.sanity.io/images/9itgab5x/staging/ce963623bee96f0173097354a8da28472c88dce3-289x559.png?fm=webp&w=384&q=75",
+            alt: "alt 4",
           },
           {
             image:
               "https://cdn.sanity.io/images/9itgab5x/staging/4148621cc49a1c27d31565260703672c4705c49d-289x559.png?fm=webp&w=384&q=75",
+            alt: "alt 5",
           },
         ],
       },
@@ -68,18 +73,22 @@ export const VariantB: StoryObj<typeof AppPromo> = {
           {
             image:
               "https://cdn.sanity.io/images/9itgab5x/staging/e3cb72c85bf9207d44bb9e0db92cd80be5662108-274x589.png?fm=webp&w=384&q=75",
+            alt: "alt 1",
           },
           {
             image:
               "https://cdn.sanity.io/images/9itgab5x/staging/b5e5d428e809f5f6e500df911ef16ab648be35a1-283x468.png?fm=webp&w=384&q=75",
+            alt: "alt 2",
           },
           {
             image:
               "https://cdn.sanity.io/images/9itgab5x/staging/ce963623bee96f0173097354a8da28472c88dce3-289x559.png?fm=webp&w=384&q=75",
+            alt: "2",
           },
           {
             image:
               "https://cdn.sanity.io/images/9itgab5x/staging/4148621cc49a1c27d31565260703672c4705c49d-289x559.png?fm=webp&w=384&q=75",
+            alt: "3",
           },
         ],
       },
@@ -106,18 +115,22 @@ export const VariantC: StoryObj<typeof AppPromo> = {
           {
             image:
               "https://cdn.sanity.io/images/9itgab5x/staging/e3cb72c85bf9207d44bb9e0db92cd80be5662108-274x589.png?fm=webp&w=384&q=75",
+            alt: "alt 1",
           },
           {
             image:
               "https://cdn.sanity.io/images/9itgab5x/staging/b5e5d428e809f5f6e500df911ef16ab648be35a1-283x468.png?fm=webp&w=384&q=75",
+            alt: "alt 2",
           },
           {
             image:
               "https://cdn.sanity.io/images/9itgab5x/staging/ce963623bee96f0173097354a8da28472c88dce3-289x559.png?fm=webp&w=384&q=75",
+            alt: "alt 3",
           },
           {
             image:
               "https://cdn.sanity.io/images/9itgab5x/staging/4148621cc49a1c27d31565260703672c4705c49d-289x559.png?fm=webp&w=384&q=75",
+            alt: "alt 4",
           },
         ],
       },

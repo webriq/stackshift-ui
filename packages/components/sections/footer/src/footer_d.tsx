@@ -47,7 +47,6 @@ function LogoSection({ logo }: { logo?: Logo }) {
       target={logo?.linkTarget}
       rel={logo?.linkTarget === "_blank" ? "noopener noreferrer" : ""}>
       <Image
-        className="h-14"
         src={`${logo?.image}`}
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         width={132}
@@ -131,7 +130,7 @@ function SocialMediaLink({ social }: { social?: SocialLink }) {
     <span key={social?._key}>
       <Link
         aria-label={social?.socialMedia || social?.socialMediaPlatform || ""}
-        className="inline-block p-2 mr-2 rounded bg-gray-50 hover:bg-gray-100"
+        className="inline-block p-2 mr-2 rounded"
         target="_blank"
         rel="noopener noreferrer"
         href={social?.socialMediaLink}>

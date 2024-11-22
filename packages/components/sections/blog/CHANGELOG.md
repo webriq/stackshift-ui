@@ -1,5 +1,13 @@
 # @stackshift-ui/blog
 
+## 6.0.7
+
+### Patch Changes
+
+- Images by default are in rounded-md
+- Added alt dynamic values
+- Added author name on blog variants
+
 ## 6.0.6
 
 ### Patch Changes

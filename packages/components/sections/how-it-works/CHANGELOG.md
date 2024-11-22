@@ -1,5 +1,13 @@
 # @stackshift-ui/how-it-works
 
+## 6.0.4
+
+### Patch Changes
+
+- Adjusted steps number border radius to global and background color to secondary
+- How it works C: Adjusted height to be in uniform regardless of the text value.
+- How it works D: Adjusted text size.
+
 ## 6.0.3
 
 ### Patch Changes

@@ -15,7 +15,6 @@ export default function Portfolio_D({
   caption,
   title,
   portfoliosWithCategory,
-  primaryButton,
   length = 6,
 }: PortfolioProps) {
   const portfoliosPerPage = length;
@@ -56,7 +55,7 @@ export default function Portfolio_D({
             </div>
           </div>
         </div>
-        <PrimaryButton button={primaryButton} />
+        <PrimaryButton button={portfoliosPerCategory?.primaryButton} />
       </Container>
     </Section>
   );
@@ -86,7 +85,7 @@ function PrimaryButton({ button }: { button?: LabeledRoute | null }) {
 
   return (
     <div className="text-center">
-      <Button as="link" ariaLabel={button?.label} link={button} className="text-white">
+      <Button as="link" ariaLabel={button?.label} link={button}>
         {button?.label}
       </Button>
     </div>
@@ -123,20 +122,20 @@ function PortfolioCategories({
 
 function ProjectItem({ size, content }: { size?: string | null; content?: Content }) {
   const breakpoints = useMediaQuery("639");
-  const maxLength = breakpoints ? 60 : 90;
+  const maxLength = breakpoints ? 40 : 90;
 
   return (
     <div className={`w-full px-4 mb-8 ${size === "lg" ? "w-full" : "lg:w-1/2"}`}>
       {content?.mainImage?.image && (
-        <div className="relative overflow-hidden rounded-global">
+        <div className="relative overflow-hidden rounded-md">
           <Image
             className={`object-cover w-full ${size === "lg" ? "h-128" : "h-64"}`}
             src={content?.mainImage?.image}
             //width={352}
             //height={280}
-            alt={`portfolio-image-${content?._key}`}
+            alt={content?.mainImage?.alt ?? `portfolio-image-${content?._key}`}
           />
-          <div className="absolute inset-0 z-10 justify-center p-6 duration-300 bg-slate-900 rounded-lg opacity-0 hover:opacity-80">
+          <div className="absolute inset-0 z-10 justify-center p-6 duration-300 bg-slate-900 rounded-md opacity-0 hover:opacity-80">
             <div className="max-w-md my-auto text-xs">
               {content?.subtitle && (
                 <Text className="text-sm text-primary" weight="bold">
@@ -168,7 +167,7 @@ function ProjectItem({ size, content }: { size?: string | null; content?: Conten
                     variant="outline"
                     ariaLabel={content?.primaryButton?.label}
                     link={content?.primaryButton}
-                    className="bg-transparent border-secondary outline text-white hover:bg-secondary/20 hover:border-secondary/20 inline-block rounded-l-xl rounded-t-xl font-bold transition duration-200 px-3 py-4">
+                    className="bg-transparent border-secondary outline text-white hover:bg-secondary/20 hover:border-secondary/20 inline-block rounded-global font-bold transition duration-200 px-3 py-4">
                     {content?.primaryButton?.label}
                   </Button>
                 )}

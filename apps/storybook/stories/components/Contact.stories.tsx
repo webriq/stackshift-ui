@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import { Contact } from "@stackshift-ui/react";
+import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Contact> = {
   title: "Components/Contact",
@@ -36,6 +36,8 @@ export const VariantA: StoryObj<typeof Contact> = {
         ],
         form: {
           buttonLabel: "Get Started",
+          subtitle: "Sign up",
+          name: "Create an account",
           fields: [
             {
               name: "Subject",

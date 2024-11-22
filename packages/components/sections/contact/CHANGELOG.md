@@ -1,5 +1,14 @@
 # @stackshift-ui/contact
 
+## 6.0.5
+
+### Patch Changes
+
+- Contact A: Fixed issue on displaying form name or title in the heading, fixed issue on displaying the social link image
+- Contact B: Fixed social link image
+- Updated dependencies
+  - @stackshift-ui/form-field@6.0.5
+
 ## 6.0.4
 
 ### Patch Changes

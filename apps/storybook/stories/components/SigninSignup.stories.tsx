@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import { SigninSignup } from "@stackshift-ui/react";
+import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof SigninSignup> = {
   title: "Components/Sign in Sign up",
@@ -46,6 +46,11 @@ export const VariantA: Story = {
             {
               name: "Password",
               placeholder: "Password",
+              type: "inputPassword",
+            },
+            {
+              name: "Confirm Password",
+              placeholder: "Confirm Password",
               type: "inputPassword",
             },
           ],
@@ -108,6 +113,11 @@ export const VariantB: Story = {
             {
               name: "Password",
               placeholder: "Password",
+              type: "inputPassword",
+            },
+            {
+              name: "Confirm Password",
+              placeholder: "Confirm Password",
               type: "inputPassword",
             },
           ],
