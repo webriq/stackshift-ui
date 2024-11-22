@@ -16,7 +16,8 @@
     "rebrand": "node scripts/rebrand.js",
     "next:pages": "turbo run dev --filter @apps/storybook",
     "changeset": "changeset",
-    "version-packages": "changeset version",
+    "release:status": "changeset status --verbose",
+    "release:version": "npx changeset version",
     "release": "changeset publish",
     "generate": "plop"
   },
