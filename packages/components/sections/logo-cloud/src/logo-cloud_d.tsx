@@ -1,9 +1,9 @@
-import { Image } from "@stackshift-ui/image";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
-import { Images } from "./types";
+import { Image } from "@stackshift-ui/image";
+import { Section } from "@stackshift-ui/section";
 import { LogoCloudProps } from ".";
+import { Images } from "./types";
 
 export default function LogoCloud_D({ images }: LogoCloudProps) {
   return (
@@ -26,7 +26,7 @@ function LogoItem({ image }: { image?: Images }) {
         <Flex
           align="center"
           justify="center"
-          className="mx-auto h-[192px] w-[192px]  rounded bg-gray-50">
+          className="mx-auto h-[192px] w-[192px] rounded-global bg-gray-50">
           <Image
             className="object-scale-down w-full h-full"
             src={`${image?.image}`}

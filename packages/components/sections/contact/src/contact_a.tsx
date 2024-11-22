@@ -5,6 +5,7 @@ import { Flex } from "@stackshift-ui/flex";
 import { Form } from "@stackshift-ui/form";
 import { FormField } from "@stackshift-ui/form-field";
 import { Heading } from "@stackshift-ui/heading";
+import { Image } from "@stackshift-ui/image";
 import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
 import { SocialIcons } from "@stackshift-ui/social-icons";
@@ -13,7 +14,7 @@ import React from "react";
 
 import { ContactProps } from ".";
 import { thankYouPageLink } from "./helper";
-import { SocialLink, Form as iForm, Socials as iSocials } from "./types";
+import { SocialLink, Form as iForm } from "./types";
 
 export default function Contact_A({
   contactDescription,
@@ -30,11 +31,7 @@ export default function Contact_A({
       <Container maxWidth={1280}>
         <Flex direction="col" gap={8} justify="between" className="lg:flex-row">
           <Flex direction="col" gap={8} className="px-10 w-full basis-1/2">
-            <ContactTitleAndDescription
-              form={form}
-              title={title}
-              contactDescription={contactDescription}
-            />
+            <ContactTitleAndDescription title={title} contactDescription={contactDescription} />
             <OfficeInformation
               officeInformation={officeInformation}
               contactEmail={contactEmail}
@@ -50,19 +47,17 @@ export default function Contact_A({
 }
 
 function ContactTitleAndDescription({
-  form,
   title,
   contactDescription,
 }: {
-  form?: iForm;
   title?: string;
   contactDescription?: string;
 }) {
   return (
     <div>
-      {(form?.name || title) && <Heading>{form?.name || title}</Heading>}
+      {title && <Heading>{title}</Heading>}
       {contactDescription && (
-        <Text muted className="mt-5 leading-loose text-gray-700">
+        <Text muted className="mt-5 leading-loose">
           {contactDescription}
         </Text>
       )}
@@ -126,15 +121,33 @@ function SocialLinks({ socialLinks }: { socialLinks?: SocialLink[] }) {
       {socialLinks?.map(social => (
         <Link
           aria-label={social?.socialMedia || social?.socialMediaPlatform || ""}
-          className="inline-block mr-4 rounded hover:bg-gray-100"
+          className="inline-block mr-4 rounded"
           target="_blank"
           rel="noopener noreferrer"
           href={social?.socialMediaLink ?? "/page-not-found"}
           key={social?._key}>
-          {social?.socialMediaLink && <SocialIcons social={social.socialMedia as iSocials} />}
+          {social?.socialMediaIcon?.image ? (
+            <Image
+              src={social?.socialMediaIcon?.image}
+              width={24}
+              height={24}
+              alt={social?.socialMediaIcon?.alt ?? "contact-socialMedia-icon"}
+            />
+          ) : (
+            <SocialIcons social={social.socialMedia as any} />
+          )}
         </Link>
       ))}
     </React.Fragment>
+  );
+}
+
+function SubtitleAndHeadingText({ form }: { form?: iForm }) {
+  return (
+    <div className="mb-6 text-center lg:mb-10">
+      {form?.subtitle ? <Text muted>{form?.subtitle}</Text> : null}
+      {form?.name ? <Heading className="text-2xl lg:text-2xl">{form?.name}</Heading> : null}
+    </div>
   );
 }
 
@@ -150,7 +163,8 @@ function FormFields({
   if (!form) return null;
 
   return (
-    <div className="w-full px-5 sm:px-10 lg:w-1/2 lg:px-0 lg:pl-10 lg:pt-10">
+    <div className="w-full px-5 sm:px-10 lg:w-1/2 lg:px-0 lg:pl-10">
+      <SubtitleAndHeadingText form={form} />
       {form?.fields && (
         <Form
           id={form?.id ?? undefined}

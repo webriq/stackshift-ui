@@ -67,7 +67,7 @@ function CaptionAndTitleText({
 function ProjectItem({ content }: { content: Content }) {
   return (
     <div className="w-full px-4 mb-4 md:w-1/2 lg:w-1/3">
-      <div className="relative mx-auto overflow-hidden rounded-global md:mb-5">
+      <div className="relative mx-auto overflow-hidden rounded-md md:mb-5">
         {content?.mainImage?.image && (
           <Image
             className="object-cover w-full h-80"
@@ -82,7 +82,7 @@ function ProjectItem({ content }: { content: Content }) {
           direction="col"
           align="start"
           className="absolute inset-0 z-10 items-start p-6 duration-300 bg-slate-900 rounded opacity-0 hover:opacity-75">
-          <Text className="text-secondary-foreground">{content?.dateAdded}</Text>
+          <Text className="text-secondary">{content?.dateAdded}</Text>
           {content?.title && (
             <Text weight="bold" className="mb-auto text-white md:text-xl lg:text-2xl">
               {content?.title?.length > 80
@@ -96,7 +96,7 @@ function ProjectItem({ content }: { content: Content }) {
               variant="outline"
               ariaLabel={content?.primaryButton?.label}
               link={content?.primaryButton}
-              className="bg-transparent border-secondary outline text-white hover:bg-secondary/20 hover:border-secondary/20 inline-block rounded-l-xl rounded-t-xl font-bold transition duration-200 px-3 py-4">
+              className="bg-transparent border-secondary outline text-white hover:bg-secondary/20 hover:border-secondary/20 inline-block rounded-global font-bold transition duration-200 px-3 py-4">
               {content?.primaryButton?.label}
             </Button>
           )}

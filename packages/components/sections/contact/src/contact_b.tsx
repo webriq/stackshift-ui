@@ -9,7 +9,7 @@ import { SocialIcons } from "@stackshift-ui/social-icons";
 import { Text } from "@stackshift-ui/text";
 import React from "react";
 import { ContactProps } from ".";
-import { Socials } from "./types";
+import { SocialLink } from "./types";
 
 export default function Contact_B({
   title,
@@ -112,23 +112,25 @@ function SocialLinksCard({ socialLinks }: any) {
       <Heading className="mb-16" fontSize="2xl" type="h2">
         Socials
       </Heading>
-      <Flex justify="center">
+      <Flex justify="center" wrap>
         <SocialLinks socialLinks={socialLinks} />
       </Flex>
     </Card>
   );
 }
 
-function SocialLinks({ socialLinks }: any) {
+function SocialLinks({ socialLinks }: { socialLinks?: SocialLink[] }) {
+  if (!socialLinks) return null;
+
   return (
     <React.Fragment>
-      {socialLinks?.map((social: any) => (
+      {socialLinks?.map(social => (
         <Link
-          aria-label={social?.socialMedia || social?.socialMediaPlatform}
-          className="inline-block mr-4"
+          aria-label={social?.socialMedia || social?.socialMediaPlatform || ""}
+          className="inline-block mr-4 mb-4 rounded"
           target="_blank"
           rel="noopener noreferrer"
-          href={social?.socialMediaLink}
+          href={social?.socialMediaLink ?? "/page-not-found"}
           key={social?._key}>
           {social?.socialMediaIcon?.image ? (
             <Image
@@ -138,7 +140,7 @@ function SocialLinks({ socialLinks }: any) {
               alt={social?.socialMediaIcon?.alt ?? "contact-socialMedia-icon"}
             />
           ) : (
-            <SocialIcons social={social.socialMedia as Socials} />
+            <SocialIcons social={social.socialMedia as any} />
           )}
         </Link>
       ))}

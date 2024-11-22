@@ -14,7 +14,6 @@ export default function Portfolio_A({
   caption,
   title,
   portfoliosWithCategory,
-  primaryButton,
   length = 8,
 }: PortfolioProps): React.JSX.Element {
   const portfolioLength = length; //set initial number of portfolios to display for this variant
@@ -38,7 +37,7 @@ export default function Portfolio_A({
           portfolios={portfoliosPerCategory?.content}
           portfolioLength={portfolioLength}
         />
-        <PrimaryButton button={primaryButton} />
+        <PrimaryButton button={portfoliosPerCategory?.primaryButton} />
       </Container>
     </Section>
   );
@@ -116,7 +115,7 @@ function PortfolioContent({
     <Flex wrap className="mb-8">
       {portfolios?.slice(0, portfolioLength)?.map((content, index: number) => (
         <Flex className="w-full space-x-5 px-4 mb-8 sm:w-1/2 lg:w-1/4" key={content?._key}>
-          <div className="relative mx-auto h-[256px] w-[332px] overflow-hidden rounded-global">
+          <div className="relative mx-auto h-[256px] w-[332px] overflow-hidden rounded-md">
             {content?.mainImage?.image && (
               <Image
                 className="object-cover w-full h-full"
@@ -124,14 +123,14 @@ function PortfolioContent({
                 alt={content?.mainImage?.alt ?? `portfolio-image-${index}`}
               />
             )}
-            <div className="absolute inset-0 z-10 flex items-center justify-center duration-300 bg-slate-900 rounded-lg opacity-0 hover:opacity-75">
+            <div className="absolute inset-0 z-10 flex items-center justify-center duration-300 bg-slate-900 rounded-md opacity-0 hover:opacity-75">
               {content?.primaryButton?.label && (
                 <Button
                   as="link"
                   variant="outline"
                   ariaLabel={content?.primaryButton?.label}
                   link={content?.primaryButton}
-                  className="bg-transparent border-secondary outline text-white hover:bg-secondary/20 hover:border-secondary/20 inline-block rounded-l-xl rounded-t-xl font-bold transition duration-200 px-3 py-4">
+                  className="bg-transparent border-secondary outline text-white hover:bg-secondary/20 hover:border-secondary/20 inline-block rounded-global font-bold transition duration-200 px-3 py-4">
                   {content?.primaryButton?.label}
                 </Button>
               )}

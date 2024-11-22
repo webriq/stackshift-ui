@@ -99,7 +99,7 @@ function MainImage({ mainImage }: MainImageProps) {
     <div className="w-full h-full">
       <Image
         alt={mainImage.alt ?? "header-main-image"}
-        className="rounded-global"
+        className="rounded-md"
         height={700}
         sizes="100vw"
         src={`${mainImage?.image}`}

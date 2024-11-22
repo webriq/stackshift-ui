@@ -114,7 +114,7 @@ function TestimonialItem({ item, index }: { item?: iTestimonial; index: number }
 
   return (
     <div className="w-full px-3 mb-4 lg:w-1/3" key={index}>
-      <Card className="p-8 text-center ">
+      <Card className="p-8 text-center" borderRadius="md">
         <Text className="mb-8 leading-loose" muted>
           {item?.testimony}
         </Text>

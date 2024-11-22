@@ -1,5 +1,11 @@
 # @stackshift-ui/logo-cloud
 
+## 6.0.5
+
+### Patch Changes
+
+- Adjusted image background color and border radius to global
+
 ## 6.0.4
 
 ### Patch Changes

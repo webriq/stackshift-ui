@@ -1,5 +1,11 @@
 # @stackshift-ui/text-component
 
+## 6.0.4
+
+### Patch Changes
+
+- Updated width for Text Component B and C.
+
 ## 6.0.3
 
 ### Patch Changes

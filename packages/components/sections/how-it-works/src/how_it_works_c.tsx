@@ -38,7 +38,7 @@ function StepItems({ steps }: { steps?: ArrayOfTitleAndText[] }) {
   if (!steps) return null;
 
   return (
-    <Flex wrap justify="center">
+    <Flex wrap align="stretch">
       {steps?.map((step, index) => <StepItem step={step} index={index} key={step._key} />)}
     </Flex>
   );
@@ -48,9 +48,9 @@ function StepItem({ index, step }: { index: number; step?: ArrayOfTitleAndText }
   if (!step) return null;
 
   return (
-    <div className="w-full px-4 mt-8 md:w-1/2 lg:mb-0 lg:w-1/3" key={index}>
-      <Card className="px-6 py-10 text-center ">
-        <span className="inline-flex items-center justify-center w-16 h-16 mb-6 text-2xl font-bold rounded bg-secondary-foreground text-primary">
+    <Flex align="stretch" className="w-full px-4 mt-8 md:w-1/2 lg:mb-0 lg:w-1/3" key={index}>
+      <Card className="px-6 py-10 text-center bg-white" borderRadius="md">
+        <span className="inline-flex items-center justify-center w-16 h-16 mb-6 text-2xl font-bold rounded-global bg-secondary/50 text-primary">
           {index + 1}
         </span>
         <Text weight="bold" fontSize="2xl" className="text-gray-500 mb-4">
@@ -60,7 +60,7 @@ function StepItem({ index, step }: { index: number; step?: ArrayOfTitleAndText }
           {step?.plainText}
         </Text>
       </Card>
-    </div>
+    </Flex>
   );
 }
 

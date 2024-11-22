@@ -1,6 +1,6 @@
 import { LabeledRoute } from "../types";
 
-export const extractLink = (link: LabeledRoute) => {
+export const extractLink = (link: LabeledRoute): string => {
   //not found page
   if (!link?.internalLink && !link?.externalLink) {
     return "/page-not-found";

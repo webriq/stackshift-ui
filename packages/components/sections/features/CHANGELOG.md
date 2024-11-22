@@ -1,5 +1,19 @@
 # @stackshift-ui/features
 
+## 6.0.5
+
+### Patch Changes
+
+- Adjusted caption props type.
+- Features A: Added description text value, adjusted feature image background color.
+- Features B: Adjusted subtitle/caption text color secondary, border radius to md.
+- Features C: Added description text value, adjusted feature image border radius to md.
+- Features D: Added description text value, subtitle/caption text color to secondary, feature image border radius to md.
+- Features E: Adjusted image and card border radius to md.
+- Features F: Adjusted image border radius to md.
+- Features G: Adjusted image border radius to md.
+- Features H: Adjusted feature images border radius to md
+
 ## 6.0.4
 
 ### Patch Changes

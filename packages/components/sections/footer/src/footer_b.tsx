@@ -33,7 +33,7 @@ function LogoSection({ logo }: { logo?: Logo }) {
   if (!logo?.image) return null;
 
   return (
-    <div className="w-full mb-12 lg:mb-4 lg:w-1/5">
+    <div className="w-full mt-8 lg:mb-4 lg:w-1/5">
       <Link
         aria-label={logoLink(logo) === "/" ? "Go to home page" : `Go to ${logoLink(logo)}`}
         className="inline-block text-3xl font-bold leading-none"
@@ -43,8 +43,8 @@ function LogoSection({ logo }: { logo?: Logo }) {
         <Image
           src={logo?.image}
           alt={logo?.alt ?? "footer-logo"}
-          width={132}
-          height={132}
+          width={80}
+          height={80}
           className="inline-block text-3xl font-bold leading-none"
         />
       </Link>
@@ -131,7 +131,7 @@ function SocialMediaLink({ social }: { social?: SocialLink }) {
   return (
     <Link
       aria-label={social?.socialMedia || social?.socialMediaPlatform || ""}
-      className="inline-block p-2 mr-2 rounded bg-gray-50 hover:bg-gray-100"
+      className="inline-block p-2 mr-2 rounded"
       target="_blank"
       rel="noopener noreferrer"
       href={social?.socialMediaLink}

@@ -94,7 +94,7 @@ function MainImage({ mainImage }: MainImageProps) {
   return (
     <div className="relative w-full max-w-md">
       <Image
-        className="overflow-hidden rounded-global object-cover md:rounded-br-none lg:h-[448px] relative z-10"
+        className="overflow-hidden rounded-md object-cover md:rounded-br-none lg:h-[448px] relative z-10"
         src={`${mainImage.image}`}
         sizes="(min-width: 520px) 448px, 90vw"
         width={448}

@@ -61,9 +61,9 @@ export default function Testimonial_D({ testimonials }: TestimonialProps) {
             />
           )}
           {testimonials?.[currentIndex] && (
-            <Card className="flex flex-wrap w-full">
+            <Card className="flex flex-wrap w-full" borderRadius="md">
               {testimonials?.[currentIndex]?.rating && (
-                <div className="w-full py-10 text-center border-r lg:w-1/3">
+                <div className="w-full py-10 text-center border-b lg:border-r lg:border-b-0 lg:w-1/3">
                   <span className="text-5xl font-bold lg:text-6xl">
                     {`${testimonials?.[currentIndex]?.rating}.0`}
                   </span>
@@ -74,10 +74,10 @@ export default function Testimonial_D({ testimonials }: TestimonialProps) {
                       )}
                   </Flex>
                   <div className="object-contain w-32 h-24 mx-auto mb-6 rounded-full">
-                    {testimonials[currentIndex]?.mainImage && (
+                    {testimonials[currentIndex]?.mainImage?.image && (
                       <Image
                         className="h-[96px] w-[128px] object-scale-down"
-                        src={`${testimonials[currentIndex]?.mainImage}`}
+                        src={`${testimonials[currentIndex]?.mainImage?.image}`}
                         width={128}
                         height={96}
                         alt={

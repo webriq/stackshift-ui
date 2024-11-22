@@ -1,5 +1,11 @@
 # @stackshift-ui/input-file
 
+## 6.0.4
+
+### Patch Changes
+
+- border radius update
+
 ## 6.0.3
 
 ### Patch Changes

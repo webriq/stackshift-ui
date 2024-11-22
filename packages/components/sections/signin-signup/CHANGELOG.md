@@ -1,5 +1,14 @@
 # @stackshift-ui/signin-signup
 
+## 6.0.5
+
+### Patch Changes
+
+- Section and Card border radius to md.
+- Fixed eye icon password toggle functionality on form fields.
+- Updated dependencies
+  - @stackshift-ui/form-field@6.0.5
+
 ## 6.0.4
 
 ### Patch Changes

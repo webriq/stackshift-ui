@@ -1,11 +1,11 @@
-import { Heading } from "@stackshift-ui/heading";
-import { Text } from "@stackshift-ui/text";
-import { Image } from "@stackshift-ui/image";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
-import { Images } from "./types";
+import { Heading } from "@stackshift-ui/heading";
+import { Image } from "@stackshift-ui/image";
+import { Section } from "@stackshift-ui/section";
+import { Text } from "@stackshift-ui/text";
 import { AppPromoProps } from ".";
+import { Images } from "./types";
 
 export default function AppPromo_C({
   subtitle,
@@ -121,7 +121,7 @@ function ImageDisplay({ images, start, end }: { images?: Images[]; start: number
 function CheckIcon() {
   return (
     <svg
-      className="w-5 h-5 mr-2 text-primary-foreground"
+      className="w-5 h-5 mr-2 text-primary"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
       fill="currentColor">

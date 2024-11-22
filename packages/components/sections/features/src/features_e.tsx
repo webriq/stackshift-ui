@@ -47,7 +47,7 @@ function ImageSection({ featuredItems, item }: { featuredItems?: FeaturedItem[];
   return (
     <div className="mx-auto overflow-hidden rounded-md md:max-w-xl xl:max-w-4xl">
       <Image
-        className="relative object-cover rounded-global"
+        className="relative object-cover rounded-md"
         src={`${featuredItems?.[item]?.mainImage?.image}`}
         sizes="100vw"
         width={896}
@@ -62,7 +62,9 @@ function FeaturesInfo({ featuredItems, item }: { featuredItems?: FeaturedItem[];
   if (!featuredItems) return null;
 
   return (
-    <Card className="top-0 left-0 max-w-xl p-6 mx-auto text-center bg-white md:mt-12 md:p-10 lg:mt-12 lg:p-10 xl:absolute xl:mx-0 xl:mt-20 xl:py-24">
+    <Card
+      className="top-0 left-0 max-w-xl p-6 mx-auto text-center bg-white md:mt-12 md:p-10 lg:mt-12 lg:p-10 xl:absolute xl:mx-0 xl:mt-20 xl:py-24"
+      borderRadius="md">
       <Text weight="bold" className="text-xs lg:text-md md:text-sm xl:text-lg text-secondary">
         {featuredItems?.[item]?.subtitle && featuredItems?.[item]?.subtitle}
       </Text>

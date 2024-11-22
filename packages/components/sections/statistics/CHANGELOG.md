@@ -1,5 +1,14 @@
 # @stackshift-ui/statistics
 
+## 6.0.5
+
+### Patch Changes
+
+- Added alt text value.
+- Statistics A: Added background color to white and shadow
+- Updated dependencies
+  - @stackshift-ui/stats-card@6.0.4
+
 ## 6.0.4
 
 ### Patch Changes

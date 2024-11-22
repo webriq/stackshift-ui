@@ -38,8 +38,8 @@ export const StatsCard: React.FC<StatsCardProps> = ({
   };
 
   const imageVariantClass = {
-    inline: `inline-block p-4 mr-4 rounded bg-secondary-foreground`,
-    stacked: `inline-block p-4 mx-auto rounded bg-secondary-foreground`,
+    inline: `inline-block p-4 mr-4 rounded bg-secondary/50`,
+    stacked: `inline-block p-4 mx-auto rounded bg-secondary/50`,
   };
 
   const classes = variantClass[variant] ?? variantClass["inline"];

@@ -22,7 +22,7 @@ export default function TextComponent_C({
         )}
         <Flex wrap justify="center" className="mx-auto">
           {firstColumn && (
-            <div className="px-3 mb-6 text-xs leading-relaxed text-justify text-gray-500 md:mb-0 lg:w-1/4 lg:text-base">
+            <div className="px-3 mb-6 text-xs leading-relaxed text-justify text-gray-500 md:mb-0 lg:w-1/3 lg:text-base">
               <PortableText
                 value={firstColumn}
                 components={textComponentBlockStyling}
@@ -31,7 +31,7 @@ export default function TextComponent_C({
             </div>
           )}
           {secondColumn && (
-            <div className="px-3 mb-6 text-xs leading-relaxed text-justify text-gray-500 md:mb-0 lg:w-1/4 lg:text-base">
+            <div className="px-3 mb-6 text-xs leading-relaxed text-justify text-gray-500 md:mb-0 lg:w-1/3 lg:text-base">
               <PortableText
                 value={secondColumn}
                 components={textComponentBlockStyling}
@@ -40,7 +40,7 @@ export default function TextComponent_C({
             </div>
           )}
           {thirdColumn && (
-            <div className="px-3 mb-6 text-xs leading-relaxed text-justify text-gray-500 md:mb-0 lg:w-1/4 lg:text-base">
+            <div className="px-3 mb-6 text-xs leading-relaxed text-justify text-gray-500 md:mb-0 lg:w-1/3 lg:text-base">
               <PortableText
                 value={thirdColumn}
                 components={textComponentBlockStyling}

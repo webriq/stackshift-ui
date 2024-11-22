@@ -10,7 +10,7 @@ import { Input } from "@stackshift-ui/input";
 import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
 import { Text } from "@stackshift-ui/text";
-import React, { useState } from "react";
+import React from "react";
 import { SignUpFormProps } from ".";
 import { logoLink, thankYouPageLink } from "./helper";
 import { LabeledRoute, Logo, Form as iForm } from "./types";
@@ -21,7 +21,7 @@ export default function SigninSignup_B({ logo, form, formLinks, signInLink }: Si
       <Container maxWidth={1280}>
         <Container maxWidth={576}>
           <LogoSection logo={logo} />
-          <Card className="p-6 mb-6 bg-white lg:mb-10 lg:p-12">
+          <Card borderRadius="md" className="p-6 mb-6 bg-white lg:mb-10 lg:p-12">
             <SubtitleAndHeadingText form={form} />
             <SignupForm form={form} signInLink={signInLink} />
           </Card>
@@ -66,7 +66,14 @@ function SubtitleAndHeadingText({ form }: { form?: iForm }) {
 
 function SignupForm({ form, signInLink }: { form?: iForm; signInLink?: LabeledRoute }) {
   if (!form?.fields) return null;
-  const [showPassword, setShowPassword] = useState(false);
+  const [showPasswords, setShowPasswords] = React.useState<{ [key: string]: boolean }>({});
+
+  const togglePasswordVisibility = (fieldName: string) => {
+    setShowPasswords(prev => ({
+      ...prev,
+      [fieldName]: !prev[fieldName],
+    }));
+  };
 
   return (
     <Form
@@ -74,7 +81,11 @@ function SignupForm({ form, signInLink }: { form?: iForm; signInLink?: LabeledRo
       name="SignUp-VariantB-Form"
       className="form-signup"
       thankyouPage={thankYouPageLink(form?.thankYouPage)}>
-      <FormFields form={form} showPassword={showPassword} setShowPassword={setShowPassword} />
+      <FormFields
+        form={form}
+        showPassword={showPasswords}
+        togglePasswordVisibility={togglePasswordVisibility}
+      />
       <div>
         <div className="webriq-recaptcha" />
       </div>
@@ -89,11 +100,11 @@ function SignupForm({ form, signInLink }: { form?: iForm; signInLink?: LabeledRo
 function FormFields({
   form,
   showPassword,
-  setShowPassword,
+  togglePasswordVisibility,
 }: {
   form?: iForm;
-  showPassword: boolean;
-  setShowPassword: React.Dispatch<React.SetStateAction<boolean>>;
+  showPassword: { [key: string]: boolean };
+  togglePasswordVisibility: (fieldName: string) => void;
 }) {
   return (
     <React.Fragment>
@@ -116,28 +127,12 @@ function FormFields({
 
       {form?.fields?.slice(2)?.map((formFields, index) => (
         <div key={index} className="my-3">
-          {formFields?.type === "inputPassword" ? (
-            <div className="flex">
-              <Input
-                noLabel
-                ariaLabel={formFields?.placeholder ?? formFields?.name}
-                variant="secondary"
-                type={showPassword ? "text" : "password"}
-                placeholder={formFields?.placeholder}
-                name={formFields?.name}
-                required={formFields?.isRequired}
-              />
-              {/* SVG icon on the right of the password input field */}
-              <Button
-                variant="unstyled"
-                as="button"
-                ariaLabel={showPassword ? "Show password" : "Hide password"}
-                className="focus:outline-none mr-4"
-                type="button"
-                onClick={() => setShowPassword(!showPassword)}>
-                <PasswordIcon showPassword={showPassword} />
-              </Button>
-            </div>
+          {formFields?.type === "inputPassword" && formFields.name ? (
+            <PasswordField
+              formFields={formFields}
+              showPassword={showPassword[formFields.name] || false}
+              togglePassword={() => togglePasswordVisibility(formFields.name!)}
+            />
           ) : (
             <FormField
               noLabel
@@ -153,6 +148,40 @@ function FormFields({
         </div>
       ))}
     </React.Fragment>
+  );
+}
+
+function PasswordField({
+  formFields,
+  showPassword,
+  togglePassword,
+}: {
+  formFields?: any;
+  showPassword: boolean;
+  togglePassword: () => void;
+}) {
+  return (
+    <div className="flex">
+      <Input
+        noLabel
+        ariaLabel={formFields?.placeholder ?? formFields?.name}
+        variant="secondary"
+        type={showPassword ? "text" : "password"}
+        placeholder={formFields?.placeholder}
+        name={formFields?.name}
+        required={formFields?.isRequired}
+      />
+      {/* SVG icon on the right of the password input field */}
+      <Button
+        variant="unstyled"
+        as="button"
+        ariaLabel={showPassword ? "Show password" : "Hide password"}
+        className="focus:outline-none mr-4"
+        type="button"
+        onClick={togglePassword}>
+        <PasswordIcon showPassword={showPassword} />
+      </Button>
+    </div>
   );
 }
 
@@ -220,7 +249,7 @@ function PasswordIcon({ showPassword }: { showPassword: boolean }) {
     <React.Fragment>
       {showPassword ? (
         <svg
-          className="w-5 h-5 my-auto text-gray-500"
+          className="w-5 h-5 my-auto ml-4 text-gray-500"
           xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true"
           role="img"

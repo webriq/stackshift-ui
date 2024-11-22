@@ -1,5 +1,15 @@
 # @stackshift-ui/form-field
 
+## 6.0.5
+
+### Patch Changes
+
+- Component packages updates
+- Updated dependencies
+  - @stackshift-ui/input-file@6.0.4
+  - @stackshift-ui/textarea@6.0.4
+  - @stackshift-ui/select@6.0.4
+
 ## 6.0.4
 
 ### Patch Changes

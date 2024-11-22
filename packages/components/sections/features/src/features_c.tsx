@@ -9,12 +9,12 @@ import React from "react";
 import { FeaturesProps } from ".";
 import { ArrayOfImageTitleAndText } from "./types";
 
-export default function Features_C({ caption, title, features }: FeaturesProps) {
+export default function Features_C({ caption, title, description, features }: FeaturesProps) {
   return (
     <Section className="py-20 bg-background">
       <Container maxWidth={1280}>
         <Container maxWidth={448} className="mb-16 text-center ">
-          <CaptionAndTitleSection caption={caption} title={title} />
+          <CaptionAndTitleSection caption={caption} title={title} description={description} />
         </Container>
         <FeatureItems features={features} />
       </Container>
@@ -22,7 +22,15 @@ export default function Features_C({ caption, title, features }: FeaturesProps) 
   );
 }
 
-function CaptionAndTitleSection({ caption, title }: { caption?: string; title?: string }) {
+function CaptionAndTitleSection({
+  caption,
+  title,
+  description,
+}: {
+  caption?: string;
+  title?: string;
+  description?: string;
+}) {
   return (
     <React.Fragment>
       {caption ? (
@@ -31,6 +39,11 @@ function CaptionAndTitleSection({ caption, title }: { caption?: string; title?: 
         </Text>
       ) : null}
       {title ? <Heading fontSize="3xl">{title}</Heading> : null}
+      {description ? (
+        <Text muted className="mb-6 leading-loose">
+          {description}
+        </Text>
+      ) : null}
     </React.Fragment>
   );
 }
@@ -50,8 +63,8 @@ function FeatureItems({ features }: { features?: ArrayOfImageTitleAndText[] }) {
 function FeatureItem({ feature }: { feature: ArrayOfImageTitleAndText }) {
   return (
     <div className="w-full px-3 mb-6 lg:w-1/2">
-      <Card className="flex flex-wrap h-full p-6">
-        <div className="self-start inline-block p-3 mb-4 mr-6 rounded-lg bg-secondary-foreground md:p-5 lg:mb-0">
+      <Card className="flex flex-wrap h-full p-6 bg-white" borderRadius="md">
+        <div className="self-start inline-block p-3 mb-4 mr-6 rounded-lg bg-secondary/50 md:p-5 lg:mb-0">
           {feature?.mainImage?.image && (
             <Image
               className="object-scale-down"

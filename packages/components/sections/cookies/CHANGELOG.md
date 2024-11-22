@@ -1,5 +1,11 @@
 # @stackshift-ui/cookies
 
+## 6.0.4
+
+### Patch Changes
+
+- Minor Typescript update
+
 ## 6.0.3
 
 ### Patch Changes

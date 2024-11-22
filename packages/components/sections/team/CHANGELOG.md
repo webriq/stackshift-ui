@@ -1,5 +1,14 @@
 # @stackshift-ui/team
 
+## 6.0.5
+
+### Patch Changes
+
+- Update Card and Image border radius to md.
+- Added shadow lg.
+- Updated dependencies
+  - @stackshift-ui/avatar@6.0.4
+
 ## 6.0.4
 
 ### Patch Changes

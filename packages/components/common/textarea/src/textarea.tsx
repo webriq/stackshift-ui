@@ -40,7 +40,7 @@ export const Textarea: React.FC<TextareaProps> = ({
 }) => {
   const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
 
-  const commonStyle = "h-24 w-full resize rounded p-4 text-xs leading-none";
+  const commonStyle = "h-24 w-full resize rounded-global p-4 text-xs leading-none";
   const primary = `${commonStyle}`;
   const secondary = `${commonStyle} p-4 outline-none`;
   const outline = `${commonStyle}  py-3 border border-slate-300`;

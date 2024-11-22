@@ -1,5 +1,13 @@
 # @stackshift-ui/header
 
+## 6.0.6
+
+### Patch Changes
+
+- Header A, D: Adjusted image border radius to md.
+- Updated dependencies
+  - @stackshift-ui/signin-signup@6.0.5
+
 ## 6.0.5
 
 ### Patch Changes

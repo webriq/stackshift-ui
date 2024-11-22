@@ -38,8 +38,8 @@ function LogoSection({ logo }: { logo?: Logo }) {
       <Image
         src={logo?.image}
         alt={logo?.alt ?? "callToAction-logo"}
-        width={56}
-        height={56}
+        width={70}
+        height={70}
         className="inline-block p-3 mb-6 rounded"
       />
     </Link>

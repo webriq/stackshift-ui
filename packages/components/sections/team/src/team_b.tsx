@@ -93,10 +93,10 @@ function TeamMemberCard({ member }: { member?: iTeam }) {
   if (!member) return null;
 
   return (
-    <Card className="flex p-6 bg-white">
+    <Card className="flex p-6 shadow-lg bg-white" borderRadius="md">
       {member.mainImage?.image && (
         <Image
-          className="object-cover overflow-hidden rounded-global"
+          className="object-cover overflow-hidden rounded-md"
           src={`${member.mainImage.image}`}
           sizes="100vw"
           width={329}

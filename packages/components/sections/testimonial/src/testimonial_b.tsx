@@ -73,27 +73,27 @@ function SwiperControl({
   if (!testimony) return null;
 
   return (
-    <React.Fragment>
+    <div className="flex items-center justify-between w-full">
       {/* SHOW PREV */}
-      {testimony && testimony?.length >= 4 && (
+      {testimony?.length >= 4 && (
         <SwiperButton
           type="left"
-          className="order-last p-4 mr-3 bg-white lg:order-first lg:mr-0"
+          className="p-4 bg-white"
           onClick={() => slider("prev")}
           ariaLabel="Show previous testimonial"
         />
       )}
-      {children}
+      <div className="flex-1 text-center">{children}</div>
       {/* SHOW NEXT */}
-      {testimony && testimony?.length >= 4 && (
+      {testimony?.length >= 4 && (
         <SwiperButton
           type="right"
-          className="order-last p-4 bg-white"
+          className="p-4 bg-white"
           onClick={() => slider("next")}
           ariaLabel="Show next testimonial"
         />
       )}
-    </React.Fragment>
+    </div>
   );
 }
 
@@ -124,7 +124,7 @@ function TestimonialItem({
 
   return (
     <div className="mb-4 px-3 w-full lg:w-1/3">
-      <Card className="p-5 ">
+      <Card className="p-5" borderRadius="md">
         <QuoteIcon />
         <Text className="mb-4 leading-loose" muted>
           {testimony}

@@ -1,13 +1,13 @@
-import React from "react";
 import { Avatar } from "@stackshift-ui/avatar";
 import { Card } from "@stackshift-ui/card";
-import { Heading } from "@stackshift-ui/heading";
-import { Text } from "@stackshift-ui/text";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
-import { Team as iTeam } from "./types";
+import { Heading } from "@stackshift-ui/heading";
+import { Section } from "@stackshift-ui/section";
+import { Text } from "@stackshift-ui/text";
+import React from "react";
 import { MemberTextProps, TeamsProps } from ".";
+import { Team as iTeam } from "./types";
 
 export default function Team_A({ caption, title, team }: TeamsProps) {
   return (
@@ -46,7 +46,7 @@ function Teams({ team }: { team?: iTeam[] }) {
     <Flex wrap>
       {team?.map(member => (
         <div className="w-full px-3 mb-6 md:w-1/2 lg:w-1/3" key={member?.name}>
-          <Card className="py-24 text-center">
+          <Card className="py-24 text-center shadow-lg bg-white" borderRadius="md">
             {member?.mainImage?.image && (
               <Avatar
                 className="mx-auto border-0"

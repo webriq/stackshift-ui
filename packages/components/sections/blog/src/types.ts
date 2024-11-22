@@ -97,6 +97,7 @@ export interface BlogPost extends SanityBody {
   excerpt?: string | null;
   link?: string | null;
   mainImage?: string | null;
+  alt?: string | null;
   publishedAt?: string;
   seo?: Seo | null;
   slug?: SanitySlug | null;

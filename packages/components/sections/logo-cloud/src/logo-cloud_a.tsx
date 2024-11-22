@@ -41,7 +41,7 @@ function LogoCloudImages({ images }: { images?: Images[] }) {
             <Flex
               align="center"
               justify="center"
-              className="mx-auto  h-[192px] w-[192px] rounded-global bg-white">
+              className="mx-auto h-[192px] w-[192px] rounded-global bg-gray-50">
               <Image
                 className="object-scale-down"
                 src={`${image?.image}`}

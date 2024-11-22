@@ -1,5 +1,15 @@
 # @stackshift-ui/testimonial
 
+## 6.0.4
+
+### Patch Changes
+
+- Updated Card border radius to md.
+- Updated image endpoint.
+- Testimonial C: Swiper Button structure update.
+- Updated dependencies
+  - @stackshift-ui/avatar@6.0.4
+
 ## 6.0.3
 
 ### Patch Changes

@@ -1,5 +1,12 @@
 # @stackshift-ui/navigation
 
+## 6.0.5
+
+### Patch Changes
+
+- Navigation A: Fixed responsive on buttons alignment.
+- Navigation D: Fixed logo image overflow
+
 ## 6.0.4
 
 ### Patch Changes

@@ -1,9 +1,9 @@
-import { StatsCard } from "@stackshift-ui/stats-card";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
-import { StatItems } from "./types";
+import { Section } from "@stackshift-ui/section";
+import { StatsCard } from "@stackshift-ui/stats-card";
 import { StatsProps } from ".";
+import { StatItems } from "./types";
 
 export default function Statistics_B({ stats }: StatsProps) {
   return (
@@ -27,6 +27,7 @@ function StatisticsItems({ stats }: { stats?: StatItems[] }) {
           value={stat?.value ?? ""}
           label={stat?.label ?? ""}
           icon={`${stat?.mainImage?.image}`}
+          alt={stat?.mainImage?.alt}
         />
       ))}
     </Flex>

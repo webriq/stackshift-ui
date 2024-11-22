@@ -17,12 +17,12 @@ interface FeatureItemProps {
   };
 }
 
-export default function Features_A({ caption, title, features }: FeaturesProps) {
+export default function Features_A({ caption, title, description, features }: FeaturesProps) {
   return (
     <Section className="py-20 bg-background">
       <Container maxWidth={1280}>
         <Container maxWidth={448} className="mb-16 text-center ">
-          <CaptionAndTitleText caption={caption} title={title} />
+          <CaptionAndTitleText caption={caption} title={title} description={description} />
         </Container>
         <Flex wrap>
           <FeatureItems features={features} />
@@ -32,7 +32,15 @@ export default function Features_A({ caption, title, features }: FeaturesProps) 
   );
 }
 
-function CaptionAndTitleText({ caption, title }: { caption?: string; title?: string }) {
+function CaptionAndTitleText({
+  caption,
+  title,
+  description,
+}: {
+  caption?: string;
+  title?: string;
+  description?: string;
+}) {
   return (
     <React.Fragment>
       {caption ? (
@@ -41,6 +49,11 @@ function CaptionAndTitleText({ caption, title }: { caption?: string; title?: str
         </Text>
       ) : null}
       {title ? <Heading fontSize="3xl">{title}</Heading> : null}
+      {description ? (
+        <Text muted className="mb-6 leading-loose">
+          {description}
+        </Text>
+      ) : null}
     </React.Fragment>
   );
 }
@@ -80,7 +93,7 @@ function FeatureImage({ feature }: FeatureItemProps) {
   if (!feature?.mainImage?.image) return null;
 
   return (
-    <span className="inline-block p-3 mb-4 rounded bg-secondary-foreground text-primary-foreground md:mb-6">
+    <span className="inline-block p-3 mb-4 rounded bg-secondary/50 text-primary-foreground md:mb-6">
       <Image
         className="object-scale-down"
         src={`${feature?.mainImage?.image}`}

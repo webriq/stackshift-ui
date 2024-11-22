@@ -9,12 +9,12 @@ import React from "react";
 import { FeaturesProps } from ".";
 import { ArrayOfImageTitleAndText } from "./types";
 
-export default function Features_D({ caption, title, features }: FeaturesProps) {
+export default function Features_D({ caption, title, description, features }: FeaturesProps) {
   return (
     <Section className="py-20 bg-background">
       <Container maxWidth={1280}>
         <Container maxWidth={448} className="mb-8 text-center">
-          <CaptionAndTitleSection caption={caption} title={title} />
+          <CaptionAndTitleSection caption={caption} title={title} description={description} />
         </Container>
         <FeatureItems features={features} />
       </Container>
@@ -22,15 +22,28 @@ export default function Features_D({ caption, title, features }: FeaturesProps) 
   );
 }
 
-function CaptionAndTitleSection({ caption, title }: { caption?: string; title?: string }) {
+function CaptionAndTitleSection({
+  caption,
+  title,
+  description,
+}: {
+  caption?: string;
+  title?: string;
+  description?: string;
+}) {
   return (
     <React.Fragment>
       {caption ? (
-        <Text weight="bold" className="text-primary">
+        <Text weight="bold" className="text-secondary">
           {caption}
         </Text>
       ) : null}
       {title ? <Heading fontSize="3xl">{title}</Heading> : null}
+      {description ? (
+        <Text muted className="mb-6 leading-loose">
+          {description}
+        </Text>
+      ) : null}
     </React.Fragment>
   );
 }
@@ -50,8 +63,8 @@ function FeatureItems({ features }: { features?: ArrayOfImageTitleAndText[] }) {
 function FeatureItem({ feature }: { feature: ArrayOfImageTitleAndText }) {
   return (
     <div className="w-full px-4 mt-8 lg:mb-0 lg:w-1/3">
-      <Card className="h-full px-6 py-12 text-center">
-        <div className="self-start inline-block p-3 mb-6 rounded-lg bg-secondary-foreground md:p-5">
+      <Card className="h-full px-6 py-12 text-center bg-white" borderRadius="md">
+        <div className="self-start inline-block p-3 mb-6 rounded-lg bg-secondary/50 md:p-5">
           {feature?.mainImage?.image && (
             <Image
               className="object-scale-down"

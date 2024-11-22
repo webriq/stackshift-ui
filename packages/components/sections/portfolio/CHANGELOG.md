@@ -1,5 +1,15 @@
 # @stackshift-ui/portfolio
 
+## 6.0.5
+
+### Patch Changes
+
+- Adjusted images border radius to md.
+- Adjusted primary buttons to be in border radius global.
+- Adjusted text colors.
+- Portfolio A, D: Fixed category button link.
+- Portfolio D: Adjusted text truncate on smaller images.
+
 ## 6.0.4
 
 ### Patch Changes

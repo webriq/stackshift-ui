@@ -25,7 +25,7 @@ export default function Navigation_D({
     <Section className="bg-background">
       <nav className="relative px-6 py-6">
         <Container maxWidth={1000}>
-          <Flex align="center">
+          <Flex align="center" justify="between">
             <NavLinks links={links} />
             <LogoSection logo={logo} />
             <Buttons primaryButton={primaryButton} secondaryButton={secondaryButton} />
@@ -48,14 +48,16 @@ function NavLinks({ links }: { links?: LabeledRouteWithKey[] }) {
   if (!links) return null;
 
   return (
-    <ul className="hidden lg:flex lg:w-auto lg:items-center lg:space-x-5">
-      {links.map((link, index) => (
-        <React.Fragment key={index}>
-          {link?.label && <NavItem link={link} />}
-          {links.length !== index + 1 && <NavIcon />}
-        </React.Fragment>
-      ))}
-    </ul>
+    <Flex className="hidden lg:flex" align="center">
+      <ul className="flex space-x-5">
+        {links.map((link, index) => (
+          <React.Fragment key={index}>
+            {link?.label && <NavItem link={link} />}
+            {links.length !== index + 1 && <NavIcon />}
+          </React.Fragment>
+        ))}
+      </ul>
+    </Flex>
   );
 }
 
@@ -98,7 +100,7 @@ function LogoSection({ logo }: { logo?: Logo }) {
   if (!logo) return null;
 
   return (
-    <div className="lg:absolute lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:transform">
+    <Flex className="flex-1 justify-start lg:justify-center">
       <Link
         aria-label={`Go to ${logoLink(logo) === "/" ? "home page" : logoLink(logo)}`}
         className="text-3xl font-bold leading-none"
@@ -108,12 +110,12 @@ function LogoSection({ logo }: { logo?: Logo }) {
         <Image
           src={logo?.image}
           alt={logo?.alt ?? "navigation-logo"}
-          width={100}
-          height={100}
-          className="text-3xl font-bold leading-none"
+          width={50}
+          height={50}
+          className="object-contain"
         />
       </Link>
-    </div>
+    </Flex>
   );
 }
 
@@ -125,13 +127,13 @@ function Buttons({
   secondaryButton?: LabeledRoute;
 }) {
   return (
-    <React.Fragment>
+    <Flex className="hidden lg:flex justify-end space-x-4">
       {primaryButton?.label && (
         <Button
           as="link"
           ariaLabel={primaryButton?.label}
           link={primaryButton}
-          className="hidden lg:inline-block px-4 py-3 mb-2 text-gray-900 lg:ml-auto lg:mr-3 font-semibold rounded-global bg-secondary hover:bg-secondary/50">
+          className="px-4 py-3 mb-2 leading-loose text-center text-gray-900 font-semibold rounded-global bg-secondary hover:bg-secondary/50">
           {primaryButton?.label}
         </Button>
       )}
@@ -140,11 +142,11 @@ function Buttons({
           as="link"
           ariaLabel={secondaryButton?.label}
           link={secondaryButton}
-          className="hidden lg:inline-block px-4 py-3 mb-2 leading-loose text-center text-white font-semibold bg-primary hover:bg-primary-foreground rounded-global">
+          className="px-4 py-3 mb-2 leading-loose text-center text-white font-semibold bg-primary hover:bg-primary-foreground rounded-global">
           {secondaryButton?.label}
         </Button>
       )}
-    </React.Fragment>
+    </Flex>
   );
 }
 
@@ -203,47 +205,43 @@ function ResponsiveNavLinks({
             </svg>
           </Button>
         </div>
-        <div>
-          <ul>
-            {links &&
-              links?.map((link, index) => (
-                <li className="mb-1" key={index}>
-                  <Button
-                    as="link"
-                    ariaLabel={link?.label}
-                    link={link}
-                    className="block p-4 text-sm font-semibold text-gray-700 no-underline rounded hover:bg-secondary-foreground hover:text-primary">
-                    {link?.label}
-                  </Button>
-                </li>
-              ))}
-          </ul>
+        <ul>
+          {links &&
+            links.map((link, index) => (
+              <li className="mb-1" key={index}>
+                <Button
+                  as="link"
+                  ariaLabel={link.label}
+                  link={link}
+                  className="block p-4 text-sm font-semibold text-gray-700 no-underline rounded hover:bg-secondary-foreground hover:text-primary">
+                  {link.label}
+                </Button>
+              </li>
+            ))}
+        </ul>
+        <div className="mt-auto pt-6">
+          {primaryButton?.label && (
+            <Button
+              as="link"
+              ariaLabel={primaryButton.label}
+              link={primaryButton}
+              className="block px-4 py-3 mb-2 text-center font-semibold rounded-global bg-secondary hover:bg-secondary/50">
+              {primaryButton.label}
+            </Button>
+          )}
+          {secondaryButton?.label && (
+            <Button
+              as="link"
+              ariaLabel={secondaryButton.label}
+              link={secondaryButton}
+              className="block px-4 py-3 mb-2 leading-loose text-center text-white font-semibold bg-primary hover:bg-primary-foreground rounded-global">
+              {secondaryButton.label}
+            </Button>
+          )}
         </div>
-        <div className="mt-auto">
-          <div className="pt-6">
-            {primaryButton?.label && (
-              <Button
-                as="link"
-                ariaLabel={primaryButton?.label}
-                link={primaryButton}
-                className="block px-4 py-3 mb-2 text-gray-900 text-center lg:ml-auto lg:mr-3 font-semibold rounded-global bg-secondary hover:bg-secondary/50">
-                {primaryButton?.label}
-              </Button>
-            )}
-            {secondaryButton?.label && (
-              <Button
-                as="link"
-                ariaLabel={secondaryButton?.label}
-                link={secondaryButton}
-                className="block px-4 py-3 mb-2 leading-loose text-center text-white font-semibold bg-primary hover:bg-primary-foreground rounded-global">
-                {secondaryButton?.label}
-              </Button>
-            )}
-          </div>
-          <Text fontSize="xs" muted className="my-4 text-center ">
-            <span>{`© ${new Date().getFullYear()} All rights reserved.`}</span>
-          </Text>
-        </div>
+        <Text fontSize="xs" muted className="my-4 text-center">
+          <span>{`© ${new Date().getFullYear()} All rights reserved.`}</span>
+        </Text>
       </nav>
     </div>
   );

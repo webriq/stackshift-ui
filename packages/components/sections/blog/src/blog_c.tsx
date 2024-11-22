@@ -48,7 +48,7 @@ function BlogPosts({ posts, blogsPerPage }: { posts?: BlogPost[]; blogsPerPage?:
   return (
     <div>
       {posts?.slice(0, blogsPerPage)?.map((post, key) => (
-        <div className="flex flex-wrap mb-8 overflow-hidden rounded-global shadow" key={key}>
+        <div className="flex flex-wrap mb-8 overflow-hidden rounded-md shadow" key={key}>
           <BlogItem
             post={post}
             className={`${key % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}
@@ -60,7 +60,7 @@ function BlogPosts({ posts, blogsPerPage }: { posts?: BlogPost[]; blogsPerPage?:
   );
 }
 
-function BlogItem({ post, className }: { post: BlogPost; className?: string }) {
+function BlogItem({ post, className, key }: { key: number; post: BlogPost; className?: string }) {
   const breakpoints = useMediaQuery("1100");
   const maxExcerptLength = breakpoints ? 70 : 200;
 
@@ -73,24 +73,24 @@ function BlogItem({ post, className }: { post: BlogPost; className?: string }) {
           sizes="100vw"
           width={554}
           height={416}
-          alt={`blog-variantC-image-`}
+          alt={post?.alt ?? `blog-variantC-image-${key}`}
         />
       )}
       <div className="w-full px-6 py-6 rounded-r lg:w-1/2 lg:pt-10">
         <Flex gap={2}>
           {post?.categories &&
             post?.categories?.map((category, index) => (
-              <Badge className=" bg-secondary-foreground text-primary" key={index}>
+              <Badge className="bg-secondary/70" key={index}>
                 {category?.title}
               </Badge>
             ))}
+          {post?.publishedAt && (
+            <Text muted className="m-1">
+              {format(new Date(post?.publishedAt), " dd MMM, yyyy")}
+            </Text>
+          )}
         </Flex>
 
-        {post?.publishedAt && (
-          <Text muted className="m-1">
-            {format(new Date(post?.publishedAt), " dd MMM, yyyy")}
-          </Text>
-        )}
         {post?.title && (
           <Heading className="my-4" type="h3">
             {post?.title?.length > 40 ? post?.title?.substring(0, 40) + "..." : post?.title}

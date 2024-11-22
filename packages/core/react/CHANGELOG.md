@@ -1,5 +1,36 @@
 # @stackshift-ui/react
 
+## 6.0.8
+
+### Patch Changes
+
+- Component packages updates
+- Updated dependencies
+  - @stackshift-ui/call-to-action@6.0.5
+  - @stackshift-ui/text-component@6.0.4
+  - @stackshift-ui/signin-signup@6.0.5
+  - @stackshift-ui/how-it-works@6.0.4
+  - @stackshift-ui/testimonial@6.0.4
+  - @stackshift-ui/logo-cloud@6.0.5
+  - @stackshift-ui/navigation@6.0.5
+  - @stackshift-ui/statistics@6.0.5
+  - @stackshift-ui/app-promo@6.0.4
+  - @stackshift-ui/portfolio@6.0.5
+  - @stackshift-ui/form-field@6.0.5
+  - @stackshift-ui/input-file@6.0.4
+  - @stackshift-ui/stats-card@6.0.4
+  - @stackshift-ui/features@6.0.5
+  - @stackshift-ui/contact@6.0.5
+  - @stackshift-ui/cookies@6.0.4
+  - @stackshift-ui/textarea@6.0.4
+  - @stackshift-ui/footer@6.0.5
+  - @stackshift-ui/header@6.0.6
+  - @stackshift-ui/avatar@6.0.4
+  - @stackshift-ui/select@6.0.4
+  - @stackshift-ui/blog@6.0.7
+  - @stackshift-ui/faqs@6.0.6
+  - @stackshift-ui/team@6.0.5
+
 ## 6.0.7
 
 ### Patch Changes

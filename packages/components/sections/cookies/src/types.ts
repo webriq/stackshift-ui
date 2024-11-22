@@ -19,6 +19,7 @@ export interface LabeledRoute extends ConditionalLink {
   linkType?: string;
   _type?: string;
   linkInternal?: any;
+  linkExternal?: string;
 }
 export interface ConditionalLink {
   type?: string;

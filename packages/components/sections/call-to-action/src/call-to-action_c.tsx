@@ -1,13 +1,13 @@
 import { Button } from "@stackshift-ui/button";
+import { Container } from "@stackshift-ui/container";
+import { Flex } from "@stackshift-ui/flex";
 import { Form } from "@stackshift-ui/form";
 import { Heading } from "@stackshift-ui/heading";
 import { Input } from "@stackshift-ui/input";
-import { Text } from "@stackshift-ui/text";
 import { Section } from "@stackshift-ui/section";
-import { Container } from "@stackshift-ui/container";
-import { Flex } from "@stackshift-ui/flex";
-import { thankYouPageLink } from "./helper";
+import { Text } from "@stackshift-ui/text";
 import { CTAProps } from ".";
+import { thankYouPageLink } from "./helper";
 import { Form as iForm } from "./types";
 
 export default function CallToAction_C({ title, plainText, features, form }: CTAProps) {
@@ -27,7 +27,7 @@ function HeadingAndText({ title, text }: { title?: string; text?: string }) {
   return (
     <div className="w-full text-center lg:text-left px-4 mb-8 lg:mb-0 lg:w-1/2">
       {title ? (
-        <Heading fontSize="2xl" className="mb-4">
+        <Heading fontSize="3xl" className="mb-4">
           {title}
         </Heading>
       ) : null}
@@ -117,7 +117,7 @@ function CheckIcon() {
   return (
     <span>
       <svg
-        className="w-6 h-6 mr-2 text-primary-foreground"
+        className="w-6 h-6 mr-2 text-primary"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor">

@@ -67,9 +67,7 @@ function ProjectItem({ content }: { content: Content }) {
   return (
     <div className="relative w-full px-4 mb-8 md:w-1/2 lg:w-1/3">
       {content?.mainImage?.image && (
-        <div
-          className="h-full overflow-hidden bg-white rounded-global"
-          style={{ maxHeight: "600px" }}>
+        <div className="h-full overflow-hidden bg-white rounded-md" style={{ maxHeight: "600px" }}>
           <Image
             className="object-cover w-full h-80"
             src={content?.mainImage?.image}
