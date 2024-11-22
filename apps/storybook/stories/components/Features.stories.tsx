@@ -19,7 +19,7 @@ export const VariantA: StoryObj<typeof Features> = {
     data: {
       variant: "variant_a",
       variants: {
-        caption: "Dolor sit amet consectutar",
+        subtitle: "Dolor sit amet consectutar",
         title: "Build & Launch without problems",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.",
@@ -76,7 +76,7 @@ export const VariantB: StoryObj<typeof Features> = {
     data: {
       variant: "variant_b",
       variants: {
-        caption: "Dolor sit amet consectutar",
+        subtitle: "Dolor sit amet consectutar",
         title: "Build & Launch without problems",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.",
@@ -138,7 +138,7 @@ export const VariantC: StoryObj<typeof Features> = {
     data: {
       variant: "variant_c",
       variants: {
-        caption: "Dolor sit amet consectutar",
+        subtitle: "Dolor sit amet consectutar",
         title: "Build & Launch without problems",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.",
@@ -195,7 +195,7 @@ export const VariantD: StoryObj<typeof Features> = {
     data: {
       variant: "variant_d",
       variants: {
-        caption: "Dolor sit amet consectutar",
+        subtitle: "Dolor sit amet consectutar",
         title: "Build & Launch without problems",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.",
@@ -252,7 +252,7 @@ export const VariantE: StoryObj<typeof Features> = {
     data: {
       variant: "variant_e",
       variants: {
-        caption: "Dolor sit amet consectutar",
+        subtitle: "Dolor sit amet consectutar",
         title: "Build & Launch without problems",
         featuredItems: [
           {
@@ -289,7 +289,7 @@ export const VariantF: StoryObj<typeof Features> = {
     data: {
       variant: "variant_f",
       variants: {
-        caption: "Dolor sit amet consectutar",
+        subtitle: "Dolor sit amet consectutar",
         title: "Build & Launch without problems",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.",
@@ -323,7 +323,7 @@ export const VariantG: StoryObj<typeof Features> = {
     data: {
       variant: "variant_g",
       variants: {
-        caption: "Dolor sit amet consectutar",
+        subtitle: "Dolor sit amet consectutar",
         title: "Build & Launch without problems",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.",
@@ -361,7 +361,7 @@ export const VariantH: StoryObj<typeof Features> = {
     data: {
       variant: "variant_h",
       variants: {
-        caption: "Dolor sit amet consectutar",
+        subtitle: "Dolor sit amet consectutar",
         title: "Build & Launch without problems",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.",

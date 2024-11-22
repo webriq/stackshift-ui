@@ -27,6 +27,7 @@ export const VariantA: StoryObj<typeof Blog> = {
         },
         posts: [
           {
+            authors: [{ name: "John Doe" }],
             title: "Lorem ipsum dolor sit amet",
             categories: [{ title: "TRAVEL" }],
             publishedAt: "2021-11-22T03:17:00.000Z",
@@ -36,6 +37,7 @@ export const VariantA: StoryObj<typeof Blog> = {
             alt: "Lorem ipsum dolor sit amet",
           },
           {
+            authors: [{ name: "John Doe" }],
             title: "Vestibulum vehicle leo eget libero eleifend 2",
             categories: [{ title: "CULTURE" }],
             publishedAt: "2021-11-22T03:17:00.000Z",
@@ -45,6 +47,7 @@ export const VariantA: StoryObj<typeof Blog> = {
             alt: "Vestibulum vehicle leo eget libero eleifend 2",
           },
           {
+            authors: [{ name: "John Doe" }],
             title: "Aenean convalli sapone a degnissimo placerat.",
             categories: [{ title: "TRAVEL" }],
             publishedAt: "2021-11-22T03:17:00.000Z",
@@ -54,6 +57,7 @@ export const VariantA: StoryObj<typeof Blog> = {
             alt: "Aenean convalli sapone a degnissimo placerat.",
           },
           {
+            authors: [{ name: "John Doe" }],
             title: "Vestibulum vehicle leo eget libero eleifend 2",
             categories: [{ title: "TRAVEL" }, { title: "CULTURE" }],
             publishedAt: "2021-11-22T03:17:00.000Z",
@@ -63,6 +67,7 @@ export const VariantA: StoryObj<typeof Blog> = {
             alt: "Vestibulum vehicle leo eget libero eleifend 2",
           },
           {
+            authors: [{ name: "John Doe" }],
             title: "Aenean convalli sapone a degnissimo placerat.",
             categories: [{ title: "TRAVEL" }],
             publishedAt: "2021-11-22T03:17:00.000Z",
@@ -72,6 +77,7 @@ export const VariantA: StoryObj<typeof Blog> = {
             alt: "Aenean convalli sapone a degnissimo placerat.",
           },
           {
+            authors: [{ name: "John Doe" }],
             title: "Lorem ipsum dolor sit amet",
             categories: [{ title: "TRAVEL" }],
             publishedAt: "2021-11-22T03:17:00.000Z",
@@ -100,6 +106,7 @@ export const VariantB: StoryObj<typeof Blog> = {
         },
         posts: [
           {
+            authors: [{ name: "John Doe" }],
             title: "Lorem ipsum dolor sit amet",
             excerpt: "Writing sample excerpt to test Grammarly.",
             categories: [{ title: "TRAVEL" }],
@@ -110,6 +117,7 @@ export const VariantB: StoryObj<typeof Blog> = {
             alt: "Lorem ipsum dolor sit amet",
           },
           {
+            authors: [{ name: "John Doe" }],
             title: "Vestibulum vehicle leo eget libero eleifend 2",
             excerpt: "Writing sample excerpt to test Grammarly.",
             categories: [{ title: "CULTURE" }],
@@ -120,6 +128,7 @@ export const VariantB: StoryObj<typeof Blog> = {
             alt: "Vestibulum vehicle leo eget libero eleifend 2",
           },
           {
+            authors: [{ name: "John Doe" }],
             title: "Aenean convalli sapone a degnissimo placerat.",
             excerpt: "Writing sample excerpt to test Grammarly.",
             categories: [{ title: "TRAVEL" }],
@@ -130,6 +139,7 @@ export const VariantB: StoryObj<typeof Blog> = {
             alt: "Aenean convalli sapone a degnissimo placerat.",
           },
           {
+            authors: [{ name: "John Doe" }],
             title: "Vestibulum vehicle leo eget libero eleifend 2",
             excerpt: "Writing sample excerpt to test Grammarly.",
             categories: [{ title: "TRAVEL" }, { title: "CULTURE" }],
@@ -140,6 +150,7 @@ export const VariantB: StoryObj<typeof Blog> = {
             alt: "Vestibulum vehicle leo eget libero eleifend 2",
           },
           {
+            authors: [{ name: "John Doe" }],
             title: "Aenean convalli sapone a degnissimo placerat.",
             excerpt: "Writing sample excerpt to test Grammarly.",
             categories: [{ title: "TRAVEL" }],
@@ -150,6 +161,7 @@ export const VariantB: StoryObj<typeof Blog> = {
             alt: "Aenean convalli sapone a degnissimo placerat.",
           },
           {
+            authors: [{ name: "John Doe" }],
             title: "Lorem ipsum dolor sit amet",
             excerpt: "Writing sample excerpt to test Grammarly.",
             categories: [{ title: "TRAVEL" }],

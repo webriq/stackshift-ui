@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import { HowItWorks } from "@stackshift-ui/react";
+import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof HowItWorks> = {
   title: "Components/How It Works",
@@ -91,7 +91,7 @@ export const VariantC: Story = {
           {
             title: "Lorem ipsum dolor sit amet consectutar",
             plainText:
-              "Fusce quam tellus, placerat eu metus ut, viverra aliquet purus. Suspendisse potenti. Nulla non nibh feugiat.",
+              "Fusce quam tellus, placerat eu metus ut, viverra aliquet purus. Suspendisse potenti. Nulla non nibh feugiat. Fusce quam tellus, placerat eu metus ut, viverra aliquet purus. Suspendisse potenti. Nulla non nibh feugiat. Fusce quam tellus, placerat eu metus ut, viverra aliquet purus. Suspendisse potenti. Nulla non nibh feugiat. Fusce quam tellus, placerat eu metus ut, viverra aliquet purus. Suspendisse potenti. Nulla non nibh feugiat.",
           },
           {
             title: "Lorem ipsum dolor sit amet consectutar",
