@@ -3,7 +3,7 @@
   "private": false,
   "scripts": {
     "build": "turbo build",
-    "clean": "turbo clean",
+    "clean": "turbo clean && rm -rf node_modules .turbo",
     "dev": "turbo run dev",
     "storybook": "turbo run dev --filter @apps/storybook",
     "demo": "turbo run dev --filter @apps/nextjs-pages",
@@ -37,7 +37,7 @@
     "typedoc-plugin-rename-defaults": "^0.7.1",
     "typedoc-plugin-zod": "^1.2.1"
   },
-  "packageManager": "pnpm@9.12.1",
+  "packageManager": "pnpm@9.14.4",
   "engines": {
     "node": ">=18"
   },
