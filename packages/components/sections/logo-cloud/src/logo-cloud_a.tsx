@@ -12,7 +12,7 @@ export default function LogoCloud_A({ title, images }: LogoCloudProps) {
     <Section className="py-20 bg-background">
       <Container maxWidth={1280}>
         <Title title={title} />
-        <Flex wrap justify="center" align="center">
+        <Flex wrap justify="center" align="center" gap={3}>
           <LogoCloudImages images={images} />
         </Flex>
       </Container>
@@ -36,12 +36,12 @@ function LogoCloudImages({ images }: { images?: Images[] }) {
   return (
     <React.Fragment>
       {images?.map((image, index) => (
-        <div className="w-full px-2 mb-4 md:w-1/3 lg:mr-10 lg:w-1/6 xl:mr-0" key={index}>
+        <div key={index}>
           {image?.image ? (
             <Flex
               align="center"
               justify="center"
-              className="mx-auto h-[192px] w-[192px] rounded-global bg-gray-50">
+              className="h-[192px] w-[192px] rounded-global bg-gray-50">
               <Image
                 className="object-scale-down"
                 src={`${image?.image}`}

@@ -16,7 +16,7 @@ export const textComponentBlockStyling: MyPortableTextComponents = {
       return <h4 className="mb-6 text-xl leading-loose text-gray-900">{children}</h4>;
     },
     normal: ({ children }) => {
-      return <p className="mb-5 leading-relaxed text-justify text-gray-500">{children}</p>;
+      return <p className="mb-5 leading-relaxed text-justify text-gray-900">{children}</p>;
     },
     blockquote: ({ children }) => {
       return (
@@ -52,7 +52,7 @@ export const textComponentBlockStyling: MyPortableTextComponents = {
     link: ({ children, value }) => (
       <a
         aria-label={value.href ?? "external link"}
-        className="text-primary-foreground hover:text-secondary-foreground"
+        className="text-primary hover:text-secondary"
         href={value?.href}
         target="_blank"
         rel="noopener noreferrer">
