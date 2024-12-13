@@ -1,5 +1,11 @@
 # @stackshift-ui/text-component
 
+## 6.0.4-beta.3
+
+### Patch Changes
+
+- update avatar package and its dependents
+
 ## 6.0.4-beta.2
 
 ### Patch Changes

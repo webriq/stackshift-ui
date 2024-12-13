@@ -1,7 +1,7 @@
 {
   "name": "@stackshift-ui/signin-signup",
   "description": "",
-  "version": "6.0.5-beta.4",
+  "version": "6.0.5-beta.5",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",

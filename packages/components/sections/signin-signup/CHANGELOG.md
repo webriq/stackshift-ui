@@ -1,5 +1,11 @@
 # @stackshift-ui/signin-signup
 
+## 6.0.5-beta.5
+
+### Patch Changes
+
+- update avatar package and its dependents
+
 ## 6.0.5-beta.4
 
 ### Patch Changes

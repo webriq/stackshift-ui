@@ -1,5 +1,13 @@
 # @stackshift-ui/testimonial
 
+## 6.0.4-beta.6
+
+### Patch Changes
+
+- update avatar package and its dependents
+- Updated dependencies
+  - @stackshift-ui/avatar@6.0.5-beta.0
+
 ## 6.0.4-beta.5
 
 ### Patch Changes

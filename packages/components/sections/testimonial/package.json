@@ -1,7 +1,7 @@
 {
   "name": "@stackshift-ui/testimonial",
   "description": "",
-  "version": "6.0.4-beta.5",
+  "version": "6.0.4-beta.6",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",

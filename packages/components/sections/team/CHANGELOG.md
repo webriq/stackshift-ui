@@ -1,5 +1,12 @@
 # @stackshift-ui/team
 
+## 6.0.6-beta.0
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/avatar@6.0.5-beta.0
+
 ## 6.0.5
 
 ### Patch Changes
