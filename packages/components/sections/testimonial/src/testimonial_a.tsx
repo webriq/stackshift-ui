@@ -1,8 +1,8 @@
-import { Avatar } from "@stackshift-ui/avatar";
 import { Card } from "@stackshift-ui/card";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
+import { Image } from "@stackshift-ui/image";
 import { Section } from "@stackshift-ui/section";
 import { SwiperPagination } from "@stackshift-ui/swiper-pagination";
 import { Text } from "@stackshift-ui/text";
@@ -43,14 +43,15 @@ function AvatarSection({
   return (
     <div className="w-full mb-6 text-center lg:w-1/3">
       {testimonials?.[testimony]?.mainImage?.image ? (
-        <Avatar
-          className={"border-0 mx-auto"}
-          size={128}
+        <Image
+          width={128}
+          height={128}
+          className="mx-auto border-0 w-[128px] h-[128px] object-cover rounded-full"
+          src={`${testimonials?.[testimony]?.mainImage?.image}`}
           alt={
             testimonials?.[testimony]?.mainImage?.alt ??
             `testimonial-source-${testimonials?.[testimony]?.name}-profile-image`
           }
-          src={`${testimonials?.[testimony]?.mainImage?.image}`}
         />
       ) : null}
       {testimonials?.[testimony]?.name ? (

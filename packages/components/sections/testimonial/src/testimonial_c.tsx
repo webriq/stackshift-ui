@@ -1,8 +1,8 @@
-import { Avatar } from "@stackshift-ui/avatar";
 import { Card } from "@stackshift-ui/card";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
+import { Image } from "@stackshift-ui/image";
 import { Section } from "@stackshift-ui/section";
 import { SwiperButton } from "@stackshift-ui/swiper-button";
 import { Text } from "@stackshift-ui/text";
@@ -119,9 +119,10 @@ function TestimonialItem({ item, index }: { item?: iTestimonial; index: number }
           {item?.testimony}
         </Text>
         {item?.mainImage?.image && (
-          <Avatar
-            size={48}
-            className="mx-auto border-0"
+          <Image
+            width={48}
+            height={48}
+            className="mx-auto border-0 w-[48px] h-[48px] object-cover rounded-full"
             src={`${item?.mainImage?.image}`}
             alt={item?.mainImage?.alt ?? `testimonial-source-${item?.name}-profile-image`}
           />
