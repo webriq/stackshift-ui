@@ -144,7 +144,18 @@ function FormFields({
                 type="text"
               />
             ) : (
-              <FormField textSize="sm" noLabel name={formFields?.name ?? ""} {...formFields} />
+              <FormField
+                className="py-4"
+                textSize="sm"
+                noLabel
+                variant="primary"
+                name={formFields?.name ?? ""}
+                placeholder={formFields?.placeholder}
+                required={formFields?.isRequired}
+                items={formFields?.items}
+                type={formFields?.type}
+                {...formFields}
+              />
             )}
           </div>
         ))}
