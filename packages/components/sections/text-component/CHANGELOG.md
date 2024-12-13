@@ -1,5 +1,11 @@
 # @stackshift-ui/text-component
 
+## 6.0.4-beta.0
+
+### Patch Changes
+
+- Updated block style text and link colors
+
 ## 6.0.4
 
 ### Patch Changes

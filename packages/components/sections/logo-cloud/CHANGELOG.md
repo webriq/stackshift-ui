@@ -1,5 +1,11 @@
 # @stackshift-ui/logo-cloud
 
+## 6.0.5-beta.2
+
+### Patch Changes
+
+- Fixes for logo cloud A spacing
+
 ## 6.0.5
 
 ### Patch Changes

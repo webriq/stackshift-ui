@@ -1,5 +1,11 @@
 # @stackshift-ui/signin-signup
 
+## 6.0.5-beta.2
+
+### Patch Changes
+
+- Fix email input field required prop not working
+
 ## 6.0.5
 
 ### Patch Changes
