@@ -1,5 +1,18 @@
 # @stackshift-ui/react
 
+## 6.0.9-beta.3
+
+### Patch Changes
+
+- fixes for components
+- Updated dependencies
+  - @stackshift-ui/call-to-action@6.0.5-beta.4
+  - @stackshift-ui/text-component@6.0.4-beta.2
+  - @stackshift-ui/signin-signup@6.0.5-beta.4
+  - @stackshift-ui/testimonial@6.0.4-beta.5
+  - @stackshift-ui/logo-cloud@6.0.5-beta.4
+  - @stackshift-ui/header@6.0.6-beta.4
+
 ## 6.0.9-beta.2
 
 ### Patch Changes

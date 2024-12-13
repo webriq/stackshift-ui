@@ -1,5 +1,13 @@
 # @stackshift-ui/header
 
+## 6.0.6-beta.4
+
+### Patch Changes
+
+- fixes for components
+- Updated dependencies
+  - @stackshift-ui/signin-signup@6.0.5-beta.4
+
 ## 6.0.6-beta.3
 
 ### Patch Changes

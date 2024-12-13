@@ -1,5 +1,11 @@
 # @stackshift-ui/testimonial
 
+## 6.0.4-beta.5
+
+### Patch Changes
+
+- fixes for components
+
 ## 6.0.4-beta.4
 
 ### Patch Changes

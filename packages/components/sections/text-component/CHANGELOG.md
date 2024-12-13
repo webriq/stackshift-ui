@@ -1,5 +1,11 @@
 # @stackshift-ui/text-component
 
+## 6.0.4-beta.2
+
+### Patch Changes
+
+- fixes for components
+
 ## 6.0.4-beta.1
 
 ### Patch Changes
