@@ -1,7 +1,7 @@
 {
   "name": "@stackshift-ui/text-component",
   "description": "",
-  "version": "6.0.4-beta.0",
+  "version": "6.0.4-beta.1",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",

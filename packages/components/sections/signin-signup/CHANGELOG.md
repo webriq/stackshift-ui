@@ -1,5 +1,11 @@
 # @stackshift-ui/signin-signup
 
+## 6.0.5-beta.3
+
+### Patch Changes
+
+- update package versions
+
 ## 6.0.5-beta.2
 
 ### Patch Changes
