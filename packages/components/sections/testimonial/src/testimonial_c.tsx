@@ -99,7 +99,7 @@ function TestimonialList({ testimony }: { testimony?: iTestimonial[] }) {
   return (
     <Flex className="relative">
       {testimony && (
-        <Flex wrap className="max-w-6xl px-2 mx-auto">
+        <Flex wrap className="!items-stretch max-w-6xl px-2 mx-auto">
           {testimony
             ?.slice(0, 3)
             ?.map((item, index) => <TestimonialItem item={item} index={index} key={item?._key} />)}
@@ -113,8 +113,8 @@ function TestimonialItem({ item, index }: { item?: iTestimonial; index: number }
   if (!item) return null;
 
   return (
-    <div className="w-full px-3 mb-4 lg:w-1/3" key={index}>
-      <Card className="p-8 text-center" borderRadius="md">
+    <div className="flex-1 w-full px-3 mb-4 lg:w-1/3" key={index}>
+      <Card className="p-8 text-center h-full items-center" borderRadius="md">
         <Text className="mb-8 leading-loose" muted>
           {item?.testimony}
         </Text>
