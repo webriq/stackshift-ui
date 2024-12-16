@@ -119,13 +119,15 @@ function TestimonialItem({ item, index }: { item?: iTestimonial; index: number }
           {item?.testimony}
         </Text>
         {item?.mainImage?.image && (
-          <Image
-            width={48}
-            height={48}
-            className="mx-auto border-0 w-[48px] h-[48px] object-cover rounded-full"
-            src={`${item?.mainImage?.image}`}
-            alt={item?.mainImage?.alt ?? `testimonial-source-${item?.name}-profile-image`}
-          />
+          <div className="w-[48px] h-[48px] mx-auto border-0">
+            <Image
+              className="w-full h-full object-cover rounded-full"
+              width={48}
+              height={48}
+              src={`${item?.mainImage?.image}`}
+              alt={item?.mainImage?.alt ?? `testimonial-source-${item?.name}-profile-image`}
+            />
+          </div>
         )}
         <Text className="mb-1" fontSize="2xl" weight="bold">
           {item?.name}
