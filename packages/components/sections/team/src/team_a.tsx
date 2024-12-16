@@ -1,8 +1,8 @@
-import { Avatar } from "@stackshift-ui/avatar";
 import { Card } from "@stackshift-ui/card";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
+import { Image } from "@stackshift-ui/image";
 import { Section } from "@stackshift-ui/section";
 import { Text } from "@stackshift-ui/text";
 import React from "react";
@@ -48,11 +48,12 @@ function Teams({ team }: { team?: iTeam[] }) {
         <div className="w-full px-3 mb-6 md:w-1/2 lg:w-1/3" key={member?.name}>
           <Card className="py-24 text-center shadow-lg bg-white" borderRadius="md">
             {member?.mainImage?.image && (
-              <Avatar
-                className="mx-auto border-0"
-                size={96}
-                alt={member?.mainImage?.alt ?? `team-member-${member?.name}-profile-image`}
+              <Image
+                width={96}
+                height={96}
+                className="mx-auto border-0 w-[96px] h-[96px] object-cover rounded-full"
                 src={`${member?.mainImage?.image}`}
+                alt={member?.mainImage?.alt ?? `team-member-${member?.name}-profile-image`}
               />
             )}
             <TeamMemberText member={member} />
