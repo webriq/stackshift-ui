@@ -1,5 +1,18 @@
 # @stackshift-ui/team
 
+## 6.0.6
+
+### Patch Changes
+
+- 22065d5: updates for team and avatar
+- 6d296d9: Fixes for testimonial c img element
+- Component UI/UX fixes
+- Updated dependencies [9d55113]
+- Updated dependencies [22065d5]
+- Updated dependencies [6d296d9]
+- Updated dependencies
+  - @stackshift-ui/avatar@6.0.5
+
 ## 6.0.6-beta.2
 
 ### Patch Changes

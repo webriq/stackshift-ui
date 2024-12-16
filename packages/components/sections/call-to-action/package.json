@@ -1,7 +1,7 @@
 {
   "name": "@stackshift-ui/call-to-action",
   "description": "",
-  "version": "6.0.5-beta.7",
+  "version": "6.0.6",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",

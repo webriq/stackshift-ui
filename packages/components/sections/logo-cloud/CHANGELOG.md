@@ -1,5 +1,17 @@
 # @stackshift-ui/logo-cloud
 
+## 6.0.6
+
+### Patch Changes
+
+- 9d55113: update avatar package and its dependents
+- 22065d5: updates for team and avatar
+- 4abb0bc: update package versions
+- 78d2e84: pre release fixes
+- 6d296d9: Fixes for testimonial c img element
+- Component UI/UX fixes
+- 506211e: fixes for components
+
 ## 6.0.5-beta.7
 
 ### Patch Changes

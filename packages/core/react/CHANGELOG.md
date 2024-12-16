@@ -1,5 +1,31 @@
 # @stackshift-ui/react
 
+## 6.0.9
+
+### Patch Changes
+
+- 9d55113: update avatar package and its dependents
+- 22065d5: updates for team and avatar
+- 4abb0bc: update package versions
+- 6d296d9: Fixes for testimonial c img element
+- Component UI/UX fixes
+- 506211e: fixes for components
+- Updated dependencies [9d55113]
+- Updated dependencies [22065d5]
+- Updated dependencies [4abb0bc]
+- Updated dependencies [78d2e84]
+- Updated dependencies [6d296d9]
+- Updated dependencies
+- Updated dependencies [506211e]
+  - @stackshift-ui/call-to-action@6.0.5
+  - @stackshift-ui/text-component@6.0.4
+  - @stackshift-ui/signin-signup@6.0.5
+  - @stackshift-ui/testimonial@6.0.4
+  - @stackshift-ui/logo-cloud@6.0.5
+  - @stackshift-ui/header@6.0.6
+  - @stackshift-ui/avatar@6.0.5
+  - @stackshift-ui/team@6.0.6
+
 ## 6.0.9-beta.6
 
 ### Patch Changes
