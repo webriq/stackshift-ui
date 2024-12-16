@@ -1,5 +1,13 @@
 # @stackshift-ui/call-to-action
 
+## 6.0.5-beta.6
+
+### Patch Changes
+
+- updates for team and avatar
+- Updated dependencies
+  - @stackshift-ui/signin-signup@6.0.5-beta.6
+
 ## 6.0.5-beta.5
 
 ### Patch Changes

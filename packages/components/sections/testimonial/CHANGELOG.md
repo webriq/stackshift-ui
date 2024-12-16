@@ -1,5 +1,13 @@
 # @stackshift-ui/testimonial
 
+## 6.0.4-beta.7
+
+### Patch Changes
+
+- updates for team and avatar
+- Updated dependencies
+  - @stackshift-ui/avatar@6.0.5-beta.1
+
 ## 6.0.4-beta.6
 
 ### Patch Changes

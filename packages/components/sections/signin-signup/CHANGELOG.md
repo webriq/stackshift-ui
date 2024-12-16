@@ -1,5 +1,11 @@
 # @stackshift-ui/signin-signup
 
+## 6.0.5-beta.6
+
+### Patch Changes
+
+- updates for team and avatar
+
 ## 6.0.5-beta.5
 
 ### Patch Changes

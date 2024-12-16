@@ -1,5 +1,20 @@
 # @stackshift-ui/react
 
+## 6.0.9-beta.5
+
+### Patch Changes
+
+- updates for team and avatar
+- Updated dependencies
+  - @stackshift-ui/call-to-action@6.0.5-beta.6
+  - @stackshift-ui/text-component@6.0.4-beta.4
+  - @stackshift-ui/signin-signup@6.0.5-beta.6
+  - @stackshift-ui/testimonial@6.0.4-beta.7
+  - @stackshift-ui/logo-cloud@6.0.5-beta.6
+  - @stackshift-ui/header@6.0.6-beta.6
+  - @stackshift-ui/avatar@6.0.5-beta.1
+  - @stackshift-ui/team@6.0.6-beta.1
+
 ## 6.0.9-beta.4
 
 ### Patch Changes

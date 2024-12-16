@@ -1,5 +1,11 @@
 # @stackshift-ui/text-component
 
+## 6.0.4-beta.4
+
+### Patch Changes
+
+- updates for team and avatar
+
 ## 6.0.4-beta.3
 
 ### Patch Changes
