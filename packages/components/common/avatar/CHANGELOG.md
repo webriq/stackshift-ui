@@ -1,5 +1,11 @@
 # @stackshift-ui/avatar
 
+## 6.0.5-beta.2
+
+### Patch Changes
+
+- Fixes for testimonial c img element
+
 ## 6.0.5-beta.1
 
 ### Patch Changes

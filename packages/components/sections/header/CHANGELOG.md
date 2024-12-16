@@ -1,5 +1,13 @@
 # @stackshift-ui/header
 
+## 6.0.6-beta.7
+
+### Patch Changes
+
+- Fixes for testimonial c img element
+- Updated dependencies
+  - @stackshift-ui/signin-signup@6.0.5-beta.7
+
 ## 6.0.6-beta.6
 
 ### Patch Changes

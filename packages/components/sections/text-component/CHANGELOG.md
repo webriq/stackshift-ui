@@ -1,5 +1,11 @@
 # @stackshift-ui/text-component
 
+## 6.0.4-beta.5
+
+### Patch Changes
+
+- Fixes for testimonial c img element
+
 ## 6.0.4-beta.4
 
 ### Patch Changes

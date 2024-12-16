@@ -1,5 +1,20 @@
 # @stackshift-ui/react
 
+## 6.0.9-beta.6
+
+### Patch Changes
+
+- Fixes for testimonial c img element
+- Updated dependencies
+  - @stackshift-ui/call-to-action@6.0.5-beta.7
+  - @stackshift-ui/text-component@6.0.4-beta.5
+  - @stackshift-ui/signin-signup@6.0.5-beta.7
+  - @stackshift-ui/testimonial@6.0.4-beta.8
+  - @stackshift-ui/logo-cloud@6.0.5-beta.7
+  - @stackshift-ui/header@6.0.6-beta.7
+  - @stackshift-ui/avatar@6.0.5-beta.2
+  - @stackshift-ui/team@6.0.6-beta.2
+
 ## 6.0.9-beta.5
 
 ### Patch Changes
