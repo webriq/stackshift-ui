@@ -1,5 +1,32 @@
 # @stackshift-ui/avatar
 
+## 6.0.5
+
+### Patch Changes
+
+- 9d55113: update avatar package and its dependents
+- 22065d5: updates for team and avatar
+- 6d296d9: Fixes for testimonial c img element
+- Component UI/UX fixes
+
+## 6.0.5-beta.2
+
+### Patch Changes
+
+- Fixes for testimonial c img element
+
+## 6.0.5-beta.1
+
+### Patch Changes
+
+- updates for team and avatar
+
+## 6.0.5-beta.0
+
+### Patch Changes
+
+- update avatar package and its dependents
+
 ## 6.0.4
 
 ### Patch Changes

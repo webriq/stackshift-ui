@@ -29,7 +29,8 @@ export const Avatar: React.FC<AvatarProps> = ({
   as,
   ...props
 }) => {
-  const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
+  const components = useStackShiftUIComponents();
+  const { [displayName]: Component = DefaultComponent } = components;
 
   const [loaded, setLoaded] = useState(false);
   const sizeMap = {
@@ -73,5 +74,3 @@ export const Avatar: React.FC<AvatarProps> = ({
     </Component>
   );
 };
-
-Avatar.displayName = displayName;
