@@ -59,7 +59,7 @@ function FeatureItem({ feature }: { feature?: ArrayOfImageTitleAndText }) {
   if (!feature) return null;
 
   return (
-    <Flex as="li">
+    <Flex as="li" className="mb-5">
       <FeatureIcon />
       <div className="max-w-xs">
         <Text weight="bold" className="text-gray-500">

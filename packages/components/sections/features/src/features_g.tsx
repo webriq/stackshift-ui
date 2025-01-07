@@ -116,7 +116,7 @@ function ImageGallery({ images }: { images?: any[] }) {
     <div className="w-full lg:w-1/2">
       <div className="items-end mb-4 lg:flex lg:flex-wrap">
         <div className="h-full px-3 mb-4 lg:mb-0 lg:w-2/3">
-          {images[0]?.image && renderImage(images[0].image, images[0].alt, 356, 192, "h-[269px]")}
+          {images[0]?.image && renderImage(images[0].image, images[0].alt, 356, 192, "h-full")}
         </div>
         <div className="h-full px-3 lg:w-1/3">
           {images[1]?.image && renderImage(images[1].image, images[1].alt, 166, 128, "")}
