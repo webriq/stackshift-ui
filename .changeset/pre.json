@@ -64,6 +64,7 @@
     "@stackshift-ui/scripts": "6.0.2"
   },
   "changesets": [
-    "gentle-bees-reply"
+    "gentle-bees-reply",
+    "green-news-cheer"
   ]
 }
