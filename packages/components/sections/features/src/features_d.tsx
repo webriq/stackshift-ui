@@ -52,7 +52,7 @@ function FeatureItems({ features }: { features?: ArrayOfImageTitleAndText[] }) {
   if (!features) return null;
 
   return (
-    <Flex wrap justify="center">
+    <Flex wrap justify="center" align="stretch">
       {features.map(feature => (
         <FeatureItem feature={feature} key={feature._key} />
       ))}

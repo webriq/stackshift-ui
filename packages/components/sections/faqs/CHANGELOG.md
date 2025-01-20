@@ -1,5 +1,11 @@
 # @stackshift-ui/faqs
 
+## 6.0.7-beta.0
+
+### Patch Changes
+
+- UI fixes for components
+
 ## 6.0.6
 
 ### Patch Changes

@@ -1,5 +1,15 @@
 # @stackshift-ui/react
 
+## 6.0.10-beta.0
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/how-it-works@6.0.5-beta.0
+  - @stackshift-ui/portfolio@6.0.6-beta.0
+  - @stackshift-ui/features@6.0.6-beta.0
+  - @stackshift-ui/faqs@6.0.7-beta.0
+
 ## 6.0.9
 
 ### Patch Changes

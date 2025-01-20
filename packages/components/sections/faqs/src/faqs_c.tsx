@@ -50,7 +50,16 @@ function SubtitleAndTitleText({ subtitle, title }: { subtitle?: string; title?: 
 function FAQItems({ faqs }: { faqs?: AskedQuestion[] }) {
   if (!faqs) return null;
 
-  return <Flex wrap>{faqs?.map((faq, index) => <FAQItem key={index} faq={faq} />)}</Flex>;
+  return (
+    <Flex
+      wrap
+      align="stretch"
+    >
+      {faqs?.map((faq) => (
+        <FAQItem key={faq?._key} faq={faq} />
+      ))}
+    </Flex>
+  );
 }
 
 function FAQItem({ faq }: FAQItemProps) {

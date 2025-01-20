@@ -86,7 +86,7 @@ function PortfolioCategories({
   if (!categories || categories?.length === 0) return null;
 
   return (
-    <Flex className="inline-flex py-1 text-sm bg-white rounded" wrap>
+    <Flex className="inline-flex px-2 py-1 text-sm bg-white rounded" wrap>
       {categories?.map((content, index) => (
         <Button
           variant="tab"
@@ -94,7 +94,8 @@ function PortfolioCategories({
           ariaLabel={content?.category ?? `Category button ${index + 1}`}
           key={content?._key}
           isActive={activeTab === content?.category}
-          onClick={() => onClickFn?.(content?.category)}>
+          onClick={() => onClickFn?.(content?.category)}
+        >
           {content?.category}
         </Button>
       ))}
