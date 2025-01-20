@@ -18,7 +18,7 @@
   },
   "peerDependencies": {
     "@stackshift-ui/system": ">=0.0.0",
-    "@stackshift-ui/react": ">=6.0.9"
+    "@stackshift-ui/react": ">=6.0.10-beta.1"
   },
   "devDependencies": {
     "typescript": "^5",

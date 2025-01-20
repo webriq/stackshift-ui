@@ -1,5 +1,17 @@
 # @stackshift-ui/features
 
+## 6.0.6-beta.1
+
+### Patch Changes
+
+- add UI components fixes
+
+## 6.0.6-beta.0
+
+### Patch Changes
+
+- UI fixes for components
+
 ## 6.0.5
 
 ### Patch Changes
