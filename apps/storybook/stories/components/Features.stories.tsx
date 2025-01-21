@@ -27,7 +27,7 @@ export const VariantA: StoryObj<typeof Features> = {
           {
             mainImage: {
               image:
-                "https://cdn.sanity.io/images/9itgab5x/staging/97b6696849c90facc200537fd780b03d373e5212-980x830.png?fm=webp&w=96&q=75",
+                "https://cdn.sanity.io/images/9itgab5x/production/1d0655534230a5cb4e08d8b7bd14b271c5317d82-634x951.jpg?w=2000&fit=max&auto=format",
               alt: "alt 1",
             },
             title: "Lorem ipsum dolor sit amet consectutar",
@@ -37,7 +37,7 @@ export const VariantA: StoryObj<typeof Features> = {
           {
             mainImage: {
               image:
-                "https://cdn.sanity.io/images/9itgab5x/staging/d52b2d79a8c0ff7df5bac2ab9b31e4f8b35b2d49-515x485.png?fm=webp&w=96&q=75",
+                "https://cdn.sanity.io/images/9itgab5x/production/0dcfa20067460d48780f59c2c4a7a57e7c507969-1050x701.jpg?w=2000&fit=max&auto=format",
               alt: "alt 2",
             },
             title: "Ut congue nec leo eget aliquam",
@@ -47,7 +47,7 @@ export const VariantA: StoryObj<typeof Features> = {
           {
             mainImage: {
               image:
-                "https://cdn.sanity.io/images/9itgab5x/staging/46503b9f97de2e422010bcde0a1e33e954bca584-981x860.png?fm=webp&w=96&q=75",
+                "https://cdn.sanity.io/images/9itgab5x/production/881fdf41f1db63ed80d886037220b4fecc0c39b6-701x876.jpg?w=2000&fit=max&auto=format",
               alt: "alt 3",
             },
             title: "Proin fringilla eleifend justo pellentesque",
@@ -57,7 +57,7 @@ export const VariantA: StoryObj<typeof Features> = {
           {
             mainImage: {
               image:
-                "https://cdn.sanity.io/images/9itgab5x/staging/97b6696849c90facc200537fd780b03d373e5212-980x830.png?fm=webp&w=96&q=75",
+                "https://cdn.sanity.io/images/9itgab5x/production/04732685ec70933bc8c49683b2930032929b1fbe-1050x701.jpg?w=2000&fit=max&auto=format",
               alt: "alt 4",
             },
             title: "Morbi sagittis ligula sit amet elit maximus",
@@ -297,19 +297,19 @@ export const VariantF: StoryObj<typeof Features> = {
         images: [
           {
             image:
-              "https://cdn.sanity.io/images/9itgab5x/staging/3a1ef9b3424fabd086e3d7bdea95583ba9ea6363-1048x701.jpg?fm=webp&w=2048&q=75",
+              "https://cdn.sanity.io/images/9itgab5x/production/1d0655534230a5cb4e08d8b7bd14b271c5317d82-634x951.jpg?w=2000&fit=max&auto=format",
           },
           {
             image:
-              "https://cdn.sanity.io/images/9itgab5x/staging/2d9f87020c05fba5986084e4744c829844bf21b6-1050x700.jpg?fm=webp&w=1200&q=75",
+              "https://cdn.sanity.io/images/9itgab5x/production/0dcfa20067460d48780f59c2c4a7a57e7c507969-1050x701.jpg?w=2000&fit=max&auto=format",
           },
           {
             image:
-              "https://cdn.sanity.io/images/9itgab5x/staging/2d9f87020c05fba5986084e4744c829844bf21b6-1050x700.jpg?fm=webp&w=1200&q=75",
+              "https://cdn.sanity.io/images/9itgab5x/production/881fdf41f1db63ed80d886037220b4fecc0c39b6-701x876.jpg?w=2000&fit=max&auto=format",
           },
           {
             image:
-              "https://cdn.sanity.io/images/9itgab5x/staging/3a1ef9b3424fabd086e3d7bdea95583ba9ea6363-1048x701.jpg?fm=webp&w=2048&q=75",
+              "https://cdn.sanity.io/images/9itgab5x/production/04732685ec70933bc8c49683b2930032929b1fbe-1050x701.jpg?w=2000&fit=max&auto=format",
           },
         ],
       },
@@ -335,19 +335,19 @@ export const VariantG: StoryObj<typeof Features> = {
         images: [
           {
             image:
-              "https://cdn.sanity.io/images/9itgab5x/staging/3a1ef9b3424fabd086e3d7bdea95583ba9ea6363-1048x701.jpg?fm=webp&w=2048&q=75",
+              "https://cdn.sanity.io/images/9itgab5x/production/1d0655534230a5cb4e08d8b7bd14b271c5317d82-634x951.jpg?w=2000&fit=max&auto=format",
           },
           {
             image:
-              "https://cdn.sanity.io/images/9itgab5x/staging/2d9f87020c05fba5986084e4744c829844bf21b6-1050x700.jpg?fm=webp&w=1200&q=75",
+              "https://cdn.sanity.io/images/9itgab5x/production/0dcfa20067460d48780f59c2c4a7a57e7c507969-1050x701.jpg?w=2000&fit=max&auto=format",
           },
           {
             image:
-              "https://cdn.sanity.io/images/9itgab5x/staging/2d9f87020c05fba5986084e4744c829844bf21b6-1050x700.jpg?fm=webp&w=1200&q=75",
+              "https://cdn.sanity.io/images/9itgab5x/production/881fdf41f1db63ed80d886037220b4fecc0c39b6-701x876.jpg?w=2000&fit=max&auto=format",
           },
           {
             image:
-              "https://cdn.sanity.io/images/9itgab5x/staging/3a1ef9b3424fabd086e3d7bdea95583ba9ea6363-1048x701.jpg?fm=webp&w=2048&q=75",
+              "https://cdn.sanity.io/images/9itgab5x/production/04732685ec70933bc8c49683b2930032929b1fbe-1050x701.jpg?w=2000&fit=max&auto=format",
           },
         ],
       },

@@ -92,6 +92,7 @@ function PortfolioCategories({
           variant="tab"
           as="button"
           ariaLabel={content?.category ?? `Category button ${index + 1}`}
+          className="my-1"
           key={content?._key}
           isActive={activeTab === content?.category}
           onClick={() => onClickFn?.(content?.category)}
