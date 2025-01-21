@@ -1,5 +1,15 @@
 # @stackshift-ui/button
 
+## 6.0.4-beta.1
+
+### Patch Changes
+
+- Bump package versions
+- Updated dependencies
+  - @stackshift-ui/link@6.0.4-beta.1
+  - @stackshift-ui/system@6.0.4-beta.1
+  - @stackshift-ui/scripts@6.0.3-beta.1
+
 ## 6.0.4-beta.0
 
 ### Patch Changes

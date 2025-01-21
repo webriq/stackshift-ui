@@ -1,5 +1,22 @@
 # @stackshift-ui/faqs
 
+## 6.0.7-beta.2
+
+### Patch Changes
+
+- Bump package versions
+- Updated dependencies
+  - @stackshift-ui/button@6.0.4-beta.1
+  - @stackshift-ui/card@6.0.4-beta.1
+  - @stackshift-ui/heading@6.0.4-beta.1
+  - @stackshift-ui/input@6.0.5-beta.1
+  - @stackshift-ui/text@6.0.4-beta.1
+  - @stackshift-ui/container@6.0.4-beta.1
+  - @stackshift-ui/flex@6.0.4-beta.1
+  - @stackshift-ui/section@6.0.4-beta.1
+  - @stackshift-ui/system@6.0.4-beta.1
+  - @stackshift-ui/scripts@6.0.3-beta.1
+
 ## 6.0.7-beta.1
 
 ### Patch Changes

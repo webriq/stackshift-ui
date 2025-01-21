@@ -1,5 +1,11 @@
 # @stackshift-ui/logger
 
+## 2.0.1-beta.1
+
+### Patch Changes
+
+- Bump package versions
+
 ## 2.0.1-beta.0
 
 ### Patch Changes

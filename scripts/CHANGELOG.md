@@ -1,5 +1,11 @@
 # @stackshift-ui/scripts
 
+## 6.0.3-beta.1
+
+### Patch Changes
+
+- Bump package versions
+
 ## 6.0.3-beta.0
 
 ### Patch Changes
