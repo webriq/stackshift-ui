@@ -1,7 +1,7 @@
 {
   "name": "@stackshift-ui/faqs",
   "description": "",
-  "version": "6.0.7-beta.0",
+  "version": "6.0.7-beta.1",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",

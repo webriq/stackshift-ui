@@ -63,7 +63,5 @@
     "@stackshift-ui/system": "6.0.3",
     "@stackshift-ui/scripts": "6.0.2"
   },
-  "changesets": [
-    "slimy-papayas-pump"
-  ]
+  "changesets": ["slimy-papayas-pump", "gentle-bees-reply", "green-news-cheer"]
 }

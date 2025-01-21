@@ -37,7 +37,7 @@ function StepItems({ steps }: { steps?: ArrayOfTitleAndText[] }) {
   if (!steps) return null;
 
   return (
-    <Flex wrap justify="center">
+    <Flex wrap justify="center" align="stretch">
       {steps?.map((step, index) => <StepItem step={step} index={index} key={step._key} />)}
     </Flex>
   );
@@ -45,7 +45,7 @@ function StepItems({ steps }: { steps?: ArrayOfTitleAndText[] }) {
 
 function StepItem({ index, step }: { index: number; step?: ArrayOfTitleAndText }) {
   return (
-    <div className="relative w-full mt-20 md:w-1/2 lg:mb-0 lg:w-1/3" key={index}>
+    <div className="relative w-full mt-20 md:w-1/2 lg:mb-0 lg:w-1/3 px-2" key={index}>
       <Text
         className="absolute top-0 left-0 font-semibold -mt-20 text-primary opacity-20"
         style={{ fontSize: "8rem", width: "auto", height: "auto" }}>
@@ -54,7 +54,7 @@ function StepItem({ index, step }: { index: number; step?: ArrayOfTitleAndText }
       <Text weight="bold" fontSize="xl" className="text-gray-500">
         {step?.title}
       </Text>
-      <Text muted className="leading-loose">
+      <Text muted className="leading-loose mt-5">
         {step?.plainText}
       </Text>
     </div>

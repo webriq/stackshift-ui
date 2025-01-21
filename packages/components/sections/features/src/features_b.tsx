@@ -92,8 +92,8 @@ function FeaturesLists({ features }: { features?: ArrayOfImageTitleAndText[] }) 
             className={`w-full px-4 mb-8 md:w-1/2 ${index % 2 === 0 ? `lg:mb-0` : "lg:mt-12"}`}
             key={index}>
             <Card className="py-6 pl-6 pr-4 mb-8 bg-white" borderRadius="md">
-              <span className="inline-block p-3 mb-4 rounded-lg bg-secondary/50">
-                {feature?.mainImage?.image && (
+              {feature?.mainImage?.image && (
+                <span className="inline-block p-3 mb-4 rounded-lg bg-secondary/50">
                   <Image
                     className="object-scale-down"
                     src={`${feature?.mainImage?.image}`}
@@ -101,8 +101,8 @@ function FeaturesLists({ features }: { features?: ArrayOfImageTitleAndText[] }) 
                     height={40}
                     alt={feature?.mainImage?.alt ?? `features-image-${index}`}
                   />
-                )}
-              </span>
+                </span>
+              )}
               <Text weight="bold" fontSize="2xl" className="mb-2 text-gray-500">
                 {feature?.title}
               </Text>
