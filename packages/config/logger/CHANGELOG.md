@@ -1,5 +1,11 @@
 # @stackshift-ui/logger
 
+## 2.0.1-beta.2
+
+### Patch Changes
+
+- Additional UI fixes from testing
+
 ## 2.0.1-beta.1
 
 ### Patch Changes

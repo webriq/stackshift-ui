@@ -1,5 +1,14 @@
 # @stackshift-ui/cookies
 
+## 6.0.5-beta.2
+
+### Patch Changes
+
+- Additional UI fixes from testing
+- Updated dependencies
+  - @stackshift-ui/system@6.0.4-beta.2
+  - @stackshift-ui/scripts@6.0.3-beta.2
+
 ## 6.0.5-beta.1
 
 ### Patch Changes
