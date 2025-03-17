@@ -1,7 +1,7 @@
 {
   "name": "@stackshift-ui/blog",
   "description": "",
-  "version": "6.0.8-beta.2",
+  "version": "6.0.8",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -58,7 +58,7 @@
     "classnames": "^2.5.1"
   },
   "peerDependencies": {
-    "@stackshift-ui/system": ">=6.0.4-beta.2",
+    "@stackshift-ui/system": ">=6.0.4",
     "@types/react": "16.8 - 19",
     "next": "10 - 14",
     "react": "16.8 - 19",

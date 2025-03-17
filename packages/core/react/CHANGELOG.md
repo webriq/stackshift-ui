@@ -1,5 +1,70 @@
 # @stackshift-ui/react
 
+## 6.0.10
+
+### Patch Changes
+
+- 6737bd1: Bump package versions
+- 6dd3fc0: add UI components fixes
+- a24f6d2: Add UI fixes for components
+- 4932db7: Additional UI fixes from testing
+- Updated dependencies [611f1e5]
+- Updated dependencies [6737bd1]
+- Updated dependencies [6dd3fc0]
+- Updated dependencies [a24f6d2]
+- Updated dependencies [4932db7]
+  - @stackshift-ui/how-it-works@6.0.5
+  - @stackshift-ui/portfolio@6.0.6
+  - @stackshift-ui/features@6.0.6
+  - @stackshift-ui/faqs@6.0.7
+  - @stackshift-ui/avatar@6.0.6
+  - @stackshift-ui/badge@6.0.4
+  - @stackshift-ui/blockstyle@6.0.4
+  - @stackshift-ui/button@6.0.4
+  - @stackshift-ui/card@6.0.4
+  - @stackshift-ui/checkbox@6.0.4
+  - @stackshift-ui/checkbox-group@6.0.4
+  - @stackshift-ui/form@6.0.4
+  - @stackshift-ui/form-field@6.0.6
+  - @stackshift-ui/heading@6.0.4
+  - @stackshift-ui/image@6.0.4
+  - @stackshift-ui/input@6.0.5
+  - @stackshift-ui/input-file@6.0.5
+  - @stackshift-ui/link@6.0.4
+  - @stackshift-ui/radio@6.0.4
+  - @stackshift-ui/radio-group@6.0.4
+  - @stackshift-ui/select@6.0.5
+  - @stackshift-ui/social-icons@6.0.4
+  - @stackshift-ui/stats-card@6.0.5
+  - @stackshift-ui/swiper-button@6.0.4
+  - @stackshift-ui/swiper-pagination@6.0.4
+  - @stackshift-ui/text@6.0.4
+  - @stackshift-ui/textarea@6.0.5
+  - @stackshift-ui/webriq-form@6.0.4
+  - @stackshift-ui/youtube-video@6.0.4
+  - @stackshift-ui/container@6.0.4
+  - @stackshift-ui/flex@6.0.4
+  - @stackshift-ui/grid@6.0.4
+  - @stackshift-ui/grid-item@6.0.4
+  - @stackshift-ui/section@6.0.4
+  - @stackshift-ui/app-promo@6.0.5
+  - @stackshift-ui/blog@6.0.8
+  - @stackshift-ui/call-to-action@6.0.7
+  - @stackshift-ui/contact@6.0.6
+  - @stackshift-ui/cookies@6.0.5
+  - @stackshift-ui/footer@6.0.6
+  - @stackshift-ui/header@6.0.8
+  - @stackshift-ui/logo-cloud@6.0.7
+  - @stackshift-ui/navigation@6.0.6
+  - @stackshift-ui/newsletter@6.0.5
+  - @stackshift-ui/signin-signup@6.0.7
+  - @stackshift-ui/statistics@6.0.6
+  - @stackshift-ui/team@6.0.7
+  - @stackshift-ui/testimonial@6.0.6
+  - @stackshift-ui/text-component@6.0.6
+  - @stackshift-ui/system@6.0.4
+  - @stackshift-ui/scripts@6.0.3
+
 ## 6.0.10-beta.3
 
 ### Patch Changes

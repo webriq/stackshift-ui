@@ -1,5 +1,13 @@
 # @stackshift-ui/jest-presets
 
+## 2.0.1
+
+### Patch Changes
+
+- 6737bd1: Bump package versions
+- a24f6d2: Add UI fixes for components
+- 4932db7: Additional UI fixes from testing
+
 ## 2.0.1-beta.2
 
 ### Patch Changes

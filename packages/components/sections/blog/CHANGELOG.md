@@ -1,5 +1,29 @@
 # @stackshift-ui/blog
 
+## 6.0.8
+
+### Patch Changes
+
+- 6737bd1: Bump package versions
+- a24f6d2: Add UI fixes for components
+- 4932db7: Additional UI fixes from testing
+- Updated dependencies [6737bd1]
+- Updated dependencies [a24f6d2]
+- Updated dependencies [4932db7]
+  - @stackshift-ui/badge@6.0.4
+  - @stackshift-ui/button@6.0.4
+  - @stackshift-ui/card@6.0.4
+  - @stackshift-ui/heading@6.0.4
+  - @stackshift-ui/image@6.0.4
+  - @stackshift-ui/input@6.0.5
+  - @stackshift-ui/link@6.0.4
+  - @stackshift-ui/text@6.0.4
+  - @stackshift-ui/container@6.0.4
+  - @stackshift-ui/flex@6.0.4
+  - @stackshift-ui/section@6.0.4
+  - @stackshift-ui/system@6.0.4
+  - @stackshift-ui/scripts@6.0.3
+
 ## 6.0.8-beta.2
 
 ### Patch Changes

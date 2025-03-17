@@ -1,5 +1,13 @@
 # @stackshift-ui/eslint-config
 
+## 6.0.3
+
+### Patch Changes
+
+- 6737bd1: Bump package versions
+- a24f6d2: Add UI fixes for components
+- 4932db7: Additional UI fixes from testing
+
 ## 6.0.3-beta.2
 
 ### Patch Changes
