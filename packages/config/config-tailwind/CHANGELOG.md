@@ -1,5 +1,11 @@
 # @stackshift-ui/tailwind-config
 
+## 2.0.3
+
+### Patch Changes
+
+- bump patch version
+
 ## 2.0.2
 
 ### Patch Changes

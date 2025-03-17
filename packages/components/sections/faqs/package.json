@@ -1,7 +1,7 @@
 {
   "name": "@stackshift-ui/faqs",
   "description": "",
-  "version": "6.0.8",
+  "version": "6.0.9",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -58,7 +58,7 @@
     "next": "10 - 14",
     "react": "16.8 - 19",
     "react-dom": "16.8 - 19",
-    "@stackshift-ui/system": ">=6.0.5"
+    "@stackshift-ui/system": ">=6.0.6"
   },
   "peerDependenciesMeta": {
     "next": {
