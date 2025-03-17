@@ -1,5 +1,15 @@
 # @stackshift-ui/badge
 
+## 6.0.5
+
+### Patch Changes
+
+- Bump package versions with latest fixes
+- Updated dependencies
+  - @stackshift-ui/flex@6.0.5
+  - @stackshift-ui/system@6.0.5
+  - @stackshift-ui/scripts@6.0.4
+
 ## 6.0.4
 
 ### Patch Changes

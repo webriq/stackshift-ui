@@ -1,6 +1,6 @@
 {
   "name": "@stackshift-ui/link",
-  "version": "6.0.4",
+  "version": "6.0.5",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",

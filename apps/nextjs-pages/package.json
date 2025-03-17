@@ -17,8 +17,8 @@
     "next": "14.2.15"
   },
   "peerDependencies": {
-    "@stackshift-ui/system": ">=6.0.4",
-    "@stackshift-ui/react": ">=6.0.10"
+    "@stackshift-ui/system": ">=6.0.5",
+    "@stackshift-ui/react": ">=6.0.11"
   },
   "devDependencies": {
     "typescript": "^5",

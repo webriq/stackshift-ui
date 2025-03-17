@@ -1,5 +1,21 @@
 # @stackshift-ui/how-it-works
 
+## 6.0.6
+
+### Patch Changes
+
+- Bump package versions with latest fixes
+- Updated dependencies
+  - @stackshift-ui/card@6.0.5
+  - @stackshift-ui/heading@6.0.5
+  - @stackshift-ui/text@6.0.5
+  - @stackshift-ui/youtube-video@6.0.5
+  - @stackshift-ui/container@6.0.5
+  - @stackshift-ui/flex@6.0.5
+  - @stackshift-ui/section@6.0.5
+  - @stackshift-ui/system@6.0.5
+  - @stackshift-ui/scripts@6.0.4
+
 ## 6.0.5
 
 ### Patch Changes

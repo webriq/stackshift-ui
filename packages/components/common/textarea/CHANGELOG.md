@@ -1,5 +1,14 @@
 # @stackshift-ui/textarea
 
+## 6.0.6
+
+### Patch Changes
+
+- Bump package versions with latest fixes
+- Updated dependencies
+  - @stackshift-ui/system@6.0.5
+  - @stackshift-ui/scripts@6.0.4
+
 ## 6.0.5
 
 ### Patch Changes

@@ -1,5 +1,22 @@
 # @stackshift-ui/form-field
 
+## 6.0.7
+
+### Patch Changes
+
+- Bump package versions with latest fixes
+- Updated dependencies
+  - @stackshift-ui/checkbox@6.0.5
+  - @stackshift-ui/checkbox-group@6.0.5
+  - @stackshift-ui/input@6.0.6
+  - @stackshift-ui/input-file@6.0.6
+  - @stackshift-ui/radio@6.0.5
+  - @stackshift-ui/radio-group@6.0.5
+  - @stackshift-ui/select@6.0.6
+  - @stackshift-ui/textarea@6.0.6
+  - @stackshift-ui/system@6.0.5
+  - @stackshift-ui/scripts@6.0.4
+
 ## 6.0.6
 
 ### Patch Changes

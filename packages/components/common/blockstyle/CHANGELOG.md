@@ -1,5 +1,18 @@
 # @stackshift-ui/blockstyle
 
+## 6.0.5
+
+### Patch Changes
+
+- Bump package versions with latest fixes
+- Updated dependencies
+  - @stackshift-ui/heading@6.0.5
+  - @stackshift-ui/image@6.0.5
+  - @stackshift-ui/link@6.0.5
+  - @stackshift-ui/text@6.0.5
+  - @stackshift-ui/system@6.0.5
+  - @stackshift-ui/scripts@6.0.4
+
 ## 6.0.4
 
 ### Patch Changes
