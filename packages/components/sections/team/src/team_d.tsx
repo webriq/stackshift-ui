@@ -10,7 +10,7 @@ import { Team as iTeam } from "./types";
 
 export default function Team_D({ caption, title, team }: TeamsProps) {
   return (
-    <Section className="py-20 bg-background">
+    <Section className="!md:px-4 py-20 bg-background">
       <Container maxWidth={1280}>
         <CaptionAndTitle caption={caption} title={title} />
         <TeamMemberCard team={team} />
@@ -39,14 +39,14 @@ function TeamMemberCard({ team }: { team?: iTeam[] }) {
     <Flex wrap>
       {team &&
         team.map((member, index) => (
-          <div className="w-full px-4 mb-6 lg:w-1/2" key={index}>
+          <div className="w-full px-4 mb-6 md:w-1/2" key={index}>
             <Card
-              className="items-center p-0 bg-white overflow-hidden shadow-lg sm:flex sm:flex-wrap lg:block xl:flex"
+              className="items-center p-0 bg-white overflow-hidden shadow-lg lg:block xl:flex"
               borderRadius="md">
               {member.mainImage?.image && (
                 <div>
                   <Image
-                    className="h-[320px] w-full object-cover rounded-md sm:w-[179px] lg:w-full xl:w-[179px]"
+                    className="h-[320px] w-full object-cover rounded-md xl:w-[179px]"
                     sizes="100vw"
                     src={`${member?.mainImage?.image}`}
                     width={179}
@@ -65,11 +65,17 @@ function TeamMemberCard({ team }: { team?: iTeam[] }) {
 
 function TeamMemberText({ member }: MemberTextProps) {
   return (
-    <div className="p-4 sm:w-2/3 lg:w-full lg:pl-6 xl:w-2/3">
-      <Text weight="bold" fontSize="2xl" className="mb-2">
+    <div className="w-full lg:p-4 xl:w-2/3">
+      <Text
+        weight="bold"
+        className="my-2 text-lg sm:text-xl md:text-2xl"
+      >
         {member?.name}
       </Text>
-      <Text className="mb-4 leading-loose" muted>
+      <Text
+        className="mb-4 leading-loose text-sm md:text-base"
+        muted
+      >
         {member?.plainText}
       </Text>
     </div>
