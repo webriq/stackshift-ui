@@ -1,5 +1,11 @@
 # @stackshift-ui/eslint-config
 
+## 6.0.6
+
+### Patch Changes
+
+- Add fixes for footer and team components
+
 ## 6.0.5
 
 ### Patch Changes

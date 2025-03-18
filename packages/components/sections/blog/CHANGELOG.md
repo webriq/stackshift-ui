@@ -1,5 +1,25 @@
 # @stackshift-ui/blog
 
+## 6.0.11
+
+### Patch Changes
+
+- Add fixes for footer and team components
+- Updated dependencies
+  - @stackshift-ui/badge@6.0.7
+  - @stackshift-ui/button@6.0.7
+  - @stackshift-ui/card@6.0.7
+  - @stackshift-ui/heading@6.0.7
+  - @stackshift-ui/image@6.0.7
+  - @stackshift-ui/input@6.0.8
+  - @stackshift-ui/link@6.0.7
+  - @stackshift-ui/text@6.0.7
+  - @stackshift-ui/container@6.0.7
+  - @stackshift-ui/flex@6.0.7
+  - @stackshift-ui/section@6.0.7
+  - @stackshift-ui/system@6.0.7
+  - @stackshift-ui/scripts@6.0.6
+
 ## 6.0.10
 
 ### Patch Changes

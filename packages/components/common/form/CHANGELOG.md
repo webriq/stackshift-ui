@@ -1,5 +1,15 @@
 # @stackshift-ui/form
 
+## 6.0.7
+
+### Patch Changes
+
+- Add fixes for footer and team components
+- Updated dependencies
+  - @stackshift-ui/webriq-form@6.0.7
+  - @stackshift-ui/system@6.0.7
+  - @stackshift-ui/scripts@6.0.6
+
 ## 6.0.6
 
 ### Patch Changes

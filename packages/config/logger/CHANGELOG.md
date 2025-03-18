@@ -1,5 +1,11 @@
 # @stackshift-ui/logger
 
+## 2.0.4
+
+### Patch Changes
+
+- Add fixes for footer and team components
+
 ## 2.0.3
 
 ### Patch Changes

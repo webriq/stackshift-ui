@@ -1,5 +1,63 @@
 # @stackshift-ui/react
 
+## 6.0.13
+
+### Patch Changes
+
+- Add fixes for footer and team components
+- Updated dependencies
+  - @stackshift-ui/avatar@6.0.9
+  - @stackshift-ui/badge@6.0.7
+  - @stackshift-ui/blockstyle@6.0.7
+  - @stackshift-ui/button@6.0.7
+  - @stackshift-ui/card@6.0.7
+  - @stackshift-ui/checkbox@6.0.7
+  - @stackshift-ui/checkbox-group@6.0.7
+  - @stackshift-ui/form@6.0.7
+  - @stackshift-ui/form-field@6.0.9
+  - @stackshift-ui/heading@6.0.7
+  - @stackshift-ui/image@6.0.7
+  - @stackshift-ui/input@6.0.8
+  - @stackshift-ui/input-file@6.0.8
+  - @stackshift-ui/link@6.0.7
+  - @stackshift-ui/radio@6.0.7
+  - @stackshift-ui/radio-group@6.0.7
+  - @stackshift-ui/select@6.0.8
+  - @stackshift-ui/social-icons@6.0.7
+  - @stackshift-ui/stats-card@6.0.8
+  - @stackshift-ui/swiper-button@6.0.7
+  - @stackshift-ui/swiper-pagination@6.0.7
+  - @stackshift-ui/text@6.0.7
+  - @stackshift-ui/textarea@6.0.8
+  - @stackshift-ui/webriq-form@6.0.7
+  - @stackshift-ui/youtube-video@6.0.7
+  - @stackshift-ui/container@6.0.7
+  - @stackshift-ui/flex@6.0.7
+  - @stackshift-ui/grid@6.0.7
+  - @stackshift-ui/grid-item@6.0.7
+  - @stackshift-ui/section@6.0.7
+  - @stackshift-ui/app-promo@6.0.8
+  - @stackshift-ui/blog@6.0.11
+  - @stackshift-ui/call-to-action@6.0.10
+  - @stackshift-ui/contact@6.0.9
+  - @stackshift-ui/cookies@6.0.8
+  - @stackshift-ui/faqs@6.0.10
+  - @stackshift-ui/features@6.0.9
+  - @stackshift-ui/footer@6.0.9
+  - @stackshift-ui/header@6.0.11
+  - @stackshift-ui/how-it-works@6.0.8
+  - @stackshift-ui/logo-cloud@6.0.10
+  - @stackshift-ui/navigation@6.0.9
+  - @stackshift-ui/newsletter@6.0.8
+  - @stackshift-ui/portfolio@6.0.9
+  - @stackshift-ui/signin-signup@6.0.10
+  - @stackshift-ui/statistics@6.0.9
+  - @stackshift-ui/team@6.0.10
+  - @stackshift-ui/testimonial@6.0.9
+  - @stackshift-ui/text-component@6.0.9
+  - @stackshift-ui/system@6.0.7
+  - @stackshift-ui/scripts@6.0.6
+
 ## 6.0.12
 
 ### Patch Changes

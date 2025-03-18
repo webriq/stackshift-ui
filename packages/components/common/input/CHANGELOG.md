@@ -1,5 +1,14 @@
 # @stackshift-ui/input
 
+## 6.0.8
+
+### Patch Changes
+
+- Add fixes for footer and team components
+- Updated dependencies
+  - @stackshift-ui/system@6.0.7
+  - @stackshift-ui/scripts@6.0.6
+
 ## 6.0.7
 
 ### Patch Changes

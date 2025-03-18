@@ -1,5 +1,21 @@
 # @stackshift-ui/how-it-works
 
+## 6.0.8
+
+### Patch Changes
+
+- Add fixes for footer and team components
+- Updated dependencies
+  - @stackshift-ui/card@6.0.7
+  - @stackshift-ui/heading@6.0.7
+  - @stackshift-ui/text@6.0.7
+  - @stackshift-ui/youtube-video@6.0.7
+  - @stackshift-ui/container@6.0.7
+  - @stackshift-ui/flex@6.0.7
+  - @stackshift-ui/section@6.0.7
+  - @stackshift-ui/system@6.0.7
+  - @stackshift-ui/scripts@6.0.6
+
 ## 6.0.7
 
 ### Patch Changes

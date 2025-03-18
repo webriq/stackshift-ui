@@ -1,6 +1,6 @@
 {
   "name": "@stackshift-ui/tailwind-config",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "private": false,
   "exports": {
     "./tailwind": "./tailwind.config.ts",
