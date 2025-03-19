@@ -31,7 +31,7 @@ export const SwiperPagination: React.FC<SwiperPaginationProps> = ({
   const variantClass = {
     blue: `mr-1 ${isActive ? "bg-primary" : "bg-gray-200"} rounded-full p-1 focus:outline-none`,
     white: `mr-2 inline-block h-2 w-2 rounded-full ${
-      isActive ? "bg-white focus:outline-none" : "focus:outline-none"
+      isActive ? "bg-white focus:outline-none" : "bg-gray-500 focus:outline-none"
     }`,
   };
 
