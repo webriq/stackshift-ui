@@ -1,5 +1,12 @@
 # @stackshift-ui/logger
 
+## 2.0.5
+
+### Patch Changes
+
+- Add fixes for footer D and swiper-pagination styling
+- 6b6ece1: Add fixes to footer component and storybook file
+
 ## 2.0.5-beta.0
 
 ### Patch Changes

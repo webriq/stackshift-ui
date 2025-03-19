@@ -1,5 +1,12 @@
 # @stackshift-ui/scripts
 
+## 6.0.7
+
+### Patch Changes
+
+- Add fixes for footer D and swiper-pagination styling
+- 6b6ece1: Add fixes to footer component and storybook file
+
 ## 6.0.7-beta.0
 
 ### Patch Changes

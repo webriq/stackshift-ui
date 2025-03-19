@@ -1,5 +1,25 @@
 # @stackshift-ui/team
 
+## 6.0.11
+
+### Patch Changes
+
+- Add fixes for footer D and swiper-pagination styling
+- 6b6ece1: Add fixes to footer component and storybook file
+- Updated dependencies
+- Updated dependencies [6b6ece1]
+  - @stackshift-ui/avatar@6.0.10
+  - @stackshift-ui/button@6.0.8
+  - @stackshift-ui/card@6.0.8
+  - @stackshift-ui/heading@6.0.8
+  - @stackshift-ui/image@6.0.8
+  - @stackshift-ui/text@6.0.8
+  - @stackshift-ui/container@6.0.8
+  - @stackshift-ui/flex@6.0.8
+  - @stackshift-ui/section@6.0.8
+  - @stackshift-ui/system@6.0.8
+  - @stackshift-ui/scripts@6.0.7
+
 ## 6.0.11-beta.0
 
 ### Patch Changes

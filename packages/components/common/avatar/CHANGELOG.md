@@ -1,5 +1,18 @@
 # @stackshift-ui/avatar
 
+## 6.0.10
+
+### Patch Changes
+
+- Add fixes for footer D and swiper-pagination styling
+- 6b6ece1: Add fixes to footer component and storybook file
+- Updated dependencies
+- Updated dependencies [6b6ece1]
+  - @stackshift-ui/image@6.0.8
+  - @stackshift-ui/flex@6.0.8
+  - @stackshift-ui/system@6.0.8
+  - @stackshift-ui/scripts@6.0.7
+
 ## 6.0.10-beta.0
 
 ### Patch Changes
