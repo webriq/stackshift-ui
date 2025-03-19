@@ -1,5 +1,18 @@
 # @stackshift-ui/blockstyle
 
+## 6.0.8-beta.0
+
+### Patch Changes
+
+- Add fixes to footer component and storybook file
+- Updated dependencies
+  - @stackshift-ui/heading@6.0.8-beta.0
+  - @stackshift-ui/image@6.0.8-beta.0
+  - @stackshift-ui/link@6.0.8-beta.0
+  - @stackshift-ui/text@6.0.8-beta.0
+  - @stackshift-ui/system@6.0.8-beta.0
+  - @stackshift-ui/scripts@6.0.7-beta.0
+
 ## 6.0.7
 
 ### Patch Changes

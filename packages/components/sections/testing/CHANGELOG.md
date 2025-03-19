@@ -1,5 +1,18 @@
 # @webriq-test/testing
 
+## 1.0.6-beta.0
+
+### Patch Changes
+
+- Add fixes to footer component and storybook file
+- Updated dependencies
+  - @stackshift-ui/heading@6.0.8-beta.0
+  - @stackshift-ui/container@6.0.8-beta.0
+  - @stackshift-ui/flex@6.0.8-beta.0
+  - @stackshift-ui/section@6.0.8-beta.0
+  - @stackshift-ui/system@6.0.8-beta.0
+  - @stackshift-ui/scripts@6.0.7-beta.0
+
 ## 1.0.5
 
 ### Patch Changes

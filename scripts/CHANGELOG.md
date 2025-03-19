@@ -1,5 +1,11 @@
 # @stackshift-ui/scripts
 
+## 6.0.7-beta.0
+
+### Patch Changes
+
+- Add fixes to footer component and storybook file
+
 ## 6.0.6
 
 ### Patch Changes

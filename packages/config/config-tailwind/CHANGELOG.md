@@ -1,5 +1,11 @@
 # @stackshift-ui/tailwind-config
 
+## 2.0.5-beta.0
+
+### Patch Changes
+
+- Add fixes to footer component and storybook file
+
 ## 2.0.4
 
 ### Patch Changes

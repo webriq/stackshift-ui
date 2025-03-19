@@ -1,5 +1,15 @@
 # @stackshift-ui/button
 
+## 6.0.8-beta.0
+
+### Patch Changes
+
+- Add fixes to footer component and storybook file
+- Updated dependencies
+  - @stackshift-ui/link@6.0.8-beta.0
+  - @stackshift-ui/system@6.0.8-beta.0
+  - @stackshift-ui/scripts@6.0.7-beta.0
+
 ## 6.0.7
 
 ### Patch Changes
