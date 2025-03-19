@@ -47,6 +47,15 @@ export const VariantA: Story = {
             socialMedia: "instagram",
             socialMediaLink: "https://www.instagram.com",
           },
+          {
+            socialMedia: "other",
+            socialMediaPlatform: "LinkedIn",
+            socialMediaIcon: {
+              image: "https://cdn.sanity.io/images/9itgab5x/production/ca072a00e238879ed4f071c63e763e217ad7a24d-860x861.png",
+              alt: "linkedin"
+            },
+            socialMediaLink: "https://www.linkedin.com"
+          }
         ],
       },
     },
@@ -86,6 +95,15 @@ export const VariantB: Story = {
             socialMedia: "instagram",
             socialMediaLink: "https://www.instagram.com",
           },
+          {
+            socialMedia: "other",
+            socialMediaPlatform: "LinkedIn",
+            socialMediaIcon: {
+              image: "https://cdn.sanity.io/images/9itgab5x/production/ca072a00e238879ed4f071c63e763e217ad7a24d-860x861.png",
+              alt: "linkedin"
+            },
+            socialMediaLink: "https://www.linkedin.com"
+          }
         ],
       },
     },
@@ -125,6 +143,15 @@ export const VariantC: Story = {
             socialMedia: "instagram",
             socialMediaLink: "https://www.instagram.com",
           },
+          {
+            socialMedia: "other",
+            socialMediaPlatform: "LinkedIn",
+            socialMediaIcon: {
+              image: "https://cdn.sanity.io/images/9itgab5x/production/ca072a00e238879ed4f071c63e763e217ad7a24d-860x861.png",
+              alt: "linkedin"
+            },
+            socialMediaLink: "https://www.linkedin.com"
+          }
         ],
       },
     },
@@ -175,6 +202,15 @@ export const VariantD: Story = {
             socialMedia: "instagram",
             socialMediaLink: "https://www.instagram.com",
           },
+          {
+            socialMedia: "other",
+            socialMediaPlatform: "LinkedIn",
+            socialMediaIcon: {
+              image: "https://cdn.sanity.io/images/9itgab5x/production/ca072a00e238879ed4f071c63e763e217ad7a24d-860x861.png",
+              alt: "linkedin"
+            },
+            socialMediaLink: "https://www.linkedin.com"
+          }
         ],
       },
     },

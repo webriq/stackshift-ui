@@ -77,8 +77,8 @@ function MenuSection({ multipleMenus }: { multipleMenus?: any[] }) {
   if (!multipleMenus) return null;
 
   return (
-    <Flex wrap className="flex-grow lg:justify-around" gap={4}>
-      {multipleMenus?.map((menu) => <MenuLinks key={menu?._key} menu={menu} />)}
+    <Flex wrap className="flex-grow !justify-center" gap={4}>
+      {multipleMenus?.map(menu => <MenuLinks key={menu?._key} menu={menu} />)}
     </Flex>
   );
 }
@@ -117,7 +117,7 @@ function SocialMediaContainer({ socialMedia }: { socialMedia?: SocialLink[] }) {
   if (!socialMedia) return null;
 
   return (
-    <Flex className="!items-center w-full ml-auto lg:justify-end lg:w-1/6" wrap={true}>
+    <Flex className="!items-center" wrap={true} gap={2}>
       {socialMedia?.map(social => social?.socialMediaLink && <SocialMediaLink social={social} />)}
     </Flex>
   );
@@ -130,20 +130,18 @@ function SocialMediaLink({ social }: { social?: SocialLink }) {
     <span key={social?._key}>
       <Link
         aria-label={social?.socialMedia || social?.socialMediaPlatform || ""}
-        className="inline-block items-center p-2 mr-2 rounded"
+        className="inline-block p-2 rounded"
         target="_blank"
         rel="noopener noreferrer"
         href={social?.socialMediaLink}>
-        {social?.socialMedia === "others" ? (
-          social?.socialMediaIcon?.image ? (
-            <Image
-              className="h-6"
-              src={`${social?.socialMediaIcon?.image}`}
-              width={24}
-              height={24}
-              alt={social?.socialMediaIcon?.alt ?? "contact-socialMedia-icon"}
-            />
-          ): null
+        {social?.socialMediaIcon?.image ? (
+          <Image
+            className="h-6 w-full"
+            src={`${social?.socialMediaIcon?.image}`}
+            width={24}
+            height={24}
+            alt={social?.socialMediaIcon?.alt ?? "socialmedia-icon"}
+          />
         ) : (
           <SocialIcons social={social?.socialMedia as Socials} />
         )}
