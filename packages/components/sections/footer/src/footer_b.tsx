@@ -20,7 +20,7 @@ export default function Footer_B({ logo, copyright, socialMedia, menu }: FooterP
           <LogoSection logo={logo} />
           <MenuLists menu={menu} />
         </Flex>
-        <Flex wrap align="center" justify="between" className="mt-8">
+        <Flex wrap className="mt-8 justify-between items-start">
           <CopyrightContainer copyright={copyright} />
           <SocialMediaContainer socialMedia={socialMedia} />
         </Flex>
@@ -33,20 +33,14 @@ function LogoSection({ logo }: { logo?: Logo }) {
   if (!logo?.image) return null;
 
   return (
-    <div className="w-full mt-8 lg:mb-4 lg:w-1/5">
+    <div className="mb-8 xl:mb-0 w-full lg:w-1/5">
       <Link
         aria-label={logoLink(logo) === "/" ? "Go to home page" : `Go to ${logoLink(logo)}`}
-        className="inline-block text-3xl font-bold leading-none"
+        className="w-40 h-14 flex items-center"
         href={logoLink(logo)}
         target={logo?.linkTarget}
         rel={logo?.linkTarget === "_blank" ? "noopener noreferrer" : ""}>
-        <Image
-          src={logo?.image}
-          alt={logo?.alt ?? "footer-logo"}
-          width={80}
-          height={80}
-          className="inline-block text-3xl font-bold leading-none"
-        />
+        <Image className="w-full h-full " src={logo?.image} alt={logo?.alt ?? "footer-logo"} />
       </Link>
     </div>
   );
@@ -57,7 +51,7 @@ function MenuLists({ menu }: { menu?: LabeledRouteWithKey[] }) {
 
   return (
     <div className="w-full lg:w-auto">
-      <Flex wrap align="center" justify="between" as="ul" className=" mt-8 lg:space-x-5">
+      <Flex wrap align="center" justify="between" as="ul" gap={5} className="mt-8">
         {menu?.map((links, index, { length }) => (
           <React.Fragment key={links?._key || index}>
             <MenuList links={links} />
@@ -109,7 +103,7 @@ function CopyrightContainer({ copyright }: { copyright?: string }) {
   if (!copyright) return null;
 
   return (
-    <Text muted className="order-last text-sm ">
+    <Text muted className="order-last text-sm p-2">
       {copyright}
     </Text>
   );
@@ -131,7 +125,7 @@ function SocialMediaLink({ social }: { social?: SocialLink }) {
   return (
     <Link
       aria-label={social?.socialMedia || social?.socialMediaPlatform || ""}
-      className="inline-block p-2 mr-2 rounded"
+      className="inline-block p-2 rounded"
       target="_blank"
       rel="noopener noreferrer"
       href={social?.socialMediaLink}

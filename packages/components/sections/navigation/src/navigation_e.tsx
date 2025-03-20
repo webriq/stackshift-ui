@@ -42,7 +42,7 @@ export default function Navigation_E({ banner, logo, links }: NavigationProps) {
           <LogoSection logo={logo} />
           <NavLinks links={links} />
         </Flex>
-        <div className="items-center justify-end hidden mt-6 mr-12 lg:flex">
+        <div className="items-center hidden lg:flex lg:gap-10">
           <SearchButton showSearchBar={showSearchBar} setShowSearchBar={setShowSearchBar} />
           <SearchForm
             showSearchBar={showSearchBar}
@@ -120,13 +120,7 @@ function LogoSection({ logo }: { logo?: Logo }) {
       href={logoLink(logo)}
       target={logo?.linkTarget}
       rel={logo?.linkTarget === "_blank" ? "noopener noreferrer" : ""}>
-      <Image
-        src={logo?.image}
-        alt={logo?.alt ?? "navigation-logo"}
-        width={48}
-        height={48}
-        className="text-3xl font-bold leading-none"
-      />
+      <Image src={logo?.image} width={48} height={48} alt={logo?.alt ?? "navigation-logo"} />
     </Link>
   );
 }
@@ -135,7 +129,7 @@ function NavLinks({ links }: { links?: LabeledRouteWithKey[] }) {
   if (!links) return null;
 
   return (
-    <ul className="hidden lg:flex lg:w-auto lg:items-center lg:space-x-5">
+    <ul className="hidden transform main-nav top-1/2 lg:flex lg:gap-10 lg:justify-center lg:items-center">
       {links.map((link, index) => (
         <Fragment key={index}>
           <NavItem link={link} />
@@ -180,13 +174,8 @@ function SearchButton({
       ariaLabel="Search button"
       type="button"
       onClick={() => setShowSearchBar(!showSearchBar)}>
-      <svg
-        width={24}
-        height={24}
-        xmlns="http://www.w3.org/2000/svg"
-        fillRule="evenodd"
-        clipRule="evenodd">
-        <path d="M15.853 16.56c-1.683 1.517-3.911 2.44-6.353 2.44-5.243 0-9.5-4.257-9.5-9.5s4.257-9.5 9.5-9.5 9.5 4.257 9.5 9.5c0 2.442-.923 4.67-2.44 6.353l7.44 7.44-.707.707-7.44-7.44zm-6.353-15.56c4.691 0 8.5 3.809 8.5 8.5s-3.809 8.5-8.5 8.5-8.5-3.809-8.5-8.5 3.809-8.5 8.5-8.5z" />
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z" />
       </svg>
     </Button>
   );
@@ -234,16 +223,8 @@ function SearchForm({
         }`}
         disabled={productQuery === ""}
         type="submit">
-        <svg
-          width={7}
-          height={12}
-          viewBox="0 0 7 12"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M4.125 6.00252L0 1.87752L1.17801 0.699219L6.48102 6.00252L1.17801 11.3058L0 10.1275L4.125 6.00252Z"
-            fill="white"
-          />
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z" />
         </svg>
       </Button>
     </form>
@@ -275,8 +256,16 @@ function MenuIcon({ showMenu }: { showMenu: () => void }) {
 
 function CartIcon() {
   return (
-    <div className="mx-10 cart-icon cart-link">
-      <div data-icon="BAG" className="ec-cart-widget" />
+    <div className="cart-icon cart-link">
+      <svg
+        data-icon="BAG"
+        className="ec-minicart__icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24">
+        <path d="M20 7h-4v-3c0-2.209-1.791-4-4-4s-4 1.791-4 4v3h-4l-2 17h20l-2-17zm-11-3c0-1.654 1.346-3 3-3s3 1.346 3 3v3h-6v-3zm-4.751 18l1.529-13h2.222v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h6v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h2.222l1.529 13h-15.502z" />
+      </svg>
       <a className="cart-link" href="/cart?store-page=cart" aria-label="Cart" />
     </div>
   );
@@ -284,27 +273,9 @@ function CartIcon() {
 
 function AccountIcon() {
   return (
-    <a href="/cart?store-page=account">
-      <svg
-        width={32}
-        height={31}
-        viewBox="0 0 32 31"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M16.0006 16.3154C19.1303 16.3154 21.6673 13.799 21.6673 10.6948C21.6673 7.59064 19.1303 5.07422 16.0006 5.07422C12.871 5.07422 10.334 7.59064 10.334 10.6948C10.334 13.799 12.871 16.3154 16.0006 16.3154Z"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M24.4225 23.8963C23.6678 22.3507 22.4756 21.0445 20.9845 20.1298C19.4934 19.2151 17.7647 18.7295 15.9998 18.7295C14.2349 18.7295 12.5063 19.2151 11.0152 20.1298C9.52406 21.0445 8.33179 22.3507 7.57715 23.8963"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
+    <a aria-label="Account" href="/cart?store-page=account">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M12 2c2.757 0 5 2.243 5 5.001 0 2.756-2.243 5-5 5s-5-2.244-5-5c0-2.758 2.243-5.001 5-5.001zm0-2c-3.866 0-7 3.134-7 7.001 0 3.865 3.134 7 7 7s7-3.135 7-7c0-3.867-3.134-7.001-7-7.001zm6.369 13.353c-.497.498-1.057.931-1.658 1.302 2.872 1.874 4.378 5.083 4.972 7.346h-19.387c.572-2.29 2.058-5.503 4.973-7.358-.603-.374-1.162-.811-1.658-1.312-4.258 3.072-5.611 8.506-5.611 10.669h24c0-2.142-1.44-7.557-5.631-10.647z" />
       </svg>
     </a>
   );

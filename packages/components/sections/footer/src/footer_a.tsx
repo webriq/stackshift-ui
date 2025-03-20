@@ -15,13 +15,13 @@ import { ContactDetails, Logo, SocialLink, Socials } from "./types";
 export default function Footer_A({ logo, text, contacts, copyright, socialMedia }: FooterProps) {
   return (
     <Section className="py-20 bg-background">
-      <Container maxWidth={1000}>
+      <Container maxWidth={1280} className="lg:px-4">
         <Flex wrap className="mb-5 lg:mb-20">
           <LogoSection logo={logo} />
           <TextContainer text={text} />
           <ContactsContainer contacts={contacts} />
         </Flex>
-        <Flex justify="between" align="center" className="w-full mx-auto lg:flex">
+        <Flex justify="between" align="center" wrap className="w-full mx-auto gap-4">
           <CopyrightContainer copyright={copyright} />
           <SocialMediaContainer socialMedia={socialMedia} />
         </Flex>
@@ -36,16 +36,15 @@ function LogoSection({ logo }: { logo?: Logo }) {
   return (
     <div className="w-full mb-5 lg:w-1/5">
       <Link
+        className="w-40 h-14 flex items-center"
         aria-label={logoLink(logo) === "/" ? "Go to home page" : `Go to ${logoLink(logo)}`}
-        className="text-3xl font-bold leading-none"
         href={logoLink(logo)}
         target={logo?.linkTarget}
         rel={logo?.linkTarget === "_blank" ? "noopener noreferrer" : ""}>
         <Image
+          className="w-fit h-full object-contain"
           src={`${logo?.image}`}
-          //   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          width={132}
-          height={56}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           alt={logo?.alt ?? "footer-logo"}
         />
       </Link>
@@ -57,7 +56,7 @@ function TextContainer({ text }: { text?: string }) {
   if (!text) return null;
 
   return (
-    <Container className="w-full mb-5 lg:w-1/5" maxWidth={1000}>
+    <Container className="w-full mb-5 lg:w-1/5 !px-0 lg:px-4" maxWidth={1280}>
       <Text muted className="leading-loose">
         {text}
       </Text>
@@ -69,7 +68,7 @@ function ContactsContainer({ contacts }: { contacts?: ContactDetails[] }) {
   if (!contacts) return null;
 
   return (
-    <Container className="w-full mt-1 ml-auto lg:w-1/2" maxWidth={1000}>
+    <Container className="w-full mt-1 lg:w-1/2 !px-0 lg:px-4" maxWidth={1280}>
       {contacts?.map((contact, index) => (
         <Grid columns={1} gap={4} className="lg:gap-10 md:grid-cols-3" key={index}>
           <GridItem span={1}>
@@ -124,33 +123,32 @@ function SocialMediaContainer({ socialMedia }: { socialMedia?: SocialLink[] }) {
   if (!socialMedia) return null;
 
   return (
-    <Flex wrap className="space-x-2 lg:mx-10 lg:space-x-4">
-      {socialMedia?.map((social, index) => <SocialMediaLink social={social} index={index} />)}
+    <Flex wrap className="gap-5">
+      {socialMedia?.map((social, index) => <SocialMediaLink social={social} key={index} />)}
     </Flex>
   );
 }
 
-function SocialMediaLink({ social, index }: { social?: SocialLink; index?: number }) {
+function SocialMediaLink({ social }: { social?: SocialLink }) {
   if (!social?.socialMediaLink) return null;
 
   return (
     <Link
       aria-label={social?.socialMedia || social?.socialMediaPlatform || ""}
-      className="inline-block p-2 mr-2 rounded"
+      className="rounded w-6 h-6 flex items-center"
       target="_blank"
       rel="noopener noreferrer"
-      href={social?.socialMediaLink}
-      key={index}>
+      href={social?.socialMediaLink}>
       {social?.socialMediaIcon?.image ? (
         <Image
-          className="h-6"
+          className="w-full h-full object-contain"
           src={`${social?.socialMediaIcon?.image}`}
-          width={24}
-          height={24}
+          width={56}
+          height={56}
           alt={social?.socialMediaIcon?.alt ?? "contact-socialMedia-icon"}
         />
       ) : (
-        <SocialIcons social={social?.socialMedia as Socials} />
+        <SocialIcons social={social?.socialMedia} />
       )}
     </Link>
   );

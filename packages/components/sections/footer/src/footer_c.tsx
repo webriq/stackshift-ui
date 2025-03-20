@@ -67,7 +67,7 @@ function MenuLists({ menu }: { menu?: LabeledRouteWithKey[] }) {
   return (
     <div className="mx-auto">
       <Flex
-        className="flex-col gap-0 lg:flex-row lg:gap-10"
+        className="flex-col gap-4 lg:flex-row lg:gap-10"
         as="ul"
         align="center"
         justify="center">
@@ -97,26 +97,25 @@ function SocialMediaContainer({ socialMedia }: { socialMedia?: SocialLink[] }) {
   if (!socialMedia) return null;
 
   return (
-    <Flex wrap justify="center" className="space-y-2 sm:space-y-0">
-      {socialMedia?.map((social, index) => <SocialMediaLink social={social} index={index} />)}
+    <Flex wrap justify="center" align="center" className="gap-5">
+      {socialMedia?.map((social, index) => <SocialMediaLink social={social} key={index} />)}
     </Flex>
   );
 }
 
-function SocialMediaLink({ social, index }: { social?: SocialLink; index?: number }) {
+function SocialMediaLink({ social }: { social?: SocialLink }) {
   if (!social?.socialMediaLink) return null;
 
   return (
     <Link
       aria-label={social?.socialMedia || social?.socialMediaPlatform || ""}
-      className="inline-block p-2 mr-2 rounded"
+      className="rounded w-6 h-6 flex items-center"
       target="_blank"
       rel="noopener noreferrer"
-      href={social?.socialMediaLink}
-      key={index}>
+      href={social?.socialMediaLink}>
       {social?.socialMediaIcon?.image ? (
         <Image
-          className="h-6"
+          className="w-full h-full object-contain"
           src={`${social?.socialMediaIcon?.image}`}
           width={56}
           height={56}

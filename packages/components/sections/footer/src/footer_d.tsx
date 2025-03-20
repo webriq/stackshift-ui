@@ -54,16 +54,15 @@ function LogoSection({ logo }: { logo?: Logo }) {
 
   return (
     <Link
-      className="inline-block text-xl font-bold leading-none"
+      className="w-40 h-14 flex items-center"
       aria-label={logoLink(logo) === "/" ? "Go to home page" : `Go to ${logoLink(logo)}`}
       href={logoLink(logo)}
       target={logo?.linkTarget}
       rel={logo?.linkTarget === "_blank" ? "noopener noreferrer" : ""}>
       <Image
+        className="w-fit h-full object-contain"
         src={`${logo?.image}`}
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        width={132}
-        height={56}
         alt={logo?.alt ?? "footer-logo"}
       />
     </Link>
@@ -157,17 +156,17 @@ function SocialMediaLink({ social }: { social?: SocialLink }) {
   return (
     <Link
       aria-label={social?.socialMedia || social?.socialMediaPlatform || ""}
-      className="sm:inline-flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100"
+      className="rounded w-6 h-6 flex items-center"
       target="_blank"
       rel="noopener noreferrer"
       href={social?.socialMediaLink}>
       {social?.socialMediaIcon?.image ? (
         <Image
-          className="h-6 w-6"
+          className="w-full h-full object-contain"
           src={`${social?.socialMediaIcon?.image}`}
-          width={24}
-          height={24}
-          alt={social?.socialMediaIcon?.alt ?? "socialmedia-icon"}
+          width={56}
+          height={56}
+          alt={social?.socialMediaIcon?.alt ?? "contact-socialMedia-icon"}
         />
       ) : (
         <SocialIcons social={getSocialType(social?.socialMedia)} />

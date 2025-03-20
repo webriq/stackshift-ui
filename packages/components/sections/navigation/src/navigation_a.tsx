@@ -22,7 +22,7 @@ export default function Navigation_A({
 
   return (
     <Section className="bg-background">
-      <Flex align="center" justify="between" className="px-6 py-6">
+      <Flex align="center" justify="between" className="px-6 py-6" gap={4}>
         <LogoSection logo={logo} />
         <NavLinks links={links} />
         <Buttons primaryButton={primaryButton} secondaryButton={secondaryButton} />
@@ -43,20 +43,21 @@ function LogoSection({ logo }: { logo?: Logo }) {
   if (!logo) return null;
 
   return (
-    <Link
-      aria-label={`Go to ${logoLink(logo) === "/" ? "home page" : logoLink(logo)}`}
-      className="text-3xl font-bold leading-none"
-      href={logoLink(logo)}
-      target={logo?.linkTarget}
-      rel={logo?.linkTarget === "_blank" ? "noopener noreferrer" : ""}>
-      <Image
-        src={logo?.image}
-        alt={logo?.alt ?? "navigation-logo"}
-        width={50}
-        height={50}
-        className="text-3xl font-bold leading-none"
-      />
-    </Link>
+    <div className="w-full lg:w-1/5">
+      <Link
+        className="w-20 h-14 flex items-center"
+        aria-label={logoLink(logo) === "/" ? "Go to home page" : `Go to ${logoLink(logo)}`}
+        href={logoLink(logo)}
+        target={logo?.linkTarget}
+        rel={logo?.linkTarget === "_blank" ? "noopener noreferrer" : ""}>
+        <Image
+          className="w-fit h-full object-contain"
+          src={`${logo?.image}`}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          alt={logo?.alt ?? "navigation-logo"}
+        />
+      </Link>
+    </div>
   );
 }
 
@@ -84,7 +85,7 @@ function NavLinks({ links }: { links?: LabeledRouteWithKey[] }) {
 
   return (
     <Flex>
-      <ul className="hidden lg:flex lg:items-center lg:space-x-6">
+      <ul className="hidden lg:flex lg:items-center lg:gap-5 xl:gap-10">
         {links?.map((link: any, index: number) => (
           <React.Fragment key={index}>
             <NavItem link={link} key={link._key} />
@@ -205,14 +206,14 @@ function Buttons({
   secondaryButton?: LabeledRoute;
 }) {
   return (
-    <Flex gap={4}>
+    <Flex align="center" gap={4}>
       {primaryButton?.label ? (
         <Button
           as="link"
           link={primaryButton}
           ariaLabel={primaryButton?.label}
           variant="outline"
-          className="hidden lg:flex px-4 py-3 mb-2 leading-loose text-center font-semibold text-gray-900 rounded-global bg-secondary hover:bg-secondary/50">
+          className="hidden lg:flex px-4 py-3 leading-loose text-center font-semibold text-gray-900 rounded-global bg-secondary hover:bg-secondary/50">
           {primaryButton?.label}
         </Button>
       ) : null}
@@ -222,7 +223,7 @@ function Buttons({
           link={secondaryButton}
           ariaLabel={secondaryButton?.label}
           variant="solid"
-          className="hidden lg:flex px-4 py-3 mb-2 leading-loose text-center font-semibold text-white bg-primary hover:bg-primary-foreground rounded-global">
+          className="hidden lg:flex px-4 py-3 leading-loose text-center font-semibold text-white bg-primary hover:bg-primary-foreground rounded-global">
           {secondaryButton?.label}
         </Button>
       ) : null}

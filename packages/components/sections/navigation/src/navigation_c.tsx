@@ -25,7 +25,7 @@ export default function Navigation_C({
     <Section className="bg-background">
       <nav className="relative py-6">
         <Container maxWidth={1280}>
-          <Flex align="center">
+          <Flex align="center" justify="between" gap={4}>
             <NavLinks links={links} />
             <LogoSection logo={logo} />
             <Buttons primaryButton={primaryButton} secondaryButton={secondaryButton} />
@@ -48,14 +48,16 @@ function NavLinks({ links }: { links?: LabeledRouteWithKey[] }) {
   if (!links) return null;
 
   return (
-    <ul className="hidden lg:flex lg:w-auto lg:items-center lg:space-x-6">
-      {links?.map((link, index) => (
-        <React.Fragment key={index}>
-          {link?.label && <NavItem link={link} />}
-          {links.length !== index + 1 ? <NavIcon /> : null}
-        </React.Fragment>
-      ))}
-    </ul>
+    <Flex>
+      <ul className="hidden lg:flex lg:items-center lg:gap-5">
+        {links?.map((link, index) => (
+          <React.Fragment key={index}>
+            {link?.label && <NavItem link={link} />}
+            {links.length !== index + 1 ? <NavIcon /> : null}
+          </React.Fragment>
+        ))}
+      </ul>
+    </Flex>
   );
 }
 
@@ -98,19 +100,18 @@ function LogoSection({ logo }: { logo?: Logo }) {
   if (!logo) return null;
 
   return (
-    <div className="lg:absolute lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:transform">
+    <div className="w-full lg:w-fit items-center justify-center">
       <Link
-        aria-label={`Go to ${logoLink(logo) === "/" ? "home page" : logoLink(logo)}`}
-        className="text-3xl font-bold leading-none"
+        className="w-20 h-14 flex justify-center items-center"
+        aria-label={logoLink(logo) === "/" ? "Go to home page" : `Go to ${logoLink(logo)}`}
         href={logoLink(logo)}
         target={logo?.linkTarget}
         rel={logo?.linkTarget === "_blank" ? "noopener noreferrer" : ""}>
         <Image
-          src={logo?.image}
+          className="w-fit h-full object-contain"
+          src={`${logo?.image}`}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           alt={logo?.alt ?? "navigation-logo"}
-          width={60}
-          height={60}
-          className="text-3xl font-bold leading-none"
         />
       </Link>
     </div>
@@ -125,13 +126,13 @@ function Buttons({
   secondaryButton?: LabeledRoute;
 }) {
   return (
-    <div className="hidden text-right lg:ml-auto lg:block lg:w-1/3">
+    <div className="hidden lg:text-right lg:block lg:w-1/3">
       {primaryButton?.label && (
         <Button
           as="link"
           ariaLabel={primaryButton?.label}
           link={primaryButton}
-          className="hidden lg:inline-block px-4 py-3 mb-2 text-gray-900 lg:ml-auto lg:mr-3 font-semibold rounded-global bg-secondary hover:bg-secondary/50">
+          className="px-4 py-3 text-gray-900 lg:ml-auto lg:mr-3 font-semibold rounded-global bg-secondary hover:bg-secondary/50">
           {primaryButton?.label}
         </Button>
       )}
@@ -140,7 +141,7 @@ function Buttons({
           as="link"
           ariaLabel={secondaryButton?.label}
           link={secondaryButton}
-          className="hidden lg:inline-block px-4 py-3 mb-2 leading-loose text-center text-white font-semibold bg-primary hover:bg-primary-foreground rounded-global">
+          className="px-4 py-3 leading-loose text-center text-white font-semibold bg-primary hover:bg-primary-foreground rounded-global">
           {secondaryButton?.label}
         </Button>
       )}

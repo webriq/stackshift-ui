@@ -23,15 +23,13 @@ export default function Navigation_D({
 
   return (
     <Section className="bg-background">
-      <nav className="relative px-6 py-6">
-        <Container maxWidth={1000}>
-          <Flex align="center" justify="between">
-            <NavLinks links={links} />
-            <LogoSection logo={logo} />
-            <Buttons primaryButton={primaryButton} secondaryButton={secondaryButton} />
-            <MobileMenu showMenu={showMenu} />
-          </Flex>
-        </Container>
+      <nav className="relative lg:px-6 py-6">
+        <Flex align="center" justify="between" gap={4}>
+          <NavLinks links={links} />
+          <LogoSection logo={logo} />
+          <Buttons primaryButton={primaryButton} secondaryButton={secondaryButton} />
+          <MobileMenu showMenu={showMenu} />
+        </Flex>
       </nav>
       <ResponsiveNavLinks
         menu={menu}
@@ -48,12 +46,12 @@ function NavLinks({ links }: { links?: LabeledRouteWithKey[] }) {
   if (!links) return null;
 
   return (
-    <Flex className="hidden lg:flex" align="center">
-      <ul className="flex space-x-5">
-        {links.map((link, index) => (
+    <Flex>
+      <ul className="hidden lg:flex lg:items-center lg:gap-3 xl:gap-5">
+        {links?.map((link, index) => (
           <React.Fragment key={index}>
             {link?.label && <NavItem link={link} />}
-            {links.length !== index + 1 && <NavIcon />}
+            {links.length !== index + 1 ? <NavIcon /> : null}
           </React.Fragment>
         ))}
       </ul>
@@ -100,22 +98,21 @@ function LogoSection({ logo }: { logo?: Logo }) {
   if (!logo) return null;
 
   return (
-    <Flex className="flex-1 justify-start lg:justify-center">
+    <div className="w-full lg:w-fit items-center justify-center">
       <Link
-        aria-label={`Go to ${logoLink(logo) === "/" ? "home page" : logoLink(logo)}`}
-        className="text-3xl font-bold leading-none"
+        className="w-20 h-14 flex justify-center items-center"
+        aria-label={logoLink(logo) === "/" ? "Go to home page" : `Go to ${logoLink(logo)}`}
         href={logoLink(logo)}
         target={logo?.linkTarget}
         rel={logo?.linkTarget === "_blank" ? "noopener noreferrer" : ""}>
         <Image
-          src={logo?.image}
+          className="w-fit h-full object-contain"
+          src={`${logo?.image}`}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           alt={logo?.alt ?? "navigation-logo"}
-          width={50}
-          height={50}
-          className="object-contain"
         />
       </Link>
-    </Flex>
+    </div>
   );
 }
 
@@ -127,13 +124,13 @@ function Buttons({
   secondaryButton?: LabeledRoute;
 }) {
   return (
-    <Flex className="hidden lg:flex justify-end space-x-4">
+    <div className="hidden lg:flex lg:gap-4">
       {primaryButton?.label && (
         <Button
           as="link"
           ariaLabel={primaryButton?.label}
           link={primaryButton}
-          className="px-4 py-3 mb-2 leading-loose text-center text-gray-900 font-semibold rounded-global bg-secondary hover:bg-secondary/50">
+          className="px-4 py-3 leading-loose text-center text-gray-900 font-semibold rounded-global bg-secondary hover:bg-secondary/50">
           {primaryButton?.label}
         </Button>
       )}
@@ -142,11 +139,11 @@ function Buttons({
           as="link"
           ariaLabel={secondaryButton?.label}
           link={secondaryButton}
-          className="px-4 py-3 mb-2 leading-loose text-center text-white font-semibold bg-primary hover:bg-primary-foreground rounded-global">
+          className="px-4 py-3 leading-loose text-center text-white font-semibold bg-primary hover:bg-primary-foreground rounded-global">
           {secondaryButton?.label}
         </Button>
       )}
-    </Flex>
+    </div>
   );
 }
 
