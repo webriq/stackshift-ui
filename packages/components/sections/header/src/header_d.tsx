@@ -96,7 +96,7 @@ function MainImage({ mainImage }: MainImageProps) {
   if (!mainImage?.image) return null;
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full md:w-2/3 h-full mt-10 lg:mt-0">
       <Image
         alt={mainImage.alt ?? "header-main-image"}
         className="rounded-md"

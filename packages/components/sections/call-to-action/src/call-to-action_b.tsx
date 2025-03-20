@@ -31,7 +31,7 @@ function LogoSection({ logo }: { logo?: Logo }) {
   return (
     <Link
       aria-label={logoLink(logo) === "/" ? "Go to home page" : `Go to ${logoLink(logo)}`}
-      className="inline-block p-3 mb-6 rounded"
+      className="inline-block p-3 rounded"
       href={logoLink(logo)}
       target={logo?.linkTarget}
       rel={logo?.linkTarget === "_blank" ? "noopener noreferrer" : ""}>
@@ -40,7 +40,7 @@ function LogoSection({ logo }: { logo?: Logo }) {
         alt={logo?.alt ?? "callToAction-logo"}
         width={70}
         height={70}
-        className="inline-block p-3 mb-6 rounded"
+        className="inline-block p-3 rounded"
       />
     </Link>
   );
@@ -67,13 +67,13 @@ function CTAForm({ form }: { form?: iForm }) {
       id={form?.id || ""}
       name="Calltoaction-VariantB-Form"
       thankyouPage={thankYouPageLink(form?.thankYouPage)}>
-      <Flex align="center" gap={2} className="md:justify-between">
+      <div className="flex flex-col sm:items-center sm:flex-row lg:justify-between gap-3">
         <FormFields fields={form?.fields?.slice(0, 2)} />
         <div>
           <div className="webriq-recaptcha" />
         </div>
         <CTABtton form={form} />
-      </Flex>
+      </div>
     </Form>
   );
 }
@@ -82,12 +82,11 @@ function FormFields({ fields }: { fields?: iForm["fields"] }) {
   if (!fields) return null;
 
   return (
-    <React.Fragment>
+    <div className="flex flex-col sm:items-center sm:flex-row lg:justify-between gap-3">
       {fields.map(field => (
         <Input
           noLabel
           key={field?._key}
-          className="mb-4 md:mb-0"
           ariaLabel={field?.placeholder ?? field?.name}
           type={getInputType(field?.type)}
           placeholder={field?.placeholder}
@@ -95,7 +94,7 @@ function FormFields({ fields }: { fields?: iForm["fields"] }) {
           required={field?.isRequired}
         />
       ))}
-    </React.Fragment>
+    </div>
   );
 }
 
@@ -118,7 +117,7 @@ function CTABtton({ form }: { form?: iForm }) {
   if (!form?.buttonLabel) return null;
 
   return (
-    <Button as="button" className="w-full" ariaLabel={form?.buttonLabel} type="submit">
+    <Button as="button" className="w-full sm:w-fit" ariaLabel={form?.buttonLabel} type="submit">
       {form?.buttonLabel}
     </Button>
   );

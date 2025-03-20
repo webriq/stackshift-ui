@@ -26,7 +26,7 @@ export default function Header_E({
               <Buttons primaryButton={primaryButton} secondaryButton={secondaryButton} />
             </div>
           </Flex>
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 mt-10 lg:mt-0">
             <div className="max-w-sm mx-auto text-center">
               <SigninSignup_A form={form} formLinks={formLinks} />
             </div>

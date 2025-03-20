@@ -18,9 +18,9 @@ export default function Header_A({
   return (
     <Section className="py-20 bg-background">
       <Container maxWidth={1280}>
-        <Flex align="center" gap={4} className="flex-col lg:flex-row">
+        <Flex align="center" className="flex-col lg:flex-row lg:gap-10">
           <Flex align="center" direction="col" className="w-full basis-1/2">
-            <div className="max-w-md mx-auto text-center lg:text-left">
+            <div className="max-w-md text-center lg:text-left">
               <TitleAndDescription title={title} description={description} />
               <Buttons primaryButton={primaryButton} secondaryButton={secondaryButton} />
             </div>
@@ -72,7 +72,7 @@ function Buttons({
         <Button
           as="link"
           link={secondaryButton}
-          className="bg-secondary hover:bg-secondary/50 inline-block rounded-global font-bold transition duration-200 px-3 py-4"
+          className="bg-secondary hover:bg-secondary/50 inline-block font-default text-default transition duration-200 py-3 px-6 rounded-global"
           ariaLabel={secondaryButton?.label}>
           {secondaryButton?.label}
         </Button>
@@ -92,7 +92,7 @@ function MainImage({ mainImage }: MainImageProps) {
   if (!mainImage?.image) return null;
 
   return (
-    <div className="relative w-full max-w-md">
+    <div className="relative w-full max-w-md mt-10 lg:mt-0">
       <Image
         className="overflow-hidden rounded-md object-cover md:rounded-br-none lg:h-[448px] relative z-10"
         src={`${mainImage.image}`}

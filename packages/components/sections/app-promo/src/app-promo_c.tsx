@@ -17,7 +17,7 @@ export default function AppPromo_C({
   return (
     <Section className="py-20 bg-background">
       <Container maxWidth={1280}>
-        <Flex align="center" wrap gap={8}>
+        <Flex align="center" className="flex flex-col lg:flex-row items-center justify-start gap-8">
           <TextSection
             subtitle={subtitle}
             title={title}
@@ -43,7 +43,7 @@ function TextSection({
   features?: string[];
 }) {
   return (
-    <div className="max-w-xl space-y-5">
+    <div className="w-full lg:max-w-xl space-y-5">
       {subtitle ? (
         <Text weight="bold" className="text-sm md:text-lg lg:text-xl text-secondary">
           {subtitle}
@@ -85,7 +85,7 @@ function ImageSection({ images }: { images?: Images[] }) {
   if (!images) return null;
 
   return (
-    <Flex align="center" className="w-full transform -rotate-12 lg:w-1/2">
+    <div className="flex lg:flex-row items-center justify-start gap-0 w-full sm:w-2/3 transform -rotate-12 lg:w-1/2">
       <ImageDisplay images={images} start={0} end={1} />
       <div className="w-full">
         {images
@@ -93,7 +93,7 @@ function ImageSection({ images }: { images?: Images[] }) {
           .map((img, index) => <ImageDisplay images={[img]} start={0} end={1} key={index} />)}
       </div>
       <ImageDisplay images={images} start={3} end={4} />
-    </Flex>
+    </div>
   );
 }
 
@@ -101,7 +101,7 @@ function ImageDisplay({ images, start, end }: { images?: Images[]; start: number
   if (!images?.[start]?.image) return null;
 
   return (
-    <div className="w-full">
+    <div className="lg:w-full">
       {images.slice(start, end).map((image, index) => (
         <Image
           key={index}

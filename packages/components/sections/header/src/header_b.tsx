@@ -84,7 +84,7 @@ function ImageGallery({ images }: { images: Images[] }) {
   if (!images) return null;
 
   return (
-    <div className="w-full px-4 lg:w-1/2">
+    <div className="w-full px-4 lg:w-1/2 mt-10 lg:mt-0">
       <div className="mb-3 sm:flex lg:mb-4 lg:ml-6">
         {images?.[0]?.image && (
           <Image

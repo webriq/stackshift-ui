@@ -60,7 +60,7 @@ function ActionForm({ form }: { form?: iForm }) {
         align="center"
         justify="center"
         direction="col"
-        className="lg:items-start lg:justify-start lg:flex-row">
+        className="lg:items-start lg:justify-start sm:flex-row">
         {form?.fields?.[0] ? <CTAInput field={form.fields[0]} /> : null}
         <div>
           <div className="webriq-recaptcha" />
@@ -102,7 +102,12 @@ function getInputType(type: string | undefined) {
 
 function FeaturesList({ features }: { features: string[] }) {
   return (
-    <Flex as="ul" align="center" className="text-gray-500 justify-center lg:justify-end" gap={4}>
+    <Flex
+      as="ul"
+      align="center"
+      className="text-gray-500 sm:justify-center lg:justify-end"
+      gap={4}
+      wrap>
       {features.map((feature, index) => (
         <li className="flex items-center" key={index}>
           <CheckIcon />
@@ -136,7 +141,7 @@ function CTAButton({ form }: { form?: iForm }) {
   return (
     <Button
       as="button"
-      className="w-full sm:w-[448px]"
+      className="w-full sm:w-fit"
       ariaLabel={form?.buttonLabel ?? "Call to action form submit button"}
       type="submit">
       {form?.buttonLabel}

@@ -58,15 +58,19 @@ function LogoSection({ logo }: { logo?: Logo }) {
 function SubtitleAndHeadingText({ form }: { form?: iForm }) {
   return (
     <div className="mb-6">
-      <Text muted>{form?.subtitle}</Text>
-      <Heading className="text-2xl lg:text-2xl">{form?.name}</Heading>
+      <Text muted className="text-sm lg:text-base">
+        {form?.subtitle}
+      </Text>
+      <Heading className="text-xl lg:text-2xl">{form?.name}</Heading>
     </div>
   );
 }
 
 function SignupForm({ form, signInLink }: { form?: iForm; signInLink?: LabeledRoute }) {
   if (!form?.fields) return null;
-  const [showPasswords, setShowPasswords] = React.useState<{ [key: string]: boolean }>({});
+  const [showPasswords, setShowPasswords] = React.useState<{
+    [key: string]: boolean;
+  }>({});
 
   const togglePasswordVisibility = (fieldName: string) => {
     setShowPasswords(prev => ({
