@@ -1,5 +1,11 @@
 # @stackshift-ui/tailwind-config
 
+## 2.0.6
+
+### Patch Changes
+
+- UI fixes for nav, footer, header, cta, signin-signup, app-promo
+
 ## 2.0.5
 
 ### Patch Changes

@@ -1,7 +1,7 @@
 {
   "name": "@stackshift-ui/eslint-config",
   "license": "MIT",
-  "version": "6.0.7",
+  "version": "6.0.8",
   "private": false,
   "devDependencies": {
     "@vercel/style-guide": "^6.0.0",

@@ -1,5 +1,15 @@
 # @stackshift-ui/swiper-button
 
+## 6.0.9
+
+### Patch Changes
+
+- UI fixes for nav, footer, header, cta, signin-signup, app-promo
+- Updated dependencies
+  - @stackshift-ui/button@6.0.9
+  - @stackshift-ui/system@6.0.9
+  - @stackshift-ui/scripts@6.0.8
+
 ## 6.0.8
 
 ### Patch Changes

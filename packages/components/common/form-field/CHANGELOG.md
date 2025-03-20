@@ -1,5 +1,22 @@
 # @stackshift-ui/form-field
 
+## 6.0.11
+
+### Patch Changes
+
+- UI fixes for nav, footer, header, cta, signin-signup, app-promo
+- Updated dependencies
+  - @stackshift-ui/checkbox@6.0.9
+  - @stackshift-ui/checkbox-group@6.0.9
+  - @stackshift-ui/input@6.0.10
+  - @stackshift-ui/input-file@6.0.10
+  - @stackshift-ui/radio@6.0.9
+  - @stackshift-ui/radio-group@6.0.9
+  - @stackshift-ui/select@6.0.10
+  - @stackshift-ui/textarea@6.0.10
+  - @stackshift-ui/system@6.0.9
+  - @stackshift-ui/scripts@6.0.8
+
 ## 6.0.10
 
 ### Patch Changes

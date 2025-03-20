@@ -1,5 +1,21 @@
 # @stackshift-ui/how-it-works
 
+## 6.0.10
+
+### Patch Changes
+
+- UI fixes for nav, footer, header, cta, signin-signup, app-promo
+- Updated dependencies
+  - @stackshift-ui/card@6.0.9
+  - @stackshift-ui/heading@6.0.9
+  - @stackshift-ui/text@6.0.9
+  - @stackshift-ui/youtube-video@6.0.9
+  - @stackshift-ui/container@6.0.9
+  - @stackshift-ui/flex@6.0.9
+  - @stackshift-ui/section@6.0.9
+  - @stackshift-ui/system@6.0.9
+  - @stackshift-ui/scripts@6.0.8
+
 ## 6.0.9
 
 ### Patch Changes

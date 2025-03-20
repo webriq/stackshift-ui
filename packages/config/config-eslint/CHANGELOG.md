@@ -1,5 +1,11 @@
 # @stackshift-ui/eslint-config
 
+## 6.0.8
+
+### Patch Changes
+
+- UI fixes for nav, footer, header, cta, signin-signup, app-promo
+
 ## 6.0.7
 
 ### Patch Changes
