@@ -1,5 +1,18 @@
 # @stackshift-ui/text-component
 
+## 6.0.12
+
+### Patch Changes
+
+- UI fixes for blog, team, newsletter and features
+- Updated dependencies
+  - @stackshift-ui/heading@6.0.10
+  - @stackshift-ui/container@6.0.10
+  - @stackshift-ui/flex@6.0.10
+  - @stackshift-ui/section@6.0.10
+  - @stackshift-ui/system@6.0.10
+  - @stackshift-ui/scripts@6.0.9
+
 ## 6.0.11
 
 ### Patch Changes

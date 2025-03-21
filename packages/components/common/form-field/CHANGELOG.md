@@ -1,5 +1,22 @@
 # @stackshift-ui/form-field
 
+## 6.0.12
+
+### Patch Changes
+
+- UI fixes for blog, team, newsletter and features
+- Updated dependencies
+  - @stackshift-ui/checkbox@6.0.10
+  - @stackshift-ui/checkbox-group@6.0.10
+  - @stackshift-ui/input@6.0.11
+  - @stackshift-ui/input-file@6.0.11
+  - @stackshift-ui/radio@6.0.10
+  - @stackshift-ui/radio-group@6.0.10
+  - @stackshift-ui/select@6.0.11
+  - @stackshift-ui/textarea@6.0.11
+  - @stackshift-ui/system@6.0.10
+  - @stackshift-ui/scripts@6.0.9
+
 ## 6.0.11
 
 ### Patch Changes

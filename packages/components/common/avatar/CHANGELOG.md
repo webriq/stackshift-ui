@@ -1,5 +1,16 @@
 # @stackshift-ui/avatar
 
+## 6.0.12
+
+### Patch Changes
+
+- UI fixes for blog, team, newsletter and features
+- Updated dependencies
+  - @stackshift-ui/image@6.0.10
+  - @stackshift-ui/flex@6.0.10
+  - @stackshift-ui/system@6.0.10
+  - @stackshift-ui/scripts@6.0.9
+
 ## 6.0.11
 
 ### Patch Changes

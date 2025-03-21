@@ -1,5 +1,13 @@
 # @stackshift-ui/system
 
+## 6.0.10
+
+### Patch Changes
+
+- UI fixes for blog, team, newsletter and features
+- Updated dependencies
+  - @stackshift-ui/scripts@6.0.9
+
 ## 6.0.9
 
 ### Patch Changes

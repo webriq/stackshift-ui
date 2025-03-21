@@ -1,5 +1,11 @@
 # @stackshift-ui/jest-presets
 
+## 2.0.7
+
+### Patch Changes
+
+- UI fixes for blog, team, newsletter and features
+
 ## 2.0.6
 
 ### Patch Changes

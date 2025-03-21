@@ -1,5 +1,11 @@
 # @stackshift-ui/scripts
 
+## 6.0.9
+
+### Patch Changes
+
+- UI fixes for blog, team, newsletter and features
+
 ## 6.0.8
 
 ### Patch Changes
