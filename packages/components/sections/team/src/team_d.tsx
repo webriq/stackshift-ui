@@ -39,21 +39,19 @@ function TeamMemberCard({ team }: { team?: iTeam[] }) {
     <Flex wrap>
       {team &&
         team.map((member, index) => (
-          <div className="w-full px-4 mb-6 md:w-1/2" key={index}>
+          <div className="w-full md:px-4 mb-6 md:w-1/2" key={index}>
             <Card
-              className="items-center p-0 bg-white overflow-hidden shadow-lg lg:block xl:flex"
+              className="flex flex-col xl:flex-row items-center gap-3 bg-white overflow-hidden shadow-lg "
               borderRadius="md">
               {member.mainImage?.image && (
-                <div>
-                  <Image
-                    className="h-[320px] w-full object-cover rounded-md xl:w-[179px]"
-                    sizes="100vw"
-                    src={`${member?.mainImage?.image}`}
-                    width={179}
-                    height={320}
-                    alt={member?.mainImage?.alt ?? `team-member-${member?.name}-profile-image`}
-                  />
-                </div>
+                <Image
+                  className="h-full w-full object-cover rounded-md [@media(min-width:320px)]:h-[320px] xl:w-[179px]"
+                  sizes="100vw"
+                  src={`${member?.mainImage?.image}`}
+                  width={179}
+                  height={320}
+                  alt={member?.mainImage?.alt ?? `team-member-${member?.name}-profile-image`}
+                />
               )}
               <TeamMemberText member={member} />
             </Card>
@@ -65,17 +63,11 @@ function TeamMemberCard({ team }: { team?: iTeam[] }) {
 
 function TeamMemberText({ member }: MemberTextProps) {
   return (
-    <div className="w-full lg:p-4 xl:w-2/3">
-      <Text
-        weight="bold"
-        className="my-2 text-lg sm:text-xl md:text-2xl"
-      >
+    <div className="w-full xl:w-2/3 flex flex-col gap-2">
+      <Text weight="bold" className="text-lg sm:text-xl md:text-2xl">
         {member?.name}
       </Text>
-      <Text
-        className="mb-4 leading-loose text-sm md:text-base"
-        muted
-      >
+      <Text className="leading-loose text-sm md:text-base" muted>
         {member?.plainText}
       </Text>
     </div>

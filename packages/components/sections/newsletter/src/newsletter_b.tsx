@@ -23,27 +23,26 @@ export default function Newsletter_B({
   return (
     <Section className="mx-auto w-full py-20 bg-background">
       <Container maxWidth={1280}>
-        <Flex wrap align="center">
-          <div className="w-full mb-4 text-center lg:mr-8 lg:w-auto">
-            <Flex align="center" justify="center" className="mx-auto">
-              <LogoSection logo={logo} />
-            </Flex>
+        <Flex
+          wrap
+          align="center"
+          className="flex-col [@media(min-width:900px)]:flex-row [@media(min-width:900px)]:justify-between">
+          <div className="flex flex-col items-center [@media(min-width:900px)]:flex-row [@media(min-width:900px)]:items-start gap-5">
+            <LogoSection logo={logo} />
+            <Container
+              maxWidth={412}
+              className="mx-auto px-4 w-full text-center [@media(min-width:900px)]:text-left">
+              <TitleAndDescriptionText title={title} description={description} />
+            </Container>
           </div>
-          <Container
-            maxWidth={412}
-            className="mx-auto px-4 w-full mb-6 text-center lg:ml-0 lg:text-left">
-            <TitleAndDescriptionText title={title} description={description} />
-          </Container>
-          <div className="w-full lg:w-[35%]">
-            <NewsletterForm
-              {...{
-                id: form?.id,
-                fields: form?.fields,
-                thankYouPage: form?.thankYouPage,
-                buttonLabel: form?.buttonLabel,
-              }}
-            />
-          </div>
+          <NewsletterForm
+            {...{
+              id: form?.id,
+              fields: form?.fields,
+              thankYouPage: form?.thankYouPage,
+              buttonLabel: form?.buttonLabel,
+            }}
+          />
         </Flex>
       </Container>
     </Section>
@@ -56,17 +55,10 @@ function LogoSection({ logo }: { logo?: Logo | null }) {
   return (
     <Link
       aria-label={logoLink(logo) === "/" ? "Go to home page" : `Go to ${logoLink(logo)}`}
-      className="inline-block mb-6 text-3xl font-bold leading-none"
       href={logoLink(logo)}
       target={logo?.linkTarget}
       rel={logo?.linkTarget === "_blank" ? "noopener noreferrer" : ""}>
-      <Image
-        src={logo?.image}
-        alt={logo.alt ?? "newsletter-logo"}
-        width={48}
-        height={48}
-        className="inline-block mb-6 text-3xl font-bold leading-none"
-      />
+      <Image src={logo?.image} alt={logo.alt ?? "newsletter-logo"} width={48} height={48} />
     </Link>
   );
 }
@@ -103,9 +95,9 @@ function NewsletterForm({ id, fields, thankYouPage, buttonLabel }: FormFields) {
     <Form
       id={id ?? undefined}
       name="NewsletterB-Form"
-      className="form-newsletter"
+      className="form-newsletter w-full sm:w-1/2 [@media(min-width:900px)]:w-2/5"
       thankyouPage={thankYouPageLink(thankYouPage)}>
-      <Flex align="center" gap={2} className="max-w-md mx-auto">
+      <div className="flex flex-col [@media(min-width:900px)]:flex-row gap-3">
         <Input
           variant="outline"
           noLabel
@@ -125,11 +117,11 @@ function NewsletterForm({ id, fields, thankYouPage, buttonLabel }: FormFields) {
             as="button"
             ariaLabel={buttonLabel ?? "Newsletter form submit button"}
             type="submit"
-            className="w-1/2 text-white">
+            className="text-white">
             {buttonLabel}
           </Button>
         )}
-      </Flex>
+      </div>
     </Form>
   );
 }

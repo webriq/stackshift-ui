@@ -21,12 +21,10 @@ export default function Features_A({ caption, title, description, features }: Fe
   return (
     <Section className="py-20 bg-background">
       <Container maxWidth={1280}>
-        <Container maxWidth={448} className="mb-16 text-center ">
+        <Container maxWidth={640} className="mb-16 text-center">
           <CaptionAndTitleText caption={caption} title={title} description={description} />
         </Container>
-        <Flex wrap>
-          <FeatureItems features={features} />
-        </Flex>
+        <FeatureItems features={features} />
       </Container>
     </Section>
   );
@@ -42,19 +40,15 @@ function CaptionAndTitleText({
   description?: string;
 }) {
   return (
-    <React.Fragment>
+    <div className="flex flex-col gap-3">
       {caption ? (
         <Text weight="bold" className="text-secondary">
           {caption}
         </Text>
       ) : null}
       {title ? <Heading fontSize="3xl">{title}</Heading> : null}
-      {description ? (
-        <Text muted className="mb-6 leading-loose">
-          {description}
-        </Text>
-      ) : null}
-    </React.Fragment>
+      {description ? <Text muted>{description}</Text> : null}
+    </div>
   );
 }
 
@@ -62,17 +56,17 @@ function FeatureItems({ features }: { features?: ArrayOfImageTitleAndText[] }) {
   if (!features) return null;
 
   return (
-    <React.Fragment>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
       {features?.map(feature => {
         return <FeatureItem feature={feature} key={feature._key} />;
       })}
-    </React.Fragment>
+    </div>
   );
 }
 
 function FeatureItem({ feature }: FeatureItemProps) {
   return (
-    <div className="w-full px-4 mt-16 mb-12 md:w-1/2 lg:mb-0 lg:w-1/4">
+    <div className="text-center sm:text-start p-3">
       {feature?.mainImage?.image ? <FeatureImage feature={feature} /> : null}
 
       {feature?.title ? (
@@ -80,11 +74,7 @@ function FeatureItem({ feature }: FeatureItemProps) {
           {feature?.title}
         </Text>
       ) : null}
-      {feature?.plainText ? (
-        <Text muted className="leading-loose">
-          {feature?.plainText}
-        </Text>
-      ) : null}
+      {feature?.plainText ? <Text muted>{feature?.plainText}</Text> : null}
     </div>
   );
 }

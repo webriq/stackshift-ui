@@ -43,7 +43,7 @@ function TeamTabs({ team, activeTab, setActiveTab }: TeamTabsProps) {
         wrap
         justify="center"
         direction="row"
-        className="space-x-6 lg:flex-col lg:justify-start lg:space-x-0">
+        className="lg:flex-col lg:justify-start gap-3">
         {team?.map(item => (
           <TeamTab key={item.name} data={item} activeTab={activeTab} setActiveTab={setActiveTab} />
         ))}
@@ -67,8 +67,8 @@ function TeamTab({ data, activeTab, setActiveTab }: TeamTabProps) {
         as="button"
         variant="unstyled"
         ariaLabel={data.name}
-        className={`mb-4 text-xl lg:text-2xl ${
-          data.name === activeTab ? "text-gray-900" : "text-gray-500"
+        className={`text-xl lg:text-2xl ${
+          data.name === activeTab ? "text-black" : "text-gray-400"
         } font-bold hover:text-gray-500 focus:outline-none`}
         onClick={() => setActiveTab(data.name ?? "")}>
         {data.name}
@@ -81,7 +81,7 @@ function TeamMembersList({ members }: { members?: iTeam[] }) {
   if (!members) return null;
 
   return (
-    <div className="w-full px-3 lg:w-2/3">
+    <div className="w-full lg:w-2/3 sm:p-6">
       {members.map((member, index) => (
         <TeamMemberCard key={index} member={member} />
       ))}
@@ -93,32 +93,34 @@ function TeamMemberCard({ member }: { member?: iTeam }) {
   if (!member) return null;
 
   return (
-    <Card className="flex p-6 shadow-lg bg-white" borderRadius="md">
+    <Card
+      className="flex flex-col gap-3 md:gap-0 md:flex-row shadow-lg bg-white md:h-96"
+      borderRadius="md">
       {member.mainImage?.image && (
-        <Image
-          className="object-cover overflow-hidden rounded-md"
-          src={`${member.mainImage.image}`}
-          sizes="100vw"
-          width={329}
-          height={494}
-          alt={member.mainImage.alt ?? `team-member-${member.name}-profile-image`}
-        />
+        <div className="w-full md:w-1/2 h-48 md:h-full relative overflow-hidden rounded-md">
+          <Image
+            className="object-cover absolute inset-0 w-full h-full"
+            src={`${member.mainImage.image}`}
+            sizes="100vw"
+            width={329}
+            height={500}
+            alt={member.mainImage.alt ?? `team-member-${member.name}-profile-image`}
+          />
+        </div>
       )}
-      <TeamMmeberText member={member} />
+      <TeamMemberText member={member} />
     </Card>
   );
 }
 
-function TeamMmeberText({ member }: MemberTextProps) {
+function TeamMemberText({ member }: MemberTextProps) {
   return (
-    <div className="order-last w-1/2 pt-6 pl-6 mt-6">
+    <div className="w-full md:w-1/2 md:p-6 max-h-[300px] md:max-h-96 overflow-y-auto">
       <Text weight="bold" fontSize="2xl">
         {member.name}
       </Text>
-      <Text className="mb-6" muted>
-        {member.jobTitle}
-      </Text>
-      <Text className="mb-6 text-justify" muted>
+      <Text muted>{member.jobTitle}</Text>
+      <Text className="text-justify mt-4" muted>
         {member.plainText}
       </Text>
     </div>

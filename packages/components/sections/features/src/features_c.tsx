@@ -12,8 +12,8 @@ import { ArrayOfImageTitleAndText } from "./types";
 export default function Features_C({ caption, title, description, features }: FeaturesProps) {
   return (
     <Section className="py-20 bg-background">
-      <Container maxWidth={1280}>
-        <Container maxWidth={448} className="mb-16 text-center ">
+      <Container maxWidth={1800}>
+        <Container maxWidth={640} className="mb-16 text-center">
           <CaptionAndTitleSection caption={caption} title={title} description={description} />
         </Container>
         <FeatureItems features={features} />
@@ -32,7 +32,7 @@ function CaptionAndTitleSection({
   description?: string;
 }) {
   return (
-    <React.Fragment>
+    <div className="flex flex-col gap-3">
       {caption ? (
         <Text weight="bold" className="text-secondary">
           {caption}
@@ -44,7 +44,7 @@ function CaptionAndTitleSection({
           {description}
         </Text>
       ) : null}
-    </React.Fragment>
+    </div>
   );
 }
 
@@ -52,17 +52,17 @@ function FeatureItems({ features }: { features?: ArrayOfImageTitleAndText[] }) {
   if (!features) return null;
 
   return (
-    <Flex wrap justify="start" align="stretch" className="-mx-3">
+    <div className="grid lg:grid-cols-2 gap-3">
       {features.map(feature => {
         return <FeatureItem feature={feature} key={feature._key} />;
       })}
-    </Flex>
+    </div>
   );
 }
 
 function FeatureItem({ feature }: { feature: ArrayOfImageTitleAndText }) {
   return (
-    <div className="w-full px-3 mb-6 lg:w-1/2">
+    <div className="w-full p-3">
       <Card className="flex flex-wrap h-full p-6 bg-white" borderRadius="md">
         <div className="self-start inline-block p-3 mb-4 mr-6 rounded-lg bg-secondary/50 md:p-5 lg:mb-0">
           {feature?.mainImage?.image && (
@@ -75,8 +75,8 @@ function FeatureItem({ feature }: { feature: ArrayOfImageTitleAndText }) {
             />
           )}
         </div>
-        <div className="w-full lg:w-2/3">
-          <Text fontSize="2xl" weight="bold" className="mb-2 text-gray-500">
+        <div className="w-full lg:w-2/3 flex flex-col gap-2">
+          <Text fontSize="2xl" weight="bold">
             {feature?.title}
           </Text>
           <Text muted>{feature?.plainText}</Text>

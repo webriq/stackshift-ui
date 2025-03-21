@@ -19,12 +19,11 @@ export default function Blog_C({ subtitle, title, posts, primaryButton }: BlogPr
   return (
     <Section className="py-20 bg-background">
       <Container maxWidth={1280}>
-        <Flex align="center" justify="between" className="flex-col mb-16 md:flex-row" gap={4}>
+        <Flex align="center" justify="between" className="flex-col mb-16 md:flex-row" gap={5}>
           <SubtitleAndTitleText subtitle={subtitle} title={title} />
           <PrimaryButton primaryButton={primaryButton} />
         </Flex>
         <BlogPosts posts={posts} blogsPerPage={blogsPerPage} />
-        <PrimaryButton primaryButton={primaryButton} />
       </Container>
     </Section>
   );
@@ -32,7 +31,7 @@ export default function Blog_C({ subtitle, title, posts, primaryButton }: BlogPr
 
 function SubtitleAndTitleText({ subtitle, title }: { subtitle?: string; title?: string }) {
   return (
-    <div className="text-center md:text-left">
+    <div className="flex flex-col gap-3 text-center md:text-left">
       {subtitle ? (
         <Text weight="bold" className="text-primary">
           {subtitle}
@@ -77,10 +76,10 @@ function BlogItem({ post, className, key }: { key: number; post: BlogPost; class
         />
       )}
       <div className="w-full px-6 py-6 rounded-r lg:w-1/2 lg:pt-10">
-        <Flex gap={2}>
+        <div className="flex flex-col sm:flex-row sm:items-center gap-3">
           {post?.categories &&
             post?.categories?.map((category, index) => (
-              <Badge className="bg-secondary/70" key={index}>
+              <Badge className="bg-secondary rounded-global w-fit" key={index}>
                 {category?.title}
               </Badge>
             ))}
@@ -89,10 +88,10 @@ function BlogItem({ post, className, key }: { key: number; post: BlogPost; class
               {format(new Date(post?.publishedAt), " dd MMM, yyyy")}
             </Text>
           )}
-        </Flex>
+        </div>
 
         {post?.title && (
-          <Heading className="my-4" type="h3">
+          <Heading className="my-4 text-xl lg:text-3xl">
             {post?.title?.length > 40 ? post?.title?.substring(0, 40) + "..." : post?.title}
           </Heading>
         )}
@@ -108,7 +107,7 @@ function BlogItem({ post, className, key }: { key: number; post: BlogPost; class
           </div>
         )}
         {post?.excerpt && (
-          <Text muted className="mb-6 leading-loose text-justify">
+          <Text muted className="mb-6 leading-loose lg:text-justify">
             {post?.excerpt?.length > maxExcerptLength
               ? post?.excerpt?.substring(0, maxExcerptLength) + "..."
               : post?.excerpt}
@@ -131,11 +130,13 @@ function PrimaryButton({ primaryButton }: { primaryButton?: LabeledRoute }) {
   if (!primaryButton?.label) return null;
 
   return (
-    <React.Fragment>
-      <Button as="link" link={primaryButton} ariaLabel={primaryButton?.label}>
-        {primaryButton?.label}
-      </Button>
-    </React.Fragment>
+    <Button
+      as="link"
+      link={primaryButton}
+      ariaLabel={primaryButton?.label}
+      className="inline-flex flex-wrap text-center bg-primary text-sm sm:text-base px-6 py-3 rounded-global">
+      {primaryButton?.label}
+    </Button>
   );
 }
 
