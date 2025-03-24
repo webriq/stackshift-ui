@@ -14,7 +14,7 @@ export default function Features_B({ caption, title, description, features, tags
     <Section className="py-20 bg-background">
       <Container maxWidth={1280}>
         <Flex wrap align="center">
-          <div className="w-full mb-12 lg:mb-0 lg:w-1/2">
+          <div className="w-full px-4 mb-12 lg:mb-0 lg:w-1/2">
             <Container maxWidth={448}>
               <FeatureInfo caption={caption} title={title} description={description} />
               <TagList tags={tags} />

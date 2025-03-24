@@ -15,7 +15,7 @@ import { ContactDetails, Logo, SocialLink, Socials } from "./types";
 export default function Footer_A({ logo, text, contacts, copyright, socialMedia }: FooterProps) {
   return (
     <Section className="py-20 bg-background">
-      <Container maxWidth={1280} className="lg:px-4">
+      <Container maxWidth={1280}>
         <Flex wrap className="mb-5 lg:mb-20">
           <LogoSection logo={logo} />
           <TextContainer text={text} />

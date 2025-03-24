@@ -10,7 +10,7 @@ import { Team as iTeam } from "./types";
 
 export default function Team_D({ caption, title, team }: TeamsProps) {
   return (
-    <Section className="!md:px-4 py-20 bg-background">
+    <Section className="py-20 bg-background">
       <Container maxWidth={1280}>
         <CaptionAndTitle caption={caption} title={title} />
         <TeamMemberCard team={team} />
