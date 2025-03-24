@@ -141,18 +141,6 @@ function SocialMediaContainer({ socialMedia }: { socialMedia?: SocialLink[] }) {
 function SocialMediaLink({ social }: { social?: SocialLink }) {
   if (!social?.socialMediaLink) return null;
 
-  // Helper function to convert social media string to valid type
-  const getSocialType = (
-    socialMedia: string | null | undefined,
-  ): "facebook" | "instagram" | "youtube" | "linkedin" | "twitter" | undefined => {
-    if (!socialMedia) return undefined;
-    const normalized = socialMedia.toLowerCase();
-    if (["facebook", "instagram", "youtube", "linkedin", "twitter"].includes(normalized)) {
-      return normalized as "facebook" | "instagram" | "youtube" | "linkedin" | "twitter";
-    }
-    return undefined;
-  };
-
   return (
     <Link
       aria-label={social?.socialMedia || social?.socialMediaPlatform || ""}
@@ -169,7 +157,7 @@ function SocialMediaLink({ social }: { social?: SocialLink }) {
           alt={social?.socialMediaIcon?.alt ?? "contact-socialMedia-icon"}
         />
       ) : (
-        <SocialIcons social={getSocialType(social?.socialMedia)} />
+        <SocialIcons social={social?.socialMedia as Socials} />
       )}
     </Link>
   );

@@ -148,7 +148,7 @@ function SocialMediaLink({ social }: { social?: SocialLink }) {
           alt={social?.socialMediaIcon?.alt ?? "contact-socialMedia-icon"}
         />
       ) : (
-        <SocialIcons social={social?.socialMedia} />
+        <SocialIcons social={social?.socialMedia as Socials} />
       )}
     </Link>
   );
