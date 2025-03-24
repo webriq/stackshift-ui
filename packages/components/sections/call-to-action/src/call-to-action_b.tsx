@@ -117,7 +117,7 @@ function CTABtton({ form }: { form?: iForm }) {
   if (!form?.buttonLabel) return null;
 
   return (
-    <Button as="button" className="w-full sm:w-fit" ariaLabel={form?.buttonLabel} type="submit">
+    <Button as="button" className="w-full sm:w-1/4" ariaLabel={form?.buttonLabel} type="submit">
       {form?.buttonLabel}
     </Button>
   );

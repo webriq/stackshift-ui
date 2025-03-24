@@ -218,7 +218,7 @@ function PasswordField({
   togglePassword: () => void;
 }) {
   return (
-    <Flex className="relative">
+    <div className="flex flex-col sm:flex-row gap-2 sm:items-center">
       <Input
         className="py-4"
         textSize="sm"
@@ -230,16 +230,20 @@ function PasswordField({
         name={formFields?.name}
         required={formFields?.isRequired}
       />
+      {/* SVG icon on the right of the password input field */}
       <Button
-        as="button"
         variant="unstyled"
+        as="button"
         ariaLabel={showPassword ? "Show password" : "Hide password"}
-        className="absolute top-0 right-0 h-full p-2"
+        className="focus:outline-none"
         type="button"
         onClick={togglePassword}>
-        <PasswordIcon showPassword={showPassword} />
+        <span className="block sm:hidden text-right">{showPassword ? "Hide" : "Show"}</span>
+        <span className="hidden sm:block">
+          <PasswordIcon showPassword={showPassword} />
+        </span>
       </Button>
-    </Flex>
+    </div>
   );
 }
 

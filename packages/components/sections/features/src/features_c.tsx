@@ -52,7 +52,7 @@ function FeatureItems({ features }: { features?: ArrayOfImageTitleAndText[] }) {
   if (!features) return null;
 
   return (
-    <div className="grid lg:grid-cols-2 gap-3">
+    <div className="lg:grid lg:grid-cols-2 gap-3">
       {features.map(feature => {
         return <FeatureItem feature={feature} key={feature._key} />;
       })}
@@ -76,10 +76,12 @@ function FeatureItem({ feature }: { feature: ArrayOfImageTitleAndText }) {
           )}
         </div>
         <div className="w-full lg:w-2/3 flex flex-col gap-2">
-          <Text fontSize="2xl" weight="bold">
+          <Text weight="bold" className="text-xl md:text-2xl break-all">
             {feature?.title}
           </Text>
-          <Text muted>{feature?.plainText}</Text>
+          <Text muted className="break-all">
+            {feature?.plainText}
+          </Text>
         </div>
       </Card>
     </div>

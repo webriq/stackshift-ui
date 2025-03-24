@@ -32,7 +32,7 @@ function CaptionAndTitleSection({
   description?: string;
 }) {
   return (
-    <React.Fragment>
+    <div className="flex flex-col gap-3">
       {caption ? (
         <Text weight="bold" className="text-secondary">
           {caption}
@@ -44,7 +44,7 @@ function CaptionAndTitleSection({
           {description}
         </Text>
       ) : null}
-    </React.Fragment>
+    </div>
   );
 }
 

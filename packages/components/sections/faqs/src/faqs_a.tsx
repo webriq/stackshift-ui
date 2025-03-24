@@ -45,7 +45,7 @@ export default function Faqs_A({ subtitle, title, faqs }: FAQProps) {
   return (
     <Section className="py-20 bg-background">
       <Container maxWidth={1280}>
-        <Container maxWidth={576} className="mb-16 text-center ">
+        <Container maxWidth={576} className="mb-8 lg:mb-16 text-center">
           <SubtitleAndTitle subtitle={subtitle} title={title} />
           <SearchBar updatedFAQArray={updatedFAQArray} setSearchTerm={setSearchTerm} />
         </Container>
@@ -236,7 +236,7 @@ function SearchButtonIcon() {
       as="button"
       variant="unstyled"
       ariaLabel="Search button"
-      className="absolute inset-y-0 right-0 flex items-center pr-4 text-primary">
+      className="hidden sm:flex absolute inset-y-0 right-0 items-center pr-4 text-primary">
       <svg
         className="w-6 h-6"
         fill="none"

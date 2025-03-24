@@ -37,7 +37,7 @@ function FeatureInfo({
   description?: string;
 }) {
   return (
-    <React.Fragment>
+    <div className="flex flex-col gap-3">
       {caption && (
         <Text weight="bold" className="text-secondary">
           {caption}
@@ -49,7 +49,7 @@ function FeatureInfo({
           {description}
         </Text>
       )}
-    </React.Fragment>
+    </div>
   );
 }
 
@@ -85,7 +85,7 @@ function FeaturesLists({ features }: { features?: ArrayOfImageTitleAndText[] }) 
   if (!features) return null;
 
   return (
-    <Flex wrap className="w-full lg:w-1/2">
+    <Flex wrap align="stretch" className="w-full lg:w-1/2">
       {features &&
         features?.map((feature, index) => (
           <div
@@ -103,10 +103,10 @@ function FeaturesLists({ features }: { features?: ArrayOfImageTitleAndText[] }) 
                   />
                 </span>
               )}
-              <Text weight="bold" fontSize="2xl" className="mb-2 text-gray-500">
+              <Text weight="bold" className="text-xl md:text-2xl mb-2 text-gray-500 break-all">
                 {feature?.title}
               </Text>
-              <Text muted className="leading-loose">
+              <Text muted className="leading-loose break-all">
                 {feature?.plainText}
               </Text>
             </Card>

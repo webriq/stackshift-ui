@@ -35,7 +35,7 @@ export const Container: React.FC<ContainerProps> = ({
     typeof maxWidth === "number" ? `${maxWidth.toString()}px` : widthVariants[maxWidth];
   const width = widthClass ?? "80rem";
 
-  const classes = "mx-auto w-full px-4";
+  const classes = "mx-auto w-full lg:px-4";
 
   return (
     <Component

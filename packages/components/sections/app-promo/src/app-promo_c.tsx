@@ -1,8 +1,10 @@
+import React, { useState } from "react";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
 import { Image } from "@stackshift-ui/image";
 import { Section } from "@stackshift-ui/section";
+import { SwiperButton } from "@stackshift-ui/swiper-button";
 import { Text } from "@stackshift-ui/text";
 import { AppPromoProps } from ".";
 import { Images } from "./types";
@@ -14,6 +16,25 @@ export default function AppPromo_C({
   features,
   images,
 }: AppPromoProps) {
+  //for image carousel
+  let [currentPosition, setCurrentPosition] = useState(0); // Initial image index value
+
+  const arrowRightClick = () => {
+    if (images?.length) {
+      currentPosition !== images.length - 1 // Check index length
+        ? setCurrentPosition(currentPosition + 1)
+        : setCurrentPosition((currentPosition = 0));
+    }
+  };
+
+  const arrowLeftClick = () => {
+    if (images?.length) {
+      currentPosition !== 0 // Check index length
+        ? setCurrentPosition(currentPosition - 1)
+        : setCurrentPosition((currentPosition = images.length - 1));
+    }
+  };
+
   return (
     <Section className="py-20 bg-background">
       <Container maxWidth={1280}>
@@ -26,6 +47,15 @@ export default function AppPromo_C({
           />
           <ImageSection images={images} />
         </Flex>
+        {/* mobile image view less than 640px */}
+        {images && (
+          <SwiperButtons arrowLeftClick={arrowLeftClick} arrowRightClick={arrowRightClick}>
+            <MobileImageView
+              image={images[currentPosition].image}
+              alt={images[currentPosition].alt ?? `appPromo-variantC-image-${currentPosition}`}
+            />
+          </SwiperButtons>
+        )}
       </Container>
     </Section>
   );
@@ -85,9 +115,9 @@ function ImageSection({ images }: { images?: Images[] }) {
   if (!images) return null;
 
   return (
-    <div className="flex lg:flex-row items-center justify-start gap-0 w-full sm:w-2/3 transform -rotate-12 lg:w-1/2">
+    <div className="hidden sm:flex lg:flex-row items-center justify-start gap-0 w-2/3 transform -rotate-12 lg:w-1/2">
       <ImageDisplay images={images} start={0} end={1} />
-      <div className="w-full">
+      <div className="lg:w-full">
         {images
           ?.slice(1, 3)
           .map((img, index) => <ImageDisplay images={[img]} start={0} end={1} key={index} />)}
@@ -101,7 +131,7 @@ function ImageDisplay({ images, start, end }: { images?: Images[]; start: number
   if (!images?.[start]?.image) return null;
 
   return (
-    <div className="lg:w-full">
+    <div className="w-full">
       {images.slice(start, end).map((image, index) => (
         <Image
           key={index}
@@ -131,6 +161,51 @@ function CheckIcon() {
         clipRule="evenodd"
       />
     </svg>
+  );
+}
+
+function MobileImageView({ image, alt }: { image: any; alt: string }) {
+  if (!image) return null;
+
+  return (
+    <div className="object-contain w-1/2 mx-auto sm:hidden">
+      <Image
+        className="object-contain w-full h-full"
+        src={image}
+        sizes="(min-width: 520px) 224px, 45vw"
+        width={500}
+        height={850}
+        alt={alt}
+      />
+    </div>
+  );
+}
+
+function SwiperButtons({
+  arrowLeftClick,
+  arrowRightClick,
+  children,
+}: {
+  arrowLeftClick: () => void;
+  arrowRightClick: () => void;
+  children: React.ReactNode;
+}) {
+  return (
+    <Flex justify="between" align="center" className="mt-16 sm:hidden">
+      <SwiperButton
+        type="left"
+        ariaLabel="Left Arrow button"
+        className="order-0 md:order-0 bg-white lg:order-0 xl:order-1 2xl:order-1"
+        onClick={arrowLeftClick}
+      />
+      {children}
+      <SwiperButton
+        type="right"
+        ariaLabel="Right Arrow button"
+        className="order-2 bg-white"
+        onClick={arrowRightClick}
+      />
+    </Flex>
   );
 }
 

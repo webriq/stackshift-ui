@@ -36,14 +36,14 @@ export default function Faqs_C({ subtitle, title, faqs }: FAQProps) {
 
 function SubtitleAndTitleText({ subtitle, title }: { subtitle?: string; title?: string }) {
   return (
-    <React.Fragment>
+    <div className="flex flex-col gap-3">
       {subtitle ? (
         <Text weight="bold" className="text-secondary">
           {subtitle}
         </Text>
       ) : null}
       {title ? <Heading fontSize="3xl">{title}</Heading> : null}
-    </React.Fragment>
+    </div>
   );
 }
 
@@ -51,13 +51,8 @@ function FAQItems({ faqs }: { faqs?: AskedQuestion[] }) {
   if (!faqs) return null;
 
   return (
-    <Flex
-      wrap
-      align="stretch"
-    >
-      {faqs?.map((faq) => (
-        <FAQItem key={faq?._key} faq={faq} />
-      ))}
+    <Flex wrap align="stretch">
+      {faqs?.map(faq => <FAQItem key={faq?._key} faq={faq} />)}
     </Flex>
   );
 }
@@ -65,9 +60,9 @@ function FAQItems({ faqs }: { faqs?: AskedQuestion[] }) {
 function FAQItem({ faq }: FAQItemProps) {
   return (
     <Container className="w-full px-4 mb-8 lg:w-1/2" maxWidth={1000}>
-      <Card className="h-full p-8 bg-white" borderRadius="md">
-        <Flex align="start" className="mb-6">
-          <span className="inline-block p-3 mr-4 rounded-full bg-primary">
+      <Card className="h-full lg:p-8 bg-white" borderRadius="md">
+        <Flex align="start" className="mb-6" gap={3}>
+          <span className="inline-block p-3 rounded-full bg-primary">
             <QuoteIcon />
           </span>
           {faq.question ? (

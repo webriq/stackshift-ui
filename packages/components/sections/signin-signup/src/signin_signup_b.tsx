@@ -57,7 +57,7 @@ function LogoSection({ logo }: { logo?: Logo }) {
 
 function SubtitleAndHeadingText({ form }: { form?: iForm }) {
   return (
-    <div className="mb-6">
+    <div className="mb-6 text-center sm:text-left">
       <Text muted className="text-sm lg:text-base">
         {form?.subtitle}
       </Text>
@@ -165,7 +165,7 @@ function PasswordField({
   togglePassword: () => void;
 }) {
   return (
-    <div className="flex">
+    <div className="flex flex-col sm:flex-row gap-2 items-center">
       <Input
         noLabel
         ariaLabel={formFields?.placeholder ?? formFields?.name}
@@ -180,10 +180,13 @@ function PasswordField({
         variant="unstyled"
         as="button"
         ariaLabel={showPassword ? "Show password" : "Hide password"}
-        className="focus:outline-none mr-4"
+        className="focus:outline-none"
         type="button"
         onClick={togglePassword}>
-        <PasswordIcon showPassword={showPassword} />
+        <span className="block sm:hidden text-right">{showPassword ? "Hide" : "Show"}</span>
+        <span className="hidden sm:block">
+          <PasswordIcon showPassword={showPassword} />
+        </span>
       </Button>
     </div>
   );
@@ -253,7 +256,7 @@ function PasswordIcon({ showPassword }: { showPassword: boolean }) {
     <React.Fragment>
       {showPassword ? (
         <svg
-          className="w-5 h-5 my-auto ml-4 text-gray-500"
+          className="w-5 h-5 text-gray-500"
           xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true"
           role="img"
@@ -269,7 +272,7 @@ function PasswordIcon({ showPassword }: { showPassword: boolean }) {
         </svg>
       ) : (
         <svg
-          className="w-5 h-5 my-auto ml-4 text-gray-500"
+          className="w-5 h-5 text-gray-500"
           xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true"
           role="img"
