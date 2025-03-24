@@ -1,5 +1,30 @@
 # @stackshift-ui/signin-signup
 
+## 6.0.14
+
+### Patch Changes
+
+- f48df11: resolve footer build error
+- 0f448cd: revert padding changes
+- 9ed91d0: additional qa/qc UI fixes
+- Updated dependencies [f48df11]
+- Updated dependencies [0f448cd]
+- Updated dependencies [9ed91d0]
+  - @stackshift-ui/button@6.0.11
+  - @stackshift-ui/card@6.0.11
+  - @stackshift-ui/form@6.0.11
+  - @stackshift-ui/form-field@6.0.13
+  - @stackshift-ui/heading@6.0.11
+  - @stackshift-ui/image@6.0.11
+  - @stackshift-ui/input@6.0.12
+  - @stackshift-ui/link@6.0.11
+  - @stackshift-ui/text@6.0.11
+  - @stackshift-ui/container@6.0.11
+  - @stackshift-ui/flex@6.0.11
+  - @stackshift-ui/section@6.0.11
+  - @stackshift-ui/system@6.0.11
+  - @stackshift-ui/scripts@6.0.10
+
 ## 6.0.14-beta.2
 
 ### Patch Changes

@@ -1,5 +1,67 @@
 # @stackshift-ui/react
 
+## 6.0.17
+
+### Patch Changes
+
+- f48df11: resolve footer build error
+- 0f448cd: revert padding changes
+- 9ed91d0: additional qa/qc UI fixes
+- Updated dependencies [f48df11]
+- Updated dependencies [0f448cd]
+- Updated dependencies [9ed91d0]
+  - @stackshift-ui/avatar@6.0.13
+  - @stackshift-ui/badge@6.0.11
+  - @stackshift-ui/blockstyle@6.0.11
+  - @stackshift-ui/button@6.0.11
+  - @stackshift-ui/card@6.0.11
+  - @stackshift-ui/checkbox@6.0.11
+  - @stackshift-ui/checkbox-group@6.0.11
+  - @stackshift-ui/form@6.0.11
+  - @stackshift-ui/form-field@6.0.13
+  - @stackshift-ui/heading@6.0.11
+  - @stackshift-ui/image@6.0.11
+  - @stackshift-ui/input@6.0.12
+  - @stackshift-ui/input-file@6.0.12
+  - @stackshift-ui/link@6.0.11
+  - @stackshift-ui/radio@6.0.11
+  - @stackshift-ui/radio-group@6.0.11
+  - @stackshift-ui/select@6.0.12
+  - @stackshift-ui/social-icons@6.0.11
+  - @stackshift-ui/stats-card@6.0.12
+  - @stackshift-ui/swiper-button@6.0.11
+  - @stackshift-ui/swiper-pagination@6.0.11
+  - @stackshift-ui/text@6.0.11
+  - @stackshift-ui/textarea@6.0.12
+  - @stackshift-ui/webriq-form@6.0.11
+  - @stackshift-ui/youtube-video@6.0.11
+  - @stackshift-ui/container@6.0.11
+  - @stackshift-ui/flex@6.0.11
+  - @stackshift-ui/grid@6.0.11
+  - @stackshift-ui/grid-item@6.0.11
+  - @stackshift-ui/section@6.0.11
+  - @stackshift-ui/app-promo@6.0.12
+  - @stackshift-ui/blog@6.0.15
+  - @stackshift-ui/call-to-action@6.0.14
+  - @stackshift-ui/contact@6.0.13
+  - @stackshift-ui/cookies@6.0.12
+  - @stackshift-ui/faqs@6.0.14
+  - @stackshift-ui/features@6.0.13
+  - @stackshift-ui/footer@6.0.13
+  - @stackshift-ui/header@6.0.15
+  - @stackshift-ui/how-it-works@6.0.12
+  - @stackshift-ui/logo-cloud@6.0.14
+  - @stackshift-ui/navigation@6.0.13
+  - @stackshift-ui/newsletter@6.0.12
+  - @stackshift-ui/portfolio@6.0.13
+  - @stackshift-ui/signin-signup@6.0.14
+  - @stackshift-ui/statistics@6.0.13
+  - @stackshift-ui/team@6.0.14
+  - @stackshift-ui/testimonial@6.0.13
+  - @stackshift-ui/text-component@6.0.13
+  - @stackshift-ui/system@6.0.11
+  - @stackshift-ui/scripts@6.0.10
+
 ## 6.0.17-beta.2
 
 ### Patch Changes

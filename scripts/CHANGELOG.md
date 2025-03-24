@@ -1,5 +1,13 @@
 # @stackshift-ui/scripts
 
+## 6.0.10
+
+### Patch Changes
+
+- f48df11: resolve footer build error
+- 0f448cd: revert padding changes
+- 9ed91d0: additional qa/qc UI fixes
+
 ## 6.0.10-beta.2
 
 ### Patch Changes
