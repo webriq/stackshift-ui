@@ -1,5 +1,11 @@
 # @stackshift-ui/typescript-config
 
+## 6.0.10-beta.2
+
+### Patch Changes
+
+- revert padding changes
+
 ## 6.0.10-beta.1
 
 ### Patch Changes

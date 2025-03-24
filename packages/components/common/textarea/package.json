@@ -1,7 +1,7 @@
 {
   "name": "@stackshift-ui/textarea",
   "description": "",
-  "version": "6.0.12-beta.1",
+  "version": "6.0.12-beta.2",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -50,7 +50,7 @@
     "next": "10 - 14",
     "react": "16.8 - 19",
     "react-dom": "16.8 - 19",
-    "@stackshift-ui/system": ">=6.0.11-beta.1"
+    "@stackshift-ui/system": ">=6.0.11-beta.2"
   },
   "peerDependenciesMeta": {
     "next": {

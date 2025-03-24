@@ -1,5 +1,18 @@
 # @webriq-test/testing
 
+## 1.0.9-beta.2
+
+### Patch Changes
+
+- revert padding changes
+- Updated dependencies
+  - @stackshift-ui/heading@6.0.11-beta.2
+  - @stackshift-ui/container@6.0.11-beta.2
+  - @stackshift-ui/flex@6.0.11-beta.2
+  - @stackshift-ui/section@6.0.11-beta.2
+  - @stackshift-ui/system@6.0.11-beta.2
+  - @stackshift-ui/scripts@6.0.10-beta.2
+
 ## 1.0.9-beta.1
 
 ### Patch Changes

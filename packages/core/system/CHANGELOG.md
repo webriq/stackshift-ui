@@ -1,5 +1,13 @@
 # @stackshift-ui/system
 
+## 6.0.11-beta.2
+
+### Patch Changes
+
+- revert padding changes
+- Updated dependencies
+  - @stackshift-ui/scripts@6.0.10-beta.2
+
 ## 6.0.11-beta.1
 
 ### Patch Changes
