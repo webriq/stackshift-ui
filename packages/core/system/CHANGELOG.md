@@ -1,5 +1,13 @@
 # @stackshift-ui/system
 
+## 6.0.11-beta.1
+
+### Patch Changes
+
+- additional qa/qc UI fixes
+- Updated dependencies
+  - @stackshift-ui/scripts@6.0.10-beta.1
+
 ## 6.0.11-beta.0
 
 ### Patch Changes

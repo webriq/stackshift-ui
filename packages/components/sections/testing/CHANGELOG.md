@@ -1,5 +1,18 @@
 # @webriq-test/testing
 
+## 1.0.9-beta.1
+
+### Patch Changes
+
+- additional qa/qc UI fixes
+- Updated dependencies
+  - @stackshift-ui/heading@6.0.11-beta.1
+  - @stackshift-ui/container@6.0.11-beta.1
+  - @stackshift-ui/flex@6.0.11-beta.1
+  - @stackshift-ui/section@6.0.11-beta.1
+  - @stackshift-ui/system@6.0.11-beta.1
+  - @stackshift-ui/scripts@6.0.10-beta.1
+
 ## 1.0.9-beta.0
 
 ### Patch Changes

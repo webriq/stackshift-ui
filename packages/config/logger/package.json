@@ -1,6 +1,6 @@
 {
   "name": "@stackshift-ui/logger",
-  "version": "2.0.8-beta.0",
+  "version": "2.0.8-beta.1",
   "private": false,
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

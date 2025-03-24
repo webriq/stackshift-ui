@@ -1,5 +1,15 @@
 # @stackshift-ui/stats-card
 
+## 6.0.12-beta.1
+
+### Patch Changes
+
+- additional qa/qc UI fixes
+- Updated dependencies
+  - @stackshift-ui/text@6.0.11-beta.1
+  - @stackshift-ui/system@6.0.11-beta.1
+  - @stackshift-ui/scripts@6.0.10-beta.1
+
 ## 6.0.12-beta.0
 
 ### Patch Changes

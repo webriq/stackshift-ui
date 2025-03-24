@@ -1,5 +1,11 @@
 # @stackshift-ui/typescript-config
 
+## 6.0.10-beta.1
+
+### Patch Changes
+
+- additional qa/qc UI fixes
+
 ## 6.0.10-beta.0
 
 ### Patch Changes

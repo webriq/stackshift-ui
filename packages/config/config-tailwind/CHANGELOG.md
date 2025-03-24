@@ -1,5 +1,11 @@
 # @stackshift-ui/tailwind-config
 
+## 2.0.8-beta.1
+
+### Patch Changes
+
+- additional qa/qc UI fixes
+
 ## 2.0.8-beta.0
 
 ### Patch Changes
