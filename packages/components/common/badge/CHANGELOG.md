@@ -1,5 +1,15 @@
 # @stackshift-ui/badge
 
+## 6.0.11-beta.0
+
+### Patch Changes
+
+- resolve footer build error
+- Updated dependencies
+  - @stackshift-ui/flex@6.0.11-beta.0
+  - @stackshift-ui/system@6.0.11-beta.0
+  - @stackshift-ui/scripts@6.0.10-beta.0
+
 ## 6.0.10
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @stackshift-ui/logger
 
+## 2.0.8-beta.0
+
+### Patch Changes
+
+- resolve footer build error
+
 ## 2.0.7
 
 ### Patch Changes

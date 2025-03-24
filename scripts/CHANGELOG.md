@@ -1,5 +1,11 @@
 # @stackshift-ui/scripts
 
+## 6.0.10-beta.0
+
+### Patch Changes
+
+- resolve footer build error
+
 ## 6.0.9
 
 ### Patch Changes

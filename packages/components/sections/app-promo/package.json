@@ -1,7 +1,7 @@
 {
   "name": "@stackshift-ui/app-promo",
   "description": "",
-  "version": "6.0.11",
+  "version": "6.0.12-beta.0",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -57,7 +57,7 @@
     "next": "10 - 14",
     "react": "16.8 - 19",
     "react-dom": "16.8 - 19",
-    "@stackshift-ui/system": ">=6.0.10"
+    "@stackshift-ui/system": ">=6.0.11-beta.0"
   },
   "peerDependenciesMeta": {
     "next": {
