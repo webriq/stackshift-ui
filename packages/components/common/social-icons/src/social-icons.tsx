@@ -78,10 +78,9 @@ export const SocialIcons: React.FC<SocialIconsProps> = ({
   as,
   ...props
 }) => {
-  if (!social) return null;
+  if (!social || !SocialIconMap[social]) return null;
 
-  const { [displayName]: Component = SocialIconMap[social] ?? FaFacebook } =
-    useStackShiftUIComponents();
+  const { [displayName]: Component = SocialIconMap[social] } = useStackShiftUIComponents();
 
   const commonClass = `w-8 h-8 text-primary-foreground`;
 
