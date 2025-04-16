@@ -1,5 +1,12 @@
 # @stackshift-ui/contact
 
+## 6.0.14
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/social-icons@6.0.12
+
 ## 6.0.13
 
 ### Patch Changes
