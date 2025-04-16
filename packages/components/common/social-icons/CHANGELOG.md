@@ -1,5 +1,11 @@
 # @stackshift-ui/social-icons
 
+## 6.0.12
+
+### Patch Changes
+
+- fixed social icon fallback, return null for invalid or missing icon
+
 ## 6.0.11
 
 ### Patch Changes

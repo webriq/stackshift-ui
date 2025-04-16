@@ -1,5 +1,14 @@
 # @stackshift-ui/react
 
+## 6.0.18
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/social-icons@6.0.12
+  - @stackshift-ui/contact@6.0.14
+  - @stackshift-ui/footer@6.0.14
+
 ## 6.0.17
 
 ### Patch Changes
