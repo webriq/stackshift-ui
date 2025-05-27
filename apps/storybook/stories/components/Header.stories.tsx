@@ -180,3 +180,105 @@ export const VariantE: Story = {
     },
   },
 };
+
+export const VariantF: Story = {
+  ...Template,
+  args: {
+    data: {
+      variant: "variant_f",
+      variants: {
+        title: "Welcome to Our Platform",
+        subtitle: "Discover Amazing Features",
+        isOrdered: true,
+        spacing: 0,
+        startingPosition: "left",
+        isFullWidth: false,
+        headerSections: [
+          {
+            _key: "box1",
+            title: "Innovation",
+            description:
+              "Experience the power of cutting-edge technology with our innovative solutions.",
+            mainImage: {
+              image:
+                "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80",
+              alt: "Feature One Image",
+            },
+            alignment: "left",
+            imageHeight: "md",
+            primaryButton: {
+              label: "Learn More",
+              ariaLabel: "Click primary",
+              link: {
+                route: "/feature-one",
+                target: "_self",
+              },
+            },
+          },
+          {
+            _key: "box2",
+            title: "Integration",
+            description: "Seamlessly integrate with your existing systems and workflows.",
+            mainImage: {
+              image:
+                "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+              alt: "Feature Two Image",
+            },
+            alignment: "left",
+            imageHeight: "md",
+            primaryButton: {
+              label: "Get Started",
+              link: {
+                route: "/feature-two",
+                target: "_self",
+              },
+            },
+          },
+        ],
+      },
+    },
+  },
+};
+
+export const VariantG: Story = {
+  ...Template,
+  args: {
+    data: {
+      variant: "variant_g",
+      variants: {
+        images: [
+          {
+            _key: "1",
+            video: "https://www.w3schools.com/html/mov_bbb.mp4",
+          },
+          {
+            _key: "2",
+            image:
+              "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80",
+          },
+          {
+            _key: "3",
+            image:
+              "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+          },
+          {
+            _key: "4",
+            video: "https://www.w3schools.com/html/mov_bbb.mp4",
+          },
+        ],
+        title: "Introducing Our New Platform",
+        description:
+          "Experience the future of digital innovation with our cutting-edge solutions designed to transform your business.",
+        primaryButton: {
+          label: "Get Started",
+          linkInternal: "/get-started",
+        },
+        secondaryButton: {
+          label: "Learn More",
+          linkInternal: "/learn-more",
+        },
+        position: "left",
+      },
+    },
+  },
+};
