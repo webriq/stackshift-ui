@@ -65,7 +65,7 @@ export default function Header_G({
         <div className="absolute inset-0 bg-black bg-opacity-50 z-0" />
 
         <div
-          className={`relative z-10 flex justify-${position === "right" ? "end" : position} items-center h-full`}>
+          className={`relative z-10 flex p-8 justify-${position === "right" ? "end" : position} items-center h-full`}>
           <div
             className={`max-w-[600px] flex flex-col justify-center ${getAlignmentClasses()} px-4`}>
             <Heading className="text-white uppercase mb-10">
