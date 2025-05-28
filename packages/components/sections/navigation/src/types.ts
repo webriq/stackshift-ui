@@ -8,6 +8,20 @@ export interface MainImage {
   alt?: string;
 }
 
+export interface MegaMenu {
+  _type: string;
+  showcaseLink?: ShowcaseLink[];
+  links?: MegaMenuLink[];
+  _key: string;
+  title?: string;
+  groupOfLinks?: GroupOfLink[];
+  label?: string;
+  linkTarget?: string;
+  linkType?: string;
+  url?: string;
+  linkExternal?: string;
+}
+
 export interface Logo extends ConditionalLink {
   alt?: string;
   linkTarget?: string;
@@ -29,6 +43,7 @@ export interface GroupOfLink {
 export interface GroupOfLinkRoot {
   title: string;
   _type: string;
+  label?: string;
   links: LabeledRouteWithKey[];
   _key: string;
 }
@@ -57,6 +72,8 @@ export interface MegaMenuLink {
   title: string;
   _type: string;
   links: LabeledRouteWithKey[];
+  primaryButton: LabeledRouteWithKey;
+  label: string;
 }
 
 export interface LabeledRoute extends ConditionalLink {
@@ -66,6 +83,7 @@ export interface LabeledRoute extends ConditionalLink {
   linkType?: string;
   _type?: string;
   linkInternal?: any;
+  linkExternal?: any;
   referenceType?: string;
   multipleRoutes?: LabeledRouteWithKey[];
   multipleInnerRoutes?: LabeledRouteWithKey[];
@@ -123,6 +141,8 @@ export interface SocialLink {
 
 export interface LabeledRouteWithKey extends LabeledRoute {
   _key?: string;
+  image?: string;
+  alt?: string;
   multipleRoutes?: LabeledRouteWithKey[];
   featuredRoute?: {
     featuredLink: LabeledRoute;
@@ -282,6 +302,7 @@ export interface Variants {
   routes?: LabeledRouteWithKey[] | null;
   menu?: LabeledRouteWithKey[] | null;
   dropdownMenu?: LabeledRouteWithKey[] | null;
+  iconLinks?: LabeledRouteWithKey[] | null;
   plans?: Plans[] | null;
   formLinks?: LabeledRouteWithKey[] | null;
   portfolios?: Portfolios[] | null;
@@ -498,4 +519,12 @@ export interface ConditionalLinkTypes {
   children: string | React.ReactNode;
   link: LabeledRoute | LabeledRouteWithKey | undefined;
   target?: string;
+}
+
+export interface IconLink {
+  _key: string;
+  image: string;
+  alt?: string;
+  linkExternal: string;
+  linkTarget?: "_blank" | "_self";
 }

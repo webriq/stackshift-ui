@@ -1,5 +1,13 @@
 import { lazy } from "react";
-import { LabeledRoute, LabeledRouteWithKey, Logo, Logos, SectionsProps, SocialLink } from "./types";
+import {
+  LabeledRoute,
+  LabeledRouteWithKey,
+  Logo,
+  Logos,
+  MegaMenu,
+  SectionsProps,
+  SocialLink,
+} from "./types";
 
 const Variants = {
   variant_a: lazy(() => import("./navigation_a")),
@@ -8,6 +16,7 @@ const Variants = {
   variant_d: lazy(() => import("./navigation_d")),
   variant_f: lazy(() => import("./navigation_f")),
   variant_g: lazy(() => import("./navigation_g")),
+  variant_h: lazy(() => import("./navigation_h")),
 };
 
 export interface ResponsiveNavLinksProps {
@@ -31,6 +40,8 @@ export interface NavigationProps {
   title?: string;
   socialMedia?: SocialLink[];
   dropdownMenu?: LabeledRouteWithKey[];
+  iconLinks?: LabeledRouteWithKey[];
+  megaMenu?: MegaMenu[];
 }
 
 const displayName = "Navigation";
@@ -52,6 +63,8 @@ export const Navigation: React.FC<SectionsProps> = ({ data }) => {
     logos: data?.variants?.logos ?? undefined,
     socialMedia: data?.variants?.socialMedia ?? undefined,
     socialLinks: data?.variants?.socialLinks ?? undefined,
+    iconLinks: data?.variants?.iconLinks ?? undefined,
+    megaMenu: data?.variants?.megaMenu ?? undefined,
   };
 
   return Variant ? <Variant {...props} /> : null;
