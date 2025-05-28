@@ -82,8 +82,6 @@ export default function Navigation_G({
     setOpenAccordion(openAccordion === key ? null : key);
   };
 
-  console.log("🚀 ~ dropdownMenu", dropdownMenu);
-
   const handleNavHover = (hovered: boolean) => {
     setIsNavHovered(hovered);
   };

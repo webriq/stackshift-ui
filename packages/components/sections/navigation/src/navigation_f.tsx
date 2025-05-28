@@ -8,7 +8,7 @@ import { BiArrowBack, BiChevronDown, BiMenu } from "react-icons/bi";
 import { BsFillTelephoneFill, BsTelephone } from "react-icons/bs";
 import { MdClose } from "react-icons/md";
 import { NavigationProps } from ".";
-import { ConditionalLink, logoLink } from "./helper";
+import { ConditionalLink, logoLink } from "./helper/index";
 import { LabeledRouteWithKey } from "./types";
 
 // Types
