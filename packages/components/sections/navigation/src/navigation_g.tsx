@@ -1,24 +1,17 @@
 import { Image } from "@stackshift-ui/image";
 import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
-import React, { useState } from "react";
+import { SocialIcons } from "@stackshift-ui/social-icons";
+import React, { Fragment, useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
 
 import { animated, useSpring } from "@react-spring/web";
 import { useWindowScroll } from "@uidotdev/usehooks";
 import Sticky from "react-sticky-el";
 
-import {
-  FaFacebook,
-  FaGithub,
-  FaInstagram,
-  FaLinkedin,
-  FaPinterest,
-  FaYoutube,
-} from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
 import { logoLink } from "./helper";
 import { NavigationProps } from "./navigation";
+import { Socials } from "./types";
 
 const navlinkStyle =
   "small-text-style group-hover:text-white hover:text-white relative after:content-[''] after:w-0 hover:after:w-full h-5 !outline-none after:h-[0.5px] after:bg-white after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300";
@@ -101,237 +94,124 @@ export default function Navigation_G({
                 isScrolled ? "py-6" : "py-6"
               }`}>
               <div className="flex items-center space-x-[50px]">
-                <div className="w-[200px] relative z-20">
-                  {logo?.image && (
-                    <Link
-                      aria-label={`Go to ${logoLink(logo)}`}
-                      className="text-3xl font-bold leading-none"
-                      href={logoLink(logo)}>
-                      <Image
-                        className={`md:h-[75px] hidden md:inline-block`}
-                        src={logo?.image}
-                        alt={logo?.alt ?? "navigation-logo"}
-                        width={100}
-                        height={100}
-                      />
-                    </Link>
-                  )}
-
-                  {smallLogo?.image && (
-                    <Link
-                      aria-label={`Go to ${smallLogoLink === "/" ? "Homepage" : smallLogoLink}`}
-                      className="text-3xl font-bold leading-none"
-                      href={smallLogoLink}>
-                      <Image
-                        className={`h-[20px] inline-block md:hidden`}
-                        src={smallLogo?.image}
-                        alt={smallLogo?.alt ?? "navigation-logo"}
-                        width={100}
-                        height={100}
-                      />
-                    </Link>
-                  )}
-                </div>
-
-                {dropdownMenu && dropdownMenu?.length > 0 && (
-                  <ul className="hidden lg:flex flex-wrap space-x-[50px] xl:min-w-max">
-                    {dropdownMenu?.map(link => (
-                      <React.Fragment key={link._key}>
-                        {link?.label && link?._key && (
-                          <li className="static z-20 hover:z-10">
-                            {link?.routeType === "singleRoute" ? (
-                              <LinkComponent
-                                link={link}
-                                style={`${navlinkStyle} ${isNavHovered ? "text-white" : "text-black"}`}
-                              />
-                            ) : link?.routeType === "multipleRoute" ? (
-                              <HoverMenu
-                                link={link}
-                                isNavHovered={isNavHovered}
-                                onHover={() => setShowDropdown(true)}
-                                onLeave={() => setShowDropdown(false)}
-                              />
-                            ) : (
-                              <span
-                                className={`${navlinkStyle} ${isNavHovered ? "text-white" : "text-black"}`}>
-                                {link?.label}
-                              </span>
-                            )}
-                          </li>
-                        )}
-                      </React.Fragment>
-                    ))}
-                  </ul>
-                )}
+                <LogoSection logo={logo} smallLogo={smallLogo} smallLogoLink={smallLogoLink} />
+                <DropdownMenuSection
+                  dropdownMenu={dropdownMenu}
+                  isNavHovered={isNavHovered}
+                  setShowDropdown={setShowDropdown}
+                />
               </div>
-
-              {/* burger menu button */}
-              <div
-                className={`block lg:hidden z-[99] ${
-                  menu ? "fixed right-[20px] md:right-[50px]" : "relative"
-                }`}>
-                <svg
-                  onClick={showMenu}
-                  width="40"
-                  height="40"
-                  viewBox="0 0 44 44"
-                  fill="#ffffff"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="cursor-pointer">
-                  <animated.rect width="20" height="3" style={firstLine} />
-                  <animated.rect width="30" height="3" style={secondLine} />
-                </svg>
-              </div>
+              <BurgerMenuButton
+                menu={menu}
+                showMenu={showMenu}
+                firstLine={firstLine}
+                secondLine={secondLine}
+              />
             </div>
           </div>
-
-          {/* mobile nav sidebar */}
-          <div className={`${menu ? "block" : "hidden"} navbar-menu fixed inset-0 z-50`}>
-            <div className="fixed inset-0 bg-black/80" onClick={showMenu}></div>
-            <div className="fixed top-0 right-0 bottom-0 flex flex-col w-full sm:max-w-sm bg-black/80">
-              <nav className="flex flex-col w-full py-6 px-6 overflow-y-auto h-screen">
-                {smallLogo?.image && (
-                  <Link
-                    aria-label={`Go to ${smallLogoLink === "/" ? "Homepage" : smallLogoLink}`}
-                    className="text-3xl font-bold leading-none h-[40px] w-[100px] flex items-center justify-start mt-0 md:ml-[15px]"
-                    onClick={showMenu}
-                    href={smallLogoLink}>
-                    <Image
-                      className="h-[20px] object-contain"
-                      src={smallLogo?.image}
-                      alt={smallLogo?.alt ?? "navigation-logo"}
-                    />
-                  </Link>
-                )}
-                {dropdownMenu && (
-                  <div className="mt-[70px]">
-                    <Accordion>
-                      {dropdownMenu?.map(link => (
-                        <React.Fragment key={link._key}>
-                          {link?.label && link?._key && (
-                            <>
-                              {link?.routeType === "singleRoute" ? (
-                                <span>
-                                  <LinkComponent
-                                    link={link}
-                                    style={`${navlinkStyle} !text-base !h-auto text-white`}
-                                  />
-                                </span>
-                              ) : link?.routeType === "multipleRoute" ? (
-                                <AccordionItem>
-                                  <AccordionButton
-                                    isOpen={openAccordion === link._key}
-                                    onClick={() => link._key && toggleAccordion(link._key)}
-                                    className={`${navlinkStyle} after:!w-0 !p-0 text-white`}>
-                                    {link?.label}
-                                  </AccordionButton>
-
-                                  <AccordionPanel isOpen={openAccordion === link._key}>
-                                    <div className="py-6 flex flex-col space-y-2">
-                                      {link?.featuredRoute && (
-                                        <div>
-                                          <div className="w-full h-0 pb-[75%] relative bg-obsidian">
-                                            {link?.featuredRoute?.featuredLink && (
-                                              <div className="absolute w-full h-full inset-0 p-[15px] flex flex-col justify-end z-10">
-                                                <span>
-                                                  <LinkComponent
-                                                    link={link?.featuredRoute?.featuredLink}
-                                                    style="small-text-style text-white underline underline-offset-4 decoration-[0.5px] opacity-50 hover:opacity-100 h-5 !outline-none transition-all duration-300"
-                                                  />
-                                                </span>
-                                              </div>
-                                            )}
-                                            {link?.featuredRoute?.mainImage && (
-                                              <Image
-                                                src={link?.featuredRoute?.mainImage?.image}
-                                                className="object-cover absolute inset-0 w-full h-full"
-                                                alt={link?.featuredRoute?.mainImage?.alt ?? "image"}
-                                              />
-                                            )}
-                                          </div>
-                                        </div>
-                                      )}
-                                      {link?.multipleRoutes && (
-                                        <ul className="flex flex-col justify-center space-y-1 pl-[15px]">
-                                          {link?.multipleRoutes?.map(sublink => (
-                                            <li key={sublink._key}>
-                                              {sublink?.label && (
-                                                <LinkComponent
-                                                  link={sublink}
-                                                  style={`${navlinkStyle} text-white`}
-                                                />
-                                              )}
-                                            </li>
-                                          ))}
-                                        </ul>
-                                      )}
-                                    </div>
-                                  </AccordionPanel>
-                                </AccordionItem>
-                              ) : (
-                                <span className={`${navlinkStyle} text-white`}>{link?.label}</span>
-                              )}
-                            </>
-                          )}
-                        </React.Fragment>
-                      ))}
-                    </Accordion>
-                  </div>
-                )}
-                {socialMedia && (
-                  <div className="mt-[70px] flex justify-center space-x-[50px]">
-                    {socialMedia?.map(
-                      social =>
-                        social?.socialMediaLink && (
-                          <Link
-                            aria-label={
-                              social?.socialMedia ||
-                              social?.socialMediaPlatform ||
-                              "social-media-link"
-                            }
-                            className="text-white hover:text-gray-2 leading-none transition"
-                            style={{ fontSize: "24px" }}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href={social?.socialMediaLink}
-                            key={social?._key}>
-                            {social?.socialMedia === "facebook" ? (
-                              <FaFacebook />
-                            ) : social?.socialMedia === "twitter" ? (
-                              <FaSquareXTwitter />
-                            ) : social?.socialMedia === "instagram" ? (
-                              <FaInstagram />
-                            ) : social?.socialMedia === "pinterest" ? (
-                              <FaPinterest />
-                            ) : social?.socialMedia === "linkedin" ? (
-                              <FaLinkedin />
-                            ) : social?.socialMedia === "youtube" ? (
-                              <FaYoutube />
-                            ) : social?.socialMedia === "github" ? (
-                              <FaGithub />
-                            ) : (
-                              social?.socialMediaIcon?.image && (
-                                <Image
-                                  className="h-[24px]"
-                                  src={social?.socialMediaIcon?.image}
-                                  alt={social?.socialMediaIcon?.alt ?? "contact-socialMedia-icon"}
-                                />
-                              )
-                            )}
-                          </Link>
-                        ),
-                    )}
-                  </div>
-                )}
-                <div className="mt-auto pt-20 text-gray-400">
-                  <span className="text-sm text-center block">{`© ${new Date().getFullYear()} All rights reserved.`}</span>
-                </div>
-              </nav>
-            </div>
-          </div>
+          <MobileNavSidebar
+            menu={menu}
+            showMenu={showMenu}
+            smallLogo={smallLogo}
+            smallLogoLink={smallLogoLink}
+            dropdownMenu={dropdownMenu}
+            openAccordion={openAccordion}
+            toggleAccordion={toggleAccordion}
+            socialMedia={socialMedia}
+          />
         </nav>
       </Sticky>
     </Section>
+  );
+}
+
+function LogoSection({
+  logo,
+  smallLogo,
+  smallLogoLink,
+}: {
+  logo: NavigationProps["logo"];
+  smallLogo: NavigationProps["smallLogo"];
+  smallLogoLink: string;
+}) {
+  return (
+    <div className="w-[200px] relative z-20">
+      {logo?.image && (
+        <Link
+          aria-label={`Go to ${logoLink(logo)}`}
+          className="text-3xl font-bold leading-none"
+          href={logoLink(logo)}>
+          <Image
+            className={`md:h-[75px] hidden md:inline-block`}
+            src={logo?.image}
+            alt={logo?.alt ?? "navigation-logo"}
+            width={100}
+            height={100}
+          />
+        </Link>
+      )}
+
+      {smallLogo?.image && (
+        <Link
+          aria-label={`Go to ${smallLogoLink === "/" ? "Homepage" : smallLogoLink}`}
+          className="text-3xl font-bold leading-none"
+          href={smallLogoLink}>
+          <Image
+            className={`h-[20px] inline-block md:hidden`}
+            src={smallLogo?.image}
+            alt={smallLogo?.alt ?? "navigation-logo"}
+            width={100}
+            height={100}
+          />
+        </Link>
+      )}
+    </div>
+  );
+}
+
+function DropdownMenuSection({
+  dropdownMenu,
+  isNavHovered,
+  setShowDropdown,
+}: {
+  dropdownMenu: NavigationProps["dropdownMenu"];
+  isNavHovered: boolean;
+  setShowDropdown: (bool: boolean) => void;
+}) {
+  if (!dropdownMenu || dropdownMenu?.length === 0) return null;
+  return (
+    <Fragment>
+      {dropdownMenu && dropdownMenu?.length > 0 && (
+        <ul className="hidden lg:flex flex-wrap space-x-[50px] xl:min-w-max">
+          {dropdownMenu?.map(link => (
+            <React.Fragment key={link._key}>
+              {link?.label && link?._key && (
+                <li className="static z-20 hover:z-10">
+                  {link?.routeType === "singleRoute" ? (
+                    <LinkComponent
+                      link={link}
+                      style={`${navlinkStyle} ${isNavHovered ? "text-white" : "text-black"}`}
+                    />
+                  ) : link?.routeType === "multipleRoute" ? (
+                    <HoverMenu
+                      link={link}
+                      isNavHovered={isNavHovered}
+                      onHover={() => setShowDropdown(true)}
+                      onLeave={() => setShowDropdown(false)}
+                    />
+                  ) : (
+                    <span
+                      className={`${navlinkStyle} ${isNavHovered ? "text-white" : "text-black"}`}>
+                      {link?.label}
+                    </span>
+                  )}
+                </li>
+              )}
+            </React.Fragment>
+          ))}
+        </ul>
+      )}
+    </Fragment>
   );
 }
 
@@ -463,6 +343,211 @@ function HoverMenu({
           </div>
         </div>
       </div>
+    </div>
+  );
+}
+
+function MobileNavSidebar({
+  menu,
+  showMenu,
+  smallLogo,
+  smallLogoLink,
+  dropdownMenu,
+  openAccordion,
+  toggleAccordion,
+  socialMedia,
+}: {
+  menu: boolean;
+  showMenu: () => void;
+  smallLogo: any;
+  smallLogoLink: string;
+  dropdownMenu: NavigationProps["dropdownMenu"];
+  openAccordion: string | null;
+  toggleAccordion: (key: string) => void;
+  socialMedia: NavigationProps["socialMedia"];
+}) {
+  return (
+    <div className={`${menu ? "block" : "hidden"} navbar-menu fixed inset-0 z-50`}>
+      <div className="fixed inset-0 bg-black/80" onClick={showMenu}></div>
+      <div className="fixed top-0 right-0 bottom-0 flex flex-col w-full sm:max-w-sm bg-black/80">
+        <nav className="flex flex-col w-full py-6 px-6 overflow-y-auto h-screen">
+          <MobileNavImage smallLogo={smallLogo} smallLogoLink={smallLogoLink} showMenu={showMenu} />
+          <MobileNavDropdown
+            dropdownMenu={dropdownMenu}
+            openAccordion={openAccordion}
+            toggleAccordion={toggleAccordion}
+          />
+          <MobileNavSocialMedia socialMedia={socialMedia} />
+          <div className="mt-auto pt-20 text-gray-400">
+            <span className="text-sm text-center block">{`© ${new Date().getFullYear()} All rights reserved.`}</span>
+          </div>
+        </nav>
+      </div>
+    </div>
+  );
+}
+
+function MobileNavImage({
+  smallLogo,
+  smallLogoLink,
+  showMenu,
+}: {
+  smallLogo: NavigationProps["smallLogo"];
+  smallLogoLink: string;
+  showMenu: () => void;
+}) {
+  if (!smallLogo?.image) return null;
+  return (
+    <Link
+      aria-label={`Go to ${smallLogoLink === "/" ? "Homepage" : smallLogoLink}`}
+      className="text-3xl font-bold leading-none h-[40px] w-[100px] flex items-center justify-start mt-0 md:ml-[15px]"
+      onClick={showMenu}
+      href={smallLogoLink}>
+      <Image
+        className="h-[20px] object-contain"
+        src={smallLogo?.image}
+        alt={smallLogo?.alt ?? "navigation-logo"}
+      />
+    </Link>
+  );
+}
+
+function MobileNavDropdown({
+  dropdownMenu,
+  openAccordion,
+  toggleAccordion,
+}: {
+  dropdownMenu: NavigationProps["dropdownMenu"];
+  openAccordion: string | null;
+  toggleAccordion: (key: string) => void;
+}) {
+  return (
+    <div className="mt-[70px]">
+      <Accordion>
+        {dropdownMenu?.map(link => (
+          <React.Fragment key={link._key}>
+            {link?.label && link?._key && (
+              <>
+                {link?.routeType === "singleRoute" ? (
+                  <span>
+                    <LinkComponent
+                      link={link}
+                      style={`${navlinkStyle} !text-base !h-auto text-white`}
+                    />
+                  </span>
+                ) : link?.routeType === "multipleRoute" ? (
+                  <AccordionItem>
+                    <AccordionButton
+                      isOpen={openAccordion === link._key}
+                      onClick={() => link._key && toggleAccordion(link._key)}
+                      className={`${navlinkStyle} after:!w-0 !p-0 text-white`}>
+                      {link?.label}
+                    </AccordionButton>
+
+                    <AccordionPanel isOpen={openAccordion === link._key}>
+                      <div className="py-6 flex flex-col space-y-2">
+                        {link?.featuredRoute && (
+                          <div>
+                            <div className="w-full h-0 pb-[75%] relative bg-obsidian">
+                              {link?.featuredRoute?.featuredLink && (
+                                <div className="absolute w-full h-full inset-0 p-[15px] flex flex-col justify-end z-10">
+                                  <span>
+                                    <LinkComponent
+                                      link={link?.featuredRoute?.featuredLink}
+                                      style="small-text-style text-white underline underline-offset-4 decoration-[0.5px] opacity-50 hover:opacity-100 h-5 !outline-none transition-all duration-300"
+                                    />
+                                  </span>
+                                </div>
+                              )}
+                              {link?.featuredRoute?.mainImage && (
+                                <Image
+                                  src={link?.featuredRoute?.mainImage?.image}
+                                  className="object-cover absolute inset-0 w-full h-full"
+                                  alt={link?.featuredRoute?.mainImage?.alt ?? "image"}
+                                />
+                              )}
+                            </div>
+                          </div>
+                        )}
+                        {link?.multipleRoutes && (
+                          <ul className="flex flex-col justify-center space-y-1 pl-[15px]">
+                            {link?.multipleRoutes?.map(sublink => (
+                              <li key={sublink._key}>
+                                {sublink?.label && (
+                                  <LinkComponent
+                                    link={sublink}
+                                    style={`${navlinkStyle} text-white`}
+                                  />
+                                )}
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    </AccordionPanel>
+                  </AccordionItem>
+                ) : (
+                  <span className={`${navlinkStyle} text-white`}>{link?.label}</span>
+                )}
+              </>
+            )}
+          </React.Fragment>
+        ))}
+      </Accordion>
+    </div>
+  );
+}
+
+function MobileNavSocialMedia({ socialMedia }: { socialMedia: NavigationProps["socialMedia"] }) {
+  if (!socialMedia) return null;
+  return (
+    <div className="mt-[70px] flex justify-center space-x-[50px]">
+      {socialMedia?.map(
+        social =>
+          social?.socialMediaLink && (
+            <Link
+              aria-label={social?.socialMedia || social?.socialMediaPlatform || "social-media-link"}
+              className="text-white hover:text-gray-2 leading-none transition"
+              style={{ fontSize: "24px" }}
+              target="_blank"
+              rel="noopener noreferrer"
+              href={social?.socialMediaLink}
+              key={social?._key}>
+              <SocialIcons social={social?.socialMedia as Socials} />
+            </Link>
+          ),
+      )}
+    </div>
+  );
+}
+
+function BurgerMenuButton({
+  menu,
+  showMenu,
+  firstLine,
+  secondLine,
+}: {
+  menu: boolean;
+  showMenu: () => void;
+  firstLine: any;
+  secondLine: any;
+}) {
+  return (
+    <div
+      className={`block lg:hidden z-[99] ${
+        menu ? "fixed right-[20px] md:right-[50px]" : "relative"
+      }`}>
+      <svg
+        onClick={showMenu}
+        width="40"
+        height="40"
+        viewBox="0 0 44 44"
+        fill="#ffffff"
+        xmlns="http://www.w3.org/2000/svg"
+        className="cursor-pointer">
+        <animated.rect width="20" height="3" style={firstLine} />
+        <animated.rect width="30" height="3" style={secondLine} />
+      </svg>
     </div>
   );
 }
