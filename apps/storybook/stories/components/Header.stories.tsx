@@ -192,6 +192,7 @@ export const VariantF: Story = {
         isOrdered: true,
         spacing: 0,
         startingPosition: "left",
+        subtitlePosition: "top",
         isFullWidth: false,
         headerSections: [
           {

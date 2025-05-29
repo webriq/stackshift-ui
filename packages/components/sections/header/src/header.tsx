@@ -45,7 +45,7 @@ export interface HeaderProps {
   formLinks?: LabeledRouteWithKey[];
   form?: Form;
   isFullWidth?: boolean;
-  subtitlePosition?: "top" | "bottom" | "center";
+  subtitlePosition?: "top" | "bottom";
   position?: "left" | "center" | "right";
   spacing?: number;
   isOrdered?: boolean;
@@ -74,7 +74,7 @@ export const Header: React.FC<SectionsProps> = ({ data }) => {
     isOrdered: data?.variants?.isOrdered ?? undefined,
     startingPosition: data?.variants?.startingPosition ?? undefined,
     headerSections: data?.variants?.headerSections ?? undefined,
-    subTitlePosition: data?.variants?.subTitlePosition ?? undefined,
+    subtitlePosition: data?.variants?.subtitlePosition ?? undefined,
     isFullWidth: data?.variants?.isFullWidth ?? undefined,
     position: data?.variants?.position ?? undefined,
   };

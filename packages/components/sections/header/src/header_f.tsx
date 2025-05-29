@@ -30,7 +30,7 @@ export default function Header_F({
   startingPosition,
 }: HeaderProps) {
   return (
-    <Section className={`relative pb-14 bg-white ${subtitlePosition === "top" && "mt-[-32px]"}`}>
+    <Section className={`relative pb-14 bg-white ${subtitlePosition === "top" && "mt-[32px]"}`}>
       <div
         style={{ marginBottom: `${spacing}px` }}
         className={`w-full mx-auto ${!isFullWidth ? "max-w-[1548px] px-4" : ""}`}>

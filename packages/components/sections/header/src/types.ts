@@ -275,7 +275,7 @@ export interface Variants {
   };
   contactLink?: LabeledRoute;
   isFullWidth?: boolean;
-  subTitlePosition?: "top" | "bottom" | "center";
+  subtitlePosition?: "top" | "bottom";
   spacing?: number;
   isOrdered?: boolean;
   startingPosition?: "left" | "right";
