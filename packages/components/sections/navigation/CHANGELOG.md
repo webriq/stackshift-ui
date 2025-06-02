@@ -1,5 +1,11 @@
 # @stackshift-ui/navigation
 
+## 6.1.0-alpha.1
+
+### Patch Changes
+
+- fix publish
+
 ## 6.1.0-alpha.0
 
 ### Minor Changes

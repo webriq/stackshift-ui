@@ -1,5 +1,23 @@
 # @stackshift-ui/header
 
+## 6.1.0-alpha.3
+
+### Patch Changes
+
+- fixing issue reading undefined lazy
+
+## 6.1.0-alpha.2
+
+### Patch Changes
+
+- fix reading undefined lazy
+
+## 6.1.0-alpha.1
+
+### Patch Changes
+
+- fix publish
+
 ## 6.1.0-alpha.0
 
 ### Minor Changes
