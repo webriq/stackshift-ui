@@ -1,5 +1,11 @@
 # @stackshift-ui/header
 
+## 6.1.0-alpha.0
+
+### Minor Changes
+
+- New component variants
+
 ## 6.0.15
 
 ### Patch Changes
