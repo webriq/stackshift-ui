@@ -1,10 +1,8 @@
-import { lazy } from "react";
-
+import React, { lazy } from "react";
 import {
   Form,
   HeaderSections,
   Images,
-  LabeledRoute,
   LabeledRouteWithKey,
   MainImage,
   SectionsProps,
