@@ -58,7 +58,16 @@ export {
   Features_H,
 } from "@stackshift-ui/features";
 export { Footer, Footer_A, Footer_B, Footer_C, Footer_D } from "@stackshift-ui/footer";
-export { Header, Header_A, Header_B, Header_C, Header_D, Header_E } from "@stackshift-ui/header";
+export {
+  Header,
+  Header_A,
+  Header_B,
+  Header_C,
+  Header_D,
+  Header_E,
+  Header_F,
+  Header_G,
+} from "@stackshift-ui/header";
 export {
   HowItWorks,
   HowItWorks_A,
@@ -80,6 +89,9 @@ export {
   Navigation_B,
   Navigation_C,
   Navigation_D,
+  Navigation_F,
+  Navigation_G,
+  Navigation_H,
 } from "@stackshift-ui/navigation";
 export { Newsletter, Newsletter_A, Newsletter_B } from "@stackshift-ui/newsletter";
 export {

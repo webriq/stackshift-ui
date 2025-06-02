@@ -1,6 +1,15 @@
 import { lazy } from "react";
 
-import { SectionsProps, Images, MainImage, LabeledRouteWithKey, Form, Template } from "./types";
+import {
+  Form,
+  HeaderSections,
+  Images,
+  LabeledRoute,
+  LabeledRouteWithKey,
+  MainImage,
+  SectionsProps,
+  Template,
+} from "./types";
 
 const Variants = {
   variant_a: lazy(() => import("./header_a")),
@@ -8,6 +17,8 @@ const Variants = {
   variant_c: lazy(() => import("./header_c")),
   variant_d: lazy(() => import("./header_d")),
   variant_e: lazy(() => import("./header_e")),
+  variant_f: lazy(() => import("./header_f")),
+  variant_g: lazy(() => import("./header_g")),
 };
 
 export interface ButtonProps {
@@ -26,12 +37,20 @@ export interface HeaderProps {
   mainImage?: MainImage;
   images?: Images[];
   title?: string;
+  subtitle?: string;
   description?: string;
   primaryButton?: ButtonProps;
   secondaryButton?: ButtonProps;
   videoLink?: string;
   formLinks?: LabeledRouteWithKey[];
   form?: Form;
+  isFullWidth?: boolean;
+  subtitlePosition?: "top" | "bottom";
+  position?: "left" | "center" | "right";
+  spacing?: number;
+  isOrdered?: boolean;
+  startingPosition?: "left" | "right";
+  headerSections?: HeaderSections[];
 }
 
 const displayName = "Header";
@@ -44,12 +63,20 @@ export const Header: React.FC<SectionsProps> = ({ data }) => {
     mainImage: data?.variants?.mainImage ?? undefined,
     images: data?.variants?.images ?? undefined,
     title: data?.variants?.title ?? undefined,
+    subtitle: data?.variants?.subtitle ?? undefined,
     description: data?.variants?.description ?? undefined,
     primaryButton: data?.variants?.primaryButton ?? undefined,
     secondaryButton: data?.variants?.secondaryButton ?? undefined,
     videoLink: data?.variants?.youtubeLink ?? undefined,
     formLinks: data?.variants?.formLinks ?? undefined,
     form: data?.variants?.form ?? undefined,
+    spacing: data?.variants?.spacing ?? undefined,
+    isOrdered: data?.variants?.isOrdered ?? undefined,
+    startingPosition: data?.variants?.startingPosition ?? undefined,
+    headerSections: data?.variants?.headerSections ?? undefined,
+    subtitlePosition: data?.variants?.subtitlePosition ?? undefined,
+    isFullWidth: data?.variants?.isFullWidth ?? undefined,
+    position: data?.variants?.position ?? undefined,
   };
 
   return Variant ? <Variant {...props} /> : null;

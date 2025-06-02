@@ -1,3 +1,6 @@
+import { PortableTextComponents } from "@portabletext/react";
+import { ButtonProps } from "./header";
+
 export type StyleVariants<T extends string> = Record<T, string>;
 
 export type Socials = "facebook" | "instagram" | "youtube" | "linkedin" | "twitter";
@@ -35,7 +38,8 @@ export interface Logo extends ConditionalLink {
 }
 
 export interface Images {
-  image?: string;
+  image?: string | null;
+  video?: string | null;
   _key?: string;
   _type?: string;
   alt?: string;
@@ -203,6 +207,7 @@ export interface Variants {
   multipleMenus?: any;
   arrayOfTitleAndText?: ArrayOfTitleAndText[] | null;
   logo?: Logo | null;
+  imageSrc?: string | null;
   primaryButton?: LabeledRoute | null;
   secondaryButton?: LabeledRoute | null;
   routes?: LabeledRouteWithKey[] | null;
@@ -216,6 +221,7 @@ export interface Variants {
   signinLink?: LabeledRoute | null;
   tags?: string[] | null;
   posts?: BlogPost[] | null;
+  position?: "left" | "center" | "right";
   blogsPerPage?: number | null;
   form?: Form | null;
   collections?: Collection | null;
@@ -268,6 +274,35 @@ export interface Variants {
     consentModalPosition?: string;
   };
   contactLink?: LabeledRoute;
+  isFullWidth?: boolean;
+  subtitlePosition?: "top" | "bottom";
+  spacing?: number;
+  isOrdered?: boolean;
+  startingPosition?: "left" | "right";
+  headerSections?: HeaderSections[];
+}
+
+export interface HeaderBox extends HeaderSections {
+  isImageLeft?: boolean;
+  isFullWidth?: boolean;
+  index?: number;
+  isOrdered?: boolean;
+}
+
+export interface HeaderSections {
+  _key: string;
+  title?: string;
+  subtitle?: string;
+  description?: string;
+  mainImage?: {
+    image: any;
+    alt?: string;
+  };
+  imageTitle?: any;
+  alignment?: string;
+  imageHeight?: "sm" | "md" | "lg";
+  columnContent?: any;
+  primaryButton?: ButtonProps;
 }
 
 export interface Template {
@@ -410,3 +445,7 @@ export declare interface Reference {
     };
   };
 }
+
+export type MyPortableTextComponents = PortableTextComponents & {
+  code?: ({ value }: { value: { language?: string; code?: string } }) => JSX.Element;
+};

@@ -8,6 +8,74 @@ export interface MainImage {
   alt?: string;
 }
 
+export interface MegaMenu {
+  _type: string;
+  showcaseLink?: ShowcaseLink[];
+  links?: MegaMenuLink[];
+  _key: string;
+  title?: string;
+  groupOfLinks?: GroupOfLink[];
+  label?: string;
+  linkTarget?: string;
+  linkType?: string;
+  url?: string;
+  linkExternal?: string;
+}
+
+export interface Logo extends ConditionalLink {
+  alt?: string;
+  linkTarget?: string;
+  image?: string;
+}
+
+export interface Logos {
+  logo: Logo;
+}
+
+export interface GroupOfLink {
+  _type: string;
+  links: GroupOfLinkRoot[];
+  _key: string;
+  title: string;
+  primaryButton: LabeledRouteWithKey;
+}
+
+export interface GroupOfLinkRoot {
+  title: string;
+  _type: string;
+  label?: string;
+  links: LabeledRouteWithKey[];
+  _key: string;
+}
+export interface MegaMenu {
+  _type: string;
+  showcaseLink?: ShowcaseLink[];
+  links?: MegaMenuLink[];
+  _key: string;
+  title?: string;
+  groupOfLinks?: GroupOfLink[];
+  label?: string;
+  linkTarget?: string;
+  linkType?: string;
+  url?: string;
+}
+
+export interface ShowcaseLink {
+  mainImage: MainImage;
+  _type: string;
+  primaryButton: LabeledRouteWithKey;
+  _key: string;
+}
+
+export interface MegaMenuLink {
+  _key: string;
+  title: string;
+  _type: string;
+  links: LabeledRouteWithKey[];
+  primaryButton: LabeledRouteWithKey;
+  label: string;
+}
+
 export interface LabeledRoute extends ConditionalLink {
   ariaLabel?: string;
   label?: string;
@@ -15,6 +83,10 @@ export interface LabeledRoute extends ConditionalLink {
   linkType?: string;
   _type?: string;
   linkInternal?: any;
+  linkExternal?: any;
+  referenceType?: string;
+  multipleRoutes?: LabeledRouteWithKey[];
+  multipleInnerRoutes?: LabeledRouteWithKey[];
 }
 export interface ConditionalLink {
   type?: string;
@@ -30,10 +102,15 @@ export interface StatItems {
   _type?: string;
 }
 
-export interface Logo extends ConditionalLink {
+export interface Logo {
   alt?: string;
   linkTarget?: string;
   image?: string;
+  type?: string;
+  internalLink?: string;
+  externalLink?: string;
+  linkExternal?: string;
+  linkInternal?: string;
 }
 
 export interface Images {
@@ -64,6 +141,17 @@ export interface SocialLink {
 
 export interface LabeledRouteWithKey extends LabeledRoute {
   _key?: string;
+  image?: string;
+  alt?: string;
+  multipleRoutes?: LabeledRouteWithKey[];
+  featuredRoute?: {
+    featuredLink: LabeledRoute;
+    mainImage: {
+      image: string;
+      alt: string;
+    };
+  };
+  routeType?: string;
 }
 
 export interface ArrayOfImageTitleAndText {
@@ -203,12 +291,18 @@ export interface Sections extends SanityBody {
 export interface Variants {
   template?: Template;
   multipleMenus?: any;
+  multipleLinks?: any;
+  megaMenu?: MegaMenu[];
   arrayOfTitleAndText?: ArrayOfTitleAndText[] | null;
   logo?: Logo | null;
+  smallLogo?: Logo | null;
+  logos?: Logos[] | null;
   primaryButton?: LabeledRoute | null;
   secondaryButton?: LabeledRoute | null;
   routes?: LabeledRouteWithKey[] | null;
   menu?: LabeledRouteWithKey[] | null;
+  dropdownMenu?: LabeledRouteWithKey[] | null;
+  iconLinks?: LabeledRouteWithKey[] | null;
   plans?: Plans[] | null;
   formLinks?: LabeledRouteWithKey[] | null;
   portfolios?: Portfolios[] | null;
@@ -232,6 +326,7 @@ export interface Variants {
   contactEmail?: string | null;
   contactNumber?: string | null;
   socialLinks?: SocialLink[] | null;
+  socialMedia?: SocialLink[] | null;
   block?: any;
   heading?: string | null;
   acceptButtonLabel?: string | null;
@@ -416,3 +511,20 @@ export declare interface Reference {
 export type MyPortableTextComponents = PortableTextComponents & {
   code?: ({ value }: { value: { language?: string; code?: string } }) => JSX.Element;
 };
+
+export interface ConditionalLinkTypes {
+  className?: string;
+  ariaLabel: string; // required for A11Y
+  style?: any;
+  children: string | React.ReactNode;
+  link: LabeledRoute | LabeledRouteWithKey | undefined;
+  target?: string;
+}
+
+export interface IconLink {
+  _key: string;
+  image: string;
+  alt?: string;
+  linkExternal: string;
+  linkTarget?: "_blank" | "_self";
+}

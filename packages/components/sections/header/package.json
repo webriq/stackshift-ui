@@ -41,23 +41,27 @@
     "vitest": "^2.1.1"
   },
   "dependencies": {
+    "@portabletext/react": "^3.1.0",
+    "@stackshift-ui/button": "workspace:*",
+    "@stackshift-ui/container": "workspace:*",
+    "@stackshift-ui/flex": "workspace:*",
+    "@stackshift-ui/heading": "workspace:*",
+    "@stackshift-ui/image": "workspace:*",
     "@stackshift-ui/scripts": "workspace:*",
+    "@stackshift-ui/section": "workspace:*",
+    "@stackshift-ui/link": "workspace:*",
+    "@stackshift-ui/signin-signup": "workspace:*",
     "@stackshift-ui/system": "workspace:*",
     "@stackshift-ui/text": "workspace:*",
-    "@stackshift-ui/button": "workspace:*",
-    "@stackshift-ui/heading": "workspace:*",
-    "@stackshift-ui/signin-signup": "workspace:*",
-    "@stackshift-ui/image": "workspace:*",
-    "@stackshift-ui/section": "workspace:*",
-    "@stackshift-ui/container": "workspace:*",
-    "@stackshift-ui/flex": "workspace:*"
+    "@stackshift-ui/swiper-pagination": "workspace:*",
+    "react-icons": "^5.3.0"
   },
   "peerDependencies": {
+    "@stackshift-ui/system": ">=6.0.11",
     "@types/react": "16.8 - 19",
     "next": "10 - 14",
     "react": "16.8 - 19",
-    "react-dom": "16.8 - 19",
-    "@stackshift-ui/system": ">=6.0.11"
+    "react-dom": "16.8 - 19"
   },
   "peerDependenciesMeta": {
     "next": {
