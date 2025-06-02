@@ -20,7 +20,6 @@ const IMAGE_HEIGHT_CLASSES = {
 
 export default function Header_F({
   title,
-  mainImage,
   subtitle,
   subtitlePosition,
   headerSections,
@@ -35,12 +34,7 @@ export default function Header_F({
         style={{ marginBottom: `${spacing}px` }}
         className={`w-full mx-auto ${!isFullWidth ? "max-w-[1548px] px-4" : ""}`}>
         {(title || subtitle) && (
-          <HeaderTitle
-            title={title}
-            subtitle={subtitle}
-            subtitlePosition={subtitlePosition}
-            mainImage={mainImage}
-          />
+          <HeaderTitle title={title} subtitle={subtitle} subtitlePosition={subtitlePosition} />
         )}
         <Flex className="flex-col" style={{ gap: `${spacing}px` }}>
           {headerSections?.map((header: HeaderBox, index: number) => {
@@ -61,12 +55,10 @@ const HeaderTitle = ({
   title,
   subtitle,
   subtitlePosition,
-  mainImage,
 }: {
   title?: string;
   subtitle?: string;
   subtitlePosition?: string;
-  mainImage?: { image: string; alt?: string };
 }) => (
   <Flex direction="col" justify="center" align="center" gap={3} className="mb-16">
     {subtitlePosition === "top" && subtitle && (
@@ -76,15 +68,6 @@ const HeaderTitle = ({
       <Text className="text-2xl text-center sm:text-4xl font-normal font-heading-kb tracking-[6px] uppercase border-b border-black">
         {title}
       </Text>
-    )}
-    {mainImage && (
-      <div className="relative h-80 max-h-[82px] w-full">
-        <Image
-          src={mainImage.image}
-          alt={mainImage.alt || ""}
-          className="object-contain object-center"
-        />
-      </div>
     )}
     {subtitlePosition === "bottom" && subtitle ? (
       <Text className="font-label tracking-[2.1px]">{subtitle}</Text>

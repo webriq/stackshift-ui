@@ -1,5 +1,11 @@
 # @stackshift-ui/header
 
+## 6.1.0-alpha.5
+
+### Patch Changes
+
+- removed main image in header f
+
 ## 6.1.0-alpha.4
 
 ### Patch Changes
