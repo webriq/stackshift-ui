@@ -42,10 +42,10 @@
     "@stackshift-ui/faqs": "6.0.14",
     "@stackshift-ui/features": "6.0.13",
     "@stackshift-ui/footer": "6.0.14",
-    "@stackshift-ui/header": "6.1.0-alpha.5",
+    "@stackshift-ui/header": "6.1.0-alpha.6",
     "@stackshift-ui/how-it-works": "6.0.12",
     "@stackshift-ui/logo-cloud": "6.0.14",
-    "@stackshift-ui/navigation": "6.1.0-alpha.1",
+    "@stackshift-ui/navigation": "6.1.0-alpha.2",
     "@stackshift-ui/newsletter": "6.0.12",
     "@stackshift-ui/portfolio": "6.0.13",
     "@stackshift-ui/signin-signup": "6.0.14",
@@ -69,6 +69,7 @@
     "late-jokes-bow",
     "some-years-thank",
     "upset-buses-sit",
-    "yellow-shoes-unite"
+    "yellow-shoes-unite",
+    "young-turtles-shout"
   ]
 }

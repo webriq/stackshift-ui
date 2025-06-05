@@ -1,5 +1,13 @@
 # @stackshift-ui/react
 
+## 6.0.19-alpha.6
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/navigation@6.1.0-alpha.2
+  - @stackshift-ui/header@6.1.0-alpha.6
+
 ## 6.0.19-alpha.5
 
 ### Patch Changes

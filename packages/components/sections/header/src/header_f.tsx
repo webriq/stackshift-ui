@@ -11,7 +11,6 @@ import { customBlockStyle } from "./utils/portableText/customBlockStyle";
 import { HeaderProps } from ".";
 import { HeaderBox, HeaderSections } from "./types";
 
-// Constants
 const IMAGE_HEIGHT_CLASSES = {
   lg: "min-h-[200px] sm:min-h-[400px] md:min-h-[600px] lg:min-h-[800px] xl:min-h-[1150px]",
   md: "min-h-[200px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[700px]",

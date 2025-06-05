@@ -1,5 +1,11 @@
 # @stackshift-ui/header
 
+## 6.1.0-alpha.6
+
+### Patch Changes
+
+- minor changes
+
 ## 6.1.0-alpha.5
 
 ### Patch Changes

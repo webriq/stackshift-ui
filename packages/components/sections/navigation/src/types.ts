@@ -29,7 +29,7 @@ export interface Logo extends ConditionalLink {
 }
 
 export interface Logos {
-  logo: Logo;
+  logo: Logo[];
 }
 
 export interface GroupOfLink {
