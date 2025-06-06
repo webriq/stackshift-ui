@@ -260,14 +260,6 @@ export const VariantG: StoryObj<typeof Navigation> = {
           type: "linkInternal",
           internalLink: "/",
         },
-        smallLogo: {
-          image:
-            "https://cdn.sanity.io/images/9itgab5x/staging/7f9353c628ae4dd0bdd479d3b1407a3c242755e8-1963x833.png?fm=webp&w=96&q=75",
-          alt: "Default Mobile Logo",
-          linkTarget: "_self",
-          type: "linkInternal",
-          internalLink: "/",
-        },
         logos: [
           {
             logo: {

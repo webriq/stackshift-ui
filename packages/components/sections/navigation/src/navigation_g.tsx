@@ -7,44 +7,19 @@ import { BsChevronDown } from "react-icons/bs";
 
 import { animated, useSpring } from "@react-spring/web";
 import { useWindowScroll } from "@uidotdev/usehooks";
-import Sticky from "react-sticky-el";
 
+import { NavigationProps } from "./";
 import { logoLink } from "./helper";
-import { NavigationProps } from "./navigation";
 import { Socials } from "./types";
 
 const navlinkStyle =
   "small-text-style group-hover:text-white hover:text-white relative after:content-[''] after:w-0 hover:after:w-full h-5 !outline-none after:h-[0.5px] after:bg-white after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300";
 
-export default function Navigation_G({
-  logo,
-  smallLogo,
-  socialMedia,
-  dropdownMenu,
-}: NavigationProps) {
+export default function Navigation_G({ logo, socialMedia, dropdownMenu }: NavigationProps) {
   const [showDropdown, setShowDropdown] = useState(false);
   const [menu, setMenu] = React.useState(false);
   const [openAccordion, setOpenAccordion] = useState<string | null>(null);
   const [isNavHovered, setIsNavHovered] = useState<boolean>(false);
-
-  let smallLogoLink;
-  if (smallLogo?.type === "linkInternal") {
-    if (smallLogo?.internalLink === undefined) {
-      smallLogoLink = `/`;
-    } else {
-      if (smallLogo?.internalLink === "Home" || smallLogo?.internalLink === "home") {
-        smallLogoLink = `/`;
-      } else {
-        smallLogoLink = `/${smallLogo?.internalLink}`;
-      }
-    }
-  } else {
-    if (smallLogo?.externalLink === undefined) {
-      smallLogoLink = `/`;
-    } else {
-      smallLogoLink = smallLogo?.externalLink;
-    }
-  }
 
   const showMenu = () => {
     setMenu(prevState => !prevState);
@@ -80,60 +55,49 @@ export default function Navigation_G({
   };
 
   return (
-    <Section className="w-full flex flex-col absolute top-0 z-50">
-      <Sticky stickyClassName="pt-[80px]" topOffset={100} isIOSFixEnabled={false}>
-        <nav
-          className={`w-full z-50 md:gap-2 gap-0 hover:bg-black/80 transition-colors duration-300 ${
-            showDropdown ? "!bg-black border-b-white" : "border-b-transparent"
-          } ${sticky}`}
-          onMouseEnter={() => handleNavHover(true)}
-          onMouseLeave={() => handleNavHover(false)}>
-          <div className={`container z-10`}>
-            <div
-              className={`w-full flex flex-wrap justify-between items-center ${
-                isScrolled ? "py-6" : "py-6"
-              }`}>
-              <div className="flex items-center space-x-[50px]">
-                <LogoSection logo={logo} smallLogo={smallLogo} smallLogoLink={smallLogoLink} />
-                <DropdownMenuSection
-                  dropdownMenu={dropdownMenu}
-                  isNavHovered={isNavHovered}
-                  setShowDropdown={setShowDropdown}
-                />
-              </div>
-              <BurgerMenuButton
-                menu={menu}
-                showMenu={showMenu}
-                firstLine={firstLine}
-                secondLine={secondLine}
+    <Section className="!px-0 w-full flex flex-col absolute top-0 z-50">
+      <nav
+        className={`w-full z-50 md:gap-2 gap-0 hover:bg-black/80 transition-colors duration-300 ${
+          showDropdown ? "!bg-black border-b-white" : "border-b-transparent"
+        } ${sticky}`}
+        onMouseEnter={() => handleNavHover(true)}
+        onMouseLeave={() => handleNavHover(false)}>
+        <div className="w-full z-10 px-4">
+          <div
+            className={`w-full flex flex-wrap justify-between items-center ${
+              isScrolled ? "py-6" : "py-6"
+            }`}>
+            <div className="flex items-center space-x-[50px]">
+              <LogoSection logo={logo} />
+              <DropdownMenuSection
+                dropdownMenu={dropdownMenu}
+                isNavHovered={isNavHovered}
+                setShowDropdown={setShowDropdown}
               />
             </div>
+            <BurgerMenuButton
+              menu={menu}
+              showMenu={showMenu}
+              firstLine={firstLine}
+              secondLine={secondLine}
+            />
           </div>
-          <MobileNavSidebar
-            menu={menu}
-            showMenu={showMenu}
-            smallLogo={smallLogo}
-            smallLogoLink={smallLogoLink}
-            dropdownMenu={dropdownMenu}
-            openAccordion={openAccordion}
-            toggleAccordion={toggleAccordion}
-            socialMedia={socialMedia}
-          />
-        </nav>
-      </Sticky>
+        </div>
+        <MobileNavSidebar
+          menu={menu}
+          showMenu={showMenu}
+          dropdownMenu={dropdownMenu}
+          logo={logo}
+          openAccordion={openAccordion}
+          toggleAccordion={toggleAccordion}
+          socialMedia={socialMedia}
+        />
+      </nav>
     </Section>
   );
 }
 
-function LogoSection({
-  logo,
-  smallLogo,
-  smallLogoLink,
-}: {
-  logo: NavigationProps["logo"];
-  smallLogo: NavigationProps["smallLogo"];
-  smallLogoLink: string;
-}) {
+function LogoSection({ logo }: { logo: NavigationProps["logo"] }) {
   return (
     <div className="w-[200px] relative z-20">
       {logo?.image && (
@@ -142,24 +106,9 @@ function LogoSection({
           className="text-3xl font-bold leading-none"
           href={logoLink(logo)}>
           <Image
-            className={`md:h-[75px] hidden md:inline-block`}
+            className={`md:h-[75px]`}
             src={logo?.image}
             alt={logo?.alt ?? "navigation-logo"}
-            width={100}
-            height={100}
-          />
-        </Link>
-      )}
-
-      {smallLogo?.image && (
-        <Link
-          aria-label={`Go to ${smallLogoLink === "/" ? "Homepage" : smallLogoLink}`}
-          className="text-3xl font-bold leading-none"
-          href={smallLogoLink}>
-          <Image
-            className={`h-[20px] inline-block md:hidden`}
-            src={smallLogo?.image}
-            alt={smallLogo?.alt ?? "navigation-logo"}
             width={100}
             height={100}
           />
@@ -285,7 +234,9 @@ function HoverMenu({
   return (
     <div className="group relative" onMouseEnter={onHover} onMouseLeave={onLeave}>
       <button
-        className={`${navlinkStyle} group-hover:after:!w-full flex items-center space-x-2 ${isNavHovered ? "text-white" : "text-black"}`}>
+        className={`${navlinkStyle} group-hover:after:!w-full flex items-center space-x-2 ${
+          isNavHovered ? "text-white" : "text-black"
+        }`}>
         <span>{link?.label}</span>
       </button>
 
@@ -350,8 +301,7 @@ function HoverMenu({
 function MobileNavSidebar({
   menu,
   showMenu,
-  smallLogo,
-  smallLogoLink,
+  logo,
   dropdownMenu,
   openAccordion,
   toggleAccordion,
@@ -359,8 +309,7 @@ function MobileNavSidebar({
 }: {
   menu: boolean;
   showMenu: () => void;
-  smallLogo: any;
-  smallLogoLink: string;
+  logo: any;
   dropdownMenu: NavigationProps["dropdownMenu"];
   openAccordion: string | null;
   toggleAccordion: (key: string) => void;
@@ -371,7 +320,7 @@ function MobileNavSidebar({
       <div className="fixed inset-0 bg-black/80" onClick={showMenu}></div>
       <div className="fixed top-0 right-0 bottom-0 flex flex-col w-full sm:max-w-sm bg-black/80">
         <nav className="flex flex-col w-full py-6 px-6 overflow-y-auto h-screen">
-          <MobileNavImage smallLogo={smallLogo} smallLogoLink={smallLogoLink} showMenu={showMenu} />
+          <MobileNavImage logo={logo} showMenu={showMenu} />
           <MobileNavDropdown
             dropdownMenu={dropdownMenu}
             openAccordion={openAccordion}
@@ -388,25 +337,23 @@ function MobileNavSidebar({
 }
 
 function MobileNavImage({
-  smallLogo,
-  smallLogoLink,
+  logo,
   showMenu,
 }: {
-  smallLogo: NavigationProps["smallLogo"];
-  smallLogoLink: string;
+  logo: NavigationProps["logo"];
   showMenu: () => void;
 }) {
-  if (!smallLogo?.image) return null;
+  if (!logo?.image) return null;
   return (
     <Link
-      aria-label={`Go to ${smallLogoLink === "/" ? "Homepage" : smallLogoLink}`}
+      aria-label={`Go to ${logoLink(logo)}`}
       className="text-3xl font-bold leading-none h-[40px] w-[100px] flex items-center justify-start mt-0 md:ml-[15px]"
       onClick={showMenu}
-      href={smallLogoLink}>
+      href={logoLink(logo)}>
       <Image
         className="h-[20px] object-contain"
-        src={smallLogo?.image}
-        alt={smallLogo?.alt ?? "navigation-logo"}
+        src={logo?.image}
+        alt={logo?.alt ?? "navigation-logo"}
       />
     </Link>
   );
@@ -534,7 +481,7 @@ function BurgerMenuButton({
 }) {
   return (
     <div
-      className={`block lg:hidden z-[99] ${
+      className={`block pr-4 lg:hidden z-[99] ${
         menu ? "fixed right-[20px] md:right-[50px]" : "relative"
       }`}>
       <svg

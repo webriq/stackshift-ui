@@ -37,7 +37,7 @@ export const ConditionalLink = ({
       </a>
     );
   } else if (
-    link?.type === "linkInternal" &&
+    (link?.type === "linkInternal" || link.linkType === "linkInternal") &&
     // link?.internalLink?.toLowerCase()?.includes("home")
     link?.internalLink?.toLowerCase() === "home"
   ) {
@@ -51,7 +51,7 @@ export const ConditionalLink = ({
         {children}
       </Link>
     );
-  } else if (link?.type === "linkInternal") {
+  } else if (link?.type === "linkInternal" || link?.linkType === "linkInternal") {
     let hrefPath = "";
 
     switch (link?.referenceType) {
@@ -103,7 +103,7 @@ export const ConditionalLink = ({
         {children}
       </Link>
     );
-  } else if (link?.type === "linkExternal") {
+  } else if (link?.type === "linkExternal" || link?.linkType === "linkExternal") {
     return (
       <a
         aria-label={ariaLabel}

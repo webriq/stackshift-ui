@@ -295,7 +295,6 @@ export interface Variants {
   megaMenu?: MegaMenu[];
   arrayOfTitleAndText?: ArrayOfTitleAndText[] | null;
   logo?: Logo | null;
-  smallLogo?: Logo | null;
   logos?: Logos[] | null;
   primaryButton?: LabeledRoute | null;
   secondaryButton?: LabeledRoute | null;

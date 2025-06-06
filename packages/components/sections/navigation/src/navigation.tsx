@@ -30,7 +30,6 @@ export interface ResponsiveNavLinksProps {
 export interface NavigationProps {
   template?: any;
   logo?: Logo;
-  smallLogo?: Logo;
   logos?: Logos[];
   links?: LabeledRouteWithKey[];
   primaryButton?: LabeledRoute;
@@ -52,7 +51,6 @@ export const Navigation: React.FC<SectionsProps> = ({ data }) => {
 
   const props = {
     logo: data?.variants?.logo ?? undefined,
-    smallLogo: data?.variants?.smallLogo ?? undefined,
     links: data?.variants?.routes ?? undefined,
     primaryButton: data?.variants?.primaryButton ?? undefined,
     secondaryButton: data?.variants?.secondaryButton ?? undefined,
