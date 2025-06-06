@@ -80,6 +80,7 @@ export default function Navigation_G({ logo, socialMedia, dropdownMenu }: Naviga
               showMenu={showMenu}
               firstLine={firstLine}
               secondLine={secondLine}
+              isNavHovered={isNavHovered}
             />
           </div>
         </div>
@@ -473,11 +474,13 @@ function BurgerMenuButton({
   showMenu,
   firstLine,
   secondLine,
+  isNavHovered,
 }: {
   menu: boolean;
   showMenu: () => void;
   firstLine: any;
   secondLine: any;
+  isNavHovered: boolean;
 }) {
   return (
     <div
@@ -489,7 +492,7 @@ function BurgerMenuButton({
         width="40"
         height="40"
         viewBox="0 0 44 44"
-        fill="#ffffff"
+        fill={isNavHovered ? "#ffffff" : "#000000"}
         xmlns="http://www.w3.org/2000/svg"
         className="cursor-pointer">
         <animated.rect width="20" height="3" style={firstLine} />

@@ -1,5 +1,11 @@
 # @stackshift-ui/navigation
 
+## 6.1.0-alpha.4
+
+### Patch Changes
+
+- added console logs for iconLinks and megamenu for navigation h
+
 ## 6.1.0-alpha.3
 
 ### Patch Changes

@@ -251,6 +251,8 @@ const MobileMenuContentItem = React.memo(({ megaMenu }: MobileMenuContentItemPro
 MobileMenuContentItem.displayName = "MobileMenuContentItem";
 
 export default function Navigation_H({ logo, iconLinks, megaMenu }: NavigationProps) {
+  console.log("🚀 ~ iconLinks", iconLinks);
+  console.log("🚀 ~ megaMenu", megaMenu);
   const [{ y }] = useWindowScroll();
   const sticky =
     y && y > 80

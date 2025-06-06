@@ -45,7 +45,7 @@
     "@stackshift-ui/header": "6.1.0-alpha.6",
     "@stackshift-ui/how-it-works": "6.0.12",
     "@stackshift-ui/logo-cloud": "6.0.14",
-    "@stackshift-ui/navigation": "6.1.0-alpha.3",
+    "@stackshift-ui/navigation": "6.1.0-alpha.4",
     "@stackshift-ui/newsletter": "6.0.12",
     "@stackshift-ui/portfolio": "6.0.13",
     "@stackshift-ui/signin-signup": "6.0.14",
@@ -70,6 +70,7 @@
     "late-jokes-bow",
     "some-years-thank",
     "upset-buses-sit",
+    "wide-donkeys-swim",
     "yellow-shoes-unite",
     "young-turtles-shout"
   ]
