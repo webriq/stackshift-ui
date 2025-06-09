@@ -8,13 +8,22 @@ import { Section } from "@stackshift-ui/section";
 import { Text } from "@stackshift-ui/text";
 import { useClickAway, useWindowScroll } from "@uidotdev/usehooks";
 import cn from "classnames";
-import React, { createContext, forwardRef, Fragment, SVGProps, useMemo, useState } from "react";
+import React, {
+  createContext,
+  forwardRef,
+  Fragment,
+  SVGProps,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { GoPerson } from "react-icons/go";
 import { LiaSearchSolid } from "react-icons/lia";
 import { SlLocationPin } from "react-icons/sl";
 import { NavigationProps } from ".";
-import { MegaNavContextProvider, useMegaNavContext } from "./context/megaNavContext";
-import { getImageProperty, logoLink } from "./helper";
+import { logoLink } from "./helper";
 import { LabeledRouteWithKey, Logo, MegaMenu } from "./types";
 
 // Accordion Types
@@ -152,10 +161,11 @@ const AccordionContent = React.forwardRef<
 
 interface MobileMenuContentProps {
   data?: MegaMenu[];
+  showMobileMenu: boolean;
+  setShowMobileMenu: (show: boolean) => void;
 }
 
-const MobileMenuContent = ({ data }: MobileMenuContentProps) => {
-  const { showMobileMenu, setShowMobileMenu } = useMegaNavContext();
+const MobileMenuContent = ({ data, showMobileMenu, setShowMobileMenu }: MobileMenuContentProps) => {
   const ref = useClickAway<HTMLDivElement>(() => {
     if (showMobileMenu) {
       setShowMobileMenu(false);
@@ -180,7 +190,7 @@ interface MobileMenuContentItemProps {
 }
 
 const MobileMenuContentItem = React.memo(({ megaMenu }: MobileMenuContentItemProps) => {
-  if (megaMenu._type === "link") {
+  if (megaMenu._type === "isLinkOnly") {
     return (
       <Link
         href={megaMenu.linkExternal || "#"}
@@ -206,16 +216,23 @@ const MobileMenuContentItem = React.memo(({ megaMenu }: MobileMenuContentItemPro
               justify="start"
               gap={1}
               className="relative w-full pl-4">
-              {group.links?.[0]?.links?.map(link => (
-                <Button
-                  key={`MobileMenuContent-Item-Group-Link-${link._key}`}
-                  ariaLabel={link.label ?? ""}
-                  as="link"
-                  link={link ?? {}}
-                  variant="unstyled"
-                  className="text-black text-sm font-normal font-heading-kb leading-[30px] hover:underline">
-                  {link.label}
-                </Button>
+              {group.links?.map(groupedLinksItem => (
+                <div key={groupedLinksItem._key} className="mb-4">
+                  <Text className="text-black font-medium leading-[30px] text-sm">
+                    {groupedLinksItem.title}
+                  </Text>
+                  {groupedLinksItem.links?.map(link => (
+                    <Button
+                      key={`MobileMenuContent-Item-Group-Link-${link._key}`}
+                      ariaLabel={link.label ?? ""}
+                      as="link"
+                      link={link ?? {}}
+                      variant="unstyled"
+                      className="text-black text-sm font-normal font-heading-kb leading-[30px] hover:underline block ml-4">
+                      {link.label}
+                    </Button>
+                  ))}
+                </div>
               ))}
             </Flex>
           </div>
@@ -251,25 +268,60 @@ const MobileMenuContentItem = React.memo(({ megaMenu }: MobileMenuContentItemPro
 MobileMenuContentItem.displayName = "MobileMenuContentItem";
 
 export default function Navigation_H({ logo, iconLinks, megaMenu }: NavigationProps) {
-  console.log("🚀 ~ iconLinks", iconLinks);
-  console.log("🚀 ~ megaMenu", megaMenu);
   const [{ y }] = useWindowScroll();
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [currentDropdown, setCurrentDropdown] = useState<string>("");
+  const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
   const sticky =
     y && y > 80
       ? "fixed w-full transition-all duration-300 ease-in-out"
       : "sticky transition-all duration-300 ease-in-out";
 
+  const handleCurrentDropdown = useCallback((dropdown: string) => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+    }
+
+    if (dropdown === "") {
+      closeTimeoutRef.current = setTimeout(() => {
+        setCurrentDropdown("");
+      }, 200);
+    } else {
+      setCurrentDropdown(dropdown);
+    }
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      if (closeTimeoutRef.current) {
+        clearTimeout(closeTimeoutRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <MegaNavContextProvider>
+    <>
       <header
         className={cn(
           "relative top-0 left-0 border-t md:pb-3 z-50 bg-white transition-all ease-in-out duration-300",
           sticky,
         )}>
-        <NavContainer logo={logo} iconLinks={iconLinks} megaMenu={megaMenu} />
+        <NavContainer
+          logo={logo}
+          iconLinks={iconLinks}
+          megaMenu={megaMenu}
+          setShowMobileMenu={setShowMobileMenu}
+          currentDropdown={currentDropdown}
+          setCurrentDropdown={handleCurrentDropdown}
+        />
       </header>
-      <MobileMenuContent data={megaMenu} />
-    </MegaNavContextProvider>
+      <MobileMenuContent
+        data={megaMenu}
+        showMobileMenu={showMobileMenu}
+        setShowMobileMenu={setShowMobileMenu}
+      />
+    </>
   );
 }
 
@@ -277,10 +329,19 @@ interface NavContainerProps {
   logo?: Logo;
   iconLinks?: LabeledRouteWithKey[];
   megaMenu?: MegaMenu[];
+  setShowMobileMenu: (show: boolean) => void;
+  currentDropdown: string;
+  setCurrentDropdown: (dropdown: string) => void;
 }
 
-const NavContainer = ({ logo, iconLinks, megaMenu }: NavContainerProps) => {
-  const { setShowMobileMenu } = useMegaNavContext();
+const NavContainer = ({
+  logo,
+  iconLinks,
+  megaMenu,
+  setShowMobileMenu,
+  currentDropdown,
+  setCurrentDropdown,
+}: NavContainerProps) => {
   const [{ x: _, y }] = useWindowScroll();
   const hideLogo = y && y > 80 ? "md:hidden" : "";
 
@@ -331,8 +392,16 @@ const NavContainer = ({ logo, iconLinks, megaMenu }: NavContainerProps) => {
           </Flex>
         )}
       </Grid>
-      <MegaMenuNavLinks data={megaMenu ?? []} />
-      <MegaMenuDropdownContents data={megaMenu ?? []} />
+      <MegaMenuNavLinks
+        data={megaMenu ?? []}
+        currentDropdown={currentDropdown}
+        setCurrentDropdown={setCurrentDropdown}
+      />
+      <MegaMenuDropdownContents
+        data={megaMenu ?? []}
+        currentDropdown={currentDropdown}
+        setCurrentDropdown={setCurrentDropdown}
+      />
     </div>
   );
 };
@@ -366,10 +435,11 @@ const navItemIcons = {
 
 interface MegaMenuNavLinksProps {
   data: MegaMenu[];
+  currentDropdown: string;
+  setCurrentDropdown: (dropdown: string) => void;
 }
 
-const MegaMenuNavLinks = ({ data }: MegaMenuNavLinksProps) => {
-  const { currentDropdown, setCurrentDropdown } = useMegaNavContext();
+const MegaMenuNavLinks = ({ data, currentDropdown, setCurrentDropdown }: MegaMenuNavLinksProps) => {
   const [{ x: _, y }] = useWindowScroll();
   const hide = (y && y < 80) || y === 0 ? "hidden" : "";
 
@@ -455,21 +525,7 @@ const MegaMenuDropdownTrigger = forwardRef<HTMLButtonElement, MegaMenuDropdownTr
   (props, ref) => {
     const { dropdown, onClick, onMouseEnter, onMouseLeave, className, ...restProps } = props;
 
-    return dropdown.linkExternal ? (
-      <Link
-        href={dropdown.linkExternal}
-        onClick={onClick}
-        onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}
-        aria-label={`Open the ${dropdown.title} menu`}
-        className={cn(
-          "relative text-black text-sm font-normal font-label uppercase tracking-widest group",
-          className,
-        )}
-        {...restProps}>
-        {dropdown.title}
-      </Link>
-    ) : (
+    return (
       <button
         ref={ref}
         onClick={onClick}
@@ -489,11 +545,15 @@ const MegaMenuDropdownTrigger = forwardRef<HTMLButtonElement, MegaMenuDropdownTr
 
 interface MegaMenuDropdownContentsProps {
   data: MegaMenu[];
+  currentDropdown: string;
+  setCurrentDropdown: (dropdown: string) => void;
 }
 
-const MegaMenuDropdownContents = ({ data }: MegaMenuDropdownContentsProps) => {
-  const { currentDropdown } = useMegaNavContext();
-
+const MegaMenuDropdownContents = ({
+  data,
+  currentDropdown,
+  setCurrentDropdown,
+}: MegaMenuDropdownContentsProps) => {
   return (
     <>
       {data && data.length > 0
@@ -504,9 +564,10 @@ const MegaMenuDropdownContents = ({ data }: MegaMenuDropdownContentsProps) => {
               <MegaDropdownContent
                 key={`MegaMenuDropdown-${megaMenuDropdown._key}`}
                 label={megaMenuDropdown.title ?? ""}
-                links={megaMenuDropdown.links ?? []}
                 showcaseLink={megaMenuDropdown.showcaseLink ?? []}
                 groupedLinks={megaMenuDropdown.groupOfLinks ?? []}
+                currentDropdown={currentDropdown}
+                setCurrentDropdown={setCurrentDropdown}
               />
             );
           })
@@ -517,28 +578,29 @@ const MegaMenuDropdownContents = ({ data }: MegaMenuDropdownContentsProps) => {
 
 interface MegaDropdownContentProps {
   label: string;
-  links: any[];
   showcaseLink: any[];
   groupedLinks: any[];
+  currentDropdown: string;
+  setCurrentDropdown: (dropdown: string) => void;
 }
 
 function MegaDropdownContent({
   label,
-  links,
   showcaseLink,
   groupedLinks,
+  currentDropdown,
+  setCurrentDropdown,
 }: MegaDropdownContentProps) {
-  const { currentDropdown, setCurrentDropdown } = useMegaNavContext();
   const show = currentDropdown === label && label !== "";
 
-  const isGroupLinks = groupedLinks.length > 0 && links.length === 0;
+  const hasGroupedLinks = groupedLinks.length > 0;
   const hasShowcaseLinks = showcaseLink.length > 0;
 
   const groupedLinksGridColumns = useMemo(() => {
     if (groupedLinks.length > 0) {
       return groupedLinks
         .map(group => {
-          return group.links.length > 2 ? "3fr" : "1fr";
+          return group.links?.length > 2 ? "3fr" : "1fr";
         })
         .join(" ");
     } else {
@@ -546,12 +608,10 @@ function MegaDropdownContent({
     }
   }, [groupedLinks]);
 
-  const normalLinksGridColumns = links.length > 0 ? `repeat(${links.length}, 1fr)` : "1fr";
-  const gridColumns =
-    links.length > 0 || groupedLinks.length > 0
-      ? `${isGroupLinks ? groupedLinksGridColumns : normalLinksGridColumns} ${
-          hasShowcaseLinks ? "2fr" : ""
-        }`
+  const gridColumns = hasGroupedLinks
+    ? `${groupedLinksGridColumns} ${hasShowcaseLinks ? "2fr" : ""}`
+    : hasShowcaseLinks
+      ? "2fr"
       : "1fr";
 
   return (
@@ -569,7 +629,6 @@ function MegaDropdownContent({
           gridTemplateRows: "1fr",
         }}
         className="relative w-full h-auto max-w-[90rem] mx-auto">
-        <MegaDropDownLinks links={links} />
         <MegaDropdownGroupedLinks groupedLinks={groupedLinks} />
         <MegaDropdownShowcaseLinks
           hasShowcaseLinks={hasShowcaseLinks}
@@ -577,53 +636,6 @@ function MegaDropdownContent({
         />
       </div>
     </Section>
-  );
-}
-
-function MegaDropDownLinks({ links }: { links: LabeledRouteWithKey[] }) {
-  return (
-    <Fragment>
-      {links &&
-        links.length > 0 &&
-        links?.map((item: any, index: number) => {
-          return (
-            <div
-              key={`MegaDropdownContent-Item-${item._key}-${index}`}
-              className="relative pt-10 pl-5 flex flex-col items-end justify-start w-full h-full border-r border-black last:border-r-0">
-              {item.primaryButton?.label ? (
-                <Button
-                  as="link"
-                  ariaLabel={item.primaryButton?.label}
-                  link={item.primaryButton}
-                  className="text-sm text-black font-normal uppercase tracking-widest font-label self-start mb-4 border-b border-transparent hover:border-black">
-                  {item.primaryButton?.label}
-                </Button>
-              ) : (
-                <Heading
-                  fontSize="sm"
-                  className="text-black font-normal uppercase tracking-widest font-label self-start pb-4">
-                  {item.title}
-                </Heading>
-              )}
-              <Flex direction="col" align="start" justify="start" gap={2} className="w-full h-full">
-                {item.links?.map((link: any, i: number) => {
-                  return (
-                    <Button
-                      key={`MegaDropdownContent-Item-Link-${item._key}-${i}`}
-                      ariaLabel={link.label ?? ""}
-                      as="link"
-                      link={link ?? {}}
-                      variant="unstyled"
-                      className="text-black text-sm font-normal font-heading-kb leading-[30px] hover:underline">
-                      {link?.label}
-                    </Button>
-                  );
-                })}
-              </Flex>
-            </div>
-          );
-        })}
-    </Fragment>
   );
 }
 
@@ -706,7 +718,6 @@ function MegaDropdownShowcaseLinks({
     <Flex direction="row" align="start" justify="start" className="w-full h-full gap-6 pl-5 py-10">
       {showcaseLink?.map((link: any, i: number) => {
         const imageUrl = link.mainImage?.image;
-        const imageProperty = getImageProperty(link.mainImage?.image.asset);
 
         return (
           <Button
@@ -721,8 +732,8 @@ function MegaDropdownShowcaseLinks({
                 key={i}
                 src={imageUrl}
                 alt={link.mainImage?.alt ?? ""}
-                width={imageProperty?.width ?? 0}
-                height={imageProperty?.height ?? 0}
+                width={500}
+                height={500}
                 className="w-[188px] h-[147px] object-cover object-center"></Image>
               {link.primaryButton?.label}
             </Flex>
