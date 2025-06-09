@@ -666,14 +666,9 @@ function MegaDropdownGroupedLinks({ groupedLinks }: { groupedLinks: LabeledRoute
                       key={`MegaDropdownContent-Item-Link-${link._key}-${i}`}
                       direction="col"
                       className="h-fit w-fit">
-                      <Button
-                        ariaLabel={link.title ?? ""}
-                        as="link"
-                        link={link?.primaryButton ?? {}}
-                        variant="unstyled"
-                        className="text-black text-sm font-normal font-heading-kb leading-[30px] underline uppercase underline-offset-2">
-                        {link?.title}
-                      </Button>
+                      <Text fontSize="base" className="text-black font-medium leading-[30px]">
+                        {link.title}
+                      </Text>
                       <Flex
                         direction="col"
                         align="start"

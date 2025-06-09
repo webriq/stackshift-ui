@@ -1,5 +1,11 @@
 # @stackshift-ui/navigation
 
+## 6.1.0-alpha.6
+
+### Patch Changes
+
+- changed button element to text element for grouped link title
+
 ## 6.1.0-alpha.5
 
 ### Patch Changes
