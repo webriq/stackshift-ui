@@ -1,5 +1,11 @@
 # @stackshift-ui/navigation
 
+## 6.1.0-alpha.5
+
+### Patch Changes
+
+- optimized navigation pkg
+
 ## 6.1.0-alpha.4
 
 ### Patch Changes
