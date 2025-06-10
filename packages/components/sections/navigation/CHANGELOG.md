@@ -1,5 +1,11 @@
 # @stackshift-ui/navigation
 
+## 6.1.0-alpha.7
+
+### Patch Changes
+
+- navigation g hover menu update
+
 ## 6.1.0-alpha.6
 
 ### Patch Changes

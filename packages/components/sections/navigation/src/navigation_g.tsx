@@ -232,8 +232,22 @@ function HoverMenu({
   onLeave: () => void;
   isNavHovered: boolean;
 }) {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    onHover();
+  };
+
+  const handleMouseLeave = () => {
+    setTimeout(() => {
+      setIsHovered(false);
+      onLeave();
+    }, 100);
+  };
+
   return (
-    <div className="group relative" onMouseEnter={onHover} onMouseLeave={onLeave}>
+    <div className="group relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <button
         className={`${navlinkStyle} group-hover:after:!w-full flex items-center space-x-2 ${
           isNavHovered ? "text-white" : "text-black"
@@ -241,8 +255,10 @@ function HoverMenu({
         <span>{link?.label}</span>
       </button>
 
-      <div className="fixed left-0 right-0 top-[80px] pointer-events-none group-hover:pointer-events-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <div className="w-3/4 mx-auto bg-black">
+      <div className="absolute left-0 right-0 top-full h-2 pointer-events-auto opacity-0 group-hover:pointer-events-auto"></div>
+
+      <div className="fixed left-0 right-0 top-[80px] pointer-events-none group-hover:pointer-events-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50">
+        <div className="w-3/4 mx-auto bg-black shadow-lg">
           <div className="max-w-[1440px] mx-auto px-4">
             <div className="p-[30px]">
               <div className="grid grid-cols-5 gap-[30px]">
