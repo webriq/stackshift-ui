@@ -1,5 +1,11 @@
 # @stackshift-ui/navigation
 
+## 6.1.0-alpha.8
+
+### Patch Changes
+
+- navigation variant f update text color to white
+
 ## 6.1.0-alpha.7
 
 ### Patch Changes

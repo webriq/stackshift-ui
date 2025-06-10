@@ -330,10 +330,7 @@ const DropdownMenuItem = ({
             />
           </Flex>
         ) : (
-          <p
-            className={`hover:text-secondary text-lg cursor-pointer flex items-center group py-2 px-4 ${
-              hasScrolled ? "text-white" : "text-black"
-            }`}>
+          <p className="hover:text-secondary text-lg cursor-pointer flex items-center group py-2 px-4 text-white">
             {mLink?.label}
             <BiChevronDown
               size={24}
