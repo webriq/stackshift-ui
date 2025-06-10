@@ -1,5 +1,24 @@
 # @stackshift-ui/navigation
 
+## 6.1.0
+
+### Minor Changes
+
+- Bump minor package version
+- 056a29f: New component variants
+
+### Patch Changes
+
+- d116a08: navigation updates
+- da4af85: changed button element to text element for grouped link title
+- 2b1f796: fix publish
+- 6465822: optimized navigation pkg
+- 3de9487: remove unnecessary comment on navigation variants F, H
+- 5160870: navigation variant f update text color to white
+- e86b5da: navigation g hover menu update
+- 51de017: added console logs for iconLinks and megamenu for navigation h
+- 7f627b5: minor changes
+
 ## 6.1.0-alpha.9
 
 ### Patch Changes

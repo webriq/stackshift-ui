@@ -1,5 +1,21 @@
 # @stackshift-ui/header
 
+## 6.1.0
+
+### Minor Changes
+
+- Bump minor package version
+- 056a29f: New component variants
+
+### Patch Changes
+
+- 5d922c8: removed main image in header f
+- 1fc7776: fix undefined lazy
+- 2b1f796: fix publish
+- 2b1f796: fix reading undefined lazy
+- 2b1f796: fixing issue reading undefined lazy
+- 7f627b5: minor changes
+
 ## 6.1.0-alpha.6
 
 ### Patch Changes
