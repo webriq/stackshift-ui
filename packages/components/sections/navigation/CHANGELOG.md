@@ -1,5 +1,11 @@
 # @stackshift-ui/navigation
 
+## 6.1.0-alpha.9
+
+### Patch Changes
+
+- remove unnecessary comment on navigation variants F, H
+
 ## 6.1.0-alpha.8
 
 ### Patch Changes

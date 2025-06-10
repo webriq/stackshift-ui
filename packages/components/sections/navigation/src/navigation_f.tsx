@@ -11,7 +11,6 @@ import { NavigationProps } from ".";
 import { ConditionalLink, logoLink } from "./helper/index";
 import { LabeledRouteWithKey } from "./types";
 
-// Types
 type DropdownRef = React.RefObject<HTMLDivElement>;
 
 interface DropdownState {
@@ -19,7 +18,6 @@ interface DropdownState {
   index: number | null;
 }
 
-// Components
 const NavigationLogo = ({ logo, hasScrolled }: { logo: any; hasScrolled: boolean }) => {
   if (!logo?.image) return null;
 

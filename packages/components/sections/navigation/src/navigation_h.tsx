@@ -26,7 +26,6 @@ import { NavigationProps } from ".";
 import { logoLink } from "./helper";
 import { LabeledRouteWithKey, Logo, MegaMenu } from "./types";
 
-// Accordion Types
 interface AccordionProps {
   className?: string;
   children: React.ReactNode;
@@ -51,7 +50,6 @@ interface AccordionContentProps {
   children: React.ReactNode;
 }
 
-// Accordion Context
 interface AccordionContextType {
   openItems: string[];
   toggleItem: (value: string) => void;
