@@ -61,7 +61,7 @@ export const Header: React.FC<SectionsProps> = ({ data }) => {
   const props = {
     mainImage: data?.variants?.mainImage ?? undefined,
     images: data?.variants?.images ?? undefined,
-    mediaItems: data?.variants?.images ?? undefined,
+    mediaItems: data?.variants?.mediaItems ?? undefined,
     title: data?.variants?.title ?? undefined,
     subtitle: data?.variants?.subtitle ?? undefined,
     description: data?.variants?.description ?? undefined,

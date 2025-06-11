@@ -1,5 +1,11 @@
 # @stackshift-ui/header
 
+## 6.1.4
+
+### Patch Changes
+
+- fix header prop in index.tsx file
+
 ## 6.1.3
 
 ### Patch Changes
