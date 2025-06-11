@@ -1,5 +1,11 @@
 # @stackshift-ui/header
 
+## 6.1.1
+
+### Patch Changes
+
+- chore: rename images props for variant g to mediaItems
+
 ## 6.1.0
 
 ### Minor Changes

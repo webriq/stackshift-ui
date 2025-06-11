@@ -33,7 +33,7 @@ export interface ButtonProps {
 export interface HeaderProps {
   template?: Template;
   mainImage?: MainImage;
-  images?: Images[];
+  mediaItems?: Images[];
   title?: string;
   subtitle?: string;
   description?: string;
@@ -60,6 +60,7 @@ export const Header: React.FC<SectionsProps> = ({ data }) => {
   const props = {
     mainImage: data?.variants?.mainImage ?? undefined,
     images: data?.variants?.images ?? undefined,
+    mediaItems: data?.variants?.images ?? undefined,
     title: data?.variants?.title ?? undefined,
     subtitle: data?.variants?.subtitle ?? undefined,
     description: data?.variants?.description ?? undefined,

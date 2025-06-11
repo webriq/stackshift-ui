@@ -8,25 +8,25 @@ import { useEffect, useState } from "react";
 import { HeaderProps } from ".";
 
 export default function Header_G({
-  images,
+  mediaItems,
   title,
   description,
   primaryButton,
   secondaryButton,
   position = "center",
 }: HeaderProps) {
-  if (!images?.length) return null;
+  if (!mediaItems?.length) return null;
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const currentItem = images[currentIndex];
+  const currentItem = mediaItems[currentIndex];
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex(prevIndex => (prevIndex + 1) % images.length);
+      setCurrentIndex(prevIndex => (prevIndex + 1) % mediaItems.length);
     }, 5000);
 
     return () => clearInterval(timer);
-  }, [images.length]);
+  }, [mediaItems.length]);
 
   const handleSlideChange = (index: number) => {
     setCurrentIndex(index);
@@ -113,7 +113,7 @@ export default function Header_G({
         </div>
 
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">
-          {images.map((_, index) => (
+          {mediaItems.map((_, index) => (
             <SwiperPagination
               key={index}
               colorScheme="white"
