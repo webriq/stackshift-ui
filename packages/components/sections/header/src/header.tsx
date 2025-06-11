@@ -33,6 +33,7 @@ export interface ButtonProps {
 export interface HeaderProps {
   template?: Template;
   mainImage?: MainImage;
+  images?: Images[];
   mediaItems?: Images[];
   title?: string;
   subtitle?: string;

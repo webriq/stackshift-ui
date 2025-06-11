@@ -1,5 +1,11 @@
 # @stackshift-ui/header
 
+## 6.1.2
+
+### Patch Changes
+
+- added images in header props
+
 ## 6.1.1
 
 ### Patch Changes
