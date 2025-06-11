@@ -1,5 +1,11 @@
 # @stackshift-ui/header
 
+## 6.1.3
+
+### Patch Changes
+
+- fix rendering of mediaItems from header variant g
+
 ## 6.1.2
 
 ### Patch Changes

@@ -246,6 +246,7 @@ export interface Variants {
   description?: string | null;
   featuredItems?: FeaturedItem[] | null;
   images?: Images[] | null;
+  mediaItems?: Images[] | null;
   contactDetails?: ContactDetails[] | null;
   copyright?: string | null;
   mainImage?: MainImage | null;
