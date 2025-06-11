@@ -247,7 +247,7 @@ export const VariantG: Story = {
     data: {
       variant: "variant_g",
       variants: {
-        images: [
+        mediaItems: [
           {
             _key: "1",
             video: "https://www.w3schools.com/html/mov_bbb.mp4",
