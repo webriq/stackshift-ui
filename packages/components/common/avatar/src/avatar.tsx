@@ -5,6 +5,12 @@ import cn from "classnames";
 import type { ElementType, HTMLProps, ReactNode } from "react";
 import { useState } from "react";
 
+import {
+  AvatarFallback,
+  AvatarImage,
+  Avatar as ShadcnAvatar,
+} from "@stackshift-ui/shadcn/src/components/ui/avatar";
+
 type ImageSize = "sm" | "md" | "lg" | "xl";
 
 export interface AvatarProps extends Omit<HTMLProps<HTMLElement>, "as" | "size"> {
@@ -50,7 +56,7 @@ export const Avatar: React.FC<AvatarProps> = ({
       style={{ maxWidth: avatarSize }}
       {...props}
       data-testid={displayName}>
-      {(!loaded || !src) && (
+      {/* {(!loaded || !src) && (
         <Flex align="center" justify="center" className="w-full h-full bg-primary">
           <p
             style={{
@@ -70,7 +76,11 @@ export const Avatar: React.FC<AvatarProps> = ({
           height={100}
           onLoad={() => setLoaded(true)}
         />
-      )}
+      )} */}
+      <ShadcnAvatar>
+        <AvatarImage src={src} alt={alt} />
+        <AvatarFallback>{initials}s</AvatarFallback>
+      </ShadcnAvatar>
     </Component>
   );
 };

@@ -6,6 +6,7 @@ const config = {
     "../../../apps/nextjs-pages/**/*.{ts,tsx}",
     "../../../apps/storybook/**/*.{ts,tsx}",
     "../../components/**/*.{ts,tsx}",
+    "../../components/shadcn/src/**/*.{ts,tsx}",
     "../../core/**/*.{ts,tsx}",
   ],
   theme: {

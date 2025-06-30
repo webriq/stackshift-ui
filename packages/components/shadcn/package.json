@@ -1,7 +1,6 @@
 {
-  "name": "@stackshift-ui/avatar",
-  "description": "",
-  "version": "6.0.13",
+  "name": "@stackshift-ui/shadcn",
+  "version": "1.0.0",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -11,7 +10,6 @@
     "dist/**",
     "src"
   ],
-  "author": "WebriQ <info@webriq.com>",
   "scripts": {
     "build": "tsup && tsc -p tsconfig-build.json",
     "clean": "rm -rf dist",
@@ -41,15 +39,17 @@
     "vitest": "^2.1.1"
   },
   "dependencies": {
-    "@stackshift-ui/flex": "workspace:*",
-    "@stackshift-ui/image": "workspace:*",
     "@stackshift-ui/scripts": "workspace:*",
     "@stackshift-ui/system": "workspace:*",
-    "@stackshift-ui/shadcn": "workspace:*",
-    "classnames": "^2.5.1"
+    "@radix-ui/react-avatar": "^1.1.10",
+    "@radix-ui/react-slot": "^1.2.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.468.0",
+    "tailwind-merge": "^2.5.4",
+    "tailwindcss-animate": "^1.0.7"
   },
   "peerDependencies": {
-    "@stackshift-ui/system": ">=6.0.11",
     "@types/react": "16.8 - 19",
     "next": "10 - 14",
     "react": "16.8 - 19",
