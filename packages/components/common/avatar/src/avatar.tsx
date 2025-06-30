@@ -1,9 +1,6 @@
-import { Flex } from "@stackshift-ui/flex";
-import { Image } from "@stackshift-ui/image";
 import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
 import cn from "classnames";
 import type { ElementType, HTMLProps, ReactNode } from "react";
-import { useState } from "react";
 
 import {
   AvatarFallback,
@@ -55,27 +52,6 @@ export const Avatar: React.FC<AvatarProps> = ({
       style={{ maxWidth: avatarSize }}
       {...props}
       data-testid={displayName}>
-      {/* {(!loaded || !src) && (
-        <Flex align="center" justify="center" className="w-full h-full bg-primary">
-          <p
-            style={{
-              fontSize: `calc(${avatarSize}/2)`,
-            }}
-            className="text-white">
-            {initials}
-          </p>
-        </Flex>
-      )}
-      {src && (
-        <Image
-          className="object-cover object-center w-[100%] h-[100%]"
-          src={src}
-          alt={alt}
-          width={100}
-          height={100}
-          onLoad={() => setLoaded(true)}
-        />
-      )} */}
       <ShadcnAvatar className="w-full h-full bg-primary">
         <AvatarImage src={src} alt={alt} />
         <AvatarFallback className="text-white">{initials}</AvatarFallback>
