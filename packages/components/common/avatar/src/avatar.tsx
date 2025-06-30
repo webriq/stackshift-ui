@@ -38,7 +38,6 @@ export const Avatar: React.FC<AvatarProps> = ({
   const components = useStackShiftUIComponents();
   const { [displayName]: Component = DefaultComponent } = components;
 
-  const [loaded, setLoaded] = useState(false);
   const sizeMap = {
     sm: 40,
     md: 80,
@@ -77,9 +76,9 @@ export const Avatar: React.FC<AvatarProps> = ({
           onLoad={() => setLoaded(true)}
         />
       )} */}
-      <ShadcnAvatar>
+      <ShadcnAvatar className="w-full h-full bg-primary">
         <AvatarImage src={src} alt={alt} />
-        <AvatarFallback>{initials}s</AvatarFallback>
+        <AvatarFallback className="text-white">{initials}</AvatarFallback>
       </ShadcnAvatar>
     </Component>
   );
