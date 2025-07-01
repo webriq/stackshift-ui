@@ -1,71 +1,25 @@
-import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
-import cn from "classnames";
-import type { ElementType, HTMLProps } from "react";
+import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
+import { Check } from "lucide-react";
+import * as React from "react";
 
-export type StyleVariants<T extends string> = Record<T, string>;
-type Variant = "primary";
+import { cn } from "@stackshift-ui/system";
 
-export interface CheckboxProps extends Omit<HTMLProps<HTMLInputElement>, "as"> {
-  required?: boolean;
-  name?: string;
-  ariaLabel?: string;
-  label?: string;
-  labelClass?: string;
-  item?: string;
-  variant?: Variant;
-  onChange?: () => void;
-  className?: string;
-  as?: ElementType;
-}
+const Checkbox = React.forwardRef<
+  React.ElementRef<typeof CheckboxPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
+>(({ className, ...props }, ref) => (
+  <CheckboxPrimitive.Root
+    ref={ref}
+    className={cn(
+      "peer h-4 w-4 shrink-0 rounded-sm border border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground",
+      className,
+    )}
+    {...props}>
+    <CheckboxPrimitive.Indicator className={cn("flex items-center justify-center text-current")}>
+      <Check className="h-4 w-4" />
+    </CheckboxPrimitive.Indicator>
+  </CheckboxPrimitive.Root>
+));
+Checkbox.displayName = CheckboxPrimitive.Root.displayName;
 
-const displayName = "Checkbox";
-
-export const Checkbox: React.FC<CheckboxProps> = ({
-  required = false,
-  name,
-  ariaLabel,
-  label,
-  labelClass,
-  item,
-  variant = "primary",
-  onChange,
-  className,
-  as = "label",
-  ...props
-}) => {
-  const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
-
-  const commonStyle = "";
-  const primary = `${commonStyle}`;
-
-  const variants: StyleVariants<Variant> = {
-    primary,
-  };
-
-  const variantClass = variants[variant] ?? primary;
-  const defaultLabelClass = "flex gap-2 items-center";
-
-  return (
-    <Component
-      as={as}
-      htmlFor={item}
-      className={cn(defaultLabelClass, labelClass)}
-      {...props}
-      data-testid={displayName}>
-      <input
-        aria-label={ariaLabel || name}
-        className={cn(variantClass, className)}
-        name={name}
-        type="checkbox"
-        value={item}
-        required={required}
-        onChange={onChange}
-        id={item}
-        {...props}
-      />
-      {label || item}
-    </Component>
-  );
-};
-
-Checkbox.displayName = displayName;
+export { Checkbox };
