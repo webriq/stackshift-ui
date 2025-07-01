@@ -18,7 +18,11 @@ export default meta;
 type Story = StoryObj<typeof Avatar>;
 
 export const Primary: Story = {
-  render: args => <Avatar {...args} />,
+  render: args => (
+    <div className="h-full w-full">
+      <Avatar {...args} />
+    </div>
+  ),
 };
 
 export const Initials: Story = {
