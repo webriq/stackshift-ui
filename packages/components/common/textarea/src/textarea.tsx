@@ -1,80 +1,21 @@
-import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
-import cn from "classnames";
-import type { ElementType, HTMLProps, ReactNode } from "react";
+import * as React from "react";
 
-type StyleVariants<T extends string> = Record<T, string>;
-type Variant = "primary" | "outline" | "secondary";
+import { cn } from "@stackshift-ui/system";
 
-export interface TextareaProps extends Omit<HTMLProps<HTMLTextAreaElement>, "as"> {
-  required?: boolean;
-  name: string;
-  ariaLabel: string;
-  placeholder?: string;
-  onChange?: (...args: any) => any;
-  labelClass?: string;
-  variant?: Variant;
-  label?: string;
-  noLabel?: boolean;
-  [key: string]: any;
-  children?: ReactNode;
-  className?: string;
-  as?: ElementType;
-}
-
-const displayName = "Textarea";
-
-export const Textarea: React.FC<TextareaProps> = ({
-  required = false,
-  name,
-  ariaLabel,
-  placeholder,
-  onChange,
-  labelClass,
-  variant = "primary",
-  label,
-  noLabel,
-  children,
-  className,
-  as = "textarea",
-  ...props
-}) => {
-  const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
-
-  const commonStyle = "h-24 w-full resize rounded-global p-4 text-xs leading-none";
-  const primary = `${commonStyle}`;
-  const secondary = `${commonStyle} p-4 outline-none`;
-  const outline = `${commonStyle}  py-3 border border-slate-300`;
-
-  const variants: StyleVariants<Variant> = {
-    primary,
-    outline,
-    secondary,
-  };
-
-  const variantClass = variants[variant] ?? primary;
-
-  return (
-    <>
-      {!noLabel && (
-        <label htmlFor={name} className={labelClass}>
-          {label || name}
-        </label>
-      )}
-      <Component
-        as={as}
-        {...props}
-        data-testid={displayName}
-        onChange={onChange}
-        aria-label={ariaLabel || name}
-        className={cn(variantClass, className)}
-        placeholder={placeholder}
-        name={name}
-        required={required}
-        id={name}
+const Textarea = React.forwardRef<HTMLTextAreaElement, React.ComponentProps<"textarea">>(
+  ({ className, ...props }, ref) => {
+    return (
+      <textarea
+        className={cn(
+          "flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+          className,
+        )}
+        ref={ref}
         {...props}
       />
-    </>
-  );
-};
+    );
+  },
+);
+Textarea.displayName = "Textarea";
 
-Textarea.displayName = displayName;
+export { Textarea };
