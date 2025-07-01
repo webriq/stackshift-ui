@@ -1,38 +1,55 @@
-import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
-import type { ElementType, HTMLProps, ReactNode } from "react";
-import cn from "classnames";
+import * as React from "react";
 
-type CardBorderRadius = "none" | "sm" | "md" | "lg" | "xl" | "global";
+import { cn } from "@stackshift-ui/system";
 
-export interface CardProps extends Omit<HTMLProps<HTMLElement>, "as"> {
-  borderRadius?: CardBorderRadius;
-  children?: ReactNode;
-  className?: string;
-  as?: ElementType;
-}
+const Card = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, ...props }, ref) => (
+    <div
+      ref={ref}
+      className={cn("rounded-lg border bg-card text-card-foreground shadow-sm", className)}
+      {...props}
+    />
+  ),
+);
+Card.displayName = "Card";
 
-const displayName = "Card";
+const CardHeader = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, ...props }, ref) => (
+    <div ref={ref} className={cn("flex flex-col space-y-1.5 p-6", className)} {...props} />
+  ),
+);
+CardHeader.displayName = "CardHeader";
 
-export const Card: React.FC<CardProps> = ({ borderRadius, children, className, as, ...props }) => {
-  const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
+const CardTitle = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, ...props }, ref) => (
+    <div
+      ref={ref}
+      className={cn("text-2xl font-semibold leading-none tracking-tight", className)}
+      {...props}
+    />
+  ),
+);
+CardTitle.displayName = "CardTitle";
 
-  const radiusMap = {
-    none: "rounded-none",
-    sm: "rounded-sm",
-    md: "rounded-md",
-    lg: "rounded-lg",
-    xl: "rounded-xl",
-    global: "rounded-global",
-  };
-  const borderRadiusClass = radiusMap[borderRadius ?? "global"];
+const CardDescription = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, ...props }, ref) => (
+    <div ref={ref} className={cn("text-sm text-muted-foreground", className)} {...props} />
+  ),
+);
+CardDescription.displayName = "CardDescription";
 
-  const classes = `border border-solid border-slate-300 p-4 shadow-sm ${borderRadiusClass}`;
+const CardContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, ...props }, ref) => (
+    <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
+  ),
+);
+CardContent.displayName = "CardContent";
 
-  return (
-    <Component as={as} className={cn(classes, className)} {...props} data-testid={displayName}>
-      {children}
-    </Component>
-  );
-};
+const CardFooter = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, ...props }, ref) => (
+    <div ref={ref} className={cn("flex items-center p-6 pt-0", className)} {...props} />
+  ),
+);
+CardFooter.displayName = "CardFooter";
 
-Card.displayName = displayName;
+export { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle };
