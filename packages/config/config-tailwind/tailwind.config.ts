@@ -15,6 +15,20 @@ const config = {
         primary: "#0045d8",
         secondary: "#3576ff",
         background: "#F9FAFB",
+        foreground: '#0b1220',            // hsl(222, 84%, 5%) approx
+        card: '#ffffff',
+        'card-foreground': '#0b1220',
+        popover: '#ffffff',
+        'popover-foreground': '#0b1220',
+        muted: '#d9e6f9',
+        'muted-foreground': '#77828a',   // hsl(215, 16%, 47%)
+        accent: '#d9e6f9',
+        'accent-foreground': '#1a2c3f',
+        destructive: '#f06666',           // hsl(0, 84%, 60%)
+        'destructive-foreground': '#e6f0fc',
+        border: '#e6eaf2',                // hsl(214, 32%, 91%)
+        input: '#e6eaf2',
+        ring: '#0b1220',
       },
       borderRadius: {
         none: "0px",
