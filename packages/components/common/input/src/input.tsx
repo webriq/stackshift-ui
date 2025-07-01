@@ -1,92 +1,22 @@
-import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
-import cn from "classnames";
-import type { ElementType, HTMLProps, ReactNode } from "react";
+import * as React from "react";
 
-type StyleVariants<T extends string> = Record<T, string>;
-type Variant = "primary" | "outline" | "secondary";
-type InputType = "number" | "password" | "email" | "text";
-type TextSize = "sm" | "md" | "lg";
+import { cn } from "@stackshift-ui/system";
 
-export interface InputProps extends Omit<HTMLProps<HTMLInputElement>, "as"> {
-  noLabel?: boolean;
-  label?: string;
-  ariaLabel?: string;
-  required?: boolean;
-  name?: string;
-  labelClass?: string;
-  placeholder?: string;
-  type?: InputType;
-  variant?: Variant;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  textSize?: TextSize;
-  [key: string]: any;
-  children?: ReactNode;
-  className?: string;
-  as?: ElementType;
-}
-
-const displayName = "Input";
-
-export const Input: React.FC<InputProps> = ({
-  noLabel,
-  label,
-  ariaLabel,
-  required = false,
-  name,
-  labelClass,
-  placeholder,
-  type = "text",
-  variant = "primary",
-  onChange,
-  textSize = "md",
-  children,
-  className,
-  as = "input",
-  ...props
-}) => {
-  const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
-
-  const commonStyle = "w-full rounded-global px-4 py-2 leading-loose";
-  const primary = `${commonStyle}`;
-  const secondary = `${commonStyle} bg-gray-100 p-4 text-xs outline-none`;
-  const outline = `${commonStyle} text-xs py-3 border border-slate-300`;
-
-  const text = {
-    sm: "text-xs",
-    md: "text-base",
-    lg: "text-lg",
-  }[textSize];
-
-  const variants: StyleVariants<Variant> = {
-    primary,
-    secondary,
-    outline,
-  };
-
-  const variantClass = variants[variant] ?? primary;
-
-  return (
-    <>
-      {!noLabel && (
-        <label className={labelClass} htmlFor={name}>
-          {label || name}
-        </label>
-      )}
-      <Component
-        name={name}
-        id={name}
-        placeholder={placeholder}
-        required={required}
-        aria-label={ariaLabel || name}
+const Input = React.forwardRef<HTMLInputElement, React.ComponentProps<"input">>(
+  ({ className, type, ...props }, ref) => {
+    return (
+      <input
         type={type}
-        as={as}
-        className={cn(variantClass, text, className)}
-        onChange={onChange}
+        className={cn(
+          "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+          className,
+        )}
+        ref={ref}
         {...props}
-        data-testid={displayName}
       />
-    </>
-  );
-};
+    );
+  },
+);
+Input.displayName = "Input";
 
-Input.displayName = displayName;
+export { Input };
