@@ -28,10 +28,42 @@ export { Input } from "@stackshift-ui/input";
 export { InputFile } from "@stackshift-ui/input-file";
 export { Label } from "@stackshift-ui/label";
 export { Link } from "@stackshift-ui/link";
+export {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+  NavigationMenuViewport,
+} from "@stackshift-ui/menu";
+export {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@stackshift-ui/pagination";
 export { Popover, PopoverAnchor, PopoverContent, PopoverTrigger } from "@stackshift-ui/popover";
 export { Radio } from "@stackshift-ui/radio";
 export { RadioGroup, RadioGroupItem } from "@stackshift-ui/radio-group";
+export { ScrollArea, ScrollBar } from "@stackshift-ui/scroll-area";
 export { Select } from "@stackshift-ui/select";
+export {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@stackshift-ui/sheet";
+export { Skeleton } from "@stackshift-ui/skeleton";
 export { SocialIcons } from "@stackshift-ui/social-icons";
 export { StatsCard } from "@stackshift-ui/stats-card";
 export { SwiperButton } from "@stackshift-ui/swiper-button";
@@ -39,8 +71,10 @@ export { SwiperPagination } from "@stackshift-ui/swiper-pagination";
 export { Switch } from "@stackshift-ui/switch";
 export { Text } from "@stackshift-ui/text";
 export { Textarea } from "@stackshift-ui/textarea";
+export { Toaster } from "@stackshift-ui/toast";
 export { Toggle, toggleVariants } from "@stackshift-ui/toggle";
 export { ToggleGroup } from "@stackshift-ui/toggle-group";
+export { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@stackshift-ui/tooltip";
 export { WebriQForm } from "@stackshift-ui/webriq-form";
 export { YoutubeVideo } from "@stackshift-ui/youtube-video";
 

@@ -96,6 +96,13 @@
     "@stackshift-ui/calendar": "workspace:*",
     "@stackshift-ui/date-picker": "workspace:*",
     "@stackshift-ui/dialog": "workspace:*",
+    "@stackshift-ui/skeleton": "workspace:*",
+    "@stackshift-ui/tooltip": "workspace:*",
+    "@stackshift-ui/scroll-area": "workspace:*",
+    "@stackshift-ui/menu": "workspace:*",
+    "@stackshift-ui/toast": "workspace:*",
+    "@stackshift-ui/sheet": "workspace:*",
+    "@stackshift-ui/pagination": "workspace:*",
     "@stackshift-ui/label": "workspace:*"
   },
   "peerDependencies": {
