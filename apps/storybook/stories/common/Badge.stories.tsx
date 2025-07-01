@@ -13,6 +13,12 @@ const meta: Meta<BadgeProps> = {
     children: "Travel",
     className: "",
   },
+  argTypes: {
+    variant: {
+      control: { type: "radio" },
+      options: ["default", "secondary", "outline", "destructive"],
+    },
+  },
 } satisfies Meta<BadgeProps>;
 
 export default meta;
