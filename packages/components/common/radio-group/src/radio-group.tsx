@@ -1,59 +1,37 @@
-import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
-import type { ElementType, HTMLProps, ReactNode } from "react";
-import cn from "classnames";
+"use client";
 
-type StyleVariants<T extends string> = Record<T, string>;
-type Variant = "primary" | "inline";
+import * as RadioGroupPrimitive from "@radix-ui/react-radio-group";
+import { Circle } from "lucide-react";
+import * as React from "react";
 
-export interface RadioGroupProps extends Omit<HTMLProps<HTMLElement>, "as"> {
-  variant?: Variant;
-  label?: string;
-  name: string;
-  labelClass?: string;
-  noLabel?: boolean;
-  children?: ReactNode;
-  className?: string;
-  as?: ElementType;
-}
+import { cn } from "@stackshift-ui/system";
 
-const displayName = "RadioGroup";
+const RadioGroup = React.forwardRef<
+  React.ElementRef<typeof RadioGroupPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>
+>(({ className, ...props }, ref) => {
+  return <RadioGroupPrimitive.Root className={cn("grid gap-2", className)} {...props} ref={ref} />;
+});
+RadioGroup.displayName = RadioGroupPrimitive.Root.displayName;
 
-export const RadioGroup: React.FC<RadioGroupProps> = ({
-  variant = "primary",
-  label,
-  name,
-  labelClass,
-  noLabel = false,
-  children,
-  className,
-  as,
-  ...props
-}) => {
-  const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
-
-  const commonClass = "ml-2";
-  const primary = `${commonClass}`;
-  const inline = `${commonClass} flex items-center gap-2`;
-
-  const variants: StyleVariants<Variant> = {
-    primary,
-    inline,
-  };
-
-  const variantClass = variants[variant] ?? primary;
-
+const RadioGroupItem = React.forwardRef<
+  React.ElementRef<typeof RadioGroupPrimitive.Item>,
+  React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>
+>(({ className, ...props }, ref) => {
   return (
-    <div>
-      {!noLabel && <p className={labelClass}>{label || name}</p>}
-      <Component
-        as={as}
-        className={cn(variantClass, className)}
-        {...props}
-        data-testid={displayName}>
-        {children}
-      </Component>
-    </div>
+    <RadioGroupPrimitive.Item
+      ref={ref}
+      className={cn(
+        "aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+        className,
+      )}
+      {...props}>
+      <RadioGroupPrimitive.Indicator className="flex items-center justify-center">
+        <Circle className="h-2.5 w-2.5 fill-current text-current" />
+      </RadioGroupPrimitive.Indicator>
+    </RadioGroupPrimitive.Item>
   );
-};
+});
+RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName;
 
-RadioGroup.displayName = displayName;
+export { RadioGroup, RadioGroupItem };
