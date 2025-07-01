@@ -1,71 +1,44 @@
-import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
-import cn from "classnames";
-import type { ComponentProps, ElementType, ReactNode } from "react";
+import * as AvatarPrimitive from "@radix-ui/react-avatar";
+import { cn } from "@stackshift-ui/system";
+import * as React from "react";
 
-import {
-  AvatarFallback,
-  AvatarImage,
-  Avatar as ShadcnAvatar,
-} from "@stackshift-ui/shadcn/src/components/ui/avatar";
+const Avatar = React.forwardRef<
+  React.ElementRef<typeof AvatarPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>
+>(({ className, ...props }, ref) => (
+  <AvatarPrimitive.Root
+    ref={ref}
+    className={cn("relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full", className)}
+    {...props}
+  />
+));
+Avatar.displayName = AvatarPrimitive.Root.displayName;
 
-type Size = "xs" | "sm" | "md" | "lg" | "xl";
+const AvatarImage = React.forwardRef<
+  React.ElementRef<typeof AvatarPrimitive.Image>,
+  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>
+>(({ className, ...props }, ref) => (
+  <AvatarPrimitive.Image
+    ref={ref}
+    className={cn("aspect-square h-full w-full", className)}
+    {...props}
+  />
+));
+AvatarImage.displayName = AvatarPrimitive.Image.displayName;
 
-const sizes: Record<Size, number> = {
-  xs: 20,
-  sm: 40,
-  md: 80,
-  lg: 120,
-  xl: 160,
-};
+const AvatarFallback = React.forwardRef<
+  React.ElementRef<typeof AvatarPrimitive.Fallback>,
+  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback>
+>(({ className, ...props }, ref) => (
+  <AvatarPrimitive.Fallback
+    ref={ref}
+    className={cn(
+      "flex h-full w-full items-center justify-center rounded-full bg-muted",
+      className,
+    )}
+    {...props}
+  />
+));
+AvatarFallback.displayName = AvatarPrimitive.Fallback.displayName;
 
-export interface AvatarProps extends ComponentProps<typeof ShadcnAvatar> {
-  src?: string;
-  alt?: string;
-  size?: Size | number;
-  text?: string;
-  children?: ReactNode;
-  className?: string;
-  as?: ElementType;
-}
-
-const displayName = "Avatar";
-
-export const Avatar: React.FC<AvatarProps> = ({
-  src,
-  alt = "image",
-  size = "sm",
-  text,
-  children,
-  className,
-  as,
-  ...props
-}) => {
-  const components = useStackShiftUIComponents();
-  const { [displayName]: Component = DefaultComponent } = components;
-  size = typeof size === "number" ? size : sizes[size];
-  const avatarSize = `${size}px`;
-
-  const baseClass = cn(
-    "relative flex rounded-full aspect-square overflow-hidden border-2 border-solid border-primary bg-primary h-full w-full",
-    className,
-  );
-
-  const initials = text
-    ?.split(" ")
-    .map(name => name[0])
-    .join("");
-
-  return (
-    <ShadcnAvatar asChild>
-      <Component
-        as={as}
-        className={baseClass}
-        {...props}
-        data-testid={displayName}
-        style={{ maxWidth: avatarSize, maxHeight: avatarSize }}>
-        <AvatarImage src={src} alt={alt} />
-        <AvatarFallback>{initials}</AvatarFallback>
-      </Component>
-    </ShadcnAvatar>
-  );
-};
+export { Avatar, AvatarFallback, AvatarImage };
