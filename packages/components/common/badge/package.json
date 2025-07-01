@@ -41,18 +41,18 @@
     "vitest": "^2.1.1"
   },
   "dependencies": {
+    "@stackshift-ui/flex": "workspace:*",
     "@stackshift-ui/scripts": "workspace:*",
     "@stackshift-ui/system": "workspace:*",
-    "@stackshift-ui/flex": "workspace:*",
-    "@stackshift-ui/shadcn": "workspace:*",
+    "class-variance-authority": "^0.7.1",
     "classnames": "^2.5.1"
   },
   "peerDependencies": {
+    "@stackshift-ui/system": ">=6.0.11",
     "@types/react": "16.8 - 19",
     "next": "10 - 14",
     "react": "16.8 - 19",
-    "react-dom": "16.8 - 19",
-    "@stackshift-ui/system": ">=6.0.11"
+    "react-dom": "16.8 - 19"
   },
   "peerDependenciesMeta": {
     "next": {

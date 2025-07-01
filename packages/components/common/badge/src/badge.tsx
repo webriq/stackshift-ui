@@ -1,32 +1,33 @@
-import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
-import cn from "classnames";
-import type { ComponentPropsWithRef, ElementType, ReactNode } from "react";
+import { cva, type VariantProps } from "class-variance-authority";
+import * as React from "react";
 
-import { Badge as ShadcnBadge } from "@stackshift-ui/shadcn/src/components/ui/badge";
+import { cn } from "@stackshift-ui/system";
 
-export interface BadgeProps extends ComponentPropsWithRef<typeof ShadcnBadge> {
-  children?: ReactNode;
-  className?: string;
-  as?: ElementType;
+const badgeVariants = cva(
+  "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+  {
+    variants: {
+      variant: {
+        default: "border-transparent bg-primary text-primary-foreground hover:bg-primary/80",
+        secondary:
+          "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        destructive:
+          "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
+        outline: "text-foreground",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+    },
+  },
+);
+
+export interface BadgeProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof badgeVariants> {}
+
+function Badge({ className, variant, ...props }: BadgeProps) {
+  return <div className={cn(badgeVariants({ variant }), className)} {...props} />;
 }
 
-const displayName = "Badge";
-
-export const Badge: React.FC<BadgeProps> = ({ children, className, as, ...props }) => {
-  const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
-  const defaultClass = "px-3 py-1 text-sm font-bold uppercase rounded-full";
-
-  return (
-    <Component data-testid={displayName} as={as}>
-      <ShadcnBadge
-        className={cn(defaultClass, className)}
-        variant={props.variant}
-        {...props}
-        data-testid={displayName}>
-        {children}
-      </ShadcnBadge>
-    </Component>
-  );
-};
-
-Badge.displayName = displayName;
+export { Badge, badgeVariants };
