@@ -1,0 +1,62 @@
+{
+  "name": "@stackshift-ui/pagination",
+  "description": "Pagination with page navigation, next and previous links.",
+  "version": "0.0.0",
+  "private": false,
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**",
+    "src"
+  ],
+  "author": "WebriQ <info@webriq.com>",
+  "scripts": {
+    "build": "tsup && tsc -p tsconfig-build.json",
+    "clean": "rm -rf dist",
+    "dev": "tsup --watch && tsc -p tsconfig-build.json -w",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/",
+    "test": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "@stackshift-ui/eslint-config": "workspace:*",
+    "@stackshift-ui/typescript-config": "workspace:*",
+    "@testing-library/react": "^16.0.1",
+    "@types/node": "^22.7.0",
+    "@types/react": "^18.3.9",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "@vitest/coverage-v8": "^2.1.1",
+    "esbuild-plugin-rdi": "^0.0.0",
+    "esbuild-plugin-react18": "^0.2.5",
+    "esbuild-plugin-react18-css": "^0.0.4",
+    "jsdom": "^25.0.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.2",
+    "vite-tsconfig-paths": "^5.0.1",
+    "vitest": "^2.1.1"
+  },
+  "dependencies": {
+    "@stackshift-ui/button": "workspace:*",
+    "@stackshift-ui/scripts": "workspace:*",
+    "@stackshift-ui/system": "workspace:*",
+    "classnames": "^2.5.1",
+    "lucide-react": "^0.468.0"
+  },
+  "peerDependencies": {
+    "@stackshift-ui/system": ">=0.0.0",
+    "@types/react": "16.8 - 19",
+    "next": "10 - 14",
+    "react": "16.8 - 19",
+    "react-dom": "16.8 - 19"
+  },
+  "peerDependenciesMeta": {
+    "next": {
+      "optional": true
+    }
+  }
+}
