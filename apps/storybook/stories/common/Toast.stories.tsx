@@ -1,212 +1,210 @@
-import { Toast, ToastProvider, useToast } from "@stackshift-ui/react";
-import { Button } from "@stackshift-ui/react";
+import { Button, Toaster, toast } from "@stackshift-ui/react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
+// import { toast } from "sonner";
 
-const meta: Meta<typeof Toast> = {
+const meta: Meta<typeof Toaster> = {
   title: "Common/Toast",
-  component: Toast,
+  component: Toaster,
   parameters: {
     layout: "centered",
     docs: {
       description: {
-        component: "A toast component for displaying temporary notifications and messages to users.",
+        component:
+          "A toast component for displaying temporary notifications and messages to users. Uses Sonner under the hood.",
       },
     },
   },
   tags: ["autodocs"],
   argTypes: {
-    variant: {
+    theme: {
       control: { type: "radio" },
-      options: ["default", "success", "error", "warning"],
-      description: "Visual variant of the toast",
+      options: ["light", "dark", "system"],
+      description: "Theme of the toast",
     },
-    duration: {
-      control: { type: "number" },
-      description: "Duration in milliseconds before auto-dismiss",
+    position: {
+      control: { type: "radio" },
+      options: [
+        "top-left",
+        "top-center",
+        "top-right",
+        "bottom-left",
+        "bottom-center",
+        "bottom-right",
+      ],
+      description: "Position of the toast",
     },
   },
-} satisfies Meta<typeof Toast>;
+} satisfies Meta<typeof Toaster>;
 
 export default meta;
-type Story = StoryObj<typeof Toast>;
+type Story = StoryObj<typeof Toaster>;
 
 export const Default: Story = {
   render: () => {
-    const { toast } = useToast();
-
     return (
-      <ToastProvider>
+      <>
+        <Toaster />
         <Button
           onClick={() =>
-            toast({
-              title: "Default Toast",
+            toast("Default Toast", {
               description: "This is a default toast message.",
             })
-          }
-        >
+          }>
           Show Toast
         </Button>
-      </ToastProvider>
+      </>
     );
   },
 };
 
 export const SuccessToast: Story = {
   render: () => {
-    const { toast } = useToast();
-
     return (
-      <ToastProvider>
+      <>
+        <Toaster />
         <Button
           onClick={() =>
-            toast({
-              variant: "success",
-              title: "Success!",
+            toast.success("Success!", {
               description: "Your changes have been saved successfully.",
             })
-          }
-        >
+          }>
           Show Success Toast
         </Button>
-      </ToastProvider>
+      </>
     );
   },
 };
 
 export const ErrorToast: Story = {
   render: () => {
-    const { toast } = useToast();
-
     return (
-      <ToastProvider>
+      <>
+        <Toaster />
         <Button
           variant="destructive"
           onClick={() =>
-            toast({
-              variant: "error",
-              title: "Error",
+            toast.error("Error", {
               description: "Something went wrong. Please try again.",
             })
-          }
-        >
+          }>
           Show Error Toast
         </Button>
-      </ToastProvider>
+      </>
     );
   },
 };
 
 export const WarningToast: Story = {
   render: () => {
-    const { toast } = useToast();
-
     return (
-      <ToastProvider>
+      <>
+        <Toaster />
         <Button
           variant="outline"
           onClick={() =>
-            toast({
-              variant: "warning",
-              title: "Warning",
+            toast.warning("Warning", {
               description: "This action cannot be undone.",
             })
-          }
-        >
+          }>
           Show Warning Toast
         </Button>
-      </ToastProvider>
+      </>
+    );
+  },
+};
+
+export const InfoToast: Story = {
+  render: () => {
+    return (
+      <>
+        <Toaster />
+        <Button
+          variant="secondary"
+          onClick={() =>
+            toast.info("Information", {
+              description: "Here's some useful information for you.",
+            })
+          }>
+          Show Info Toast
+        </Button>
+      </>
     );
   },
 };
 
 export const WithActions: Story = {
   render: () => {
-    const { toast } = useToast();
-
     return (
-      <ToastProvider>
+      <>
+        <Toaster />
         <Button
           onClick={() =>
-            toast({
-              title: "File uploaded",
+            toast("File uploaded", {
               description: "Your file has been uploaded successfully.",
               action: {
                 label: "View",
                 onClick: () => console.log("View clicked"),
               },
             })
-          }
-        >
+          }>
           Show Toast with Action
         </Button>
-      </ToastProvider>
+      </>
     );
   },
 };
 
 export const PersistentToast: Story = {
   render: () => {
-    const { toast } = useToast();
-
     return (
-      <ToastProvider>
+      <>
+        <Toaster />
         <Button
           onClick={() =>
-            toast({
-              title: "Persistent Toast",
+            toast("Persistent Toast", {
               description: "This toast will not auto-dismiss.",
               duration: Infinity,
             })
-          }
-        >
+          }>
           Show Persistent Toast
         </Button>
-      </ToastProvider>
+      </>
     );
   },
 };
 
 export const MultipleToasts: Story = {
   render: () => {
-    const { toast } = useToast();
-
     const showMultipleToasts = () => {
-      toast({
-        title: "First toast",
+      toast("First toast", {
         description: "This is the first toast message.",
       });
 
       setTimeout(() => {
-        toast({
-          variant: "success",
-          title: "Second toast",
+        toast.success("Second toast", {
           description: "This is the second toast message.",
         });
       }, 500);
 
       setTimeout(() => {
-        toast({
-          variant: "warning",
-          title: "Third toast",
+        toast.warning("Third toast", {
           description: "This is the third toast message.",
         });
       }, 1000);
     };
 
     return (
-      <ToastProvider>
-        <Button onClick={showMultipleToasts}>
-          Show Multiple Toasts
-        </Button>
-      </ToastProvider>
+      <>
+        <Toaster />
+        <Button onClick={showMultipleToasts}>Show Multiple Toasts</Button>
+      </>
     );
   },
 };
 
 export const FormValidationToasts: Story = {
   render: () => {
-    const { toast } = useToast();
     const [formData, setFormData] = useState({
       email: "",
       password: "",
@@ -216,41 +214,34 @@ export const FormValidationToasts: Story = {
       e.preventDefault();
 
       if (!formData.email) {
-        toast({
-          variant: "error",
-          title: "Validation Error",
+        toast.error("Validation Error", {
           description: "Email is required.",
         });
         return;
       }
 
       if (!formData.password) {
-        toast({
-          variant: "error",
-          title: "Validation Error",
+        toast.error("Validation Error", {
           description: "Password is required.",
         });
         return;
       }
 
       if (formData.password.length < 8) {
-        toast({
-          variant: "warning",
-          title: "Weak Password",
+        toast.warning("Weak Password", {
           description: "Password should be at least 8 characters long.",
         });
         return;
       }
 
-      toast({
-        variant: "success",
-        title: "Login Successful",
+      toast.success("Login Successful", {
         description: "Welcome back!",
       });
     };
 
     return (
-      <ToastProvider>
+      <>
+        <Toaster />
         <form onSubmit={handleSubmit} className="space-y-4 w-80">
           <div className="space-y-2">
             <label htmlFor="email" className="text-sm font-medium">
@@ -260,7 +251,7 @@ export const FormValidationToasts: Story = {
               id="email"
               type="email"
               value={formData.email}
-              onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+              onChange={e => setFormData(prev => ({ ...prev, email: e.target.value }))}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Enter your email"
             />
@@ -274,7 +265,7 @@ export const FormValidationToasts: Story = {
               id="password"
               type="password"
               value={formData.password}
-              onChange={(e) => setFormData(prev => ({ ...prev, password: e.target.value }))}
+              onChange={e => setFormData(prev => ({ ...prev, password: e.target.value }))}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Enter your password"
             />
@@ -284,36 +275,31 @@ export const FormValidationToasts: Story = {
             Sign In
           </Button>
         </form>
-      </ToastProvider>
+      </>
     );
   },
 };
 
 export const ProgressToast: Story = {
   render: () => {
-    const { toast } = useToast();
     const [isUploading, setIsUploading] = useState(false);
 
     const simulateUpload = () => {
       setIsUploading(true);
-      
-      toast({
-        title: "Upload started",
+
+      toast("Upload started", {
         description: "Your file is being uploaded...",
       });
 
       // Simulate progress updates
       setTimeout(() => {
-        toast({
-          title: "Upload progress",
+        toast.info("Upload progress", {
           description: "50% complete...",
         });
       }, 2000);
 
       setTimeout(() => {
-        toast({
-          variant: "success",
-          title: "Upload complete",
+        toast.success("Upload complete", {
           description: "Your file has been uploaded successfully.",
         });
         setIsUploading(false);
@@ -321,70 +307,59 @@ export const ProgressToast: Story = {
     };
 
     return (
-      <ToastProvider>
-        <Button 
-          onClick={simulateUpload}
-          disabled={isUploading}
-        >
+      <>
+        <Toaster />
+        <Button onClick={simulateUpload} disabled={isUploading}>
           {isUploading ? "Uploading..." : "Start Upload"}
         </Button>
-      </ToastProvider>
+      </>
     );
   },
 };
 
 export const CustomDuration: Story = {
   render: () => {
-    const { toast } = useToast();
-
     return (
-      <ToastProvider>
+      <>
+        <Toaster />
         <div className="space-y-2">
           <Button
             onClick={() =>
-              toast({
-                title: "Quick toast",
+              toast("Quick toast", {
                 description: "This will disappear in 1 second.",
                 duration: 1000,
               })
-            }
-          >
+            }>
             1 Second Toast
           </Button>
 
           <Button
             onClick={() =>
-              toast({
-                title: "Normal toast",
+              toast("Normal toast", {
                 description: "This will disappear in 5 seconds.",
                 duration: 5000,
               })
-            }
-          >
+            }>
             5 Second Toast
           </Button>
 
           <Button
             onClick={() =>
-              toast({
-                title: "Long toast",
+              toast("Long toast", {
                 description: "This will disappear in 10 seconds.",
                 duration: 10000,
               })
-            }
-          >
+            }>
             10 Second Toast
           </Button>
         </div>
-      </ToastProvider>
+      </>
     );
   },
 };
 
 export const NotificationCenter: Story = {
   render: () => {
-    const { toast } = useToast();
-
     const notifications = [
       {
         type: "message",
@@ -413,7 +388,8 @@ export const NotificationCenter: Story = {
     ];
 
     return (
-      <ToastProvider>
+      <>
+        <Toaster />
         <div className="space-y-4">
           <h3 className="text-lg font-semibold">Notification Center</h3>
           <div className="grid grid-cols-2 gap-2">
@@ -422,27 +398,37 @@ export const NotificationCenter: Story = {
                 key={index}
                 variant="outline"
                 size="sm"
-                onClick={() =>
-                  toast({
-                    variant: notification.variant,
-                    title: notification.title,
-                    description: notification.description,
-                  })
-                }
-              >
+                onClick={() => {
+                  if (notification.variant === "success") {
+                    toast.success(notification.title, {
+                      description: notification.description,
+                    });
+                  } else if (notification.variant === "warning") {
+                    toast.warning(notification.title, {
+                      description: notification.description,
+                    });
+                  } else if (notification.variant === "error") {
+                    toast.error(notification.title, {
+                      description: notification.description,
+                    });
+                  } else {
+                    toast(notification.title, {
+                      description: notification.description,
+                    });
+                  }
+                }}>
                 {notification.title}
               </Button>
             ))}
           </div>
         </div>
-      </ToastProvider>
+      </>
     );
   },
 };
 
 export const UndoToast: Story = {
   render: () => {
-    const { toast } = useToast();
     const [items, setItems] = useState(["Item 1", "Item 2", "Item 3"]);
 
     const deleteItem = (index: number) => {
@@ -450,9 +436,8 @@ export const UndoToast: Story = {
       const newItems = items.filter((_, i) => i !== index);
       setItems(newItems);
 
-      toast({
-        title: "Item deleted",
-        description: `"${item}" has been deleted.`,
+      toast(`"${item}" deleted`, {
+        description: "Item has been deleted.",
         action: {
           label: "Undo",
           onClick: () => {
@@ -461,10 +446,8 @@ export const UndoToast: Story = {
               restored.splice(index, 0, item);
               return restored;
             });
-            toast({
-              variant: "success",
-              title: "Item restored",
-              description: `"${item}" has been restored.`,
+            toast.success(`"${item}" restored`, {
+              description: "Item has been restored.",
             });
           },
         },
@@ -472,18 +455,17 @@ export const UndoToast: Story = {
     };
 
     return (
-      <ToastProvider>
+      <>
+        <Toaster />
         <div className="space-y-4">
           <h3 className="text-lg font-semibold">Items</h3>
           <div className="space-y-2">
             {items.map((item, index) => (
-              <div key={`${item}-${index}`} className="flex items-center justify-between p-2 border rounded">
+              <div
+                key={`${item}-${index}`}
+                className="flex items-center justify-between p-2 border rounded">
                 <span>{item}</span>
-                <Button
-                  variant="destructive"
-                  size="sm"
-                  onClick={() => deleteItem(index)}
-                >
+                <Button variant="destructive" size="sm" onClick={() => deleteItem(index)}>
                   Delete
                 </Button>
               </div>
@@ -493,7 +475,50 @@ export const UndoToast: Story = {
             <p className="text-gray-500 text-center py-4">No items remaining</p>
           )}
         </div>
-      </ToastProvider>
+      </>
+    );
+  },
+};
+
+export const LoadingToast: Story = {
+  render: () => {
+    const showLoadingToast = () => {
+      const promise = () => new Promise(resolve => setTimeout(resolve, 2000));
+
+      toast.promise(promise, {
+        loading: "Loading...",
+        success: "Data loaded successfully!",
+        error: "Failed to load data",
+      });
+    };
+
+    return (
+      <>
+        <Toaster />
+        <Button onClick={showLoadingToast}>Show Loading Toast</Button>
+      </>
+    );
+  },
+};
+
+export const CustomPosition: Story = {
+  render: args => {
+    const position = args.position ?? "top-right";
+
+    const showPositionAt = (position: string) => {
+      toast("Custom Position Toast", {
+        description: `This toast appears in the ${position}.`,
+        position: position as any,
+      });
+    };
+
+    return (
+      <>
+        <Toaster position="top-right" />
+        <div className="space-y-2">
+          <Button onClick={() => showPositionAt(position)}>Show Toast (Top Right)</Button>
+        </div>
+      </>
     );
   },
 };

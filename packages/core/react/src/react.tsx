@@ -95,7 +95,7 @@ export { SwiperPagination } from "@stackshift-ui/swiper-pagination";
 export { Switch } from "@stackshift-ui/switch";
 export { Text } from "@stackshift-ui/text";
 export { Textarea } from "@stackshift-ui/textarea";
-export { Toaster } from "@stackshift-ui/toast";
+export { toast, Toaster, type ToasterProps } from "@stackshift-ui/toast";
 export { Toggle, toggleVariants } from "@stackshift-ui/toggle";
 export { ToggleGroup, ToggleGroupItem } from "@stackshift-ui/toggle-group";
 export { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@stackshift-ui/tooltip";
