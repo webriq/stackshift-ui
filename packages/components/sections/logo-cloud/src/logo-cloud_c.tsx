@@ -5,6 +5,7 @@ import { Heading } from "@stackshift-ui/heading";
 import { Image } from "@stackshift-ui/image";
 import { Section } from "@stackshift-ui/section";
 import { LogoCloudProps } from ".";
+import { ConditionalLink } from "./helper";
 import { Images, LabeledRoute } from "./types";
 
 export default function LogoCloud_C({ title, images, button }: LogoCloudProps) {
@@ -28,7 +29,10 @@ function LogoCloudHeader({ title, button }: { title?: string; button?: LabeledRo
         </Heading>
       )}
       {button?.label && (
-        <Button as="link" ariaLabel={button.label} link={button}>
+        <Button variant="link" aria-label={button.label} asChild>
+          <ConditionalLink link={button} ariaLabel={button.label}>
+            {button.label}
+          </ConditionalLink>
           {button.label}
         </Button>
       )}
