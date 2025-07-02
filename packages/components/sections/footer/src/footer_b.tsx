@@ -9,7 +9,7 @@ import { Text } from "@stackshift-ui/text";
 import React from "react";
 
 import { FooterProps } from ".";
-import { logoLink } from "./helper";
+import { ConditionalLink, logoLink } from "./helper";
 import { LabeledRoute, LabeledRouteWithKey, Logo, SocialLink, Socials } from "./types";
 
 export default function Footer_B({ logo, copyright, socialMedia, menu }: FooterProps) {
@@ -69,11 +69,12 @@ function MenuList({ links, index }: { links?: LabeledRoute; index?: number }) {
   return (
     <li className="w-full mb-2 md:mb-0 md:w-auto" key={index}>
       <Button
-        as="link"
-        link={links}
         className="text-gray-500 no-underline lg:text-sm hover:text-gray-700"
-        ariaLabel={links?.label}>
-        {links?.label}
+        aria-label={links?.label}
+        asChild>
+        <ConditionalLink link={links} ariaLabel={links?.label ?? "Footer menu link"}>
+          {links?.label}
+        </ConditionalLink>
       </Button>
     </li>
   );

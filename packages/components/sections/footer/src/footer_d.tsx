@@ -8,7 +8,7 @@ import { SocialIcons } from "@stackshift-ui/social-icons";
 import { Text } from "@stackshift-ui/text";
 
 import { FooterProps } from ".";
-import { logoLink } from "./helper";
+import { ConditionalLink, logoLink } from "./helper";
 import { Logo, SocialLink, Socials } from "./types";
 
 export default function Footer_D({
@@ -110,11 +110,12 @@ function MenuLinks({ menu }: { menu?: any }) {
           {menu?.links?.map((link: any) => (
             <li key={link?._key}>
               <Button
-                as="link"
-                link={link}
                 className="text-gray-500 no-underline hover:text-gray-700"
-                ariaLabel={link?.label}>
-                {link?.label}
+                aria-label={link?.label}
+                asChild>
+                <ConditionalLink link={link} ariaLabel={link?.label ?? "Footer menu link"}>
+                  {link?.label}
+                </ConditionalLink>
               </Button>
             </li>
           ))}

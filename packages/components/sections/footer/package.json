@@ -41,6 +41,7 @@
     "vitest": "^2.1.1"
   },
   "dependencies": {
+    "@portabletext/react": "^3.1.0",
     "@stackshift-ui/scripts": "workspace:*",
     "@stackshift-ui/system": "workspace:*",
     "@stackshift-ui/text": "workspace:*",
