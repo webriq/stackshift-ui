@@ -2,9 +2,16 @@ import { Checkbox } from "@stackshift-ui/checkbox";
 import { CheckboxGroup } from "@stackshift-ui/checkbox-group";
 import { Input } from "@stackshift-ui/input";
 import { InputFile } from "@stackshift-ui/input-file";
-import { Radio } from "@stackshift-ui/radio";
-import { RadioGroup } from "@stackshift-ui/radio-group";
-import { Select } from "@stackshift-ui/select";
+import { Label } from "@stackshift-ui/label";
+import { RadioGroup, RadioGroupItem } from "@stackshift-ui/radio-group";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@stackshift-ui/select";
 import { Textarea } from "@stackshift-ui/textarea";
 import { FormTypes, Variant } from "./types";
 
@@ -49,31 +56,43 @@ export const FormField = ({
   switch (type) {
     case "inputRadio":
       return (
-        <RadioGroup noLabel={noLabel} label={label} name={name}>
+        <RadioGroup name={name}>
+          <Label>{label}</Label>
           {items?.map(item => (
-            <Radio key={item} ariaLabel={name} name={name} item={item} {...props} />
+            // <Radio key={item} ariaLabel={name} name={name} item={item} {...props} />
+            <RadioGroupItem key={item} value={item} {...props}>
+              {item}
+            </RadioGroupItem>
           ))}
         </RadioGroup>
       );
 
     case "inputSelect":
       return (
-        <Select
-          items={items}
-          label={label}
-          ariaLabel={label}
-          name={name}
-          required={required}
-          noLabel={noLabel}
-          {...props}
-        />
+        <Select name={name} {...props}>
+          <SelectTrigger>
+            <SelectValue placeholder={placeholder} />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectGroup>
+              {items?.map(item => (
+                <SelectItem key={item} value={item}>
+                  {item}
+                </SelectItem>
+              ))}
+            </SelectGroup>
+          </SelectContent>
+        </Select>
       );
 
     case "inputCheckbox":
       return (
         <CheckboxGroup noLabel={noLabel} name={name} label={label}>
           {items?.map(item => (
-            <Checkbox key={item} label={item} ariaLabel={name} name={name} item={item} {...props} />
+            <div className="flex flex-col gap-2 items-start">
+              <Checkbox id={item} key={item} name={item} {...props} />
+              <Label htmlFor={item}>{label}</Label>
+            </div>
           ))}
         </CheckboxGroup>
       );
@@ -83,32 +102,47 @@ export const FormField = ({
 
     case "textarea":
       return (
-        <Textarea
-          noLabel={noLabel}
-          ariaLabel={placeholder ?? name}
-          placeholder={placeholder}
-          name={name}
-          variant={variant}
-          required={required}
-          label={label}
-          {...props}
-        />
+        // <Textarea
+        //   noLabel={noLabel}
+        //   ariaLabel={placeholder ?? name}
+        //   placeholder={placeholder}
+        //   name={name}
+        //   variant={variant}
+        //   required={required}
+        //   label={label}
+        //   {...props}
+        // />
+        <div>
+          {!noLabel ? <Label htmlFor={name}>{label}</Label> : null}
+          <Textarea id={name} name={name} placeholder={placeholder} {...props}></Textarea>
+        </div>
       );
 
     default:
       return (
-        <Input
-          noLabel={noLabel}
-          textSize={textSize}
-          label={label || name}
-          ariaLabel={label || name}
-          required={required}
-          name={name}
-          placeholder={placeholder}
-          type={formType as "number" | "text" | "email" | "password"}
-          variant={variant}
-          {...props}
-        />
+        <div className="flex flex-col gap-2 items-start">
+          {!noLabel ? <Label htmlFor={name}>{label}</Label> : null}
+          <Input
+            id={name}
+            name={name}
+            placeholder={placeholder}
+            type={formType as "number" | "text" | "email" | "password"}
+            required={required}
+            {...props}
+          />
+        </div>
+        // <Input
+        //   noLabel={noLabel}
+        //   textSize={textSize}
+        //   label={label || name}
+        //   ariaLabel={label || name}
+        //   required={required}
+        //   name={name}
+        //   placeholder={placeholder}
+        //   type={formType as "number" | "text" | "email" | "password"}
+        //   variant={variant}
+        //   {...props}
+        // />
       );
   }
 };
