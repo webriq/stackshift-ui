@@ -131,7 +131,7 @@ function PrimaryButton({ primaryButton }: { primaryButton?: LabeledRoute }) {
 
   return (
     <div className="mt-10 text-center">
-      <Button as="link" link={primaryButton} ariaLabel={primaryButton?.label}>
+      <Button asChild aria-label={primaryButton?.label}>
         {primaryButton?.label}
       </Button>
     </div>

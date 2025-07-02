@@ -8,7 +8,6 @@ const config: Config = {
     "../../packages/components/common/**/src/*.{ts,tsx}",
     "../../packages/components/layout/**/src/*.{ts,tsx}",
     "../../packages/components/sections/**/src/*.{ts,tsx}",
-    "../../packages/components/shadcn/src/**/*.{ts,tsx}",
 
     // Exclude node_modules from being matched
     "!../../packages/components/**/node_modules/**/*",

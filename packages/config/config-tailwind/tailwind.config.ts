@@ -6,14 +6,15 @@ const config = {
     "../../../apps/nextjs-pages/**/*.{ts,tsx}",
     "../../../apps/storybook/**/*.{ts,tsx}",
     "../../components/**/*.{ts,tsx}",
-    "../../components/shadcn/src/**/*.{ts,tsx}",
     "../../core/**/*.{ts,tsx}",
   ],
   theme: {
     extend: {
       colors: {
         primary: "#0045d8",
+        'primary-foreground': '#ffffff',
         secondary: "#3576ff",
+        'secondary-foreground': '#ffffff',
         background: "#F9FAFB",
         foreground: '#0b1220',            // hsl(222, 84%, 5%) approx
         card: '#ffffff',
