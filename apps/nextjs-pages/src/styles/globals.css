@@ -9,6 +9,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --popover: #ffffff;
+  --popover-foreground: #171717;
+  --border: #e6eaf2;
 }
 
 @media (prefers-color-scheme: dark) {

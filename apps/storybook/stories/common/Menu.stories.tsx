@@ -1,406 +1,511 @@
-import { 
-  Menu,
-  MenuContent,
-  MenuItem,
-  MenuTrigger,
-  MenuSeparator,
-  MenuLabel,
-  MenuGroup,
-  MenuSub,
-  MenuSubContent,
-  MenuSubTrigger,
+import {
+  Button,
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+  NavigationMenuViewport,
 } from "@stackshift-ui/react";
-import { Button } from "@stackshift-ui/react";
+import { cn } from "@stackshift-ui/system";
 import type { Meta, StoryObj } from "@storybook/react";
-import { useState } from "react";
 
-const meta: Meta<typeof Menu> = {
-  title: "Common/Menu",
-  component: Menu,
+const meta: Meta<typeof NavigationMenu> = {
+  title: "Common/NavigationMenu",
+  component: NavigationMenu,
   parameters: {
     layout: "centered",
     docs: {
       description: {
-        component: "A menu component built on Radix UI primitives for displaying contextual actions and navigation options.",
+        component:
+          "A navigation menu component built on Radix UI primitives for displaying navigation links and dropdowns.",
       },
     },
   },
   tags: ["autodocs"],
   argTypes: {
-    open: {
+    viewport: {
       control: { type: "boolean" },
-      description: "Whether the menu is open",
-    },
-    modal: {
-      control: { type: "boolean" },
-      description: "Whether the menu is modal",
+      description: "Whether to show the viewport container",
+      defaultValue: true,
     },
   },
-} satisfies Meta<typeof Menu>;
+} satisfies Meta<typeof NavigationMenu>;
 
 export default meta;
-type Story = StoryObj<typeof Menu>;
+type Story = StoryObj<typeof NavigationMenu>;
 
 export const Default: Story = {
   render: () => (
-    <Menu>
-      <MenuTrigger asChild>
-        <Button variant="outline">Open Menu</Button>
-      </MenuTrigger>
-      <MenuContent>
-        <MenuItem>New File</MenuItem>
-        <MenuItem>Open File</MenuItem>
-        <MenuItem>Save</MenuItem>
-        <MenuSeparator />
-        <MenuItem>Exit</MenuItem>
-      </MenuContent>
-    </Menu>
-  ),
-};
-
-export const WithIcons: Story = {
-  render: () => (
-    <Menu>
-      <MenuTrigger asChild>
-        <Button variant="outline">
-          <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
-          </svg>
-          Actions
-        </Button>
-      </MenuTrigger>
-      <MenuContent>
-        <MenuItem>
-          <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-          </svg>
-          New
-        </MenuItem>
-        <MenuItem>
-          <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-          </svg>
-          Edit
-        </MenuItem>
-        <MenuItem>
-          <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-          </svg>
-          Copy
-        </MenuItem>
-        <MenuSeparator />
-        <MenuItem className="text-red-600">
-          <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-          </svg>
-          Delete
-        </MenuItem>
-      </MenuContent>
-    </Menu>
-  ),
-};
-
-export const ContextMenu: Story = {
-  render: () => {
-    const [lastAction, setLastAction] = useState<string>("");
-
-    return (
-      <div className="space-y-4">
-        <Menu>
-          <MenuTrigger asChild>
-            <div className="w-64 h-32 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center cursor-pointer hover:bg-gray-50">
-              Right-click or tap for context menu
-            </div>
-          </MenuTrigger>
-          <MenuContent>
-            <MenuLabel>Actions</MenuLabel>
-            <MenuItem onClick={() => setLastAction("Cut")}>
-              Cut
-            </MenuItem>
-            <MenuItem onClick={() => setLastAction("Copy")}>
-              Copy
-            </MenuItem>
-            <MenuItem onClick={() => setLastAction("Paste")}>
-              Paste
-            </MenuItem>
-            <MenuSeparator />
-            <MenuItem onClick={() => setLastAction("Select All")}>
-              Select All
-            </MenuItem>
-            <MenuSeparator />
-            <MenuItem onClick={() => setLastAction("Properties")}>
-              Properties
-            </MenuItem>
-          </MenuContent>
-        </Menu>
-        
-        {lastAction && (
-          <p className="text-sm text-gray-600">
-            Last action: <strong>{lastAction}</strong>
-          </p>
-        )}
-      </div>
-    );
-  },
-};
-
-export const UserAccountMenu: Story = {
-  render: () => (
-    <Menu>
-      <MenuTrigger asChild>
-        <Button variant="ghost" className="relative h-8 w-8 rounded-full">
-          <img
-            className="rounded-full"
-            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=32&h=32&fit=crop&crop=face"
-            alt="User avatar"
-          />
-        </Button>
-      </MenuTrigger>
-      <MenuContent className="w-56" align="end">
-        <MenuLabel className="font-normal">
-          <div className="flex flex-col space-y-1">
-            <p className="text-sm font-medium leading-none">John Doe</p>
-            <p className="text-xs leading-none text-muted-foreground">
-              john@example.com
-            </p>
-          </div>
-        </MenuLabel>
-        <MenuSeparator />
-        <MenuGroup>
-          <MenuItem>
-            <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-            </svg>
-            Profile
-          </MenuItem>
-          <MenuItem>
-            <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-            </svg>
-            Billing
-          </MenuItem>
-          <MenuItem>
-            <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-            Settings
-          </MenuItem>
-          <MenuItem>
-            <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-            </svg>
-            Team
-          </MenuItem>
-        </MenuGroup>
-        <MenuSeparator />
-        <MenuItem className="text-red-600">
-          <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-          </svg>
-          Log out
-        </MenuItem>
-      </MenuContent>
-    </Menu>
-  ),
-};
-
-export const NestedMenu: Story = {
-  render: () => (
-    <Menu>
-      <MenuTrigger asChild>
-        <Button variant="outline">File Menu</Button>
-      </MenuTrigger>
-      <MenuContent>
-        <MenuItem>New File</MenuItem>
-        <MenuItem>Open File</MenuItem>
-        <MenuSeparator />
-        <MenuSub>
-          <MenuSubTrigger>
-            Recent Files
-            <svg className="h-4 w-4 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </MenuSubTrigger>
-          <MenuSubContent>
-            <MenuItem>Document1.txt</MenuItem>
-            <MenuItem>Document2.txt</MenuItem>
-            <MenuItem>Document3.txt</MenuItem>
-            <MenuSeparator />
-            <MenuItem>Clear Recent</MenuItem>
-          </MenuSubContent>
-        </MenuSub>
-        <MenuSub>
-          <MenuSubTrigger>
-            Export
-            <svg className="h-4 w-4 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </MenuSubTrigger>
-          <MenuSubContent>
-            <MenuItem>Export as PDF</MenuItem>
-            <MenuItem>Export as Word</MenuItem>
-            <MenuItem>Export as HTML</MenuItem>
-            <MenuSeparator />
-            <MenuItem>Custom Export...</MenuItem>
-          </MenuSubContent>
-        </MenuSub>
-        <MenuSeparator />
-        <MenuItem>Save</MenuItem>
-        <MenuItem>Save As...</MenuItem>
-        <MenuSeparator />
-        <MenuItem>Exit</MenuItem>
-      </MenuContent>
-    </Menu>
-  ),
-};
-
-export const TableRowMenu: Story = {
-  render: () => {
-    const [selectedRow, setSelectedRow] = useState<string>("");
-
-    const users = [
-      { id: "1", name: "John Doe", email: "john@example.com", role: "Admin" },
-      { id: "2", name: "Jane Smith", email: "jane@example.com", role: "User" },
-      { id: "3", name: "Bob Johnson", email: "bob@example.com", role: "User" },
-    ];
-
-    return (
-      <div className="space-y-4">
-        <div className="border rounded-lg overflow-hidden">
-          <table className="w-full">
-            <thead className="bg-gray-50">
-              <tr>
-                <th className="px-4 py-2 text-left text-sm font-medium text-gray-900">Name</th>
-                <th className="px-4 py-2 text-left text-sm font-medium text-gray-900">Email</th>
-                <th className="px-4 py-2 text-left text-sm font-medium text-gray-900">Role</th>
-                <th className="px-4 py-2 text-left text-sm font-medium text-gray-900">Actions</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-gray-200">
-              {users.map((user) => (
-                <tr key={user.id} className="hover:bg-gray-50">
-                  <td className="px-4 py-2 text-sm text-gray-900">{user.name}</td>
-                  <td className="px-4 py-2 text-sm text-gray-500">{user.email}</td>
-                  <td className="px-4 py-2 text-sm text-gray-500">{user.role}</td>
-                  <td className="px-4 py-2">
-                    <Menu>
-                      <MenuTrigger asChild>
-                        <Button variant="ghost" size="sm">
-                          <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
-                          </svg>
-                        </Button>
-                      </MenuTrigger>
-                      <MenuContent align="end">
-                        <MenuItem onClick={() => setSelectedRow(`View ${user.name}`)}>
-                          View Details
-                        </MenuItem>
-                        <MenuItem onClick={() => setSelectedRow(`Edit ${user.name}`)}>
-                          Edit User
-                        </MenuItem>
-                        <MenuItem onClick={() => setSelectedRow(`Reset password for ${user.name}`)}>
-                          Reset Password
-                        </MenuItem>
-                        <MenuSeparator />
-                        <MenuItem 
-                          className="text-red-600"
-                          onClick={() => setSelectedRow(`Delete ${user.name}`)}
-                        >
-                          Delete User
-                        </MenuItem>
-                      </MenuContent>
-                    </Menu>
-                  </td>
-                </tr>
+    <NavigationMenu>
+      <NavigationMenuList>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+              <li className="row-span-3">
+                <NavigationMenuLink asChild>
+                  <a
+                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                    href="/">
+                    <div className="mb-2 mt-4 text-lg font-medium">StackShift UI</div>
+                    <p className="text-sm leading-tight text-muted-foreground">
+                      Beautifully designed components built with Radix UI and Tailwind CSS.
+                    </p>
+                  </a>
+                </NavigationMenuLink>
+              </li>
+              <li>
+                <NavigationMenuLink asChild>
+                  <a
+                    href="/docs"
+                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                    <div className="text-sm font-medium leading-none">Introduction</div>
+                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                      Re-usable components built using Radix UI and Tailwind CSS.
+                    </p>
+                  </a>
+                </NavigationMenuLink>
+              </li>
+              <li>
+                <NavigationMenuLink asChild>
+                  <a
+                    href="/docs/installation"
+                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                    <div className="text-sm font-medium leading-none">Installation</div>
+                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                      How to install dependencies and structure your app.
+                    </p>
+                  </a>
+                </NavigationMenuLink>
+              </li>
+              <li>
+                <NavigationMenuLink asChild>
+                  <a
+                    href="/docs/primitives/typography"
+                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                    <div className="text-sm font-medium leading-none">Typography</div>
+                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                      Styles for headings, paragraphs, lists...etc
+                    </p>
+                  </a>
+                </NavigationMenuLink>
+              </li>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+              {components.map(component => (
+                <li key={component.title}>
+                  <NavigationMenuLink asChild>
+                    <a
+                      href={component.href}
+                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      <div className="text-sm font-medium leading-none">{component.title}</div>
+                      <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                        {component.description}
+                      </p>
+                    </a>
+                  </NavigationMenuLink>
+                </li>
               ))}
-            </tbody>
-          </table>
-        </div>
-        
-        {selectedRow && (
-          <p className="text-sm text-gray-600">
-            Action: <strong>{selectedRow}</strong>
-          </p>
-        )}
-      </div>
-    );
-  },
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuLink href="/docs" className={navigationMenuTriggerStyle()}>
+            Documentation
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+      </NavigationMenuList>
+    </NavigationMenu>
+  ),
 };
 
-export const NavigationMenu: Story = {
+export const SimpleNavigation: Story = {
   render: () => (
-    <div className="border-b">
-      <nav className="flex space-x-8 px-6 py-4">
-        <Menu>
-          <MenuTrigger asChild>
-            <Button variant="ghost" className="text-sm font-medium">
+    <NavigationMenu>
+      <NavigationMenuList>
+        <NavigationMenuItem>
+          <NavigationMenuLink href="/" className={navigationMenuTriggerStyle()}>
+            Home
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuLink href="/about" className={navigationMenuTriggerStyle()}>
+            About
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuLink href="/services" className={navigationMenuTriggerStyle()}>
+            Services
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuLink href="/contact" className={navigationMenuTriggerStyle()}>
+            Contact
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+      </NavigationMenuList>
+    </NavigationMenu>
+  ),
+};
+
+export const WithDropdown: Story = {
+  render: () => (
+    <NavigationMenu>
+      <NavigationMenuList>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Products</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-2">
+              <li>
+                <NavigationMenuLink asChild>
+                  <a
+                    href="/products/web"
+                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                    <div className="text-sm font-medium leading-none">Web Components</div>
+                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                      React, Vue, and Angular components for modern web development.
+                    </p>
+                  </a>
+                </NavigationMenuLink>
+              </li>
+              <li>
+                <NavigationMenuLink asChild>
+                  <a
+                    href="/products/mobile"
+                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                    <div className="text-sm font-medium leading-none">Mobile Components</div>
+                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                      React Native and Flutter components for mobile apps.
+                    </p>
+                  </a>
+                </NavigationMenuLink>
+              </li>
+              <li>
+                <NavigationMenuLink asChild>
+                  <a
+                    href="/products/design"
+                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                    <div className="text-sm font-medium leading-none">Design System</div>
+                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                      Comprehensive design tokens and guidelines.
+                    </p>
+                  </a>
+                </NavigationMenuLink>
+              </li>
+              <li>
+                <NavigationMenuLink asChild>
+                  <a
+                    href="/products/tools"
+                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                    <div className="text-sm font-medium leading-none">Developer Tools</div>
+                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                      CLI tools and build plugins for faster development.
+                    </p>
+                  </a>
+                </NavigationMenuLink>
+              </li>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px]">
+              <li>
+                <NavigationMenuLink asChild>
+                  <a
+                    href="/solutions/ecommerce"
+                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                    <div className="text-sm font-medium leading-none">E-commerce</div>
+                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                      Complete e-commerce solutions with shopping carts, payments, and more.
+                    </p>
+                  </a>
+                </NavigationMenuLink>
+              </li>
+              <li>
+                <NavigationMenuLink asChild>
+                  <a
+                    href="/solutions/saas"
+                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                    <div className="text-sm font-medium leading-none">SaaS Platforms</div>
+                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                      Build scalable SaaS applications with our component library.
+                    </p>
+                  </a>
+                </NavigationMenuLink>
+              </li>
+              <li>
+                <NavigationMenuLink asChild>
+                  <a
+                    href="/solutions/enterprise"
+                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                    <div className="text-sm font-medium leading-none">Enterprise</div>
+                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                      Enterprise-grade components with advanced features and support.
+                    </p>
+                  </a>
+                </NavigationMenuLink>
+              </li>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuLink href="/pricing" className={navigationMenuTriggerStyle()}>
+            Pricing
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuLink href="/docs" className={navigationMenuTriggerStyle()}>
+            Docs
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+      </NavigationMenuList>
+    </NavigationMenu>
+  ),
+};
+
+export const WithIndicator: Story = {
+  render: () => (
+    <NavigationMenu>
+      <NavigationMenuList>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Features</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <div className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-2">
+              <div className="space-y-3">
+                <h4 className="text-sm font-medium leading-none">Core Features</h4>
+                <NavigationMenuLink asChild>
+                  <a
+                    href="/features/components"
+                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                    <div className="text-sm font-medium leading-none">Components</div>
+                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                      50+ pre-built components ready to use.
+                    </p>
+                  </a>
+                </NavigationMenuLink>
+                <NavigationMenuLink asChild>
+                  <a
+                    href="/features/theming"
+                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                    <div className="text-sm font-medium leading-none">Theming</div>
+                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                      Customizable themes with CSS variables.
+                    </p>
+                  </a>
+                </NavigationMenuLink>
+              </div>
+              <div className="space-y-3">
+                <h4 className="text-sm font-medium leading-none">Advanced</h4>
+                <NavigationMenuLink asChild>
+                  <a
+                    href="/features/accessibility"
+                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                    <div className="text-sm font-medium leading-none">Accessibility</div>
+                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                      WCAG 2.1 compliant components.
+                    </p>
+                  </a>
+                </NavigationMenuLink>
+                <NavigationMenuLink asChild>
+                  <a
+                    href="/features/performance"
+                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                    <div className="text-sm font-medium leading-none">Performance</div>
+                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                      Optimized for speed and bundle size.
+                    </p>
+                  </a>
+                </NavigationMenuLink>
+              </div>
+            </div>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuLink href="/about" className={navigationMenuTriggerStyle()}>
+            About
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+      </NavigationMenuList>
+      <NavigationMenuIndicator />
+    </NavigationMenu>
+  ),
+};
+
+export const WithoutViewport: Story = {
+  render: () => (
+    <NavigationMenu viewport={false}>
+      <NavigationMenuList>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Quick Links</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid gap-3 p-4 w-[300px]">
+              <li>
+                <NavigationMenuLink asChild>
+                  <a
+                    href="/dashboard"
+                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                    <div className="text-sm font-medium leading-none">Dashboard</div>
+                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                      View your analytics and manage your account.
+                    </p>
+                  </a>
+                </NavigationMenuLink>
+              </li>
+              <li>
+                <NavigationMenuLink asChild>
+                  <a
+                    href="/settings"
+                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                    <div className="text-sm font-medium leading-none">Settings</div>
+                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                      Configure your preferences and account settings.
+                    </p>
+                  </a>
+                </NavigationMenuLink>
+              </li>
+              <li>
+                <NavigationMenuLink asChild>
+                  <a
+                    href="/help"
+                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                    <div className="text-sm font-medium leading-none">Help Center</div>
+                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                      Get help and support for your questions.
+                    </p>
+                  </a>
+                </NavigationMenuLink>
+              </li>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuLink href="/profile" className={navigationMenuTriggerStyle()}>
+            Profile
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+      </NavigationMenuList>
+    </NavigationMenu>
+  ),
+};
+
+export const MobileResponsive: Story = {
+  render: () => (
+    <div className="w-full">
+      <NavigationMenu className="max-w-none">
+        <NavigationMenuList className="flex-col space-x-0 space-y-1 md:flex-row md:space-x-1 md:space-y-0">
+          <NavigationMenuItem>
+            <NavigationMenuTrigger className="w-full justify-start md:w-auto md:justify-center">
               Products
-              <svg className="h-4 w-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </Button>
-          </MenuTrigger>
-          <MenuContent className="w-56">
-            <MenuGroup>
-              <MenuLabel>Web Development</MenuLabel>
-              <MenuItem>React Components</MenuItem>
-              <MenuItem>Vue Components</MenuItem>
-              <MenuItem>Angular Components</MenuItem>
-            </MenuGroup>
-            <MenuSeparator />
-            <MenuGroup>
-              <MenuLabel>Mobile Development</MenuLabel>
-              <MenuItem>React Native</MenuItem>
-              <MenuItem>Flutter</MenuItem>
-              <MenuItem>Ionic</MenuItem>
-            </MenuGroup>
-          </MenuContent>
-        </Menu>
-
-        <Menu>
-          <MenuTrigger asChild>
-            <Button variant="ghost" className="text-sm font-medium">
-              Solutions
-              <svg className="h-4 w-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </Button>
-          </MenuTrigger>
-          <MenuContent className="w-56">
-            <MenuItem>E-commerce</MenuItem>
-            <MenuItem>SaaS Platforms</MenuItem>
-            <MenuItem>Enterprise</MenuItem>
-            <MenuItem>Startups</MenuItem>
-          </MenuContent>
-        </Menu>
-
-        <Button variant="ghost" className="text-sm font-medium">
-          Pricing
-        </Button>
-
-        <Button variant="ghost" className="text-sm font-medium">
-          About
-        </Button>
-      </nav>
+            </NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid gap-3 p-4 w-[300px] md:w-[400px] lg:w-[500px] lg:grid-cols-2">
+                <li>
+                  <NavigationMenuLink asChild>
+                    <a
+                      href="/products/web"
+                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      <div className="text-sm font-medium leading-none">Web Development</div>
+                      <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                        Build modern web applications with our components.
+                      </p>
+                    </a>
+                  </NavigationMenuLink>
+                </li>
+                <li>
+                  <NavigationMenuLink asChild>
+                    <a
+                      href="/products/mobile"
+                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      <div className="text-sm font-medium leading-none">Mobile Development</div>
+                      <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                        Create native mobile apps with cross-platform tools.
+                      </p>
+                    </a>
+                  </NavigationMenuLink>
+                </li>
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <NavigationMenuLink
+              href="/pricing"
+              className={cn(
+                navigationMenuTriggerStyle(),
+                "w-full justify-start md:w-auto md:justify-center",
+              )}>
+              Pricing
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <NavigationMenuLink
+              href="/docs"
+              className={cn(
+                navigationMenuTriggerStyle(),
+                "w-full justify-start md:w-auto md:justify-center",
+              )}>
+              Documentation
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <NavigationMenuLink
+              href="/contact"
+              className={cn(
+                navigationMenuTriggerStyle(),
+                "w-full justify-start md:w-auto md:justify-center",
+              )}>
+              Contact
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+        </NavigationMenuList>
+      </NavigationMenu>
     </div>
   ),
 };
 
-export const DisabledItems: Story = {
-  render: () => (
-    <Menu>
-      <MenuTrigger asChild>
-        <Button variant="outline">Menu with Disabled Items</Button>
-      </MenuTrigger>
-      <MenuContent>
-        <MenuItem>Available Action</MenuItem>
-        <MenuItem disabled>Disabled Action</MenuItem>
-        <MenuItem>Another Available Action</MenuItem>
-        <MenuSeparator />
-        <MenuItem disabled>Disabled Feature</MenuItem>
-        <MenuItem>Settings</MenuItem>
-      </MenuContent>
-    </Menu>
-  ),
-};
+// Sample data for the components dropdown
+const components = [
+  {
+    title: "Alert Dialog",
+    href: "/docs/primitives/alert-dialog",
+    description:
+      "A modal dialog that interrupts the user with important content and expects a response.",
+  },
+  {
+    title: "Hover Card",
+    href: "/docs/primitives/hover-card",
+    description: "For sighted users to preview content available behind a link.",
+  },
+  {
+    title: "Progress",
+    href: "/docs/primitives/progress",
+    description: "Displays an indicator showing the completion progress of a task.",
+  },
+  {
+    title: "Scroll-area",
+    href: "/docs/primitives/scroll-area",
+    description: "Visually or semantically separates content.",
+  },
+  {
+    title: "Tabs",
+    href: "/docs/primitives/tabs",
+    description:
+      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+  },
+  {
+    title: "Tooltip",
+    href: "/docs/primitives/tooltip",
+    description:
+      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+  },
+];
