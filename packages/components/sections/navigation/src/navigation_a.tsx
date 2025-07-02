@@ -6,7 +6,7 @@ import { Section } from "@stackshift-ui/section";
 import { Text } from "@stackshift-ui/text";
 import React from "react";
 import { NavigationProps, ResponsiveNavLinksProps } from ".";
-import { logoLink } from "./helper";
+import { logoLink, ConditionalLink } from "./helper";
 import { LabeledRoute, LabeledRouteWithKey, Logo } from "./types";
 
 export default function Navigation_A({
@@ -103,11 +103,16 @@ function NavItem({ link }: { link?: LabeledRoute }) {
   return (
     <li>
       <Button
-        as="link"
-        link={link}
-        ariaLabel={link?.label}
+        asChild
+        variant="link"
+        aria-label={link?.label}
         className="text-sm text-gray-500 no-underline hover:text-gray-900">
-        {link?.label}
+        <ConditionalLink
+          link={link}
+          ariaLabel={link?.label}
+          className="text-sm text-gray-500 no-underline hover:text-gray-900">
+          {link?.label}
+        </ConditionalLink>
       </Button>
     </li>
   );
@@ -134,11 +139,16 @@ function ResponsiveNavLinks({
               {links?.map((link: any, index: number) => (
                 <li className="mb-1" key={index}>
                   <Button
-                    as="link"
-                    ariaLabel={link?.label}
-                    className="block w-full cursor-pointer p-4 text-sm font-semibold text-gray-900 no-underline rounded hover:bg-secondary-foreground hover:text-primary"
-                    link={link}>
-                    {link?.label}
+                    asChild
+                    variant="link"
+                    aria-label={link?.label}
+                    className="block w-full cursor-pointer p-4 text-sm font-semibold text-gray-900 no-underline rounded hover:bg-secondary-foreground hover:text-primary">
+                    <ConditionalLink
+                      link={link}
+                      ariaLabel={link?.label}
+                      className="block w-full cursor-pointer p-4 text-sm font-semibold text-gray-900 no-underline rounded hover:bg-secondary-foreground hover:text-primary">
+                      {link?.label}
+                    </ConditionalLink>
                   </Button>
                 </li>
               ))}
@@ -149,22 +159,30 @@ function ResponsiveNavLinks({
           <Flex direction="col" className="pt-6">
             {primaryButton?.label ? (
               <Button
-                as="link"
-                link={primaryButton}
-                ariaLabel={primaryButton?.label}
+                asChild
+                aria-label={primaryButton?.label}
                 variant="outline"
                 className="block w-full px-4 py-3 mb-3 text-xs cursor-pointer font-semibold leading-loose text-center text-gray-900 rounded-global bg-secondary hover:bg-secondary/50">
-                {primaryButton?.label}
+                <ConditionalLink
+                  link={primaryButton}
+                  ariaLabel={primaryButton?.label}
+                  className="block w-full px-4 py-3 mb-3 text-xs cursor-pointer font-semibold leading-loose text-center text-gray-900 rounded-global bg-secondary hover:bg-secondary/50">
+                  {primaryButton?.label}
+                </ConditionalLink>
               </Button>
             ) : null}
             {secondaryButton?.label ? (
               <Button
-                as="link"
-                link={secondaryButton}
-                ariaLabel={secondaryButton?.label}
-                variant="solid"
+                asChild
+                aria-label={secondaryButton?.label}
+                variant="link"
                 className={`block w-full px-4 py-3 mb-2 cursor-pointer leading-loose text-xs text-center font-semibold bg-primary hover:bg-primary-foreground rounded-global`}>
-                {secondaryButton?.label}
+                <ConditionalLink
+                  link={secondaryButton}
+                  ariaLabel={secondaryButton?.label}
+                  className={`block w-full px-4 py-3 mb-2 cursor-pointer leading-loose text-xs text-center font-semibold bg-primary hover:bg-primary-foreground rounded-global`}>
+                  {secondaryButton?.label}
+                </ConditionalLink>
               </Button>
             ) : null}
           </Flex>
@@ -181,9 +199,7 @@ function MobileMenu({ showMenu }: { showMenu: () => void }) {
   return (
     <div className="lg:hidden">
       <Button
-        variant="unstyled"
-        as="button"
-        ariaLabel="Navigation Menu"
+        aria-label="Navigation Menu"
         className="flex items-center p-3 navbar-burger text-primary"
         onClick={showMenu}>
         <svg
@@ -209,22 +225,30 @@ function Buttons({
     <Flex align="center" gap={4}>
       {primaryButton?.label ? (
         <Button
-          as="link"
-          link={primaryButton}
-          ariaLabel={primaryButton?.label}
+          asChild
+          aria-label={primaryButton?.label}
           variant="outline"
           className="hidden lg:flex px-4 py-3 leading-loose text-center font-semibold text-gray-900 rounded-global bg-secondary hover:bg-secondary/50">
-          {primaryButton?.label}
+          <ConditionalLink
+            link={primaryButton}
+            ariaLabel={primaryButton?.label}
+            className="hidden lg:flex px-4 py-3 leading-loose text-center font-semibold text-gray-900 rounded-global bg-secondary hover:bg-secondary/50">
+            {primaryButton?.label}
+          </ConditionalLink>
         </Button>
       ) : null}
       {secondaryButton?.label ? (
         <Button
-          as="link"
-          link={secondaryButton}
-          ariaLabel={secondaryButton?.label}
-          variant="solid"
+          asChild
+          aria-label={secondaryButton?.label}
+          variant="default"
           className="hidden lg:flex px-4 py-3 leading-loose text-center font-semibold text-white bg-primary hover:bg-primary-foreground rounded-global">
-          {secondaryButton?.label}
+          <ConditionalLink
+            link={secondaryButton}
+            ariaLabel={secondaryButton?.label}
+            className="hidden lg:flex px-4 py-3 leading-loose text-center font-semibold text-white bg-primary hover:bg-primary-foreground rounded-global">
+            {secondaryButton?.label}
+          </ConditionalLink>
         </Button>
       ) : null}
     </Flex>
@@ -235,9 +259,7 @@ function BurgerMenuIcon({ showMenu }: { showMenu: () => void }) {
   return (
     <div className="flex items-center mb-8">
       <Button
-        variant="unstyled"
-        as="button"
-        ariaLabel="Navigation Menu"
+        aria-label="Close Navigation Menu"
         className="navbar-close"
         onClick={showMenu}>
         <svg
