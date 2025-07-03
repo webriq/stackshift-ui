@@ -50,6 +50,7 @@
     "@stackshift-ui/image": "workspace:*",
     "@stackshift-ui/section": "workspace:*",
     "@stackshift-ui/container": "workspace:*",
+    "@stackshift-ui/link": "workspace:*",
     "@stackshift-ui/flex": "workspace:*"
   },
   "peerDependencies": {
