@@ -85,9 +85,8 @@ function FormFields({ fields }: { fields?: iForm["fields"] }) {
     <div className="flex flex-col sm:items-center sm:flex-row lg:justify-between gap-3">
       {fields.map(field => (
         <Input
-          noLabel
           key={field?._key}
-          ariaLabel={field?.placeholder ?? field?.name}
+          aria-label={field?.placeholder ?? field?.name}
           type={getInputType(field?.type)}
           placeholder={field?.placeholder}
           name={field?.name}
@@ -117,7 +116,7 @@ function CTABtton({ form }: { form?: iForm }) {
   if (!form?.buttonLabel) return null;
 
   return (
-    <Button as="button" className="w-full sm:w-1/4" ariaLabel={form?.buttonLabel} type="submit">
+    <Button className="w-full sm:w-1/4" aria-label={form?.buttonLabel} type="submit">
       {form?.buttonLabel}
     </Button>
   );

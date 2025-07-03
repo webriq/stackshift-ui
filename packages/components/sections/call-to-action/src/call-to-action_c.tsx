@@ -76,8 +76,7 @@ function CTAInput({ field }: { field?: any }) {
 
   return (
     <Input
-      noLabel
-      ariaLabel={field?.placeholder ?? field?.name}
+      aria-label={field?.placeholder ?? field?.name}
       className="w-full sm:max-w-md mr-2"
       type={inputType}
       placeholder={field?.placeholder}
@@ -140,9 +139,8 @@ function CTAButton({ form }: { form?: iForm }) {
 
   return (
     <Button
-      as="button"
       className="w-full sm:w-fit"
-      ariaLabel={form?.buttonLabel ?? "Call to action form submit button"}
+      aria-label={form?.buttonLabel ?? "Call to action form submit button"}
       type="submit">
       {form?.buttonLabel}
     </Button>

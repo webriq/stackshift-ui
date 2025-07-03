@@ -11,6 +11,7 @@ import { Section } from "@stackshift-ui/section";
 import { Text } from "@stackshift-ui/text";
 import React from "react";
 
+import { buildSanityLink } from "@stackshift-ui/system";
 import { SignUpFormProps } from ".";
 import { logoLink, thankYouPageLink } from "./helper";
 import { LabeledRoute, LabeledRouteWithKey, Logo, Form as iForm } from "./types";
@@ -104,9 +105,8 @@ function SignupForm({
       <div className="text-center">
         {form?.buttonLabel && (
           <Button
-            as="button"
-            variant="custom"
-            ariaLabel={form?.buttonLabel ?? "Sign Up form submit button"}
+            variant="ghost"
+            aria-label={form?.buttonLabel ?? "Sign Up form submit button"}
             className="w-full py-4 text-sm font-bold tex-gray-50"
             type="submit">
             {form?.buttonLabel}
@@ -134,14 +134,11 @@ function FormFields({
           <div className="w-full px-2 mb-3 lg:w-1/2" key={index}>
             {formFields.type === "inputText" ? (
               <Input
-                textSize="sm"
-                variant="primary"
-                noLabel
                 placeholder={formFields?.placeholder}
                 required={formFields?.isRequired}
                 className="w-full py-4 text-xs bg-white"
                 name={formFields?.name}
-                ariaLabel={formFields?.label}
+                aria-label={formFields?.label}
                 {...formFields}
                 type="text"
               />
@@ -193,16 +190,23 @@ function FormFields({
 function SignInLink({ signInLink }: { signInLink?: LabeledRoute }) {
   if (!signInLink?.label) return null;
 
+  const link = buildSanityLink({
+    type: signInLink?.type ?? "",
+    internalLink: signInLink?.internalLink ?? "",
+    externalLink: signInLink?.externalLink ?? "",
+  });
+
   return (
     <div className="w-full text-center mt-3">
       <span className="text-xs text-gray-500">Already have an account? </span>
       <Button
-        as="link"
         variant="link"
-        link={signInLink}
         className="text-xs text-primary cursor-pointer hover:underline"
-        ariaLabel={signInLink?.label}>
-        {signInLink?.label}
+        aria-label={signInLink?.label}
+        asChild>
+        <Link href={link.href} target={link.target} rel={link.rel}>
+          {signInLink?.label}
+        </Link>
       </Button>
     </div>
   );
@@ -221,10 +225,7 @@ function PasswordField({
     <div className="flex flex-col sm:flex-row gap-2 sm:items-center">
       <Input
         className="py-4"
-        textSize="sm"
-        noLabel
         aria-label={formFields?.placeholder ?? formFields?.name}
-        variant="primary"
         type={showPassword ? "text" : "password"}
         placeholder={formFields?.placeholder}
         name={formFields?.name}
@@ -233,8 +234,7 @@ function PasswordField({
       {/* SVG icon on the right of the password input field */}
       <Button
         variant="unstyled"
-        as="button"
-        ariaLabel={showPassword ? "Show password" : "Hide password"}
+        aria-label={showPassword ? "Show password" : "Hide password"}
         className="focus:outline-none"
         type="button"
         onClick={togglePassword}>
@@ -252,23 +252,32 @@ function FormLinks({ formLinks }: { formLinks?: LabeledRouteWithKey[] }) {
 
   return (
     <p className="mt-10 lg:mt-3 text-xs text-center text-gray-700">
-      {formLinks?.map((link: any, index: number, { length }: any) => (
-        <span key={index}>
-          <Button
-            as="link"
-            variant="link"
-            link={link}
-            className="text-xs text-primary cursor-pointer hover:underline"
-            ariaLabel={link?.label}>
-            {link?.label}
-          </Button>
-          {index === length - 1 ? null : index === length - 2 ? (
-            <span>&nbsp;and&nbsp;</span>
-          ) : (
-            <span>&nbsp;,&nbsp;</span>
-          )}
-        </span>
-      ))}
+      {formLinks?.map((link: any, index: number, { length }: any) => {
+        const linkObj = buildSanityLink({
+          type: link?.type ?? "",
+          internalLink: link?.internalLink ?? "",
+          externalLink: link?.externalLink ?? "",
+        });
+
+        return (
+          <span key={index}>
+            <Button
+              variant="link"
+              className="text-xs text-primary cursor-pointer hover:underline"
+              aria-label={link?.label}
+              asChild>
+              <Link href={linkObj.href} target={linkObj.target} rel={linkObj.rel}>
+                {link?.label}
+              </Link>
+            </Button>
+            {index === length - 1 ? null : index === length - 2 ? (
+              <span>&nbsp;and&nbsp;</span>
+            ) : (
+              <span>&nbsp;,&nbsp;</span>
+            )}
+          </span>
+        );
+      })}
     </p>
   );
 }

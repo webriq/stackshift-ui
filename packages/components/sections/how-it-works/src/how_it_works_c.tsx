@@ -49,7 +49,7 @@ function StepItem({ index, step }: { index: number; step?: ArrayOfTitleAndText }
 
   return (
     <Flex align="stretch" className="w-full px-4 mt-8 md:w-1/2 lg:mb-0 lg:w-1/3" key={index}>
-      <Card className="px-6 py-10 text-center bg-white" borderRadius="md">
+      <Card className="px-6 py-10 text-center bg-white rounded-md">
         <span className="inline-flex items-center justify-center w-16 h-16 mb-6 text-2xl font-bold rounded-global bg-secondary/50 text-primary">
           {index + 1}
         </span>

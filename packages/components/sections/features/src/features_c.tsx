@@ -63,7 +63,7 @@ function FeatureItems({ features }: { features?: ArrayOfImageTitleAndText[] }) {
 function FeatureItem({ feature }: { feature: ArrayOfImageTitleAndText }) {
   return (
     <div className="w-full p-3">
-      <Card className="flex flex-wrap h-full p-6 bg-white" borderRadius="md">
+      <Card className="flex flex-wrap h-full p-6 bg-white rounded-md">
         <div className="self-start inline-block p-3 mb-4 mr-6 rounded-lg bg-secondary/50 md:p-5 lg:mb-0">
           {feature?.mainImage?.image && (
             <Image

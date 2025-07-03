@@ -64,9 +64,8 @@ function TeamTab({ data, activeTab, setActiveTab }: TeamTabProps) {
   return (
     <li>
       <Button
-        as="button"
         variant="unstyled"
-        ariaLabel={data.name}
+        aria-label={data.name}
         className={`text-xl lg:text-2xl ${
           data.name === activeTab ? "text-black" : "text-gray-400"
         } font-bold hover:text-gray-500 focus:outline-none`}
@@ -93,9 +92,7 @@ function TeamMemberCard({ member }: { member?: iTeam }) {
   if (!member) return null;
 
   return (
-    <Card
-      className="flex flex-col gap-3 md:gap-0 md:flex-row shadow-lg bg-white md:h-96"
-      borderRadius="md">
+    <Card className="flex flex-col gap-3 md:gap-0 md:flex-row shadow-lg bg-white md:h-96 rounded-md">
       {member.mainImage?.image && (
         <div className="w-full md:w-1/2 h-48 md:h-full relative overflow-hidden rounded-md">
           <Image

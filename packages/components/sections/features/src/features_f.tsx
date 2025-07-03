@@ -3,7 +3,9 @@ import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
 import { Image } from "@stackshift-ui/image";
+import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
+import { buildSanityLink } from "@stackshift-ui/system";
 import { Text } from "@stackshift-ui/text";
 import { FeaturesProps } from ".";
 import { LabeledRoute } from "./types";
@@ -63,10 +65,18 @@ function FeaturesInfo({
 function CTAButton({ primaryButton }: { primaryButton?: LabeledRoute }) {
   if (!primaryButton?.label) return null;
 
+  const link = buildSanityLink({
+    type: primaryButton?.type ?? "",
+    internalLink: primaryButton?.internalLink ?? "",
+    externalLink: primaryButton?.externalLink ?? "",
+  });
+
   return (
     <Container maxWidth={448} className="ml-0">
-      <Button as="link" link={primaryButton} ariaLabel={primaryButton?.label}>
-        {primaryButton?.label}
+      <Button variant="link" aria-label={primaryButton?.label} asChild>
+        <Link href={link.href} target={link.target} rel={link.rel}>
+          {primaryButton?.label}
+        </Link>
       </Button>
     </Container>
   );

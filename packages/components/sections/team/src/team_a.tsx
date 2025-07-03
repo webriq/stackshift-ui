@@ -46,9 +46,7 @@ function Teams({ team }: { team?: iTeam[] }) {
     <Flex wrap align="center" justify="center" gap={6}>
       {team?.map(member => (
         <div className="w-full [@media(min-width:421px)]:w-96 sm:w-1/2 lg:w-1/3" key={member?.name}>
-          <Card
-            className="py-10 [@media(min-width:320px)]:py-20 items-center text-center shadow-lg bg-white flex flex-col gap-4"
-            borderRadius="md">
+          <Card className="py-10 [@media(min-width:320px)]:py-20 items-center text-center shadow-lg bg-white flex flex-col gap-4 rounded-md">
             {member?.mainImage?.image && (
               <Image
                 width={96}

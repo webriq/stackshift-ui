@@ -20,7 +20,7 @@ export default function Testimonial_A({ testimonials }: TestimonialProps) {
   return (
     <Section className="py-20 bg-background">
       <Container maxWidth={1280}>
-        <Card className="py-10" borderRadius="md">
+        <Card className="py-10 rounded-md">
           <Flex wrap align="center" justify="center" className="max-w-5xl p-4">
             <AvatarSection testimonials={testimonials} testimony={testimony} />
             <TestimonyContent testimonials={testimonials} testimony={testimony} slider={slider} />

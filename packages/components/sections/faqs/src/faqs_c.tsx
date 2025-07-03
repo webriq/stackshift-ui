@@ -60,7 +60,7 @@ function FAQItems({ faqs }: { faqs?: AskedQuestion[] }) {
 function FAQItem({ faq }: FAQItemProps) {
   return (
     <Container className="w-full px-4 mb-8 lg:w-1/2" maxWidth={1000}>
-      <Card className="h-full lg:p-8 bg-white" borderRadius="md">
+      <Card className="h-full lg:p-8 bg-white rounded-md">
         <Flex align="start" className="mb-6" gap={3}>
           <span className="inline-block p-3 rounded-full bg-primary">
             <QuoteIcon />

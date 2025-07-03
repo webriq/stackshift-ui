@@ -2,8 +2,10 @@ import { Button } from "@stackshift-ui/button";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
+import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
 import { SigninSignup_A } from "@stackshift-ui/signin-signup";
+import { buildSanityLink } from "@stackshift-ui/system";
 import { Text } from "@stackshift-ui/text";
 import React from "react";
 import { ButtonProps, HeaderProps } from ".";
@@ -61,20 +63,42 @@ function Buttons({
   primaryButton?: ButtonProps;
   secondaryButton?: ButtonProps;
 }) {
+  const primaryButtonLink = buildSanityLink({
+    type: "linkInternal",
+    internalLink: primaryButton?.link?.target === "_self" ? primaryButton?.link?.route : "",
+    externalLink: primaryButton?.link?.target != "_self" ? primaryButton?.link?.route : "",
+  });
+
+  const secondaryButtonLink = buildSanityLink({
+    type: "linkInternal",
+    internalLink: secondaryButton?.link?.target === "_self" ? secondaryButton?.link?.route : "",
+    externalLink: secondaryButton?.link?.target != "_self" ? secondaryButton?.link?.route : "",
+  });
+
   return (
     <Flex align="center" gap={2} className="flex-col md:flex-row justify-center lg:justify-start">
       {primaryButton?.label && (
-        <Button as="link" link={primaryButton} ariaLabel={primaryButton?.label}>
-          {primaryButton?.label}
+        <Button variant="link" aria-label={primaryButton?.label} asChild>
+          <Link
+            href={primaryButtonLink.href}
+            target={primaryButtonLink.target}
+            rel={primaryButtonLink.rel}>
+            {primaryButton?.label}
+          </Link>
         </Button>
       )}
       {secondaryButton?.label && (
         <Button
-          as="link"
-          link={secondaryButton}
+          variant="link"
           className="bg-secondary hover:bg-secondary/50 inline-block rounded-global font-bold transition duration-200 px-6 py-3"
-          ariaLabel={secondaryButton?.label}>
-          {secondaryButton?.label}
+          aria-label={secondaryButton?.label}
+          asChild>
+          <Link
+            href={secondaryButtonLink.href}
+            target={secondaryButtonLink.target}
+            rel={secondaryButtonLink.rel}>
+            {secondaryButton?.label}
+          </Link>
         </Button>
       )}
     </Flex>

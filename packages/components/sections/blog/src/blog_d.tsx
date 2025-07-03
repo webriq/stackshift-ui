@@ -145,9 +145,8 @@ function SearchInput({
         onChange={handleSearchChange}
       />
       <Button
-        as="button"
         variant="unstyled"
-        ariaLabel="Search button"
+        aria-label="Search button"
         className="absolute right-0 top-0 h-full px-3 bg-white border-r rounded-global text-primary flex items-center">
         <svg
           className="w-6 h-6"
@@ -177,7 +176,7 @@ function CategoryTab({
   setActiveTab: (category: string) => void;
 }) {
   return (
-    <Card className="w-full px-3 mb-8 bg-white lg:mb-0 lg:w-1/4" borderRadius="md">
+    <Card className="w-full px-3 mb-8 bg-white lg:mb-0 lg:w-1/4 rounded-md">
       {categories && (
         <React.Fragment>
           <Heading
@@ -220,9 +219,8 @@ function CategoryItem({
   return (
     <li key={key}>
       <Button
-        as="button"
         variant="unstyled"
-        ariaLabel="Show all blog posts"
+        aria-label="Show all blog posts"
         className={`mb-4 block ${
           !category ? "hidden" : "block"
         } px-3 py-2 hover:bg-secondary-foreground focus:outline-none w-full text-left rounded ${
@@ -330,8 +328,7 @@ function Pagination({ blogsPerPage, totalBlogs, paginate, currentPage }: Paginat
         {pageNumber.map(number => (
           <Button
             variant="unstyled"
-            as="button"
-            ariaLabel={`Page ${number}`}
+            aria-label={`Page ${number}`}
             key={number}
             className={`${
               currentPage === number

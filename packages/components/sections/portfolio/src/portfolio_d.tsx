@@ -3,10 +3,12 @@ import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
 import { Image } from "@stackshift-ui/image";
+import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
 import { Text } from "@stackshift-ui/text";
 import React from "react";
 
+import { buildSanityLink } from "@stackshift-ui/system";
 import { PortfolioProps } from ".";
 import { useMediaQuery } from "./helper";
 import { Content, LabeledRoute, PortfoliosWithCategories } from "./types";
@@ -83,10 +85,18 @@ function CaptionAndTitleText({
 function PrimaryButton({ button }: { button?: LabeledRoute | null }) {
   if (!button?.label) return null;
 
+  const link = buildSanityLink({
+    type: button?.type ?? "",
+    internalLink: button?.internalLink ?? "",
+    externalLink: button?.externalLink ?? "",
+  });
+
   return (
     <div className="text-center">
-      <Button as="link" ariaLabel={button?.label} link={button}>
-        {button?.label}
+      <Button asChild aria-label={button?.label}>
+        <Link href={link.href} target={link.target} rel={link.rel}>
+          {button?.label}
+        </Link>
       </Button>
     </div>
   );
@@ -104,15 +114,14 @@ function PortfolioCategories({
   if (!categories || categories?.length === 0) return null;
 
   return (
-    <Flex className="inline-flex py-1 text-sm bg-white rounded" wrap>
+    <Flex className="inline-flex px-2 py-1 text-sm bg-white rounded" wrap>
       {categories?.map((content, index) => (
         <Button
-          variant="tab"
-          as="button"
-          ariaLabel={content?.category ?? `Category button ${index + 1}`}
-          className="my-1"
+          variant="ghost"
+          aria-label={content?.category ?? `Category button ${index + 1}`}
+          className="my-1 data-[active=true]:text-primary"
           key={content?._key}
-          isActive={activeTab === content?.category}
+          data-active={activeTab === content?.category}
           onClick={() => onClickFn?.(content?.category)}>
           {content?.category}
         </Button>
@@ -124,6 +133,12 @@ function PortfolioCategories({
 function ProjectItem({ size, content }: { size?: string | null; content?: Content }) {
   const breakpoints = useMediaQuery("639");
   const maxLength = breakpoints ? 40 : 90;
+
+  const link = buildSanityLink({
+    type: content?.primaryButton?.type ?? "",
+    internalLink: content?.primaryButton?.internalLink ?? "",
+    externalLink: content?.primaryButton?.externalLink ?? "",
+  });
 
   return (
     <div className={`w-full px-4 mb-8 ${size === "lg" ? "w-full" : "lg:w-1/2"}`}>
@@ -164,12 +179,13 @@ function ProjectItem({ size, content }: { size?: string | null; content?: Conten
                 )}
                 {content?.primaryButton?.label && (
                   <Button
-                    as="link"
+                    asChild
                     variant="outline"
-                    ariaLabel={content?.primaryButton?.label}
-                    link={content?.primaryButton}
+                    aria-label={content?.primaryButton?.label}
                     className="bg-transparent border-secondary outline text-white hover:bg-secondary/20 hover:border-secondary/20 inline-block rounded-global font-bold transition duration-200 px-3 py-4">
-                    {content?.primaryButton?.label}
+                    <Link href={link.href} target={link.target} rel={link.rel}>
+                      {content?.primaryButton?.label}
+                    </Link>
                   </Button>
                 )}
               </div>

@@ -41,7 +41,7 @@ export function DatePicker({ label, mode = "range", selectedDate, onSelect }: Da
           </Button>
         </PopoverTrigger>
         <PopoverContent className="w-auto overflow-hidden p-0" align="start">
-          {/* @ts-expect-error */}
+          {/* @ts-ignore-error */}
           <Calendar mode={mode} selected={date} captionLayout="dropdown" onSelect={handleSelect} />
         </PopoverContent>
       </Popover>
@@ -194,7 +194,7 @@ export function DatePickerTime({ label, selectedDate, onSelect }: DatePickerTime
           Time
         </Label>
         <Input
-          /* @ts-expect-error */
+          /* @ts-ignore-error */
           type="time"
           id="time-picker"
           step="1"

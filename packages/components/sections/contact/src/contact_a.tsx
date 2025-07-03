@@ -219,8 +219,7 @@ function FormFields({
             </div>
             {form?.buttonLabel && (
               <Button
-                as="button"
-                ariaLabel={form?.buttonLabel ?? "Contact form submit button"}
+                aria-label={form?.buttonLabel ?? "Contact form submit button"}
                 className="inline-block px-6 py-2 mt-5 font-bold leading-loose text-white transition duration-200 rounded-global bg-primary hover:bg-primary-foreground sm:mt-0"
                 type="submit">
                 {form?.buttonLabel}

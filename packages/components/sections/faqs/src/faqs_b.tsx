@@ -83,10 +83,9 @@ function FAQCategoryTabs({
       <Flex wrap className="text-base text-center sm:text-md lg:text-xl">
         {categories?.map((tab, index) => (
           <Button
-            as="button"
             key={index}
             variant="unstyled"
-            ariaLabel={tab?.category || ""}
+            aria-label={tab?.category || ""}
             onClick={() => setActiveCategory(tab?.category ?? "")}
             className={`w-full px-4 py-4 font-bold md:w-1/2 lg:w-auto ${
               activeCategory === tab?.category
@@ -153,9 +152,8 @@ function FAQItem({
   return (
     <li className="py-12 pr-4 border-b" key={index}>
       <Button
-        as="button"
         variant="unstyled"
-        ariaLabel={content?.question || ""}
+        aria-label={content?.question || ""}
         className="flex items-center justify-between w-full font-bold text-left font-heading hover:text-gray-600 focus:outline-none"
         onClick={() => toggleView(index)}>
         <Text fontSize="xs" weight="semibold" className="text-gray-500 lg:text-xl">

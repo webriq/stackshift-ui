@@ -40,9 +40,7 @@ function TeamMemberCard({ team }: { team?: iTeam[] }) {
       {team &&
         team.map((member, index) => (
           <div className="w-full md:px-4 mb-6 md:w-1/2" key={index}>
-            <Card
-              className="flex flex-col xl:flex-row items-center gap-3 bg-white overflow-hidden shadow-lg "
-              borderRadius="md">
+            <Card className="flex flex-col xl:flex-row items-center gap-3 bg-white overflow-hidden shadow-lg rounded-md">
               {member.mainImage?.image && (
                 <Image
                   className="h-full w-full object-cover rounded-md [@media(min-width:320px)]:h-[320px] xl:w-[179px]"

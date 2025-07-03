@@ -3,10 +3,12 @@ import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
 import { Image } from "@stackshift-ui/image";
+import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
 import { Text } from "@stackshift-ui/text";
 import React from "react";
 
+import { buildSanityLink } from "@stackshift-ui/system";
 import { PortfolioProps } from ".";
 import { Content, LabeledRoute, PortfoliosWithCategories } from "./types";
 
@@ -65,10 +67,18 @@ function CaptionAndTitleText({
 function PrimaryButton({ button }: { button?: LabeledRoute | null }) {
   if (!button?.label) return null;
 
+  const link = buildSanityLink({
+    type: button?.type ?? "",
+    internalLink: button?.internalLink ?? "",
+    externalLink: button?.externalLink ?? "",
+  });
+
   return (
     <div className="text-center">
-      <Button as="link" ariaLabel={button?.label} link={button}>
-        {button?.label}
+      <Button asChild aria-label={button?.label}>
+        <Link href={link.href} target={link.target} rel={link.rel}>
+          {button?.label}
+        </Link>
       </Button>
     </div>
   );
@@ -89,14 +99,12 @@ function PortfolioCategories({
     <Flex className="inline-flex px-2 py-1 text-sm bg-white rounded" wrap>
       {categories?.map((content, index) => (
         <Button
-          variant="tab"
-          as="button"
-          ariaLabel={content?.category ?? `Category button ${index + 1}`}
-          className="my-1"
+          variant="ghost"
+          aria-label={content?.category ?? `Category button ${index + 1}`}
+          className="my-1 data-[active=true]:text-primary"
           key={content?._key}
-          isActive={activeTab === content?.category}
-          onClick={() => onClickFn?.(content?.category)}
-        >
+          data-active={activeTab === content?.category}
+          onClick={() => onClickFn?.(content?.category)}>
           {content?.category}
         </Button>
       ))}
@@ -115,31 +123,40 @@ function PortfolioContent({
 
   return (
     <Flex wrap className="mb-8">
-      {portfolios?.slice(0, portfolioLength)?.map((content, index: number) => (
-        <Flex className="w-full space-x-5 px-4 mb-8 sm:w-1/2 lg:w-1/4" key={content?._key}>
-          <div className="relative mx-auto h-[256px] w-[332px] overflow-hidden rounded-md">
-            {content?.mainImage?.image && (
-              <Image
-                className="object-cover w-full h-full"
-                src={content?.mainImage?.image}
-                alt={content?.mainImage?.alt ?? `portfolio-image-${index}`}
-              />
-            )}
-            <div className="absolute inset-0 z-10 flex items-center justify-center duration-300 bg-slate-900 rounded-md opacity-0 hover:opacity-75">
-              {content?.primaryButton?.label && (
-                <Button
-                  as="link"
-                  variant="outline"
-                  ariaLabel={content?.primaryButton?.label}
-                  link={content?.primaryButton}
-                  className="bg-transparent border-secondary outline text-white hover:bg-secondary/20 hover:border-secondary/20 inline-block rounded-global font-bold transition duration-200 px-3 py-4">
-                  {content?.primaryButton?.label}
-                </Button>
+      {portfolios?.slice(0, portfolioLength)?.map((content, index: number) => {
+        const link = buildSanityLink({
+          type: content?.primaryButton?.type ?? "",
+          internalLink: content?.primaryButton?.internalLink ?? "",
+          externalLink: content?.primaryButton?.externalLink ?? "",
+        });
+
+        return (
+          <Flex className="w-full space-x-5 px-4 mb-8 sm:w-1/2 lg:w-1/4" key={content?._key}>
+            <div className="relative mx-auto h-[256px] w-[332px] overflow-hidden rounded-md">
+              {content?.mainImage?.image && (
+                <Image
+                  className="object-cover w-full h-full"
+                  src={content?.mainImage?.image}
+                  alt={content?.mainImage?.alt ?? `portfolio-image-${index}`}
+                />
               )}
+              <div className="absolute inset-0 z-10 flex items-center justify-center duration-300 bg-slate-900 rounded-md opacity-0 hover:opacity-75">
+                {content?.primaryButton?.label && (
+                  <Button
+                    asChild
+                    variant="outline"
+                    aria-abel={content?.primaryButton?.label}
+                    className="bg-transparent border-secondary outline text-white hover:bg-secondary/20 hover:border-secondary/20 inline-block rounded-global font-bold transition duration-200 px-3 py-4">
+                    <Link href={link.href} target={link.target} rel={link.rel}>
+                      {content?.primaryButton?.label}
+                    </Link>
+                  </Button>
+                )}
+              </div>
             </div>
-          </div>
-        </Flex>
-      ))}
+          </Flex>
+        );
+      })}
     </Flex>
   );
 }

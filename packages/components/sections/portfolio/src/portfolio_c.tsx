@@ -3,9 +3,11 @@ import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
 import { Image } from "@stackshift-ui/image";
+import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
 import { Text } from "@stackshift-ui/text";
 
+import { buildSanityLink } from "@stackshift-ui/system";
 import { PortfolioProps } from ".";
 import { Content } from "./types";
 
@@ -18,6 +20,12 @@ export default function Portfolio_C({
 }: PortfolioProps) {
   const portfolioLength = length; //set initial number of portfolios to display for this variant
 
+  const link = buildSanityLink({
+    type: primaryButton?.type ?? "",
+    internalLink: primaryButton?.internalLink ?? "",
+    externalLink: primaryButton?.externalLink ?? "",
+  });
+
   return (
     <Section className="py-20 bg-background">
       <Container maxWidth={1280}>
@@ -25,8 +33,10 @@ export default function Portfolio_C({
           <CaptionAndTitleText caption={caption} title={title} />
           <div className="hidden mt-5 text-right md:mt-0 lg:mt-0 lg:block xl:mt-0">
             {primaryButton?.label && (
-              <Button as="link" ariaLabel={primaryButton?.label} link={primaryButton}>
-                {primaryButton?.label}
+              <Button asChild aria-label={primaryButton?.label}>
+                <Link href={link.href} target={link.target} rel={link.rel}>
+                  {primaryButton?.label}
+                </Link>
               </Button>
             )}
           </div>
@@ -34,8 +44,10 @@ export default function Portfolio_C({
         <PortfolioContent portfolios={portfolios} portfolioLength={portfolioLength} />
         <div className="block mt-5 text-center md:mt-0 lg:mt-0 lg:hidden xl:mt-0">
           {primaryButton?.label && (
-            <Button as="link" ariaLabel={primaryButton?.label} link={primaryButton}>
-              {primaryButton?.label}
+            <Button asChild aria-label={primaryButton?.label}>
+              <Link href={link.href} target={link.target} rel={link.rel}>
+                {primaryButton?.label}
+              </Link>
             </Button>
           )}
         </div>
@@ -64,6 +76,12 @@ function CaptionAndTitleText({
 }
 
 function ProjectItem({ content }: { content: Content }) {
+  const link = buildSanityLink({
+    type: content?.primaryButton?.type ?? "",
+    internalLink: content?.primaryButton?.internalLink ?? "",
+    externalLink: content?.primaryButton?.externalLink ?? "",
+  });
+
   return (
     <div className="relative w-full px-4 mb-8 md:w-1/2 lg:w-1/3">
       {content?.mainImage?.image && (
@@ -86,12 +104,13 @@ function ProjectItem({ content }: { content: Content }) {
             )}
             {content?.primaryButton?.label && (
               <Button
-                as="link"
+                asChild
                 variant="link"
-                ariaLabel={content?.primaryButton?.label}
-                link={content?.primaryButton}
+                aria-label={content?.primaryButton?.label}
                 className="font-bold no-underline text-primary transition-200 hover:text-primary/50">
-                {content?.primaryButton?.label}
+                <Link href={link.href} target={link.target} rel={link.rel}>
+                  {content?.primaryButton?.label}
+                </Link>
               </Button>
             )}
           </div>

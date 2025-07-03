@@ -9,6 +9,7 @@ import { Image } from "@stackshift-ui/image";
 import { Input } from "@stackshift-ui/input";
 import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
+import { buildSanityLink } from "@stackshift-ui/system";
 import { Text } from "@stackshift-ui/text";
 import React from "react";
 import { SignUpFormProps } from ".";
@@ -21,7 +22,7 @@ export default function SigninSignup_B({ logo, form, formLinks, signInLink }: Si
       <Container maxWidth={1280}>
         <Container maxWidth={576}>
           <LogoSection logo={logo} />
-          <Card borderRadius="md" className="p-6 mb-6 bg-white lg:mb-10 lg:p-12">
+          <Card className="p-6 mb-6 bg-white lg:mb-10 lg:p-12 rounded-md">
             <SubtitleAndHeadingText form={form} />
             <SignupForm form={form} signInLink={signInLink} />
           </Card>
@@ -167,9 +168,7 @@ function PasswordField({
   return (
     <div className="flex flex-col sm:flex-row gap-2 items-center">
       <Input
-        noLabel
-        ariaLabel={formFields?.placeholder ?? formFields?.name}
-        variant="secondary"
+        aria-label={formFields?.placeholder ?? formFields?.name}
         type={showPassword ? "text" : "password"}
         placeholder={formFields?.placeholder}
         name={formFields?.name}
@@ -178,8 +177,7 @@ function PasswordField({
       {/* SVG icon on the right of the password input field */}
       <Button
         variant="unstyled"
-        as="button"
-        ariaLabel={showPassword ? "Show password" : "Hide password"}
+        aria-label={showPassword ? "Show password" : "Hide password"}
         className="focus:outline-none"
         type="button"
         onClick={togglePassword}>
@@ -197,10 +195,9 @@ function FormButtonLabel({ form }: { form?: iForm }) {
 
   return (
     <Button
-      as="button"
       className="w-full py-4 mb-3"
-      ariaLabel={form?.buttonLabel ?? "Sign Up form submit button"}
-      variant="custom"
+      aria-label={form?.buttonLabel ?? "Sign Up form submit button"}
+      variant="ghost"
       type="submit">
       {form?.buttonLabel}
     </Button>
@@ -210,16 +207,23 @@ function FormButtonLabel({ form }: { form?: iForm }) {
 function SigninLink({ signInLink }: { signInLink?: LabeledRoute }) {
   if (!signInLink?.label) return null;
 
+  const link = buildSanityLink({
+    type: signInLink?.type ?? "",
+    internalLink: signInLink?.internalLink ?? "",
+    externalLink: signInLink?.externalLink ?? "",
+  });
+
   return (
     <span className="text-xs text-gray-900">
       <span>Already have an account?</span>{" "}
       <Button
-        as="link"
         variant="link"
-        link={signInLink}
         className="text-xs text-primary hover:underline"
-        ariaLabel={signInLink?.label}>
-        {signInLink?.label}
+        aria-label={signInLink?.label}
+        asChild>
+        <Link href={link.href} target={link.target} rel={link.rel}>
+          {signInLink?.label}
+        </Link>
       </Button>
     </span>
   );
@@ -230,23 +234,32 @@ function FormLinks({ formLinks }: { formLinks?: LabeledRoute[] }) {
 
   return (
     <p className="text-xs text-center text-secondary-foreground">
-      {formLinks?.map((link, index, { length }) => (
-        <span key={index}>
-          <Button
-            as="link"
-            variant="link"
-            link={link}
-            className="text-xs underline text-secondary-foreground hover:text-gray-50"
-            ariaLabel={link?.label}>
-            {link?.label}
-          </Button>
-          {index === length - 1 ? null : index === length - 2 ? (
-            <span>&nbsp;and&nbsp;</span>
-          ) : (
-            <span>&nbsp;,&nbsp;</span>
-          )}
-        </span>
-      ))}
+      {formLinks?.map((link, index, { length }) => {
+        const linkObj = buildSanityLink({
+          type: link?.type ?? "",
+          internalLink: link?.internalLink ?? "",
+          externalLink: link?.externalLink ?? "",
+        });
+
+        return (
+          <span key={index}>
+            <Button
+              variant="link"
+              className="text-xs underline text-secondary-foreground hover:text-gray-50"
+              aria-label={link?.label}
+              asChild>
+              <Link href={linkObj?.href} target={linkObj?.target} rel={linkObj?.rel}>
+                {link?.label}
+              </Link>
+            </Button>
+            {index === length - 1 ? null : index === length - 2 ? (
+              <span>&nbsp;and&nbsp;</span>
+            ) : (
+              <span>&nbsp;,&nbsp;</span>
+            )}
+          </span>
+        );
+      })}
     </p>
   );
 }

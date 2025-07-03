@@ -161,8 +161,7 @@ function FAQs({
           <Card className="p-6 bg-gray-50">
             <Button
               variant="unstyled"
-              as="button"
-              ariaLabel={faq?.question || `faqs-question-${index}`}
+              aria-label={faq?.question || `faqs-question-${index}`}
               className="flex items-center justify-between w-full font-bold text-left border-none font-heading hover:text-gray-600 focus:outline-none"
               onClick={() => toggleView(index + indexOfFirstQuestion)}>
               <Text fontSize="xl" weight="semibold">
@@ -219,8 +218,7 @@ function Pagination({
       {pageButtons?.map(buttonNumber => (
         <Button
           variant="unstyled"
-          as="button"
-          ariaLabel={`Page ${buttonNumber}`}
+          aria-label={`Page ${buttonNumber}`}
           key={buttonNumber}
           className="inline-block w-2 h-2 rounded-full bg-primary-foreground"
           onClick={() => changePage(buttonNumber)}
@@ -233,9 +231,8 @@ function Pagination({
 function SearchButtonIcon() {
   return (
     <Button
-      as="button"
       variant="unstyled"
-      ariaLabel="Search button"
+      aria-label="Search button"
       className="hidden sm:flex absolute inset-y-0 right-0 items-center pr-4 text-primary">
       <svg
         className="w-6 h-6"

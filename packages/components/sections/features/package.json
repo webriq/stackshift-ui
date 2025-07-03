@@ -51,6 +51,7 @@
     "@stackshift-ui/section": "workspace:*",
     "@stackshift-ui/container": "workspace:*",
     "@stackshift-ui/flex": "workspace:*",
+    "@stackshift-ui/link": "workspace:*",
     "classnames": "^2.5.1"
   },
   "peerDependencies": {

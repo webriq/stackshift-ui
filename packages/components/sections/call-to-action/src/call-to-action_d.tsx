@@ -1,16 +1,17 @@
-import React from "react";
-import { CTAProps } from ".";
-import { SigninSignup_A } from "@stackshift-ui/signin-signup";
 import { Button } from "@stackshift-ui/button";
-import { Link } from "@stackshift-ui/link";
-import { Image } from "@stackshift-ui/image";
-import { Heading } from "@stackshift-ui/heading";
-import { Text } from "@stackshift-ui/text";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
-import { Form as iForm, LabeledRoute, LabeledRouteWithKey, Logo } from "./types";
+import { Heading } from "@stackshift-ui/heading";
+import { Image } from "@stackshift-ui/image";
+import { Link } from "@stackshift-ui/link";
+import { Section } from "@stackshift-ui/section";
+import { SigninSignup_A } from "@stackshift-ui/signin-signup";
+import { buildSanityLink } from "@stackshift-ui/system";
+import { Text } from "@stackshift-ui/text";
+import React from "react";
+import { CTAProps } from ".";
 import { logoLink } from "./helper";
+import { Form as iForm, LabeledRoute, LabeledRouteWithKey, Logo } from "./types";
 
 export default function CallToAction_D({
   logo,
@@ -78,9 +79,17 @@ function TitleAndText({ title, text }: { title?: string; text?: string }) {
 function CTABtton({ button }: { button?: LabeledRoute }) {
   if (!button?.label) return null;
 
+  const link = buildSanityLink({
+    type: button?.type ?? "",
+    internalLink: button?.internalLink ?? "",
+    externalLink: button?.externalLink ?? "",
+  });
+
   return (
-    <Button as="link" link={button} ariaLabel={button?.label}>
-      {button?.label}
+    <Button variant="link" aria-label={button?.label} asChild>
+      <Link href={link.href} target={link.target} rel={link.rel}>
+        {button?.label}
+      </Link>
     </Button>
   );
 }

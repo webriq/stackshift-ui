@@ -4,6 +4,7 @@ import { Heading } from "@stackshift-ui/heading";
 import { Image } from "@stackshift-ui/image";
 import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
+import { buildSanityLink } from "@stackshift-ui/system";
 import { Text } from "@stackshift-ui/text";
 import React from "react";
 import { CTAProps } from ".";
@@ -59,9 +60,17 @@ function HeadingAndText({ title, text }: { title?: string; text?: string }) {
 function CTAButton({ button }: { button?: LabeledRoute }) {
   if (!button?.label) return null;
 
+  const link = buildSanityLink({
+    type: button?.type ?? "",
+    internalLink: button?.internalLink ?? "",
+    externalLink: button?.externalLink ?? "",
+  });
+
   return (
-    <Button as="link" link={button} ariaLabel={button?.label}>
-      {button?.label}
+    <Button variant="link" aria-label={button?.label} asChild>
+      <Link href={link.href} target={link.target} rel={link.rel}>
+        {button?.label}
+      </Link>
     </Button>
   );
 }

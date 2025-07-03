@@ -62,9 +62,7 @@ function FeaturesInfo({ featuredItems, item }: { featuredItems?: FeaturedItem[];
   if (!featuredItems) return null;
 
   return (
-    <Card
-      className="top-0 left-0 max-w-xl p-6 mx-auto text-center bg-white md:mt-12 md:p-10 lg:mt-12 lg:p-10 xl:absolute xl:mx-0 xl:mt-20 xl:py-24"
-      borderRadius="md">
+    <Card className="top-0 left-0 max-w-xl p-6 mx-auto text-center bg-white md:mt-12 md:p-10 lg:mt-12 lg:p-10 xl:absolute xl:mx-0 xl:mt-20 xl:py-24 rounded-md">
       <Text weight="bold" className="text-xs lg:text-md md:text-sm xl:text-lg text-secondary">
         {featuredItems?.[item]?.subtitle && featuredItems?.[item]?.subtitle}
       </Text>
@@ -96,8 +94,7 @@ function SliderControls({
       <div className="absolute left-0 z-40 items-center mt-20 -mx-3 order-0 md:mt-40 lg:mt-60 xl:-mx-6 xl:flex">
         {featuredItems?.length >= 2 && (
           <Button
-            as="button"
-            ariaLabel="Show Previous Feature"
+            aria-label="Show Previous Feature"
             className="z-10 p-4 text-white "
             onClick={() => slider("prev")}>
             <svg
@@ -119,8 +116,7 @@ function SliderControls({
       <div className="absolute right-0 z-40 items-center order-2 mt-20 -mx-3 md:mt-40 lg:mt-60 xl:-mx-6 xl:flex">
         {featuredItems?.length >= 2 && (
           <Button
-            as="button"
-            ariaLabel="Show Next Feature"
+            aria-label="Show Next Feature"
             className="p-4 text-white "
             onClick={() => slider("next")}>
             <svg

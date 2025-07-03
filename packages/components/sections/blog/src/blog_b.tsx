@@ -5,6 +5,7 @@ import { Heading } from "@stackshift-ui/heading";
 import { Image } from "@stackshift-ui/image";
 import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
+import { buildSanityLink } from "@stackshift-ui/system";
 import { Text } from "@stackshift-ui/text";
 import { format } from "date-fns";
 import { BlogProps } from ".";
@@ -166,10 +167,22 @@ function ImageContainer({
 function PrimaryButton({ primaryButton }: { primaryButton?: LabeledRoute }) {
   if (!primaryButton?.label) return null;
 
+  const link = buildSanityLink({
+    type: primaryButton?.type ?? "",
+    internalLink: primaryButton?.internalLink ?? "",
+    externalLink: primaryButton?.externalLink ?? "",
+  });
+
   return (
     <div className="text-center">
-      <Button as="link" link={primaryButton} ariaLabel={primaryButton?.label}>
-        {primaryButton?.label}
+      <Button aria-label={primaryButton?.label} asChild>
+        <Link
+          href={link.href}
+          target={link.target}
+          rel={link.rel}
+          aria-label={primaryButton?.label}>
+          {primaryButton?.label}
+        </Link>
       </Button>
     </div>
   );

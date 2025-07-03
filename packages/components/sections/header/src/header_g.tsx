@@ -1,8 +1,10 @@
 import { Button } from "@stackshift-ui/button";
 import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
+import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
 import { SwiperPagination } from "@stackshift-ui/swiper-pagination";
+import { buildSanityLink } from "@stackshift-ui/system";
 import { Text } from "@stackshift-ui/text";
 import { useEffect, useState } from "react";
 import { HeaderProps } from ".";
@@ -42,6 +44,18 @@ export default function Header_G({
         return "items-center text-center";
     }
   };
+
+  const primaryButtonLink = buildSanityLink({
+    type: "linkInternal",
+    internalLink: primaryButton?.link?.target === "_self" ? primaryButton?.link?.route : "",
+    externalLink: primaryButton?.link?.target != "_self" ? primaryButton?.link?.route : "",
+  });
+
+  const secondaryButtonLink = buildSanityLink({
+    type: "linkInternal",
+    internalLink: secondaryButton?.link?.target === "_self" ? secondaryButton?.link?.route : "",
+    externalLink: secondaryButton?.link?.target != "_self" ? secondaryButton?.link?.route : "",
+  });
 
   return (
     <Section>
@@ -90,22 +104,29 @@ export default function Header_G({
               gap={4}>
               {primaryButton?.label && (
                 <Button
-                  as="link"
-                  link={primaryButton}
-                  ariaLabel={primaryButton?.ariaLabel}
-                  variant="solid"
+                  asChild
+                  aria-label={primaryButton?.ariaLabel}
+                  variant="default"
                   className="text-white border text-sm uppercase cursor-pointer px-10 py-4 hover:bg-white hover:text-primary transition-all duration-500 ease-in-out">
-                  {primaryButton.label}
+                  <Link
+                    href={primaryButtonLink.href}
+                    target={primaryButtonLink.target}
+                    rel={primaryButtonLink.rel}>
+                    {primaryButton.label}
+                  </Link>
                 </Button>
               )}
               {secondaryButton?.label && (
                 <Button
-                  as="link"
-                  link={secondaryButton}
-                  variant="solid"
-                  ariaLabel={secondaryButton?.ariaLabel}
+                  variant="default"
+                  aria-label={secondaryButton?.ariaLabel}
                   className="text-white border text-sm uppercase cursor-pointer px-10 py-4 hover:bg-white hover:text-secondary transition-all duration-500 ease-in-out">
-                  {secondaryButton.label}
+                  <Link
+                    href={secondaryButtonLink.href}
+                    target={secondaryButtonLink.target}
+                    rel={secondaryButtonLink.rel}>
+                    {secondaryButton.label}
+                  </Link>
                 </Button>
               )}
             </Flex>

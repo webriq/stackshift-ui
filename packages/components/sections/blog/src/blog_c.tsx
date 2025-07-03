@@ -6,6 +6,7 @@ import { Heading } from "@stackshift-ui/heading";
 import { Image } from "@stackshift-ui/image";
 import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
+import { buildSanityLink } from "@stackshift-ui/system";
 import { Text } from "@stackshift-ui/text";
 import { format } from "date-fns";
 import React from "react";
@@ -128,14 +129,20 @@ function BlogItem({ post, className, key }: { key: number; post: BlogPost; class
 
 function PrimaryButton({ primaryButton }: { primaryButton?: LabeledRoute }) {
   if (!primaryButton?.label) return null;
+  const link = buildSanityLink({
+    type: primaryButton?.type ?? "",
+    internalLink: primaryButton?.internalLink ?? "",
+    externalLink: primaryButton?.externalLink ?? "",
+  });
 
   return (
     <Button
-      as="link"
-      link={primaryButton}
-      ariaLabel={primaryButton?.label}
+      asChild
+      aria-label={primaryButton?.label}
       className="inline-flex flex-wrap text-center bg-primary text-sm sm:text-base px-6 py-3 rounded-global">
-      {primaryButton?.label}
+      <Link href={link.href} target={link.target} rel={link.rel} aria-label={primaryButton?.label}>
+        {primaryButton?.label}
+      </Link>
     </Button>
   );
 }

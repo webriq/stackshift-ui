@@ -124,7 +124,7 @@ function TestimonialItem({
 
   return (
     <div className="flex-1 mb-4 px-3 w-full lg:w-1/3">
-      <Card className="p-5 h-full" borderRadius="md">
+      <Card className="p-5 h-full rounded-md">
         <QuoteIcon />
         <Text className="mb-4 leading-loose" muted>
           {testimony}
