@@ -37,7 +37,7 @@ function FeatureInfo({
   description?: string;
 }) {
   return (
-    <div className="flex flex-col gap-3">
+    <Flex direction="col" gap={3}>
       {caption && (
         <Text weight="bold" className="text-secondary">
           {caption}
@@ -49,7 +49,7 @@ function FeatureInfo({
           {description}
         </Text>
       )}
-    </div>
+    </Flex>
   );
 }
 

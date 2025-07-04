@@ -48,5 +48,8 @@
   },
   "overrides": {
     "eslint": "^8.0.0"
+  },
+  "dependencies": {
+    "@stackshift-ui/link": "^6.0.11"
   }
 }

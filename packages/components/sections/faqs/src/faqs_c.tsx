@@ -4,7 +4,6 @@ import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
 import { Section } from "@stackshift-ui/section";
 import { Text } from "@stackshift-ui/text";
-import React from "react";
 import { FAQProps } from ".";
 
 export interface AskedQuestion {
@@ -59,9 +58,9 @@ function FAQItems({ faqs }: { faqs?: AskedQuestion[] }) {
 
 function FAQItem({ faq }: FAQItemProps) {
   return (
-    <Container className="w-full px-4 mb-8 lg:w-1/2" maxWidth={1000}>
-      <Card className="h-full lg:p-8 bg-white rounded-md">
-        <Flex align="start" className="mb-6" gap={3}>
+    <Container className="w-full px-0 lg:px-4 mb-8 lg:w-1/2" maxWidth={1000}>
+      <Card className="h-full p-4 lg:p-8 bg-white rounded-md">
+        <Flex align="start" className="mb-3 lg:mb-6" gap={3}>
           <span className="inline-block p-3 rounded-full bg-primary">
             <QuoteIcon />
           </span>
@@ -72,7 +71,7 @@ function FAQItem({ faq }: FAQItemProps) {
           ) : null}
         </Flex>
         {faq?.answer ? (
-          <Text className="leading-loose" muted>
+          <Text className="leading-loose px-2" muted>
             {faq?.answer}
           </Text>
         ) : null}

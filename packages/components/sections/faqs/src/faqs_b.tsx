@@ -156,13 +156,16 @@ function FAQItem({
         aria-label={content?.question || ""}
         className="flex items-center justify-between w-full font-bold text-left font-heading hover:text-gray-600 focus:outline-none"
         onClick={() => toggleView(index)}>
-        <Text fontSize="xs" weight="semibold" className="text-gray-500 lg:text-xl">
+        <Text
+          fontSize="xs"
+          weight="semibold"
+          className="text-gray-500 lg:text-xl whitespace-normal">
           {content?.question}
         </Text>
         <ArrowIcon show={show} activeQA={activeQA} index={index} />
       </Button>
       {show && activeQA === index && (
-        <Text fontSize="xs" muted className="mt-4 lg:text-xl">
+        <Text fontSize="xs" muted className="mt-4 lg:text-xl px-4">
           {content?.answer}
         </Text>
       )}

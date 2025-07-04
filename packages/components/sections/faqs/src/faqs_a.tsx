@@ -1,5 +1,5 @@
 import { Button } from "@stackshift-ui/button";
-import { Card } from "@stackshift-ui/card";
+import { Card, CardContent } from "@stackshift-ui/card";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
@@ -154,48 +154,46 @@ function FAQs({
 }) {
   if (!items) return null;
 
-  return (
-    <React.Fragment>
-      {items?.map((faq, index) => (
-        <li key={index}>
-          <Card className="p-6 bg-gray-50">
-            <Button
-              variant="unstyled"
-              aria-label={faq?.question || `faqs-question-${index}`}
-              className="flex items-center justify-between w-full font-bold text-left border-none font-heading hover:text-gray-600 focus:outline-none"
-              onClick={() => toggleView(index + indexOfFirstQuestion)}>
-              <Text fontSize="xl" weight="semibold">
-                {faq?.question}
-              </Text>
-              <svg
-                className="w-4 h-4 text-primary"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d={
-                    show && activeTab === index + indexOfFirstQuestion
-                      ? "M5 10l7-7m0 0l7 7m-7-7v18"
-                      : "M19 14l-7 7m0 0l-7-7m7 7V3"
-                  }
-                />
-              </svg>
-            </Button>
+  return items?.map((faq, index) => (
+    <li key={index}>
+      <Card className="p-6 bg-gray-50">
+        <Button
+          variant="unstyled"
+          aria-label={faq?.question || `faqs-question-${index}`}
+          className="flex items-center justify-between w-full font-bold text-left border-none font-heading hover:text-gray-600 focus:outline-none px-0"
+          onClick={() => toggleView(index + indexOfFirstQuestion)}>
+          <Text fontSize="xl" weight="semibold" className="whitespace-normal">
+            {faq?.question}
+          </Text>
+          <svg
+            className="w-4 h-4 text-primary"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d={
+                show && activeTab === index + indexOfFirstQuestion
+                  ? "M5 10l7-7m0 0l7 7m-7-7v18"
+                  : "M19 14l-7 7m0 0l-7-7m7 7V3"
+              }
+            />
+          </svg>
+        </Button>
 
-            {show && activeTab === index + indexOfFirstQuestion && (
-              <Text muted className="mt-4 leading-loose0">
-                {faq?.answer}
-              </Text>
-            )}
-          </Card>
-        </li>
-      ))}
-    </React.Fragment>
-  );
+        {show && activeTab === index + indexOfFirstQuestion && (
+          <CardContent className="p-0">
+            <Text muted className="mt-4 leading-loose0">
+              {faq?.answer}
+            </Text>
+          </CardContent>
+        )}
+      </Card>
+    </li>
+  ));
 }
 
 function Pagination({

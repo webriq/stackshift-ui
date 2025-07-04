@@ -62,10 +62,10 @@ function ActionForm({ form }: { form?: iForm }) {
         direction="col"
         className="lg:items-start lg:justify-start sm:flex-row">
         {form?.fields?.[0] ? <CTAInput field={form.fields[0]} /> : null}
+        <CTAButton form={form} />
         <div>
           <div className="webriq-recaptcha" />
         </div>
-        <CTAButton form={form} />
       </Flex>
     </Form>
   );
@@ -77,7 +77,7 @@ function CTAInput({ field }: { field?: any }) {
   return (
     <Input
       aria-label={field?.placeholder ?? field?.name}
-      className="w-full sm:max-w-md mr-2"
+      className="w-full sm:max-w-md"
       type={inputType}
       placeholder={field?.placeholder}
       name={field?.name}

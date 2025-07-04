@@ -73,36 +73,34 @@ function Buttons({
   return (
     <Flex
       align="center"
-      className="flex items-center justify-center lg:justify-start gap-2 flex-col md:flex-row"
-      gap={2}>
-      {primaryButton?.label ? (
-        <Button
-          aria-label={primaryButton?.ariaLabel ?? primaryButton?.label}
-          variant="default"
-          className="bg-primary hover:bg-primary/50 rounded-global px-6 py-3 text-white"
-          asChild>
+      justify="center"
+      gap={2}
+      direction="col"
+      className="lg:justify-start md:flex-row">
+      {primaryButton?.label && (
+        <Button variant="default" aria-label={primaryButton?.label} asChild>
           <Link
             href={primaryButtonLink.href}
             target={primaryButtonLink.target}
             rel={primaryButtonLink.rel}>
-            {primaryButton.label}
+            {primaryButton?.label}
           </Link>
         </Button>
-      ) : null}
-      {secondaryButton?.label ? (
+      )}
+      {secondaryButton?.label && (
         <Button
-          aria-label={secondaryButton.ariaLabel ?? secondaryButton?.label}
-          variant="default"
-          className="bg-secondary hover:bg-secondary/50 rounded-global px-6 py-3"
+          variant="secondary"
+          className="bg-transparent border hover:bg-gray-300 inline-block font-default text-default transition duration-200 rounded-global"
+          aria-label={secondaryButton?.label}
           asChild>
           <Link
             href={secondaryButtonLink.href}
             target={secondaryButtonLink.target}
             rel={secondaryButtonLink.rel}>
-            {secondaryButton.label}
+            {secondaryButton?.label}
           </Link>
         </Button>
-      ) : null}
+      )}
     </Flex>
   );
 }

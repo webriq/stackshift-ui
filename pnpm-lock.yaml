@@ -10,6 +10,10 @@ overrides:
 importers:
 
   .:
+    dependencies:
+      '@stackshift-ui/link':
+        specifier: ^6.0.11
+        version: 6.0.11(@types/react@18.3.11)(next@14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     devDependencies:
       '@changesets/cli':
         specifier: ^2.28.1
@@ -123,6 +127,9 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.3.1(react@18.3.1)
+      sonner:
+        specifier: ^2.0.5
+        version: 2.0.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     devDependencies:
       '@chromatic-com/storybook':
         specifier: ^2.0.2
@@ -4193,6 +4200,9 @@ importers:
       '@stackshift-ui/image':
         specifier: workspace:*
         version: link:../../common/image
+      '@stackshift-ui/link':
+        specifier: workspace:*
+        version: link:../../common/link
       '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
@@ -4881,6 +4891,9 @@ importers:
       '@stackshift-ui/image':
         specifier: workspace:*
         version: link:../../common/image
+      '@stackshift-ui/link':
+        specifier: workspace:*
+        version: link:../../common/link
       '@stackshift-ui/scripts':
         specifier: workspace:*
         version: link:../../../../scripts
@@ -7598,6 +7611,31 @@ packages:
 
   '@sinonjs/fake-timers@10.3.0':
     resolution: {integrity: sha512-V4BG07kuYSUkTCSBHG8G8TNhM+F19jXFWnQtzj+we8DrkpSBCee9Z3Ms8yiGer/dlmhe35/Xdgyo3/0rQKg7YA==}
+
+  '@stackshift-ui/link@6.0.11':
+    resolution: {integrity: sha512-t82Yz7CHRzpzriYlBGsvFi/MA7S5+zkErxOYh+z/p3/cgj2v4JvYD5u9CiQkIYq9fLq6mMYEoiE+nioMUxubJg==}
+    peerDependencies:
+      '@types/react': 16.8 - 19
+      next: 10 - 14
+      react: 16.8 - 19
+      react-dom: 16.8 - 19
+    peerDependenciesMeta:
+      next:
+        optional: true
+
+  '@stackshift-ui/scripts@6.0.10':
+    resolution: {integrity: sha512-2zkhjkWQnukvLZcO3WbcjJkm6iIlH+7RyxGQ9GjRbO0m7InR9fXVIrGTjai9f2Avm6aHZqxtciDGiYb0cvGxeA==}
+
+  '@stackshift-ui/system@6.0.11':
+    resolution: {integrity: sha512-1eeB3bNGnKHBD2xMGF8UmQXGs9+GZ9x6fErtKgTZR7Z2UMCIrSTvr/x2OpNc8Mm6o7swv6zrGpMbuto1jy++jQ==}
+    peerDependencies:
+      '@types/react': 16.8 - 19
+      next: 10 - 14
+      react: 16.8 - 19
+      react-dom: 16.8 - 19
+    peerDependenciesMeta:
+      next:
+        optional: true
 
   '@storybook/addon-actions@8.3.5':
     resolution: {integrity: sha512-t8D5oo+4XfD+F8091wLa2y/CDd/W2lExCeol5Vm1tp5saO+u6f2/d7iykLhTowWV84Uohi3D073uFeyTAlGebg==}
@@ -14916,6 +14954,32 @@ snapshots:
     dependencies:
       '@sinonjs/commons': 3.0.1
 
+  '@stackshift-ui/link@6.0.11(@types/react@18.3.11)(next@14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@stackshift-ui/scripts': 6.0.10
+      '@stackshift-ui/system': 6.0.11(@types/react@18.3.11)(next@14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@types/react': 18.3.11
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+    optionalDependencies:
+      next: 14.2.15(@babel/core@7.25.8)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+
+  '@stackshift-ui/scripts@6.0.10': {}
+
+  '@stackshift-ui/system@6.0.11(@types/react@18.3.11)(next@14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@stackshift-ui/scripts': 6.0.10
+      '@types/react': 18.3.11
+      nextjs-darkmode: 1.0.4(@types/react@18.3.11)(next@14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1)
+      nextjs-themes: 4.0.3(@types/react@18.3.11)(next@14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1)
+      r18gs: 2.1.0(@types/react@18.3.11)(react@18.3.1)
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      react-live: 4.1.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react18-loaders: 1.1.4(@types/react@18.3.11)(next@14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1)
+    optionalDependencies:
+      next: 14.2.15(@babel/core@7.25.8)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+
   '@storybook/addon-actions@8.3.5(storybook@8.3.5)':
     dependencies:
       '@storybook/global': 5.0.0
@@ -17033,7 +17097,7 @@ snapshots:
       '@typescript-eslint/parser': 7.18.0(eslint@8.57.1)(typescript@5.6.2)
       eslint: 8.57.1
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.6.3(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.30.0)(eslint@8.57.1)
+      eslint-import-resolver-typescript: 3.6.3(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.30.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.6.2))(eslint@8.57.1))(eslint@8.57.1)
       eslint-plugin-import: 2.30.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-typescript@3.6.3)(eslint@8.57.1)
       eslint-plugin-jsx-a11y: 6.10.0(eslint@8.57.1)
       eslint-plugin-react: 7.36.1(eslint@8.57.1)
@@ -17066,7 +17130,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.30.0)(eslint@8.57.1):
+  eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.30.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.6.2))(eslint@8.57.1))(eslint@8.57.1):
     dependencies:
       '@nolyfill/is-core-module': 1.0.39
       debug: 4.3.7
@@ -17132,7 +17196,7 @@ snapshots:
       '@typescript-eslint/parser': 7.18.0(eslint@8.57.1)(typescript@5.6.2)
       eslint: 8.57.1
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.6.3(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.30.0)(eslint@8.57.1)
+      eslint-import-resolver-typescript: 3.6.3(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.30.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.6.2))(eslint@8.57.1))(eslint@8.57.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -19544,10 +19608,26 @@ snapshots:
       - '@babel/core'
       - babel-plugin-macros
 
+  nextjs-darkmode@1.0.4(@types/react@18.3.11)(next@14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1):
+    dependencies:
+      '@types/react': 18.3.11
+      r18gs: 1.1.3(@types/react@18.3.11)(next@14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1)
+      react: 18.3.1
+    transitivePeerDependencies:
+      - next
+
   nextjs-darkmode@1.0.4(@types/react@18.3.9)(next@14.2.13(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1):
     dependencies:
       '@types/react': 18.3.9
       r18gs: 1.1.3(@types/react@18.3.9)(next@14.2.13(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1)
+      react: 18.3.1
+    transitivePeerDependencies:
+      - next
+
+  nextjs-themes@4.0.3(@types/react@18.3.11)(next@14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1):
+    dependencies:
+      '@types/react': 18.3.11
+      r18gs: 2.0.0-alpha.0(@types/react@18.3.11)(next@14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1)
       react: 18.3.1
     transitivePeerDependencies:
       - next
@@ -20098,6 +20178,13 @@ snapshots:
 
   queue-microtask@1.2.3: {}
 
+  r18gs@1.1.3(@types/react@18.3.11)(next@14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1):
+    dependencies:
+      '@types/react': 18.3.11
+      react: 18.3.1
+    optionalDependencies:
+      next: 14.2.15(@babel/core@7.25.8)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+
   r18gs@1.1.3(@types/react@18.3.9)(next@14.2.13(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1):
     dependencies:
       '@types/react': 18.3.9
@@ -20112,12 +20199,24 @@ snapshots:
     optionalDependencies:
       next: 14.2.13(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
 
+  r18gs@2.0.0-alpha.0(@types/react@18.3.11)(next@14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1):
+    dependencies:
+      '@types/react': 18.3.11
+      react: 18.3.1
+    optionalDependencies:
+      next: 14.2.15(@babel/core@7.25.8)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+
   r18gs@2.0.0-alpha.0(@types/react@18.3.9)(next@14.2.13(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1):
     dependencies:
       '@types/react': 18.3.9
       react: 18.3.1
     optionalDependencies:
       next: 14.2.13(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+
+  r18gs@2.1.0(@types/react@18.3.11)(react@18.3.1):
+    dependencies:
+      '@types/react': 18.3.11
+      react: 18.3.1
 
   r18gs@2.1.0(@types/react@18.3.9)(react@18.3.1):
     dependencies:
@@ -20267,6 +20366,14 @@ snapshots:
       tslib: 2.8.0
     optionalDependencies:
       '@types/react': 18.3.9
+
+  react18-loaders@1.1.4(@types/react@18.3.11)(next@14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1):
+    dependencies:
+      '@types/react': 18.3.11
+      r18gs: 2.1.0(@types/react@18.3.11)(react@18.3.1)
+      react: 18.3.1
+    optionalDependencies:
+      next: 14.2.15(@babel/core@7.25.8)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
 
   react18-loaders@1.1.4(@types/react@18.3.9)(next@14.2.13(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1):
     dependencies:

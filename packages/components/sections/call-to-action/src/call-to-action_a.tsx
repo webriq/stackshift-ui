@@ -67,7 +67,7 @@ function CTAButton({ button }: { button?: LabeledRoute }) {
   });
 
   return (
-    <Button variant="link" aria-label={button?.label} asChild>
+    <Button aria-label={button?.label}>
       <Link href={link.href} target={link.target} rel={link.rel}>
         {button?.label}
       </Link>

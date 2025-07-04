@@ -21,29 +21,29 @@ export default function Footer_D({
   return (
     <Section className="py-20 overflow-hidden bg-background">
       <Container maxWidth={1280}>
-        <div className="flex flex-col lg:flex-row w-full gap-5 lg:items-center lg:justify-between xl:items-start">
+        <Flex className="flex-col lg:flex-row w-full gap-5 lg:items-center lg:justify-between xl:items-start">
           <div className="w-full lg:max-w-sm xl:max-w-xs space-y-4">
             <LogoSection logo={logo} />
             <TextSection text={text} />
           </div>
 
-          <div className="flex flex-col space-y-8 lg:space-y-0">
-            <div className="flex flex-col lg:flex-row w-full justify-between items-start lg:items-center">
+          <Flex className="flex-col space-y-8 lg:space-y-0">
+            <Flex className=" flex-col lg:flex-row w-full justify-between items-start lg:items-center">
               <MenuSection multipleMenus={multipleMenus} />
-            </div>
-          </div>
+            </Flex>
+          </Flex>
 
           <div className="hidden [@media(min-width:1444px)]:block">
             <SocialMediaContainer socialMedia={socialMedia} />
           </div>
-        </div>
+        </Flex>
         <div className="hidden [@media(min-width:1444px)]:block items-center">
           <CopyrightSection copyright={copyright} />
         </div>
-        <div className="flex flex-col sm:flex-row w-full sm:items-center sm:justify-between pt-10 gap-5 [@media(min-width:1444px)]:hidden">
+        <Flex className="flex-col sm:flex-row w-full sm:items-center sm:justify-between pt-10 gap-5 [@media(min-width:1444px)]:hidden">
           <CopyrightSection copyright={copyright} />
           <SocialMediaContainer socialMedia={socialMedia} />
-        </div>
+        </Flex>
       </Container>
     </Section>
   );
@@ -110,7 +110,8 @@ function MenuLinks({ menu }: { menu?: any }) {
           {menu?.links?.map((link: any) => (
             <li key={link?._key}>
               <Button
-                className="text-gray-500 no-underline hover:text-gray-700"
+                variant="unstyled"
+                className="text-gray-500 no-underline hover:text-gray-700 px-0 py-0"
                 aria-label={link?.label}
                 asChild>
                 <ConditionalLink link={link} ariaLabel={link?.label ?? "Footer menu link"}>

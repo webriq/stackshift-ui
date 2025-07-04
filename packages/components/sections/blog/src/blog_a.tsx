@@ -8,6 +8,9 @@ import { Section } from "@stackshift-ui/section";
 import { Text } from "@stackshift-ui/text";
 import { format } from "date-fns";
 
+import { Badge } from "@stackshift-ui/badge";
+import { Card, CardContent, CardTitle } from "@stackshift-ui/card";
+import { buildSanityLink } from "@stackshift-ui/system";
 import { BlogProps } from ".";
 import { BlogPost, Category, LabeledRoute } from "./types";
 
@@ -69,7 +72,7 @@ function BlogPosts({ posts }: { posts?: BlogPost[] }) {
 
 function BlogItem({ post, key }: { post?: BlogPost; key: number }) {
   return (
-    <div className="relative w-full h-64 rounded">
+    <Card className="relative w-full h-64 rounded">
       {post?.mainImage ? (
         <Image
           className="relative object-cover w-full h-full overflow-hidden rounded-md"
@@ -78,18 +81,16 @@ function BlogItem({ post, key }: { post?: BlogPost; key: number }) {
           sizes="(min-width: 1540px) 740px, (min-width: 1280px) 612px, (min-width: 1040px) 484px, (min-width: 780px) 736px, (min-width: 680px) 608px, calc(94.44vw - 15px)"
         />
       ) : null}
+
       <div className="absolute inset-0 bg-gray-900 rounded-md opacity-75" />
-      <div className="absolute inset-0 flex flex-col items-start p-6">
+
+      <CardContent className="absolute inset-0 flex flex-col items-start p-6">
         {post?.categories ? (
-          <div className="absolute flex left-5 top-5">
+          <Flex gap={2} className="absolute left-5 top-5">
             {post?.categories?.map((category: Category, index: number) => (
-              <span
-                className="px-3 py-1 mb-auto mr-3 text-sm font-bold uppercase bg-white rounded-full text-primary"
-                key={index}>
-                {category?.title}
-              </span>
+              <Badge key={index}>{category?.title}</Badge>
             ))}
-          </div>
+          </Flex>
         ) : null}
 
         <Flex align="center" className="mt-auto">
@@ -99,8 +100,8 @@ function BlogItem({ post, key }: { post?: BlogPost; key: number }) {
 
           {post?.authors && (
             <>
-              <span className="mx-2 w-1 h-1 bg-gray-500 rounded-full"></span>
-              <div className="flex mt-auto text-sm text-gray-500">
+              <span className="mx-2 w-1 h-1 bg-gray-500 rounded-full" />
+              <Flex className="mt-auto text-sm text-gray-500">
                 {post?.authors?.map((author, index, { length }) => (
                   <>
                     <Text className="italic" fontSize="sm">
@@ -109,30 +110,42 @@ function BlogItem({ post, key }: { post?: BlogPost; key: number }) {
                     {index + 1 !== length ? <span>&nbsp;,&nbsp;</span> : null}
                   </>
                 ))}
-              </div>
+              </Flex>
             </>
           )}
         </Flex>
 
         {post?.title ? (
-          <Link
-            className="text-lg font-bold text-white transform hover:scale-110 hover:text-secondary motion-reduce:transform-none"
-            href={`/${post?.link}`}>
-            {post?.title?.length > 40 ? post?.title.substring(0, 40) + "..." : post?.title}
-          </Link>
+          <CardTitle className="text-lg font-bold text-white transform hover:scale-110 hover:text-secondary motion-reduce:transform-none">
+            <Link href={`/${post?.link}`}>
+              {post?.title?.length > 40 ? post?.title.substring(0, 40) + "..." : post?.title}
+            </Link>
+          </CardTitle>
         ) : null}
-      </div>
-    </div>
+      </CardContent>
+    </Card>
   );
 }
 
 function PrimaryButton({ primaryButton }: { primaryButton?: LabeledRoute }) {
   if (!primaryButton?.label) return null;
 
+  const link = buildSanityLink({
+    type: primaryButton?.type ?? "",
+    internalLink: primaryButton?.internalLink ?? "",
+    externalLink: primaryButton?.externalLink ?? "",
+  });
+
   return (
-    <div className="mt-10 text-center">
-      <Button asChild aria-label={primaryButton?.label}>
-        {primaryButton?.label}
+    <div className="text-center mt-10">
+      <Button aria-label={primaryButton?.label} asChild>
+        <Link
+          href={link.href}
+          target={link.target}
+          rel={link.rel}
+          aria-label={primaryButton?.label}>
+          {primaryButton?.label}
+        </Link>
       </Button>
     </div>
   );

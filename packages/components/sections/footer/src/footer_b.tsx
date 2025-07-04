@@ -69,6 +69,7 @@ function MenuList({ links, index }: { links?: LabeledRoute; index?: number }) {
   return (
     <li className="w-full mb-2 md:mb-0 md:w-auto" key={index}>
       <Button
+        variant="unstyled"
         className="text-gray-500 no-underline lg:text-sm hover:text-gray-700"
         aria-label={links?.label}
         asChild>

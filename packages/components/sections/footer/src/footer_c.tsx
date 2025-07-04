@@ -83,6 +83,7 @@ function MenuList({ links, index }: { links?: LabeledRoute; index?: number }) {
   return (
     <li className="w-full text-center" key={index}>
       <Button
+        variant="unstyled"
         asChild
         className="text-sm text-center text-black no-underline hover:text-gray-500 whitespace-nowrap"
         aria-label={links?.label}>
@@ -131,23 +132,23 @@ function SocialMediaLink({ social }: { social?: SocialLink }) {
 
 function BorderStyle() {
   return (
-    <div className="flex w-full">
-      <div className="flex w-1/3">
+    <Flex className="w-full">
+      <Flex className="w-1/3">
         <div className="w-1/3 py-1 bg-secondary" />
         <div className="w-1/3 py-1 bg-primary" />
         <div className="w-1/3 py-1 bg-primary" />
-      </div>
-      <div className="flex w-1/3">
+      </Flex>
+      <Flex className="w-1/3">
         <div className="w-1/3 py-1 bg-secondary" />
         <div className="w-1/3 py-1 bg-primary" />
         <div className="w-1/3 py-1 bg-primary" />
-      </div>
-      <div className="flex w-1/3">
+      </Flex>
+      <Flex className="w-1/3">
         <div className="w-1/3 py-1 bg-secondary" />
         <div className="w-1/3 py-1 bg-primary" />
         <div className="w-1/3 py-1 bg-primary" />
-      </div>
-    </div>
+      </Flex>
+    </Flex>
   );
 }
 

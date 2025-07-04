@@ -1,11 +1,10 @@
-import { Card } from "@stackshift-ui/card";
+import { Card, CardTitle } from "@stackshift-ui/card";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
 import { Image } from "@stackshift-ui/image";
 import { Section } from "@stackshift-ui/section";
 import { Text } from "@stackshift-ui/text";
-import React from "react";
 import { FeaturesProps } from ".";
 import { ArrayOfImageTitleAndText } from "./types";
 
@@ -32,7 +31,7 @@ function CaptionAndTitleSection({
   description?: string;
 }) {
   return (
-    <div className="flex flex-col gap-3">
+    <Flex direction="col" gap={3} align="center">
       {caption ? (
         <Text weight="bold" className="text-secondary">
           {caption}
@@ -44,7 +43,7 @@ function CaptionAndTitleSection({
           {description}
         </Text>
       ) : null}
-    </div>
+    </Flex>
   );
 }
 
@@ -76,9 +75,9 @@ function FeatureItem({ feature }: { feature: ArrayOfImageTitleAndText }) {
           )}
         </div>
         <div className="w-full lg:w-2/3 flex flex-col gap-2">
-          <Text weight="bold" className="text-xl md:text-2xl break-all">
+          <CardTitle className="text-xl md:text-2xl break-all font-bold">
             {feature?.title}
-          </Text>
+          </CardTitle>
           <Text muted className="break-all">
             {feature?.plainText}
           </Text>

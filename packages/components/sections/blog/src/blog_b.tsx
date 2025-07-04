@@ -1,4 +1,5 @@
 import { Button } from "@stackshift-ui/button";
+import { Card, CardContent } from "@stackshift-ui/card";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
@@ -71,12 +72,12 @@ function BlogItem({ post, size, key }: { post: BlogPost; size?: string; key: num
   const breakpoints = useMediaQuery("1024");
 
   return (
-    <div className="overflow-hidden rounded-md shadow">
+    <Card className="overflow-hidden rounded-md shadow">
       {post?.mainImage ? (
         <ImageContainer post={post} size={size} breakpoints={breakpoints} key={key} />
       ) : null}
-      <div className="p-6 bg-white flex flex-col justify-between" style={{ height: "295px" }}>
-        <div>
+      <Flex direction="col" className="bg-white justify-between" style={{ height: "295px" }}>
+        <CardContent className="p-4">
           <Flex align="center">
             {post?.publishedAt ? (
               <Text muted className="text-sm">
@@ -85,8 +86,8 @@ function BlogItem({ post, size, key }: { post: BlogPost; size?: string; key: num
             ) : null}
             {post?.authors && (
               <>
-                <span className="mx-2 w-1 h-1 bg-gray-500 rounded-full"></span>
-                <div className="flex mt-auto text-sm text-gray-500">
+                <span className="mx-2 w-1 h-1 bg-gray-500 rounded-full" />
+                <Flex className="mt-auto text-sm text-gray-500">
                   {post?.authors?.map((author, index, { length }) => (
                     <>
                       <Text className="italic" fontSize="sm">
@@ -95,32 +96,32 @@ function BlogItem({ post, size, key }: { post: BlogPost; size?: string; key: num
                       {index + 1 !== length ? <span>&nbsp;,&nbsp;</span> : null}
                     </>
                   ))}
-                </div>
+                </Flex>
               </>
             )}
           </Flex>
 
           {post?.title ? (
-            <Heading type="h4" className="my-2">
-              {post.title.length > 25 ? `${post.title.substring(0, 25)}...` : post.title}
+            <Heading type="h4" className="my-2 line-clamp-3 !text-2xl">
+              {post.title}
             </Heading>
           ) : null}
           {post?.excerpt ? (
-            <Text muted className="mb-6 text-justify">
-              {post.excerpt.length > 41 ? `${post.excerpt.substring(0, 41)}...` : post.excerpt}
+            <Text muted className="mb-2 text-justify line-clamp-3">
+              {post.excerpt}
             </Text>
           ) : null}
-        </div>
+        </CardContent>
         {post?.link ? (
           <Link
             aria-label="View Blog Post"
-            className="font-bold text-primary hover:text-secondary"
+            className="font-bold text-primary hover:text-secondary px-4 pb-4"
             href={`/${post?.link}`}>
             View Blog Post
           </Link>
         ) : null}
-      </div>
-    </div>
+      </Flex>
+    </Card>
   );
 }
 
@@ -135,32 +136,28 @@ function ImageContainer({
   breakpoints: boolean;
   key: number;
 }) {
-  return (
-    <>
-      {breakpoints ? (
-        <Image
-          className="object-cover w-full overflow-hidden"
-          src={`${post.mainImage}`}
-          sizes="100vw"
-          style={{ width: "100%", height: "auto", objectFit: "cover" }}
-          width={271}
-          height={248}
-          alt={post?.mainImage ?? `blog-variantB-image-${key}`}
-        />
-      ) : (
-        <div className={`${size === "lg" ? "h-[44.5rem]" : "h-[12.5rem]"}`}>
-          <Image
-            className="object-cover w-full overflow-hidden rounded-t-md"
-            src={`${post.mainImage}`}
-            sizes="100vw"
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            width={271}
-            height={248}
-            alt={`blog-variantB-image-${post.title}`}
-          />
-        </div>
-      )}
-    </>
+  return breakpoints ? (
+    <Image
+      className="object-cover w-full overflow-hidden"
+      src={`${post.mainImage}`}
+      sizes="100vw"
+      style={{ width: "100%", height: "auto", objectFit: "cover" }}
+      width={271}
+      height={248}
+      alt={post?.mainImage ?? `blog-variantB-image-${key}`}
+    />
+  ) : (
+    <div className={`${size === "lg" ? "h-[44.5rem]" : "h-[12.5rem]"}`}>
+      <Image
+        className="object-cover w-full overflow-hidden rounded-t-md"
+        src={`${post.mainImage}`}
+        sizes="100vw"
+        style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        width={271}
+        height={248}
+        alt={`blog-variantB-image-${post.title}`}
+      />
+    </div>
   );
 }
 

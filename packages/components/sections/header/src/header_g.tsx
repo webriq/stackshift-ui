@@ -97,35 +97,32 @@ export default function Header_G({
             </Heading>
             {description && <Text className="text-white mb-10">{description}</Text>}
             <Flex
-              justify={position === "center" ? "center" : position === "right" ? "end" : "start"}
-              direction="row"
               align="center"
-              wrap
-              gap={4}>
+              justify="center"
+              gap={2}
+              direction="col"
+              className="lg:justify-start md:flex-row">
               {primaryButton?.label && (
-                <Button
-                  asChild
-                  aria-label={primaryButton?.ariaLabel}
-                  variant="default"
-                  className="text-white border text-sm uppercase cursor-pointer px-10 py-4 hover:bg-white hover:text-primary transition-all duration-500 ease-in-out">
+                <Button variant="default" aria-label={primaryButton?.label} asChild>
                   <Link
                     href={primaryButtonLink.href}
                     target={primaryButtonLink.target}
                     rel={primaryButtonLink.rel}>
-                    {primaryButton.label}
+                    {primaryButton?.label}
                   </Link>
                 </Button>
               )}
               {secondaryButton?.label && (
                 <Button
-                  variant="default"
-                  aria-label={secondaryButton?.ariaLabel}
-                  className="text-white border text-sm uppercase cursor-pointer px-10 py-4 hover:bg-white hover:text-secondary transition-all duration-500 ease-in-out">
+                  variant="secondary"
+                  className="bg-white border hover:bg-gray-300 inline-block font-default text-default transition duration-200 rounded-global"
+                  aria-label={secondaryButton?.label}
+                  asChild>
                   <Link
                     href={secondaryButtonLink.href}
                     target={secondaryButtonLink.target}
                     rel={secondaryButtonLink.rel}>
-                    {secondaryButton.label}
+                    {secondaryButton?.label}
                   </Link>
                 </Button>
               )}

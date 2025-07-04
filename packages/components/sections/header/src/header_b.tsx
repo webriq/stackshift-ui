@@ -74,10 +74,12 @@ function Buttons({
   return (
     <Flex
       align="center"
+      justify="center"
       gap={2}
-      className="flex items-center justify-center lg:justify-start gap-2 flex-col md:flex-row">
+      direction="col"
+      className="lg:justify-start md:flex-row">
       {primaryButton?.label && (
-        <Button variant="link" aria-label={primaryButton?.label} asChild>
+        <Button variant="default" aria-label={primaryButton?.label} asChild>
           <Link
             href={primaryButtonLink.href}
             target={primaryButtonLink.target}
@@ -88,9 +90,10 @@ function Buttons({
       )}
       {secondaryButton?.label && (
         <Button
-          variant="link"
-          className="bg-secondary hover:bg-secondary/50 inline-block rounded-global font-bold transition duration-200 px-6 py-3"
-          aria-label={secondaryButton?.label}>
+          variant="secondary"
+          className="bg-transparent border hover:bg-gray-300 inline-block font-default text-default transition duration-200 rounded-global"
+          aria-label={secondaryButton?.label}
+          asChild>
           <Link
             href={secondaryButtonLink.href}
             target={secondaryButtonLink.target}

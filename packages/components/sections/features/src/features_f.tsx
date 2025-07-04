@@ -73,7 +73,7 @@ function CTAButton({ primaryButton }: { primaryButton?: LabeledRoute }) {
 
   return (
     <Container maxWidth={448} className="ml-0">
-      <Button variant="link" aria-label={primaryButton?.label} asChild>
+      <Button aria-label={primaryButton?.label} asChild>
         <Link href={link.href} target={link.target} rel={link.rel}>
           {primaryButton?.label}
         </Link>

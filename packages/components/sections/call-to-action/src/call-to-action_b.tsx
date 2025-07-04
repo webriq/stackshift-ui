@@ -69,10 +69,10 @@ function CTAForm({ form }: { form?: iForm }) {
       thankyouPage={thankYouPageLink(form?.thankYouPage)}>
       <div className="flex flex-col sm:items-center sm:flex-row lg:justify-between gap-3">
         <FormFields fields={form?.fields?.slice(0, 2)} />
+        <CTABtton form={form} />
         <div>
           <div className="webriq-recaptcha" />
         </div>
-        <CTABtton form={form} />
       </div>
     </Form>
   );
@@ -82,7 +82,7 @@ function FormFields({ fields }: { fields?: iForm["fields"] }) {
   if (!fields) return null;
 
   return (
-    <div className="flex flex-col sm:items-center sm:flex-row lg:justify-between gap-3">
+    <div className="flex flex-col sm:items-center sm:flex-row lg:justify-center gap-3">
       {fields.map(field => (
         <Input
           key={field?._key}

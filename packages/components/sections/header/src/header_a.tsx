@@ -78,7 +78,7 @@ function Buttons({
       direction="col"
       className="lg:justify-start md:flex-row">
       {primaryButton?.label && (
-        <Button variant="link" aria-label={primaryButton?.label} asChild>
+        <Button variant="default" aria-label={primaryButton?.label} asChild>
           <Link
             href={primaryButtonLink.href}
             target={primaryButtonLink.target}
@@ -89,8 +89,8 @@ function Buttons({
       )}
       {secondaryButton?.label && (
         <Button
-          variant="link"
-          className="bg-secondary hover:bg-secondary/50 inline-block font-default text-default transition duration-200 py-3 px-6 rounded-global"
+          variant="secondary"
+          className="bg-transparent border hover:bg-gray-300 inline-block font-default text-default transition duration-200 rounded-global"
           aria-label={secondaryButton?.label}
           asChild>
           <Link

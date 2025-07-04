@@ -73,7 +73,7 @@ function FeatureItem({ item }: { item?: string }) {
   return (
     <Flex as="li" align="center" className="mb-2 ">
       <svg
-        className="w-5 h-5 mr-2 text-primary-foreground"
+        className="w-5 h-5 mr-2 text-primary"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor">

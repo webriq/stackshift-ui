@@ -1,5 +1,5 @@
 import { Button } from "@stackshift-ui/button";
-import { Card } from "@stackshift-ui/card";
+import { Card, CardTitle } from "@stackshift-ui/card";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
@@ -66,9 +66,11 @@ function FeaturesInfo({ featuredItems, item }: { featuredItems?: FeaturedItem[];
       <Text weight="bold" className="text-xs lg:text-md md:text-sm xl:text-lg text-secondary">
         {featuredItems?.[item]?.subtitle && featuredItems?.[item]?.subtitle}
       </Text>
-      <Heading fontSize="3xl">
-        {featuredItems?.[item]?.title && featuredItems?.[item]?.title}
-      </Heading>
+      <CardTitle>
+        <Heading fontSize="3xl">
+          {featuredItems?.[item]?.title && featuredItems?.[item]?.title}
+        </Heading>
+      </CardTitle>
       <Text
         muted
         className="text-xs leading-loose text-center md:mt-5 md:text-sm lg:mt-5 lg:text-sm">
