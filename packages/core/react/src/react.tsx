@@ -40,7 +40,23 @@ export {
   DialogTitle,
   DialogTrigger,
 } from "@stackshift-ui/dialog";
-export * from "@stackshift-ui/dropdown-menu";
+export {
+  DropdownMenu,
+  DropdownMenuCheckboxItem,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuPortal,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuTrigger,
+} from "@stackshift-ui/dropdown-menu";
 export { Form } from "@stackshift-ui/form";
 export { FormField } from "@stackshift-ui/form-field";
 export { Heading } from "@stackshift-ui/heading";
