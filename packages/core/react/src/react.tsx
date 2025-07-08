@@ -25,6 +25,7 @@ export {
   DataTableColumnHeader,
   DataTablePagination,
   DataTableViewOptions,
+  type ColumnDef,
 } from "@stackshift-ui/data-table";
 export { DatePicker, DatePickerInput, DatePickerTime } from "@stackshift-ui/date-picker";
 export {
