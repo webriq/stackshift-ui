@@ -146,7 +146,7 @@ function PortfolioContent({
                     asChild
                     variant="outline"
                     aria-abel={content?.primaryButton?.label}
-                    className="bg-transparent border-secondary outline text-white hover:bg-secondary/20 hover:border-secondary/20 inline-block rounded-global font-bold transition duration-200 px-3 py-4">
+                    className="w-fit h-fit flex items-center justify-center bg-transparent border-secondary outline text-white hover:bg-secondary/20 hover:border-secondary/20 rounded-global hover:text-secondary-foreground font-bold transition duration-200 px-3 py-4">
                     <Link href={link.href} target={link.target} rel={link.rel}>
                       {content?.primaryButton?.label}
                     </Link>

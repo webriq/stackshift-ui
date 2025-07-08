@@ -7,7 +7,7 @@ import { Section } from "@stackshift-ui/section";
 import { Text } from "@stackshift-ui/text";
 import React from "react";
 import { NavigationProps, ResponsiveNavLinksProps } from ".";
-import { logoLink, ConditionalLink } from "./helper";
+import { ConditionalLink, logoLink } from "./helper";
 import { LabeledRoute, LabeledRouteWithKey, Logo } from "./types";
 
 export default function Navigation_B({
@@ -89,13 +89,11 @@ function NavItem({ link }: { link?: LabeledRouteWithKey }) {
   return (
     <li>
       <Button
+        variant="unstyled"
         asChild
         aria-label={link?.label}
         className="text-sm text-gray-500 no-underline hover:text-gray-900">
-        <ConditionalLink
-          link={link}
-          ariaLabel={link?.label || "Navigation link"}
-          className="text-sm text-gray-500 no-underline hover:text-gray-900">
+        <ConditionalLink link={link} ariaLabel={link?.label || "Navigation link"}>
           {link?.label}
         </ConditionalLink>
       </Button>
@@ -135,11 +133,8 @@ function Buttons({
         <Button
           asChild
           aria-label={primaryButton?.label}
-          className="hidden lg:flex px-4 py-3 leading-loose text-center font-semibold text-gray-900 rounded-global bg-secondary hover:bg-secondary/50">
-          <ConditionalLink
-            link={primaryButton}
-            ariaLabel={primaryButton?.label}
-            className="hidden lg:flex px-4 py-3 leading-loose text-center font-semibold text-gray-900 rounded-global bg-secondary hover:bg-secondary/50">
+          className="hidden lg:flex px-4 py-3 leading-loose text-center font-semibold text-secondary-foreground rounded-global bg-secondary hover:bg-secondary/50">
+          <ConditionalLink link={primaryButton} ariaLabel={primaryButton?.label}>
             {primaryButton?.label}
           </ConditionalLink>
         </Button>
@@ -148,11 +143,8 @@ function Buttons({
         <Button
           asChild
           aria-label={secondaryButton?.label}
-          className="hidden lg:flex px-4 py-3 leading-loose text-center font-semibold text-white bg-primary hover:bg-primary-foreground rounded-global">
-          <ConditionalLink
-            link={secondaryButton}
-            ariaLabel={secondaryButton?.label}
-            className="hidden lg:flex px-4 py-3 leading-loose text-center font-semibold text-white bg-primary hover:bg-primary-foreground rounded-global">
+          className="hidden lg:flex px-4 py-3 leading-loose text-center font-semibold text-primary-foreground bg-primary hover:bg-primary/50 rounded-global">
+          <ConditionalLink link={secondaryButton} ariaLabel={secondaryButton?.label}>
             {secondaryButton?.label}
           </ConditionalLink>
         </Button>
@@ -193,10 +185,7 @@ function ResponsiveNavLinks({
         <div className="fixed inset-0 bg-gray-800 opacity-25 navbar-backdrop" onClick={showMenu} />
         <nav className="fixed top-0 bottom-0 left-0 flex flex-col w-5/6 max-w-sm px-6 py-6 overflow-y-auto bg-white border-r">
           <div className="flex items-center mb-8">
-            <Button
-              aria-label="Close navigation menu"
-              className="navbar-close"
-              onClick={showMenu}>
+            <Button aria-label="Close navigation menu" className="navbar-close" onClick={showMenu}>
               <svg
                 className="w-6 h-6 text-gray-500 cursor-pointer hover:text-gray-500"
                 xmlns="http://www.w3.org/2000/svg"

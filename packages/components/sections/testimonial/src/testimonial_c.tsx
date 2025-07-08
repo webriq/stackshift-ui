@@ -72,11 +72,11 @@ function TestimonialSwiper({
   if (!testimony) return null;
 
   return (
-    <div className="w-full lg:w-1/5">
+    <div className="w-full lg:w-1/5 flex items-center gap-4">
       {testimony && testimony?.length >= 4 && (
         <SwiperButton
           type="left"
-          className="order-last p-5 mr-4 bg-white lg:order-first"
+          className="order-last p-5 mr-4 bg-white lg:order-first w-12 h-12 flex items-center justify-center"
           onClick={() => slider("prev")}
           ariaLabel="Show previous testimonial"
         />
@@ -84,7 +84,7 @@ function TestimonialSwiper({
       {testimony && testimony?.length >= 4 && (
         <SwiperButton
           type="right"
-          className="order-last p-5 bg-white"
+          className="order-last p-5 bg-white w-12 h-12 flex items-center justify-center"
           onClick={() => slider("next")}
           ariaLabel="Show next testimonial"
         />

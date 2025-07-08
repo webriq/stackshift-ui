@@ -197,7 +197,7 @@ function FormButtonLabel({ form }: { form?: iForm }) {
     <Button
       className="w-full py-4 mb-3"
       aria-label={form?.buttonLabel ?? "Sign Up form submit button"}
-      variant="ghost"
+      variant="default"
       type="submit">
       {form?.buttonLabel}
     </Button>

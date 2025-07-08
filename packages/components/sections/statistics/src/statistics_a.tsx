@@ -1,4 +1,4 @@
-import { Card } from "@stackshift-ui/card";
+import { Card, CardContent } from "@stackshift-ui/card";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Section } from "@stackshift-ui/section";
@@ -27,12 +27,14 @@ function StatisticsItems({ stats }: { stats?: StatItems[] }) {
       {stats.map((items, index) => (
         <div className="w-full px-4 my-8 sm:w-1/4 lg:w-1/4" key={index}>
           <Card className="relative py-10 shadow-md bg-white">
-            <Text className="mb-1 text-primary overflow-ellipsis overflow-clip">
-              {items?.label}
-            </Text>
-            <p className="text-xl text-gray-500 font-bold lg:text-2xl overflow-ellipsis overflow-clip">
-              {items?.value}
-            </p>
+            <CardContent>
+              <Text className="mb-1 text-primary overflow-ellipsis overflow-clip">
+                {items?.label}
+              </Text>
+              <p className="text-xl text-gray-500 font-bold lg:text-2xl overflow-ellipsis overflow-clip">
+                {items?.value}
+              </p>
+            </CardContent>
           </Card>
         </div>
       ))}

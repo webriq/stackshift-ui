@@ -418,7 +418,7 @@ const NavItem = ({ link, isIcon }: NavItemProps) => {
 
   return (
     <li>
-      <Button asChild className="text-sm font-label tracking-wide">
+      <Button variant="unstyled" asChild className="text-sm font-label tracking-wide">
         <ConditionalLink link={link} ariaLabel={link?.label ?? "Navigation link"}>
           {!isIcon ? link?.label : icon}
         </ConditionalLink>
@@ -500,7 +500,7 @@ const MegaMenuNavLink = ({ link, className }: MegaMenuNavLinkProps) => {
   return (
     <Button
       asChild
-      variant="ghost"
+      variant="unstyled"
       className={cn(
         "relative text-black text-sm font-normal font-label uppercase tracking-widest group",
         className,
@@ -678,7 +678,7 @@ function MegaDropdownGroupedLinks({ groupedLinks }: { groupedLinks: LabeledRoute
                             <Button
                               key={`MegaDropdownContent-Item-Link-${link._key}-${i}`}
                               aria-label={link.label ?? ""}
-                              variant="ghost"
+                              variant="unstyled"
                               asChild
                               className="text-black text-sm font-normal font-heading-kb leading-[30px] hover:underline">
                               <ConditionalLink
@@ -719,7 +719,7 @@ function MegaDropdownShowcaseLinks({
           <Button
             key={`MegaDropdownContent-Item-Images-${link._key}-${i}`}
             aria-label={link.primaryButton?.label ?? ""}
-            variant="ghost"
+            variant="unstyled"
             asChild
             className="text-center text-black text-sm font-normal font-heading-kb leading-[30px] hover:underline">
             <ConditionalLink

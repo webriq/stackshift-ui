@@ -1,4 +1,4 @@
-import { Card } from "@stackshift-ui/card";
+import { Card, CardContent } from "@stackshift-ui/card";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
@@ -78,7 +78,7 @@ function SwiperControl({
       {testimony?.length >= 4 && (
         <SwiperButton
           type="left"
-          className="p-4 bg-white"
+          className="p-4 bg-white w-12 h-12 flex items-center justify-center"
           onClick={() => slider("prev")}
           ariaLabel="Show previous testimonial"
         />
@@ -88,7 +88,7 @@ function SwiperControl({
       {testimony?.length >= 4 && (
         <SwiperButton
           type="right"
-          className="p-4 bg-white"
+          className="p-4 bg-white w-12 h-12 flex items-center justify-center"
           onClick={() => slider("next")}
           ariaLabel="Show next testimonial"
         />
@@ -125,12 +125,14 @@ function TestimonialItem({
   return (
     <div className="flex-1 mb-4 px-3 w-full lg:w-1/3">
       <Card className="p-5 h-full rounded-md">
-        <QuoteIcon />
-        <Text className="mb-4 leading-loose" muted>
-          {testimony}
-        </Text>
-        <Text weight="bold">{name}</Text>
-        <Text muted>{jobTitle}</Text>
+        <CardContent className="p-0 w-full h-full">
+          <QuoteIcon />
+          <Text className="mb-4 leading-loose" muted>
+            {testimony}
+          </Text>
+          <Text weight="bold">{name}</Text>
+          <Text muted>{jobTitle}</Text>
+        </CardContent>
       </Card>
     </div>
   );

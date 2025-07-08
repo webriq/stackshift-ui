@@ -107,7 +107,7 @@ function ProjectItem({ content }: { content: Content }) {
                 asChild
                 variant="link"
                 aria-label={content?.primaryButton?.label}
-                className="font-bold no-underline text-primary transition-200 hover:text-primary/50">
+                className="font-bold no-underline text-primary transition-200 hover:text-primary/50 px-0">
                 <Link href={link.href} target={link.target} rel={link.rel}>
                   {content?.primaryButton?.label}
                 </Link>

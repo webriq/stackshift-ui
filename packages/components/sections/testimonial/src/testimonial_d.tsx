@@ -38,7 +38,7 @@ export default function Testimonial_D({ testimonials }: TestimonialProps) {
             {testimonials && testimonials?.length > 1 && (
               <SwiperButton
                 type="left"
-                className="p-4 mr-6 bg-white lg:order-first lg:mr-0"
+                className="p-4 mr-6 bg-white lg:order-first lg:mr-0 w-12 h-12 flex items-center justify-center"
                 onClick={() => handleSlider("prev")}
                 ariaLabel="Show previous testimonial"
               />
@@ -46,7 +46,7 @@ export default function Testimonial_D({ testimonials }: TestimonialProps) {
             {testimonials && testimonials?.length > 1 && (
               <SwiperButton
                 type="right"
-                className="p-4 mr-6 bg-white lg:order-first lg:mr-0"
+                className="p-4 mr-6 bg-white lg:order-first lg:mr-0 w-12 h-12 flex items-center justify-center"
                 onClick={() => handleSlider("next")}
                 ariaLabel="Show next testimonial"
               />
@@ -55,7 +55,7 @@ export default function Testimonial_D({ testimonials }: TestimonialProps) {
           {testimonials && testimonials?.length > 1 && (
             <SwiperButton
               type="left"
-              className="hidden p-4 mr-6 bg-white lg:block lg:order-first lg:mr-0"
+              className="hidden p-4 mr-6 bg-white lg:flex lg:order-first lg:mr-0 w-12 h-12 items-center justify-center"
               onClick={() => handleSlider("prev")}
               ariaLabel="Show previous testimonial"
             />
@@ -104,7 +104,7 @@ export default function Testimonial_D({ testimonials }: TestimonialProps) {
           {testimonials && testimonials?.length > 1 && (
             <SwiperButton
               type="right"
-              className="hidden bg-white lg:block p-4 mr-6 lg:mr-0"
+              className="hidden bg-white lg:flex p-4 mr-6 lg:mr-0 w-12 h-12 items-center justify-center"
               onClick={() => handleSlider("next")}
               ariaLabel="Show next testimonial"
             />

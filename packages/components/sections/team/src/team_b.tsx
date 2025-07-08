@@ -1,5 +1,5 @@
 import { Button } from "@stackshift-ui/button";
-import { Card } from "@stackshift-ui/card";
+import { Card, CardContent } from "@stackshift-ui/card";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Image } from "@stackshift-ui/image";
@@ -93,19 +93,21 @@ function TeamMemberCard({ member }: { member?: iTeam }) {
 
   return (
     <Card className="flex flex-col gap-3 md:gap-0 md:flex-row shadow-lg bg-white md:h-96 rounded-md">
-      {member.mainImage?.image && (
-        <div className="w-full md:w-1/2 h-48 md:h-full relative overflow-hidden rounded-md">
-          <Image
-            className="object-cover absolute inset-0 w-full h-full"
-            src={`${member.mainImage.image}`}
-            sizes="100vw"
-            width={329}
-            height={500}
-            alt={member.mainImage.alt ?? `team-member-${member.name}-profile-image`}
-          />
-        </div>
-      )}
-      <TeamMemberText member={member} />
+      <CardContent className="flex flex-col gap-3 md:gap-0 md:flex-row p-0">
+        {member.mainImage?.image && (
+          <div className="w-full md:w-1/2 h-48 md:h-full relative overflow-hidden rounded-md">
+            <Image
+              className="object-cover absolute inset-0 w-full h-full"
+              src={`${member.mainImage.image}`}
+              sizes="100vw"
+              width={329}
+              height={500}
+              alt={member.mainImage.alt ?? `team-member-${member.name}-profile-image`}
+            />
+          </div>
+        )}
+        <TeamMemberText member={member} />
+      </CardContent>
     </Card>
   );
 }

@@ -105,7 +105,7 @@ function SignupForm({
       <div className="text-center">
         {form?.buttonLabel && (
           <Button
-            variant="ghost"
+            variant="default"
             aria-label={form?.buttonLabel ?? "Sign Up form submit button"}
             className="w-full py-4 text-sm font-bold tex-gray-50"
             type="submit">
