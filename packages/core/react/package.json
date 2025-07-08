@@ -103,6 +103,9 @@
     "@stackshift-ui/toast": "workspace:*",
     "@stackshift-ui/sheet": "workspace:*",
     "@stackshift-ui/pagination": "workspace:*",
+    "@stackshift-ui/table": "workspace:*",
+    "@stackshift-ui/data-table": "workspace:*",
+    "@stackshift-ui/dropdown-menu": "workspace:*",
     "@stackshift-ui/label": "workspace:*"
   },
   "peerDependencies": {

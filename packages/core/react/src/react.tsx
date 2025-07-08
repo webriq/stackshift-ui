@@ -20,6 +20,12 @@ export {
 } from "@stackshift-ui/card";
 export { Checkbox } from "@stackshift-ui/checkbox";
 export { CheckboxGroup } from "@stackshift-ui/checkbox-group";
+export {
+  DataTable,
+  DataTableColumnHeader,
+  DataTablePagination,
+  DataTableViewOptions,
+} from "@stackshift-ui/data-table";
 export { DatePicker, DatePickerInput, DatePickerTime } from "@stackshift-ui/date-picker";
 export {
   Dialog,
@@ -33,6 +39,7 @@ export {
   DialogTitle,
   DialogTrigger,
 } from "@stackshift-ui/dialog";
+export * from "@stackshift-ui/dropdown-menu";
 export { Form } from "@stackshift-ui/form";
 export { FormField } from "@stackshift-ui/form-field";
 export { Heading } from "@stackshift-ui/heading";
@@ -93,6 +100,16 @@ export { StatsCard } from "@stackshift-ui/stats-card";
 export { SwiperButton } from "@stackshift-ui/swiper-button";
 export { SwiperPagination } from "@stackshift-ui/swiper-pagination";
 export { Switch } from "@stackshift-ui/switch";
+export {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableFooter,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@stackshift-ui/table";
 export { Text } from "@stackshift-ui/text";
 export { Textarea } from "@stackshift-ui/textarea";
 export { toast, Toaster, type ToasterProps } from "@stackshift-ui/toast";
