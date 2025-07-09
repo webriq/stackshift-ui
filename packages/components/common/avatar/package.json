@@ -24,6 +24,8 @@
     "@stackshift-ui/eslint-config": "workspace:*",
     "@stackshift-ui/typescript-config": "workspace:*",
     "@testing-library/react": "^16.0.1",
+    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/user-event": "^14.6.1",
     "@types/node": "^22.7.0",
     "@types/react": "^18.3.9",
     "@types/react-dom": "^18.3.0",
@@ -46,8 +48,6 @@
     "@stackshift-ui/image": "workspace:*",
     "@stackshift-ui/scripts": "workspace:*",
     "@stackshift-ui/system": "workspace:*",
-    "@testing-library/jest-dom": "^6.5.0",
-    "@testing-library/user-event": "^14.6.1",
     "classnames": "^2.5.1"
   },
   "peerDependencies": {
