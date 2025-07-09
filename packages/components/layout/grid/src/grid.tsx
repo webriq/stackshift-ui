@@ -1,6 +1,6 @@
 import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
-import type { ElementType, HTMLProps, ReactNode } from "react";
 import cn from "classnames";
+import type { ElementType, HTMLProps, ReactNode } from "react";
 
 export interface GridProps extends Omit<HTMLProps<HTMLElement>, "as"> {
   columns?: Columns;
@@ -71,7 +71,7 @@ export const Grid: React.FC<GridProps> = ({
   const classes = `grid w-full ${column} ${alignClass} ${justifyClass} gap-${gap ?? 0}`;
 
   return (
-    <Component as={as} className={cn(classes, className)} {...props} data-testid={displayName}>
+    <Component as={as} className={cn(classes, className)} {...props}>
       {children}
     </Component>
   );

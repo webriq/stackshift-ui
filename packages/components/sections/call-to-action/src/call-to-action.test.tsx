@@ -7,7 +7,7 @@ describe.concurrent("call-to-action", () => {
 
   test.skip("Dummy test - test if renders without errors", ({ expect }) => {
     const clx = "my-class";
-    render(<CallToAction />);
-    expect(screen.getByTestId("{ kebabCase name }}").classList).toContain(clx);
+    render(<CallToAction data-testid="call-to-action" />);
+    expect(screen.getByTestId("call-to-action").classList).toContain(clx);
   });
 });

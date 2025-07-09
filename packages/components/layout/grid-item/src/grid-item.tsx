@@ -1,6 +1,6 @@
 import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
-import type { ElementType, HTMLProps, ReactNode } from "react";
 import cn from "classnames";
+import type { ElementType, HTMLProps, ReactNode } from "react";
 
 export interface GridItemProps extends Omit<HTMLProps<HTMLElement>, "as" | "span"> {
   span?: Span;
@@ -41,7 +41,7 @@ export const GridItem: React.FC<GridItemProps> = ({
   const classes = `${spanClass}`;
 
   return (
-    <Component as={as} className={cn(classes, className)} {...props} data-testid={displayName}>
+    <Component as={as} className={cn(classes, className)} {...props}>
       {children}
     </Component>
   );

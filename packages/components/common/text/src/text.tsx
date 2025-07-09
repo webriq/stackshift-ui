@@ -77,12 +77,7 @@ export const Text: React.FC<TextProps> = ({
   const variantClass = variants[type as VariantType] ?? variants.p;
 
   return (
-    <Component
-      as={as}
-      className={cn(variantClass, className)}
-      style={style}
-      {...props}
-      data-testid={displayName}>
+    <Component as={as} className={cn(variantClass, className)} style={style} {...props}>
       {children}
     </Component>
   );

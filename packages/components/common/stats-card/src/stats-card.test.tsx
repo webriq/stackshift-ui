@@ -13,7 +13,15 @@ describe.concurrent("stats-card", () => {
 
   test("Common: Stats Card - test if renders without errors", ({ expect }) => {
     const clx = "statscard-class";
-    render(<StatsCard className={clx} icon={ARGS.ICON} value={ARGS.VALUE} label={ARGS.LABEL} />);
+    render(
+      <StatsCard
+        data-testid="div"
+        className={clx}
+        icon={ARGS.ICON}
+        value={ARGS.VALUE}
+        label={ARGS.LABEL}
+      />,
+    );
     expect(screen.getByTestId("div").classList).toContain(clx);
   });
 });

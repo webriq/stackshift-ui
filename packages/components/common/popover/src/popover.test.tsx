@@ -3,11 +3,11 @@ import { afterEach, describe, test } from "vitest";
 import { Popover } from "./popover";
 
 describe.concurrent("popover", () => {
-	afterEach(cleanup);
+  afterEach(cleanup);
 
-	test("Dummy test - test if renders without errors", ({ expect }) => {
-		const clx = "my-class";
-		render(<Popover className={clx} />);
-		expect(screen.getByTestId("{ kebabCase name }}").classList).toContain(clx);
-	});
+  test("Dummy test - test if renders without errors", ({ expect }) => {
+    const clx = "my-class";
+    render(<Popover data-testid="popover" className={clx} />);
+    expect(screen.getByTestId("popover").classList).toContain(clx);
+  });
 });

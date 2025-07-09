@@ -43,7 +43,7 @@ export const Cookies: React.FC<SectionsProps> = ({ data }) => {
     contactLink: data?.variants?.contactLink ?? undefined,
   };
 
-  return Variant ? <Variant {...props} data-testid={displayName} /> : null;
+  return Variant ? <Variant {...props} /> : null;
 };
 
 Cookies.displayName = displayName;

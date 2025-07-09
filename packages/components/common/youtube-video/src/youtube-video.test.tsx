@@ -7,7 +7,7 @@ describe.concurrent("youtube-video", () => {
 
   test("Common: YouTube Video - test if renders without errors", ({ expect }) => {
     const clx = "aspect-video";
-    render(<YoutubeVideo className={clx} />);
+    render(<YoutubeVideo data-testid="div" className={clx} />);
     expect(screen.getByTestId("div").classList).toContain(clx);
   });
 });

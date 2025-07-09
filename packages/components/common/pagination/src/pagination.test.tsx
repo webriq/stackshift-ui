@@ -3,11 +3,11 @@ import { afterEach, describe, test } from "vitest";
 import { Pagination } from "./pagination";
 
 describe.concurrent("pagination", () => {
-	afterEach(cleanup);
+  afterEach(cleanup);
 
-	test("Dummy test - test if renders without errors", ({ expect }) => {
-		const clx = "my-class";
-		render(<Pagination className={clx} />);
-		expect(screen.getByTestId("{ kebabCase name }}").classList).toContain(clx);
-	});
+  test("Dummy test - test if renders without errors", ({ expect }) => {
+    const clx = "my-class";
+    render(<Pagination data-testid="pagination" className={clx} />);
+    expect(screen.getByTestId("pagination").classList).toContain(clx);
+  });
 });

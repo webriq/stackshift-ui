@@ -7,7 +7,7 @@ describe.concurrent("app-promo", () => {
 
   test.skip("Dummy test - test if renders without errors", ({ expect }) => {
     const clx = "my-class";
-    render(<AppPromo />);
-    expect(screen.getByTestId("{ kebabCase name }}").classList).toContain(clx);
+    render(<AppPromo data-testid="app-promo" />);
+    expect(screen.getByTestId("app-promo").classList).toContain(clx);
   });
 });

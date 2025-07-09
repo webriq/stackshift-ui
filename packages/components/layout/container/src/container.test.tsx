@@ -7,7 +7,7 @@ describe.concurrent("container", () => {
 
   test("Layout: Container - test if renders without errors", ({ expect }) => {
     const clx = "container-class";
-    render(<Container className={clx} />);
+    render(<Container data-testid="div" className={clx} />);
     expect(screen.getByTestId("div").classList).toContain(clx);
   });
 });

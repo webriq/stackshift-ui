@@ -3,11 +3,11 @@ import { afterEach, describe, test } from "vitest";
 import { Switch } from "./switch";
 
 describe.concurrent("switch", () => {
-	afterEach(cleanup);
+  afterEach(cleanup);
 
-	test("Dummy test - test if renders without errors", ({ expect }) => {
-		const clx = "my-class";
-		render(<Switch className={clx} />);
-		expect(screen.getByTestId("{ kebabCase name }}").classList).toContain(clx);
-	});
+  test("Dummy test - test if renders without errors", ({ expect }) => {
+    const clx = "my-class";
+    render(<Switch data-testid="switch" className={clx} />);
+    expect(screen.getByTestId("switch").classList).toContain(clx);
+  });
 });

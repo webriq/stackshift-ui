@@ -1,6 +1,6 @@
 import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
-import type { ElementType, HTMLProps, ReactNode } from "react";
 import cn from "classnames";
+import type { ElementType, HTMLProps, ReactNode } from "react";
 
 type StyleVariants<T extends string> = Record<T, string>;
 type Variant = "primary";
@@ -47,8 +47,7 @@ export const Radio: React.FC<RadioProps> = ({
       htmlFor={item}
       as={as}
       className={cn("flex items-center gap-2", labelClass)}
-      {...props}
-      data-testid={displayName}>
+      {...props}>
       <input
         onChange={onChange}
         className={cn(variantClass, className)}

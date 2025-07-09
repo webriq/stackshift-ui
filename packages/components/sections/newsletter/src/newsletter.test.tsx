@@ -7,7 +7,7 @@ describe.concurrent("newsletter", () => {
 
   test.skip("Dummy test - test if renders without errors", ({ expect }) => {
     const clx = "my-class";
-    render(<Newsletter />);
-    expect(screen.getByTestId("{ kebabCase name }}").classList).toContain(clx);
+    render(<Newsletter data-testid="newsletter" />);
+    expect(screen.getByTestId("newsletter").classList).toContain(clx);
   });
 });

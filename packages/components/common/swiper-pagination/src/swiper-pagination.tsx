@@ -1,6 +1,6 @@
 import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
-import type { ElementType, HTMLProps, ReactNode } from "react";
 import cn from "classnames";
+import type { ElementType, HTMLProps, ReactNode } from "react";
 
 type ColorScheme = "blue" | "white";
 
@@ -44,7 +44,6 @@ export const SwiperPagination: React.FC<SwiperPaginationProps> = ({
       as={as}
       className={cn(classes, className)}
       {...props}
-      data-testid={displayName}
     />
   );
 };

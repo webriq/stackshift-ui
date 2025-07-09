@@ -7,7 +7,7 @@ describe.concurrent("blockstyle", () => {
 
   test("Common: Blockstyle - test if renders without errors", ({ expect }) => {
     const clx = "blockStyle-class";
-    render(<Blockstyle className={clx} />);
+    render(<Blockstyle data-testid="div" className={clx} />);
 
     expect(screen.getByTestId("div").classList).toContain(clx);
   });

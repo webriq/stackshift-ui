@@ -7,7 +7,7 @@ describe.concurrent("grid", () => {
 
   test("Layout: Grid - test if renders without errors", ({ expect }) => {
     const clx = "grid-class";
-    render(<Grid className={clx} />);
+    render(<Grid data-testid="div" className={clx} />);
     expect(screen.getByTestId("div").classList).toContain(clx);
   });
 });

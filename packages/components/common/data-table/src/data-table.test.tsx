@@ -3,11 +3,11 @@ import { afterEach, describe, test } from "vitest";
 import { DataTable } from "./data-table";
 
 describe.concurrent("data-table", () => {
-	afterEach(cleanup);
+  afterEach(cleanup);
 
-	test("Dummy test - test if renders without errors", ({ expect }) => {
-		const clx = "my-class";
-		render(<DataTable className={clx} />);
-		expect(screen.getByTestId("{ kebabCase name }}").classList).toContain(clx);
-	});
+  test("Dummy test - test if renders without errors", ({ expect }) => {
+    const clx = "my-class";
+    render(<DataTable data-testid="data-table" className={clx} />);
+    expect(screen.getByTestId("data-table").classList).toContain(clx);
+  });
 });

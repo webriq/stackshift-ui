@@ -84,11 +84,7 @@ export const Heading: React.FC<HeadingProps> = ({
   const variantClass = variants[Element] ?? variants.h1;
 
   return (
-    <Component
-      as={type}
-      className={cn(variantClass, className)}
-      {...props}
-      data-testid={displayName}>
+    <Component as={type} className={cn(variantClass, className)} {...props}>
       {children}
     </Component>
   );

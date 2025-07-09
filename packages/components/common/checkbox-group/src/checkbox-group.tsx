@@ -1,6 +1,6 @@
 import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
-import { Fragment, type ElementType, type HTMLProps, type ReactNode } from "react";
 import cn from "classnames";
+import { forwardRef, Fragment, type ElementType, type HTMLProps, type ReactNode } from "react";
 
 type StyleVariants<T extends string> = Record<T, string>;
 type Variant = "primary" | "inline";
@@ -19,17 +19,19 @@ export interface CheckboxGroupProps extends Omit<HTMLProps<HTMLElement>, "as"> {
 
 const displayName = "CheckboxGroup";
 
-export const CheckboxGroup: React.FC<CheckboxGroupProps> = ({
-  variant = "primary",
-  name,
-  label,
-  noLabel = false,
-  labelClass,
-  children,
-  className,
-  as,
-  ...props
-}) => {
+export const CheckboxGroup = forwardRef<HTMLDivElement, CheckboxGroupProps>((props, ref) => {
+  const {
+    variant = "primary",
+    name,
+    label,
+    noLabel = false,
+    labelClass,
+    children,
+    className,
+    as,
+    ...rest
+  } = props;
+
   const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
 
   const commonClass = "ml-2";
@@ -41,20 +43,16 @@ export const CheckboxGroup: React.FC<CheckboxGroupProps> = ({
     inline,
   };
 
-  const variantClass = variants[variant] ?? primary;
+  const variantClass = variants[variant as Variant] ?? primary;
 
   return (
     <Fragment>
       {!noLabel && <p className={labelClass}>{label || name}</p>}
-      <Component
-        as={as}
-        className={cn(variantClass, className)}
-        {...props}
-        data-testid={displayName}>
+      <Component ref={ref} as={as} className={cn(variantClass, className)} {...rest}>
         {children}
       </Component>
     </Fragment>
   );
-};
+});
 
 CheckboxGroup.displayName = displayName;

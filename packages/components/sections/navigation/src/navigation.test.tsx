@@ -7,7 +7,7 @@ describe.concurrent("navigation", () => {
 
   test.skip("Dummy test - test if renders without errors", ({ expect }) => {
     const clx = "my-class";
-    render(<Navigation />);
-    expect(screen.getByTestId("{ kebabCase name }}").classList).toContain(clx);
+    render(<Navigation data-testid="navigation" />);
+    expect(screen.getByTestId("navigation").classList).toContain(clx);
   });
 });

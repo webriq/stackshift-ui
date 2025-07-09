@@ -7,7 +7,7 @@ describe.concurrent("flex", () => {
 
   test("Dummy test - test if renders without errors", ({ expect }) => {
     const clx = "my-class";
-    render(<Flex className={clx} />);
+    render(<Flex data-testid="div" className={clx} />);
     expect(screen.getByTestId("div").classList).toContain(clx);
   });
 });

@@ -7,7 +7,7 @@ describe.concurrent("radio-group", () => {
 
   test("Common: Radio Group - test if renders without errors", ({ expect }) => {
     const clx = "radiogroup-class";
-    render(<RadioGroup className={clx} name="stackshift-radiogroup" />);
-    expect(screen.getByTestId("div").classList).toContain(clx);
+    render(<RadioGroup data-testid="radio-group" className={clx} name="stackshift-radiogroup" />);
+    expect(screen.getByTestId("radio-group").classList).toContain(clx);
   });
 });

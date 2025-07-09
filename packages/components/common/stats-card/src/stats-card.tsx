@@ -46,7 +46,7 @@ export const StatsCard: React.FC<StatsCardProps> = ({
   const imageClasses = imageVariantClass[variant] ?? imageVariantClass["inline"];
 
   return (
-    <Component as={as} className={cn(classes, className)} {...props} data-testid={displayName}>
+    <Component as={as} className={cn(classes, className)} {...props}>
       {icon && (
         <div className={imageClasses}>
           <img src={icon} width={24} height={24} alt={alt ?? "statistics-icon"} />

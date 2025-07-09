@@ -7,7 +7,7 @@ describe.concurrent("swiper-pagination", () => {
 
   test("Common: Swiper Pagination - test if renders without errors", ({ expect }) => {
     const clx = "swiperpgn-class";
-    render(<SwiperPagination className={clx} />);
-    expect(screen.getByTestId("button").classList).toContain(clx);
+    render(<SwiperPagination data-testid="swiper-pagination" className={clx} />);
+    expect(screen.getByTestId("swiper-pagination").classList).toContain(clx);
   });
 });
