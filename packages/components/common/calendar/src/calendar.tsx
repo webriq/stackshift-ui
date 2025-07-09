@@ -5,7 +5,10 @@ import * as React from "react";
 import { DayButton, DayPicker, getDefaultClassNames } from "react-day-picker";
 
 import { Button, buttonVariants } from "@stackshift-ui/button";
-import { cn } from "@stackshift-ui/system";
+import { cn, DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
+
+const displayName = "Calendar";
+const displayNameDayButton = "CalendarDayButton";
 
 function Calendar({
   className,
@@ -19,10 +22,12 @@ function Calendar({
 }: React.ComponentProps<typeof DayPicker> & {
   buttonVariant?: React.ComponentProps<typeof Button>["variant"];
 }) {
+  const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
   const defaultClassNames = getDefaultClassNames();
 
   return (
-    <DayPicker
+    <Component
+      as={DayPicker}
       showOutsideDays={showOutsideDays}
       className={cn(
         "bg-background group/calendar p-3 [--cell-size:--spacing(8)] [[data-slot=card-content]_&]:bg-transparent [[data-slot=popover-content]_&]:bg-transparent",
@@ -135,6 +140,7 @@ function Calendar({
     />
   );
 }
+Calendar.displayName = displayName;
 
 function CalendarDayButton({
   className,
@@ -142,6 +148,7 @@ function CalendarDayButton({
   modifiers,
   ...props
 }: React.ComponentProps<typeof DayButton>) {
+  const { [displayNameDayButton]: Component = DefaultComponent } = useStackShiftUIComponents();
   const defaultClassNames = getDefaultClassNames();
 
   const ref = React.useRef<HTMLButtonElement>(null);
@@ -150,7 +157,8 @@ function CalendarDayButton({
   }, [modifiers.focused]);
 
   return (
-    <Button
+    <Component
+      as={Button}
       ref={ref}
       variant="ghost"
       size="icon"
@@ -173,5 +181,6 @@ function CalendarDayButton({
     />
   );
 }
+CalendarDayButton.displayName = displayNameDayButton;
 
 export { Calendar, CalendarDayButton };

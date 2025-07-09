@@ -16,6 +16,7 @@ function Accordion({ ...props }: React.ComponentProps<typeof AccordionPrimitive.
   const { [displayNameAccordion]: Component = DefaultComponent } = useStackShiftUIComponents();
   return <Component as={AccordionPrimitive.Root} data-slot="accordion" {...props} />;
 }
+Accordion.displayName = displayNameAccordion;
 
 function AccordionItem({
   className,
@@ -32,6 +33,7 @@ function AccordionItem({
     />
   );
 }
+AccordionItem.displayName = displayNameAccordionItem;
 
 function AccordionTrigger({
   className,
@@ -60,6 +62,7 @@ function AccordionTrigger({
     </HeaderComponent>
   );
 }
+AccordionTrigger.displayName = displayNameAccordionTrigger;
 
 function AccordionContent({
   className,
@@ -79,5 +82,6 @@ function AccordionContent({
     </Component>
   );
 }
+AccordionContent.displayName = displayNameAccordionContent;
 
 export { Accordion, AccordionContent, AccordionItem, AccordionTrigger };

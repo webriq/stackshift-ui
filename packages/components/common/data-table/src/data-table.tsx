@@ -1,5 +1,6 @@
 "use client";
 
+import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
 import {
   Table,
   TableBody,
@@ -22,12 +23,20 @@ import {
 import { useState } from "react";
 import { DataTablePagination } from "./data-table-pagination";
 
+const displayName = "DataTable";
+
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
 }
 
-export function DataTable<TData, TValue>({ columns, data }: DataTableProps<TData, TValue>) {
+export function DataTable<TData, TValue>({
+  columns,
+  data,
+  ...props
+}: DataTableProps<TData, TValue>) {
+  const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
+
   const [sorting, setSorting] = useState<SortingState>([]);
   const [rowSelection, setRowSelection] = useState({});
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
@@ -50,7 +59,7 @@ export function DataTable<TData, TValue>({ columns, data }: DataTableProps<TData
   });
 
   return (
-    <div className="relative w-full h-full flex flex-col gap-2">
+    <Component className="relative w-full h-full flex flex-col gap-2" {...props}>
       <div className="rounded-md border">
         <Table>
           <TableHeader>
@@ -92,9 +101,10 @@ export function DataTable<TData, TValue>({ columns, data }: DataTableProps<TData
       <div className="w-full h-fit py-10">
         <DataTablePagination table={table} />
       </div>
-    </div>
+    </Component>
   );
 }
+DataTable.displayName = displayName;
 
 export { type ColumnDef } from "@tanstack/react-table";
 export { DataTableColumnHeader } from "./data-table-column-header";

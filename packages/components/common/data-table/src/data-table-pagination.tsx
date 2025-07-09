@@ -1,3 +1,4 @@
+import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
 import { Table } from "@tanstack/react-table";
 import { ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from "lucide-react";
 
@@ -10,13 +11,17 @@ import {
   SelectValue,
 } from "@stackshift-ui/select";
 
+const displayName = "DataTablePagination";
+
 interface DataTablePaginationProps<TData> {
   table: Table<TData>;
 }
 
-export function DataTablePagination<TData>({ table }: DataTablePaginationProps<TData>) {
+export function DataTablePagination<TData>({ table, ...props }: DataTablePaginationProps<TData>) {
+  const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
+
   return (
-    <div className="flex items-center justify-between px-2">
+    <Component className="flex items-center justify-between px-2" {...props}>
       <div className="text-muted-foreground flex-1 text-sm">
         {table.getFilteredSelectedRowModel().rows.length} of{" "}
         {table.getFilteredRowModel().rows.length} row(s) selected.
@@ -83,6 +88,6 @@ export function DataTablePagination<TData>({ table }: DataTablePaginationProps<T
           </Button>
         </div>
       </div>
-    </div>
+    </Component>
   );
 }

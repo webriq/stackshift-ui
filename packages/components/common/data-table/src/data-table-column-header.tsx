@@ -6,9 +6,11 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@stackshift-ui/dropdown-menu";
-import { cn } from "@stackshift-ui/system";
+import { cn, DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
 import { Column } from "@tanstack/react-table";
 import { ArrowDown, ArrowUp, ChevronsUpDown, EyeOff } from "lucide-react";
+
+const displayName = "DataTableColumnHeader";
 
 interface DataTableColumnHeaderProps<TData, TValue> extends React.HTMLAttributes<HTMLDivElement> {
   column: Column<TData, TValue>;
@@ -19,13 +21,20 @@ export function DataTableColumnHeader<TData, TValue>({
   column,
   title,
   className,
+  ...props
 }: DataTableColumnHeaderProps<TData, TValue>) {
+  const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
+
   if (!column.getCanSort()) {
-    return <div className={cn(className)}>{title}</div>;
+    return (
+      <Component className={cn(className)} {...props}>
+        {title}
+      </Component>
+    );
   }
 
   return (
-    <div className={cn("flex items-center gap-2", className)}>
+    <Component className={cn("flex items-center gap-2", className)} {...props}>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="ghost" size="sm" className="data-[state=open]:bg-accent -ml-3 h-8">
@@ -55,6 +64,6 @@ export function DataTableColumnHeader<TData, TValue>({
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-    </div>
+    </Component>
   );
 }
