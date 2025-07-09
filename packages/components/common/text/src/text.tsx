@@ -62,7 +62,7 @@ export const Text: React.FC<TextProps> = ({
     normal: "font-normal",
     semibold: "font-semibold",
     bold: "font-bold",
-    medium: "font-mediun",
+    medium: "font-medium",
     extrabold: "font-extrabold",
     black: "font-black",
   };
