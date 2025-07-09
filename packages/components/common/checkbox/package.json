@@ -44,6 +44,7 @@
     "@radix-ui/react-checkbox": "^1.3.2",
     "@stackshift-ui/scripts": "workspace:*",
     "@stackshift-ui/system": "workspace:*",
+    "@testing-library/user-event": "^14.6.1",
     "classnames": "^2.5.1",
     "lucide-react": "^0.468.0"
   },
