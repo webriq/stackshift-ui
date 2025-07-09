@@ -1,10 +1,15 @@
 import * as React from "react";
 
-import { cn } from "@stackshift-ui/system";
+import { cn, DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
+
+const displayName = "Input";
 
 function Input({ className, type, ...props }: React.ComponentProps<"input">) {
+  const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
+
   return (
-    <input
+    <Component
+      as="input"
       type={type}
       data-slot="input"
       className={cn(
@@ -17,5 +22,6 @@ function Input({ className, type, ...props }: React.ComponentProps<"input">) {
     />
   );
 }
+Input.displayName = displayName;
 
 export { Input };

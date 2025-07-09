@@ -8,6 +8,11 @@ import { Calendar } from "@stackshift-ui/calendar";
 import { Input } from "@stackshift-ui/input";
 import { Label } from "@stackshift-ui/label";
 import { Popover, PopoverContent, PopoverTrigger } from "@stackshift-ui/popover";
+import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
+
+const displayName = "DatePicker";
+const displayNameInput = "DatePickerInput";
+const displayNameTime = "DatePickerTime";
 
 export interface DatePickerProps {
   label?: string;
@@ -19,7 +24,15 @@ export interface DatePickerProps {
   max?: number;
 }
 
-export function DatePicker({ label, mode = "range", selectedDate, onSelect }: DatePickerProps) {
+export function DatePicker({
+  label,
+  mode = "range",
+  selectedDate,
+  onSelect,
+  ...props
+}: DatePickerProps) {
+  const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
+
   const [open, setOpen] = React.useState(false);
   const date = selectedDate || new Date();
 
@@ -29,7 +42,7 @@ export function DatePicker({ label, mode = "range", selectedDate, onSelect }: Da
   };
 
   return (
-    <div className="flex flex-col gap-3">
+    <Component className="flex flex-col gap-3" {...props}>
       <Label htmlFor="date" className="px-1">
         {label}
       </Label>
@@ -45,9 +58,10 @@ export function DatePicker({ label, mode = "range", selectedDate, onSelect }: Da
           <Calendar mode={mode} selected={date} captionLayout="dropdown" onSelect={handleSelect} />
         </PopoverContent>
       </Popover>
-    </div>
+    </Component>
   );
 }
+DatePicker.displayName = displayName;
 
 function formatDate(date: Date | undefined) {
   if (!date) {
@@ -77,7 +91,10 @@ export function DatePickerInput({
   onSelect,
   selectedMonth,
   onMonthChange,
+  ...props
 }: DatePickerInputProps) {
+  const { [displayNameInput]: Component = DefaultComponent } = useStackShiftUIComponents();
+
   const [open, setOpen] = React.useState(false);
   const [date, setDate] = React.useState(selectedDate || new Date());
   const [month, setMonth] = React.useState(selectedMonth || date);
@@ -102,7 +119,7 @@ export function DatePickerInput({
   };
 
   return (
-    <div className="flex flex-col gap-3">
+    <Component className="flex flex-col gap-3" {...props}>
       <Label htmlFor="date" className="px-1">
         {label}
       </Label>
@@ -146,16 +163,19 @@ export function DatePickerInput({
           </PopoverContent>
         </Popover>
       </div>
-    </div>
+    </Component>
   );
 }
+DatePickerInput.displayName = displayNameInput;
 
 export interface DatePickerTimeProps extends Omit<DatePickerProps, "mode"> {
   selectedTime?: string;
   onTimeChange?: (time: string) => void;
 }
 
-export function DatePickerTime({ label, selectedDate, onSelect }: DatePickerTimeProps) {
+export function DatePickerTime({ label, selectedDate, onSelect, ...props }: DatePickerTimeProps) {
+  const { [displayNameTime]: Component = DefaultComponent } = useStackShiftUIComponents();
+
   const [open, setOpen] = React.useState(false);
   const [date, setDate] = React.useState<Date | undefined>(selectedDate);
 
@@ -167,7 +187,7 @@ export function DatePickerTime({ label, selectedDate, onSelect }: DatePickerTime
   };
 
   return (
-    <div className="flex gap-4">
+    <Component className="flex gap-4" {...props}>
       <div className="flex flex-col gap-3">
         <Label htmlFor="date-picker" className="px-1">
           {label}
@@ -202,6 +222,6 @@ export function DatePickerTime({ label, selectedDate, onSelect }: DatePickerTime
           className="bg-background appearance-none [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-calendar-picker-indicator]:appearance-none"
         />
       </div>
-    </div>
+    </Component>
   );
 }

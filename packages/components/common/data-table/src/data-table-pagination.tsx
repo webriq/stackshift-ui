@@ -91,3 +91,4 @@ export function DataTablePagination<TData>({ table, ...props }: DataTablePaginat
     </Component>
   );
 }
+DataTablePagination.displayName = displayName;

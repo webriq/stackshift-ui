@@ -50,3 +50,4 @@ export function DataTableViewOptions<TData>({ table, ...props }: { table: Table<
     </Component>
   );
 }
+DataTableViewOptions.displayName = displayName;
