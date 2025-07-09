@@ -14,7 +14,7 @@ describe("DefaultComponent", () => {
   });
 
   it("should render the specified component", ({ expect }) => {
-    render(<DefaultComponent as="span" />);
+    render(<DefaultComponent data-testid="span" as="span" />);
 
     expect(screen.getByTestId("span").nodeName).toBe("SPAN");
   });

@@ -6,5 +6,5 @@ export const DefaultComponent = <T extends keyof JSX.IntrinsicElements>(
   const { as = "div", ...rest } = props;
   const Component = as;
 
-  return <Component {...rest} data-testid={as} />;
+  return <Component {...rest} />;
 };
