@@ -7,7 +7,7 @@ describe.concurrent("form-field", () => {
 
   test("Common: Form Field - test if renders without errors", ({ expect }) => {
     const clx = "formfield-class";
-    render(<FormField className={clx} name="stackshift-formfield" />);
+    render(<FormField data-testid="textarea" className={clx} name="stackshift-formfield" />);
     expect(screen.getByTestId("textarea").classList).toContain(clx);
   });
 });

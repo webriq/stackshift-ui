@@ -228,12 +228,15 @@ importers:
       '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
+      '@testing-library/jest-dom':
+        specifier: ^6.5.0
+        version: 6.5.0
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@types/node':
-        specifier: ^22.7.0
-        version: 22.13.10
+      '@testing-library/user-event':
+        specifier: ^14.6.1
+        version: 14.6.1(@testing-library/dom@10.4.0)
       '@types/react':
         specifier: ^18.3.9
         version: 18.3.11
@@ -307,9 +310,15 @@ importers:
       '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
+      '@testing-library/jest-dom':
+        specifier: ^6.5.0
+        version: 6.5.0
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@testing-library/user-event':
+        specifier: ^14.6.1
+        version: 14.6.1(@testing-library/dom@10.4.0)
       '@types/node':
         specifier: ^22.7.0
         version: 22.7.5
@@ -629,9 +638,15 @@ importers:
       '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
+      '@testing-library/jest-dom':
+        specifier: ^6.5.0
+        version: 6.5.0
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@testing-library/user-event':
+        specifier: ^14.5.2
+        version: 14.6.1(@testing-library/dom@10.4.0)
       '@types/node':
         specifier: ^22.7.0
         version: 22.13.10
@@ -699,6 +714,9 @@ importers:
       '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
+      '@testing-library/jest-dom':
+        specifier: ^6.5.0
+        version: 6.5.0
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -759,6 +777,9 @@ importers:
       '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
+      '@testing-library/user-event':
+        specifier: ^14.6.1
+        version: 14.6.1(@testing-library/dom@10.4.0)
       classnames:
         specifier: ^2.5.1
         version: 2.5.1
@@ -845,9 +866,15 @@ importers:
       '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
+      '@testing-library/jest-dom':
+        specifier: ^6.5.0
+        version: 6.5.0
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@testing-library/user-event':
+        specifier: ^14.6.1
+        version: 14.6.1(@testing-library/dom@10.4.0)
       '@types/node':
         specifier: ^22.7.0
         version: 22.7.5
@@ -928,7 +955,7 @@ importers:
         version: 0.468.0(react@18.3.1)
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.25.8)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+        version: 14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -959,7 +986,7 @@ importers:
         version: 0.0.0
       esbuild-plugin-react18:
         specifier: ^0.2.5
-        version: 0.2.5(@types/react@18.3.11)(next@14.2.15(@babel/core@7.25.8)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1)
+        version: 0.2.5(@types/react@18.3.11)(next@14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1)
       esbuild-plugin-react18-css:
         specifier: ^0.0.4
         version: 0.0.4
@@ -1103,9 +1130,15 @@ importers:
       '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
+      '@testing-library/jest-dom':
+        specifier: ^6.5.0
+        version: 6.5.0
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@testing-library/user-event':
+        specifier: ^14.6.1
+        version: 14.6.1(@testing-library/dom@10.4.0)
       '@types/node':
         specifier: ^22.7.0
         version: 22.13.10
@@ -1179,9 +1212,15 @@ importers:
       '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
+      '@testing-library/jest-dom':
+        specifier: ^6.5.0
+        version: 6.5.0
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@testing-library/user-event':
+        specifier: ^14.6.1
+        version: 14.6.1(@testing-library/dom@10.4.0)
       '@types/node':
         specifier: ^22.7.0
         version: 22.13.10
@@ -1400,6 +1439,9 @@ importers:
       '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
+      '@testing-library/jest-dom':
+        specifier: ^6.5.0
+        version: 6.5.0
       classnames:
         specifier: ^2.5.1
         version: 2.5.1
@@ -1986,7 +2028,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+        version: 14.2.15(@babel/core@7.25.8)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
       pnpm:
         specifier: ^10.12.4
         version: 10.12.4
@@ -1997,9 +2039,15 @@ importers:
       '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
+      '@testing-library/jest-dom':
+        specifier: ^6.5.0
+        version: 6.5.0
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@testing-library/user-event':
+        specifier: ^14.6.1
+        version: 14.6.1(@testing-library/dom@10.4.0)
       '@types/node':
         specifier: ^22.7.0
         version: 22.13.10
@@ -2020,7 +2068,7 @@ importers:
         version: 0.0.0
       esbuild-plugin-react18:
         specifier: ^0.2.5
-        version: 0.2.5(@types/react@18.3.11)(next@14.2.15(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1)
+        version: 0.2.5(@types/react@18.3.11)(next@14.2.15(@babel/core@7.25.8)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1)
       esbuild-plugin-react18-css:
         specifier: ^0.0.4
         version: 0.0.4
@@ -2368,9 +2416,15 @@ importers:
       '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
+      '@testing-library/jest-dom':
+        specifier: ^6.5.0
+        version: 6.5.0
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@testing-library/user-event':
+        specifier: ^14.6.1
+        version: 14.6.1(@testing-library/dom@10.4.0)
       '@types/node':
         specifier: ^22.7.0
         version: 22.13.10
@@ -3086,9 +3140,15 @@ importers:
       '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
+      '@testing-library/jest-dom':
+        specifier: ^6.5.0
+        version: 6.5.0
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@testing-library/user-event':
+        specifier: ^14.6.1
+        version: 14.6.1(@testing-library/dom@10.4.0)
       '@types/node':
         specifier: ^22.7.0
         version: 22.13.10
@@ -3314,9 +3374,15 @@ importers:
       '@stackshift-ui/typescript-config':
         specifier: workspace:*
         version: link:../../../config/config-typescript
+      '@testing-library/jest-dom':
+        specifier: ^6.5.0
+        version: 6.5.0
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@testing-library/user-event':
+        specifier: ^14.6.1
+        version: 14.6.1(@testing-library/dom@10.4.0)
       '@types/node':
         specifier: ^22.7.0
         version: 22.13.10
@@ -8113,6 +8179,12 @@ packages:
         optional: true
       '@types/react-dom':
         optional: true
+
+  '@testing-library/user-event@14.6.1':
+    resolution: {integrity: sha512-vq7fv0rnt+QTXgPxr5Hjc210p6YKq2kmdziLgnsZGgLJ9e6VAShx1pACLuRjd/AS/sr7phAR58OIIpf0LlmQNw==}
+    engines: {node: '>=12', npm: '>=6'}
+    peerDependencies:
+      '@testing-library/dom': '>=7.21.4'
 
   '@tootallnate/once@2.0.0':
     resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==}
@@ -15611,6 +15683,10 @@ snapshots:
     optionalDependencies:
       '@types/react': 18.3.9
       '@types/react-dom': 18.3.0
+
+  '@testing-library/user-event@14.6.1(@testing-library/dom@10.4.0)':
+    dependencies:
+      '@testing-library/dom': 10.4.0
 
   '@tootallnate/once@2.0.0': {}
 
