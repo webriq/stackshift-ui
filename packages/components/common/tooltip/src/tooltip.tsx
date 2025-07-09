@@ -3,32 +3,47 @@
 import * as TooltipPrimitive from "@radix-ui/react-tooltip";
 import * as React from "react";
 
-import { cn } from "@stackshift-ui/system";
+import { cn, DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
+
+const displayName = "Tooltip";
+const displayNameProvider = "TooltipProvider";
+const displayNameTrigger = "TooltipTrigger";
+const displayNameContent = "TooltipContent";
 
 function TooltipProvider({
   delayDuration = 0,
   ...props
 }: React.ComponentProps<typeof TooltipPrimitive.Provider>) {
+  const { [displayNameProvider]: Component = DefaultComponent } = useStackShiftUIComponents();
+
   return (
-    <TooltipPrimitive.Provider
+    <Component
+      as={TooltipPrimitive.Provider}
       data-slot="tooltip-provider"
       delayDuration={delayDuration}
       {...props}
     />
   );
 }
+TooltipProvider.displayName = displayNameProvider;
 
 function Tooltip({ ...props }: React.ComponentProps<typeof TooltipPrimitive.Root>) {
+  const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
+
   return (
     <TooltipProvider>
-      <TooltipPrimitive.Root data-slot="tooltip" {...props} />
+      <Component as={TooltipPrimitive.Root} data-slot="tooltip" {...props} />
     </TooltipProvider>
   );
 }
+Tooltip.displayName = displayName;
 
 function TooltipTrigger({ ...props }: React.ComponentProps<typeof TooltipPrimitive.Trigger>) {
-  return <TooltipPrimitive.Trigger data-slot="tooltip-trigger" {...props} />;
+  const { [displayNameTrigger]: Component = DefaultComponent } = useStackShiftUIComponents();
+
+  return <Component as={TooltipPrimitive.Trigger} data-slot="tooltip-trigger" {...props} />;
 }
+TooltipTrigger.displayName = displayNameTrigger;
 
 function TooltipContent({
   className,
@@ -36,9 +51,12 @@ function TooltipContent({
   children,
   ...props
 }: React.ComponentProps<typeof TooltipPrimitive.Content>) {
+  const { [displayNameContent]: Component = DefaultComponent } = useStackShiftUIComponents();
+
   return (
     <TooltipPrimitive.Portal>
-      <TooltipPrimitive.Content
+      <Component
+        as={TooltipPrimitive.Content}
         data-slot="tooltip-content"
         sideOffset={sideOffset}
         className={cn(
@@ -48,9 +66,10 @@ function TooltipContent({
         {...props}>
         {children}
         <TooltipPrimitive.Arrow className="bg-primary fill-primary z-50 size-2.5 translate-y-[calc(-50%_-_2px)] rotate-45 rounded-[2px]" />
-      </TooltipPrimitive.Content>
+      </Component>
     </TooltipPrimitive.Portal>
   );
 }
+TooltipContent.displayName = displayNameContent;
 
 export { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger };

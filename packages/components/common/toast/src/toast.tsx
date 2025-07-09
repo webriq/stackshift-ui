@@ -3,11 +3,17 @@
 import { useTheme } from "next-themes";
 import { Toaster as Sonner, ToasterProps, toast } from "sonner";
 
+import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
+
+const displayName = "Toaster";
+
 const Toaster = ({ ...props }: ToasterProps) => {
+  const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
   const { theme = "system" } = useTheme();
 
   return (
-    <Sonner
+    <Component
+      as={Sonner}
       theme={theme as ToasterProps["theme"]}
       className="toaster group"
       style={
@@ -21,5 +27,6 @@ const Toaster = ({ ...props }: ToasterProps) => {
     />
   );
 };
+Toaster.displayName = displayName;
 
 export { Toaster, toast, type ToasterProps };
