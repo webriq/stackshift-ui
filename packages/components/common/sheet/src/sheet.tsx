@@ -4,30 +4,56 @@ import * as SheetPrimitive from "@radix-ui/react-dialog";
 import { XIcon } from "lucide-react";
 import * as React from "react";
 
-import { cn } from "@stackshift-ui/system";
+import { cn, DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
+
+const displayName = "Sheet";
+const displayNameTrigger = "SheetTrigger";
+const displayNamePortal = "SheetPortal";
+const displayNameClose = "SheetClose";
+const displayNameOverlay = "SheetOverlay";
+const displayNameContent = "SheetContent";
+const displayNameHeader = "SheetHeader";
+const displayNameFooter = "SheetFooter";
+const displayNameTitle = "SheetTitle";
+const displayNameDescription = "SheetDescription";
 
 function Sheet({ ...props }: React.ComponentProps<typeof SheetPrimitive.Root>) {
-  return <SheetPrimitive.Root data-slot="sheet" {...props} />;
+  const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
+
+  return <Component as={SheetPrimitive.Root} data-slot="sheet" {...props} />;
 }
+Sheet.displayName = displayName;
 
 function SheetTrigger({ ...props }: React.ComponentProps<typeof SheetPrimitive.Trigger>) {
-  return <SheetPrimitive.Trigger data-slot="sheet-trigger" {...props} />;
+  const { [displayNameTrigger]: Component = DefaultComponent } = useStackShiftUIComponents();
+
+  return <Component as={SheetPrimitive.Trigger} data-slot="sheet-trigger" {...props} />;
 }
+SheetTrigger.displayName = displayNameTrigger;
 
 function SheetClose({ ...props }: React.ComponentProps<typeof SheetPrimitive.Close>) {
-  return <SheetPrimitive.Close data-slot="sheet-close" {...props} />;
+  const { [displayNameClose]: Component = DefaultComponent } = useStackShiftUIComponents();
+
+  return <Component as={SheetPrimitive.Close} data-slot="sheet-close" {...props} />;
 }
+SheetClose.displayName = displayNameClose;
 
 function SheetPortal({ ...props }: React.ComponentProps<typeof SheetPrimitive.Portal>) {
-  return <SheetPrimitive.Portal data-slot="sheet-portal" {...props} />;
+  const { [displayNamePortal]: Component = DefaultComponent } = useStackShiftUIComponents();
+
+  return <Component as={SheetPrimitive.Portal} data-slot="sheet-portal" {...props} />;
 }
+SheetPortal.displayName = displayNamePortal;
 
 function SheetOverlay({
   className,
   ...props
 }: React.ComponentProps<typeof SheetPrimitive.Overlay>) {
+  const { [displayNameOverlay]: Component = DefaultComponent } = useStackShiftUIComponents();
+
   return (
-    <SheetPrimitive.Overlay
+    <Component
+      as={SheetPrimitive.Overlay}
       data-slot="sheet-overlay"
       className={cn(
         "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/50",
@@ -37,6 +63,7 @@ function SheetOverlay({
     />
   );
 }
+SheetOverlay.displayName = displayNameOverlay;
 
 function SheetContent({
   className,
@@ -46,10 +73,13 @@ function SheetContent({
 }: React.ComponentProps<typeof SheetPrimitive.Content> & {
   side?: "top" | "right" | "bottom" | "left";
 }) {
+  const { [displayNameContent]: Component = DefaultComponent } = useStackShiftUIComponents();
+
   return (
     <SheetPortal>
       <SheetOverlay />
-      <SheetPrimitive.Content
+      <Component
+        as={SheetPrimitive.Content}
         data-slot="sheet-content"
         className={cn(
           "bg-background data-[state=open]:animate-in data-[state=closed]:animate-out fixed z-50 flex flex-col gap-4 shadow-lg transition ease-in-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
@@ -69,53 +99,68 @@ function SheetContent({
           <XIcon className="size-4" />
           <span className="sr-only">Close</span>
         </SheetPrimitive.Close>
-      </SheetPrimitive.Content>
+      </Component>
     </SheetPortal>
   );
 }
+SheetContent.displayName = displayNameContent;
 
 function SheetHeader({ className, ...props }: React.ComponentProps<"div">) {
+  const { [displayNameHeader]: Component = DefaultComponent } = useStackShiftUIComponents();
+
   return (
-    <div
+    <Component
       data-slot="sheet-header"
       className={cn("flex flex-col gap-1.5 p-4", className)}
       {...props}
     />
   );
 }
+SheetHeader.displayName = displayNameHeader;
 
 function SheetFooter({ className, ...props }: React.ComponentProps<"div">) {
+  const { [displayNameFooter]: Component = DefaultComponent } = useStackShiftUIComponents();
+
   return (
-    <div
+    <Component
       data-slot="sheet-footer"
       className={cn("mt-auto flex flex-col gap-2 p-4", className)}
       {...props}
     />
   );
 }
+SheetFooter.displayName = displayNameFooter;
 
 function SheetTitle({ className, ...props }: React.ComponentProps<typeof SheetPrimitive.Title>) {
+  const { [displayNameTitle]: Component = DefaultComponent } = useStackShiftUIComponents();
+
   return (
-    <SheetPrimitive.Title
+    <Component
+      as={SheetPrimitive.Title}
       data-slot="sheet-title"
       className={cn("text-foreground font-semibold", className)}
       {...props}
     />
   );
 }
+SheetTitle.displayName = displayNameTitle;
 
 function SheetDescription({
   className,
   ...props
 }: React.ComponentProps<typeof SheetPrimitive.Description>) {
+  const { [displayNameDescription]: Component = DefaultComponent } = useStackShiftUIComponents();
+
   return (
-    <SheetPrimitive.Description
+    <Component
+      as={SheetPrimitive.Description}
       data-slot="sheet-description"
       className={cn("text-muted-foreground text-sm", className)}
       {...props}
     />
   );
 }
+SheetDescription.displayName = displayNameDescription;
 
 export {
   Sheet,

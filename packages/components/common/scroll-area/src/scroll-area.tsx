@@ -3,15 +3,21 @@
 import * as ScrollAreaPrimitive from "@radix-ui/react-scroll-area";
 import * as React from "react";
 
-import { cn } from "@stackshift-ui/system";
+import { cn, DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
+
+const displayName = "ScrollArea";
+const displayNameScrollbar = "ScrollAreaScrollbar";
 
 function ScrollArea({
   className,
   children,
   ...props
 }: React.ComponentProps<typeof ScrollAreaPrimitive.Root>) {
+  const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
+
   return (
-    <ScrollAreaPrimitive.Root
+    <Component
+      as={ScrollAreaPrimitive.Root}
       data-slot="scroll-area"
       className={cn("relative", className)}
       {...props}>
@@ -22,17 +28,21 @@ function ScrollArea({
       </ScrollAreaPrimitive.Viewport>
       <ScrollBar />
       <ScrollAreaPrimitive.Corner />
-    </ScrollAreaPrimitive.Root>
+    </Component>
   );
 }
+ScrollArea.displayName = displayName;
 
 function ScrollBar({
   className,
   orientation = "vertical",
   ...props
 }: React.ComponentProps<typeof ScrollAreaPrimitive.ScrollAreaScrollbar>) {
+  const { [displayNameScrollbar]: Component = DefaultComponent } = useStackShiftUIComponents();
+
   return (
-    <ScrollAreaPrimitive.ScrollAreaScrollbar
+    <Component
+      as={ScrollAreaPrimitive.ScrollAreaScrollbar}
       data-slot="scroll-area-scrollbar"
       orientation={orientation}
       className={cn(
@@ -46,8 +56,9 @@ function ScrollBar({
         data-slot="scroll-area-thumb"
         className="bg-border relative flex-1 rounded-full"
       />
-    </ScrollAreaPrimitive.ScrollAreaScrollbar>
+    </Component>
   );
 }
+ScrollBar.displayName = displayNameScrollbar;
 
 export { ScrollArea, ScrollBar };

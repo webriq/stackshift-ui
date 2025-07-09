@@ -3,15 +3,26 @@
 import * as PopoverPrimitive from "@radix-ui/react-popover";
 import * as React from "react";
 
-import { cn } from "@stackshift-ui/system";
+import { cn, DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
+
+const displayName = "Popover";
+const displayNameTrigger = "PopoverTrigger";
+const displayNameContent = "PopoverContent";
+const displayNameAnchor = "PopoverAnchor";
 
 function Popover({ ...props }: React.ComponentProps<typeof PopoverPrimitive.Root>) {
-  return <PopoverPrimitive.Root data-slot="popover" {...props} />;
+  const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
+
+  return <Component as={PopoverPrimitive.Root} data-slot="popover" {...props} />;
 }
+Popover.displayName = displayName;
 
 function PopoverTrigger({ ...props }: React.ComponentProps<typeof PopoverPrimitive.Trigger>) {
-  return <PopoverPrimitive.Trigger data-slot="popover-trigger" {...props} />;
+  const { [displayNameTrigger]: Component = DefaultComponent } = useStackShiftUIComponents();
+
+  return <Component as={PopoverPrimitive.Trigger} data-slot="popover-trigger" {...props} />;
 }
+PopoverTrigger.displayName = displayNameTrigger;
 
 function PopoverContent({
   className,
@@ -19,9 +30,12 @@ function PopoverContent({
   sideOffset = 4,
   ...props
 }: React.ComponentProps<typeof PopoverPrimitive.Content>) {
+  const { [displayNameContent]: Component = DefaultComponent } = useStackShiftUIComponents();
+
   return (
     <PopoverPrimitive.Portal>
-      <PopoverPrimitive.Content
+      <Component
+        as={PopoverPrimitive.Content}
         data-slot="popover-content"
         align={align}
         sideOffset={sideOffset}
@@ -34,9 +48,12 @@ function PopoverContent({
     </PopoverPrimitive.Portal>
   );
 }
+PopoverContent.displayName = displayNameContent;
 
 function PopoverAnchor({ ...props }: React.ComponentProps<typeof PopoverPrimitive.Anchor>) {
-  return <PopoverPrimitive.Anchor data-slot="popover-anchor" {...props} />;
+  const { [displayNameAnchor]: Component = DefaultComponent } = useStackShiftUIComponents();
+
+  return <Component as={PopoverPrimitive.Anchor} data-slot="popover-anchor" {...props} />;
 }
 
 export { Popover, PopoverAnchor, PopoverContent, PopoverTrigger };
