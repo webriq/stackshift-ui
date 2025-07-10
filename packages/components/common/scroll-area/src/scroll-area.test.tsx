@@ -7,7 +7,8 @@ describe.concurrent("scroll-area", () => {
 
   test("Dummy test - test if renders without errors", ({ expect }) => {
     const clx = "my-class";
-    render(<ScrollArea data-testid="scroll-area" className={clx} />);
+    const { unmount } = render(<ScrollArea data-testid="scroll-area" className={clx} />);
     expect(screen.getByTestId("scroll-area").classList).toContain(clx);
+    unmount();
   });
 });

@@ -8,7 +8,7 @@ import { Calendar } from "@stackshift-ui/calendar";
 import { Input } from "@stackshift-ui/input";
 import { Label } from "@stackshift-ui/label";
 import { Popover, PopoverContent, PopoverTrigger } from "@stackshift-ui/popover";
-import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
+import { cn, DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
 
 const displayName = "DatePicker";
 const displayNameInput = "DatePickerInput";
@@ -22,6 +22,7 @@ export interface DatePickerProps {
   required?: boolean;
   min?: number;
   max?: number;
+  className?: string;
 }
 
 export function DatePicker({
@@ -42,7 +43,7 @@ export function DatePicker({
   };
 
   return (
-    <Component className="flex flex-col gap-3" {...props}>
+    <Component className={cn("flex flex-col gap-3", props.className)} {...props}>
       <Label htmlFor="date" className="px-1">
         {label}
       </Label>

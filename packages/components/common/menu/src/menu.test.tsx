@@ -16,7 +16,8 @@ describe.concurrent("menu", () => {
 
   test("Dummy test - test if renders without errors", ({ expect }) => {
     const clx = "my-class";
-    render(<NavigationMenu data-testid="menu" className={clx} />);
+    const { unmount } = render(<NavigationMenu data-testid="menu" className={clx} />);
     expect(screen.getByTestId("menu").classList).toContain(clx);
+    unmount();
   });
 });

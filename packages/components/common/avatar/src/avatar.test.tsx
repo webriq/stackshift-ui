@@ -22,10 +22,10 @@ describe("avatar", () => {
     });
   });
 
-  test("renders avatar image and fallback", () => {
+  test("Common: Avatar - test if renders image when src is provided", () => {
     const loadMock = vi.fn();
 
-    render(
+    const { unmount } = render(
       <Avatar data-testid="avatar" className="avatar-class">
         <AvatarImage
           data-testid="avatar-image"
@@ -45,13 +45,14 @@ describe("avatar", () => {
     expect(avatar).toHaveClass("avatar-class");
     expect(image).toHaveAttribute("src", "https://github.com/shadcn.png");
     expect(image).toHaveAttribute("alt", "@shadcn");
+    unmount();
   });
 
-  test("renders avatar fallback when image fails to load", () => {
+  test("Common: Avatar - test if renders fallback when image fails to load", () => {
     const loadMock = vi.fn();
     const errorMock = vi.fn();
 
-    render(
+    const { unmount } = render(
       <Avatar data-testid="avatar" className="avatar-class">
         <AvatarImage
           data-testid="avatar-image"
@@ -70,5 +71,6 @@ describe("avatar", () => {
 
     const fallback = screen.getByText("CN");
     expect(fallback).toBeInTheDocument();
+    unmount();
   });
 });

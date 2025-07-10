@@ -10,7 +10,7 @@ describe.concurrent("popover", () => {
     const clx = "my-class";
     const user = userEvent.setup();
 
-    render(
+    const { unmount } = render(
       <Popover data-testid="popover">
         <PopoverTrigger asChild data-testid="popover-trigger">
           <button>Open Popover</button>
@@ -28,5 +28,6 @@ describe.concurrent("popover", () => {
 
     const popover = await screen.findByTestId("popover-content");
     expect(popover).toBeInTheDocument();
+    unmount();
   });
 });

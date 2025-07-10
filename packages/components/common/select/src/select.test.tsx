@@ -7,7 +7,7 @@ describe.concurrent("select", () => {
 
   test("Common: Select - test if renders without errors", ({ expect }) => {
     const clx = "select-class";
-    render(
+    const { unmount } = render(
       <Select data-testid="select-container">
         <SelectTrigger data-testid="select" className={clx}>
           <SelectValue placeholder="Select an option" />
@@ -21,5 +21,6 @@ describe.concurrent("select", () => {
     );
 
     expect(screen.getByTestId("select").classList).toContain(clx);
+    unmount();
   });
 });

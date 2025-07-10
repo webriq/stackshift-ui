@@ -7,7 +7,7 @@ describe("accordion", () => {
   test("Common: Accordion - test if renders without errors", async () => {
     const clx = "accordion-class";
 
-    render(
+    const { unmount } = render(
       <Accordion data-testid="accordion" type="single" className={clx} collapsible>
         <AccordionItem value="item-1">
           <AccordionTrigger data-testid="accordion-trigger">First item</AccordionTrigger>
@@ -32,12 +32,13 @@ describe("accordion", () => {
     await user.click(trigger);
 
     expect(await screen.findByText("This is the first accordion item content.")).toBeDefined();
+    unmount();
   });
 
   test("Common: Accordion - test if renders with multiple items", async () => {
     const clx = "accordion-class";
 
-    render(
+    const { unmount } = render(
       <Accordion data-testid="accordion-multiple" type="multiple" className={clx}>
         <AccordionItem value="item-1">
           <AccordionTrigger data-testid="accordion-trigger">First item</AccordionTrigger>
@@ -74,5 +75,6 @@ describe("accordion", () => {
     expect(
       await screen.findByText("This is the second accordion item content."),
     ).toBeInTheDocument();
+    unmount();
   });
 });

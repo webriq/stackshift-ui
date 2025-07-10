@@ -7,7 +7,6 @@ import { RadioGroup, RadioGroupItem } from "@stackshift-ui/radio-group";
 import {
   Select,
   SelectContent,
-  SelectGroup,
   SelectItem,
   SelectTrigger,
   SelectValue,
@@ -56,13 +55,14 @@ export const FormField = ({
   switch (type) {
     case "inputRadio":
       return (
-        <RadioGroup name={name}>
+        <RadioGroup name={name} {...props}>
           <Label>{label}</Label>
           {items?.map(item => (
-            // <Radio key={item} ariaLabel={name} name={name} item={item} {...props} />
-            <RadioGroupItem key={item} value={item} {...props}>
-              {item}
-            </RadioGroupItem>
+            <div className="flex items-center gap-3">
+              {/* // <Radio key={item} ariaLabel={name} name={name} item={item} {...props} /> */}
+              <RadioGroupItem id={item} key={item} value={item} />
+              <Label htmlFor={item}>{item}</Label>
+            </div>
           ))}
         </RadioGroup>
       );
@@ -74,20 +74,18 @@ export const FormField = ({
             <SelectValue placeholder={placeholder} />
           </SelectTrigger>
           <SelectContent>
-            <SelectGroup>
-              {items?.map(item => (
-                <SelectItem key={item} value={item}>
-                  {item}
-                </SelectItem>
-              ))}
-            </SelectGroup>
+            {items?.map(item => (
+              <SelectItem key={item} value={item}>
+                {item}
+              </SelectItem>
+            ))}
           </SelectContent>
         </Select>
       );
 
     case "inputCheckbox":
       return (
-        <CheckboxGroup noLabel={noLabel} name={name} label={label}>
+        <CheckboxGroup noLabel={noLabel} name={name} label={label} {...props}>
           {items?.map(item => (
             <div className="flex flex-col gap-2 items-start">
               <Checkbox id={item} key={item} name={item} {...props} />

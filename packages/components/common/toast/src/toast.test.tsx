@@ -37,7 +37,8 @@ describe.concurrent("toast", () => {
 
   test("Dummy test - test if renders without errors", ({ expect }) => {
     const clx = "my-class";
-    render(<Toaster data-testid="toast" className={clx} />);
+    const { unmount } = render(<Toaster data-testid="toast" className={clx} />);
     expect(screen.getByLabelText("Notifications alt+T")).toBeInTheDocument();
+    unmount();
   });
 });

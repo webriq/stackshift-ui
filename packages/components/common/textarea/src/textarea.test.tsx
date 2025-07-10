@@ -9,22 +9,25 @@ describe.concurrent("textarea", () => {
 
   test("Common: Textarea - test if renders without errors", ({ expect }) => {
     const clx = "textarea-class";
-    render(<Textarea className={clx} placeholder="Enter text here" />);
+    const { unmount } = render(<Textarea className={clx} placeholder="Enter text here" />);
     const textarea = screen.getByPlaceholderText("Enter text here");
     expect(textarea.classList).toContain(clx);
     expect(textarea.tagName.toLowerCase()).toBe("textarea");
+    unmount();
   });
 
   test("Common: Textarea - test with aria-label", ({ expect }) => {
-    render(<Textarea aria-label="Text area input" />);
+    const { unmount } = render(<Textarea aria-label="Text area input" />);
     const textarea = screen.getByLabelText("Text area input");
     expect(textarea.tagName.toLowerCase()).toBe("textarea");
+    unmount();
   });
 
   test("Common: Textarea - test with rows prop", ({ expect }) => {
-    render(<Textarea placeholder="Test rows" rows={3} />);
+    const { unmount } = render(<Textarea placeholder="Test rows" rows={3} />);
     const textarea = screen.getByPlaceholderText("Test rows");
     screen.debug(textarea);
     expect(textarea.getAttribute("rows")).toBe("3");
+    unmount();
   });
 });

@@ -7,7 +7,8 @@ describe.concurrent("toggle", () => {
 
   test("Dummy test - test if renders without errors", ({ expect }) => {
     const clx = "my-class";
-    render(<Toggle data-testid="toggle" className={clx} />);
+    const { unmount } = render(<Toggle data-testid="toggle" className={clx} />);
     expect(screen.getByTestId("toggle").classList).toContain(clx);
+    unmount();
   });
 });

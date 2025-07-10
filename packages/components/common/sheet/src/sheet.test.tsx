@@ -18,7 +18,7 @@ describe.concurrent("sheet", () => {
 
     const user = userEvent.setup();
 
-    render(
+    const { unmount } = render(
       <Sheet>
         <SheetTrigger asChild data-testid="sheet-trigger">
           <button>Open Sheet</button>
@@ -40,5 +40,6 @@ describe.concurrent("sheet", () => {
     const sheet = await screen.findByTestId("sheet-container");
 
     expect(sheet).toBeInTheDocument();
+    unmount();
   });
 });

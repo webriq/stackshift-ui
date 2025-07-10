@@ -7,7 +7,8 @@ describe.concurrent("label", () => {
 
   test("Dummy test - test if renders without errors", ({ expect }) => {
     const clx = "my-class";
-    render(<Label data-testid="label" className={clx} />);
+    const { unmount } = render(<Label data-testid="label" className={clx} />);
     expect(screen.getByTestId("label").classList).toContain(clx);
+    unmount();
   });
 });

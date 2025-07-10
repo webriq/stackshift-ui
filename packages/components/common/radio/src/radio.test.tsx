@@ -7,7 +7,7 @@ describe.concurrent("radio", () => {
 
   test("Common: Radio - test if renders without errors", ({ expect }) => {
     const clx = "my-class";
-    render(
+    const { unmount } = render(
       <Radio
         className={clx}
         name="stackshift-radio"
@@ -18,5 +18,6 @@ describe.concurrent("radio", () => {
     );
 
     expect(screen.getAllByTestId("radio-input").length).toBe(2); // label and input
+    unmount();
   });
 });

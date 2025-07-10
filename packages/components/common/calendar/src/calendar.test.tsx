@@ -7,15 +7,16 @@ describe.concurrent("Calendar", () => {
   afterEach(cleanup);
 
   test("Common: Calendar - test if renders without errors", () => {
-    render(<Calendar />);
+    const { unmount } = render(<Calendar />);
     expect(screen.getByRole("grid")).toBeInTheDocument();
+    unmount();
   });
 
-  test("handles date selection", async () => {
+  test("Common: Calendar - test if calls onSelect when date is clicked", async () => {
     const user = userEvent.setup();
     const onSelect = vi.fn();
     // @ts-ignore-error
-    render(<Calendar onSelect={onSelect} />);
+    const { unmount } = render(<Calendar onSelect={onSelect} />);
 
     const dateButtons = screen.getAllByRole("button");
     // @ts-ignore-error
@@ -25,10 +26,11 @@ describe.concurrent("Calendar", () => {
       await user.click(dateButton);
       expect(onSelect).toHaveBeenCalled();
     }
+    unmount();
   });
 
-  test("Common: Calendar - test if renders without errors", () => {
-    render(<Calendar />);
+  test("Common: Calendar - test if renders today's date", () => {
+    const { unmount } = render(<Calendar />);
     const today = new Date();
     const todayDate = today.getDate().toString();
 
@@ -42,18 +44,21 @@ describe.concurrent("Calendar", () => {
     if (todayButton) {
       expect(todayButton).toBeInTheDocument();
     }
+    unmount();
   });
 
-  test("Common: Calendar - test if renders without errors", () => {
-    render(<Calendar showOutsideDays={false} />);
+  test("Common: Calendar - test if renders without outside days", () => {
+    const { unmount } = render(<Calendar showOutsideDays={false} />);
     const days = screen.queryAllByRole("gridcell");
     const outsideDays = days.filter(day => day.getAttribute("data-outside") === "true");
     expect(outsideDays.length).toBeGreaterThan(0);
+    unmount();
   });
 
-  test("Common: Calendar - test if renders without errors", ({ expect }) => {
+  test("Common: Calendar - test if renders with custom className", ({ expect }) => {
     const clx = "calendar-class";
-    render(<Calendar data-testid="calendar" className={clx} />);
+    const { unmount } = render(<Calendar data-testid="calendar" className={clx} />);
     expect(screen.getByTestId("calendar").classList).toContain(clx);
+    unmount();
   });
 });

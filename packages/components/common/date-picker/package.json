@@ -23,7 +23,9 @@
   "devDependencies": {
     "@stackshift-ui/eslint-config": "workspace:*",
     "@stackshift-ui/typescript-config": "workspace:*",
+    "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.6.1",
     "@types/node": "^22.7.0",
     "@types/react": "^18.3.9",
     "@types/react-dom": "^18.3.0",
@@ -41,13 +43,13 @@
     "vitest": "^2.1.1"
   },
   "dependencies": {
-    "@stackshift-ui/scripts": "workspace:*",
-    "@stackshift-ui/system": "workspace:*",
-    "@stackshift-ui/popover": "workspace:*",
-    "@stackshift-ui/calendar": "workspace:*",
     "@stackshift-ui/button": "workspace:*",
+    "@stackshift-ui/calendar": "workspace:*",
     "@stackshift-ui/input": "workspace:*",
     "@stackshift-ui/label": "workspace:*",
+    "@stackshift-ui/popover": "workspace:*",
+    "@stackshift-ui/scripts": "workspace:*",
+    "@stackshift-ui/system": "workspace:*",
     "classnames": "^2.5.1",
     "date-fns": "^4.1.0",
     "lucide-react": "^0.468.0"

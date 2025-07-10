@@ -20,7 +20,7 @@ describe.concurrent("tooltip", () => {
     const clx = "my-class";
     const user = userEvent.setup();
 
-    render(
+    const { unmount } = render(
       <Tooltip>
         <TooltipTrigger asChild data-testid="tooltip-trigger">
           <button>Hover me</button>
@@ -39,5 +39,6 @@ describe.concurrent("tooltip", () => {
     screen.debug(tooltipTrigger);
 
     expect(await screen.findByTestId("tooltip")).toBeInTheDocument();
+    unmount();
   });
 });

@@ -7,19 +7,21 @@ describe.concurrent("checkbox-group", () => {
 
   test("Common: Checkbox Group - test if renders without errors", ({ expect }) => {
     const clx = "my-class";
-    render(<CheckboxGroup data-testid="div" className={clx} />);
+    const { unmount } = render(<CheckboxGroup data-testid="div" className={clx} />);
     expect(screen.getByTestId("div").classList).toContain(clx);
+    unmount();
   });
 
   test("Common: Checkbox Group - test if renders with correct label", ({ expect }) => {
     const label = "My Label";
-    render(<CheckboxGroup label={label} />);
+    const { unmount } = render(<CheckboxGroup label={label} />);
     expect(screen.getByText(label)).toBeInTheDocument();
+    unmount();
   });
 
   test("Common: Checkbox Group - test if renders with correct variant", ({ expect }) => {
     const clx = "w-full";
-    render(
+    const { unmount: unmountPrimary } = render(
       <CheckboxGroup
         data-testid="primary-checkbox-group"
         variant="primary"
@@ -33,7 +35,7 @@ describe.concurrent("checkbox-group", () => {
     expect(checkboxGroup.classList).toContain("block");
     expect(screen.getByText("Primary")).toBeInTheDocument();
 
-    render(
+    const { unmount: unmountInline } = render(
       <CheckboxGroup
         data-testid="inline-checkbox-group"
         variant="inline"
@@ -46,10 +48,13 @@ describe.concurrent("checkbox-group", () => {
     expect(inlineCheckboxGroup.classList).toContain("flex");
     expect(inlineCheckboxGroup.classList).toContain("gap-4");
     expect(screen.getByText("Inline")).toBeInTheDocument();
+
+    unmountPrimary();
+    unmountInline();
   });
 
   test("Common: Checkbox Group - test render with checkboxes", ({ expect }) => {
-    render(
+    const { unmount } = render(
       <CheckboxGroup>
         <input type="checkbox" id="1" name="1" value="1" />
         <label htmlFor="1">Option 1</label>
@@ -60,5 +65,6 @@ describe.concurrent("checkbox-group", () => {
 
     expect(screen.getByLabelText("Option 1")).toBeInTheDocument();
     expect(screen.getByLabelText("Option 2")).toBeInTheDocument();
+    unmount();
   });
 });

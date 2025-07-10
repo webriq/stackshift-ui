@@ -26,7 +26,7 @@ describe("text-component", () => {
 
   test("variant_a: renders without errors", async ({ expect }) => {
     // @todo: We should consider adding this static data into its own repository so we can reuse it across different projects
-    render(
+    const { unmount } = render(
       <TextComponent
         data={{
           variant: "variant_a",
@@ -41,11 +41,12 @@ describe("text-component", () => {
     expect(
       screen.getByText(/Etiam facilisis mauris leo, eu aliquet est iaculis eu/),
     ).toBeInTheDocument();
+    unmount();
   });
 
   test("variant_b: renders without errors", async ({ expect }) => {
     // @todo: We should consider adding this static data into its own repository so we can reuse it across different projects
-    render(
+    const { unmount } = render(
       <TextComponent
         data={{
           variant: "variant_b",
@@ -60,5 +61,6 @@ describe("text-component", () => {
     expect(
       screen.getByText(/Etiam facilisis mauris leo, eu aliquet est iaculis eu/),
     ).toBeInTheDocument();
+    unmount();
   });
 });

@@ -7,7 +7,8 @@ describe.concurrent("skeleton", () => {
 
   test("Dummy test - test if renders without errors", ({ expect }) => {
     const clx = "my-class";
-    render(<Skeleton data-testid="skeleton-component" className={clx} />);
+    const { unmount } = render(<Skeleton data-testid="skeleton-component" className={clx} />);
     expect(screen.getByTestId("skeleton-component").classList).toContain(clx);
+    unmount();
   });
 });

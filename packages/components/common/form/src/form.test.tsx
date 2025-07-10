@@ -7,7 +7,8 @@ describe.concurrent("form", () => {
 
   test("Common: Form - test if renders without errors", ({ expect }) => {
     const clx = "form-class";
-    render(<Form className={clx} />);
+    const { unmount } = render(<Form className={clx} />);
     expect(screen.getByTestId("stackshift-form").classList).toContain(clx);
+    unmount();
   });
 });

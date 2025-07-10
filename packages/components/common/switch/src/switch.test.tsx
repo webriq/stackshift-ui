@@ -7,7 +7,8 @@ describe.concurrent("switch", () => {
 
   test("Dummy test - test if renders without errors", ({ expect }) => {
     const clx = "my-class";
-    render(<Switch data-testid="switch" className={clx} />);
+    const { unmount } = render(<Switch data-testid="switch" className={clx} />);
     expect(screen.getByTestId("switch").classList).toContain(clx);
+    unmount();
   });
 });
