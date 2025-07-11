@@ -1,5 +1,11 @@
 # @stackshift-ui/scripts
 
+## 6.1.0-beta.0
+
+### Minor Changes
+
+- shadcn migration
+
 ## 6.0.10
 
 ### Patch Changes

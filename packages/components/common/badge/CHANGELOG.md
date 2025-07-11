@@ -1,5 +1,18 @@
 # @stackshift-ui/badge
 
+## 7.0.0-beta.0
+
+### Minor Changes
+
+- shadcn migration
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/flex@7.0.0-beta.0
+  - @stackshift-ui/system@6.1.0-beta.0
+  - @stackshift-ui/scripts@6.1.0-beta.0
+
 ## 6.0.11
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @stackshift-ui/tailwind-config
 
+## 2.1.0-beta.0
+
+### Minor Changes
+
+- shadcn migration
+
 ## 2.0.8
 
 ### Patch Changes

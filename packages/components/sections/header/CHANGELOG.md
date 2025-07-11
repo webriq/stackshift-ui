@@ -1,5 +1,33 @@
 # @stackshift-ui/header
 
+## 7.0.0-beta.1
+
+### Patch Changes
+
+- @stackshift-ui/signin-signup@7.0.0-beta.1
+
+## 7.0.0-beta.0
+
+### Minor Changes
+
+- shadcn migration
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/swiper-pagination@7.0.0-beta.0
+  - @stackshift-ui/signin-signup@7.0.0-beta.0
+  - @stackshift-ui/container@7.0.0-beta.0
+  - @stackshift-ui/heading@7.0.0-beta.0
+  - @stackshift-ui/section@7.0.0-beta.0
+  - @stackshift-ui/button@6.1.0-beta.0
+  - @stackshift-ui/image@6.1.0-beta.0
+  - @stackshift-ui/text@7.0.0-beta.0
+  - @stackshift-ui/flex@7.0.0-beta.0
+  - @stackshift-ui/system@6.1.0-beta.0
+  - @stackshift-ui/scripts@6.1.0-beta.0
+  - @stackshift-ui/link@6.0.12-beta.0
+
 ## 6.1.4
 
 ### Patch Changes

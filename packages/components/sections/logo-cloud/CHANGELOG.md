@@ -1,5 +1,31 @@
 # @stackshift-ui/logo-cloud
 
+## 6.1.0-beta.1
+
+### Minor Changes
+
+- shadcn migration
+
+## 6.1.0-beta.0
+
+### Minor Changes
+
+- shadcn migration
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/container@7.0.0-beta.0
+  - @stackshift-ui/heading@7.0.0-beta.0
+  - @stackshift-ui/section@7.0.0-beta.0
+  - @stackshift-ui/button@6.1.0-beta.0
+  - @stackshift-ui/image@6.1.0-beta.0
+  - @stackshift-ui/text@7.0.0-beta.0
+  - @stackshift-ui/flex@7.0.0-beta.0
+  - @stackshift-ui/system@6.1.0-beta.0
+  - @stackshift-ui/scripts@6.1.0-beta.0
+  - @stackshift-ui/link@6.0.12-beta.0
+
 ## 6.0.14
 
 ### Patch Changes

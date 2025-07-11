@@ -1,7 +1,7 @@
 {
   "name": "@stackshift-ui/sheet",
   "description": "Extends the Dialog component to display content that complements the main content of the screen.",
-  "version": "0.0.0",
+  "version": "1.0.0-beta.1",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -50,7 +50,7 @@
     "lucide-react": "^0.468.0"
   },
   "peerDependencies": {
-    "@stackshift-ui/system": ">=0.0.0",
+    "@stackshift-ui/system": ">=6.1.0-beta.0",
     "@types/react": "16.8 - 19",
     "next": "10 - 14",
     "react": "16.8 - 19",

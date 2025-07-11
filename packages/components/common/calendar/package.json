@@ -1,7 +1,7 @@
 {
   "name": "@stackshift-ui/calendar",
   "description": "A date field component that allows users to enter and edit date.",
-  "version": "0.0.0",
+  "version": "1.0.0-beta.1",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -52,7 +52,7 @@
     "react-day-picker": "^9.7.0"
   },
   "peerDependencies": {
-    "@stackshift-ui/system": ">=0.0.0",
+    "@stackshift-ui/system": ">=6.1.0-beta.0",
     "@types/react": "16.8 - 19",
     "next": "10 - 14",
     "react": "16.8 - 19",

@@ -1,5 +1,21 @@
 # @webriq-test/testing
 
+## 2.0.0-beta.0
+
+### Minor Changes
+
+- shadcn migration
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/container@7.0.0-beta.0
+  - @stackshift-ui/heading@7.0.0-beta.0
+  - @stackshift-ui/section@7.0.0-beta.0
+  - @stackshift-ui/flex@7.0.0-beta.0
+  - @stackshift-ui/system@6.1.0-beta.0
+  - @stackshift-ui/scripts@6.1.0-beta.0
+
 ## 1.0.9
 
 ### Patch Changes
