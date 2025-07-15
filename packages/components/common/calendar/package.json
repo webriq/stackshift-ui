@@ -1,7 +1,7 @@
 {
   "name": "@stackshift-ui/calendar",
   "description": "A date field component that allows users to enter and edit date.",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.4",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",

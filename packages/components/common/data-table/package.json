@@ -1,7 +1,7 @@
 {
   "name": "@stackshift-ui/data-table",
   "description": "Powerful table and datagrids built using TanStack Table.",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.4",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",

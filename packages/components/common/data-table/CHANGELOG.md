@@ -1,5 +1,19 @@
 # @stackshift-ui/data-table
 
+## 1.0.0-beta.4
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/button@6.1.0-beta.3
+
+## 1.0.0-beta.3
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/button@6.1.0-beta.2
+
 ## 1.0.0-beta.2
 
 ### Patch Changes

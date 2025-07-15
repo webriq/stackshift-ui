@@ -1,7 +1,7 @@
 {
   "name": "@stackshift-ui/newsletter",
   "description": "",
-  "version": "7.0.0-beta.1",
+  "version": "7.0.0-beta.3",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",

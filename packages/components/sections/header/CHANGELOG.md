@@ -1,5 +1,21 @@
 # @stackshift-ui/header
 
+## 7.0.0-beta.4
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/button@6.1.0-beta.3
+  - @stackshift-ui/signin-signup@7.0.0-beta.4
+
+## 7.0.0-beta.3
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/button@6.1.0-beta.2
+  - @stackshift-ui/signin-signup@7.0.0-beta.3
+
 ## 7.0.0-beta.2
 
 ### Patch Changes

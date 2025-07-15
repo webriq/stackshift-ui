@@ -1,5 +1,17 @@
 # @stackshift-ui/button
 
+## 6.1.0-beta.3
+
+### Patch Changes
+
+- revert btn pkg peer dependency
+
+## 6.1.0-beta.2
+
+### Patch Changes
+
+- peer dependency on btn pkg
+
 ## 6.1.0-beta.1
 
 ### Patch Changes

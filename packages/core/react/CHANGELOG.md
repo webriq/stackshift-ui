@@ -1,5 +1,61 @@
 # @stackshift-ui/react
 
+## 7.0.0-beta.4
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/button@6.1.0-beta.3
+  - @stackshift-ui/calendar@1.0.0-beta.4
+  - @stackshift-ui/data-table@1.0.0-beta.4
+  - @stackshift-ui/date-picker@1.0.0-beta.4
+  - @stackshift-ui/pagination@1.0.0-beta.4
+  - @stackshift-ui/swiper-button@7.0.0-beta.3
+  - @stackshift-ui/blog@7.0.0-beta.3
+  - @stackshift-ui/call-to-action@7.0.0-beta.4
+  - @stackshift-ui/contact@7.0.0-beta.4
+  - @stackshift-ui/faqs@7.0.0-beta.3
+  - @stackshift-ui/features@7.0.0-beta.4
+  - @stackshift-ui/footer@7.0.0-beta.3
+  - @stackshift-ui/header@7.0.0-beta.4
+  - @stackshift-ui/logo-cloud@6.1.0-beta.4
+  - @stackshift-ui/navigation@7.0.0-beta.3
+  - @stackshift-ui/newsletter@7.0.0-beta.3
+  - @stackshift-ui/portfolio@7.0.0-beta.3
+  - @stackshift-ui/signin-signup@7.0.0-beta.4
+  - @stackshift-ui/statistics@7.0.0-beta.3
+  - @stackshift-ui/team@7.0.0-beta.3
+  - @stackshift-ui/app-promo@7.0.0-beta.3
+  - @stackshift-ui/testimonial@7.0.0-beta.3
+
+## 7.0.0-beta.3
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/button@6.1.0-beta.2
+  - @stackshift-ui/calendar@1.0.0-beta.3
+  - @stackshift-ui/data-table@1.0.0-beta.3
+  - @stackshift-ui/date-picker@1.0.0-beta.3
+  - @stackshift-ui/pagination@1.0.0-beta.3
+  - @stackshift-ui/swiper-button@7.0.0-beta.2
+  - @stackshift-ui/blog@7.0.0-beta.2
+  - @stackshift-ui/call-to-action@7.0.0-beta.3
+  - @stackshift-ui/contact@7.0.0-beta.3
+  - @stackshift-ui/faqs@7.0.0-beta.2
+  - @stackshift-ui/features@7.0.0-beta.3
+  - @stackshift-ui/footer@7.0.0-beta.2
+  - @stackshift-ui/header@7.0.0-beta.3
+  - @stackshift-ui/logo-cloud@6.1.0-beta.3
+  - @stackshift-ui/navigation@7.0.0-beta.2
+  - @stackshift-ui/newsletter@7.0.0-beta.2
+  - @stackshift-ui/portfolio@7.0.0-beta.2
+  - @stackshift-ui/signin-signup@7.0.0-beta.3
+  - @stackshift-ui/statistics@7.0.0-beta.2
+  - @stackshift-ui/team@7.0.0-beta.2
+  - @stackshift-ui/app-promo@7.0.0-beta.2
+  - @stackshift-ui/testimonial@7.0.0-beta.2
+
 ## 7.0.0-beta.2
 
 ### Patch Changes

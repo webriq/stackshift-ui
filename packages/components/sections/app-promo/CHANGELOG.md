@@ -1,5 +1,17 @@
 # @stackshift-ui/app-promo
 
+## 7.0.0-beta.3
+
+### Patch Changes
+
+- @stackshift-ui/swiper-button@7.0.0-beta.3
+
+## 7.0.0-beta.2
+
+### Patch Changes
+
+- @stackshift-ui/swiper-button@7.0.0-beta.2
+
 ## 7.0.0-beta.1
 
 ### Patch Changes
