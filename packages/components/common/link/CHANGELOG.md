@@ -1,5 +1,12 @@
 # @stackshift-ui/link
 
+## 6.0.12-beta.1
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/system@6.1.0-beta.1
+
 ## 6.0.12-beta.0
 
 ### Patch Changes

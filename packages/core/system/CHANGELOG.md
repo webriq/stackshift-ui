@@ -1,5 +1,11 @@
 # @stackshift-ui/system
 
+## 6.1.0-beta.1
+
+### Patch Changes
+
+- rebump system pkg
+
 ## 6.1.0-beta.0
 
 ### Minor Changes

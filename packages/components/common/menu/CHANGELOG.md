@@ -1,5 +1,12 @@
 # @stackshift-ui/menu
 
+## 1.0.0-beta.2
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/system@6.1.0-beta.1
+
 ## 1.0.0-beta.1
 
 ### Minor Changes

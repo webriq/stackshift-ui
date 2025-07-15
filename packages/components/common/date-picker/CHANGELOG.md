@@ -1,5 +1,17 @@
 # @stackshift-ui/date-picker
 
+## 1.0.0-beta.2
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/system@6.1.0-beta.1
+  - @stackshift-ui/button@6.1.0-beta.1
+  - @stackshift-ui/calendar@1.0.0-beta.2
+  - @stackshift-ui/input@7.0.0-beta.1
+  - @stackshift-ui/label@1.0.0-beta.2
+  - @stackshift-ui/popover@1.0.0-beta.2
+
 ## 1.0.0-beta.1
 
 ### Minor Changes

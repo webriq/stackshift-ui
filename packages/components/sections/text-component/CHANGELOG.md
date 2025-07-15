@@ -1,5 +1,16 @@
 # @stackshift-ui/text-component
 
+## 7.0.0-beta.1
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/system@6.1.0-beta.1
+  - @stackshift-ui/heading@7.0.0-beta.1
+  - @stackshift-ui/container@7.0.0-beta.1
+  - @stackshift-ui/flex@7.0.0-beta.1
+  - @stackshift-ui/section@7.0.0-beta.1
+
 ## 7.0.0-beta.0
 
 ### Minor Changes

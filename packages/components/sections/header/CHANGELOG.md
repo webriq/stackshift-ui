@@ -1,5 +1,22 @@
 # @stackshift-ui/header
 
+## 7.0.0-beta.2
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/system@6.1.0-beta.1
+  - @stackshift-ui/button@6.1.0-beta.1
+  - @stackshift-ui/heading@7.0.0-beta.1
+  - @stackshift-ui/image@6.1.0-beta.1
+  - @stackshift-ui/link@6.0.12-beta.1
+  - @stackshift-ui/swiper-pagination@7.0.0-beta.1
+  - @stackshift-ui/text@7.0.0-beta.1
+  - @stackshift-ui/container@7.0.0-beta.1
+  - @stackshift-ui/flex@7.0.0-beta.1
+  - @stackshift-ui/section@7.0.0-beta.1
+  - @stackshift-ui/signin-signup@7.0.0-beta.2
+
 ## 7.0.0-beta.1
 
 ### Patch Changes
