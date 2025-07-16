@@ -1,15 +1,15 @@
-import { 
-  Select, 
-  SelectContent, 
-  SelectItem, 
-  SelectTrigger, 
-  SelectValue,
+import {
+  Button,
+  Label,
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
   SelectLabel,
   SelectSeparator,
-  SelectGroup
+  SelectTrigger,
+  SelectValue,
 } from "@stackshift-ui/react";
-import { Label } from "@stackshift-ui/react";
-import { Button } from "@stackshift-ui/react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
 
@@ -20,7 +20,8 @@ const meta: Meta<typeof Select> = {
     layout: "centered",
     docs: {
       description: {
-        component: "A select component built on Radix UI primitives for choosing from a list of options with dropdown functionality.",
+        component:
+          "A select component built on Radix UI primitives for choosing from a list of options with dropdown functionality.",
       },
     },
   },
@@ -143,9 +144,11 @@ export const Disabled: Story = {
           </SelectContent>
         </Select>
       </div>
-      
+
       <div className="space-y-2">
-        <Label htmlFor="disabled-select" className="text-muted-foreground">Disabled Select</Label>
+        <Label htmlFor="disabled-select" className="text-muted-foreground">
+          Disabled Select
+        </Label>
         <Select disabled>
           <SelectTrigger id="disabled-select" className="w-[180px]">
             <SelectValue placeholder="Cannot select" />
@@ -156,7 +159,7 @@ export const Disabled: Story = {
           </SelectContent>
         </Select>
       </div>
-      
+
       <div className="space-y-2">
         <Label htmlFor="disabled-items">Select with Disabled Items</Label>
         <Select>
@@ -165,7 +168,9 @@ export const Disabled: Story = {
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="available">Available</SelectItem>
-            <SelectItem value="disabled" disabled>Disabled Option</SelectItem>
+            <SelectItem value="disabled" disabled>
+              Disabled Option
+            </SelectItem>
             <SelectItem value="another">Another Option</SelectItem>
           </SelectContent>
         </Select>
@@ -184,7 +189,7 @@ export const Disabled: Story = {
 export const Controlled: Story = {
   render: () => {
     const [value, setValue] = useState("");
-    
+
     return (
       <div className="space-y-4">
         <div className="space-y-2">
@@ -202,31 +207,19 @@ export const Controlled: Story = {
             </SelectContent>
           </Select>
         </div>
-        
+
         <div className="pt-4 border-t">
           <p className="text-sm text-muted-foreground">
             Selected value: <span className="font-medium">{value || "None"}</span>
           </p>
           <div className="flex gap-2 mt-2">
-            <Button 
-              variant="outline" 
-              size="sm"
-              onClick={() => setValue("javascript")}
-            >
+            <Button variant="outline" size="sm" onClick={() => setValue("javascript")}>
               Select JavaScript
             </Button>
-            <Button 
-              variant="outline" 
-              size="sm"
-              onClick={() => setValue("python")}
-            >
+            <Button variant="outline" size="sm" onClick={() => setValue("python")}>
               Select Python
             </Button>
-            <Button 
-              variant="outline" 
-              size="sm"
-              onClick={() => setValue("")}
-            >
+            <Button variant="outline" size="sm" onClick={() => setValue("")}>
               Clear
             </Button>
           </div>
@@ -322,7 +315,9 @@ export const Sizes: Story = {
   render: () => (
     <div className="space-y-4">
       <div className="space-y-2">
-        <Label htmlFor="small-select" className="text-sm">Small</Label>
+        <Label htmlFor="small-select" className="text-sm">
+          Small
+        </Label>
         <Select>
           <SelectTrigger id="small-select" className="w-[150px] h-8 text-sm">
             <SelectValue placeholder="Small select" />
@@ -334,7 +329,7 @@ export const Sizes: Story = {
           </SelectContent>
         </Select>
       </div>
-      
+
       <div className="space-y-2">
         <Label htmlFor="default-select">Default</Label>
         <Select>
@@ -348,9 +343,11 @@ export const Sizes: Story = {
           </SelectContent>
         </Select>
       </div>
-      
+
       <div className="space-y-2">
-        <Label htmlFor="large-select" className="text-lg">Large</Label>
+        <Label htmlFor="large-select" className="text-lg">
+          Large
+        </Label>
         <Select>
           <SelectTrigger id="large-select" className="w-[220px] h-12 text-lg">
             <SelectValue placeholder="Large select" />
@@ -368,88 +365,6 @@ export const Sizes: Story = {
     docs: {
       description: {
         story: "Select components in different sizes using custom classes.",
-      },
-    },
-  },
-};
-
-export const FormExample: Story = {
-  render: () => (
-    <form className="space-y-6 max-w-md">
-      <h2 className="text-2xl font-bold">User Profile</h2>
-      
-      <div className="space-y-2">
-        <Label htmlFor="role-select">Role</Label>
-        <Select>
-          <SelectTrigger id="role-select">
-            <SelectValue placeholder="Select your role" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="developer">Developer</SelectItem>
-            <SelectItem value="designer">Designer</SelectItem>
-            <SelectItem value="manager">Manager</SelectItem>
-            <SelectItem value="analyst">Analyst</SelectItem>
-            <SelectItem value="other">Other</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-      
-      <div className="space-y-2">
-        <Label htmlFor="experience-select">Experience Level</Label>
-        <Select>
-          <SelectTrigger id="experience-select">
-            <SelectValue placeholder="Select experience level" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="junior">Junior (0-2 years)</SelectItem>
-            <SelectItem value="mid">Mid-level (2-5 years)</SelectItem>
-            <SelectItem value="senior">Senior (5-10 years)</SelectItem>
-            <SelectItem value="lead">Lead (10+ years)</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-      
-      <div className="space-y-2">
-        <Label htmlFor="department-select">Department</Label>
-        <Select>
-          <SelectTrigger id="department-select">
-            <SelectValue placeholder="Select department" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectGroup>
-              <SelectLabel>Engineering</SelectLabel>
-              <SelectItem value="frontend">Frontend</SelectItem>
-              <SelectItem value="backend">Backend</SelectItem>
-              <SelectItem value="fullstack">Full Stack</SelectItem>
-              <SelectItem value="devops">DevOps</SelectItem>
-            </SelectGroup>
-            <SelectSeparator />
-            <SelectGroup>
-              <SelectLabel>Design</SelectLabel>
-              <SelectItem value="ux">UX Design</SelectItem>
-              <SelectItem value="ui">UI Design</SelectItem>
-              <SelectItem value="product">Product Design</SelectItem>
-            </SelectGroup>
-            <SelectSeparator />
-            <SelectGroup>
-              <SelectLabel>Business</SelectLabel>
-              <SelectItem value="marketing">Marketing</SelectItem>
-              <SelectItem value="sales">Sales</SelectItem>
-              <SelectItem value="hr">Human Resources</SelectItem>
-            </SelectGroup>
-          </SelectContent>
-        </Select>
-      </div>
-      
-      <Button type="submit" className="w-full">
-        Save Profile
-      </Button>
-    </form>
-  ),
-  parameters: {
-    docs: {
-      description: {
-        story: "Complete form with multiple select fields for user profile setup.",
       },
     },
   },
