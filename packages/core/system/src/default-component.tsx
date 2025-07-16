@@ -1,10 +1,12 @@
-import type { HTMLProps } from "react";
+import * as React from "react";
 
-export const DefaultComponent = <T extends keyof JSX.IntrinsicElements>(
-  props: HTMLProps<T>,
-): JSX.Element => {
-  const { as = "div", ...rest } = props;
-  const Component = as;
+export const DefaultComponent = React.forwardRef<
+  HTMLElement,
+  React.HTMLAttributes<HTMLElement> & { as?: keyof JSX.IntrinsicElements }
+>(({ as = "div", ...props }, ref) => {
+  const Component = as as any;
 
-  return <Component {...rest} />;
-};
+  return <Component ref={ref} {...props} />;
+});
+
+DefaultComponent.displayName = "DefaultComponent";
