@@ -30,6 +30,14 @@ const config = {
         border: '#e6eaf2',                // hsl(214, 32%, 91%)
         input: '#e6eaf2',
         ring: '#0b1220',
+        sidebar: '#fbfbfb',
+        'sidebar-foreground': '#252525',
+        'sidebar-primary': '#343434',
+        'sidebar-primary-foreground': '#fbfbfb',
+        'sidebar-accent': '#f7f7f7',
+        'sidebar-accent-foreground': '#343434',
+        'sidebar-border': '#ebebeb',
+        'sidebar-ring': '#b5b5b5'
       },
       borderRadius: {
         none: "0px",
@@ -79,6 +87,10 @@ const config = {
       },
     },
   },
+  plugins: [
+		require("tailwindcss-animate"),
+		// ...
+	]
 } satisfies Config;
 
 export default config;
