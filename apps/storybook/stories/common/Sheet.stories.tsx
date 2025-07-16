@@ -1,4 +1,7 @@
 import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
   Button,
   Label,
   Sheet,
@@ -65,117 +68,6 @@ export const Default: Story = {
       </Sheet>
     );
   },
-};
-
-export const FromLeft: Story = {
-  render: () => (
-    <Sheet>
-      <SheetTrigger asChild>
-        <Button variant="outline">Open from Left</Button>
-      </SheetTrigger>
-      <SheetContent side="left" className="px-4">
-        <SheetHeader>
-          <SheetTitle>Navigation Menu</SheetTitle>
-          <SheetDescription>Navigate through the application</SheetDescription>
-        </SheetHeader>
-        <div className="py-4 space-y-4">
-          <nav className="space-y-2">
-            <a href="#" className="block px-3 py-2 rounded-md hover:bg-gray-100">
-              Dashboard
-            </a>
-            <a href="#" className="block px-3 py-2 rounded-md hover:bg-gray-100">
-              Projects
-            </a>
-            <a href="#" className="block px-3 py-2 rounded-md hover:bg-gray-100">
-              Team
-            </a>
-            <a href="#" className="block px-3 py-2 rounded-md hover:bg-gray-100">
-              Settings
-            </a>
-          </nav>
-        </div>
-      </SheetContent>
-    </Sheet>
-  ),
-};
-
-export const FromTop: Story = {
-  render: () => (
-    <Sheet>
-      <SheetTrigger asChild>
-        <Button variant="outline">Open from Top</Button>
-      </SheetTrigger>
-      <SheetContent side="top" className="h-[300px] px-4">
-        <SheetHeader>
-          <SheetTitle>Notifications</SheetTitle>
-          <SheetDescription>Recent notifications and updates</SheetDescription>
-        </SheetHeader>
-        <div className="py-4 space-y-3">
-          <div className="p-3 bg-blue-50 rounded-lg">
-            <p className="text-sm font-medium">New message</p>
-            <p className="text-xs text-gray-600">You have a new message from John</p>
-          </div>
-          <div className="p-3 bg-green-50 rounded-lg">
-            <p className="text-sm font-medium">Task completed</p>
-            <p className="text-xs text-gray-600">Your task has been completed successfully</p>
-          </div>
-        </div>
-      </SheetContent>
-    </Sheet>
-  ),
-};
-
-export const FromBottom: Story = {
-  render: () => (
-    <Sheet>
-      <SheetTrigger asChild>
-        <Button variant="outline">Open from Bottom</Button>
-      </SheetTrigger>
-      <SheetContent side="bottom" className="h-[400px] px-4">
-        <SheetHeader>
-          <SheetTitle>Quick Actions</SheetTitle>
-          <SheetDescription>Perform quick actions from here</SheetDescription>
-        </SheetHeader>
-        <div className="py-4">
-          <div className="grid grid-cols-3 gap-4">
-            <Button variant="outline" className="h-20 flex flex-col items-center justify-center">
-              <svg className="h-6 w-6 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 4v16m8-8H4"
-                />
-              </svg>
-              Add
-            </Button>
-            <Button variant="outline" className="h-20 flex flex-col items-center justify-center">
-              <svg className="h-6 w-6 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
-                />
-              </svg>
-              Edit
-            </Button>
-            <Button variant="outline" className="h-20 flex flex-col items-center justify-center">
-              <svg className="h-6 w-6 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"
-                />
-              </svg>
-              Share
-            </Button>
-          </div>
-        </div>
-      </SheetContent>
-    </Sheet>
-  ),
 };
 
 export const WithForm: Story = {
@@ -266,12 +158,11 @@ export const UserProfile: Story = {
     return (
       <Sheet>
         <SheetTrigger asChild>
-          <Button variant="ghost" className="h-8 w-8 rounded-full">
-            <img
-              className="rounded-full"
-              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=32&h=32&fit=crop&crop=face"
-              alt="User avatar"
-            />
+          <Button variant="default" className="h-12 w-12 rounded-full">
+            <Avatar>
+              <AvatarImage src="/webriq-logo.png" alt="User avatar" />
+              <AvatarFallback>BI</AvatarFallback>
+            </Avatar>
           </Button>
         </SheetTrigger>
         <SheetContent className="px-4">
@@ -454,7 +345,7 @@ export const MobileMenu: Story = {
         <div className="flex items-center space-x-3">
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="sm" className="md:hidden">
+              <Button variant="ghost" size="sm">
                 <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     strokeLinecap="round"
