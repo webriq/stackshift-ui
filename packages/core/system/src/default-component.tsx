@@ -1,12 +1,21 @@
 import * as React from "react";
 
-export const DefaultComponent = React.forwardRef<
-  HTMLElement,
-  React.HTMLAttributes<HTMLElement> & { as?: keyof JSX.IntrinsicElements }
->(({ as = "div", ...props }, ref) => {
-  const Component = as as any;
+type PolymorphicProps<T extends React.ElementType, P = {}> = P & { as?: T } & Omit<
+    React.ComponentPropsWithRef<T>,
+    keyof P | "as"
+  >;
 
-  return <Component ref={ref} {...props} />;
-});
+type DefaultElement = "div";
+
+export const DefaultComponent = React.forwardRef(
+  <T extends React.ElementType = DefaultElement>(
+    props: PolymorphicProps<T>,
+    ref: React.Ref<any>,
+  ) => {
+    const { as, ...restProps } = props;
+    const Component = as || "div";
+    return <Component ref={ref} {...restProps} />;
+  },
+);
 
 DefaultComponent.displayName = "DefaultComponent";
