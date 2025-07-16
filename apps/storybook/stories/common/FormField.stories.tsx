@@ -8,7 +8,8 @@ const meta: Meta<typeof FormField> = {
     layout: "centered",
     docs: {
       description: {
-        component: "A versatile form field component that renders different input types based on the type prop. Supports text inputs, textareas, selects, radios, checkboxes, and file uploads.",
+        component:
+          "A versatile form field component that renders different input types based on the type prop. Supports text inputs, textareas, selects, radios, checkboxes, and file uploads.",
       },
     },
   },
@@ -16,7 +17,17 @@ const meta: Meta<typeof FormField> = {
   argTypes: {
     type: {
       control: { type: "select" },
-      options: ["inputText", "inputEmail", "inputPassword", "inputNumber", "textarea", "inputFile", "inputRadio", "inputCheckbox", "inputSelect"],
+      options: [
+        "inputText",
+        "inputEmail",
+        "inputPassword",
+        "inputNumber",
+        "textarea",
+        "inputFile",
+        "inputRadio",
+        "inputCheckbox",
+        "inputSelect",
+      ],
       description: "Type of form field to render",
     },
     name: {
@@ -187,68 +198,6 @@ export const FileUpload: Story = {
     docs: {
       description: {
         story: "File upload field for selecting files.",
-      },
-    },
-  },
-};
-
-export const ContactForm: Story = {
-  render: () => (
-    <form className="space-y-6 max-w-md mx-auto">
-      <h2 className="text-2xl font-bold text-center mb-6">Contact Us</h2>
-      
-      <FormField
-        type="inputText"
-        name="fullName"
-        label="Full Name"
-        placeholder="John Doe"
-        required
-      />
-      
-      <FormField
-        type="inputEmail"
-        name="email"
-        label="Email Address"
-        placeholder="john@example.com"
-        required
-      />
-      
-      <FormField
-        type="inputText"
-        name="subject"
-        label="Subject"
-        placeholder="How can we help?"
-        required
-      />
-      
-      <FormField
-        type="textarea"
-        name="message"
-        label="Message"
-        placeholder="Tell us more about your inquiry..."
-        required
-      />
-      
-      <FormField
-        type="inputSelect"
-        name="priority"
-        label="Priority"
-        placeholder="Select priority level"
-        items={["Low", "Medium", "High", "Urgent"]}
-      />
-      
-      <button 
-        type="submit"
-        className="w-full bg-primary text-primary-foreground py-2 px-4 rounded-md hover:bg-primary/90 transition-colors"
-      >
-        Send Message
-      </button>
-    </form>
-  ),
-  parameters: {
-    docs: {
-      description: {
-        story: "Complete contact form using multiple FormField components.",
       },
     },
   },
