@@ -1,6 +1,7 @@
 import {
   Button,
   Dialog,
+  DialogClose,
   DialogContent,
   DialogDescription,
   DialogFooter,
@@ -38,8 +39,12 @@ export const Basic: Story = {
           <p>Dialog content goes here. This can be any React component or HTML.</p>
         </div>
         <DialogFooter>
-          <Button variant="outline">Cancel</Button>
-          <Button>Confirm</Button>
+          <DialogClose asChild>
+            <Button variant="outline">Cancel</Button>
+          </DialogClose>
+          <DialogClose asChild>
+            <Button>Confirm</Button>
+          </DialogClose>
         </DialogFooter>
       </DialogContent>
     </Dialog>
@@ -63,8 +68,12 @@ export const WithoutCloseButton: Story = {
           <p>You must use the Cancel button to close this dialog.</p>
         </div>
         <DialogFooter>
-          <Button variant="outline">Cancel</Button>
-          <Button>Save Changes</Button>
+          <DialogClose asChild>
+            <Button variant="outline">Cancel</Button>
+          </DialogClose>
+          <DialogClose asChild>
+            <Button>Save Changes</Button>
+          </DialogClose>
         </DialogFooter>
       </DialogContent>
     </Dialog>
@@ -103,8 +112,12 @@ export const LargeContent: Story = {
           </div>
         </div>
         <DialogFooter>
-          <Button variant="outline">Cancel</Button>
-          <Button>Continue</Button>
+          <DialogClose asChild>
+            <Button variant="outline">Cancel</Button>
+          </DialogClose>
+          <DialogClose asChild>
+            <Button>Continue</Button>
+          </DialogClose>
         </DialogFooter>
       </DialogContent>
     </Dialog>
@@ -127,8 +140,12 @@ export const ConfirmationDialog: Story = {
           </DialogDescription>
         </DialogHeader>
         <DialogFooter>
-          <Button variant="outline">Cancel</Button>
-          <Button className="bg-red-600 hover:bg-red-700">Delete</Button>
+          <DialogClose asChild>
+            <Button variant="outline">Cancel</Button>
+          </DialogClose>
+          <DialogClose asChild>
+            <Button className="bg-red-600 hover:bg-red-700">Delete</Button>
+          </DialogClose>
         </DialogFooter>
       </DialogContent>
     </Dialog>

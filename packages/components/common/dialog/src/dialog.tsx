@@ -17,43 +17,56 @@ const displayNameFooter = "DialogFooter";
 const displayNameTitle = "DialogTitle";
 const displayNameDescription = "DialogDescription";
 
-function Dialog({ ...props }: React.ComponentProps<typeof DialogPrimitive.Root>) {
+const Dialog = React.forwardRef<
+  React.ElementRef<typeof DialogPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof DialogPrimitive.Root>
+>(({ ...props }, ref) => {
   const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
 
-  return <Component as={DialogPrimitive.Root} data-slot="dialog" {...props} />;
-}
+  return <Component as={DialogPrimitive.Root} ref={ref} data-slot="dialog" {...props} />;
+});
 Dialog.displayName = displayName;
 
-function DialogTrigger({ ...props }: React.ComponentProps<typeof DialogPrimitive.Trigger>) {
+const DialogTrigger = React.forwardRef<
+  React.ElementRef<typeof DialogPrimitive.Trigger>,
+  React.ComponentPropsWithoutRef<typeof DialogPrimitive.Trigger>
+>(({ ...props }, ref) => {
   const { [displayNameTrigger]: Component = DefaultComponent } = useStackShiftUIComponents();
 
-  return <Component as={DialogPrimitive.Trigger} data-slot="dialog-trigger" {...props} />;
-}
+  return <Component as={DialogPrimitive.Trigger} ref={ref} data-slot="dialog-trigger" {...props} />;
+});
 DialogTrigger.displayName = displayNameTrigger;
 
-function DialogPortal({ ...props }: React.ComponentProps<typeof DialogPrimitive.Portal>) {
+const DialogPortal = React.forwardRef<
+  React.ElementRef<typeof DialogPrimitive.Portal>,
+  React.ComponentPropsWithoutRef<typeof DialogPrimitive.Portal>
+>(({ ...props }, ref) => {
   const { [displayNamePortal]: Component = DefaultComponent } = useStackShiftUIComponents();
 
-  return <Component as={DialogPrimitive.Portal} data-slot="dialog-portal" {...props} />;
-}
+  return <Component as={DialogPrimitive.Portal} ref={ref} data-slot="dialog-portal" {...props} />;
+});
 DialogPortal.displayName = displayNamePortal;
 
-function DialogClose({ ...props }: React.ComponentProps<typeof DialogPrimitive.Close>) {
+const DialogClose = React.forwardRef<
+  React.ElementRef<typeof DialogPrimitive.Close>,
+  React.ComponentPropsWithoutRef<typeof DialogPrimitive.Close>
+>(({ ...props }, ref) => {
   const { [displayNameClose]: Component = DefaultComponent } = useStackShiftUIComponents();
 
-  return <Component as={DialogPrimitive.Close} data-slot="dialog-close" {...props} />;
-}
+  return <Component as={DialogPrimitive.Close} ref={ref} data-slot="dialog-close" {...props} />;
+});
 DialogClose.displayName = displayNameClose;
 
-function DialogOverlay({
-  className,
-  ...props
-}: React.ComponentProps<typeof DialogPrimitive.Overlay>) {
+const DialogOverlay = React.forwardRef<
+  React.ElementRef<typeof DialogPrimitive.Overlay>,
+  React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
+>(({ className, ...props }, ref) => {
   const { [displayNameOverlay]: Component = DefaultComponent } = useStackShiftUIComponents();
 
   return (
     <Component
       as={DialogPrimitive.Overlay}
+      ref={ref}
       data-slot="dialog-overlay"
       className={cn(
         "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/50",
@@ -62,17 +75,15 @@ function DialogOverlay({
       {...props}
     />
   );
-}
+});
 DialogOverlay.displayName = displayNameOverlay;
 
-function DialogContent({
-  className,
-  children,
-  showCloseButton = true,
-  ...props
-}: React.ComponentProps<typeof DialogPrimitive.Content> & {
-  showCloseButton?: boolean;
-}) {
+const DialogContent = React.forwardRef<
+  React.ElementRef<typeof DialogPrimitive.Content>,
+  React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content> & {
+    showCloseButton?: boolean;
+  }
+>(({ className, children, showCloseButton = true, ...props }, ref) => {
   const { [displayNameContent]: Component = DefaultComponent } = useStackShiftUIComponents();
 
   return (
@@ -80,6 +91,7 @@ function DialogContent({
       <DialogOverlay />
       <Component
         as={DialogPrimitive.Content}
+        ref={ref}
         data-slot="dialog-content"
         className={cn(
           "bg-background data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed top-[50%] left-[50%] z-50 grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-4 rounded-lg border p-6 shadow-lg duration-200 sm:max-w-lg",
@@ -98,64 +110,77 @@ function DialogContent({
       </Component>
     </DialogPortal>
   );
-}
+});
 DialogContent.displayName = displayNameContent;
 
-function DialogHeader({ className, ...props }: React.ComponentProps<"div">) {
+const DialogHeader = React.forwardRef<
+  React.ElementRef<"div">,
+  React.ComponentPropsWithoutRef<"div">
+>(({ className, ...props }, ref) => {
   const { [displayNameHeader]: Component = DefaultComponent } = useStackShiftUIComponents();
 
   return (
     <Component
+      ref={ref}
       data-slot="dialog-header"
       className={cn("flex flex-col gap-2 text-center sm:text-left", className)}
       {...props}
     />
   );
-}
+});
 DialogHeader.displayName = displayNameHeader;
 
-function DialogFooter({ className, ...props }: React.ComponentProps<"div">) {
+const DialogFooter = React.forwardRef<
+  React.ElementRef<"div">,
+  React.ComponentPropsWithoutRef<"div">
+>(({ className, ...props }, ref) => {
   const { [displayNameFooter]: Component = DefaultComponent } = useStackShiftUIComponents();
 
   return (
     <Component
+      ref={ref}
       data-slot="dialog-footer"
       className={cn("flex flex-col-reverse gap-2 sm:flex-row sm:justify-end", className)}
       {...props}
     />
   );
-}
+});
 DialogFooter.displayName = displayNameFooter;
 
-function DialogTitle({ className, ...props }: React.ComponentProps<typeof DialogPrimitive.Title>) {
+const DialogTitle = React.forwardRef<
+  React.ElementRef<typeof DialogPrimitive.Title>,
+  React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>
+>(({ className, ...props }, ref) => {
   const { [displayNameTitle]: Component = DefaultComponent } = useStackShiftUIComponents();
 
   return (
     <Component
       as={DialogPrimitive.Title}
+      ref={ref}
       data-slot="dialog-title"
       className={cn("text-lg leading-none font-semibold", className)}
       {...props}
     />
   );
-}
+});
 DialogTitle.displayName = displayNameTitle;
 
-function DialogDescription({
-  className,
-  ...props
-}: React.ComponentProps<typeof DialogPrimitive.Description>) {
+const DialogDescription = React.forwardRef<
+  React.ElementRef<typeof DialogPrimitive.Description>,
+  React.ComponentPropsWithoutRef<typeof DialogPrimitive.Description>
+>(({ className, ...props }, ref) => {
   const { [displayNameDescription]: Component = DefaultComponent } = useStackShiftUIComponents();
 
   return (
     <Component
       as={DialogPrimitive.Description}
+      ref={ref}
       data-slot="dialog-description"
       className={cn("text-muted-foreground text-sm", className)}
       {...props}
     />
   );
-}
+});
 DialogDescription.displayName = displayNameDescription;
 
 export {
