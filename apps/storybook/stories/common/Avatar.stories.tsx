@@ -28,7 +28,7 @@ type Story = StoryObj<typeof Avatar>;
 export const Default: Story = {
   render: () => (
     <Avatar>
-      <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+      <AvatarImage src="/webriq-logo.png" alt="@shadcn" />
       <AvatarFallback>CN</AvatarFallback>
     </Avatar>
   ),
@@ -61,19 +61,19 @@ export const Sizes: Story = {
   render: () => (
     <div className="flex items-center gap-4">
       <Avatar className="h-8 w-8">
-        <AvatarImage src="https://github.com/shadcn.png" alt="Small" />
+        <AvatarImage src="/webriq-logo.png" alt="Small" />
         <AvatarFallback className="text-xs">SM</AvatarFallback>
       </Avatar>
       <Avatar className="h-10 w-10">
-        <AvatarImage src="https://github.com/shadcn.png" alt="Medium" />
+        <AvatarImage src="/webriq-logo.png" alt="Medium" />
         <AvatarFallback>MD</AvatarFallback>
       </Avatar>
       <Avatar className="h-12 w-12">
-        <AvatarImage src="https://github.com/shadcn.png" alt="Large" />
+        <AvatarImage src="/webriq-logo.png" alt="Large" />
         <AvatarFallback>LG</AvatarFallback>
       </Avatar>
       <Avatar className="h-16 w-16">
-        <AvatarImage src="https://github.com/shadcn.png" alt="Extra Large" />
+        <AvatarImage src="/webriq-logo.png" alt="Extra Large" />
         <AvatarFallback className="text-lg">XL</AvatarFallback>
       </Avatar>
     </div>
@@ -91,24 +91,15 @@ export const TeamMembers: Story = {
   render: () => (
     <div className="flex items-center gap-3">
       <Avatar>
-        <AvatarImage
-          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=32&h=32&fit=crop&crop=face"
-          alt="John Doe"
-        />
+        <AvatarImage src="/webriq-logo.png" alt="John Doe" />
         <AvatarFallback>JD</AvatarFallback>
       </Avatar>
       <Avatar>
-        <AvatarImage
-          src="https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=32&h=32&fit=crop&crop=face"
-          alt="Jane Smith"
-        />
+        <AvatarImage src="/webriq-logo.png" alt="Jane Smith" />
         <AvatarFallback>JS</AvatarFallback>
       </Avatar>
       <Avatar>
-        <AvatarImage
-          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=32&h=32&fit=crop&crop=face"
-          alt="Alex Johnson"
-        />
+        <AvatarImage src="/webriq-logo.png" alt="Alex Johnson" />
         <AvatarFallback>AJ</AvatarFallback>
       </Avatar>
       <Avatar>
@@ -133,14 +124,12 @@ export const UserList: Story = {
         {
           name: "John Doe",
           email: "john@example.com",
-          image:
-            "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face",
+          image: "/webriq-logo.png",
         },
         {
           name: "Jane Smith",
           email: "jane@example.com",
-          image:
-            "https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=40&h=40&fit=crop&crop=face",
+          image: "/webriq-logo.png",
         },
         { name: "Alex Johnson", email: "alex@example.com", image: "" },
         { name: "Maria Garcia", email: "maria@example.com", image: "" },
@@ -176,24 +165,15 @@ export const AvatarGroup: Story = {
   render: () => (
     <div className="flex -space-x-2">
       <Avatar className="border-2 border-white">
-        <AvatarImage
-          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face"
-          alt="User 1"
-        />
+        <AvatarImage src="/webriq-logo.png" alt="User 1" />
         <AvatarFallback>U1</AvatarFallback>
       </Avatar>
       <Avatar className="border-2 border-white">
-        <AvatarImage
-          src="https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=40&h=40&fit=crop&crop=face"
-          alt="User 2"
-        />
+        <AvatarImage src="/webriq-logo.png" alt="User 2" />
         <AvatarFallback>U2</AvatarFallback>
       </Avatar>
       <Avatar className="border-2 border-white">
-        <AvatarImage
-          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face"
-          alt="User 3"
-        />
+        <AvatarImage src="/webriq-logo.png" alt="User 3" />
         <AvatarFallback>U3</AvatarFallback>
       </Avatar>
       <Avatar className="border-2 border-white bg-gray-100">
@@ -231,11 +211,11 @@ export const CustomStyling: Story = {
   render: () => (
     <div className="flex items-center gap-4">
       <Avatar className="h-12 w-12 border-2 border-blue-500">
-        <AvatarImage src="https://github.com/shadcn.png" alt="Bordered" />
+        <AvatarImage src="/webriq-logo.png" alt="Bordered" />
         <AvatarFallback className="bg-blue-100 text-blue-700">BD</AvatarFallback>
       </Avatar>
       <Avatar className="h-12 w-12 rounded-lg">
-        <AvatarImage src="https://github.com/shadcn.png" alt="Square" />
+        <AvatarImage src="/webriq-logo.png" alt="Square" />
         <AvatarFallback className="bg-green-100 text-green-700 rounded-lg">SQ</AvatarFallback>
       </Avatar>
       <Avatar className="h-12 w-12">
@@ -260,17 +240,14 @@ export const StatusIndicator: Story = {
     <div className="flex items-center gap-6">
       <div className="relative">
         <Avatar>
-          <AvatarImage src="https://github.com/shadcn.png" alt="Online User" />
+          <AvatarImage src="/webriq-logo.png" alt="Online User" />
           <AvatarFallback>ON</AvatarFallback>
         </Avatar>
         <div className="absolute bottom-0 right-0 h-3 w-3 bg-green-500 border-2 border-white rounded-full"></div>
       </div>
       <div className="relative">
         <Avatar>
-          <AvatarImage
-            src="https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=40&h=40&fit=crop&crop=face"
-            alt="Away User"
-          />
+          <AvatarImage src="/webriq-logo.png" alt="Away User" />
           <AvatarFallback>AW</AvatarFallback>
         </Avatar>
         <div className="absolute bottom-0 right-0 h-3 w-3 bg-yellow-500 border-2 border-white rounded-full"></div>
