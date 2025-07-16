@@ -1,6 +1,6 @@
 import { Button, Input, Label } from "@stackshift-ui/react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { CreditCard, Eye, EyeOff, Lock, Mail, Phone, Search, User } from "lucide-react";
+import { Eye, EyeOff, Lock, Mail, Search, User } from "lucide-react";
 import { useState } from "react";
 
 const meta: Meta<typeof Input> = {
@@ -298,53 +298,6 @@ export const SearchForm: Story = {
     docs: {
       description: {
         story: "Search input combined with a submit button.",
-      },
-    },
-  },
-};
-
-export const LoginForm: Story = {
-  render: () => (
-    <form className="space-y-4 w-80">
-      <h2 className="text-2xl font-bold text-center">Login</h2>
-
-      <div className="space-y-2">
-        <Label htmlFor="login-email">Email</Label>
-        <div className="relative">
-          <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-          <Input
-            id="login-email"
-            type="email"
-            className="pl-10"
-            placeholder="Enter your email"
-            required
-          />
-        </div>
-      </div>
-
-      <div className="space-y-2">
-        <Label htmlFor="login-password">Password</Label>
-        <div className="relative">
-          <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-          <Input
-            id="login-password"
-            type="password"
-            className="pl-10"
-            placeholder="Enter your password"
-            required
-          />
-        </div>
-      </div>
-
-      <Button type="submit" className="w-full">
-        Sign In
-      </Button>
-    </form>
-  ),
-  parameters: {
-    docs: {
-      description: {
-        story: "Complete login form with email and password inputs.",
       },
     },
   },
