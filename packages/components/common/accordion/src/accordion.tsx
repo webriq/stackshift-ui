@@ -40,14 +40,11 @@ function AccordionTrigger({
   children,
   ...props
 }: React.ComponentProps<typeof AccordionPrimitive.Trigger>) {
-  const { [displayNameAccordionHeader]: HeaderComponent = DefaultComponent } =
-    useStackShiftUIComponents();
-
   const { [displayNameAccordionTrigger]: Component = DefaultComponent } =
     useStackShiftUIComponents();
 
   return (
-    <HeaderComponent as={AccordionPrimitive.Header} className="flex">
+    <AccordionPrimitive.Header className="flex">
       <Component
         as={AccordionPrimitive.Trigger}
         data-slot="accordion-trigger"
@@ -59,7 +56,7 @@ function AccordionTrigger({
         {children}
         <ChevronDownIcon className="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" />
       </Component>
-    </HeaderComponent>
+    </AccordionPrimitive.Header>
   );
 }
 AccordionTrigger.displayName = displayNameAccordionTrigger;
