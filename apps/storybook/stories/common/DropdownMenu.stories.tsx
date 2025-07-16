@@ -1,4 +1,5 @@
 import {
+  Button,
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
@@ -15,31 +16,30 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@stackshift-ui/react";
-import { Button } from "@stackshift-ui/react";
 import type { Meta, StoryObj } from "@storybook/react";
 import {
+  Archive,
+  ChevronDown,
   Cloud,
+  Copy,
   CreditCard,
+  Download,
+  Edit,
   Github,
   Keyboard,
   LifeBuoy,
   LogOut,
   Mail,
   MessageSquare,
+  MoreHorizontal,
   Plus,
   PlusCircle,
   Settings,
+  Share,
+  Trash,
   User,
   UserPlus,
   Users,
-  ChevronDown,
-  MoreHorizontal,
-  Edit,
-  Copy,
-  Trash,
-  Archive,
-  Share,
-  Download,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -160,23 +160,16 @@ export const WithCheckboxes: Story = {
         <DropdownMenuContent className="w-56">
           <DropdownMenuLabel>Appearance</DropdownMenuLabel>
           <DropdownMenuSeparator />
-          <DropdownMenuCheckboxItem
-            checked={showStatusBar}
-            onCheckedChange={setShowStatusBar}
-          >
+          <DropdownMenuCheckboxItem checked={showStatusBar} onCheckedChange={setShowStatusBar}>
             Status Bar
           </DropdownMenuCheckboxItem>
           <DropdownMenuCheckboxItem
             checked={showActivityBar}
             onCheckedChange={setShowActivityBar}
-            disabled
-          >
+            disabled>
             Activity Bar
           </DropdownMenuCheckboxItem>
-          <DropdownMenuCheckboxItem
-            checked={showPanel}
-            onCheckedChange={setShowPanel}
-          >
+          <DropdownMenuCheckboxItem checked={showPanel} onCheckedChange={setShowPanel}>
             Panel
           </DropdownMenuCheckboxItem>
         </DropdownMenuContent>
@@ -342,296 +335,6 @@ export const ContextMenu: Story = {
   },
 };
 
-export const WithGroups: Story = {
-  render: () => (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="outline">
-          Account
-          <ChevronDown className="ml-2 h-4 w-4" />
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56">
-        <DropdownMenuLabel>My Account</DropdownMenuLabel>
-        <DropdownMenuSeparator />
-        <DropdownMenuGroup>
-          <DropdownMenuItem>
-            <User />
-            Profile
-            <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            <CreditCard />
-            Billing
-            <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            <Settings />
-            Settings
-            <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
-          </DropdownMenuItem>
-        </DropdownMenuGroup>
-        <DropdownMenuSeparator />
-        <DropdownMenuGroup>
-          <DropdownMenuItem>
-            <Users />
-            Team
-          </DropdownMenuItem>
-          <DropdownMenuSub>
-            <DropdownMenuSubTrigger>
-              <UserPlus />
-              Invite users
-            </DropdownMenuSubTrigger>
-            <DropdownMenuSubContent>
-              <DropdownMenuItem>
-                <Mail />
-                Email
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <MessageSquare />
-                Message
-              </DropdownMenuItem>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem>
-                <PlusCircle />
-                More...
-              </DropdownMenuItem>
-            </DropdownMenuSubContent>
-          </DropdownMenuSub>
-          <DropdownMenuItem>
-            <Plus />
-            New Team
-            <DropdownMenuShortcut>⌘+T</DropdownMenuShortcut>
-          </DropdownMenuItem>
-        </DropdownMenuGroup>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem>
-          <Github />
-          GitHub
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <LifeBuoy />
-          Support
-        </DropdownMenuItem>
-        <DropdownMenuItem disabled>
-          <Cloud />
-          API
-        </DropdownMenuItem>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem>
-          <LogOut />
-          Log out
-          <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
-  ),
-  parameters: {
-    docs: {
-      description: {
-        story: "Dropdown menu with grouped items for better organization.",
-      },
-    },
-  },
-};
-
-export const SimpleActions: Story = {
-  render: () => (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="sm">
-          Actions
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent>
-        <DropdownMenuItem>View</DropdownMenuItem>
-        <DropdownMenuItem>Edit</DropdownMenuItem>
-        <DropdownMenuItem>Copy</DropdownMenuItem>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem variant="destructive">Delete</DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
-  ),
-  parameters: {
-    docs: {
-      description: {
-        story: "Simple dropdown menu with basic actions, no icons or shortcuts.",
-      },
-    },
-  },
-};
-
-export const WithInsetItems: Story = {
-  render: () => (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="outline">File Menu</Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56">
-        <DropdownMenuItem>
-          <Plus />
-          New File
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <Copy />
-          New from Template
-        </DropdownMenuItem>
-        <DropdownMenuSeparator />
-        <DropdownMenuLabel>Recent Files</DropdownMenuLabel>
-        <DropdownMenuItem inset>document.pdf</DropdownMenuItem>
-        <DropdownMenuItem inset>spreadsheet.xlsx</DropdownMenuItem>
-        <DropdownMenuItem inset>presentation.pptx</DropdownMenuItem>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem>
-          <Settings />
-          Preferences
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
-  ),
-  parameters: {
-    docs: {
-      description: {
-        story: "Dropdown menu with inset items for hierarchical content structure.",
-      },
-    },
-  },
-};
-
-export const DisabledStates: Story = {
-  render: () => (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="outline">Mixed States</Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56">
-        <DropdownMenuItem>
-          <User />
-          Available Action
-        </DropdownMenuItem>
-        <DropdownMenuItem disabled>
-          <Settings />
-          Disabled Action
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <Mail />
-          Another Available Action
-        </DropdownMenuItem>
-        <DropdownMenuSeparator />
-        <DropdownMenuCheckboxItem checked disabled>
-          Disabled Checked
-        </DropdownMenuCheckboxItem>
-        <DropdownMenuCheckboxItem checked={false} disabled>
-          Disabled Unchecked
-        </DropdownMenuCheckboxItem>
-        <DropdownMenuSeparator />
-        <DropdownMenuRadioGroup value="option1">
-          <DropdownMenuRadioItem value="option1">
-            Available Option
-          </DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="option2" disabled>
-            Disabled Option
-          </DropdownMenuRadioItem>
-        </DropdownMenuRadioGroup>
-      </DropdownMenuContent>
-    </DropdownMenu>
-  ),
-  parameters: {
-    docs: {
-      description: {
-        story: "Dropdown menu showing various disabled states for different item types.",
-      },
-    },
-  },
-};
-
-export const AccessibilityFeatures: Story = {
-  render: () => (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="outline" aria-label="Open accessibility menu">
-          Accessibility Menu
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56">
-        <DropdownMenuLabel>Accessibility Options</DropdownMenuLabel>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem>
-          <Keyboard />
-          Keyboard Navigation
-          <DropdownMenuShortcut>Tab</DropdownMenuShortcut>
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <Settings />
-          Screen Reader Mode
-          <DropdownMenuShortcut>Alt+S</DropdownMenuShortcut>
-        </DropdownMenuItem>
-        <DropdownMenuItem disabled>
-          <User />
-          High Contrast (Coming Soon)
-        </DropdownMenuItem>
-        <DropdownMenuSeparator />
-        <DropdownMenuGroup>
-          <DropdownMenuLabel>Font Size</DropdownMenuLabel>
-          <DropdownMenuItem inset>Small</DropdownMenuItem>
-          <DropdownMenuItem inset>Medium</DropdownMenuItem>
-          <DropdownMenuItem inset>Large</DropdownMenuItem>
-        </DropdownMenuGroup>
-      </DropdownMenuContent>
-    </DropdownMenu>
-  ),
-  parameters: {
-    docs: {
-      description: {
-        story: "Dropdown menu demonstrating accessibility features including keyboard shortcuts, ARIA labels, and screen reader support.",
-      },
-    },
-  },
-};
-
-export const DestructiveActions: Story = {
-  render: () => (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="sm">
-          <MoreHorizontal className="h-4 w-4" />
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent>
-        <DropdownMenuItem>
-          <Edit />
-          Edit Item
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <Copy />
-          Duplicate
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <Share />
-          Share
-        </DropdownMenuItem>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem>
-          <Archive />
-          Archive
-        </DropdownMenuItem>
-        <DropdownMenuItem variant="destructive">
-          <Trash />
-          Delete Forever
-          <DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut>
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
-  ),
-  parameters: {
-    docs: {
-      description: {
-        story: "Dropdown menu with destructive actions properly styled and separated from regular actions.",
-      },
-    },
-  },
-};
-
 export const ComplexNesting: Story = {
   render: () => (
     <DropdownMenu>
@@ -642,7 +345,7 @@ export const ComplexNesting: Story = {
         <DropdownMenuLabel>File Operations</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuSub>
-          <DropdownMenuSubTrigger>
+          <DropdownMenuSubTrigger className="flex items-center gap-2">
             <Plus />
             New
           </DropdownMenuSubTrigger>
@@ -662,7 +365,7 @@ export const ComplexNesting: Story = {
           </DropdownMenuSubContent>
         </DropdownMenuSub>
         <DropdownMenuSub>
-          <DropdownMenuSubTrigger>
+          <DropdownMenuSubTrigger className="flex items-center gap-2">
             <Download />
             Export
           </DropdownMenuSubTrigger>
@@ -685,7 +388,8 @@ export const ComplexNesting: Story = {
   parameters: {
     docs: {
       description: {
-        story: "Complex nested dropdown menu with multiple levels of sub-menus and various content types.",
+        story:
+          "Complex nested dropdown menu with multiple levels of sub-menus and various content types.",
       },
     },
   },
