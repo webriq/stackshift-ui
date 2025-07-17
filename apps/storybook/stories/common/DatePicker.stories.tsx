@@ -36,48 +36,11 @@ export default meta;
 type Story = StoryObj<typeof DatePicker>;
 
 export const Default: Story = {
-  render: () => <DatePicker />,
-};
-
-export const WithLabel: Story = {
-  render: () => <DatePicker label="Select your birth date" />,
-};
-
-export const ControlledValue: Story = {
-  render: () => {
-    const [selectedDate, setSelectedDate] = useState<Date>(new Date());
-
-    return (
-      <div className="space-y-4">
-        <DatePicker
-          label="Controlled Date Picker"
-          selectedDate={selectedDate}
-          onSelect={setSelectedDate}
-        />
-        <div className="text-sm text-gray-600">Selected: {selectedDate.toLocaleDateString()}</div>
-      </div>
-    );
-  },
-};
-
-export const SingleMode: Story = {
-  render: () => {
-    const [selectedDate, setSelectedDate] = useState<Date>();
-
-    return (
-      <div className="space-y-4">
-        <DatePicker
-          label="Single Date Selection"
-          mode="single"
-          selectedDate={selectedDate}
-          onSelect={setSelectedDate}
-        />
-        {selectedDate && (
-          <div className="text-sm text-gray-600">Selected: {selectedDate.toLocaleDateString()}</div>
-        )}
-      </div>
-    );
-  },
+  render: () => (
+    <div className="relative w-[320px] h-full flex items-center justify-center">
+      <DatePicker className="w-full h-full flex flex-col gap-1" label="Select your birth date" />
+    </div>
+  ),
 };
 
 export const WithInput: Story = {
@@ -231,78 +194,6 @@ export const EventScheduler: Story = {
   },
 };
 
-export const BirthdayPicker: Story = {
-  render: () => {
-    const [birthDate, setBirthDate] = useState<Date>();
-    const [age, setAge] = useState<number>();
-
-    const calculateAge = (birthDate: Date) => {
-      const today = new Date();
-      const age = today.getFullYear() - birthDate.getFullYear();
-      const monthDiff = today.getMonth() - birthDate.getMonth();
-
-      if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
-        return age - 1;
-      }
-
-      return age;
-    };
-
-    const handleDateSelect = (date: Date) => {
-      setBirthDate(date);
-      setAge(calculateAge(date));
-    };
-
-    return (
-      <div className="space-y-4 p-6 border rounded-lg max-w-md">
-        <h3 className="text-lg font-semibold">Birthday Information</h3>
-
-        <DatePickerInput
-          label="Date of Birth"
-          selectedDate={birthDate}
-          onSelect={handleDateSelect}
-        />
-
-        {birthDate && age !== undefined && (
-          <div className="p-4 bg-blue-50 rounded-lg">
-            <p className="text-sm text-blue-800">
-              <strong>Birth Date:</strong> {birthDate.toLocaleDateString()}
-            </p>
-            <p className="text-sm text-blue-800">
-              <strong>Age:</strong> {age} years old
-            </p>
-            {age >= 18 && (
-              <p className="text-xs text-green-600 mt-2">✓ Eligible for adult services</p>
-            )}
-          </div>
-        )}
-      </div>
-    );
-  },
-};
-
-export const CompactSize: Story = {
-  render: () => {
-    const [selectedDate, setSelectedDate] = useState<Date>();
-
-    return (
-      <div className="space-y-4">
-        <div className="text-sm text-gray-600">Compact date picker with smaller calendar size</div>
-        <div className="[--cell-size:theme(spacing.7)]">
-          <DatePicker
-            label="Compact Date Picker"
-            selectedDate={selectedDate}
-            onSelect={setSelectedDate}
-          />
-        </div>
-        {selectedDate && (
-          <div className="text-sm text-gray-600">Selected: {selectedDate.toLocaleDateString()}</div>
-        )}
-      </div>
-    );
-  },
-};
-
 export const LargeSize: Story = {
   render: () => {
     const [selectedDate, setSelectedDate] = useState<Date>();
@@ -320,46 +211,6 @@ export const LargeSize: Story = {
         {selectedDate && (
           <div className="text-sm text-gray-600">Selected: {selectedDate.toLocaleDateString()}</div>
         )}
-      </div>
-    );
-  },
-};
-
-export const MultipleVariants: Story = {
-  render: () => {
-    const [basicDate, setBasicDate] = useState<Date>();
-    const [inputDate, setInputDate] = useState<Date>();
-    const [timeDate, setTimeDate] = useState<Date>();
-
-    return (
-      <div className="space-y-8 p-6">
-        <h3 className="text-lg font-semibold">Date Picker Variants</h3>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="space-y-2">
-            <h4 className="font-medium">Basic Picker</h4>
-            <DatePicker label="Basic" selectedDate={basicDate} onSelect={setBasicDate} />
-          </div>
-
-          <div className="space-y-2">
-            <h4 className="font-medium">With Input</h4>
-            <DatePickerInput label="Input Style" selectedDate={inputDate} onSelect={setInputDate} />
-          </div>
-
-          <div className="space-y-2">
-            <h4 className="font-medium">With Time</h4>
-            <DatePickerTime label="Date & Time" selectedDate={timeDate} onSelect={setTimeDate} />
-          </div>
-        </div>
-
-        <div className="space-y-2 p-4 bg-gray-50 rounded-lg">
-          <h4 className="font-medium">Selected Values:</h4>
-          <div className="text-sm text-gray-600 space-y-1">
-            <p>Basic: {basicDate?.toLocaleDateString() || "None"}</p>
-            <p>Input: {inputDate?.toLocaleDateString() || "None"}</p>
-            <p>Time: {timeDate?.toLocaleDateString() || "None"}</p>
-          </div>
-        </div>
       </div>
     );
   },
