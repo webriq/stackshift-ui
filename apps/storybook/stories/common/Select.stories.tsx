@@ -46,49 +46,71 @@ export default meta;
 type Story = StoryObj<typeof Select>;
 
 export const Default: Story = {
-  render: () => (
-    <Select>
-      <SelectTrigger className="w-[180px]">
-        <SelectValue placeholder="Select a fruit" />
-      </SelectTrigger>
-      <SelectContent>
-        <SelectItem value="apple">Apple</SelectItem>
-        <SelectItem value="banana">Banana</SelectItem>
-        <SelectItem value="orange">Orange</SelectItem>
-        <SelectItem value="grape">Grape</SelectItem>
-      </SelectContent>
-    </Select>
-  ),
+  render: args => {
+    const { showLabel, size, label, ...selectProps } = args as any;
+
+    const sizes = {
+      sm: {
+        trigger: "w-[150px] h-8 text-sm px-2 py-1",
+        content: "w-[150px]",
+        label: "text-sm mb-1",
+      },
+      md: {
+        trigger: "w-[180px] h-10 text-sm px-3 py-2",
+        content: "w-[180px]",
+        label: "text-base mb-1.5",
+      },
+      lg: {
+        trigger: "w-[220px] h-12 text-base px-4 py-2.5",
+        content: "w-[220px]",
+        label: "text-lg mb-2",
+      },
+    };
+
+    const sizeConfig = sizes[size as keyof typeof sizes] || sizes.md;
+
+    return (
+      <div className="space-y-1.5">
+        {showLabel && (
+          <Label htmlFor="default-select" className={sizeConfig.label}>
+            {label || "Select field"}
+          </Label>
+        )}
+        <Select disabled={selectProps.disabled}>
+          <SelectTrigger id="default-select" className={sizeConfig.trigger}>
+            <SelectValue placeholder="Select a fruit" />
+          </SelectTrigger>
+          <SelectContent className={sizeConfig.content}>
+            <SelectItem value="apple">Apple</SelectItem>
+            <SelectItem value="banana">Banana</SelectItem>
+            <SelectItem value="orange">Orange</SelectItem>
+            <SelectItem value="grape">Grape</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+    );
+  },
+  args: {
+    showLabel: true,
+    size: "md",
+    label: "Select field",
+    disabled: false,
+  },
+  argTypes: {
+    showLabel: {
+      control: { type: "boolean" },
+      description: "Whether to show the select label",
+    },
+    size: {
+      control: { type: "select" },
+      options: ["sm", "md", "lg"],
+      description: "Size of the select field",
+    },
+  },
   parameters: {
     docs: {
       description: {
         story: "Basic select dropdown with fruit options.",
-      },
-    },
-  },
-};
-
-export const WithLabel: Story = {
-  render: () => (
-    <div className="space-y-2">
-      <Label htmlFor="fruit-select">Choose a fruit</Label>
-      <Select>
-        <SelectTrigger id="fruit-select" className="w-[180px]">
-          <SelectValue placeholder="Select a fruit" />
-        </SelectTrigger>
-        <SelectContent>
-          <SelectItem value="apple">Apple</SelectItem>
-          <SelectItem value="banana">Banana</SelectItem>
-          <SelectItem value="orange">Orange</SelectItem>
-          <SelectItem value="grape">Grape</SelectItem>
-        </SelectContent>
-      </Select>
-    </div>
-  ),
-  parameters: {
-    docs: {
-      description: {
-        story: "Select with associated label for better accessibility.",
       },
     },
   },
@@ -123,64 +145,6 @@ export const WithGroups: Story = {
     docs: {
       description: {
         story: "Select with grouped options and separators.",
-      },
-    },
-  },
-};
-
-export const Disabled: Story = {
-  render: () => (
-    <div className="space-y-4">
-      <div className="space-y-2">
-        <Label htmlFor="normal-select">Normal Select</Label>
-        <Select>
-          <SelectTrigger id="normal-select" className="w-[180px]">
-            <SelectValue placeholder="Select an option" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="option1">Option 1</SelectItem>
-            <SelectItem value="option2">Option 2</SelectItem>
-            <SelectItem value="option3">Option 3</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-
-      <div className="space-y-2">
-        <Label htmlFor="disabled-select" className="text-muted-foreground">
-          Disabled Select
-        </Label>
-        <Select disabled>
-          <SelectTrigger id="disabled-select" className="w-[180px]">
-            <SelectValue placeholder="Cannot select" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="option1">Option 1</SelectItem>
-            <SelectItem value="option2">Option 2</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-
-      <div className="space-y-2">
-        <Label htmlFor="disabled-items">Select with Disabled Items</Label>
-        <Select>
-          <SelectTrigger id="disabled-items" className="w-[180px]">
-            <SelectValue placeholder="Select an option" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="available">Available</SelectItem>
-            <SelectItem value="disabled" disabled>
-              Disabled Option
-            </SelectItem>
-            <SelectItem value="another">Another Option</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-    </div>
-  ),
-  parameters: {
-    docs: {
-      description: {
-        story: "Select in disabled states and with disabled individual items.",
       },
     },
   },
@@ -310,19 +274,18 @@ export const TimeZoneSelector: Story = {
     },
   },
 };
-
 export const Sizes: Story = {
   render: () => (
     <div className="space-y-4">
       <div className="space-y-2">
-        <Label htmlFor="small-select" className="text-sm">
+        <Label htmlFor="small-select" className="text-sm mb-1">
           Small
         </Label>
         <Select>
-          <SelectTrigger id="small-select" className="w-[150px] h-8 text-sm">
+          <SelectTrigger id="small-select" className="w-[150px] h-8 text-sm px-2 py-1">
             <SelectValue placeholder="Small select" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="w-[150px]">
             <SelectItem value="option1">Option 1</SelectItem>
             <SelectItem value="option2">Option 2</SelectItem>
             <SelectItem value="option3">Option 3</SelectItem>
@@ -331,12 +294,14 @@ export const Sizes: Story = {
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="default-select">Default</Label>
+        <Label htmlFor="default-select" className="text-base mb-1.5">
+          Default
+        </Label>
         <Select>
-          <SelectTrigger id="default-select" className="w-[180px]">
+          <SelectTrigger id="default-select" className="w-[180px] h-10 text-sm px-3 py-2">
             <SelectValue placeholder="Default select" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="w-[180px]">
             <SelectItem value="option1">Option 1</SelectItem>
             <SelectItem value="option2">Option 2</SelectItem>
             <SelectItem value="option3">Option 3</SelectItem>
@@ -345,14 +310,14 @@ export const Sizes: Story = {
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="large-select" className="text-lg">
+        <Label htmlFor="large-select" className="text-lg mb-2">
           Large
         </Label>
         <Select>
-          <SelectTrigger id="large-select" className="w-[220px] h-12 text-lg">
+          <SelectTrigger id="large-select" className="w-[220px] h-12 text-base px-4 py-2.5">
             <SelectValue placeholder="Large select" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="w-[220px]">
             <SelectItem value="option1">Option 1</SelectItem>
             <SelectItem value="option2">Option 2</SelectItem>
             <SelectItem value="option3">Option 3</SelectItem>
@@ -364,7 +329,7 @@ export const Sizes: Story = {
   parameters: {
     docs: {
       description: {
-        story: "Select components in different sizes using custom classes.",
+        story: "Select components in different sizes using consistent sizing classes.",
       },
     },
   },
