@@ -18,6 +18,10 @@ export interface StatsCardProps extends Omit<HTMLProps<HTMLElement>, "as"> {
 
 const displayName = "StatsCard";
 
+/**
+ * @deprecated Redundant since Card component was added
+ * @use Card component
+ *  */
 export const StatsCard: React.FC<StatsCardProps> = ({
   variant = "inline",
   icon,

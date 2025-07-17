@@ -12,7 +12,7 @@ import {
   CardTitle,
 } from "@stackshift-ui/react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { CalendarDays, MessageSquare, Share, Star, Users } from "lucide-react";
+import { CalendarDays, MessageSquare, Share, ShoppingCart, Star, Users } from "lucide-react";
 
 const meta: Meta<typeof Card> = {
   title: "Common/Card",
@@ -41,22 +41,24 @@ type Story = StoryObj<typeof Card>;
 export const Default: Story = {
   render: () => (
     <Card className="w-[350px]">
-      <CardHeader>
-        <CardTitle>Card Title</CardTitle>
-        <CardDescription>Card description goes here.</CardDescription>
+      <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+        <CardTitle className="text-lg font-semibold">Total Revenue</CardTitle>
       </CardHeader>
       <CardContent>
-        <p>This is the main content of the card.</p>
+        <div className="flex items-center justify-start gap-6">
+          <ShoppingCart className="w-10 h-10 text-primary" />
+          <div className="flex flex-col gap-1">
+            <div className="text-2xl font-bold">$45,231.89</div>
+            <p className="text-xs text-muted-foreground">+20.1% from last month</p>
+          </div>
+        </div>
       </CardContent>
-      <CardFooter>
-        <Button>Action</Button>
-      </CardFooter>
     </Card>
   ),
   parameters: {
     docs: {
       description: {
-        story: "Basic card with header, content, and footer sections.",
+        story: "Stats card showing a metric with trend indicator.",
       },
     },
   },

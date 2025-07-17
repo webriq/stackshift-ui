@@ -19,6 +19,10 @@ export interface InputFileProps extends Omit<HTMLProps<HTMLInputElement>, "as"> 
 
 const displayName = "InputFile";
 
+/**
+ * @deprecated Redundant since Input component was added
+ * @use Input component
+ *  */
 export const InputFile: React.FC<InputFileProps> = ({
   required = false,
   variant = "primary",
