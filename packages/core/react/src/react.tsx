@@ -62,7 +62,6 @@ export { FormField } from "@stackshift-ui/form-field";
 export { Heading } from "@stackshift-ui/heading";
 export { Image } from "@stackshift-ui/image";
 export { Input } from "@stackshift-ui/input";
-export { InputFile } from "@stackshift-ui/input-file";
 export { Label } from "@stackshift-ui/label";
 export { Link } from "@stackshift-ui/link";
 export {
@@ -73,8 +72,8 @@ export {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
   NavigationMenuViewport,
+  navigationMenuTriggerStyle,
 } from "@stackshift-ui/menu";
 export {
   Pagination,
@@ -129,7 +128,7 @@ export {
 } from "@stackshift-ui/table";
 export { Text } from "@stackshift-ui/text";
 export { Textarea } from "@stackshift-ui/textarea";
-export { toast, Toaster, type ToasterProps } from "@stackshift-ui/toast";
+export { Toaster, toast, type ToasterProps } from "@stackshift-ui/toast";
 export { Toggle, toggleVariants } from "@stackshift-ui/toggle";
 export { ToggleGroup, ToggleGroupItem } from "@stackshift-ui/toggle-group";
 export { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@stackshift-ui/tooltip";

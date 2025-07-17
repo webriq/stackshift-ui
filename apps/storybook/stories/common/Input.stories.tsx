@@ -1,6 +1,7 @@
 import { Button, Input, Label } from "@stackshift-ui/react";
+import { cn } from "@stackshift-ui/system";
 import type { Meta, StoryObj } from "@storybook/react";
-import { Eye, EyeOff, Lock, Mail, Search, User } from "lucide-react";
+import { Eye, EyeOff, Lock, Search } from "lucide-react";
 import { useState } from "react";
 
 const meta: Meta<typeof Input> = {
@@ -34,6 +35,10 @@ const meta: Meta<typeof Input> = {
       control: { type: "boolean" },
       description: "Whether the input is required",
     },
+    className: {
+      control: { type: "text" },
+      description: "Additional CSS classes to apply to the input",
+    },
   },
 } satisfies Meta<typeof Input>;
 
@@ -41,102 +46,79 @@ export default meta;
 type Story = StoryObj<typeof Input>;
 
 export const Default: Story = {
+  render: args => {
+    const { showLabel, size, validationState, validationMessage, ...inputArgs } = args as any;
+
+    const sizeClasses = {
+      sm: "h-8 text-xs px-2",
+      md: "h-10 text-sm px-3",
+      lg: "h-12 text-base px-4",
+    };
+
+    const sizeClass = size ? sizeClasses[size as keyof typeof sizeClasses] : "";
+
+    return (
+      <div className="flex flex-col gap-2 w-80">
+        {showLabel && (
+          <Label htmlFor="default-input" className="text-sm font-medium">
+            {args.label || "Input Label"}
+          </Label>
+        )}
+        <Input
+          type={args.type}
+          id="default-input"
+          name="default-input"
+          className={cn(sizeClass, args.className)}
+          aria-invalid={validationState === "invalid"}
+          {...inputArgs}
+        />
+        {validationState === "invalid" && validationMessage && (
+          <p className="text-xs text-destructive mt-1">{validationMessage}</p>
+        )}
+      </div>
+    );
+  },
   args: {
     placeholder: "Enter text...",
+    type: "text",
+    showLabel: true,
+    label: "Input Field",
+    size: "md",
+    validationState: "valid",
+    validationMessage: "This field is required",
+    required: false,
+    disabled: false,
   },
-  parameters: {
-    docs: {
-      description: {
-        story: "Default text input with placeholder.",
-      },
+  argTypes: {
+    showLabel: {
+      control: { type: "boolean" },
+      description: "Whether to show the input label",
+    },
+    label: {
+      control: { type: "text" },
+      description: "Label text for the input",
+      if: { arg: "showLabel", eq: true },
+    },
+    size: {
+      control: { type: "select" },
+      options: ["sm", "md", "lg"],
+      description: "Size of the input field",
+    },
+    validationState: {
+      control: { type: "select" },
+      options: ["valid", "invalid"],
+      description: "Validation state of the input",
+    },
+    validationMessage: {
+      control: { type: "text" },
+      description: "Validation message to display when invalid",
+      if: { arg: "validationState", eq: "invalid" },
     },
   },
-};
-
-export const WithLabel: Story = {
-  render: () => (
-    <div className="space-y-2">
-      <Label htmlFor="email">Email</Label>
-      <Input id="email" type="email" placeholder="Enter your email" />
-    </div>
-  ),
   parameters: {
     docs: {
       description: {
-        story: "Input with associated label for better accessibility.",
-      },
-    },
-  },
-};
-
-export const InputTypes: Story = {
-  render: () => (
-    <div className="space-y-4 w-80">
-      <div className="space-y-2">
-        <Label htmlFor="text-input">Text</Label>
-        <Input id="text-input" type="text" placeholder="Enter text" />
-      </div>
-      <div className="space-y-2">
-        <Label htmlFor="email-input">Email</Label>
-        <Input id="email-input" type="email" placeholder="Enter email" />
-      </div>
-      <div className="space-y-2">
-        <Label htmlFor="password-input">Password</Label>
-        <Input id="password-input" type="password" placeholder="Enter password" />
-      </div>
-      <div className="space-y-2">
-        <Label htmlFor="number-input">Number</Label>
-        <Input id="number-input" type="number" placeholder="Enter number" />
-      </div>
-      <div className="space-y-2">
-        <Label htmlFor="tel-input">Phone</Label>
-        <Input id="tel-input" type="tel" placeholder="Enter phone number" />
-      </div>
-      <div className="space-y-2">
-        <Label htmlFor="search-input">Search</Label>
-        <Input id="search-input" type="search" placeholder="Search..." />
-      </div>
-    </div>
-  ),
-  parameters: {
-    docs: {
-      description: {
-        story: "Different input types for various data formats.",
-      },
-    },
-  },
-};
-
-export const WithIcons: Story = {
-  render: () => (
-    <div className="space-y-4 w-80">
-      <div className="space-y-2">
-        <Label htmlFor="user-input">Username</Label>
-        <div className="relative">
-          <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-          <Input id="user-input" className="pl-10" placeholder="Enter username" />
-        </div>
-      </div>
-      <div className="space-y-2">
-        <Label htmlFor="email-icon">Email</Label>
-        <div className="relative">
-          <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-          <Input id="email-icon" type="email" className="pl-10" placeholder="Enter email" />
-        </div>
-      </div>
-      <div className="space-y-2">
-        <Label htmlFor="search-icon">Search</Label>
-        <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-          <Input id="search-icon" type="search" className="pl-10" placeholder="Search..." />
-        </div>
-      </div>
-    </div>
-  ),
-  parameters: {
-    docs: {
-      description: {
-        story: "Inputs with icons to enhance visual context.",
+        story: "Default input with configurable label, size, type, and validation state.",
       },
     },
   },
@@ -176,114 +158,6 @@ export const PasswordToggle: Story = {
   },
 };
 
-export const States: Story = {
-  render: () => (
-    <div className="space-y-4 w-80">
-      <div className="space-y-2">
-        <Label htmlFor="normal">Normal</Label>
-        <Input id="normal" placeholder="Normal input" />
-      </div>
-      <div className="space-y-2">
-        <Label htmlFor="disabled" className="text-muted-foreground">
-          Disabled
-        </Label>
-        <Input id="disabled" placeholder="Disabled input" disabled />
-      </div>
-      <div className="space-y-2">
-        <Label htmlFor="readonly">Read Only</Label>
-        <Input id="readonly" value="Read only value" readOnly />
-      </div>
-      <div className="space-y-2">
-        <Label htmlFor="required">Required</Label>
-        <Input id="required" placeholder="Required input" required />
-      </div>
-    </div>
-  ),
-  parameters: {
-    docs: {
-      description: {
-        story: "Different input states including disabled, readonly, and required.",
-      },
-    },
-  },
-};
-
-export const Validation: Story = {
-  render: () => (
-    <div className="space-y-4 w-80">
-      <div className="space-y-2">
-        <Label htmlFor="valid">Valid Input</Label>
-        <Input
-          id="valid"
-          className="border-green-500 focus:ring-green-500"
-          placeholder="Valid input"
-          defaultValue="valid@example.com"
-        />
-        <p className="text-sm text-green-600">✓ Email format is correct</p>
-      </div>
-      <div className="space-y-2">
-        <Label htmlFor="invalid">Invalid Input</Label>
-        <Input
-          id="invalid"
-          className="border-red-500 focus:ring-red-500"
-          placeholder="Invalid input"
-          defaultValue="invalid-email"
-        />
-        <p className="text-sm text-red-600">✗ Please enter a valid email address</p>
-      </div>
-      <div className="space-y-2">
-        <Label htmlFor="warning">Warning Input</Label>
-        <Input
-          id="warning"
-          className="border-yellow-500 focus:ring-yellow-500"
-          placeholder="Warning input"
-          defaultValue="test@tempmail.com"
-        />
-        <p className="text-sm text-yellow-600">
-          ⚠ Temporary email addresses may not receive notifications
-        </p>
-      </div>
-    </div>
-  ),
-  parameters: {
-    docs: {
-      description: {
-        story: "Input validation states with custom styling and messages.",
-      },
-    },
-  },
-};
-
-export const Sizes: Story = {
-  render: () => (
-    <div className="space-y-4 w-80">
-      <div className="space-y-2">
-        <Label htmlFor="small" className="text-sm">
-          Small
-        </Label>
-        <Input id="small" className="h-8 text-sm" placeholder="Small input" />
-      </div>
-      <div className="space-y-2">
-        <Label htmlFor="default-size">Default</Label>
-        <Input id="default-size" placeholder="Default input" />
-      </div>
-      <div className="space-y-2">
-        <Label htmlFor="large" className="text-lg">
-          Large
-        </Label>
-        <Input id="large" className="h-12 text-lg" placeholder="Large input" />
-      </div>
-    </div>
-  ),
-  parameters: {
-    docs: {
-      description: {
-        story: "Input fields in different sizes using custom classes.",
-      },
-    },
-  },
-};
-
 export const SearchForm: Story = {
   render: () => (
     <form className="flex gap-2 w-96">
@@ -298,6 +172,27 @@ export const SearchForm: Story = {
     docs: {
       description: {
         story: "Search input combined with a submit button.",
+      },
+    },
+  },
+};
+
+export const FileInput: Story = {
+  render: () => {
+    return (
+      <>
+        <form className="flex gap-2 w-96">
+          <div className="relative flex-1">
+            <Input type="file" className="pl-10" placeholder="Select file..." />
+          </div>
+        </form>
+      </>
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: "File input",
       },
     },
   },
