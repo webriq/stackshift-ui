@@ -1,7 +1,6 @@
 import { Checkbox } from "@stackshift-ui/checkbox";
 import { CheckboxGroup } from "@stackshift-ui/checkbox-group";
 import { Input } from "@stackshift-ui/input";
-import { InputFile } from "@stackshift-ui/input-file";
 import { Label } from "@stackshift-ui/label";
 import { RadioGroup, RadioGroupItem } from "@stackshift-ui/radio-group";
 import {
@@ -96,7 +95,7 @@ export const FormField = ({
       );
 
     case "inputFile":
-      return <InputFile ariaLabel={name} name={name} required={required} {...props} />;
+      return <Input type="file" aria-label={name} name={name} required={required} {...props} />;
 
     case "textarea":
       return (

@@ -46,7 +46,6 @@
     "@stackshift-ui/checkbox": "workspace:*",
     "@stackshift-ui/checkbox-group": "workspace:*",
     "@stackshift-ui/input": "workspace:*",
-    "@stackshift-ui/input-file": "workspace:*",
     "@stackshift-ui/label": "workspace:*",
     "@stackshift-ui/radio": "workspace:*",
     "@stackshift-ui/radio-group": "workspace:*",
