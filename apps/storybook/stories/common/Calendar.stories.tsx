@@ -35,12 +35,28 @@ const meta: Meta<typeof Calendar> = {
 export default meta;
 type Story = StoryObj<typeof Calendar>;
 
-export const Default: Story = {
-  render: () => (
-    <div className="relative relative max-w-xs w-full">
-      <Calendar mode="single" className="rounded-md border w-full" />
-    </div>
-  ),
+export const Compact: Story = {
+  args: {
+    mode: "range",
+  },
+  render: arg => {
+    const [date, setDate] = useState<Date | undefined>(new Date());
+
+    return (
+      <div className="relative max-w-xs w-full">
+        <Calendar
+          mode={arg.mode}
+          selected={date}
+          onSelect={setDate}
+          className="rounded-md border text-sm w-full"
+          classNames={{
+            day: "h-8 w-8 p-0 text-xs flex items-center justify-center",
+            head_cell: "text-xs font-medium",
+          }}
+        />
+      </div>
+    );
+  },
 };
 
 export const SingleSelection: Story = {
@@ -54,6 +70,10 @@ export const SingleSelection: Story = {
           selected={date}
           onSelect={setDate}
           className="rounded-md border w-full"
+          classNames={{
+            day: "h-8 w-8 p-0 text-xs flex items-center justify-center",
+            head_cell: "text-xs font-medium",
+          }}
         />
         {date && <p className="text-sm text-gray-600">Selected: {date.toLocaleDateString()}</p>}
       </div>
@@ -72,6 +92,10 @@ export const MultipleSelection: Story = {
           selected={dates}
           onSelect={setDates}
           className="rounded-md border w-full"
+          classNames={{
+            day: "h-8 w-8 p-0 text-xs flex items-center justify-center",
+            head_cell: "text-xs font-medium",
+          }}
         />
         {dates.length > 0 && (
           <div className="text-sm text-gray-600">
@@ -99,6 +123,10 @@ export const RangeSelection: Story = {
           selected={range}
           onSelect={setRange}
           className="rounded-md border w-full"
+          classNames={{
+            day: "h-8 w-8 p-0 text-xs flex items-center justify-center",
+            head_cell: "text-xs font-medium",
+          }}
         />
         {(range?.from || range?.to) && (
           <div className="text-sm text-gray-600">
@@ -129,6 +157,10 @@ export const WithDisabledDates: Story = {
           onSelect={setDate}
           disabled={disabledDays}
           className="rounded-md border w-full"
+          classNames={{
+            day: "h-8 w-8 p-0 text-xs flex items-center justify-center",
+            head_cell: "text-xs font-medium",
+          }}
         />
         <p className="text-sm text-gray-600">Weekends and holidays are disabled</p>
       </div>
@@ -242,6 +274,10 @@ export const EventCalendar: Story = {
           modifiersClassNames={{
             hasEvents: "bg-green-100 text-green-800 font-semibold",
           }}
+          classNames={{
+            day: "h-8 w-8 p-0 text-xs flex items-center justify-center",
+            head_cell: "text-xs font-medium",
+          }}
         />
 
         {selectedDate && events[selectedDate.toDateString()] && (
@@ -254,27 +290,6 @@ export const EventCalendar: Story = {
             </ul>
           </div>
         )}
-      </div>
-    );
-  },
-};
-
-export const CompactCalendar: Story = {
-  render: () => {
-    const [date, setDate] = useState<Date | undefined>(new Date());
-
-    return (
-      <div className="relative max-w-xs w-full">
-        <Calendar
-          mode="single"
-          selected={date}
-          onSelect={setDate}
-          className="rounded-md border text-sm w-full"
-          classNames={{
-            day: "h-8 w-8 p-0 text-xs",
-            head_cell: "text-xs font-medium",
-          }}
-        />
       </div>
     );
   },
