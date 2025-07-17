@@ -112,7 +112,6 @@ export {
 } from "@stackshift-ui/sheet";
 export { Skeleton } from "@stackshift-ui/skeleton";
 export { SocialIcons } from "@stackshift-ui/social-icons";
-export { StatsCard } from "@stackshift-ui/stats-card";
 export { SwiperButton } from "@stackshift-ui/swiper-button";
 export { SwiperPagination } from "@stackshift-ui/swiper-pagination";
 export { Switch } from "@stackshift-ui/switch";

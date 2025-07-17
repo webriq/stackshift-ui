@@ -43,7 +43,6 @@
   "dependencies": {
     "@stackshift-ui/scripts": "workspace:*",
     "@stackshift-ui/system": "workspace:*",
-    "@stackshift-ui/stats-card": "workspace:*",
     "@stackshift-ui/card": "workspace:*",
     "@stackshift-ui/button": "workspace:*",
     "@stackshift-ui/text": "workspace:*",
