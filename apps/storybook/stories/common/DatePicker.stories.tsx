@@ -38,7 +38,7 @@ type Story = StoryObj<typeof DatePicker>;
 export const Default: Story = {
   render: () => (
     <div className="relative w-[320px] h-full flex items-center justify-center">
-      <DatePicker className="w-full h-full flex flex-col gap-1" label="Select your birth date" />
+      <DatePicker label="Select your birth date" />
     </div>
   ),
 };
