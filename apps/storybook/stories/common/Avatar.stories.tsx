@@ -14,6 +14,7 @@ const meta: Meta<typeof Avatar> = {
     },
   },
   tags: ["autodocs"],
+  args: {},
   argTypes: {
     className: {
       control: { type: "text" },
@@ -26,7 +27,7 @@ export default meta;
 type Story = StoryObj<typeof Avatar>;
 
 export const Default: Story = {
-  render: () => (
+  render: args => (
     <Avatar>
       <AvatarImage src="/webriq-logo.png" alt="@shadcn" />
       <AvatarFallback>CN</AvatarFallback>
@@ -82,36 +83,6 @@ export const Sizes: Story = {
     docs: {
       description: {
         story: "Different avatar sizes using className to control dimensions.",
-      },
-    },
-  },
-};
-
-export const TeamMembers: Story = {
-  render: () => (
-    <div className="flex items-center gap-3">
-      <Avatar>
-        <AvatarImage src="/webriq-logo.png" alt="John Doe" />
-        <AvatarFallback>JD</AvatarFallback>
-      </Avatar>
-      <Avatar>
-        <AvatarImage src="/webriq-logo.png" alt="Jane Smith" />
-        <AvatarFallback>JS</AvatarFallback>
-      </Avatar>
-      <Avatar>
-        <AvatarImage src="/webriq-logo.png" alt="Alex Johnson" />
-        <AvatarFallback>AJ</AvatarFallback>
-      </Avatar>
-      <Avatar>
-        <AvatarImage src="" alt="Maria Garcia" />
-        <AvatarFallback>MG</AvatarFallback>
-      </Avatar>
-    </div>
-  ),
-  parameters: {
-    docs: {
-      description: {
-        story: "Multiple avatars representing team members with mix of images and fallbacks.",
       },
     },
   },
@@ -186,22 +157,6 @@ export const AvatarGroup: Story = {
       description: {
         story:
           "Overlapping avatars showing team members with a count indicator for additional members.",
-      },
-    },
-  },
-};
-
-export const BrokenImage: Story = {
-  render: () => (
-    <Avatar>
-      <AvatarImage src="https://broken-image-url.jpg" alt="Broken Image" />
-      <AvatarFallback>BI</AvatarFallback>
-    </Avatar>
-  ),
-  parameters: {
-    docs: {
-      description: {
-        story: "Avatar gracefully falling back to initials when the image fails to load.",
       },
     },
   },

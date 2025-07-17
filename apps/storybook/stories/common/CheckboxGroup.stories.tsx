@@ -20,19 +20,18 @@ const meta: Meta<typeof CheckboxGroup> = {
 export default meta;
 type Story = StoryObj<typeof CheckboxGroup>;
 
-export const Primary: Story = {
+export const Default: Story = {
   args: {
-    variant: "primary",
-    name: "Primary",
+    argTypes: {
+      className: { control: "text" },
+      label: { control: "text" },
+      noLabel: { control: "boolean" },
+      labelClass: { control: "text" },
+    },
+    variant: "default",
+    name: "Default",
     children: ["Option 1", "Option 2", "Option 3"].map((item, index) => (
-      <Checkbox
-        item={item}
-        key={index}
-        ariaLabel={item}
-        required={false}
-        name={"Primary"}
-        variant={"primary"}
-      />
+      <Checkbox item={item} key={index} ariaLabel={item} required={false} name={"Primary"} />
     )),
   },
 };
@@ -43,22 +42,6 @@ export const Inline: Story = {
     name: "Inline",
     children: ["Option 1", "Option 2", "Option 3"].map((item, index) => (
       <Checkbox item={item} key={index} ariaLabel={item} required={false} name={"Primary"} />
-    )),
-  },
-};
-
-export const WithCustomLabel: Story = {
-  args: {
-    name: "With Custom Label",
-    label: "Custom Label",
-    children: ["Option 1", "Option 2", "Option 3"].map((item, index) => (
-      <Checkbox
-        item={item}
-        key={index}
-        ariaLabel={item}
-        required={false}
-        name={"With Custom Label"}
-      />
     )),
   },
 };
