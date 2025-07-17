@@ -18,7 +18,6 @@ function Calendar({
   buttonVariant = "ghost",
   formatters,
   components,
-  mode = "compact",
   ...props
 }: React.ComponentProps<typeof DayPicker> & {
   buttonVariant?: React.ComponentProps<typeof Button>["variant"];
@@ -42,8 +41,6 @@ function Calendar({
         ...formatters,
       }}
       classNames={{
-        day: "h-8 w-8 p-0 text-xs flex items-center justify-center",
-        head_cell: "text-xs font-medium",
         root: cn("w-fit", defaultClassNames.root),
         months: cn("flex gap-4 flex-col md:flex-row relative", defaultClassNames.months),
         month: cn("flex flex-col w-full gap-4", defaultClassNames.month),

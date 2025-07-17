@@ -47,7 +47,8 @@ type Story = StoryObj<typeof Input>;
 
 export const Default: Story = {
   render: args => {
-    const { showLabel, size, validationState, validationMessage, ...inputArgs } = args as any;
+    const { showLabel, size, validationState, validationMessage, label, ...inputArgs } =
+      args as any;
 
     const sizeClasses = {
       sm: "h-8 text-xs px-2",
@@ -61,7 +62,7 @@ export const Default: Story = {
       <div className="flex flex-col gap-2 w-80">
         {showLabel && (
           <Label htmlFor="default-input" className="text-sm font-medium">
-            {args.label || "Input Label"}
+            {label || "Input Label"}
           </Label>
         )}
         <Input
