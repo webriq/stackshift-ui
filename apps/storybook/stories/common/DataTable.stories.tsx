@@ -5,7 +5,6 @@ import {
   ColumnDef,
   DataTable,
   DataTableColumnHeader,
-  DataTableViewOptions,
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -13,24 +12,27 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
   Input,
+  Skeleton,
 } from "@stackshift-ui/react";
 import type { Meta, StoryObj } from "@storybook/react";
 import {
-  ArrowUpDown,
+  AlertTriangle,
   Calendar,
+  CheckCircle,
   ChevronDown,
+  Clock,
   DollarSign,
   Edit,
+  FileText,
   Filter,
   Mail,
   MoreHorizontal,
   Package,
-  Phone,
   Star,
   Trash2,
   User,
 } from "lucide-react";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 const meta: Meta<typeof DataTable> = {
   title: "Common/DataTable",
@@ -60,7 +62,6 @@ const meta: Meta<typeof DataTable> = {
 export default meta;
 type Story = StoryObj<typeof DataTable>;
 
-// Sample data types
 type User = {
   id: string;
   name: string;
@@ -91,179 +92,6 @@ type Invoice = {
   dueDate: string;
 };
 
-// Sample data
-const users: User[] = [
-  {
-    id: "1",
-    name: "John Doe",
-    email: "john@example.com",
-    role: "Admin",
-    status: "Active",
-    lastLogin: "2024-01-15",
-    joinDate: "2023-01-15",
-  },
-  {
-    id: "2",
-    name: "Jane Smith",
-    email: "jane@example.com",
-    role: "User",
-    status: "Active",
-    lastLogin: "2024-01-14",
-    joinDate: "2023-03-20",
-  },
-  {
-    id: "3",
-    name: "Bob Johnson",
-    email: "bob@example.com",
-    role: "User",
-    status: "Inactive",
-    lastLogin: "2023-12-20",
-    joinDate: "2023-02-10",
-  },
-  {
-    id: "4",
-    name: "Alice Brown",
-    email: "alice@example.com",
-    role: "Moderator",
-    status: "Active",
-    lastLogin: "2024-01-13",
-    joinDate: "2023-04-05",
-  },
-  {
-    id: "5",
-    name: "Charlie Wilson",
-    email: "charlie@example.com",
-    role: "User",
-    status: "Pending",
-    lastLogin: "Never",
-    joinDate: "2024-01-10",
-  },
-  {
-    id: "6",
-    name: "Diana Prince",
-    email: "diana@example.com",
-    role: "Admin",
-    status: "Active",
-    lastLogin: "2024-01-15",
-    joinDate: "2023-01-01",
-  },
-  {
-    id: "7",
-    name: "Edward Clark",
-    email: "edward@example.com",
-    role: "User",
-    status: "Active",
-    lastLogin: "2024-01-12",
-    joinDate: "2023-06-15",
-  },
-  {
-    id: "8",
-    name: "Fiona Davis",
-    email: "fiona@example.com",
-    role: "Moderator",
-    status: "Inactive",
-    lastLogin: "2023-11-30",
-    joinDate: "2023-05-20",
-  },
-];
-
-const products: Product[] = [
-  {
-    id: "1",
-    name: "Wireless Headphones",
-    category: "Electronics",
-    price: 99.99,
-    stock: 45,
-    rating: 4.5,
-    status: "In Stock",
-  },
-  {
-    id: "2",
-    name: "Smartphone Case",
-    category: "Accessories",
-    price: 19.99,
-    stock: 0,
-    rating: 4.2,
-    status: "Out of Stock",
-  },
-  {
-    id: "3",
-    name: "Bluetooth Speaker",
-    category: "Electronics",
-    price: 79.99,
-    stock: 12,
-    rating: 4.7,
-    status: "In Stock",
-  },
-  {
-    id: "4",
-    name: "USB Cable",
-    category: "Accessories",
-    price: 12.99,
-    stock: 3,
-    rating: 4.0,
-    status: "Low Stock",
-  },
-  {
-    id: "5",
-    name: "Laptop Stand",
-    category: "Office",
-    price: 49.99,
-    stock: 25,
-    rating: 4.3,
-    status: "In Stock",
-  },
-  {
-    id: "6",
-    name: "Wireless Mouse",
-    category: "Electronics",
-    price: 29.99,
-    stock: 8,
-    rating: 4.1,
-    status: "Low Stock",
-  },
-];
-
-const invoices: Invoice[] = [
-  {
-    id: "INV001",
-    customer: "Acme Corp",
-    email: "billing@acme.com",
-    amount: 1250.0,
-    status: "Paid",
-    date: "2024-01-15",
-    dueDate: "2024-02-15",
-  },
-  {
-    id: "INV002",
-    customer: "Tech Solutions",
-    email: "accounts@techsol.com",
-    amount: 750.0,
-    status: "Pending",
-    date: "2024-01-10",
-    dueDate: "2024-02-10",
-  },
-  {
-    id: "INV003",
-    customer: "Global Industries",
-    email: "finance@global.com",
-    amount: 2100.0,
-    status: "Overdue",
-    date: "2023-12-20",
-    dueDate: "2024-01-20",
-  },
-  {
-    id: "INV004",
-    customer: "StartupXYZ",
-    email: "billing@startup.com",
-    amount: 450.0,
-    status: "Paid",
-    date: "2024-01-12",
-    dueDate: "2024-02-12",
-  },
-];
-
-// Column definitions
 const userColumns: ColumnDef<User>[] = [
   {
     id: "select",
@@ -453,11 +281,32 @@ const invoiceColumns: ColumnDef<Invoice>[] = [
   {
     accessorKey: "id",
     header: ({ column }) => <DataTableColumnHeader column={column} title="Invoice" />,
-    cell: ({ row }) => <span className="font-mono font-medium">{row.getValue("id")}</span>,
+    cell: ({ row }) => (
+      <div className="flex items-center gap-3">
+        <div className="h-8 w-8 rounded-full bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center text-white">
+          <FileText className="h-4 w-4" />
+        </div>
+        <div>
+          <div className="font-mono font-medium">{row.getValue("id")}</div>
+          <div className="text-sm text-muted-foreground">Invoice ID</div>
+        </div>
+      </div>
+    ),
   },
   {
     accessorKey: "customer",
     header: ({ column }) => <DataTableColumnHeader column={column} title="Customer" />,
+    cell: ({ row }) => (
+      <div className="flex items-center gap-3">
+        <div className="h-8 w-8 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white text-sm font-medium">
+          {row.getValue<string>("customer").charAt(0)}
+        </div>
+        <div>
+          <div className="font-medium">{row.getValue("customer")}</div>
+          <div className="text-sm text-muted-foreground">{row.original.email}</div>
+        </div>
+      </div>
+    ),
   },
   {
     accessorKey: "amount",
@@ -469,7 +318,19 @@ const invoiceColumns: ColumnDef<Invoice>[] = [
         currency: "USD",
       }).format(amount);
 
-      return <span className="font-medium">{formatted}</span>;
+      const isLarge = amount > 2000;
+
+      return (
+        <div className="flex items-center gap-2">
+          <DollarSign className="h-4 w-4 text-muted-foreground" />
+          <span className={`font-medium ${isLarge ? "text-green-600" : ""}`}>{formatted}</span>
+          {isLarge && (
+            <Badge variant="secondary" className="text-xs">
+              High Value
+            </Badge>
+          )}
+        </div>
+      );
     },
   },
   {
@@ -477,199 +338,258 @@ const invoiceColumns: ColumnDef<Invoice>[] = [
     header: ({ column }) => <DataTableColumnHeader column={column} title="Status" />,
     cell: ({ row }) => {
       const status = row.getValue("status") as string;
+      const statusConfig = {
+        Paid: { dot: "bg-green-500", text: "text-green-700", icon: CheckCircle },
+        Pending: { dot: "bg-yellow-500", text: "text-yellow-700", icon: Clock },
+        Overdue: { dot: "bg-red-500", text: "text-red-700", icon: AlertTriangle },
+      };
+      const config = statusConfig[status as keyof typeof statusConfig];
+      const IconComponent = config.icon;
+
       return (
-        <Badge
-          variant={
-            status === "Paid" ? "default" : status === "Pending" ? "secondary" : "destructive"
-          }>
-          {status}
-        </Badge>
+        <div className="flex items-center gap-2">
+          <div className={`h-2 w-2 rounded-full ${config.dot}`} />
+          <div className="flex items-center gap-1">
+            <IconComponent className={`h-3 w-3 ${config.text}`} />
+            <span className={`text-sm font-medium ${config.text}`}>{status}</span>
+          </div>
+        </div>
       );
     },
   },
   {
     accessorKey: "date",
-    header: ({ column }) => <DataTableColumnHeader column={column} title="Date" />,
+    header: ({ column }) => <DataTableColumnHeader column={column} title="Invoice Date" />,
+    cell: ({ row }) => {
+      const date = row.getValue("date") as string;
+      const isRecent = new Date(date) > new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
+
+      return (
+        <div className="flex items-center gap-2">
+          <Calendar className="h-4 w-4 text-muted-foreground" />
+          <span className={isRecent ? "text-blue-600 font-medium" : "text-muted-foreground"}>
+            {new Date(date).toLocaleDateString()}
+          </span>
+          {isRecent && (
+            <Badge variant="secondary" className="text-xs">
+              Recent
+            </Badge>
+          )}
+        </div>
+      );
+    },
   },
   {
     accessorKey: "dueDate",
     header: ({ column }) => <DataTableColumnHeader column={column} title="Due Date" />,
+    cell: ({ row }) => {
+      const dueDate = row.getValue("dueDate") as string;
+      const status = row.original.status;
+      const isOverdue = new Date(dueDate) < new Date() && status !== "Paid";
+      const isDueSoon =
+        new Date(dueDate) < new Date(Date.now() + 7 * 24 * 60 * 60 * 1000) && status !== "Paid";
+
+      return (
+        <div className="flex items-center gap-2">
+          <Calendar className="h-4 w-4 text-muted-foreground" />
+          <span
+            className={`text-sm ${isOverdue ? "text-red-600 font-medium" : isDueSoon ? "text-yellow-600 font-medium" : ""}`}>
+            {new Date(dueDate).toLocaleDateString()}
+          </span>
+          {isOverdue && (
+            <Badge variant="destructive" className="text-xs">
+              Overdue
+            </Badge>
+          )}
+          {isDueSoon && !isOverdue && (
+            <Badge variant="secondary" className="text-xs">
+              Due Soon
+            </Badge>
+          )}
+        </div>
+      );
+    },
   },
 ];
 
-export const Default: Story = {
-  render: () => <DataTable columns={userColumns} data={users} />,
-  parameters: {
-    docs: {
-      description: {
-        story: "Basic data table with user data, sorting, pagination, and row selection.",
-      },
-    },
-  },
+const generateLargeUserDataset = (size = 1000): User[] => {
+  return Array.from({ length: size }, (_, i) => ({
+    id: `${i + 1}`,
+    name: `User ${i + 1}`,
+    email: `user${i + 1}@example.com`,
+    role: (["Admin", "User", "Moderator"] as const)[i % 3],
+    status: (["Active", "Inactive", "Pending"] as const)[i % 3],
+    lastLogin: new Date(Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000)
+      .toISOString()
+      .split("T")[0],
+    joinDate: new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000)
+      .toISOString()
+      .split("T")[0],
+  }));
 };
 
-export const WithFiltering: Story = {
+const generateLargeProductDataset = (size = 1000): Product[] => {
+  const productNames = [
+    "Wireless Headphones",
+    "Smartphone Case",
+    "Bluetooth Speaker",
+    "USB Cable",
+    "Laptop Stand",
+    "Wireless Mouse",
+    "Keyboard",
+    "Monitor",
+    "Webcam",
+    "Tablet",
+    "Smartwatch",
+    "Power Bank",
+    "Gaming Chair",
+    "Desk Lamp",
+    "Phone Charger",
+    "External Hard Drive",
+    "Router",
+    "Printer",
+    "Scanner",
+    "Microphone",
+    "Graphics Card",
+    "RAM Module",
+    "SSD Drive",
+    "CPU Cooler",
+    "Motherboard",
+    "Power Supply",
+    "Gaming Headset",
+    "Mechanical Keyboard",
+    "Gaming Mouse",
+    "Monitor Stand",
+    "Cable Management",
+    "Surge Protector",
+    "UPS Battery",
+    "Network Switch",
+  ];
+
+  const categories = ["Electronics", "Accessories", "Office", "Gaming", "Storage", "Networking"];
+
+  return Array.from({ length: size }, (_, i) => ({
+    id: `${i + 1}`,
+    name: `${productNames[i % productNames.length]} ${Math.floor(i / productNames.length) + 1}`,
+    category: categories[i % categories.length],
+    price: Math.round((Math.random() * 500 + 10) * 100) / 100,
+    stock: Math.floor(Math.random() * 100),
+    rating: Math.round((Math.random() * 2 + 3) * 10) / 10, // 3.0 to 5.0
+    status: (["In Stock", "Out of Stock", "Low Stock"] as const)[i % 3],
+  }));
+};
+
+const generateLargeInvoiceDataset = (size = 1000): Invoice[] => {
+  const companies = [
+    "Acme Corp",
+    "Tech Solutions",
+    "Global Industries",
+    "StartupXYZ",
+    "Innovation Labs",
+    "Digital Dynamics",
+    "Future Systems",
+    "Smart Solutions",
+    "Alpha Technologies",
+    "Beta Corp",
+    "Gamma Industries",
+    "Delta Systems",
+    "Epsilon Tech",
+    "Zeta Solutions",
+    "Eta Innovations",
+    "Theta Corp",
+    "Iota Systems",
+    "Kappa Tech",
+    "Lambda Solutions",
+    "Mu Industries",
+  ];
+
+  return Array.from({ length: size }, (_, i) => ({
+    id: `INV${String(i + 1).padStart(4, "0")}`,
+    customer: `${companies[i % companies.length]} ${Math.floor(i / companies.length) + 1}`,
+    email: `billing${i + 1}@${companies[i % companies.length].toLowerCase().replace(/\s+/g, "")}.com`,
+    amount: Math.round((Math.random() * 5000 + 100) * 100) / 100,
+    status: (["Paid", "Pending", "Overdue"] as const)[i % 3],
+    date: new Date(Date.now() - Math.random() * 90 * 24 * 60 * 60 * 1000)
+      .toISOString()
+      .split("T")[0],
+    dueDate: new Date(Date.now() + Math.random() * 60 * 24 * 60 * 60 * 1000)
+      .toISOString()
+      .split("T")[0],
+  }));
+};
+
+const DataTableSkeleton = () => (
+  <div className="space-y-4">
+    <div className="rounded-md border">
+      <div className="p-4">
+        <div className="space-y-3">
+          {/* Header skeleton */}
+          <div className="flex space-x-4">
+            <Skeleton className="h-4 w-4" />
+            <Skeleton className="h-4 w-24" />
+            <Skeleton className="h-4 w-32" />
+            <Skeleton className="h-4 w-20" />
+            <Skeleton className="h-4 w-20" />
+            <Skeleton className="h-4 w-28" />
+            <Skeleton className="h-4 w-16" />
+          </div>
+          {/* Row skeletons */}
+          {Array.from({ length: 8 }).map((_, i) => (
+            <div key={i} className="flex space-x-4">
+              <Skeleton className="h-4 w-4" />
+              <Skeleton className="h-4 w-24" />
+              <Skeleton className="h-4 w-32" />
+              <Skeleton className="h-4 w-20" />
+              <Skeleton className="h-4 w-20" />
+              <Skeleton className="h-4 w-28" />
+              <Skeleton className="h-4 w-16" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+    {/* Pagination skeleton */}
+    <div className="flex items-center justify-between">
+      <Skeleton className="h-4 w-32" />
+      <div className="flex space-x-2">
+        <Skeleton className="h-8 w-8" />
+        <Skeleton className="h-8 w-8" />
+        <Skeleton className="h-8 w-8" />
+        <Skeleton className="h-8 w-8" />
+      </div>
+    </div>
+  </div>
+);
+
+export const Default: Story = {
   render: () => {
-    const [globalFilter, setGlobalFilter] = useState("");
-    const [statusFilter, setStatusFilter] = useState("all");
+    const [isLoading, setIsLoading] = useState(true);
+    const [data, setData] = useState<User[]>([]);
 
-    const filteredData = useMemo(() => {
-      let filtered = users;
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        setData(generateLargeUserDataset(1000));
+        setIsLoading(false);
+      }, 2000);
 
-      if (globalFilter) {
-        filtered = filtered.filter(
-          user =>
-            user.name.toLowerCase().includes(globalFilter.toLowerCase()) ||
-            user.email.toLowerCase().includes(globalFilter.toLowerCase()),
-        );
-      }
-
-      if (statusFilter !== "all") {
-        filtered = filtered.filter(user => user.status === statusFilter);
-      }
-
-      return filtered;
-    }, [globalFilter, statusFilter]);
+      return () => clearTimeout(timer);
+    }, []);
 
     return (
       <div className="space-y-4">
-        <div className="flex items-center gap-4">
-          <Input
-            placeholder="Search users..."
-            value={globalFilter}
-            onChange={e => setGlobalFilter(e.target.value)}
-            className="max-w-sm"
-          />
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="sm">
-                <Filter className="mr-2 h-4 w-4" />
-                Status: {statusFilter === "all" ? "All" : statusFilter}
-                <ChevronDown className="ml-2 h-4 w-4" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="start">
-              <DropdownMenuItem onClick={() => setStatusFilter("all")}>
-                All Statuses
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setStatusFilter("Active")}>Active</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setStatusFilter("Inactive")}>
-                Inactive
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setStatusFilter("Pending")}>
-                Pending
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="text-lg font-medium">Default - Users</h3>
+          <Badge variant="outline">{data.length} rows</Badge>
         </div>
-        <DataTable columns={userColumns} data={filteredData} />
+        {isLoading ? <DataTableSkeleton /> : <DataTable columns={userColumns} data={data} />}
       </div>
     );
   },
   parameters: {
     docs: {
       description: {
-        story: "Data table with global search and status filtering capabilities.",
-      },
-    },
-  },
-};
-
-export const ProductCatalog: Story = {
-  render: () => <DataTable columns={productColumns} data={products} />,
-  parameters: {
-    docs: {
-      description: {
-        story: "Product catalog table with pricing, stock levels, and ratings.",
-      },
-    },
-  },
-};
-
-export const InvoiceManagement: Story = {
-  render: () => <DataTable columns={invoiceColumns} data={invoices} />,
-  parameters: {
-    docs: {
-      description: {
-        story: "Invoice management table with payment status and due dates.",
-      },
-    },
-  },
-};
-
-export const EmptyState: Story = {
-  render: () => <DataTable columns={userColumns} data={[]} />,
-  parameters: {
-    docs: {
-      description: {
-        story: "Data table empty state when no data is available.",
-      },
-    },
-  },
-};
-
-export const LoadingState: Story = {
-  render: () => {
-    const [isLoading, setIsLoading] = useState(true);
-    const [data, setData] = useState<User[]>([]);
-
-    // Simulate loading
-    setTimeout(() => {
-      setIsLoading(false);
-      setData(users.slice(0, 3));
-    }, 2000);
-
-    if (isLoading) {
-      return (
-        <div className="space-y-4">
-          <div className="flex items-center gap-4">
-            <div className="h-10 w-[300px] bg-muted animate-pulse rounded" />
-            <div className="h-10 w-[120px] bg-muted animate-pulse rounded" />
-          </div>
-          <div className="border rounded-md">
-            <div className="h-12 bg-muted animate-pulse" />
-            {[...Array(5)].map((_, i) => (
-              <div key={i} className="h-16 border-t bg-muted/50 animate-pulse" />
-            ))}
-          </div>
-        </div>
-      );
-    }
-
-    return <DataTable columns={userColumns} data={data} />;
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: "Data table with loading state simulation using skeleton placeholders.",
-      },
-    },
-  },
-};
-
-export const LargeDataset: Story = {
-  render: () => {
-    // Generate a larger dataset
-    const largeUserData = Array.from({ length: 100 }, (_, i) => ({
-      id: `${i + 1}`,
-      name: `User ${i + 1}`,
-      email: `user${i + 1}@example.com`,
-      role: (["Admin", "User", "Moderator"] as const)[i % 3],
-      status: (["Active", "Inactive", "Pending"] as const)[i % 3],
-      lastLogin: new Date(Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000)
-        .toISOString()
-        .split("T")[0],
-      joinDate: new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000)
-        .toISOString()
-        .split("T")[0],
-    }));
-
-    return <DataTable columns={userColumns} data={largeUserData} />;
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: "Data table with a large dataset (100 rows) demonstrating pagination performance.",
+        story:
+          "Basic data table with user data, sorting, pagination, and row selection. Shows loading state on initial render and uses large dataset for performance testing.",
       },
     },
   },
@@ -678,36 +598,55 @@ export const LargeDataset: Story = {
 export const AdvancedFiltering: Story = {
   render: () => {
     const [globalFilter, setGlobalFilter] = useState("");
-    const [roleFilter, setRoleFilter] = useState("all");
+    const [categoryFilter, setCategoryFilter] = useState("all");
     const [statusFilter, setStatusFilter] = useState("all");
+    const [isLoading, setIsLoading] = useState(true);
+    const [baseData, setBaseData] = useState<Product[]>([]);
+
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        setBaseData(generateLargeProductDataset(1000));
+        setIsLoading(false);
+      }, 2000);
+
+      return () => clearTimeout(timer);
+    }, []);
 
     const filteredData = useMemo(() => {
-      let filtered = users;
+      let filtered = baseData;
 
       if (globalFilter) {
         filtered = filtered.filter(
-          user =>
-            user.name.toLowerCase().includes(globalFilter.toLowerCase()) ||
-            user.email.toLowerCase().includes(globalFilter.toLowerCase()),
+          (product: Product) =>
+            product.name.toLowerCase().includes(globalFilter.toLowerCase()) ||
+            product.category.toLowerCase().includes(globalFilter.toLowerCase()),
         );
       }
 
-      if (roleFilter !== "all") {
-        filtered = filtered.filter(user => user.role === roleFilter);
+      if (categoryFilter !== "all") {
+        filtered = filtered.filter((product: Product) => product.category === categoryFilter);
       }
 
       if (statusFilter !== "all") {
-        filtered = filtered.filter(user => user.status === statusFilter);
+        filtered = filtered.filter((product: Product) => product.status === statusFilter);
       }
 
       return filtered;
-    }, [globalFilter, roleFilter, statusFilter]);
+    }, [baseData, globalFilter, categoryFilter, statusFilter]);
+
+    if (isLoading) {
+      return <DataTableSkeleton />;
+    }
 
     return (
       <div className="space-y-4">
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="text-lg font-medium">Advanced Filtering - Products</h3>
+          <Badge variant="outline">{baseData.length} rows</Badge>
+        </div>
         <div className="flex items-center gap-4 flex-wrap">
           <Input
-            placeholder="Search users..."
+            placeholder="Search products..."
             value={globalFilter}
             onChange={e => setGlobalFilter(e.target.value)}
             className="max-w-sm"
@@ -716,18 +655,31 @@ export const AdvancedFiltering: Story = {
             <DropdownMenuTrigger asChild>
               <Button variant="outline" size="sm">
                 <Filter className="mr-2 h-4 w-4" />
-                Role: {roleFilter === "all" ? "All" : roleFilter}
+                Category: {categoryFilter === "all" ? "All" : categoryFilter}
                 <ChevronDown className="ml-2 h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start">
-              <DropdownMenuItem onClick={() => setRoleFilter("all")}>
-                All Roles
+              <DropdownMenuItem onClick={() => setCategoryFilter("all")}>
+                All Categories
               </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setRoleFilter("Admin")}>Admin</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setRoleFilter("User")}>User</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setRoleFilter("Moderator")}>
-                Moderator
+              <DropdownMenuItem onClick={() => setCategoryFilter("Electronics")}>
+                Electronics
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setCategoryFilter("Accessories")}>
+                Accessories
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setCategoryFilter("Office")}>
+                Office
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setCategoryFilter("Gaming")}>
+                Gaming
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setCategoryFilter("Storage")}>
+                Storage
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setCategoryFilter("Networking")}>
+                Networking
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -743,25 +695,27 @@ export const AdvancedFiltering: Story = {
               <DropdownMenuItem onClick={() => setStatusFilter("all")}>
                 All Statuses
               </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setStatusFilter("Active")}>Active</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setStatusFilter("Inactive")}>
-                Inactive
+              <DropdownMenuItem onClick={() => setStatusFilter("In Stock")}>
+                In Stock
               </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setStatusFilter("Pending")}>
-                Pending
+              <DropdownMenuItem onClick={() => setStatusFilter("Out of Stock")}>
+                Out of Stock
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setStatusFilter("Low Stock")}>
+                Low Stock
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          <DataTableViewOptions table={undefined} />
         </div>
-        <DataTable columns={userColumns} data={filteredData} />
+        <DataTable columns={productColumns} data={filteredData} />
       </div>
     );
   },
   parameters: {
     docs: {
       description: {
-        story: "Advanced data table with multiple filters, search, and column visibility controls.",
+        story:
+          "Advanced data table with product data, multiple filters, search, and column visibility controls. Shows loading state on initial render and uses large dataset for performance testing.",
       },
     },
   },
@@ -769,126 +723,37 @@ export const AdvancedFiltering: Story = {
 
 export const CustomCellRenderers: Story = {
   render: () => {
-    const customColumns: ColumnDef<User>[] = [
-      {
-        accessorKey: "name",
-        header: ({ column }) => <DataTableColumnHeader column={column} title="User" />,
-        cell: ({ row }) => (
-          <div className="flex items-center gap-3">
-            <div className="h-8 w-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center text-white text-sm font-medium">
-              {row.getValue<string>("name").charAt(0)}
-            </div>
-            <div>
-              <div className="font-medium">{row.getValue("name")}</div>
-              <div className="text-sm text-muted-foreground">{row.original.email}</div>
-            </div>
-          </div>
-        ),
-      },
-      {
-        accessorKey: "role",
-        header: ({ column }) => <DataTableColumnHeader column={column} title="Role" />,
-        cell: ({ row }) => {
-          const role = row.getValue("role") as string;
-          const roleConfig = {
-            Admin: { icon: "👑", color: "bg-red-100 text-red-800" },
-            Moderator: { icon: "🛡️", color: "bg-blue-100 text-blue-800" },
-            User: { icon: "👤", color: "bg-gray-100 text-gray-800" },
-          };
-          const config = roleConfig[role as keyof typeof roleConfig];
-          
-          return (
-            <div className={`inline-flex items-center gap-2 px-2 py-1 rounded-full text-xs font-medium ${config.color}`}>
-              <span>{config.icon}</span>
-              {role}
-            </div>
-          );
-        },
-      },
-      {
-        accessorKey: "status",
-        header: ({ column }) => <DataTableColumnHeader column={column} title="Status" />,
-        cell: ({ row }) => {
-          const status = row.getValue("status") as string;
-          const statusConfig = {
-            Active: { dot: "bg-green-500", text: "text-green-700" },
-            Inactive: { dot: "bg-red-500", text: "text-red-700" },
-            Pending: { dot: "bg-yellow-500", text: "text-yellow-700" },
-          };
-          const config = statusConfig[status as keyof typeof statusConfig];
-          
-          return (
-            <div className="flex items-center gap-2">
-              <div className={`h-2 w-2 rounded-full ${config.dot}`} />
-              <span className={`text-sm ${config.text}`}>{status}</span>
-            </div>
-          );
-        },
-      },
-      {
-        accessorKey: "lastLogin",
-        header: ({ column }) => <DataTableColumnHeader column={column} title="Last Active" />,
-        cell: ({ row }) => {
-          const lastLogin = row.getValue("lastLogin") as string;
-          const isRecent = lastLogin !== "Never" && new Date(lastLogin) > new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
-          
-          return (
-            <div className="flex items-center gap-2">
-              <Calendar className="h-4 w-4 text-muted-foreground" />
-              <span className={isRecent ? "text-green-600 font-medium" : "text-muted-foreground"}>
-                {lastLogin === "Never" ? "Never" : new Date(lastLogin).toLocaleDateString()}
-              </span>
-              {isRecent && <Badge variant="secondary" className="text-xs">Recent</Badge>}
-            </div>
-          );
-        },
-      },
-    ];
+    const [isLoading, setIsLoading] = useState(true);
+    const [data, setData] = useState<Invoice[]>([]);
 
-    return <DataTable columns={customColumns} data={users} />;
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: "Data table with custom cell renderers including avatars, status indicators, and conditional formatting.",
-      },
-    },
-  },
-};
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        setData(generateLargeInvoiceDataset(1000));
+        setIsLoading(false);
+      }, 2000);
 
-export const PerformanceDemo: Story = {
-  render: () => {
-    // Generate a very large dataset for performance testing
-    const largeDataset = useMemo(() => {
-      return Array.from({ length: 1000 }, (_, i) => ({
-        id: `${i + 1}`,
-        name: `User ${i + 1}`,
-        email: `user${i + 1}@example.com`,
-        role: (["Admin", "User", "Moderator"] as const)[i % 3],
-        status: (["Active", "Inactive", "Pending"] as const)[i % 3],
-        lastLogin: new Date(Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000)
-          .toISOString()
-          .split("T")[0],
-        joinDate: new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000)
-          .toISOString()
-          .split("T")[0],
-      }));
+      return () => clearTimeout(timer);
     }, []);
+
+    if (isLoading) {
+      return <DataTableSkeleton />;
+    }
 
     return (
       <div className="space-y-4">
-        <div className="flex items-center justify-between">
-          <h3 className="text-lg font-medium">Performance Demo</h3>
-          <Badge variant="outline">{largeDataset.length} rows</Badge>
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="text-lg font-medium">Custom Cell Renderers - Invoices</h3>
+          <Badge variant="outline">{data.length} rows</Badge>
         </div>
-        <DataTable columns={userColumns} data={largeDataset} />
+        <DataTable columns={invoiceColumns} data={data} />
       </div>
     );
   },
   parameters: {
     docs: {
       description: {
-        story: "Performance demonstration with 1000 rows to test pagination, sorting, and filtering performance.",
+        story:
+          "Data table with custom cell renderers for invoice data including customer avatars, status indicators with icons, amount highlighting, and date-based conditional formatting. Shows loading state on initial render and uses large dataset for performance testing.",
       },
     },
   },
