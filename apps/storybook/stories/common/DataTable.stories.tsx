@@ -563,25 +563,103 @@ const DataTableSkeleton = () => (
 
 export const Default: Story = {
   render: () => {
+    const [globalFilter, setGlobalFilter] = useState("");
+    const [statusFilter, setStatusFilter] = useState("all");
+    const [datasetSize, setDatasetSize] = useState(1000);
     const [isLoading, setIsLoading] = useState(true);
-    const [data, setData] = useState<User[]>([]);
+    const [baseData, setBaseData] = useState<User[]>([]);
 
     useEffect(() => {
       const timer = setTimeout(() => {
-        setData(generateLargeUserDataset(1000));
+        setBaseData(generateLargeUserDataset(datasetSize));
         setIsLoading(false);
       }, 2000);
 
       return () => clearTimeout(timer);
-    }, []);
+    }, [datasetSize]);
+
+    // Apply filters to the base data
+    const filteredData = useMemo(() => {
+      let filtered = baseData;
+
+      if (globalFilter) {
+        filtered = filtered.filter(
+          (user: User) =>
+            user.name.toLowerCase().includes(globalFilter.toLowerCase()) ||
+            user.email.toLowerCase().includes(globalFilter.toLowerCase()),
+        );
+      }
+
+      if (statusFilter !== "all") {
+        filtered = filtered.filter((user: User) => user.status === statusFilter);
+      }
+
+      return filtered;
+    }, [baseData, globalFilter, statusFilter]);
+
+    if (isLoading) {
+      return <DataTableSkeleton />;
+    }
 
     return (
       <div className="space-y-4">
         <div className="flex items-center justify-between mb-4">
-          <h3 className="text-lg font-medium">Default - Users</h3>
-          <Badge variant="outline">{data.length} rows</Badge>
+          <div className="flex items-center gap-4">
+            <h3 className="text-lg font-medium">Default - Users with Filtering & Performance</h3>
+            <div className="flex items-center space-x-4">
+              <label htmlFor="dataset-size-default" className="text-sm font-medium">
+                Dataset Size:
+              </label>
+              <select
+                id="dataset-size-default"
+                value={datasetSize}
+                onChange={e => setDatasetSize(Number(e.target.value))}
+                className="text-sm border rounded px-2 py-1">
+                <option value={500}>500 rows</option>
+                <option value={1000}>1,000 rows</option>
+                <option value={2500}>2,500 rows</option>
+                <option value={5000}>5,000 rows</option>
+                <option value={10000}>10,000 rows</option>
+              </select>
+            </div>
+          </div>
+          <Badge variant="outline">{baseData.length} rows</Badge>
         </div>
-        {isLoading ? <DataTableSkeleton /> : <DataTable columns={userColumns} data={data} />}
+        <div className="flex items-center gap-4 flex-wrap">
+          <Input
+            placeholder="Search users..."
+            value={globalFilter}
+            onChange={e => setGlobalFilter(e.target.value)}
+            className="max-w-sm"
+          />
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline" size="sm">
+                <Filter className="mr-2 h-4 w-4" />
+                Status: {statusFilter === "all" ? "All" : statusFilter}
+                <ChevronDown className="ml-2 h-4 w-4" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start">
+              <DropdownMenuItem onClick={() => setStatusFilter("all")}>
+                All Statuses
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setStatusFilter("Active")}>Active</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setStatusFilter("Inactive")}>
+                Inactive
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setStatusFilter("Pending")}>
+                Pending
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+          {filteredData.length !== baseData.length && (
+            <Badge variant="secondary" className="text-xs">
+              {filteredData.length} of {baseData.length} shown
+            </Badge>
+          )}
+        </div>
+        <DataTable columns={userColumns} data={filteredData} />
       </div>
     );
   },
@@ -589,7 +667,7 @@ export const Default: Story = {
     docs: {
       description: {
         story:
-          "Basic data table with user data, sorting, pagination, and row selection. Shows loading state on initial render and uses large dataset for performance testing.",
+          "Comprehensive data table combining performance testing and filtering capabilities. Features configurable dataset size (500-10,000 rows), global search, status filtering, and shows loading state on initial render. Perfect demonstration of DataTable handling large datasets with real-time filtering.",
       },
     },
   },
