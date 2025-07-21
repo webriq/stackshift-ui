@@ -82,7 +82,7 @@ function FormFields({ fields }: { fields?: iForm["fields"] }) {
   if (!fields) return null;
 
   return (
-    <div className="flex flex-col sm:items-center sm:flex-row lg:justify-center gap-3">
+    <Flex gap={3} className="flex-col sm:items-center sm:flex-row lg:justify-center">
       {fields.map(field => (
         <Input
           key={field?._key}
@@ -93,7 +93,7 @@ function FormFields({ fields }: { fields?: iForm["fields"] }) {
           required={field?.isRequired}
         />
       ))}
-    </div>
+    </Flex>
   );
 }
 

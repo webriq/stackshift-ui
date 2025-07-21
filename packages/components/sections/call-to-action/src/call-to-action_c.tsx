@@ -40,7 +40,6 @@ function FormSection({ form, features }: { form?: iForm; features?: string[] }) 
   return (
     <div className="w-full px-4 lg:w-1/2">
       {form?.fields ? <ActionForm form={form} /> : null}
-
       {features?.length ? <FeaturesList features={features} /> : null}
     </div>
   );
@@ -60,7 +59,7 @@ function ActionForm({ form }: { form?: iForm }) {
         align="center"
         justify="center"
         direction="col"
-        className="lg:items-start lg:justify-start sm:flex-row">
+        className="lg:items-start lg:justify-end sm:flex-row w-full">
         {form?.fields?.[0] ? <CTAInput field={form.fields[0]} /> : null}
         <CTAButton form={form} />
         <div>
@@ -77,7 +76,7 @@ function CTAInput({ field }: { field?: any }) {
   return (
     <Input
       aria-label={field?.placeholder ?? field?.name}
-      className="w-full sm:max-w-md"
+      className="w-full sm:max-w-60"
       type={inputType}
       placeholder={field?.placeholder}
       name={field?.name}
@@ -108,10 +107,10 @@ function FeaturesList({ features }: { features: string[] }) {
       gap={4}
       wrap>
       {features.map((feature, index) => (
-        <li className="flex items-center" key={index}>
+        <Flex as="li" align="center" key={index}>
           <CheckIcon />
           <Text muted>{feature}</Text>
-        </li>
+        </Flex>
       ))}
     </Flex>
   );

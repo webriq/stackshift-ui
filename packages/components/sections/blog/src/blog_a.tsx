@@ -94,14 +94,14 @@ function BlogItem({ post, key }: { post?: BlogPost; key: number }) {
         ) : null}
 
         <Flex align="center" className="mt-auto">
-          <span className="mt-auto text-sm text-gray-500">
+          <span className="mt-auto text-sm text-gray-300">
             {post?.publishedAt ? format(new Date(post?.publishedAt), "dd MMM, yyyy") : ""}
           </span>
 
           {post?.authors && (
             <>
-              <span className="mx-2 w-1 h-1 bg-gray-500 rounded-full" />
-              <Flex className="mt-auto text-sm text-gray-500">
+              <span className="mx-2 w-1 h-1 bg-gray-300 rounded-full" />
+              <Flex className="mt-auto text-sm text-gray-300">
                 {post?.authors?.map((author, index, { length }) => (
                   <>
                     <Text className="italic" fontSize="sm">
@@ -117,8 +117,8 @@ function BlogItem({ post, key }: { post?: BlogPost; key: number }) {
 
         {post?.title ? (
           <CardTitle className="text-lg font-bold text-white transform hover:scale-110 hover:text-secondary motion-reduce:transform-none">
-            <Link href={`/${post?.link}`}>
-              {post?.title?.length > 40 ? post?.title.substring(0, 40) + "..." : post?.title}
+            <Link href={`/${post?.link}`} className="line-clamp-2">
+              {post?.title}
             </Link>
           </CardTitle>
         ) : null}

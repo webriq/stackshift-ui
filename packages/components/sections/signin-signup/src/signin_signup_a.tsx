@@ -131,12 +131,12 @@ function FormFields({
     <>
       <Flex wrap className="-mx-2">
         {form?.fields?.slice(0, 2).map((formFields, index) => (
-          <div className="w-full px-2 mb-3 lg:w-1/2" key={index}>
+          <div className="w-full px-2 lg:w-1/2" key={index}>
             {formFields.type === "inputText" ? (
               <Input
                 placeholder={formFields?.placeholder}
                 required={formFields?.isRequired}
-                className="w-full py-4 text-xs bg-white"
+                className="w-full py-4 text-xs"
                 name={formFields?.name}
                 aria-label={formFields?.label}
                 {...formFields}

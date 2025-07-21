@@ -1,5 +1,10 @@
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@stackshift-ui/accordion";
 import { Button } from "@stackshift-ui/button";
-import { Card, CardContent } from "@stackshift-ui/card";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
@@ -11,8 +16,6 @@ import { FAQProps } from ".";
 import { AskedQuestion } from "./types";
 
 export default function Faqs_A({ subtitle, title, faqs }: FAQProps) {
-  const [show, setShow] = useState(false);
-  const [activeTab, setActiveTab] = useState<number | null>(null);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [faqsPerPage] = useState(6);
   const [searchTerm, setSearchTerm] = useState<string | null>(null);
@@ -21,16 +24,6 @@ export default function Faqs_A({ subtitle, title, faqs }: FAQProps) {
     ...items,
     hidden: true,
   }));
-
-  // toggle view or hide answers on click for each FAQ items
-  const toggleView = (position: number) => {
-    if (activeTab === position) {
-      setShow(!show);
-    } else {
-      setActiveTab(position);
-      setShow(true);
-    }
-  };
 
   // get current FAQs
   const indexOfLastQuestion = currentPage * faqsPerPage;
@@ -57,13 +50,7 @@ export default function Faqs_A({ subtitle, title, faqs }: FAQProps) {
           />
         ) : null}
         <Container maxWidth={768}>
-          <FAQsList
-            searchedFAQs={searchedFAQs}
-            toggleView={toggleView}
-            indexOfFirstQuestion={indexOfFirstQuestion}
-            show={show}
-            activeTab={activeTab}
-          />
+          <FAQsList searchedFAQs={searchedFAQs} />
         </Container>
       </Container>
     </Section>
@@ -111,88 +98,37 @@ function SearchBar({
   );
 }
 
-function FAQsList({
-  searchedFAQs,
-  toggleView,
-  indexOfFirstQuestion,
-  show,
-  activeTab,
-}: {
-  searchedFAQs: AskedQuestion[];
-  toggleView: (position: number) => void;
-  indexOfFirstQuestion: number;
-  show: boolean;
-  activeTab: number | null;
-}) {
+function FAQsList({ searchedFAQs }: { searchedFAQs: AskedQuestion[] }) {
   if (!searchedFAQs) return null;
 
   return (
-    <ul className="space-y-4 lg:space-y-6">
-      <FAQs
-        items={searchedFAQs}
-        toggleView={toggleView}
-        indexOfFirstQuestion={indexOfFirstQuestion}
-        show={show}
-        activeTab={activeTab}
-      />
-    </ul>
+    <Accordion type="single" collapsible className="w-full" defaultValue="item-1">
+      <FAQs items={searchedFAQs} />
+    </Accordion>
   );
 }
 
-function FAQs({
-  items,
-  toggleView,
-  indexOfFirstQuestion,
-  show,
-  activeTab,
-}: {
-  items: AskedQuestion[];
-  toggleView: (position: number) => void;
-  indexOfFirstQuestion: number;
-  show: boolean;
-  activeTab: number | null;
-}) {
+function FAQs({ items }: { items: AskedQuestion[] }) {
   if (!items) return null;
 
   return items?.map((faq, index) => (
-    <li key={index}>
-      <Card className="p-6 bg-gray-50">
-        <Button
-          variant="unstyled"
-          aria-label={faq?.question || `faqs-question-${index}`}
-          className="flex items-center justify-between w-full font-bold text-left border-none font-heading hover:text-gray-600 focus:outline-none px-0"
-          onClick={() => toggleView(index + indexOfFirstQuestion)}>
-          <Text fontSize="xl" weight="semibold" className="whitespace-normal">
-            {faq?.question}
-          </Text>
-          <svg
-            className="w-4 h-4 text-primary"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d={
-                show && activeTab === index + indexOfFirstQuestion
-                  ? "M5 10l7-7m0 0l7 7m-7-7v18"
-                  : "M19 14l-7 7m0 0l-7-7m7 7V3"
-              }
-            />
-          </svg>
-        </Button>
-
-        {show && activeTab === index + indexOfFirstQuestion && (
-          <CardContent className="p-0">
-            <Text muted className="mt-4 leading-loose0">
-              {faq?.answer}
-            </Text>
-          </CardContent>
-        )}
-      </Card>
-    </li>
+    <AccordionItem
+      key={index}
+      value={`item-${index + 1}`}
+      className="mb-3 border-b-0 p-6 bg-gray-50 border rounded">
+      <AccordionTrigger
+        aria-label={faq?.question || `faqs-question-${index}`}
+        className="flex items-center justify-between w-full font-bold text-left border-none font-heading hover:text-gray-600 focus:outline-none px-0 py-0 hover:no-underline">
+        <Text fontSize="xl" weight="semibold" className="whitespace-normal">
+          {faq?.question}
+        </Text>
+      </AccordionTrigger>
+      <AccordionContent className="p-0">
+        <Text muted className="mt-4 leading-loose0">
+          {faq?.answer}
+        </Text>
+      </AccordionContent>
+    </AccordionItem>
   ));
 }
 

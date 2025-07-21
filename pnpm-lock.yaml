@@ -4239,6 +4239,9 @@ importers:
       '@stackshift-ui/card':
         specifier: workspace:*
         version: link:../../common/card
+      '@stackshift-ui/checkbox':
+        specifier: workspace:*
+        version: link:../../common/checkbox
       '@stackshift-ui/container':
         specifier: workspace:*
         version: link:../../layout/container
@@ -4409,6 +4412,9 @@ importers:
 
   packages/components/sections/faqs:
     dependencies:
+      '@stackshift-ui/accordion':
+        specifier: workspace:*
+        version: link:../../common/accordion
       '@stackshift-ui/button':
         specifier: workspace:*
         version: link:../../common/button

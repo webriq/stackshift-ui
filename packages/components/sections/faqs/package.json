@@ -44,6 +44,7 @@
     "@stackshift-ui/scripts": "workspace:*",
     "@stackshift-ui/system": "workspace:*",
     "@stackshift-ui/button": "workspace:*",
+    "@stackshift-ui/accordion": "workspace:*",
     "@stackshift-ui/heading": "workspace:*",
     "@stackshift-ui/text": "workspace:*",
     "@stackshift-ui/input": "workspace:*",

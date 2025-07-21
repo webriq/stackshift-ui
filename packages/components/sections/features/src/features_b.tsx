@@ -60,7 +60,7 @@ function TagList({ tags }: { tags?: string[] }) {
     <ul>
       {tags &&
         tags.map(item => (
-          <li className="flex mb-4" key={item}>
+          <Flex as="li" className="mb-4" key={item}>
             <svg
               className="w-6 h-6 mr-2 text-secondary"
               xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +75,7 @@ function TagList({ tags }: { tags?: string[] }) {
             <Text muted weight="bold">
               {item}
             </Text>
-          </li>
+          </Flex>
         ))}
     </ul>
   );
@@ -103,10 +103,10 @@ function FeaturesLists({ features }: { features?: ArrayOfImageTitleAndText[] }) 
                   />
                 </span>
               )}
-              <Text weight="bold" className="text-xl md:text-2xl mb-2 text-gray-500 break-all">
+              <Text weight="bold" className="text-xl md:text-2xl mb-2 text-gray-500 break-normal">
                 {feature?.title}
               </Text>
-              <Text muted className="leading-loose break-all">
+              <Text muted className="leading-loose break-normal">
                 {feature?.plainText}
               </Text>
             </Card>

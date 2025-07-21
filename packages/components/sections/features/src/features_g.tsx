@@ -4,7 +4,6 @@ import { Heading } from "@stackshift-ui/heading";
 import { Image } from "@stackshift-ui/image";
 import { Section } from "@stackshift-ui/section";
 import { Text } from "@stackshift-ui/text";
-import React from "react";
 import { FeaturesProps } from ".";
 
 export default function Features_G({ caption, title, description, images, tags }: FeaturesProps) {
@@ -35,7 +34,7 @@ function FeaturesInfo({
   description?: string;
 }) {
   return (
-    <div className="flex flex-col gap-3">
+    <Flex direction="col" gap={3}>
       {caption && (
         <Text weight="bold" className="text-secondary">
           {caption}
@@ -51,7 +50,7 @@ function FeaturesInfo({
           {description}
         </Text>
       )}
-    </div>
+    </Flex>
   );
 }
 

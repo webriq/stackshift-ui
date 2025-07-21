@@ -28,7 +28,7 @@ export default function Features_H({ caption, title, features, images }: Feature
 
 function CaptionAndTitleSection({ caption, title }: { caption?: string; title?: string }) {
   return (
-    <div className="flex flex-col gap-3">
+    <Flex gap={3} direction="col">
       {caption && (
         <Text weight="bold" className="text-secondary">
           {caption}
@@ -39,7 +39,7 @@ function CaptionAndTitleSection({ caption, title }: { caption?: string; title?: 
           {title}
         </Heading>
       )}
-    </div>
+    </Flex>
   );
 }
 

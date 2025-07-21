@@ -35,14 +35,14 @@ export default function Faqs_C({ subtitle, title, faqs }: FAQProps) {
 
 function SubtitleAndTitleText({ subtitle, title }: { subtitle?: string; title?: string }) {
   return (
-    <div className="flex flex-col gap-3">
+    <Flex direction="col" gap={3}>
       {subtitle ? (
         <Text weight="bold" className="text-secondary">
           {subtitle}
         </Text>
       ) : null}
       {title ? <Heading fontSize="3xl">{title}</Heading> : null}
-    </div>
+    </Flex>
   );
 }
 

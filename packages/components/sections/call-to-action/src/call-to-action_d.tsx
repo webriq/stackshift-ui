@@ -44,7 +44,7 @@ function LogoSection({ logo }: { logo?: Logo }) {
   return (
     <Link
       aria-label={logoLink(logo) === "/" ? "Go to home page" : `Go to ${logoLink(logo)}`}
-      className="inline-block mb-10 text-3xl font-bold leading-none"
+      className="inline-block text-3xl font-bold leading-none"
       href={logoLink(logo)}
       target={logo?.linkTarget}
       rel={logo?.linkTarget === "_blank" ? "noopener noreferrer" : ""}>
@@ -53,7 +53,7 @@ function LogoSection({ logo }: { logo?: Logo }) {
         alt={logo?.alt ?? "callToAction-logo"}
         width={56}
         height={56}
-        className="inline-block mb-10 text-3xl font-bold leading-none"
+        className="inline-block text-3xl font-bold leading-none mb-8"
       />
     </Link>
   );
@@ -86,7 +86,7 @@ function CTABtton({ button }: { button?: LabeledRoute }) {
   });
 
   return (
-    <Button variant="link" aria-label={button?.label} asChild>
+    <Button aria-label={button?.label} asChild>
       <Link href={link.href} target={link.target} rel={link.rel}>
         {button?.label}
       </Link>

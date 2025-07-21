@@ -47,6 +47,7 @@
     "@stackshift-ui/container": "workspace:*",
     "@stackshift-ui/flex": "workspace:*",
     "@stackshift-ui/form": "workspace:*",
+    "@stackshift-ui/checkbox": "workspace:*",
     "@stackshift-ui/form-field": "workspace:*",
     "@stackshift-ui/heading": "workspace:*",
     "@stackshift-ui/image": "workspace:*",
