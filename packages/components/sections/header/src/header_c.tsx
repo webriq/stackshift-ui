@@ -6,6 +6,7 @@ import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
 import { buildSanityLink } from "@stackshift-ui/system";
 import { ButtonProps, HeaderProps } from ".";
+import { LabeledRoute } from "./types";
 
 export default function Header_C({
   videoLink,
@@ -66,17 +67,8 @@ function Buttons({
   primaryButton?: ButtonProps;
   secondaryButton?: ButtonProps;
 }) {
-  const primaryButtonLink = buildSanityLink({
-    type: "linkInternal",
-    internalLink: primaryButton?.link?.target === "_self" ? primaryButton?.link?.route : "",
-    externalLink: primaryButton?.link?.target != "_self" ? primaryButton?.link?.route : "",
-  });
-
-  const secondaryButtonLink = buildSanityLink({
-    type: "linkInternal",
-    internalLink: secondaryButton?.link?.target === "_self" ? secondaryButton?.link?.route : "",
-    externalLink: secondaryButton?.link?.target != "_self" ? secondaryButton?.link?.route : "",
-  });
+  const primaryButtonLink = buildSanityLink(primaryButton as LabeledRoute);
+  const secondaryButtonLink = buildSanityLink(secondaryButton as LabeledRoute);
 
   return (
     <Flex

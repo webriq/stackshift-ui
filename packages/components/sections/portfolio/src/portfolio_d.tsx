@@ -85,11 +85,7 @@ function CaptionAndTitleText({
 function PrimaryButton({ button }: { button?: LabeledRoute | null }) {
   if (!button?.label) return null;
 
-  const link = buildSanityLink({
-    type: button?.type ?? "",
-    internalLink: button?.internalLink ?? "",
-    externalLink: button?.externalLink ?? "",
-  });
+  const link = buildSanityLink(button);
 
   return (
     <div className="text-center">
@@ -134,11 +130,7 @@ function ProjectItem({ size, content }: { size?: string | null; content?: Conten
   const breakpoints = useMediaQuery("639");
   const maxLength = breakpoints ? 40 : 90;
 
-  const link = buildSanityLink({
-    type: content?.primaryButton?.type ?? "",
-    internalLink: content?.primaryButton?.internalLink ?? "",
-    externalLink: content?.primaryButton?.externalLink ?? "",
-  });
+  const link = buildSanityLink(content?.primaryButton as LabeledRoute);
 
   return (
     <div className={`w-full px-4 mb-8 ${size === "lg" ? "w-full" : "lg:w-1/2"}`}>

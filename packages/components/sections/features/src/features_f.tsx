@@ -65,11 +65,7 @@ function FeaturesInfo({
 function CTAButton({ primaryButton }: { primaryButton?: LabeledRoute }) {
   if (!primaryButton?.label) return null;
 
-  const link = buildSanityLink({
-    type: primaryButton?.type ?? "",
-    internalLink: primaryButton?.internalLink ?? "",
-    externalLink: primaryButton?.externalLink ?? "",
-  });
+  const link = buildSanityLink(primaryButton);
 
   return (
     <Container maxWidth={448} className="ml-0">

@@ -1,10 +1,34 @@
-type LinkType = "linkInternal" | "linkExternal" | string;
-
-interface LabeledRoute {
-  type: LinkType;
-  internalLink?: string;
-  externalLink?: string;
+export interface LabeledRoute extends ConditionalLink {
+  ariaLabel?: string;
+  label?: string;
+  linkTarget?: string;
+  linkType?: string;
+  _type?: string;
+  linkInternal?: any;
+  linkExternal?: any;
   referenceType?: string;
+  multipleRoutes?: LabeledRouteWithKey[];
+  multipleInnerRoutes?: LabeledRouteWithKey[];
+}
+export interface ConditionalLink {
+  type?: string;
+  internalLink?: string | null;
+  externalLink?: string | null;
+}
+
+export interface LabeledRouteWithKey extends LabeledRoute {
+  _key?: string;
+  image?: string;
+  alt?: string;
+  multipleRoutes?: LabeledRouteWithKey[];
+  featuredRoute?: {
+    featuredLink: LabeledRoute;
+    mainImage: {
+      image: string;
+      alt: string;
+    };
+  };
+  routeType?: string;
 }
 
 interface SanityLink {

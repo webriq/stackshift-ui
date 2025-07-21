@@ -190,11 +190,7 @@ function FormFields({
 function SignInLink({ signInLink }: { signInLink?: LabeledRoute }) {
   if (!signInLink?.label) return null;
 
-  const link = buildSanityLink({
-    type: signInLink?.type ?? "",
-    internalLink: signInLink?.internalLink ?? "",
-    externalLink: signInLink?.externalLink ?? "",
-  });
+  const link = buildSanityLink(signInLink);
 
   return (
     <div className="w-full text-center mt-3">
@@ -252,22 +248,18 @@ function FormLinks({ formLinks }: { formLinks?: LabeledRouteWithKey[] }) {
 
   return (
     <p className="mt-10 lg:mt-3 text-xs text-center text-gray-700">
-      {formLinks?.map((link: any, index: number, { length }: any) => {
-        const linkObj = buildSanityLink({
-          type: link?.type ?? "",
-          internalLink: link?.internalLink ?? "",
-          externalLink: link?.externalLink ?? "",
-        });
+      {formLinks?.map((link_: any, index: number, { length }: any) => {
+        const link = buildSanityLink(link_ as LabeledRoute);
 
         return (
           <span key={index}>
             <Button
               variant="link"
               className="text-xs text-primary cursor-pointer hover:underline"
-              aria-label={link?.label}
+              aria-label={link_?.label}
               asChild>
-              <Link href={linkObj.href} target={linkObj.target} rel={linkObj.rel}>
-                {link?.label}
+              <Link href={link.href} target={link.target} rel={link.rel}>
+                {link_?.label}
               </Link>
             </Button>
             {index === length - 1 ? null : index === length - 2 ? (

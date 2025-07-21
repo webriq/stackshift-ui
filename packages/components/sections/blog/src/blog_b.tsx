@@ -164,11 +164,7 @@ function ImageContainer({
 function PrimaryButton({ primaryButton }: { primaryButton?: LabeledRoute }) {
   if (!primaryButton?.label) return null;
 
-  const link = buildSanityLink({
-    type: primaryButton?.type ?? "",
-    internalLink: primaryButton?.internalLink ?? "",
-    externalLink: primaryButton?.externalLink ?? "",
-  });
+  const link = buildSanityLink(primaryButton);
 
   return (
     <div className="text-center">

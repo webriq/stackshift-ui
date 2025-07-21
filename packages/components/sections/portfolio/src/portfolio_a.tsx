@@ -67,11 +67,7 @@ function CaptionAndTitleText({
 function PrimaryButton({ button }: { button?: LabeledRoute | null }) {
   if (!button?.label) return null;
 
-  const link = buildSanityLink({
-    type: button?.type ?? "",
-    internalLink: button?.internalLink ?? "",
-    externalLink: button?.externalLink ?? "",
-  });
+  const link = buildSanityLink(button);
 
   return (
     <div className="text-center">
@@ -124,11 +120,7 @@ function PortfolioContent({
   return (
     <Flex wrap className="mb-8">
       {portfolios?.slice(0, portfolioLength)?.map((content, index: number) => {
-        const link = buildSanityLink({
-          type: content?.primaryButton?.type ?? "",
-          internalLink: content?.primaryButton?.internalLink ?? "",
-          externalLink: content?.primaryButton?.externalLink ?? "",
-        });
+        const link = buildSanityLink(content.primaryButton as LabeledRoute);
 
         return (
           <Flex className="w-full space-x-5 px-4 mb-8 sm:w-1/2 lg:w-1/4" key={content?._key}>

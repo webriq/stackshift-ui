@@ -8,6 +8,7 @@ import { buildSanityLink } from "@stackshift-ui/system";
 import { Text } from "@stackshift-ui/text";
 import { useEffect, useState } from "react";
 import { HeaderProps } from ".";
+import { LabeledRoute } from "./types";
 
 export default function Header_G({
   mediaItems,
@@ -45,17 +46,8 @@ export default function Header_G({
     }
   };
 
-  const primaryButtonLink = buildSanityLink({
-    type: "linkInternal",
-    internalLink: primaryButton?.link?.target === "_self" ? primaryButton?.link?.route : "",
-    externalLink: primaryButton?.link?.target != "_self" ? primaryButton?.link?.route : "",
-  });
-
-  const secondaryButtonLink = buildSanityLink({
-    type: "linkInternal",
-    internalLink: secondaryButton?.link?.target === "_self" ? secondaryButton?.link?.route : "",
-    externalLink: secondaryButton?.link?.target != "_self" ? secondaryButton?.link?.route : "",
-  });
+  const primaryButtonLink = buildSanityLink(primaryButton as LabeledRoute);
+  const secondaryButtonLink = buildSanityLink(secondaryButton as LabeledRoute);
 
   return (
     <Section>

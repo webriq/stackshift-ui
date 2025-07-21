@@ -11,7 +11,7 @@ import { customBlockStyle } from "./utils/portableText/customBlockStyle";
 import { Link } from "@stackshift-ui/link";
 import { buildSanityLink } from "@stackshift-ui/system";
 import { HeaderProps } from ".";
-import { HeaderBox, HeaderSections } from "./types";
+import { HeaderBox, HeaderSections, LabeledRoute } from "./types";
 
 const IMAGE_HEIGHT_CLASSES = {
   lg: "min-h-[200px] sm:min-h-[400px] md:min-h-[600px] lg:min-h-[800px] xl:min-h-[1150px]",
@@ -162,13 +162,7 @@ const HeaderTitleSection = ({ header }: { header: HeaderBox }) => (
 );
 
 const HeaderButton = ({ header }: { header: HeaderSections }) => {
-  const primaryButtonLink = buildSanityLink({
-    type: "linkInternal",
-    internalLink:
-      header?.primaryButton?.link?.target === "_self" ? header?.primaryButton?.link?.route : "",
-    externalLink:
-      header?.primaryButton?.link?.target != "_self" ? header?.primaryButton?.link?.route : "",
-  });
+  const primaryButtonLink = buildSanityLink(header.primaryButton as LabeledRoute);
 
   return (
     <div className={`flex justify-${header?.alignment} gap-4`}>

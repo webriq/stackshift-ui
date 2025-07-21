@@ -10,7 +10,7 @@ import React from "react";
 import { Link } from "@stackshift-ui/link";
 import { buildSanityLink } from "@stackshift-ui/system";
 import { PortfolioProps } from ".";
-import { Content } from "./types";
+import { Content, LabeledRoute } from "./types";
 
 export default function Portfolio_B({
   caption,
@@ -21,11 +21,7 @@ export default function Portfolio_B({
 }: PortfolioProps): React.JSX.Element {
   const portfolioLength = length; //set initial number of portfolios to display for this variant
 
-  const link = buildSanityLink({
-    type: primaryButton?.type ?? "",
-    internalLink: primaryButton?.internalLink ?? "",
-    externalLink: primaryButton?.externalLink ?? "",
-  });
+  const link = buildSanityLink(primaryButton as LabeledRoute);
 
   return (
     <Section className="py-20 bg-background">
@@ -77,11 +73,7 @@ function CaptionAndTitleText({
 }
 
 function ProjectItem({ content }: { content: Content }) {
-  const link = buildSanityLink({
-    type: content?.primaryButton?.type ?? "",
-    internalLink: content?.primaryButton?.internalLink ?? "",
-    externalLink: content?.primaryButton?.externalLink ?? "",
-  });
+  const link = buildSanityLink(content.primaryButton as LabeledRoute);
 
   return (
     <div className="w-full px-4 mb-4 md:w-1/2 lg:w-1/3">

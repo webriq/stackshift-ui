@@ -207,11 +207,7 @@ function FormButtonLabel({ form }: { form?: iForm }) {
 function SigninLink({ signInLink }: { signInLink?: LabeledRoute }) {
   if (!signInLink?.label) return null;
 
-  const link = buildSanityLink({
-    type: signInLink?.type ?? "",
-    internalLink: signInLink?.internalLink ?? "",
-    externalLink: signInLink?.externalLink ?? "",
-  });
+  const link = buildSanityLink(signInLink);
 
   return (
     <span className="text-xs text-gray-900">
@@ -234,22 +230,18 @@ function FormLinks({ formLinks }: { formLinks?: LabeledRoute[] }) {
 
   return (
     <p className="text-xs text-center text-secondary-foreground">
-      {formLinks?.map((link, index, { length }) => {
-        const linkObj = buildSanityLink({
-          type: link?.type ?? "",
-          internalLink: link?.internalLink ?? "",
-          externalLink: link?.externalLink ?? "",
-        });
+      {formLinks?.map((link_, index, { length }) => {
+        const linkObj = buildSanityLink(link_);
 
         return (
           <span key={index}>
             <Button
               variant="link"
               className="text-xs underline text-secondary-foreground hover:text-gray-50"
-              aria-label={link?.label}
+              aria-label={link_?.label}
               asChild>
               <Link href={linkObj?.href} target={linkObj?.target} rel={linkObj?.rel}>
-                {link?.label}
+                {link_?.label}
               </Link>
             </Button>
             {index === length - 1 ? null : index === length - 2 ? (

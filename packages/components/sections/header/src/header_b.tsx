@@ -9,7 +9,7 @@ import { buildSanityLink } from "@stackshift-ui/system";
 import { Text } from "@stackshift-ui/text";
 import React from "react";
 import { ButtonProps, HeaderProps } from ".";
-import { Images } from "./types";
+import { Images, LabeledRoute } from "./types";
 
 export default function Header_B({
   images,
@@ -59,17 +59,8 @@ function Buttons({
   primaryButton?: ButtonProps;
   secondaryButton?: ButtonProps;
 }) {
-  const primaryButtonLink = buildSanityLink({
-    type: "linkInternal",
-    internalLink: primaryButton?.link?.target === "_self" ? primaryButton?.link?.route : "",
-    externalLink: primaryButton?.link?.target != "_self" ? primaryButton?.link?.route : "",
-  });
-
-  const secondaryButtonLink = buildSanityLink({
-    type: "linkInternal",
-    internalLink: secondaryButton?.link?.target === "_self" ? secondaryButton?.link?.route : "",
-    externalLink: secondaryButton?.link?.target != "_self" ? secondaryButton?.link?.route : "",
-  });
+  const primaryButtonLink = buildSanityLink(primaryButton as LabeledRoute);
+  const secondaryButtonLink = buildSanityLink(secondaryButton as LabeledRoute);
 
   return (
     <Flex

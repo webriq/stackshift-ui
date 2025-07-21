@@ -60,11 +60,7 @@ function HeadingAndText({ title, text }: { title?: string; text?: string }) {
 function CTAButton({ button }: { button?: LabeledRoute }) {
   if (!button?.label) return null;
 
-  const link = buildSanityLink({
-    type: button?.type ?? "",
-    internalLink: button?.internalLink ?? "",
-    externalLink: button?.externalLink ?? "",
-  });
+  const link = buildSanityLink(button);
 
   return (
     <Button aria-label={button?.label}>
