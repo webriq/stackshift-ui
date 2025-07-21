@@ -1,4 +1,4 @@
-import { Card } from "@stackshift-ui/card";
+import { Card, CardContent } from "@stackshift-ui/card";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
@@ -115,24 +115,26 @@ function TestimonialItem({ item, index }: { item?: iTestimonial; index: number }
   return (
     <div className="flex-1 w-full px-3 mb-4 lg:w-1/3" key={index}>
       <Card className="p-8 text-center h-full items-center rounded-md">
-        <Text className="mb-8 leading-loose" muted>
-          {item?.testimony}
-        </Text>
-        {item?.mainImage?.image && (
-          <div className="w-[48px] h-[48px] mx-auto border-0">
-            <Image
-              className="w-full h-full object-cover rounded-full"
-              width={48}
-              height={48}
-              src={`${item?.mainImage?.image}`}
-              alt={item?.mainImage?.alt ?? `testimonial-source-${item?.name}-profile-image`}
-            />
-          </div>
-        )}
-        <Text className="mb-1" fontSize="2xl" weight="bold">
-          {item?.name}
-        </Text>
-        <Text muted>{item?.jobTitle}</Text>
+        <CardContent>
+          <Text className="mb-8 leading-loose" muted>
+            {item?.testimony}
+          </Text>
+          {item?.mainImage?.image && (
+            <div className="w-[48px] h-[48px] mx-auto border-0">
+              <Image
+                className="w-full h-full object-cover rounded-full"
+                width={48}
+                height={48}
+                src={`${item?.mainImage?.image}`}
+                alt={item?.mainImage?.alt ?? `testimonial-source-${item?.name}-profile-image`}
+              />
+            </div>
+          )}
+          <Text className="mb-1" fontSize="2xl" weight="bold">
+            {item?.name}
+          </Text>
+          <Text muted>{item?.jobTitle}</Text>
+        </CardContent>
       </Card>
     </div>
   );
