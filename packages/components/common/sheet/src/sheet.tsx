@@ -17,11 +17,14 @@ const displayNameFooter = "SheetFooter";
 const displayNameTitle = "SheetTitle";
 const displayNameDescription = "SheetDescription";
 
-function Sheet({ ...props }: React.ComponentProps<typeof SheetPrimitive.Root>) {
+const Sheet = React.forwardRef<
+  React.ElementRef<typeof SheetPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof SheetPrimitive.Root>
+>(({ ...props }, ref) => {
   const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
 
-  return <Component as={SheetPrimitive.Root} data-slot="sheet" {...props} />;
-}
+  return <Component as={SheetPrimitive.Root} ref={ref} data-slot="sheet" {...props} />;
+});
 Sheet.displayName = displayName;
 
 function SheetTrigger({ ...props }: React.ComponentProps<typeof SheetPrimitive.Trigger>) {
@@ -45,15 +48,16 @@ function SheetPortal({ ...props }: React.ComponentProps<typeof SheetPrimitive.Po
 }
 SheetPortal.displayName = displayNamePortal;
 
-function SheetOverlay({
-  className,
-  ...props
-}: React.ComponentProps<typeof SheetPrimitive.Overlay>) {
+const SheetOverlay = React.forwardRef<
+  React.ElementRef<typeof SheetPrimitive.Overlay>,
+  React.ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay>
+>(({ className, ...props }, ref) => {
   const { [displayNameOverlay]: Component = DefaultComponent } = useStackShiftUIComponents();
 
   return (
     <Component
       as={SheetPrimitive.Overlay}
+      ref={ref}
       data-slot="sheet-overlay"
       className={cn(
         "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/50",
@@ -62,7 +66,8 @@ function SheetOverlay({
       {...props}
     />
   );
-}
+});
+
 SheetOverlay.displayName = displayNameOverlay;
 
 function SheetContent({
