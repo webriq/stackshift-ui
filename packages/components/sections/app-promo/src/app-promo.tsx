@@ -1,10 +1,13 @@
-import { lazy } from "react";
-import { SectionsProps, Logo, StatItems, Images } from "./types";
+import React from "react";
+import AppPromoA from "./app-promo_a";
+import AppPromoB from "./app-promo_b";
+import AppPromoC from "./app-promo_c";
+import { Images, Logo, SectionsProps, StatItems } from "./types";
 
 const Variants = {
-  variant_a: lazy(() => import("./app-promo_a")),
-  variant_b: lazy(() => import("./app-promo_b")),
-  variant_c: lazy(() => import("./app-promo_c")),
+  variant_a: AppPromoA,
+  variant_b: AppPromoB,
+  variant_c: AppPromoC,
 };
 
 export interface AppPromoProps {

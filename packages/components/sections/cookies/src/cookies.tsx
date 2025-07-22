@@ -1,13 +1,13 @@
 // Cookie Consent for GDPR (using Orestbida)
 // https://cookieconsent.orestbida.com/
 
-import { lazy } from "react";
-
+import React from "react";
 import { ConsentModalPosition } from "vanilla-cookieconsent";
+import CookiesA from "./cookies_a";
 import { SectionsProps } from "./types";
 
 const Variants = {
-  variant_a: lazy(() => import("./cookies_a")),
+  variant_a: CookiesA,
 };
 
 export interface CookiesProps {

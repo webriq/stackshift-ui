@@ -1,11 +1,14 @@
 import { PortableTextBlock } from "@portabletext/types";
-import { lazy } from "react";
+import React from "react";
 import { SectionsProps } from "./types";
+import TextA from "./text_a";
+import TextB from "./text_b";
+import TextC from "./text_c";
 
 const Variants = {
-  variant_a: lazy(() => import("./text_a")),
-  variant_b: lazy(() => import("./text_b")),
-  variant_c: lazy(() => import("./text_c")),
+  variant_a: TextA,
+  variant_b: TextB,
+  variant_c: TextC,
 };
 
 export interface TextComponentProps {

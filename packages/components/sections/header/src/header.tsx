@@ -1,22 +1,29 @@
-import React, { lazy } from "react";
+import React from "react";
+import HeaderA from "./header_a";
+import HeaderB from "./header_b";
+import HeaderC from "./header_c";
+import HeaderD from "./header_d";
+import HeaderE from "./header_e";
+import HeaderF from "./header_f";
+import HeaderG from "./header_g";
 import {
-  Form,
-  HeaderSections,
-  Images,
-  LabeledRouteWithKey,
-  MainImage,
-  SectionsProps,
-  Template,
+    Form,
+    HeaderSections,
+    Images,
+    LabeledRouteWithKey,
+    MainImage,
+    SectionsProps,
+    Template,
 } from "./types";
 
 const Variants = {
-  variant_a: lazy(() => import("./header_a")),
-  variant_b: lazy(() => import("./header_b")),
-  variant_c: lazy(() => import("./header_c")),
-  variant_d: lazy(() => import("./header_d")),
-  variant_e: lazy(() => import("./header_e")),
-  variant_f: lazy(() => import("./header_f")),
-  variant_g: lazy(() => import("./header_g")),
+  variant_a: HeaderA,
+  variant_b: HeaderB,
+  variant_c: HeaderC,
+  variant_d: HeaderD,
+  variant_e: HeaderE,
+  variant_f: HeaderF,
+  variant_g: HeaderG,
 };
 
 export interface ButtonProps {

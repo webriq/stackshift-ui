@@ -54,7 +54,7 @@ const InstagramIcon = (props: any) => {
   );
 };
 
-const SocialIconMap: Record<Socials, (x: any) => JSX.Element> = {
+const SocialIconMap: Record<Socials, (x: any) => JSX.Element | ReactNode> = {
   facebook: FacebookIcon,
   twitter: XIcon,
   instagram: InstagramIcon,

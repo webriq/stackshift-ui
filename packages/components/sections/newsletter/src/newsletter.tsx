@@ -1,9 +1,11 @@
-import React, { lazy } from "react";
+import React from "react";
+import NewsletterA from "./newsletter_a";
+import NewsletterB from "./newsletter_b";
 import { Form, Logo, SectionsProps } from "./types";
 
 const Variants = {
-  variant_a: lazy(() => import("./newsletter_a")),
-  variant_b: lazy(() => import("./newsletter_b")),
+  variant_a: NewsletterA,
+  variant_b: NewsletterB,
 };
 
 export interface NewsletterProps {
