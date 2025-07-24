@@ -1,10 +1,13 @@
-import { lazy } from "react";
+import React from "react";
+import FaqsA from "./faqs_a";
+import FaqsB from "./faqs_b";
+import FaqsC from "./faqs_c";
 import { AskedQuestion, FaqsWithCategory, SectionsProps } from "./types";
 
 const Variants = {
-  variant_a: lazy(() => import("./faqs_a")),
-  variant_b: lazy(() => import("./faqs_b")),
-  variant_c: lazy(() => import("./faqs_c")),
+  variant_a: FaqsA,
+  variant_b: FaqsB,
+  variant_c: FaqsC,
 };
 
 export interface FAQProps {

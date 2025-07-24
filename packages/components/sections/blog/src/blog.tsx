@@ -1,11 +1,15 @@
-import { lazy } from "react";
+import React from "react";
 import { BlogPost, LabeledRoute, SectionsProps } from "./types";
+import BlogA from "./blog_a";
+import BlogB from "./blog_b";
+import BlogC from "./blog_c";
+import BlogD from "./blog_d";
 
 const Variants = {
-  variant_a: lazy(() => import("./blog_a")),
-  variant_b: lazy(() => import("./blog_b")),
-  variant_c: lazy(() => import("./blog_c")),
-  variant_d: lazy(() => import("./blog_d")),
+  variant_a: BlogA,
+  variant_b: BlogB,
+  variant_c: BlogC,
+  variant_d: BlogD,
 };
 
 export interface BlogProps {

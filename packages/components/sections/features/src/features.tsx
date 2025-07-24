@@ -1,22 +1,29 @@
-import React, { lazy } from "react";
-
+import React from "react";
+import FeaturesA from "./features_a";
+import FeaturesB from "./features_b";
+import FeaturesC from "./features_c";
+import FeaturesD from "./features_d";
+import FeaturesE from "./features_e";
+import FeaturesF from "./features_f";
+import FeaturesG from "./features_g";
+import FeaturesH from "./features_h";
 import {
-  ArrayOfImageTitleAndText,
-  FeaturedItem,
-  Images,
-  LabeledRoute,
-  SectionsProps,
+    ArrayOfImageTitleAndText,
+    FeaturedItem,
+    Images,
+    LabeledRoute,
+    SectionsProps,
 } from "./types";
 
 const Variants = {
-  variant_a: lazy(() => import("./features_a")),
-  variant_b: lazy(() => import("./features_b")),
-  variant_c: lazy(() => import("./features_c")),
-  variant_d: lazy(() => import("./features_d")),
-  variant_e: lazy(() => import("./features_e")),
-  variant_f: lazy(() => import("./features_f")),
-  variant_g: lazy(() => import("./features_g")),
-  variant_h: lazy(() => import("./features_h")),
+  variant_a: FeaturesA,
+  variant_b: FeaturesB,
+  variant_c: FeaturesC,
+  variant_d: FeaturesD,
+  variant_e: FeaturesE,
+  variant_f: FeaturesF,
+  variant_g: FeaturesG,
+  variant_h: FeaturesH,
 };
 
 export interface FeaturesProps {

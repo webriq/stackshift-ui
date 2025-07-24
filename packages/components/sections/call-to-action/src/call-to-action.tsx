@@ -1,12 +1,17 @@
-import { lazy } from "react";
-import { SectionsProps, Logo, LabeledRoute, LabeledRouteWithKey, Form } from "./types";
+import React from "react";
+import CallToActionA from "./call-to-action_a";
+import CallToActionB from "./call-to-action_b";
+import CallToActionC from "./call-to-action_c";
+import CallToActionD from "./call-to-action_d";
+import CallToActionE from "./call-to-action_e";
+import { Form, LabeledRoute, LabeledRouteWithKey, Logo, SectionsProps } from "./types";
 
 const Variants = {
-  variant_a: lazy(() => import("./call-to-action_a")),
-  variant_b: lazy(() => import("./call-to-action_b")),
-  variant_c: lazy(() => import("./call-to-action_c")),
-  variant_d: lazy(() => import("./call-to-action_d")),
-  variant_e: lazy(() => import("./call-to-action_e")),
+  variant_a: CallToActionA,
+  variant_b: CallToActionB,
+  variant_c: CallToActionC,
+  variant_d: CallToActionD,
+  variant_e: CallToActionE,
 };
 
 export interface CTAProps {

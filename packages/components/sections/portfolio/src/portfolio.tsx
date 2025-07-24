@@ -1,12 +1,15 @@
-import React, { lazy } from "react";
-
+import React from "react";
+import PortfolioA from "./portfolio_a";
+import PortfolioB from "./portfolio_b";
+import PortfolioC from "./portfolio_c";
+import PortfolioD from "./portfolio_d";
 import { LabeledRoute, Portfolios, PortfoliosWithCategories, SectionsProps } from "./types";
 
 const Variants = {
-  variant_a: lazy(() => import("./portfolio_a")),
-  variant_b: lazy(() => import("./portfolio_b")),
-  variant_c: lazy(() => import("./portfolio_c")),
-  variant_d: lazy(() => import("./portfolio_d")),
+  variant_a: PortfolioA,
+  variant_b: PortfolioB,
+  variant_c: PortfolioC,
+  variant_d: PortfolioD,
 };
 
 export interface PortfolioProps {

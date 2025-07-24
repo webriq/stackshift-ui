@@ -1,9 +1,11 @@
-import { lazy } from "react";
-import { SectionsProps, SocialLink, Form } from "./types";
+import React from "react";
+import ContactA from "./contact_a";
+import ContactB from "./contact_b";
+import { Form, SectionsProps, SocialLink } from "./types";
 
 const Variants = {
-  variant_a: lazy(() => import("./contact_a")),
-  variant_b: lazy(() => import("./contact_b")),
+  variant_a: ContactA,
+  variant_b: ContactB,
 };
 
 export interface ContactProps {
