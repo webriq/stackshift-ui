@@ -1,5 +1,18 @@
 # @stackshift-ui/pagination
 
+## 1.0.0-beta.5
+
+### Minor Changes
+
+- Packages updates and fixes
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/button@6.1.0-beta.4
+  - @stackshift-ui/system@6.1.0-beta.2
+  - @stackshift-ui/scripts@6.1.0-beta.1
+
 ## 1.0.0-beta.4
 
 ### Patch Changes

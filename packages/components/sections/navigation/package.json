@@ -1,7 +1,7 @@
 {
   "name": "@stackshift-ui/navigation",
   "description": "",
-  "version": "7.0.0-beta.3",
+  "version": "7.0.0-beta.4",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -60,7 +60,7 @@
     "react-icons": "^5.3.0"
   },
   "peerDependencies": {
-    "@stackshift-ui/system": ">=6.1.0-beta.1",
+    "@stackshift-ui/system": ">=6.1.0-beta.2",
     "@types/react": "16.8 - 19",
     "next": "10 - 14",
     "react": "16.8 - 19",

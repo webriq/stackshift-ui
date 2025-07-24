@@ -1,5 +1,27 @@
 # @stackshift-ui/navigation
 
+## 7.0.0-beta.4
+
+### Minor Changes
+
+- Packages updates and fixes
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/social-icons@7.0.0-beta.2
+  - @stackshift-ui/container@7.0.0-beta.2
+  - @stackshift-ui/heading@7.0.0-beta.2
+  - @stackshift-ui/section@7.0.0-beta.2
+  - @stackshift-ui/button@6.1.0-beta.4
+  - @stackshift-ui/image@6.1.0-beta.2
+  - @stackshift-ui/link@6.1.0-beta.2
+  - @stackshift-ui/text@7.0.0-beta.2
+  - @stackshift-ui/flex@7.0.0-beta.2
+  - @stackshift-ui/grid@7.0.0-beta.2
+  - @stackshift-ui/system@6.1.0-beta.2
+  - @stackshift-ui/scripts@6.1.0-beta.1
+
 ## 7.0.0-beta.3
 
 ### Patch Changes

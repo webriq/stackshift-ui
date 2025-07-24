@@ -1,6 +1,6 @@
 {
   "name": "@stackshift-ui/react",
-  "version": "7.0.0-beta.4",
+  "version": "7.0.0-beta.5",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -110,7 +110,7 @@
   },
   "peerDependencies": {
     "@types/react": "16.8 - 19",
-    "@stackshift-ui/system": ">=6.1.0-beta.1",
+    "@stackshift-ui/system": ">=6.1.0-beta.2",
     "next": "10 - 14",
     "react": "16.8 - 19",
     "react-dom": "16.8 - 19"

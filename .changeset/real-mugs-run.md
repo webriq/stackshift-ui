@@ -9,6 +9,7 @@
 "@stackshift-ui/swiper-button": minor
 "@stackshift-ui/youtube-video": minor
 "@stackshift-ui/testimonial": minor
+"@stackshift-ui/social-icons": minor
 "@stackshift-ui/toggle-group": minor
 "@stackshift-ui/logo-cloud": minor
 "@stackshift-ui/navigation": minor
@@ -17,11 +18,13 @@
 "@stackshift-ui/date-picker": minor
 "@stackshift-ui/radio-group": minor
 "@stackshift-ui/scroll-area": minor
+"@stackshift-ui/webriq-form": minor
 "@stackshift-ui/app-promo": minor
 "@stackshift-ui/portfolio": minor
 "@stackshift-ui/blockstyle": minor
 "@stackshift-ui/data-table": minor
 "@stackshift-ui/form-field": minor
+"@stackshift-ui/input-file": minor
 "@stackshift-ui/pagination": minor
 "@stackshift-ui/stats-card": minor
 "@stackshift-ui/features": minor
@@ -59,6 +62,7 @@
 "@stackshift-ui/toast": minor
 "@stackshift-ui/card": minor
 "@stackshift-ui/form": minor
+"@stackshift-ui/link": minor
 "@stackshift-ui/menu": minor
 "@stackshift-ui/text": minor
 "@stackshift-ui/flex": minor
@@ -69,4 +73,4 @@
 "@stackshift-ui/scripts": minor
 ---
 
-shadcn migration
+Packages updates and fixes
