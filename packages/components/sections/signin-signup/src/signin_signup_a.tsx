@@ -136,7 +136,7 @@ function FormFields({
               <Input
                 placeholder={formFields?.placeholder}
                 required={formFields?.isRequired}
-                className="w-full py-4 text-xs"
+                className="w-full py-4 text-xs bg-white"
                 name={formFields?.name}
                 aria-label={formFields?.label}
                 {...formFields}
@@ -144,7 +144,7 @@ function FormFields({
               />
             ) : (
               <FormField
-                className="py-4"
+                className="py-4 bg-white"
                 textSize="sm"
                 noLabel
                 variant="primary"
@@ -169,7 +169,7 @@ function FormFields({
             />
           ) : (
             <FormField
-              className="py-4"
+              className="py-4 bg-white"
               textSize="sm"
               noLabel
               variant="primary"
@@ -220,7 +220,7 @@ function PasswordField({
   return (
     <div className="flex flex-col sm:flex-row gap-2 sm:items-center">
       <Input
-        className="py-4"
+        className="py-4 bg-white"
         aria-label={formFields?.placeholder ?? formFields?.name}
         type={showPassword ? "text" : "password"}
         placeholder={formFields?.placeholder}

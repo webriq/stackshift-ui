@@ -52,12 +52,12 @@ function BlogPosts({
 }) {
   return (
     <Flex wrap justify="center" className="mb-16" gap={4}>
-      <div className="w-full lg:w-[45%]">
+      <div className="w-full lg:w-[40%]">
         {posts
           ?.slice(count, count + 1)
           .map((post, key) => <BlogItem size="lg" post={post} key={key} />)}
       </div>
-      <Flex wrap className="w-full lg:w-[45%]" gap={4}>
+      <Flex wrap className="w-full lg:w-[50%]" gap={4}>
         {posts?.slice(count + 1, blogsPerPage).map((post, key) => (
           <div className="w-full lg:basis-[45%]" key={key}>
             <BlogItem post={post} size="sm" key={key} />
@@ -78,36 +78,30 @@ function BlogItem({ post, size, key }: { post: BlogPost; size?: string; key: num
       ) : null}
       <Flex direction="col" className="bg-white justify-between" style={{ height: "295px" }}>
         <CardContent className="p-4">
-          <Flex align="center">
-            {post?.publishedAt ? (
-              <Text muted className="text-sm">
-                {format(new Date(post.publishedAt), " dd MMM, yyyy")}
-              </Text>
-            ) : null}
-            {post?.authors && (
-              <>
-                <span className="mx-2 w-1 h-1 bg-gray-500 rounded-full" />
-                <Flex className="mt-auto text-sm text-gray-500">
-                  {post?.authors?.map((author, index, { length }) => (
-                    <>
-                      <Text className="italic" fontSize="sm">
-                        {author?.name}
-                      </Text>
-                      {index + 1 !== length ? <span>&nbsp;,&nbsp;</span> : null}
-                    </>
-                  ))}
-                </Flex>
-              </>
-            )}
-          </Flex>
-
+          {post?.publishedAt ? (
+            <Text muted className="text-sm">
+              {format(new Date(post.publishedAt), " dd MMM, yyyy")}
+            </Text>
+          ) : null}
           {post?.title ? (
-            <Heading type="h4" className="my-2 line-clamp-3 !text-2xl">
+            <Heading type="h4" className="line-clamp-3 !text-2xl">
               {post.title}
             </Heading>
           ) : null}
+          {post?.authors && (
+            <Flex className="mt-auto text-sm text-gray-500">
+              {post?.authors?.map((author, index, { length }) => (
+                <>
+                  <Text className="italic" fontSize="sm">
+                    {author?.name}
+                  </Text>
+                  {index + 1 !== length ? <span>&nbsp;,&nbsp;</span> : null}
+                </>
+              ))}
+            </Flex>
+          )}
           {post?.excerpt ? (
-            <Text muted className="mb-2 text-justify line-clamp-3">
+            <Text muted className="my-2 text-justify line-clamp-3">
               {post.excerpt}
             </Text>
           ) : null}

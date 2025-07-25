@@ -273,6 +273,9 @@ function PostItem({ post }: { post?: BlogPost }) {
         />
       </div>
       <CardContent className="w-full px-3 py-2 lg:w-3/4">
+        {post?.publishedAt ? (
+          <Text muted>{format(new Date(post?.publishedAt), " dd MMM, yyyy")}</Text>
+        ) : null}
         {post?.title && (
           <Link
             aria-label={post?.title}
@@ -281,22 +284,16 @@ function PostItem({ post }: { post?: BlogPost }) {
             {post?.title}
           </Link>
         )}
-        <Flex wrap align="center" gap={1} className="mb-2 text-sm">
-          {post?.authors
-            ? post?.authors?.map((author, index, { length }) => (
-                <Flex key={index}>
-                  <Text className="text-primary">{author?.name}</Text>
-                  {index + 1 !== length ? <span>&nbsp;,&nbsp;</span> : null}
-                </Flex>
-              ))
-            : null}
-          {post?.publishedAt && post?.authors ? (
-            <span className="mx-2 text-gray-500">•</span>
-          ) : null}
-          {post?.publishedAt ? (
-            <Text muted>{format(new Date(post?.publishedAt), " dd MMM, yyyy")}</Text>
-          ) : null}
-        </Flex>
+        {post?.authors ? (
+          <Flex align="center">
+            {post?.authors?.map((author, index, { length }) => (
+              <Text className="text-primary">
+                {author?.name}
+                {index + 1 !== length ? <span>&nbsp;,&nbsp;</span> : null}
+              </Text>
+            ))}
+          </Flex>
+        ) : null}
         {post?.excerpt ? (
           <Text muted className="line-clamp-6 sm:line-clamp-3">
             {post?.excerpt}

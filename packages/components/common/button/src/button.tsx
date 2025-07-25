@@ -38,10 +38,15 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
+  iconPosition?: "left" | "right";
+  icon?: React.ReactNode;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  (
+    { className, variant, size, asChild = false, iconPosition = "right", icon, children, ...props },
+    ref,
+  ) => {
     const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
 
     const Comp = asChild ? Slot : "button";
@@ -51,8 +56,13 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         as={Comp}
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
-        {...props}
-      />
+        {...props}>
+        <span className="flex items-center gap-2">
+          {iconPosition === "left" && icon && <span>{icon}</span>}
+          {children}
+          {iconPosition === "right" && icon && <span>{icon}</span>}
+        </span>
+      </Component>
     );
   },
 );

@@ -1,6 +1,7 @@
 import { Button } from "@stackshift-ui/react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Download, Mail, Plus, Search, Settings, Trash2 } from "lucide-react";
+import { FaArrowRight } from "react-icons/fa";
 
 const meta: Meta<typeof Button> = {
   title: "Common/Button",
@@ -14,6 +15,9 @@ const meta: Meta<typeof Button> = {
       },
     },
   },
+  args: {
+    iconPosition: "right",
+  },
   tags: ["autodocs"],
   argTypes: {
     variant: {
@@ -25,6 +29,11 @@ const meta: Meta<typeof Button> = {
       control: { type: "select" },
       options: ["default", "sm", "lg", "icon"],
       description: "Size of the button",
+    },
+    iconPosition: {
+      control: { type: "radio" },
+      options: ["left", "right"],
+      description: "Position of the icon in the button",
     },
     asChild: {
       control: { type: "boolean" },
@@ -43,6 +52,7 @@ type Story = StoryObj<typeof Button>;
 export const Default: Story = {
   args: {
     children: "Button",
+    icon: <FaArrowRight />,
   },
   parameters: {
     docs: {

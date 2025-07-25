@@ -91,6 +91,7 @@ function FormFields({ fields }: { fields?: iForm["fields"] }) {
           placeholder={field?.placeholder}
           name={field?.name}
           required={field?.isRequired}
+          className="bg-white"
         />
       ))}
     </Flex>

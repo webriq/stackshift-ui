@@ -37,6 +37,7 @@ export const CheckboxGroup = forwardRef<HTMLDivElement, CheckboxGroupProps>((pro
   const commonClass = "ml-2";
   const primary = `${commonClass} block`;
   const inline = `${commonClass} flex gap-4`;
+  const combinedLabelClass = `mb-2 ${labelClass}`;
 
   const variants: StyleVariants<Variant> = {
     primary,
@@ -47,7 +48,7 @@ export const CheckboxGroup = forwardRef<HTMLDivElement, CheckboxGroupProps>((pro
 
   return (
     <Fragment>
-      {!noLabel && <p className={labelClass}>{label || name}</p>}
+      {!noLabel && <p className={combinedLabelClass}>{label || name}</p>}
       <Component ref={ref} as={as} className={cn(variantClass, className)} {...rest}>
         {children}
       </Component>

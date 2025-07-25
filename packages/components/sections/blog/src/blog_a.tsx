@@ -122,6 +122,11 @@ function BlogItem({ post, key }: { post?: BlogPost; key: number }) {
             </Link>
           </CardTitle>
         ) : null}
+        {post?.excerpt && (
+          <Text className="text-white/70 line-clamp-2" fontSize="sm">
+            {post?.excerpt}
+          </Text>
+        )}
       </CardContent>
     </Card>
   );

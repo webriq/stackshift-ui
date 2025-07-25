@@ -76,7 +76,7 @@ function CTAInput({ field }: { field?: any }) {
   return (
     <Input
       aria-label={field?.placeholder ?? field?.name}
-      className="w-full sm:max-w-60"
+      className="w-full sm:max-w-60 bg-white"
       type={inputType}
       placeholder={field?.placeholder}
       name={field?.name}
