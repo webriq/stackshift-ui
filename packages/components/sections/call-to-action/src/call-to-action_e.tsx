@@ -9,7 +9,7 @@ export default function CallToAction_E({ form, formLinks, signInLink }: CTAProps
   return (
     <Section className="py-20 bg-background">
       <Container maxWidth={448}>
-        <Card>
+        <Card className="bg-white">
           {form ? (
             <SigninSignup_A form={form} formLinks={formLinks} signInLink={signInLink} />
           ) : null}

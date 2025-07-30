@@ -100,7 +100,7 @@ function NewsletterForm({ id, fields, thankYouPage, buttonLabel }: FormFields) {
       <div className="flex flex-col [@media(min-width:900px)]:flex-row gap-3">
         <Input
           aria-label={fields[0]?.placeholder ?? fields[0]?.name}
-          className="flex-grow w-full"
+          className="flex-grow w-full bg-white"
           type={getInputType(fields[0]?.type)}
           placeholder={fields[0]?.placeholder}
           name={fields[0]?.name}

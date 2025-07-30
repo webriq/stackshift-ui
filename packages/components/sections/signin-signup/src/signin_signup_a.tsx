@@ -18,10 +18,10 @@ import { LabeledRoute, LabeledRouteWithKey, Logo, Form as iForm } from "./types"
 
 export default function SigninSignup_A({ logo, form, formLinks, signInLink }: SignUpFormProps) {
   return (
-    <Section className="py-10 rounded-md bg-gray-50 lg:py-20">
-      <Container maxWidth={576} className="px-4">
+    <Section className="py-10 rounded-md lg:py-20">
+      <Container maxWidth={576}>
         <LogoSection logo={logo} />
-        <Container className="mb-6 px-4 text-center lg:mb-10">
+        <Container className="mb-6 text-center lg:mb-10">
           <SubtitleAndHeadingText form={form} />
           <SignupForm
             form={form}
