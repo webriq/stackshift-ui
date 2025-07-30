@@ -27,7 +27,7 @@ export const VariantALeft: Story = {
   args: {
     variant: "variant_a",
     type: "left",
-    className: "text-primary bg-white",
+    className: "text-primary bg-white w-fit h-fit p-4",
   },
 };
 
@@ -35,7 +35,7 @@ export const VariantARight: Story = {
   args: {
     variant: "variant_a",
     type: "right",
-    className: "text-primary bg-white",
+    className: "text-primary bg-white w-fit h-fit p-4",
   },
 };
 
@@ -43,7 +43,7 @@ export const VariantBLeft: Story = {
   args: {
     variant: "variant_b",
     type: "left",
-    className: "text-primary bg-white",
+    className: "text-primary bg-white w-fit h-fit p-4",
   },
 };
 
@@ -51,6 +51,6 @@ export const VariantBRight: Story = {
   args: {
     variant: "variant_b",
     type: "right",
-    className: "text-primary bg-white",
+    className: "text-primary bg-white w-fit h-fit p-4",
   },
 };
