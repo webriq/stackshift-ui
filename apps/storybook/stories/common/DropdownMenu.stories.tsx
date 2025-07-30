@@ -232,8 +232,8 @@ export const WithSubMenus: Story = {
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuSub>
-          <DropdownMenuSubTrigger>
-            <UserPlus />
+          <DropdownMenuSubTrigger className="flex items-center gap-2">
+            <UserPlus className="h-4 w-4" />
             Invite users
           </DropdownMenuSubTrigger>
           <DropdownMenuSubContent>
@@ -253,8 +253,8 @@ export const WithSubMenus: Story = {
           </DropdownMenuSubContent>
         </DropdownMenuSub>
         <DropdownMenuSub>
-          <DropdownMenuSubTrigger>
-            <Plus />
+          <DropdownMenuSubTrigger className="flex items-center gap-2">
+            <Plus className="h-4 w-4" />
             Create
           </DropdownMenuSubTrigger>
           <DropdownMenuSubContent>
