@@ -38,34 +38,33 @@ export const Default: Story = {
   render: () => (
     <div className="space-y-4">
       <div className="flex items-center space-x-2">
-        <Checkbox defaultChecked id="terms" />
+        <Checkbox id="terms" />
         <Label htmlFor="terms">Accept terms and conditions</Label>
       </div>
 
-      <div className="flex items-center space-x-2">
-        <Checkbox disabled id="terms" />
-        <Label htmlFor="terms">Accept terms and conditions</Label>
+      <div className="flex flex-col gap-2">
+        <div className="flex items-center space-x-2">
+          <Checkbox defaultChecked id="terms-and-conditions-2" />
+          <Label htmlFor="terms-and-conditions-2">Accept terms and conditions</Label>
+        </div>
+        <p className="text-muted-foreground text-sm pl-6">
+          By checking this box, you agree to our terms and conditions.
+        </p>
       </div>
 
-      <div className="space-y-2">
-        <div className="flex items-center space-x-2">
-          <Checkbox className="w-6 h-6" id="with-size-sm" />
-          <Label htmlFor="with-size-sm" className="text-sm">
-            Accept terms and conditions
-          </Label>
+      <div>
+        <Checkbox disabled id="disable-notification" />
+        <Label htmlFor="disable-notification">Enable notifications</Label>
+      </div>
+
+      <div className="p-4 rounded-lg ring-primary ring-1 bg-primary/10 flex flex-col gap-2">
+        <div className="flex items-center gap-2">
+          <Checkbox defaultChecked id="notifications" />
+          <Label htmlFor="notifications">Enable Notifications</Label>
         </div>
-        <div className="flex items-center space-x-2">
-          <Checkbox className="w-8 h-8" id="with-size-md" />
-          <Label htmlFor="with-size-md" className="text-md">
-            Accept terms and conditions
-          </Label>
-        </div>
-        <div className="flex items-center space-x-2">
-          <Checkbox className="w-12 h-12" id="with-size-lg" />
-          <Label htmlFor="with-size-lg" className="text-lg">
-            Accept terms and conditions
-          </Label>
-        </div>
+        <p className="text-sm text-muted-foreground pl-6">
+          You can enable/disable notifications anytime.
+        </p>
       </div>
     </div>
   ),
