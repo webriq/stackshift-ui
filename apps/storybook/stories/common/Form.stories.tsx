@@ -25,10 +25,11 @@ const meta: Meta<typeof Form> = {
 export default meta;
 type Story = StoryObj<typeof Form>;
 
-const DUMMY_FIELDS = [
+const DUMMY_INPUTS = [
   {
     name: "Name",
     placeholder: "Name",
+    label: "Name",
     _key: "KF4Watp0rdbnQFDzoNJaj",
     type: "inputText",
   },
@@ -37,18 +38,19 @@ const DUMMY_FIELDS = [
     _key: "WncOcChbz0IIlmTXT3Pf4",
     type: "inputEmail",
     name: "Email",
+    label: "Email",
   },
   {
     _key: "544e404591c5",
     type: "inputPassword",
-
+    label: "Password",
     name: "Password",
     placeholder: "*****",
   },
   {
     _key: "HH5DNYs-47nFOLhp7ePSR",
     type: "textarea",
-
+    label: "Message",
     name: "Message...",
     placeholder: "Message...",
   },
@@ -56,7 +58,11 @@ const DUMMY_FIELDS = [
     name: "Add file",
     _key: "JVOHwWl7SKkl_Nz8IBYBC",
     type: "inputFile",
+    label: "Add file",
   },
+];
+
+const DUMMY_RADIO = [
   {
     _key: "0cf9d7383c63",
     type: "inputRadio",
@@ -65,6 +71,9 @@ const DUMMY_FIELDS = [
     label: "Radio label",
     items: ["Option 1", "Option 2", "Option 3"],
   },
+];
+
+const DUMMY_CHECKBOX = [
   {
     name: "Checkbox",
     label: "Checkbox",
@@ -73,6 +82,9 @@ const DUMMY_FIELDS = [
 
     items: ["Option 1", "Option 2", "Option 3"],
   },
+];
+
+const DUMMY_SELECT = [
   {
     _key: "be3fca5ba2c5",
     type: "inputSelect",
@@ -86,20 +98,66 @@ const DUMMY_FIELDS = [
 export const Primary: Story = {
   args: {
     children: (
-      <>
-        {DUMMY_FIELDS.map((field, index) => {
-          return (
-            <FormField
-              label={field?.label}
-              items={field.items}
-              type={field.type as FormTypes}
-              name={field.name}
-              required={false}
-              placeholder={field.placeholder}
-              key={index}
-            />
-          );
-        })}
+      <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-2">
+          {DUMMY_INPUTS.map((field, index) => {
+            return (
+              <FormField
+                label={field?.label}
+                type={field.type as FormTypes}
+                name={field.name}
+                required={false}
+                placeholder={field.placeholder}
+                key={index}
+              />
+            );
+          })}
+        </div>
+        <div className="flex flex-col gap-2">
+          {DUMMY_RADIO.map((field, index) => {
+            return (
+              <FormField
+                label={field?.label}
+                type={field.type as FormTypes}
+                name={field.name}
+                required={false}
+                items={field.items}
+                key={index}
+              />
+            );
+          })}
+        </div>
+
+        <div className="flex flex-col gap-2">
+          {DUMMY_CHECKBOX.map((field, index) => {
+            return (
+              <FormField
+                label={field?.label}
+                type={field.type as FormTypes}
+                name={field.name}
+                required={false}
+                items={field.items}
+                key={index}
+              />
+            );
+          })}
+        </div>
+
+        <div className="flex flex-col gap-2">
+          {DUMMY_SELECT.map((field, index) => {
+            return (
+              <FormField
+                label={field?.label}
+                type={field.type as FormTypes}
+                name={field.name}
+                required={false}
+                items={field.items}
+                key={index}
+              />
+            );
+          })}
+        </div>
+
         <div className="items-center sm:flex sm:justify-between">
           <div>
             <div className="webriq-recaptcha" />
@@ -109,7 +167,7 @@ export const Primary: Story = {
             Submit
           </Button>
         </div>
-      </>
+      </div>
     ),
   },
 };
@@ -117,34 +175,75 @@ export const Primary: Story = {
 export const WithCustomField: Story = {
   args: {
     children: (
-      <>
-        {DUMMY_FIELDS.map(field => {
+      <div className="flex flex-col gap-4">
+        {DUMMY_INPUTS.map((field, index) => {
           if (field.type === "inputText") {
             return (
               <div className="mb-4" key={field?.name}>
-                <Input
+                <FormField
                   className="border border-red-400 border-solid placeholder:text-red-500"
                   placeholder="This is a custom field!"
-                  type={"text"}
+                  type={field.type as FormTypes}
                   name={field.name}
-                  ariaLabel={field.name ?? field.label}
+                  ariaLabel={field.label ?? field.name}
                   label={field.label ?? field.name}
                 />
               </div>
             );
           }
+
           return (
             <FormField
               label={field?.label}
-              items={field.items}
               type={field.type as FormTypes}
               name={field.name}
               required={false}
               placeholder={field.placeholder}
-              key={field?.name}
+              ariaLabel={field.label ?? field.name}
+              key={index}
             />
           );
         })}
+
+        {DUMMY_RADIO.map((field, index) => {
+          return (
+            <FormField
+              label={field?.label}
+              type={field.type as FormTypes}
+              name={field.name}
+              required={false}
+              items={field.items}
+              key={index}
+            />
+          );
+        })}
+
+        {DUMMY_CHECKBOX.map((field, index) => {
+          return (
+            <FormField
+              label={field?.label}
+              type={field.type as FormTypes}
+              name={field.name}
+              required={false}
+              items={field.items}
+              key={index}
+            />
+          );
+        })}
+
+        {DUMMY_SELECT.map((field, index) => {
+          return (
+            <FormField
+              label={field?.label}
+              type={field.type as FormTypes}
+              name={field.name}
+              required={false}
+              items={field.items}
+              key={index}
+            />
+          );
+        })}
+
         <div className="items-center sm:flex sm:justify-between">
           <div>
             <div className="webriq-recaptcha" />
@@ -154,7 +253,7 @@ export const WithCustomField: Story = {
             Submit
           </Button>
         </div>
-      </>
+      </div>
     ),
   },
 };
