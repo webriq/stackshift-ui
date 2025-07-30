@@ -1,4 +1,4 @@
-import { Button, Form, FormField, Input } from "@stackshift-ui/react";
+import { Button, Form, FormField } from "@stackshift-ui/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 type FormTypes =
@@ -163,7 +163,7 @@ export const Primary: Story = {
             <div className="webriq-recaptcha" />
           </div>
 
-          <Button ariaLabel={"Form submit button"} type="submit">
+          <Button aria-label={"Form submit button"} type="submit">
             Submit
           </Button>
         </div>
@@ -249,7 +249,7 @@ export const WithCustomField: Story = {
             <div className="webriq-recaptcha" />
           </div>
 
-          <Button ariaLabel={"Form submit button"} type="submit">
+          <Button aria-label={"Form submit button"} type="submit">
             Submit
           </Button>
         </div>
