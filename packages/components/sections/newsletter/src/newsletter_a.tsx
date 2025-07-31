@@ -96,7 +96,7 @@ function NewsletterForm({ id, fields, thankYouPage, buttonLabel }: FormFields) {
       <Flex align="center" gap={2} className="max-w-md mx-auto">
         <Input
           aria-label={fields[0]?.placeholder ?? fields[0]?.name}
-          className="flex-grow w-full"
+          className="flex-grow w-full bg-white"
           type={getInputType(fields[0]?.type)}
           placeholder={fields[0]?.placeholder}
           name={fields[0]?.name}

@@ -71,12 +71,7 @@ function Buttons({
   const secondaryButtonLink = buildSanityLink(secondaryButton as LabeledRoute);
 
   return (
-    <Flex
-      align="center"
-      justify="center"
-      gap={2}
-      direction="col"
-      className="lg:justify-start md:flex-row">
+    <Flex align="center" justify="center" gap={2} direction="col" className="md:flex-row">
       {primaryButton?.label && (
         <Button variant="default" aria-label={primaryButton?.label} asChild>
           <Link

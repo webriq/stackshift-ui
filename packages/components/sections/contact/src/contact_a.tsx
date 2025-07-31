@@ -181,6 +181,7 @@ function FormFields({
                   placeholder={formFields?.placeholder}
                   required={formFields?.isRequired}
                   {...formFields}
+                  className="bg-white"
                 />
               ) : (
                 <FormField
@@ -190,6 +191,7 @@ function FormFields({
                   placeholder={formFields?.name}
                   required={formFields?.isRequired}
                   {...formFields}
+                  className="bg-white"
                 />
               )}
             </div>

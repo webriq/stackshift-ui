@@ -1,7 +1,6 @@
 import { Button } from "@stackshift-ui/react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { Download, Mail, Plus, Search, Settings, Trash2 } from "lucide-react";
-import { FaArrowRight } from "react-icons/fa";
+import { ArrowRight, Download, Mail, Plus, Search, Settings, Trash2 } from "lucide-react";
 
 const meta: Meta<typeof Button> = {
   title: "Common/Button",
@@ -52,7 +51,7 @@ type Story = StoryObj<typeof Button>;
 export const Default: Story = {
   args: {
     children: "Button",
-    icon: <FaArrowRight />,
+    icon: <ArrowRight />,
   },
   parameters: {
     docs: {
