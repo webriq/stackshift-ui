@@ -30,10 +30,12 @@ function LogoCloudHeader({ title, button }: { title?: string; button?: LabeledRo
       )}
       {button?.label && (
         <Button variant="link" aria-label={button.label} asChild>
-          <ConditionalLink link={button} ariaLabel={button.label}>
+          <ConditionalLink
+            link={button}
+            ariaLabel={button.label}
+            className="bg-primary px-6 py-3 text-white no-underline">
             {button.label}
           </ConditionalLink>
-          {button.label}
         </Button>
       )}
     </Container>
