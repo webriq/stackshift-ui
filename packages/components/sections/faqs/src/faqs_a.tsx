@@ -115,7 +115,7 @@ function FAQs({ items }: { items: AskedQuestion[] }) {
     <AccordionItem
       key={index}
       value={`item-${index + 1}`}
-      className="mb-3 border-b-0 p-6 bg-gray-50 border rounded">
+      className="mb-3 border-b-0 p-6 bg-gray-50 border rounded last:border-b-1">
       <AccordionTrigger
         aria-label={faq?.question || `faqs-question-${index}`}
         className="flex items-center justify-between w-full font-bold text-left border-none font-heading hover:text-gray-600 focus:outline-none px-0 py-0 hover:no-underline">

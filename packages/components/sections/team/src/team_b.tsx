@@ -95,7 +95,7 @@ function TeamMemberCard({ member }: { member?: iTeam }) {
     <Card className="flex flex-col gap-3 md:gap-0 md:flex-row shadow-lg bg-white md:h-96 rounded-md">
       <CardContent className="flex flex-col gap-3 md:gap-0 md:flex-row p-0">
         {member.mainImage?.image && (
-          <div className="w-full md:w-1/2 h-48 md:h-full relative overflow-hidden rounded-md">
+          <div className="w-full md:w-1/2 h-48 md:h-full relative overflow-hidden rounded-l-md">
             <Image
               className="object-cover absolute inset-0 w-full h-full"
               src={`${member.mainImage.image}`}

@@ -166,19 +166,20 @@ function PasswordField({
   togglePassword: () => void;
 }) {
   return (
-    <div className="flex flex-col sm:flex-row gap-2 items-center">
+    <div className="flex flex-col sm:flex-row gap-2 items-center relative">
       <Input
         aria-label={formFields?.placeholder ?? formFields?.name}
         type={showPassword ? "text" : "password"}
         placeholder={formFields?.placeholder}
         name={formFields?.name}
         required={formFields?.isRequired}
+        className="pr-12"
       />
       {/* SVG icon on the right of the password input field */}
       <Button
         variant="unstyled"
         aria-label={showPassword ? "Show password" : "Hide password"}
-        className="focus:outline-none"
+        className="focus:outline-none px-0 py-0 absolute right-4"
         type="button"
         onClick={togglePassword}>
         <span className="block sm:hidden text-right">{showPassword ? "Hide" : "Show"}</span>

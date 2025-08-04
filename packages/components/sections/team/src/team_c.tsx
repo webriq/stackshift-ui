@@ -45,7 +45,7 @@ function TeamMemberCard({ team }: { team?: iTeam[] }) {
               {member.mainImage?.image && (
                 <div>
                   <Image
-                    className="mb-8 h-[345px] w-full object-cover rounded-md"
+                    className="mb-8 h-[345px] w-full object-cover rounded-t-md"
                     sizes="100vw"
                     src={`${member?.mainImage?.image}`}
                     width={345}

@@ -48,23 +48,25 @@ function BlogPosts({ posts }: { posts?: BlogPost[] }) {
   return (
     <Flex gap={4} className="flex-col lg:flex-row">
       <div className="w-full space-y-5 lg:w-1/2">
-        {posts?.slice(count, count + 1)?.map((post, key) => <BlogItem post={post} key={key} />)}
+        {posts?.slice(count, count + 1)?.map((post, key) => (
+          <BlogItem post={post} key={key} />
+        ))}
         <Flex gap={4} className="flex-col lg:flex-row">
-          {posts
-            ?.slice(count + 1, count + 3)
-            ?.map((post, key) => <BlogItem post={post} key={key} />)}
+          {posts?.slice(count + 1, count + 3)?.map((post, key) => (
+            <BlogItem post={post} key={key} />
+          ))}
         </Flex>
       </div>
 
       <div className="w-full space-y-5 lg:w-1/2">
         <Flex gap={4} className="flex-col lg:flex-row">
-          {posts
-            ?.slice(count + 3, count + 5)
-            ?.map((post, key) => <BlogItem post={post} key={key} />)}
+          {posts?.slice(count + 3, count + 5)?.map((post, key) => (
+            <BlogItem post={post} key={key} />
+          ))}
         </Flex>
-        {posts
-          ?.slice(count + 5, blogsPerPage)
-          ?.map((post, key) => <BlogItem post={post} key={key} />)}
+        {posts?.slice(count + 5, blogsPerPage)?.map((post, key) => (
+          <BlogItem post={post} key={key} />
+        ))}
       </div>
     </Flex>
   );
@@ -116,7 +118,7 @@ function BlogItem({ post, key }: { post?: BlogPost; key: number }) {
         </Flex>
 
         {post?.title ? (
-          <CardTitle className="text-lg font-bold text-white transform hover:scale-110 hover:text-secondary motion-reduce:transform-none">
+          <CardTitle className="text-lg font-bold text-white transform hover:text-secondary motion-reduce:transform-none">
             <Link href={`/${post?.link}`} className="line-clamp-2">
               {post?.title}
             </Link>

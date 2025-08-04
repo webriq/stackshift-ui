@@ -44,7 +44,7 @@ function TeamMemberCard({ team }: { team?: iTeam[] }) {
               <CardContent className="w-full h-full flex flex-col gap-3 xl:flex-row p-0">
                 {member.mainImage?.image && (
                   <Image
-                    className="h-full w-full object-cover rounded-md [@media(min-width:320px)]:h-[320px] xl:w-[179px]"
+                    className="h-full w-full object-cover rounded-t-md [@media(min-width:320px)]:h-[320px] xl:w-[179px]"
                     sizes="100vw"
                     src={`${member?.mainImage?.image}`}
                     width={179}

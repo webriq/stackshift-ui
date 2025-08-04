@@ -116,7 +116,9 @@ function SocialMediaContainer({ socialMedia }: { socialMedia?: SocialLink[] }) {
 
   return (
     <div className="order-first mb-4 lg:order-last lg:mb-0">
-      {socialMedia?.map(social => <SocialMediaLink social={social} />)}
+      {socialMedia?.map(social => (
+        <SocialMediaLink social={social} />
+      ))}
     </div>
   );
 }

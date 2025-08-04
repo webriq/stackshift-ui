@@ -51,7 +51,9 @@ function FAQItems({ faqs }: { faqs?: AskedQuestion[] }) {
 
   return (
     <Flex wrap align="stretch">
-      {faqs?.map(faq => <FAQItem key={faq?._key} faq={faq} />)}
+      {faqs?.map(faq => (
+        <FAQItem key={faq?._key} faq={faq} />
+      ))}
     </Flex>
   );
 }
@@ -60,7 +62,7 @@ function FAQItem({ faq }: FAQItemProps) {
   return (
     <Container className="w-full px-0 lg:px-4 mb-8 lg:w-1/2" maxWidth={1000}>
       <Card className="h-full p-4 lg:p-8 bg-white rounded-md">
-        <Flex align="start" className="mb-3 lg:mb-6" gap={3}>
+        <Flex align="center" className="mb-3 lg:mb-6" gap={3}>
           <span className="inline-block p-3 rounded-full bg-primary">
             <QuoteIcon />
           </span>

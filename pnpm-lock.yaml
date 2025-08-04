@@ -928,9 +928,6 @@ importers:
 
   packages/components/common/data-table:
     dependencies:
-      '@radix-ui/react-dropdown-menu':
-        specifier: ^2.1.15
-        version: 2.1.15(@types/react-dom@18.3.7(@types/react@18.3.23))(@types/react@18.3.23)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@stackshift-ui/button':
         specifier: workspace:*
         version: link:../button

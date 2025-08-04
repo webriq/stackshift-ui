@@ -191,7 +191,7 @@ function FormFields({
                   placeholder={formFields?.name}
                   required={formFields?.isRequired}
                   {...formFields}
-                  className="bg-white"
+                  className="bg-white resize-none"
                 />
               )}
             </div>
@@ -222,7 +222,7 @@ function FormFields({
             {form?.buttonLabel && (
               <Button
                 aria-label={form?.buttonLabel ?? "Contact form submit button"}
-                className="inline-block px-6 py-2 mt-5 font-bold leading-loose text-white transition duration-200 rounded-global bg-primary hover:bg-primary-foreground sm:mt-0"
+                className="inline-block px-6 py-2 mt-5 font-bold leading-loose text-white transition duration-200 rounded-global bg-primary hover:scale-105 sm:mt-0"
                 type="submit">
                 {form?.buttonLabel}
               </Button>

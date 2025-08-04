@@ -53,7 +53,7 @@ function LogoSection({ logo }: { logo?: Logo | null }) {
         alt={logo.alt ?? "newsletter-logo"}
         width={48}
         height={48}
-        className="inline-block mb-6 text-3xl font-bold leading-none"
+        className="inline-block text-3xl font-bold leading-none"
       />
     </Link>
   );

@@ -38,7 +38,7 @@ function LogoSection({ logo }: { logo?: Logo }) {
         alt={logo?.alt ?? "callToAction-logo"}
         width={64}
         height={64}
-        className="inline-block mb-6 text-3xl font-bold leading-none"
+        className="inline-block text-3xl font-bold leading-none"
       />
     </Link>
   );

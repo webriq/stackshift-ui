@@ -129,14 +129,14 @@ function FormFields({
 }) {
   return (
     <>
-      <Flex wrap className="-mx-2">
+      <Flex wrap className="-mx-2 lg:gap-0 gap-3">
         {form?.fields?.slice(0, 2).map((formFields, index) => (
           <div className="w-full px-2 lg:w-1/2" key={index}>
             {formFields.type === "inputText" ? (
               <Input
                 placeholder={formFields?.placeholder}
                 required={formFields?.isRequired}
-                className="w-full py-4 text-xs bg-white"
+                className="w-full py-4 text-base bg-white"
                 name={formFields?.name}
                 aria-label={formFields?.label}
                 {...formFields}
@@ -218,9 +218,9 @@ function PasswordField({
   togglePassword: () => void;
 }) {
   return (
-    <div className="flex flex-col sm:flex-row gap-2 sm:items-center">
+    <div className="flex flex-col sm:flex-row gap-2 sm:items-center relative">
       <Input
-        className="py-4 bg-white"
+        className="py-4 bg-white pr-12"
         aria-label={formFields?.placeholder ?? formFields?.name}
         type={showPassword ? "text" : "password"}
         placeholder={formFields?.placeholder}
@@ -231,7 +231,7 @@ function PasswordField({
       <Button
         variant="unstyled"
         aria-label={showPassword ? "Show password" : "Hide password"}
-        className="focus:outline-none"
+        className="focus:outline-none px-0 py-0 absolute right-4"
         type="button"
         onClick={togglePassword}>
         <span className="block sm:hidden text-right">{showPassword ? "Hide" : "Show"}</span>
@@ -279,7 +279,7 @@ function PasswordIcon({ showPassword }: { showPassword: boolean }) {
     <>
       {showPassword ? (
         <svg
-          className="w-5 h-5 my-auto ml-4 text-gray-500"
+          className="w-5 h-5 my-auto text-gray-500"
           xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true"
           role="img"
@@ -295,7 +295,7 @@ function PasswordIcon({ showPassword }: { showPassword: boolean }) {
         </svg>
       ) : (
         <svg
-          className="w-5 h-5 my-auto ml-4 text-gray-500"
+          className="w-5 h-5 my-auto text-gray-500"
           xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true"
           role="img"

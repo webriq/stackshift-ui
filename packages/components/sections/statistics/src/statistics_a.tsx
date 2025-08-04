@@ -27,7 +27,7 @@ function StatisticsItems({ stats }: { stats?: StatItems[] }) {
       {stats.map((items, index) => (
         <div className="w-full px-4 my-8 sm:w-1/4 lg:w-1/4" key={index}>
           <Card className="relative py-10 shadow-md bg-white">
-            <CardContent>
+            <CardContent className="pt-6">
               <Text className="mb-1 text-primary overflow-ellipsis overflow-clip">
                 {items?.label}
               </Text>
