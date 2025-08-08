@@ -71,7 +71,9 @@ function MenuLists({ menu }: { menu?: LabeledRouteWithKey[] }) {
         as="ul"
         align="center"
         justify="center">
-        {menu?.map((links, index) => <MenuList links={links} index={index} />)}
+        {menu?.map((links, index) => (
+          <MenuList links={links} index={index} />
+        ))}
       </Flex>
     </div>
   );
@@ -83,13 +85,13 @@ function MenuList({ links, index }: { links?: LabeledRoute; index?: number }) {
   return (
     <li className="w-full text-center" key={index}>
       <Button
+        as="link"
+        link={links}
         variant="unstyled"
         asChild
         className="text-sm text-center text-black no-underline hover:text-gray-500 whitespace-nowrap"
         aria-label={links?.label}>
-        <ConditionalLink link={links} ariaLabel={links?.label ?? "Footer menu link"}>
-          {links?.label}
-        </ConditionalLink>
+        {links?.label}
       </Button>
     </li>
   );
@@ -100,7 +102,9 @@ function SocialMediaContainer({ socialMedia }: { socialMedia?: SocialLink[] }) {
 
   return (
     <Flex wrap justify="center" align="center" className="gap-5">
-      {socialMedia?.map((social, index) => <SocialMediaLink social={social} key={index} />)}
+      {socialMedia?.map((social, index) => (
+        <SocialMediaLink social={social} key={index} />
+      ))}
     </Flex>
   );
 }

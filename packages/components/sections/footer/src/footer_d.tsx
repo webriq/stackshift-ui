@@ -90,7 +90,9 @@ function MenuSection({ multipleMenus }: { multipleMenus?: any[] }) {
 
   return (
     <div className="flex flex-col sm:flex-row flex-wrap gap-5">
-      {multipleMenus?.map(menu => <MenuLinks key={menu?._key} menu={menu} />)}
+      {multipleMenus?.map(menu => (
+        <MenuLinks key={menu?._key} menu={menu} />
+      ))}
     </div>
   );
 }
@@ -110,13 +112,13 @@ function MenuLinks({ menu }: { menu?: any }) {
           {menu?.links?.map((link: any) => (
             <li key={link?._key}>
               <Button
+                as="link"
+                link={link}
                 variant="unstyled"
                 className="text-gray-500 no-underline hover:text-gray-700 px-0 py-0"
                 aria-label={link?.label}
                 asChild>
-                <ConditionalLink link={link} ariaLabel={link?.label ?? "Footer menu link"}>
-                  {link?.label}
-                </ConditionalLink>
+                {link?.label}
               </Button>
             </li>
           ))}

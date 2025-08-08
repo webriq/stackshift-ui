@@ -1,3 +1,4 @@
+import { Button } from "@stackshift-ui/button";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Image } from "@stackshift-ui/image";
@@ -47,10 +48,10 @@ const NavigationButton = ({ button, hasScrolled }: { button: any; hasScrolled: b
   if (!button?.label) return null;
 
   return (
-    <ConditionalLink
-      ariaLabel={button?.label}
+    <Button
+      as="link"
       link={button}
-      target={button?.linkTarget}
+      variant="unstyled"
       className={`font-body ml-auto p-2.5 md:p-3 transition duration-200 font-medium flex items-center space-x-2 text-left ${
         hasScrolled
           ? "text-white border border-white bg-transparent hover:bg-white hover:text-black"
@@ -66,7 +67,7 @@ const NavigationButton = ({ button, hasScrolled }: { button: any; hasScrolled: b
       <span className="text-sm md:text-base sm:block hidden whitespace-nowrap">
         {button?.label}
       </span>
-    </ConditionalLink>
+    </Button>
   );
 };
 
@@ -201,15 +202,15 @@ const NavigationLink = ({
 }) => {
   if (!link?.multipleRoutes) {
     return (
-      <ConditionalLink
-        ariaLabel={link?.label || ""}
+      <Button
+        as="link"
         link={link}
-        target={link?.linkTarget}
+        variant="unstyled"
         className={`hover:text-secondary font-body text-lg whitespace-nowrap ${
           hasScrolled ? "text-white" : "text-black"
         }`}>
         {link?.label}
-      </ConditionalLink>
+      </Button>
     );
   }
 
@@ -225,15 +226,15 @@ const NavigationLink = ({
             e.stopPropagation();
             handleDropdownChange(dropdown === index ? null : index);
           }}>
-          <ConditionalLink
-            ariaLabel={link?.label || ""}
+          <Button
+            as="link"
             link={link}
-            target={link?.linkTarget}
+            variant="unstyled"
             className={`hover:text-secondary font-body text-lg cursor-pointer ${
               hasScrolled ? "text-white" : "text-black"
             }`}>
             {link?.label}
-          </ConditionalLink>
+          </Button>
 
           <BiChevronDown
             size={24}
@@ -315,13 +316,13 @@ const DropdownMenuItem = ({
       <div className="relative group">
         {mLink?.internalLink || mLink?.externalLink ? (
           <Flex align="center">
-            <ConditionalLink
-              ariaLabel={mLink?.label || ""}
+            <Button
+              as="link"
               link={mLink}
-              target={mLink?.linkTarget}
+              variant="unstyled"
               className="font-body hover:text-secondary text-lg cursor-pointer py-2 pl-4 text-white">
               {mLink?.label}
-            </ConditionalLink>
+            </Button>
             <BiChevronDown
               size={24}
               className="font-bold mt-0.5 cursor-pointer group-hover:translate-y-0.5 transition group-hover:text-secondary text-white"
@@ -432,17 +433,17 @@ const Drawer = ({
               {link?.label}
             </p>
           ) : (
-            <ConditionalLink
-              ariaLabel={link?.label || ""}
+            <Button
+              as="link"
               link={link}
-              target={link?.linkTarget}
+              variant="unstyled"
               className={`text-xl font-body ${
                 hasScrolled ? "text-white" : "text-black"
               } hover:text-secondary`}>
               <p className="w-full h-full" onClick={showMenu}>
                 {link?.label}
               </p>
-            </ConditionalLink>
+            </Button>
           )
         ) : (
           <p

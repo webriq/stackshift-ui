@@ -6,7 +6,7 @@ import { Section } from "@stackshift-ui/section";
 import { Text } from "@stackshift-ui/text";
 import React from "react";
 import { NavigationProps, ResponsiveNavLinksProps } from ".";
-import { ConditionalLink, logoLink } from "./helper";
+import { logoLink } from "./helper";
 import { LabeledRoute, LabeledRouteWithKey, Logo } from "./types";
 
 export default function Navigation_A({
@@ -103,16 +103,12 @@ function NavItem({ link }: { link?: LabeledRoute }) {
   return (
     <li>
       <Button
-        asChild
-        variant="link"
+        as="link"
+        link={link}
+        variant="unstyled"
         aria-label={link?.label}
         className="text-sm text-gray-500 no-underline hover:text-gray-900">
-        <ConditionalLink
-          link={link}
-          ariaLabel={link?.label}
-          className="text-sm text-gray-500 no-underline hover:text-gray-900">
-          {link?.label}
-        </ConditionalLink>
+        {link?.label}
       </Button>
     </li>
   );
@@ -139,13 +135,12 @@ function ResponsiveNavLinks({
               {links?.map((link: any, index: number) => (
                 <li className="mb-1" key={index}>
                   <Button
-                    asChild
-                    variant="link"
+                    as="link"
+                    link={link}
+                    variant="unstyled"
                     aria-label={link?.label}
                     className="block w-full cursor-pointer p-4 text-sm font-semibold text-gray-900 no-underline rounded hover:bg-secondary-foreground hover:text-primary">
-                    <ConditionalLink link={link} ariaLabel={link?.label}>
-                      {link?.label}
-                    </ConditionalLink>
+                    {link?.label}
                   </Button>
                 </li>
               ))}
@@ -156,30 +151,22 @@ function ResponsiveNavLinks({
           <Flex direction="col" className="pt-6">
             {primaryButton?.label ? (
               <Button
-                asChild
+                as="link"
+                link={primaryButton}
                 aria-label={primaryButton?.label}
-                variant="outline"
+                variant="unstyled"
                 className="block w-full px-4 py-3 mb-3 text-xs cursor-pointer font-semibold leading-loose text-center text-gray-900 rounded-global bg-secondary hover:bg-secondary/50">
-                <ConditionalLink
-                  link={primaryButton}
-                  ariaLabel={primaryButton?.label}
-                  className="block w-full px-4 py-3 mb-3 text-xs cursor-pointer font-semibold leading-loose text-center text-gray-900 rounded-global bg-secondary hover:bg-secondary/50">
-                  {primaryButton?.label}
-                </ConditionalLink>
+                {primaryButton?.label}
               </Button>
             ) : null}
             {secondaryButton?.label ? (
               <Button
-                asChild
+                as="link"
+                link={secondaryButton}
                 aria-label={secondaryButton?.label}
-                variant="link"
+                variant="unstyled"
                 className={`block w-full px-4 py-3 mb-2 cursor-pointer leading-loose text-xs text-center font-semibold bg-primary hover:bg-primary-foreground rounded-global`}>
-                <ConditionalLink
-                  link={secondaryButton}
-                  ariaLabel={secondaryButton?.label}
-                  className={`block w-full px-4 py-3 mb-2 cursor-pointer leading-loose text-xs text-center font-semibold bg-primary hover:bg-primary-foreground rounded-global`}>
-                  {secondaryButton?.label}
-                </ConditionalLink>
+                {secondaryButton?.label}
               </Button>
             ) : null}
           </Flex>
@@ -222,24 +209,22 @@ function Buttons({
     <Flex align="center" gap={4}>
       {primaryButton?.label ? (
         <Button
-          asChild
+          as="link"
+          link={primaryButton}
           aria-label={primaryButton?.label}
-          variant="outline"
+          variant="unstyled"
           className="hidden lg:flex px-4 py-3 leading-loose text-center font-semibold text-secondary-foreground rounded-global bg-secondary hover:bg-secondary/50">
-          <ConditionalLink link={primaryButton} ariaLabel={primaryButton?.label}>
-            {primaryButton?.label}
-          </ConditionalLink>
+          {primaryButton?.label}
         </Button>
       ) : null}
       {secondaryButton?.label ? (
         <Button
-          asChild
+          as="link"
+          link={secondaryButton}
           aria-label={secondaryButton?.label}
-          variant="default"
+          variant="unstyled"
           className="hidden lg:flex px-4 py-3 leading-loose text-center font-semibold text-primary-foreground bg-primary hover:bg-primary/50 rounded-global">
-          <ConditionalLink link={secondaryButton} ariaLabel={secondaryButton?.label}>
-            {secondaryButton?.label}
-          </ConditionalLink>
+          {secondaryButton?.label}
         </Button>
       ) : null}
     </Flex>

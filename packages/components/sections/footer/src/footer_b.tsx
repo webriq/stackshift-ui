@@ -33,7 +33,7 @@ function LogoSection({ logo }: { logo?: Logo }) {
   if (!logo?.image) return null;
 
   return (
-    <div className="mb-8 xl:mb-0 w-full lg:w-1/5">
+    <div className="w-full lg:w-1/5">
       <Link
         aria-label={logoLink(logo) === "/" ? "Go to home page" : `Go to ${logoLink(logo)}`}
         className="w-40 h-14 flex items-center"
@@ -51,7 +51,7 @@ function MenuLists({ menu }: { menu?: LabeledRouteWithKey[] }) {
 
   return (
     <div className="w-full lg:w-auto">
-      <Flex wrap align="center" justify="between" as="ul" gap={5} className="mt-8">
+      <Flex wrap align="center" justify="between" as="ul" gap={5}>
         {menu?.map((links, index, { length }) => (
           <React.Fragment key={links?._key || index}>
             <MenuList links={links} />
@@ -69,13 +69,13 @@ function MenuList({ links, index }: { links?: LabeledRoute; index?: number }) {
   return (
     <li className="w-full mb-2 md:mb-0 md:w-auto" key={index}>
       <Button
+        as="link"
+        link={links}
         variant="unstyled"
         className="text-gray-500 no-underline lg:text-sm hover:text-gray-700"
         aria-label={links?.label}
         asChild>
-        <ConditionalLink link={links} ariaLabel={links?.label ?? "Footer menu link"}>
-          {links?.label}
-        </ConditionalLink>
+        {links?.label}
       </Button>
     </li>
   );

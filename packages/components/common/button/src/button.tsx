@@ -1,8 +1,14 @@
 import { Slot } from "@radix-ui/react-slot";
+import { Link } from "@stackshift-ui/link";
+import {
+  buildSanityLink,
+  cn,
+  DefaultComponent,
+  useStackShiftUIComponents,
+} from "@stackshift-ui/system";
 import { cva, type VariantProps } from "class-variance-authority";
 import * as React from "react";
-
-import { cn, DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
+import { LabeledRoute } from "./types";
 
 const displayName = "Button";
 
@@ -34,13 +40,26 @@ const buttonVariants = cva(
   },
 );
 
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
-  asChild?: boolean;
-  iconPosition?: "left" | "right";
-  icon?: React.ReactNode;
-}
+type BaseButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
+  VariantProps<typeof buttonVariants> & {
+    asChild?: boolean;
+    iconPosition?: "left" | "right";
+    icon?: React.ReactNode;
+    className?: string;
+    children?: React.ReactNode;
+  };
+
+type LinkButtonProps = BaseButtonProps & {
+  as: "link";
+  link: LabeledRoute;
+};
+
+type DefaultButtonProps = BaseButtonProps & {
+  as?: undefined;
+  link?: never;
+};
+
+export type ButtonProps = LinkButtonProps | DefaultButtonProps;
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
@@ -50,6 +69,27 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
 
     const Comp = asChild ? Slot : "button";
+
+    if (props.as === "link") {
+      const { link, ...rest } = props as ButtonProps;
+      const anchorProps = rest as React.AnchorHTMLAttributes<HTMLAnchorElement>;
+
+      if (!link) return;
+
+      const processedLink = buildSanityLink(link);
+
+      return (
+        <Link
+          className={cn(buttonVariants({ variant, size, className }))}
+          aria-label={link.ariaLabel}
+          href={processedLink.href}
+          target={processedLink.target}
+          rel={processedLink.rel}
+          {...anchorProps}>
+          {children}
+        </Link>
+      );
+    }
 
     return (
       <Component

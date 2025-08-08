@@ -177,7 +177,9 @@ const MobileMenuContent = ({ data, showMobileMenu, setShowMobileMenu }: MobileMe
       ref={ref}
       className="fixed w-[75%] h-screen top-0 right-0 bg-white md:hidden z-50 py-10 px-5 overflow-y-auto">
       <Accordion>
-        {data?.map(item => <MobileMenuContentItem key={item._key} megaMenu={item} />)}
+        {data?.map(item => (
+          <MobileMenuContentItem key={item._key} megaMenu={item} />
+        ))}
       </Accordion>
     </div>
   );
@@ -222,14 +224,11 @@ const MobileMenuContentItem = React.memo(({ megaMenu }: MobileMenuContentItemPro
                   {groupedLinksItem.links?.map(link => (
                     <Button
                       key={`MobileMenuContent-Item-Group-Link-${link._key}`}
-                      asChild
+                      as="link"
                       variant="ghost"
+                      link={link}
                       className="text-black text-sm font-normal font-heading-kb leading-[30px] hover:underline block ml-4">
-                      <ConditionalLink link={link} ariaLabel={link.label ?? "Navigation link"}>
-                        <ConditionalLink link={link} ariaLabel={link.label ?? "Navigation link"}>
-                          {link.label}
-                        </ConditionalLink>
-                      </ConditionalLink>
+                      {link.label}
                     </Button>
                   ))}
                 </div>
@@ -241,24 +240,21 @@ const MobileMenuContentItem = React.memo(({ megaMenu }: MobileMenuContentItemPro
         {megaMenu.showcaseLink?.map((link, i) => (
           <div key={`MobileMenuContent-Item-Images-${link._key}-${i}`} className="mt-4 pl-4">
             <Button
-              asChild
+              as="link"
               variant="ghost"
+              link={link.primaryButton}
               className="text-black text-sm font-normal font-heading-kb leading-[30px]">
-              <ConditionalLink
-                link={link.primaryButton}
-                ariaLabel={link.primaryButton?.label ?? "Navigation link"}>
-                <Flex direction="col" gap={3}>
-                  <Image
-                    key={i}
-                    src={link.mainImage?.image}
-                    alt={link.mainImage?.alt ?? ""}
-                    width={200}
-                    height={150}
-                    className="w-[188px] h-[147px] object-cover object-center"
-                  />
-                  {link.primaryButton?.label}
-                </Flex>
-              </ConditionalLink>
+              <Flex direction="col" gap={3}>
+                <Image
+                  key={i}
+                  src={link.mainImage?.image}
+                  alt={link.mainImage?.alt ?? ""}
+                  width={200}
+                  height={150}
+                  className="w-[188px] h-[147px] object-cover object-center"
+                />
+                {link.primaryButton?.label}
+              </Flex>
             </Button>
           </div>
         ))}
@@ -418,10 +414,8 @@ const NavItem = ({ link, isIcon }: NavItemProps) => {
 
   return (
     <li>
-      <Button variant="unstyled" asChild className="text-sm font-label tracking-wide">
-        <ConditionalLink link={link} ariaLabel={link?.label ?? "Navigation link"}>
-          {!isIcon ? link?.label : icon}
-        </ConditionalLink>
+      <Button as="link" link={link} variant="unstyled" className="text-sm font-label tracking-wide">
+        {!isIcon ? link?.label : icon}
       </Button>
     </li>
   );
@@ -499,7 +493,6 @@ interface MegaMenuNavLinkProps {
 const MegaMenuNavLink = ({ link, className }: MegaMenuNavLinkProps) => {
   return (
     <Button
-      asChild
       variant="unstyled"
       className={cn(
         "relative text-black text-sm font-normal font-label uppercase tracking-widest group",
@@ -676,16 +669,14 @@ function MegaDropdownGroupedLinks({ groupedLinks }: { groupedLinks: LabeledRoute
                         {link.links?.map((link: any, i: number) => {
                           return (
                             <Button
+                              as="link"
+                              link={link}
                               key={`MegaDropdownContent-Item-Link-${link._key}-${i}`}
                               aria-label={link.label ?? ""}
                               variant="unstyled"
                               asChild
                               className="text-black text-sm font-normal font-heading-kb leading-[30px] hover:underline">
-                              <ConditionalLink
-                                link={link}
-                                ariaLabel={link.label ?? "Navigation link"}>
-                                {link?.label}
-                              </ConditionalLink>
+                              {link?.label}
                             </Button>
                           );
                         })}
@@ -717,25 +708,23 @@ function MegaDropdownShowcaseLinks({
 
         return (
           <Button
+            as="link"
+            link={link.primaryButton}
             key={`MegaDropdownContent-Item-Images-${link._key}-${i}`}
             aria-label={link.primaryButton?.label ?? ""}
             variant="unstyled"
             asChild
             className="text-center text-black text-sm font-normal font-heading-kb leading-[30px] hover:underline">
-            <ConditionalLink
-              link={link.primaryButton}
-              ariaLabel={link.primaryButton?.label ?? "Navigation link"}>
-              <Flex direction="col" align="center" justify="center" gap={3}>
-                <Image
-                  key={i}
-                  src={imageUrl}
-                  alt={link.mainImage?.alt ?? ""}
-                  width={500}
-                  height={500}
-                  className="w-[188px] h-[147px] object-cover object-center"></Image>
-                {link.primaryButton?.label}
-              </Flex>
-            </ConditionalLink>
+            <Flex direction="col" align="center" justify="center" gap={3}>
+              <Image
+                key={i}
+                src={imageUrl}
+                alt={link.mainImage?.alt ?? ""}
+                width={500}
+                height={500}
+                className="w-[188px] h-[147px] object-cover object-center"></Image>
+              {link.primaryButton?.label}
+            </Flex>
           </Button>
         );
       })}

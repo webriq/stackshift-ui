@@ -70,6 +70,11 @@ function Buttons({
       direction="col"
       className="lg:justify-start md:flex-row">
       {primaryButton?.label && (
+        <Button as="link" link={primaryButton}>
+          {primaryButton?.label}
+        </Button>
+      )}
+      {primaryButton?.label && (
         <Button variant="default" aria-label={primaryButton?.label} asChild>
           <Link
             href={primaryButtonLink.href}

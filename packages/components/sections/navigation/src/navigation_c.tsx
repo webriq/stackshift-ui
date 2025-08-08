@@ -67,16 +67,12 @@ function NavItem({ link }: { link?: LabeledRouteWithKey }) {
   return (
     <li>
       <Button
+        as="link"
+        link={link}
         variant="unstyled"
-        asChild
         aria-label={link?.label}
         className="text-sm text-gray-500 no-underline hover:text-gray-900">
-        <ConditionalLink
-          link={link}
-          ariaLabel={link?.label || "Navigation link"}
-          className="text-sm text-gray-500 no-underline hover:text-gray-900">
-          {link?.label}
-        </ConditionalLink>
+        {link?.label}
       </Button>
     </li>
   );
@@ -134,22 +130,20 @@ function Buttons({
     <div className="hidden lg:text-right lg:block lg:w-1/3">
       {primaryButton?.label && (
         <Button
-          asChild
+          as="link"
+          link={primaryButton}
           aria-label={primaryButton?.label}
           className="px-4 py-3 text-secondary-foreground lg:ml-auto lg:mr-3 font-semibold rounded-global bg-secondary hover:bg-secondary/50">
-          <ConditionalLink link={primaryButton} ariaLabel={primaryButton?.label}>
-            {primaryButton?.label}
-          </ConditionalLink>
+          {primaryButton?.label}
         </Button>
       )}
       {secondaryButton?.label && (
         <Button
-          asChild
+          as="link"
+          link={secondaryButton}
           aria-label={secondaryButton?.label}
           className="px-4 py-3 leading-loose text-center text-primary-foreground font-semibold bg-primary hover:bg-primary/50 rounded-global">
-          <ConditionalLink link={secondaryButton} ariaLabel={secondaryButton?.label}>
-            {secondaryButton?.label}
-          </ConditionalLink>
+          {secondaryButton?.label}
         </Button>
       )}
     </div>
@@ -210,15 +204,11 @@ function ResponsiveNavLinks({
               links?.map((link, index) => (
                 <li className="mb-1" key={index}>
                   <Button
-                    asChild
+                    as="link"
+                    link={link}
                     aria-label={link?.label}
                     className="block p-4 text-sm font-semibold text-gray-700 no-underline rounded hover:bg-secondary-foreground hover:text-primary">
-                    <ConditionalLink
-                      link={link}
-                      ariaLabel={link?.label || "Navigation link"}
-                      className="block p-4 text-sm font-semibold text-gray-700 no-underline rounded hover:bg-secondary-foreground hover:text-primary">
-                      {link?.label}
-                    </ConditionalLink>
+                    {link?.label}
                   </Button>
                 </li>
               ))}
@@ -228,28 +218,20 @@ function ResponsiveNavLinks({
           <div className="pt-6">
             {primaryButton?.label && (
               <Button
-                asChild
+                as="link"
+                link={primaryButton}
                 aria-label={primaryButton?.label}
                 className="block px-4 py-3 mb-2 text-gray-900 text-center lg:ml-auto lg:mr-3 font-semibold rounded-global bg-secondary hover:bg-secondary/50">
-                <ConditionalLink
-                  link={primaryButton}
-                  ariaLabel={primaryButton?.label}
-                  className="block px-4 py-3 mb-2 text-gray-900 text-center lg:ml-auto lg:mr-3 font-semibold rounded-global bg-secondary hover:bg-secondary/50">
-                  {primaryButton?.label}
-                </ConditionalLink>
+                {primaryButton?.label}
               </Button>
             )}
             {secondaryButton?.label && (
               <Button
-                asChild
+                as="link"
+                link={secondaryButton}
                 aria-label={secondaryButton?.label}
                 className="block px-4 py-3 mb-2 leading-loose text-center text-white font-semibold bg-primary hover:bg-primary-foreground rounded-global">
-                <ConditionalLink
-                  link={secondaryButton}
-                  ariaLabel={secondaryButton?.label}
-                  className="block px-4 py-3 mb-2 leading-loose text-center text-white font-semibold bg-primary hover:bg-primary-foreground rounded-global">
-                  {secondaryButton?.label}
-                </ConditionalLink>
+                {secondaryButton?.label}
               </Button>
             )}
           </div>
