@@ -1,5 +1,22 @@
 # @stackshift-ui/form-field
 
+## 7.0.0-beta.4
+
+### Patch Changes
+
+- bump pre publish version
+- Updated dependencies
+  - @stackshift-ui/checkbox-group@7.0.0-beta.3
+  - @stackshift-ui/radio-group@7.0.0-beta.3
+  - @stackshift-ui/checkbox@7.0.0-beta.3
+  - @stackshift-ui/textarea@7.0.0-beta.3
+  - @stackshift-ui/select@7.0.0-beta.3
+  - @stackshift-ui/input@7.0.0-beta.3
+  - @stackshift-ui/label@1.0.0-beta.4
+  - @stackshift-ui/radio@7.0.0-beta.3
+  - @stackshift-ui/system@6.1.0-beta.3
+  - @stackshift-ui/scripts@6.1.0-beta.2
+
 ## 7.0.0-beta.3
 
 ### Minor Changes

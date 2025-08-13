@@ -1,5 +1,11 @@
 # @stackshift-ui/tailwind-config
 
+## 2.1.0-beta.2
+
+### Patch Changes
+
+- bump pre publish version
+
 ## 2.1.0-beta.1
 
 ### Minor Changes

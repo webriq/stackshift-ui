@@ -1,5 +1,16 @@
 # @stackshift-ui/avatar
 
+## 7.0.0-beta.3
+
+### Patch Changes
+
+- bump pre publish version
+- Updated dependencies
+  - @stackshift-ui/image@6.1.0-beta.3
+  - @stackshift-ui/flex@7.0.0-beta.3
+  - @stackshift-ui/system@6.1.0-beta.3
+  - @stackshift-ui/scripts@6.1.0-beta.2
+
 ## 7.0.0-beta.2
 
 ### Minor Changes

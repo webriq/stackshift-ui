@@ -1,5 +1,22 @@
 # @stackshift-ui/app-promo
 
+## 7.0.0-beta.5
+
+### Patch Changes
+
+- bump pre publish version
+- Updated dependencies
+  - @stackshift-ui/swiper-button@7.0.0-beta.5
+  - @stackshift-ui/container@7.0.0-beta.3
+  - @stackshift-ui/heading@7.0.0-beta.3
+  - @stackshift-ui/section@7.0.0-beta.3
+  - @stackshift-ui/image@6.1.0-beta.3
+  - @stackshift-ui/link@6.1.0-beta.3
+  - @stackshift-ui/text@7.0.0-beta.3
+  - @stackshift-ui/flex@7.0.0-beta.3
+  - @stackshift-ui/system@6.1.0-beta.3
+  - @stackshift-ui/scripts@6.1.0-beta.2
+
 ## 7.0.0-beta.4
 
 ### Minor Changes
