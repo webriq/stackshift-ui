@@ -1,5 +1,11 @@
 # @stackshift-ui/image
 
+## 6.1.0-beta.4
+
+### Patch Changes
+
+- Fix: Image Error on Priority Attribute
+
 ## 6.1.0-beta.3
 
 ### Patch Changes

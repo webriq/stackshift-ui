@@ -1,5 +1,12 @@
 # @stackshift-ui/logo-cloud
 
+## 6.1.0-beta.7
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/image@6.1.0-beta.4
+
 ## 6.1.0-beta.6
 
 ### Patch Changes

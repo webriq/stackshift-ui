@@ -1,5 +1,28 @@
 # @stackshift-ui/react
 
+## 7.0.0-beta.7
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/image@6.1.0-beta.4
+  - @stackshift-ui/avatar@7.0.0-beta.4
+  - @stackshift-ui/blockstyle@7.0.0-beta.4
+  - @stackshift-ui/app-promo@7.0.0-beta.6
+  - @stackshift-ui/blog@7.0.0-beta.6
+  - @stackshift-ui/call-to-action@7.0.0-beta.7
+  - @stackshift-ui/contact@7.0.0-beta.7
+  - @stackshift-ui/features@7.0.0-beta.7
+  - @stackshift-ui/footer@7.0.0-beta.6
+  - @stackshift-ui/header@7.0.0-beta.7
+  - @stackshift-ui/logo-cloud@6.1.0-beta.7
+  - @stackshift-ui/navigation@7.0.0-beta.6
+  - @stackshift-ui/newsletter@7.0.0-beta.6
+  - @stackshift-ui/portfolio@7.0.0-beta.6
+  - @stackshift-ui/signin-signup@7.0.0-beta.7
+  - @stackshift-ui/team@7.0.0-beta.6
+  - @stackshift-ui/testimonial@7.0.0-beta.6
+
 ## 7.0.0-beta.6
 
 ### Patch Changes

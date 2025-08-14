@@ -1,7 +1,7 @@
 {
   "name": "@stackshift-ui/blog",
   "description": "",
-  "version": "7.0.0-beta.5",
+  "version": "7.0.0-beta.6",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",
