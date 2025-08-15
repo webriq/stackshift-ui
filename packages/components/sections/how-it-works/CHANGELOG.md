@@ -1,5 +1,11 @@
 # @stackshift-ui/how-it-works
 
+## 7.0.0-beta.4
+
+### Patch Changes
+
+- fix ui issues
+
 ## 7.0.0-beta.3
 
 ### Patch Changes

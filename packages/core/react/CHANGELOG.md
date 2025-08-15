@@ -1,5 +1,20 @@
 # @stackshift-ui/react
 
+## 7.0.0-beta.8
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/signin-signup@7.0.0-beta.8
+  - @stackshift-ui/how-it-works@7.0.0-beta.4
+  - @stackshift-ui/navigation@7.0.0-beta.7
+  - @stackshift-ui/newsletter@7.0.0-beta.7
+  - @stackshift-ui/portfolio@7.0.0-beta.7
+  - @stackshift-ui/features@7.0.0-beta.8
+  - @stackshift-ui/footer@7.0.0-beta.7
+  - @stackshift-ui/header@7.0.0-beta.8
+  - @stackshift-ui/call-to-action@7.0.0-beta.8
+
 ## 7.0.0-beta.7
 
 ### Patch Changes

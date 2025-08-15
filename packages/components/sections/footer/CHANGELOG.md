@@ -1,5 +1,11 @@
 # @stackshift-ui/footer
 
+## 7.0.0-beta.7
+
+### Patch Changes
+
+- fix ui issues
+
 ## 7.0.0-beta.6
 
 ### Patch Changes

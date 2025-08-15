@@ -1,5 +1,13 @@
 # @stackshift-ui/header
 
+## 7.0.0-beta.8
+
+### Patch Changes
+
+- fix ui issues
+- Updated dependencies
+  - @stackshift-ui/signin-signup@7.0.0-beta.8
+
 ## 7.0.0-beta.7
 
 ### Patch Changes
