@@ -208,19 +208,15 @@ function FormButtonLabel({ form }: { form?: iForm }) {
 function SigninLink({ signInLink }: { signInLink?: LabeledRoute }) {
   if (!signInLink?.label) return null;
 
-  const link = buildSanityLink(signInLink);
-
   return (
     <span className="text-xs text-gray-900">
       <span>Already have an account?</span>{" "}
       <Button
+        as="link"
+        link={signInLink}
         variant="link"
-        className="text-xs text-primary hover:underline"
-        aria-label={signInLink?.label}
-        asChild>
-        <Link href={link.href} target={link.target} rel={link.rel}>
-          {signInLink?.label}
-        </Link>
+        className="text-xs text-primary hover:underline">
+        {signInLink?.label}
       </Button>
     </span>
   );
@@ -231,28 +227,24 @@ function FormLinks({ formLinks }: { formLinks?: LabeledRoute[] }) {
 
   return (
     <p className="text-xs text-center text-secondary-foreground">
-      {formLinks?.map((link_, index, { length }) => {
-        const linkObj = buildSanityLink(link_);
-
-        return (
-          <span key={index}>
-            <Button
-              variant="link"
-              className="text-xs underline text-secondary-foreground hover:text-gray-50"
-              aria-label={link_?.label}
-              asChild>
-              <Link href={linkObj?.href} target={linkObj?.target} rel={linkObj?.rel}>
-                {link_?.label}
-              </Link>
-            </Button>
-            {index === length - 1 ? null : index === length - 2 ? (
-              <span>&nbsp;and&nbsp;</span>
-            ) : (
-              <span>&nbsp;,&nbsp;</span>
-            )}
-          </span>
-        );
-      })}
+      {formLinks?.map((link_, index, { length }) => (
+        <span key={index}>
+          <Button
+            as="link"
+            link={link_}
+            variant="link"
+            className="text-xs underline text-secondary-foreground hover:text-gray-50"
+            aria-label={link_?.label}
+            asChild>
+            {link_?.label}
+          </Button>
+          {index === length - 1 ? null : index === length - 2 ? (
+            <span>&nbsp;and&nbsp;</span>
+          ) : (
+            <span>&nbsp;,&nbsp;</span>
+          )}
+        </span>
+      ))}
     </p>
   );
 }

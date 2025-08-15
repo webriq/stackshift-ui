@@ -3,12 +3,9 @@ import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
 import { Image } from "@stackshift-ui/image";
-import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
 import { Text } from "@stackshift-ui/text";
 import React from "react";
-
-import { buildSanityLink } from "@stackshift-ui/system";
 import { PortfolioProps } from ".";
 import { Content, LabeledRoute, PortfoliosWithCategories } from "./types";
 
@@ -17,6 +14,7 @@ export default function Portfolio_A({
   title,
   portfoliosWithCategory,
   length = 8,
+  primaryButton,
 }: PortfolioProps): React.JSX.Element {
   const portfolioLength = length; //set initial number of portfolios to display for this variant
   const [activeTab, setActiveTab] = React.useState(portfoliosWithCategory?.[0]?.category); //set the first index category as initial value
@@ -39,7 +37,7 @@ export default function Portfolio_A({
           portfolios={portfoliosPerCategory?.content}
           portfolioLength={portfolioLength}
         />
-        <PrimaryButton button={portfoliosPerCategory?.primaryButton} />
+        <PrimaryButton button={primaryButton} />
       </Container>
     </Section>
   );
@@ -67,14 +65,10 @@ function CaptionAndTitleText({
 function PrimaryButton({ button }: { button?: LabeledRoute | null }) {
   if (!button?.label) return null;
 
-  const link = buildSanityLink(button);
-
   return (
     <div className="text-center">
-      <Button asChild aria-label={button?.label}>
-        <Link href={link.href} target={link.target} rel={link.rel}>
-          {button?.label}
-        </Link>
+      <Button as="link" link={button}>
+        {button?.label}
       </Button>
     </div>
   );
@@ -119,36 +113,31 @@ function PortfolioContent({
 
   return (
     <Flex wrap className="mb-8">
-      {portfolios?.slice(0, portfolioLength)?.map((content, index: number) => {
-        const link = buildSanityLink(content.primaryButton as LabeledRoute);
-
-        return (
-          <Flex className="w-full space-x-5 px-4 mb-8 sm:w-1/2 lg:w-1/4" key={content?._key}>
-            <div className="relative mx-auto h-[256px] w-[332px] overflow-hidden rounded-md">
-              {content?.mainImage?.image && (
-                <Image
-                  className="object-cover w-full h-full"
-                  src={content?.mainImage?.image}
-                  alt={content?.mainImage?.alt ?? `portfolio-image-${index}`}
-                />
+      {portfolios?.slice(0, portfolioLength)?.map((content, index: number) => (
+        <Flex className="w-full space-x-5 px-4 mb-8 sm:w-1/2 lg:w-1/4" key={content?._key}>
+          <div className="relative mx-auto h-[256px] w-[332px] overflow-hidden rounded-md">
+            {content?.mainImage?.image && (
+              <Image
+                className="object-cover w-full h-full"
+                src={content?.mainImage?.image}
+                alt={content?.mainImage?.alt ?? `portfolio-image-${index}`}
+              />
+            )}
+            <div className="absolute inset-0 z-10 flex items-center justify-center duration-300 bg-slate-900 rounded-md opacity-0 hover:opacity-75">
+              {content?.primaryButton?.label && (
+                <Button
+                  as="link"
+                  link={content?.primaryButton}
+                  variant="outline"
+                  aria-abel={content?.primaryButton?.label}
+                  className="w-fit h-fit flex items-center justify-center bg-transparent border-secondary outline text-white hover:bg-secondary/20 hover:border-secondary/20 rounded-global hover:text-secondary-foreground font-bold transition duration-200 px-3 py-4">
+                  {content?.primaryButton?.label}
+                </Button>
               )}
-              <div className="absolute inset-0 z-10 flex items-center justify-center duration-300 bg-slate-900 rounded-md opacity-0 hover:opacity-75">
-                {content?.primaryButton?.label && (
-                  <Button
-                    asChild
-                    variant="outline"
-                    aria-abel={content?.primaryButton?.label}
-                    className="w-fit h-fit flex items-center justify-center bg-transparent border-secondary outline text-white hover:bg-secondary/20 hover:border-secondary/20 rounded-global hover:text-secondary-foreground font-bold transition duration-200 px-3 py-4">
-                    <Link href={link.href} target={link.target} rel={link.rel}>
-                      {content?.primaryButton?.label}
-                    </Link>
-                  </Button>
-                )}
-              </div>
             </div>
-          </Flex>
-        );
-      })}
+          </div>
+        </Flex>
+      ))}
     </Flex>
   );
 }

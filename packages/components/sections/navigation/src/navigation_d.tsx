@@ -7,7 +7,7 @@ import { Section } from "@stackshift-ui/section";
 import { Text } from "@stackshift-ui/text";
 import React from "react";
 import { NavigationProps, ResponsiveNavLinksProps } from ".";
-import { ConditionalLink, logoLink } from "./helper";
+import { logoLink } from "./helper";
 import { LabeledRoute, LabeledRouteWithKey, Logo } from "./types";
 
 export default function Navigation_D({

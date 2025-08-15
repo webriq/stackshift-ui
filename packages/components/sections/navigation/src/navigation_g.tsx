@@ -1,13 +1,11 @@
+import { animated, useSpring } from "@react-spring/web";
 import { Image } from "@stackshift-ui/image";
 import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
 import { SocialIcons } from "@stackshift-ui/social-icons";
+import { useWindowScroll } from "@uidotdev/usehooks";
 import React, { Fragment, useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
-
-import { animated, useSpring } from "@react-spring/web";
-import { useWindowScroll } from "@uidotdev/usehooks";
-
 import { NavigationProps } from "./";
 import { logoLink } from "./helper";
 import { Socials } from "./types";

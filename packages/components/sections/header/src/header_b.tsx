@@ -3,13 +3,11 @@ import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
 import { Image } from "@stackshift-ui/image";
-import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
-import { buildSanityLink } from "@stackshift-ui/system";
 import { Text } from "@stackshift-ui/text";
 import React from "react";
 import { ButtonProps, HeaderProps } from ".";
-import { Images, LabeledRoute } from "./types";
+import { Images } from "./types";
 
 export default function Header_B({
   images,
@@ -59,9 +57,6 @@ function Buttons({
   primaryButton?: ButtonProps;
   secondaryButton?: ButtonProps;
 }) {
-  const primaryButtonLink = buildSanityLink(primaryButton as LabeledRoute);
-  const secondaryButtonLink = buildSanityLink(secondaryButton as LabeledRoute);
-
   return (
     <Flex
       align="center"
@@ -74,28 +69,12 @@ function Buttons({
           {primaryButton?.label}
         </Button>
       )}
-      {primaryButton?.label && (
-        <Button variant="default" aria-label={primaryButton?.label} asChild>
-          <Link
-            href={primaryButtonLink.href}
-            target={primaryButtonLink.target}
-            rel={primaryButtonLink.rel}>
-            {primaryButton?.label}
-          </Link>
-        </Button>
-      )}
       {secondaryButton?.label && (
         <Button
-          variant="secondary"
-          className="bg-transparent border hover:bg-gray-300 inline-block font-default text-default transition duration-200 rounded-global"
-          aria-label={secondaryButton?.label}
-          asChild>
-          <Link
-            href={secondaryButtonLink.href}
-            target={secondaryButtonLink.target}
-            rel={secondaryButtonLink.rel}>
-            {secondaryButton?.label}
-          </Link>
+          as="link"
+          link={secondaryButton}
+          className="bg-transparent border hover:bg-gray-300 inline-block font-default text-default transition duration-200 rounded-global">
+          {secondaryButton?.label}
         </Button>
       )}
     </Flex>

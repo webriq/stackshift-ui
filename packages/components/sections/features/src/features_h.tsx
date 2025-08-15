@@ -4,7 +4,6 @@ import { Heading } from "@stackshift-ui/heading";
 import { Image } from "@stackshift-ui/image";
 import { Section } from "@stackshift-ui/section";
 import { Text } from "@stackshift-ui/text";
-import React from "react";
 import { FeaturesProps } from ".";
 import { ArrayOfImageTitleAndText } from "./types";
 

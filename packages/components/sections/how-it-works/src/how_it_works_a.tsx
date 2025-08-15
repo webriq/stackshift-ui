@@ -4,7 +4,6 @@ import { Heading } from "@stackshift-ui/heading";
 import { Section } from "@stackshift-ui/section";
 import { Text } from "@stackshift-ui/text";
 import { YoutubeVideo } from "@stackshift-ui/youtube-video";
-
 import { HowItWorksProps } from ".";
 import { ArrayOfTitleAndText } from "./types";
 
@@ -86,7 +85,9 @@ function StepItems({ steps }: { steps?: ArrayOfTitleAndText[] }) {
 
   return (
     <Flex wrap>
-      {steps?.map((step, index) => <StepItem index={index} step={step} key={step._key} />)}
+      {steps?.map((step, index) => (
+        <StepItem index={index} step={step} key={step._key} />
+      ))}
     </Flex>
   );
 }

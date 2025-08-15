@@ -5,10 +5,9 @@ import { Heading } from "@stackshift-ui/heading";
 import { Image } from "@stackshift-ui/image";
 import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
+import { buildSanityLink } from "@stackshift-ui/system";
 import { Text } from "@stackshift-ui/text";
 import React from "react";
-
-import { buildSanityLink } from "@stackshift-ui/system";
 import { PortfolioProps } from ".";
 import { useMediaQuery } from "./helper";
 import { Content, LabeledRoute, PortfoliosWithCategories } from "./types";
@@ -18,6 +17,7 @@ export default function Portfolio_D({
   title,
   portfoliosWithCategory,
   length = 6,
+  primaryButton,
 }: PortfolioProps) {
   const portfoliosPerPage = length;
   const count = 0; // default number of portfolios per category
@@ -39,25 +39,25 @@ export default function Portfolio_D({
         </Container>
         <div className="mb-12 sm:flex">
           <Flex wrap className="w-full mb-8 lg:mb-0 lg:w-1/2">
-            {portfoliosPerCategory?.content
-              ?.slice(count, count + 2)
-              ?.map(content => <ProjectItem size={"sm"} content={content} key={content._key} />)}
-            {portfoliosPerCategory?.content
-              ?.slice(count + 2, count + 3)
-              ?.map(content => <ProjectItem size={"lg"} content={content} key={content._key} />)}
+            {portfoliosPerCategory?.content?.slice(count, count + 2)?.map(content => (
+              <ProjectItem size={"sm"} content={content} key={content._key} />
+            ))}
+            {portfoliosPerCategory?.content?.slice(count + 2, count + 3)?.map(content => (
+              <ProjectItem size={"lg"} content={content} key={content._key} />
+            ))}
           </Flex>
           <div className="w-full lg:w-1/2">
-            {portfoliosPerCategory?.content
-              ?.slice(count + 3, count + 4)
-              ?.map(content => <ProjectItem size={"lg"} content={content} key={content._key} />)}
+            {portfoliosPerCategory?.content?.slice(count + 3, count + 4)?.map(content => (
+              <ProjectItem size={"lg"} content={content} key={content._key} />
+            ))}
             <div className="flex flex-wrap">
-              {portfoliosPerCategory?.content
-                ?.slice(count + 4, portfoliosPerPage)
-                ?.map(content => <ProjectItem size={"sm"} content={content} key={content._key} />)}
+              {portfoliosPerCategory?.content?.slice(count + 4, portfoliosPerPage)?.map(content => (
+                <ProjectItem size={"sm"} content={content} key={content._key} />
+              ))}
             </div>
           </div>
         </div>
-        <PrimaryButton button={portfoliosPerCategory?.primaryButton} />
+        <PrimaryButton button={primaryButton} />
       </Container>
     </Section>
   );
@@ -85,14 +85,10 @@ function CaptionAndTitleText({
 function PrimaryButton({ button }: { button?: LabeledRoute | null }) {
   if (!button?.label) return null;
 
-  const link = buildSanityLink(button);
-
   return (
     <div className="text-center">
-      <Button asChild aria-label={button?.label}>
-        <Link href={link.href} target={link.target} rel={link.rel}>
-          {button?.label}
-        </Link>
+      <Button as="link" link={button}>
+        {button?.label}
       </Button>
     </div>
   );
@@ -129,8 +125,6 @@ function PortfolioCategories({
 function ProjectItem({ size, content }: { size?: string | null; content?: Content }) {
   const breakpoints = useMediaQuery("639");
   const maxLength = breakpoints ? 40 : 90;
-
-  const link = buildSanityLink(content?.primaryButton as LabeledRoute);
 
   return (
     <div className={`w-full px-4 mb-8 ${size === "lg" ? "w-full" : "lg:w-1/2"}`}>
@@ -171,13 +165,11 @@ function ProjectItem({ size, content }: { size?: string | null; content?: Conten
                 )}
                 {content?.primaryButton?.label && (
                   <Button
-                    asChild
+                    as="link"
+                    link={content?.primaryButton}
                     variant="outline"
-                    aria-label={content?.primaryButton?.label}
                     className="w-fit h-fit flex items-center justify-center bg-transparent border-secondary outline text-white hover:bg-secondary/20 hover:border-secondary/20 rounded-global hover:text-secondary-foreground font-bold transition duration-200 px-3 py-4">
-                    <Link href={link.href} target={link.target} rel={link.rel}>
-                      {content?.primaryButton?.label}
-                    </Link>
+                    {content?.primaryButton?.label}
                   </Button>
                 )}
               </div>

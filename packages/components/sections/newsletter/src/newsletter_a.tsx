@@ -9,7 +9,6 @@ import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
 import { Text } from "@stackshift-ui/text";
 import React from "react";
-
 import { NewsletterProps } from ".";
 import { getInputType, logoLink, thankYouPageLink } from "./helper";
 import { Form as FormFields, Logo } from "./types";

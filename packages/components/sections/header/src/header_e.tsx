@@ -2,14 +2,11 @@ import { Button } from "@stackshift-ui/button";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
-import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
 import { SigninSignup_A } from "@stackshift-ui/signin-signup";
-import { buildSanityLink } from "@stackshift-ui/system";
 import { Text } from "@stackshift-ui/text";
 import React from "react";
 import { ButtonProps, HeaderProps } from ".";
-import { LabeledRoute } from "./types";
 
 export default function Header_E({
   title,
@@ -64,9 +61,6 @@ function Buttons({
   primaryButton?: ButtonProps;
   secondaryButton?: ButtonProps;
 }) {
-  const primaryButtonLink = buildSanityLink(primaryButton as LabeledRoute);
-  const secondaryButtonLink = buildSanityLink(secondaryButton as LabeledRoute);
-
   return (
     <Flex
       align="center"
@@ -75,27 +69,17 @@ function Buttons({
       direction="col"
       className="lg:justify-start md:flex-row">
       {primaryButton?.label && (
-        <Button variant="default" aria-label={primaryButton?.label} asChild>
-          <Link
-            href={primaryButtonLink.href}
-            target={primaryButtonLink.target}
-            rel={primaryButtonLink.rel}>
-            {primaryButton?.label}
-          </Link>
+        <Button variant="default" as="link" link={primaryButton}>
+          {primaryButton?.label}
         </Button>
       )}
       {secondaryButton?.label && (
         <Button
+          as="link"
+          link={secondaryButton}
           variant="secondary"
-          className="bg-transparent border hover:bg-gray-300 inline-block font-default text-default transition duration-200 rounded-global"
-          aria-label={secondaryButton?.label}
-          asChild>
-          <Link
-            href={secondaryButtonLink.href}
-            target={secondaryButtonLink.target}
-            rel={secondaryButtonLink.rel}>
-            {secondaryButton?.label}
-          </Link>
+          className="bg-transparent border hover:bg-gray-300 inline-block font-default text-default transition duration-200 rounded-global">
+          {secondaryButton?.label}
         </Button>
       )}
     </Flex>

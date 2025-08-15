@@ -5,9 +5,8 @@ import { Heading } from "@stackshift-ui/heading";
 import { Image } from "@stackshift-ui/image";
 import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
-import { Text } from "@stackshift-ui/text";
-
 import { buildSanityLink } from "@stackshift-ui/system";
+import { Text } from "@stackshift-ui/text";
 import { PortfolioProps } from ".";
 import { Content, LabeledRoute } from "./types";
 
@@ -19,9 +18,6 @@ export default function Portfolio_C({
   length = 6,
 }: PortfolioProps) {
   const portfolioLength = length; //set initial number of portfolios to display for this variant
-
-  const link = buildSanityLink(primaryButton as LabeledRoute);
-
   return (
     <Section className="py-20 bg-background">
       <Container maxWidth={1280}>
@@ -29,10 +25,8 @@ export default function Portfolio_C({
           <CaptionAndTitleText caption={caption} title={title} />
           <div className="hidden mt-5 text-right md:mt-0 lg:mt-0 lg:block xl:mt-0">
             {primaryButton?.label && (
-              <Button asChild aria-label={primaryButton?.label}>
-                <Link href={link.href} target={link.target} rel={link.rel}>
-                  {primaryButton?.label}
-                </Link>
+              <Button as="link" link={primaryButton}>
+                {primaryButton?.label}
               </Button>
             )}
           </div>
@@ -40,10 +34,8 @@ export default function Portfolio_C({
         <PortfolioContent portfolios={portfolios} portfolioLength={portfolioLength} />
         <div className="block mt-5 text-center md:mt-0 lg:mt-0 lg:hidden xl:mt-0">
           {primaryButton?.label && (
-            <Button asChild aria-label={primaryButton?.label}>
-              <Link href={link.href} target={link.target} rel={link.rel}>
-                {primaryButton?.label}
-              </Link>
+            <Button as="link" link={primaryButton}>
+              {primaryButton?.label}
             </Button>
           )}
         </div>
@@ -72,8 +64,6 @@ function CaptionAndTitleText({
 }
 
 function ProjectItem({ content }: { content: Content }) {
-  const link = buildSanityLink(content.primaryButton as LabeledRoute);
-
   return (
     <div className="relative w-full px-4 mb-8 md:w-1/2 lg:w-1/3">
       {content?.mainImage?.image && (
@@ -96,13 +86,11 @@ function ProjectItem({ content }: { content: Content }) {
             )}
             {content?.primaryButton?.label && (
               <Button
-                asChild
+                as="link"
+                link={content?.primaryButton}
                 variant="link"
-                aria-label={content?.primaryButton?.label}
                 className="font-bold no-underline text-primary transition-200 hover:text-primary/50 px-0">
-                <Link href={link.href} target={link.target} rel={link.rel}>
-                  {content?.primaryButton?.label}
-                </Link>
+                {content?.primaryButton?.label}
               </Button>
             )}
           </div>
@@ -123,9 +111,9 @@ function PortfolioContent({
 
   return (
     <Flex wrap className="mb-4">
-      {portfolios
-        ?.slice(0, portfolioLength)
-        .map(content => <ProjectItem content={content} key={content._key} />)}
+      {portfolios?.slice(0, portfolioLength).map(content => (
+        <ProjectItem content={content} key={content._key} />
+      ))}
     </Flex>
   );
 }

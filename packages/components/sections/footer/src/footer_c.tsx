@@ -6,9 +6,8 @@ import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
 import { SocialIcons } from "@stackshift-ui/social-icons";
 import { Text } from "@stackshift-ui/text";
-
 import { FooterProps } from ".";
-import { ConditionalLink, logoLink } from "./helper";
+import { logoLink } from "./helper";
 import { LabeledRoute, LabeledRouteWithKey, Logo, SocialLink, Socials } from "./types";
 
 export default function Footer_C({ logo, menu, copyright, socialMedia }: FooterProps) {

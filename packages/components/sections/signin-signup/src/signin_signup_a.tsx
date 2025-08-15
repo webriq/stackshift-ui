@@ -8,10 +8,9 @@ import { Image } from "@stackshift-ui/image";
 import { Input } from "@stackshift-ui/input";
 import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
+import { buildSanityLink } from "@stackshift-ui/system";
 import { Text } from "@stackshift-ui/text";
 import React from "react";
-
-import { buildSanityLink } from "@stackshift-ui/system";
 import { SignUpFormProps } from ".";
 import { logoLink, thankYouPageLink } from "./helper";
 import { LabeledRoute, LabeledRouteWithKey, Logo, Form as iForm } from "./types";
@@ -190,19 +189,15 @@ function FormFields({
 function SignInLink({ signInLink }: { signInLink?: LabeledRoute }) {
   if (!signInLink?.label) return null;
 
-  const link = buildSanityLink(signInLink);
-
   return (
     <div className="w-full text-center mt-3">
       <span className="text-xs text-gray-500">Already have an account? </span>
       <Button
+        as="link"
+        link={signInLink}
         variant="link"
-        className="text-xs text-primary cursor-pointer hover:underline"
-        aria-label={signInLink?.label}
-        asChild>
-        <Link href={link.href} target={link.target} rel={link.rel}>
-          {signInLink?.label}
-        </Link>
+        className="text-xs text-primary cursor-pointer hover:underline">
+        {signInLink?.label}
       </Button>
     </div>
   );
@@ -248,28 +243,22 @@ function FormLinks({ formLinks }: { formLinks?: LabeledRouteWithKey[] }) {
 
   return (
     <p className="mt-10 lg:mt-3 text-xs text-center text-gray-700">
-      {formLinks?.map((link_: any, index: number, { length }: any) => {
-        const link = buildSanityLink(link_ as LabeledRoute);
-
-        return (
-          <span key={index}>
-            <Button
-              variant="link"
-              className="text-xs text-primary cursor-pointer hover:underline"
-              aria-label={link_?.label}
-              asChild>
-              <Link href={link.href} target={link.target} rel={link.rel}>
-                {link_?.label}
-              </Link>
-            </Button>
-            {index === length - 1 ? null : index === length - 2 ? (
-              <span>&nbsp;and&nbsp;</span>
-            ) : (
-              <span>&nbsp;,&nbsp;</span>
-            )}
-          </span>
-        );
-      })}
+      {formLinks?.map((link_: any, index: number, { length }: any) => (
+        <span key={index}>
+          <Button
+            as="link"
+            link={link_}
+            variant="link"
+            className="text-xs text-primary cursor-pointer hover:underline">
+            {link_?.label}
+          </Button>
+          {index === length - 1 ? null : index === length - 2 ? (
+            <span>&nbsp;and&nbsp;</span>
+          ) : (
+            <span>&nbsp;,&nbsp;</span>
+          )}
+        </span>
+      ))}
     </p>
   );
 }
