@@ -3,7 +3,6 @@ import type { Config } from "tailwindcss";
 const config = {
   content: [
     "./src/**/*.{ts,tsx}",
-    "../../../apps/nextjs-pages/**/*.{ts,tsx}",
     "../../../apps/storybook/**/*.{ts,tsx}",
     "../../components/**/*.{ts,tsx}",
     "../../core/**/*.{ts,tsx}",

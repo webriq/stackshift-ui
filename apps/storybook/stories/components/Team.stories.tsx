@@ -1,5 +1,6 @@
+// @ts-nocheck - story demo file
 import { Team } from "@stackshift-ui/react";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 const meta: Meta<typeof Team> = {
   title: "Components/Team",

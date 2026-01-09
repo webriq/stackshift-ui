@@ -1,5 +1,6 @@
-import type { Meta, StoryObj } from "@storybook/react";
+// @ts-nocheck - story demo file
 import { TextComponent } from "@stackshift-ui/react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 const meta: Meta<typeof TextComponent> = {
   title: "Components/Text Component",

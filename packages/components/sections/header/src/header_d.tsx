@@ -14,7 +14,7 @@ export default function Header_D({
   primaryButton,
   secondaryButton,
   mainImage,
-}: HeaderProps): JSX.Element {
+}: HeaderProps): React.JSX.Element {
   return (
     <Section className="py-20 bg-background">
       <Container maxWidth={1280}>

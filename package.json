@@ -5,8 +5,7 @@
     "build": "turbo build",
     "clean": "turbo clean && rm -rf node_modules .turbo",
     "dev": "turbo run dev",
-    "storybook": "turbo run dev --filter @apps/storybook",
-    "demo": "turbo run dev --filter @apps/nextjs-pages",
+    "storybook": "turbo run dev --filter storybook",
     "doc": "node scripts/doc.js && typedoc",
     "format": "prettier --write \"**/*.{ts,tsx,md,css,scss}\"",
     "lint": "turbo lint",
@@ -14,7 +13,7 @@
     "typecheck": "turbo typecheck",
     "preinstall": "node scripts/update-pm.js",
     "rebrand": "node scripts/rebrand.js",
-    "next:pages": "turbo run dev --filter @apps/storybook",
+    "next:pages": "turbo run dev --filter nextjs-pages",
     "changeset": "changeset",
     "release:status": "changeset status --verbose",
     "release:version": "npx changeset version",
@@ -43,10 +42,14 @@
   },
   "pnpm": {
     "overrides": {
-      "eslint": "^8.0.0"
+      "eslint": "^8.0.0",
+      "@types/react": "^19",
+      "@types/react-dom": "^19"
     }
   },
   "overrides": {
-    "eslint": "^8.0.0"
+    "eslint": "^8.0.0",
+    "@types/react": "^19",
+    "@types/react-dom": "^19"
   }
 }

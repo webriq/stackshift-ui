@@ -10,28 +10,25 @@
     "clean": "rm -rf .turbo node_modules .next"
   },
   "dependencies": {
-    "@stackshift-ui/system": "workspace:*",
     "@stackshift-ui/react": "workspace:*",
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.15",
+    "@stackshift-ui/system": "workspace:*",
+    "@stackshift-ui/tailwind-config": "workspace:*",
     "date-fns": "^4.1.0",
     "lucide-react": "^0.468.0",
-    "react-day-picker": "^9.7.0"
-  },
-  "peerDependencies": {
-    "@stackshift-ui/system": "workspace:*",
-    "@stackshift-ui/react": "workspace:*"
+    "next": "16.1.1",
+    "react": "19.2.3",
+    "react-day-picker": "^9.7.0",
+    "react-dom": "19.2.3"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "@stackshift-ui/tailwind-config": "workspace:*",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.15"
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.23",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.1",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5"
   }
 }

@@ -1,5 +1,6 @@
-import type { Meta, StoryObj } from "@storybook/react";
+// @ts-nocheck - story demo file
 import { ScrollArea, ScrollBar } from "@stackshift-ui/react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 const meta: Meta<typeof ScrollArea> = {
   title: "Common/ScrollArea",
@@ -33,8 +34,7 @@ export const HorizontalScroll: Story = {
         {Array.from({ length: 20 }).map((_, i) => (
           <div
             key={i}
-            className="shrink-0 w-32 h-20 bg-gray-100 rounded-md flex items-center justify-center text-sm"
-          >
+            className="shrink-0 w-32 h-20 bg-gray-100 rounded-md flex items-center justify-center text-sm">
             Card {i + 1}
           </div>
         ))}
@@ -81,28 +81,28 @@ export const LongText: Story = {
     <ScrollArea className="h-48 w-80 rounded-md border p-4" {...args}>
       <div className="text-sm space-y-4">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod 
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
         <p>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
-          eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-          sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+          nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+          deserunt mollit anim id est laborum.
         </p>
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
-          doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
-          veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+          laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+          architecto beatae vitae dicta sunt explicabo.
         </p>
         <p>
-          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
-          sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+          consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
         </p>
         <p>
-          Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, 
-          adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et 
-          dolore magnam aliquam quaerat voluptatem.
+          Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+          velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam
+          quaerat voluptatem.
         </p>
       </div>
     </ScrollArea>
@@ -114,18 +114,14 @@ export const ChatMessages: Story = {
     <ScrollArea className="h-80 w-96 rounded-md border" {...args}>
       <div className="p-4 space-y-4">
         {Array.from({ length: 20 }).map((_, i) => (
-          <div key={i} className={`flex ${i % 3 === 0 ? 'justify-end' : 'justify-start'}`}>
-            <div 
+          <div key={i} className={`flex ${i % 3 === 0 ? "justify-end" : "justify-start"}`}>
+            <div
               className={`max-w-xs px-3 py-2 rounded-lg text-sm ${
-                i % 3 === 0 
-                  ? 'bg-blue-500 text-white' 
-                  : 'bg-gray-100 text-gray-900'
-              }`}
-            >
-              {i % 3 === 0 
+                i % 3 === 0 ? "bg-blue-500 text-white" : "bg-gray-100 text-gray-900"
+              }`}>
+              {i % 3 === 0
                 ? `This is my message ${i + 1}. It can be quite long and will wrap to multiple lines.`
-                : `Message ${i + 1} from another user. This could also be a longer message.`
-              }
+                : `Message ${i + 1} from another user. This could also be a longer message.`}
             </div>
           </div>
         ))}

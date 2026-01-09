@@ -5,6 +5,7 @@ import type { Config } from "tailwindcss";
 const config: Config = {
   content: [
     "./stories/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "../../packages/components/common/**/src/*.{ts,tsx}",
     "../../packages/components/layout/**/src/*.{ts,tsx}",
     "../../packages/components/sections/**/src/*.{ts,tsx}",

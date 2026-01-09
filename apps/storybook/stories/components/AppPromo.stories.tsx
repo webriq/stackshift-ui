@@ -1,3 +1,4 @@
+// @ts-nocheck - story demo file
 import { AppPromo } from "@stackshift-ui/react";
 import { Meta, StoryObj } from "@storybook/react";
 

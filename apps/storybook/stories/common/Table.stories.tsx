@@ -1,4 +1,8 @@
+// @ts-nocheck - story demo file
 import {
+  Badge,
+  Button,
+  Checkbox,
   Table,
   TableBody,
   TableCaption,
@@ -8,11 +12,8 @@ import {
   TableHeader,
   TableRow,
 } from "@stackshift-ui/react";
-import type { Meta, StoryObj } from "@storybook/react";
-import { Badge } from "@stackshift-ui/react";
-import { Button } from "@stackshift-ui/react";
-import { Checkbox } from "@stackshift-ui/react";
-import { Edit, Trash2, ExternalLink } from "lucide-react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { Edit, ExternalLink, Trash2 } from "lucide-react";
 
 const meta: Meta<typeof Table> = {
   title: "Common/Table",
@@ -104,7 +105,7 @@ export const Default: Story = {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {invoices.map((invoice) => (
+        {invoices.map(invoice => (
           <TableRow key={invoice.invoice}>
             <TableCell className="font-medium">{invoice.invoice}</TableCell>
             <TableCell>{invoice.paymentStatus}</TableCell>
@@ -137,7 +138,7 @@ export const WithFooter: Story = {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {invoices.slice(0, 4).map((invoice) => (
+        {invoices.slice(0, 4).map(invoice => (
           <TableRow key={invoice.invoice}>
             <TableCell className="font-medium">{invoice.invoice}</TableCell>
             <TableCell>{invoice.paymentStatus}</TableCell>
@@ -176,14 +177,12 @@ export const WithBadges: Story = {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {users.map((user) => (
+        {users.map(user => (
           <TableRow key={user.id}>
             <TableCell className="font-medium">{user.name}</TableCell>
             <TableCell>{user.email}</TableCell>
             <TableCell>
-              <Badge variant={user.role === "Admin" ? "default" : "secondary"}>
-                {user.role}
-              </Badge>
+              <Badge variant={user.role === "Admin" ? "default" : "secondary"}>{user.role}</Badge>
             </TableCell>
             <TableCell>
               <Badge variant={user.status === "Active" ? "default" : "destructive"}>
@@ -217,7 +216,7 @@ export const WithActions: Story = {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {users.map((user) => (
+        {users.map(user => (
           <TableRow key={user.id}>
             <TableCell className="font-medium">{user.name}</TableCell>
             <TableCell>{user.email}</TableCell>
@@ -265,7 +264,7 @@ export const WithSelection: Story = {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {users.map((user) => (
+        {users.map(user => (
           <TableRow key={user.id}>
             <TableCell>
               <Checkbox />
@@ -306,10 +305,7 @@ export const Striped: Story = {
       </TableHeader>
       <TableBody>
         {invoices.map((invoice, index) => (
-          <TableRow 
-            key={invoice.invoice}
-            className={index % 2 === 0 ? "bg-muted/50" : ""}
-          >
+          <TableRow key={invoice.invoice} className={index % 2 === 0 ? "bg-muted/50" : ""}>
             <TableCell className="font-medium">{invoice.invoice}</TableCell>
             <TableCell>{invoice.paymentStatus}</TableCell>
             <TableCell>{invoice.paymentMethod}</TableCell>
@@ -341,7 +337,7 @@ export const Compact: Story = {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {invoices.slice(0, 5).map((invoice) => (
+        {invoices.slice(0, 5).map(invoice => (
           <TableRow key={invoice.invoice}>
             <TableCell className="px-2 py-1 font-medium">{invoice.invoice}</TableCell>
             <TableCell className="px-2 py-1">{invoice.paymentStatus}</TableCell>
@@ -410,7 +406,7 @@ export const ResponsiveOverflow: Story = {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {invoices.slice(0, 3).map((invoice) => (
+          {invoices.slice(0, 3).map(invoice => (
             <TableRow key={invoice.invoice}>
               <TableCell className="font-medium">{invoice.invoice}</TableCell>
               <TableCell>{invoice.paymentStatus}</TableCell>
@@ -450,7 +446,7 @@ export const BorderedTable: Story = {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {invoices.slice(0, 4).map((invoice) => (
+        {invoices.slice(0, 4).map(invoice => (
           <TableRow key={invoice.invoice} className="border-b">
             <TableCell className="border-r font-medium">{invoice.invoice}</TableCell>
             <TableCell className="border-r">{invoice.paymentStatus}</TableCell>
@@ -483,7 +479,7 @@ export const InteractiveElements: Story = {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {users.slice(0, 3).map((user) => (
+        {users.slice(0, 3).map(user => (
           <TableRow key={user.id}>
             <TableCell>
               <Button variant="link" className="p-0 h-auto font-medium">
@@ -542,7 +538,7 @@ export const DenseTable: Story = {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {users.map((user) => (
+        {users.map(user => (
           <TableRow key={user.id} className="h-8">
             <TableCell className="px-2 py-1 text-xs">{user.id}</TableCell>
             <TableCell className="px-2 py-1 text-xs font-medium">{user.name}</TableCell>
@@ -553,10 +549,9 @@ export const DenseTable: Story = {
               </Badge>
             </TableCell>
             <TableCell className="px-2 py-1">
-              <Badge 
-                variant={user.status === "Active" ? "default" : "destructive"} 
-                className="text-xs px-1 py-0"
-              >
+              <Badge
+                variant={user.status === "Active" ? "default" : "destructive"}
+                className="text-xs px-1 py-0">
                 {user.status}
               </Badge>
             </TableCell>

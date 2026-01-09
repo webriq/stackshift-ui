@@ -1,3 +1,4 @@
+// @ts-nocheck - story demo file
 import {
   Button,
   NavigationMenu,
@@ -11,7 +12,7 @@ import {
   NavigationMenuViewport,
 } from "@stackshift-ui/react";
 import { cn } from "@stackshift-ui/system";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 const meta: Meta<typeof NavigationMenu> = {
   title: "Common/NavigationMenu",

@@ -17,14 +17,11 @@ const displayNameFooter = "DialogFooter";
 const displayNameTitle = "DialogTitle";
 const displayNameDescription = "DialogDescription";
 
-const Dialog = React.forwardRef<
-  React.ElementRef<typeof DialogPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof DialogPrimitive.Root>
->(({ ...props }, ref) => {
-  const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
+type DialogProps = React.ComponentPropsWithoutRef<typeof DialogPrimitive.Root>;
 
-  return <Component as={DialogPrimitive.Root} ref={ref} data-slot="dialog" {...props} />;
-});
+const Dialog: React.FC<DialogProps> = ({ ...props }) => {
+  return <DialogPrimitive.Root data-slot="dialog" {...props} />;
+};
 Dialog.displayName = displayName;
 
 const DialogTrigger = React.forwardRef<
@@ -37,14 +34,11 @@ const DialogTrigger = React.forwardRef<
 });
 DialogTrigger.displayName = displayNameTrigger;
 
-const DialogPortal = React.forwardRef<
-  React.ElementRef<typeof DialogPrimitive.Portal>,
-  React.ComponentPropsWithoutRef<typeof DialogPrimitive.Portal>
->(({ ...props }, ref) => {
-  const { [displayNamePortal]: Component = DefaultComponent } = useStackShiftUIComponents();
+type DialogPortalProps = React.ComponentPropsWithoutRef<typeof DialogPrimitive.Portal>;
 
-  return <Component as={DialogPrimitive.Portal} ref={ref} data-slot="dialog-portal" {...props} />;
-});
+const DialogPortal: React.FC<DialogPortalProps> = ({ ...props }) => {
+  return <DialogPrimitive.Portal data-slot="dialog-portal" {...props} />;
+};
 DialogPortal.displayName = displayNamePortal;
 
 const DialogClose = React.forwardRef<

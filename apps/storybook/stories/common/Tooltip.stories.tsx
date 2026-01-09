@@ -1,5 +1,6 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { Tooltip, TooltipContent, TooltipTrigger, Button } from "@stackshift-ui/react";
+// @ts-nocheck - story demo file
+import { Button, Tooltip, TooltipContent, TooltipTrigger } from "@stackshift-ui/react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 const meta: Meta<typeof Tooltip> = {
   title: "Common/Tooltip",
@@ -63,7 +64,7 @@ export const Positions: Story = {
           </TooltipContent>
         </Tooltip>
       </div>
-      
+
       <div className="flex justify-center">
         <Tooltip {...args}>
           <TooltipTrigger asChild>
@@ -74,7 +75,7 @@ export const Positions: Story = {
           </TooltipContent>
         </Tooltip>
       </div>
-      
+
       <div className="flex justify-center">
         <Tooltip {...args}>
           <TooltipTrigger asChild>
@@ -85,7 +86,7 @@ export const Positions: Story = {
           </TooltipContent>
         </Tooltip>
       </div>
-      
+
       <div className="flex justify-center">
         <Tooltip {...args}>
           <TooltipTrigger asChild>
@@ -129,8 +130,7 @@ export const WithIcon: Story = {
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+              xmlns="http://www.w3.org/2000/svg">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"

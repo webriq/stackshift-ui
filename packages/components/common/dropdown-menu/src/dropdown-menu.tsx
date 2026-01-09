@@ -22,33 +22,18 @@ const displayNameSub = "DropdownMenuSub";
 const displayNameSubTrigger = "DropdownMenuSubTrigger";
 const displayNameSubContent = "DropdownMenuSubContent";
 
-const DropdownMenu = React.forwardRef<
-  React.ElementRef<typeof DropdownMenuPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Root>
->(({ ...props }, ref) => {
-  const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
+type DropdownMenuProps = React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Root>;
 
-  return (
-    <Component as={DropdownMenuPrimitive.Root} data-slot="dropdown-menu" ref={ref} {...props} />
-  );
-});
+const DropdownMenu: React.FC<DropdownMenuProps> = ({ ...props }) => {
+  return <DropdownMenuPrimitive.Root data-slot="dropdown-menu" {...props} />;
+};
 DropdownMenu.displayName = displayName;
 
-const DropdownMenuPortal = React.forwardRef<
-  React.ElementRef<typeof DropdownMenuPrimitive.Portal>,
-  React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Portal>
->(({ ...props }, ref) => {
-  const { [displayNamePortal]: Component = DefaultComponent } = useStackShiftUIComponents();
+type DropdownMenuPortalProps = React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Portal>;
 
-  return (
-    <Component
-      as={DropdownMenuPrimitive.Portal}
-      data-slot="dropdown-menu-portal"
-      ref={ref}
-      {...props}
-    />
-  );
-});
+const DropdownMenuPortal: React.FC<DropdownMenuPortalProps> = ({ ...props }) => {
+  return <DropdownMenuPrimitive.Portal data-slot="dropdown-menu-portal" {...props} />;
+};
 DropdownMenuPortal.displayName = displayNamePortal;
 
 const DropdownMenuTrigger = React.forwardRef<
@@ -264,16 +249,11 @@ const DropdownMenuShortcut = React.forwardRef<
 });
 DropdownMenuShortcut.displayName = displayNameShortcut;
 
-const DropdownMenuSub = React.forwardRef<
-  React.ElementRef<typeof DropdownMenuPrimitive.Sub>,
-  React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Sub>
->(({ ...props }, ref) => {
-  const { [displayNameSub]: Component = DefaultComponent } = useStackShiftUIComponents();
+type DropdownMenuSubProps = React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Sub>;
 
-  return (
-    <Component as={DropdownMenuPrimitive.Sub} ref={ref} data-slot="dropdown-menu-sub" {...props} />
-  );
-});
+const DropdownMenuSub: React.FC<DropdownMenuSubProps> = ({ ...props }) => {
+  return <DropdownMenuPrimitive.Sub data-slot="dropdown-menu-sub" {...props} />;
+};
 DropdownMenuSub.displayName = displayNameSub;
 
 const DropdownMenuSubTrigger = React.forwardRef<

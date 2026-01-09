@@ -16,15 +16,11 @@ const displayNameScrollUpButton = "SelectScrollUpButton";
 const displayNameScrollDownButton = "SelectScrollDownButton";
 
 // bypass typescript "SelectSharedProps" error
-interface SelectProps extends React.ComponentPropsWithoutRef<typeof SelectPrimitive.Root> {}
+type SelectProps = React.ComponentPropsWithoutRef<typeof SelectPrimitive.Root>;
 
-const Select = React.forwardRef<React.ElementRef<typeof SelectPrimitive.Root>, SelectProps>(
-  ({ ...props }, ref) => {
-    const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
-
-    return <Component as={SelectPrimitive.Root} ref={ref} {...props} />;
-  },
-);
+const Select: React.FC<SelectProps> = ({ ...props }) => {
+  return <SelectPrimitive.Root {...props} />;
+};
 Select.displayName = displayName;
 
 const SelectGroup = React.forwardRef<

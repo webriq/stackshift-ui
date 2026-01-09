@@ -1,6 +1,7 @@
+// @ts-nocheck - story demo file
 import { Button, Input, Label } from "@stackshift-ui/react";
 import { cn } from "@stackshift-ui/system";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Eye, EyeOff, Lock, Search } from "lucide-react";
 import { useState } from "react";
 

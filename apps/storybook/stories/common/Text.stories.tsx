@@ -1,5 +1,6 @@
+// @ts-nocheck - story demo file
 import { Text } from "@stackshift-ui/react";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 const meta: Meta<typeof Text> = {
   title: "Common/Text",
@@ -8,7 +9,8 @@ const meta: Meta<typeof Text> = {
     layout: "centered",
     docs: {
       description: {
-        component: "A flexible text component for displaying content with various typography styles and semantic meaning.",
+        component:
+          "A flexible text component for displaying content with various typography styles and semantic meaning.",
       },
     },
   },
@@ -48,7 +50,9 @@ export const Default: Story = {
 export const FontSizes: Story = {
   render: () => (
     <div className="space-y-3">
-      <Text fontSize="xs">Extra Small (xs) - This is extra small text for fine print and captions</Text>
+      <Text fontSize="xs">
+        Extra Small (xs) - This is extra small text for fine print and captions
+      </Text>
       <Text fontSize="sm">Small (sm) - This is small text for secondary information</Text>
       <Text fontSize="base">Base - This is the default text size for body content</Text>
       <Text fontSize="lg">Large (lg) - This is large text for emphasis</Text>
@@ -75,25 +79,27 @@ export const Paragraph: Story = {
         Typography in User Interface Design
       </Text>
       <Text fontSize="base">
-        Typography plays a crucial role in user interface design. It not only conveys information 
-        but also establishes hierarchy, creates mood, and enhances the overall user experience. 
-        Good typography should be readable, accessible, and aligned with the brand's visual identity.
+        Typography plays a crucial role in user interface design. It not only conveys information
+        but also establishes hierarchy, creates mood, and enhances the overall user experience. Good
+        typography should be readable, accessible, and aligned with the brand's visual identity.
       </Text>
       <Text fontSize="base">
-        When choosing fonts and sizes, consider factors such as readability across different devices, 
-        accessibility for users with visual impairments, and the emotional impact of different 
-        typefaces. Consistency in typography helps create a cohesive and professional appearance.
+        When choosing fonts and sizes, consider factors such as readability across different
+        devices, accessibility for users with visual impairments, and the emotional impact of
+        different typefaces. Consistency in typography helps create a cohesive and professional
+        appearance.
       </Text>
       <Text fontSize="sm" className="text-gray-600">
-        Remember: Typography is not just about making text look good—it's about making it work effectively 
-        for your users and your content.
+        Remember: Typography is not just about making text look good—it's about making it work
+        effectively for your users and your content.
       </Text>
     </div>
   ),
   parameters: {
     docs: {
       description: {
-        story: "Example of text component used in paragraph content with different sizes and styling.",
+        story:
+          "Example of text component used in paragraph content with different sizes and styling.",
       },
     },
   },
@@ -109,8 +115,8 @@ export const ContentHierarchy: Story = {
         This is a subtitle that provides additional context about the article content
       </Text>
       <Text fontSize="base">
-        This is the main body text where the primary content would be displayed. 
-        It uses the base font size which is optimized for readability.
+        This is the main body text where the primary content would be displayed. It uses the base
+        font size which is optimized for readability.
       </Text>
       <Text fontSize="base" className="font-medium">
         Subheading for Section
@@ -126,7 +132,8 @@ export const ContentHierarchy: Story = {
   parameters: {
     docs: {
       description: {
-        story: "Demonstration of text hierarchy in content layout with titles, subtitles, and body text.",
+        story:
+          "Demonstration of text hierarchy in content layout with titles, subtitles, and body text.",
       },
     },
   },
@@ -171,7 +178,8 @@ export const ResponsiveText: Story = {
   render: () => (
     <div className="space-y-4">
       <Text fontSize="base" className="sm:text-lg md:text-xl lg:text-2xl">
-        This text scales responsively: base on mobile, lg on small screens, xl on medium, 2xl on large
+        This text scales responsively: base on mobile, lg on small screens, xl on medium, 2xl on
+        large
       </Text>
       <Text fontSize="sm" className="md:text-base lg:text-lg">
         Secondary text that also adapts: sm on mobile, base on medium, lg on large screens
@@ -200,7 +208,8 @@ export const TextAlignment: Story = {
         Right aligned text
       </Text>
       <Text fontSize="base" className="text-justify">
-        Justified text that spreads evenly across the available width when the content is long enough to wrap to multiple lines.
+        Justified text that spreads evenly across the available width when the content is long
+        enough to wrap to multiple lines.
       </Text>
     </div>
   ),

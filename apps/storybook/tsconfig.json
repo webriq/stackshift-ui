@@ -1,5 +1,27 @@
 {
-  "exclude": ["dist", "build", "node_modules"],
-  "extends": "@stackshift-ui/typescript-config/react-app.json",
-  "include": ["."]
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "paths": {
+      "@/stories/*": ["./stories/*"],
+      "@/styles/*": ["./styles/*"]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.mts"
+  ],
+  "exclude": ["node_modules", "storybook-static"]
 }

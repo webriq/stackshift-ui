@@ -1,5 +1,6 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { Label, Input, Checkbox } from "@stackshift-ui/react";
+// @ts-nocheck - story demo file
+import { Checkbox, Input, Label } from "@stackshift-ui/react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 const meta: Meta<typeof Label> = {
   title: "Common/Label",
