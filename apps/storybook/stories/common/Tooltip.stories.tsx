@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Tooltip, TooltipContent, TooltipTrigger, Button } from "@stackshift-ui/react";
 
 const meta: Meta<typeof Tooltip> = {

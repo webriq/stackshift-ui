@@ -11,7 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@stackshift-ui/react";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { CalendarDays, MessageSquare, Share, ShoppingCart, Star, Users } from "lucide-react";
 
 const meta: Meta<typeof Card> = {

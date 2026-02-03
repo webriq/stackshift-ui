@@ -1,5 +1,5 @@
 import { SigninSignup } from "@stackshift-ui/react";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 const meta: Meta<typeof SigninSignup> = {
   title: "Components/Sign in Sign up",

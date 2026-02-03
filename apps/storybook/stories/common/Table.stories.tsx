@@ -8,7 +8,7 @@ import {
   TableHeader,
   TableRow,
 } from "@stackshift-ui/react";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Badge } from "@stackshift-ui/react";
 import { Button } from "@stackshift-ui/react";
 import { Checkbox } from "@stackshift-ui/react";
