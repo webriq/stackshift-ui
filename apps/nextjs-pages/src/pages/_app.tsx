@@ -1,13 +1,14 @@
 import "@/styles/globals.css";
-import { StackShiftUIProvider } from "@stackshift-ui/react";
+import { StackShiftUIProvider, Toaster } from "@stackshift-ui/react";
 import type { AppProps } from "next/app";
 
-import { Button, Image, Link } from "@/components/index";
+import { Image, Link } from "@/components/index";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <StackShiftUIProvider components={{ Button, Link, Image }}>
+    <StackShiftUIProvider components={{ Link, Image }}>
       <Component {...pageProps} />
+      <Toaster richColors closeButton />
     </StackShiftUIProvider>
   );
 }
