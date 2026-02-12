@@ -89,73 +89,68 @@ export const menuDoc: ComponentDoc = {
     },
     {
       title: "With Dropdown",
-      description: "Navigation menu with dropdown sub-items.",
-      code: `<NavigationMenu>
-  <NavigationMenuList>
-    <NavigationMenuItem>
-      <NavigationMenuTrigger>Products</NavigationMenuTrigger>
-      <NavigationMenuContent>
-        <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
-          <li>
-            <NavigationMenuLink href="/products/web">
-              <div className="text-sm font-medium">Web Development</div>
-              <p className="text-sm text-muted-foreground">
-                Build modern web applications
-              </p>
-            </NavigationMenuLink>
-          </li>
-          <li>
-            <NavigationMenuLink href="/products/mobile">
-              <div className="text-sm font-medium">Mobile Apps</div>
-              <p className="text-sm text-muted-foreground">
-                Create native mobile experiences
-              </p>
-            </NavigationMenuLink>
-          </li>
-        </ul>
-      </NavigationMenuContent>
-    </NavigationMenuItem>
-  </NavigationMenuList>
-</NavigationMenu>`,
+      description: "Navigation menu with dropdown sub-items. Click 'Products' to see the dropdown.",
+      code: `<div className="relative min-h-[200px] overflow-visible">
+  <NavigationMenu>
+    <NavigationMenuList>
+      <NavigationMenuItem>
+        <NavigationMenuTrigger>Products</NavigationMenuTrigger>
+        <NavigationMenuContent className="bg-white border rounded-md shadow-lg">
+          <ul className="grid w-[300px] gap-2 p-4">
+            <li>
+              <NavigationMenuLink href="/products/web" className="block p-2 hover:bg-gray-100 rounded">
+                <div className="text-sm font-medium">Web Development</div>
+                <p className="text-xs text-muted-foreground">Build modern web apps</p>
+              </NavigationMenuLink>
+            </li>
+            <li>
+              <NavigationMenuLink href="/products/mobile" className="block p-2 hover:bg-gray-100 rounded">
+                <div className="text-sm font-medium">Mobile Apps</div>
+                <p className="text-xs text-muted-foreground">Create native experiences</p>
+              </NavigationMenuLink>
+            </li>
+          </ul>
+        </NavigationMenuContent>
+      </NavigationMenuItem>
+      <NavigationMenuItem>
+        <NavigationMenuLink href="/about">About</NavigationMenuLink>
+      </NavigationMenuItem>
+    </NavigationMenuList>
+  </NavigationMenu>
+</div>`,
     },
     {
       title: "Mega Menu",
-      description: "Large navigation menu with multiple columns.",
-      code: `<NavigationMenu>
-  <NavigationMenuList>
-    <NavigationMenuItem>
-      <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
-      <NavigationMenuContent>
-        <div className="grid w-[600px] grid-cols-3 gap-4 p-6">
-          <div>
-            <h4 className="mb-2 text-sm font-medium">By Industry</h4>
-            <ul className="space-y-2">
-              <li><NavigationMenuLink href="#">E-commerce</NavigationMenuLink></li>
-              <li><NavigationMenuLink href="#">Healthcare</NavigationMenuLink></li>
-              <li><NavigationMenuLink href="#">Finance</NavigationMenuLink></li>
-            </ul>
+      description: "Large navigation menu with multiple columns. Click 'Solutions' to expand.",
+      code: `<div className="relative min-h-[280px] overflow-visible">
+  <NavigationMenu>
+    <NavigationMenuList>
+      <NavigationMenuItem>
+        <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
+        <NavigationMenuContent className="bg-white border rounded-md shadow-lg">
+          <div className="grid w-[400px] grid-cols-2 gap-4 p-4">
+            <div>
+              <h4 className="mb-2 text-sm font-medium">By Industry</h4>
+              <ul className="space-y-1 text-sm">
+                <li><NavigationMenuLink href="#" className="block p-1 hover:bg-gray-100 rounded">E-commerce</NavigationMenuLink></li>
+                <li><NavigationMenuLink href="#" className="block p-1 hover:bg-gray-100 rounded">Healthcare</NavigationMenuLink></li>
+                <li><NavigationMenuLink href="#" className="block p-1 hover:bg-gray-100 rounded">Finance</NavigationMenuLink></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="mb-2 text-sm font-medium">By Size</h4>
+              <ul className="space-y-1 text-sm">
+                <li><NavigationMenuLink href="#" className="block p-1 hover:bg-gray-100 rounded">Enterprise</NavigationMenuLink></li>
+                <li><NavigationMenuLink href="#" className="block p-1 hover:bg-gray-100 rounded">Small Business</NavigationMenuLink></li>
+                <li><NavigationMenuLink href="#" className="block p-1 hover:bg-gray-100 rounded">Startups</NavigationMenuLink></li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <h4 className="mb-2 text-sm font-medium">By Size</h4>
-            <ul className="space-y-2">
-              <li><NavigationMenuLink href="#">Enterprise</NavigationMenuLink></li>
-              <li><NavigationMenuLink href="#">Small Business</NavigationMenuLink></li>
-              <li><NavigationMenuLink href="#">Startups</NavigationMenuLink></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="mb-2 text-sm font-medium">Resources</h4>
-            <ul className="space-y-2">
-              <li><NavigationMenuLink href="#">Documentation</NavigationMenuLink></li>
-              <li><NavigationMenuLink href="#">API Reference</NavigationMenuLink></li>
-              <li><NavigationMenuLink href="#">Support</NavigationMenuLink></li>
-            </ul>
-          </div>
-        </div>
-      </NavigationMenuContent>
-    </NavigationMenuItem>
-  </NavigationMenuList>
-</NavigationMenu>`,
+        </NavigationMenuContent>
+      </NavigationMenuItem>
+    </NavigationMenuList>
+  </NavigationMenu>
+</div>`,
     },
   ],
 };

@@ -58,9 +58,7 @@ export const gridDoc: ComponentDoc = {
   examples: [
     {
       title: "Basic 3-Column Grid",
-      code: `import { Grid } from "@stackshift-ui/react";
-
-<Grid columns={3} gap={4}>
+      code: `<Grid columns={3} gap={4}>
   <div className="p-4 bg-blue-100">Item 1</div>
   <div className="p-4 bg-blue-100">Item 2</div>
   <div className="p-4 bg-blue-100">Item 3</div>
@@ -71,9 +69,7 @@ export const gridDoc: ComponentDoc = {
     },
     {
       title: "4-Column Grid with Gap",
-      code: `import { Grid } from "@stackshift-ui/react";
-
-<Grid columns={4} gap={6}>
+      code: `<Grid columns={4} gap={6}>
   {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
     <div key={i} className="p-4 bg-green-100 text-center">
       Item {i}
@@ -83,9 +79,7 @@ export const gridDoc: ComponentDoc = {
     },
     {
       title: "Centered Grid Items",
-      code: `import { Grid } from "@stackshift-ui/react";
-
-<Grid columns={3} gap={4} align="center" justify="center">
+      code: `<Grid columns={3} gap={4} align="center" justify="center">
   <div className="p-4 bg-purple-100 h-20">Short</div>
   <div className="p-4 bg-purple-100 h-32">Tall</div>
   <div className="p-4 bg-purple-100 h-24">Medium</div>
@@ -141,9 +135,7 @@ export const gridItemDoc: ComponentDoc = {
   examples: [
     {
       title: "Spanning Multiple Columns",
-      code: `import { Grid, GridItem } from "@stackshift-ui/react";
-
-<Grid columns={4} gap={4}>
+      code: `<Grid columns={4} gap={4}>
   <GridItem colSpan={2} className="p-4 bg-blue-100">
     Spans 2 columns
   </GridItem>

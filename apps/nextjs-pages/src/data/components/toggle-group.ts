@@ -115,13 +115,10 @@ export const toggleGroupDoc: ComponentDoc = {
 <div className="space-y-2">
   <ToggleGroup type="single" value={value} onValueChange={setValue}>
     <ToggleGroupItem value="grid" aria-label="Grid view">
-      <Grid className="h-4 w-4" />
+      <LayoutGrid className="h-4 w-4" />
     </ToggleGroupItem>
     <ToggleGroupItem value="list" aria-label="List view">
       <List className="h-4 w-4" />
-    </ToggleGroupItem>
-    <ToggleGroupItem value="table" aria-label="Table view">
-      <Table className="h-4 w-4" />
     </ToggleGroupItem>
   </ToggleGroup>
   <p className="text-sm">Selected view: {value}</p>

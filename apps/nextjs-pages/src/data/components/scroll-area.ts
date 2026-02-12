@@ -69,7 +69,7 @@ export const scrollAreaDoc: ComponentDoc = {
     {
       title: "Horizontal Scroll",
       description: "A horizontally scrollable area.",
-      code: `<ScrollArea className="w-full whitespace-nowrap rounded-md border">
+      code: `<ScrollArea className="max-w-md whitespace-nowrap rounded-md border">
   <div className="flex w-max space-x-4 p-4">
     {Array.from({ length: 20 }).map((_, i) => (
       <div key={i} className="shrink-0">
@@ -83,7 +83,7 @@ export const scrollAreaDoc: ComponentDoc = {
     {
       title: "Both Directions",
       description: "Scroll area with both vertical and horizontal scrolling.",
-      code: `<ScrollArea className="h-72 w-full rounded-md border">
+      code: `<ScrollArea className="h-72 max-w-md rounded-md border">
   <div className="p-4">
     <table className="w-max">
       <thead>

@@ -4,29 +4,25 @@ export const inputFileDoc: ComponentDoc = {
   name: "InputFile",
   slug: "input-file",
   description:
-    "A file input component with a custom styled interface showing the selected filename. Note: This component is deprecated - use the standard Input component with type='file' for new implementations.",
+    "A file input component for uploading files. Note: The legacy InputFile component is deprecated - use the standard Input component with type='file' for new implementations.",
   useCases: [
-    "File upload forms (deprecated - use Input)",
-    "Document attachment interfaces (deprecated - use Input)",
-    "Image and media file selection (deprecated - use Input)",
-    "Resume and CV upload forms (deprecated - use Input)",
-    "Import and export file interfaces (deprecated - use Input)",
+    "File upload forms",
+    "Document attachment interfaces",
+    "Image and media file selection",
+    "Resume and CV upload forms",
+    "Import and export file interfaces",
   ],
   category: "ui",
-  importCode: `// Deprecated - Use Input component instead
-import { InputFile } from "@stackshift-ui/react";
-// Recommended alternative:
-// import { Input } from "@stackshift-ui/react";`,
-  individualImportCode: `// Deprecated - Use Input component instead
-import { InputFile } from "@stackshift-ui/input-file";
-// Recommended alternative:
-// import { Input } from "@stackshift-ui/input";`,
-  usageCode: `// Deprecated
-<InputFile name="upload" ariaLabel="Upload file" />
-
-// Recommended alternative:
-// <Input type="file" name="upload" aria-label="Upload file" />`,
+  importCode: `import { Input } from "@stackshift-ui/react";`,
+  individualImportCode: `import { Input } from "@stackshift-ui/input";`,
+  usageCode: `<Input type="file" name="upload" aria-label="Upload file" />`,
   props: [
+    {
+      name: "type",
+      type: '"file"',
+      required: true,
+      description: "Set to 'file' to create a file input.",
+    },
     {
       name: "name",
       type: "string",
@@ -34,24 +30,10 @@ import { InputFile } from "@stackshift-ui/input-file";
       description: "The name attribute for the file input.",
     },
     {
-      name: "ariaLabel",
+      name: "aria-label",
       type: "string",
-      required: true,
+      required: false,
       description: "Accessible label for the file input.",
-    },
-    {
-      name: "variant",
-      type: '"primary" | "outline"',
-      required: false,
-      default: '"primary"',
-      description: "The visual style variant of the button.",
-    },
-    {
-      name: "required",
-      type: "boolean",
-      required: false,
-      default: "false",
-      description: "Whether the file input is required.",
     },
     {
       name: "accept",
@@ -67,6 +49,13 @@ import { InputFile } from "@stackshift-ui/input-file";
       description: "Whether multiple files can be selected.",
     },
     {
+      name: "required",
+      type: "boolean",
+      required: false,
+      default: "false",
+      description: "Whether the file input is required.",
+    },
+    {
       name: "className",
       type: "string",
       required: false,
@@ -75,41 +64,62 @@ import { InputFile } from "@stackshift-ui/input-file";
   ],
   examples: [
     {
-      title: "Deprecation Notice",
-      description: "This component is deprecated. Use the standard Input component instead.",
-      code: `// ❌ Deprecated - Don't use this
-<InputFile name="file" ariaLabel="Upload file" />
-
-// ✅ Recommended - Use this instead
-<Input type="file" name="file" aria-label="Upload file" />`,
-    },
-    {
-      title: "Legacy Example - Basic File Input",
-      description: "Basic file upload input (deprecated).",
+      title: "Basic File Input",
+      description: "A simple file upload input.",
       code: `<div className="space-y-2">
-  <Label htmlFor="resume">Resume</Label>
-  <InputFile
+  <Label htmlFor="file">Upload File</Label>
+  <Input type="file" id="file" name="file" />
+</div>`,
+    },
+    {
+      title: "With Accept Filter",
+      description: "Restrict file types that can be selected.",
+      code: `<div className="space-y-2">
+  <Label htmlFor="resume">Resume (PDF only)</Label>
+  <Input
+    type="file"
+    id="resume"
     name="resume"
-    ariaLabel="Upload resume"
-    accept=".pdf,.doc,.docx"
+    accept=".pdf"
   />
 </div>`,
     },
     {
-      title: "Legacy Example - With Variants",
-      description: "Different button styles (deprecated).",
-      code: `<div className="space-y-4">
-  <InputFile
-    name="file1"
-    ariaLabel="Upload file"
-    variant="primary"
-  />
-  <InputFile
-    name="file2"
-    ariaLabel="Upload file"
-    variant="outline"
+      title: "Image Upload",
+      description: "File input configured for images only.",
+      code: `<div className="space-y-2">
+  <Label htmlFor="avatar">Profile Picture</Label>
+  <Input
+    type="file"
+    id="avatar"
+    name="avatar"
+    accept="image/*"
   />
 </div>`,
+    },
+    {
+      title: "Multiple Files",
+      description: "Allow selecting multiple files at once.",
+      code: `<div className="space-y-2">
+  <Label htmlFor="documents">Documents</Label>
+  <Input
+    type="file"
+    id="documents"
+    name="documents"
+    multiple
+  />
+</div>`,
+    },
+    {
+      title: "Using FormField",
+      description: "File input using the FormField component.",
+      code: `<Form name="upload-form">
+  <FormField
+    type="inputFile"
+    name="attachment"
+    label="Attachment"
+  />
+</Form>`,
     },
   ],
 };

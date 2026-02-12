@@ -4,170 +4,179 @@ export const formFieldDoc: ComponentDoc = {
   name: "FormField",
   slug: "form-field",
   description:
-    "A form field component that integrates with react-hook-form to provide field-level state management, validation, and error display. Works with FormItem, FormLabel, FormControl, FormDescription, and FormMessage sub-components.",
+    "A versatile form field component that renders different input types based on the type prop. Supports text inputs, email, password, number, textarea, file upload, radio buttons, select dropdowns, and checkboxes. Must be used within a Form component.",
   useCases: [
-    "Input fields with validation in forms",
-    "Consistent form field layouts and styling",
-    "Error message display for form validation",
-    "Field-level help text and descriptions",
-    "Accessible form controls with proper labeling",
+    "Rendering different form input types dynamically",
+    "Building forms with consistent field styling",
+    "Select dropdowns with predefined options",
+    "Radio button groups and checkboxes",
+    "Text, email, and password input fields",
   ],
   category: "ui",
-  importCode: `import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@stackshift-ui/react";`,
-  individualImportCode: `import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@stackshift-ui/form-field";`,
-  usageCode: `<FormField
-  control={form.control}
-  name="email"
-  render={({ field }) => (
-    <FormItem>
-      <FormLabel>Email</FormLabel>
-      <FormControl>
-        <Input type="email" {...field} />
-      </FormControl>
-      <FormMessage />
-    </FormItem>
-  )}
-/>`,
+  importCode: `import { Form, FormField } from "@stackshift-ui/react";`,
+  individualImportCode: `import { FormField } from "@stackshift-ui/form-field";`,
+  usageCode: `<Form name="my-form">
+  <FormField
+    type="inputText"
+    name="username"
+    label="Username"
+    placeholder="Enter your username"
+  />
+</Form>`,
   props: [
     {
-      name: "control",
-      type: "Control",
-      required: true,
-      description: "The form control object from react-hook-form.",
+      name: "type",
+      type: '"inputText" | "inputEmail" | "inputPassword" | "inputNumber" | "textarea" | "inputFile" | "inputRadio" | "inputCheckbox" | "inputSelect"',
+      required: false,
+      default: '"inputText"',
+      description: "The type of form field to render.",
     },
     {
       name: "name",
       type: "string",
       required: true,
-      description: "The name of the field in the form.",
+      description: "The name attribute for the form field.",
     },
     {
-      name: "render",
-      type: "({ field, fieldState, formState }) => React.ReactElement",
-      required: true,
-      description: "Render function that receives field props and returns the field UI.",
+      name: "label",
+      type: "string",
+      required: false,
+      description: "Label text displayed above the field.",
     },
     {
-      name: "disabled",
+      name: "placeholder",
+      type: "string",
+      required: false,
+      description: "Placeholder text for the input.",
+    },
+    {
+      name: "items",
+      type: "string[]",
+      required: false,
+      description: "Array of options for select or radio field types.",
+    },
+    {
+      name: "variant",
+      type: '"primary" | "secondary" | "outline"',
+      required: false,
+      default: '"primary"',
+      description: "The visual style variant of the field.",
+    },
+    {
+      name: "isRequired",
       type: "boolean",
       required: false,
-      description: "Whether the field is disabled.",
+      description: "Whether the field is required.",
     },
   ],
   examples: [
     {
-      title: "Basic Form Field",
-      description: "A simple text input field with label and error message.",
-      code: `<FormField
-  control={form.control}
-  name="username"
-  render={({ field }) => (
-    <FormItem>
-      <FormLabel>Username</FormLabel>
-      <FormControl>
-        <Input placeholder="Enter username" {...field} />
-      </FormControl>
-      <FormMessage />
-    </FormItem>
-  )}
-/>`,
+      title: "Text Input Field",
+      description: "A basic text input field with label and placeholder.",
+      code: `<Form name="text-form">
+  <FormField
+    type="inputText"
+    name="username"
+    label="Username"
+    placeholder="Enter your username"
+  />
+</Form>`,
     },
     {
-      title: "With Description",
-      description: "Add helper text below the input field.",
-      code: `<FormField
-  control={form.control}
-  name="email"
-  render={({ field }) => (
-    <FormItem>
-      <FormLabel>Email</FormLabel>
-      <FormControl>
-        <Input type="email" placeholder="you@example.com" {...field} />
-      </FormControl>
-      <FormDescription>
-        We'll never share your email with anyone else.
-      </FormDescription>
-      <FormMessage />
-    </FormItem>
-  )}
-/>`,
+      title: "Email Input Field",
+      description: "An email input field with validation type.",
+      code: `<Form name="email-form">
+  <FormField
+    type="inputEmail"
+    name="email"
+    label="Email Address"
+    placeholder="you@example.com"
+  />
+</Form>`,
+    },
+    {
+      title: "Password Input Field",
+      description: "A password input field with masked characters.",
+      code: `<Form name="password-form">
+  <FormField
+    type="inputPassword"
+    name="password"
+    label="Password"
+    placeholder="Enter your password"
+  />
+</Form>`,
+    },
+    {
+      title: "Number Input Field",
+      description: "A number input field for numeric values.",
+      code: `<Form name="number-form">
+  <FormField
+    type="inputNumber"
+    name="quantity"
+    label="Quantity"
+    placeholder="Enter a number"
+  />
+</Form>`,
     },
     {
       title: "Textarea Field",
-      description: "Use FormField with a textarea input.",
-      code: `<FormField
-  control={form.control}
-  name="bio"
-  render={({ field }) => (
-    <FormItem>
-      <FormLabel>Bio</FormLabel>
-      <FormControl>
-        <Textarea
-          placeholder="Tell us about yourself"
-          className="min-h-[100px]"
-          {...field}
-        />
-      </FormControl>
-      <FormDescription>
-        Brief description for your profile. Max 250 characters.
-      </FormDescription>
-      <FormMessage />
-    </FormItem>
-  )}
-/>`,
+      description: "A multi-line text area for longer content.",
+      code: `<Form name="textarea-form">
+  <FormField
+    type="textarea"
+    name="message"
+    label="Your Message"
+    placeholder="Type your message here..."
+  />
+</Form>`,
     },
     {
-      title: "Select Field",
-      description: "Use FormField with a select dropdown.",
-      code: `<FormField
-  control={form.control}
-  name="role"
-  render={({ field }) => (
-    <FormItem>
-      <FormLabel>Role</FormLabel>
-      <Select onValueChange={field.onChange} defaultValue={field.value}>
-        <FormControl>
-          <SelectTrigger>
-            <SelectValue placeholder="Select a role" />
-          </SelectTrigger>
-        </FormControl>
-        <SelectContent>
-          <SelectItem value="admin">Admin</SelectItem>
-          <SelectItem value="user">User</SelectItem>
-          <SelectItem value="guest">Guest</SelectItem>
-        </SelectContent>
-      </Select>
-      <FormMessage />
-    </FormItem>
-  )}
-/>`,
+      title: "Select Dropdown",
+      description: "A select dropdown with predefined options.",
+      code: `<Form name="select-form">
+  <FormField
+    type="inputSelect"
+    name="country"
+    label="Country"
+    items={["United States", "Canada", "United Kingdom", "Australia"]}
+  />
+</Form>`,
+    },
+    {
+      title: "Radio Button Group",
+      description: "Radio buttons for single-choice selection.",
+      code: `<Form name="radio-form">
+  <FormField
+    type="inputRadio"
+    name="plan"
+    label="Select Plan"
+    items={["Basic", "Pro", "Enterprise"]}
+  />
+</Form>`,
     },
     {
       title: "Checkbox Field",
-      description: "Use FormField with a checkbox input.",
-      code: `<FormField
-  control={form.control}
-  name="terms"
-  render={({ field }) => (
-    <FormItem className="flex flex-row items-start space-x-3 space-y-0">
-      <FormControl>
-        <Checkbox
-          checked={field.value}
-          onCheckedChange={field.onChange}
-        />
-      </FormControl>
-      <div className="space-y-1 leading-none">
-        <FormLabel>
-          Accept terms and conditions
-        </FormLabel>
-        <FormDescription>
-          You agree to our Terms of Service and Privacy Policy.
-        </FormDescription>
-      </div>
-      <FormMessage />
-    </FormItem>
-  )}
-/>`,
+      description: "A checkbox for boolean options. Use noLabel to show only the item label.",
+      code: `<Form name="checkbox-form">
+  <FormField
+    type="inputCheckbox"
+    name="terms"
+    label="I agree to the terms and conditions"
+    items={["terms"]}
+    noLabel
+  />
+</Form>`,
+    },
+    {
+      title: "File Input Field",
+      description: "A file input for uploading files.",
+      code: `<Form name="file-form">
+  <FormField
+    type="inputFile"
+    name="document"
+    label="Upload Document"
+  />
+</Form>`,
     },
   ],
 };

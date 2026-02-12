@@ -19,50 +19,40 @@ export const toastDoc: ComponentDoc = {
 <Toaster />
 
 // Trigger toast notifications
-toast({
-  title: "Success",
+toast("Success", {
   description: "Your changes have been saved."
 })`,
   props: [
     {
-      name: "title",
+      name: "message",
       type: "string | React.ReactNode",
-      required: false,
-      description: "The title of the toast notification.",
+      required: true,
+      description: "The first argument to toast() - the main message/title of the toast.",
     },
     {
       name: "description",
       type: "string | React.ReactNode",
       required: false,
-      description: "The description or body content of the toast.",
-    },
-    {
-      name: "variant",
-      type: '"default" | "destructive"',
-      required: false,
-      default: '"default"',
-      description: "The visual variant of the toast.",
+      description: "Additional description text shown below the message.",
     },
     {
       name: "duration",
       type: "number",
       required: false,
-      default: "5000",
+      default: "4000",
       description: "Duration in milliseconds before the toast auto-dismisses.",
     },
     {
       name: "action",
-      type: "ToastAction",
+      type: "{ label: string, onClick: () => void }",
       required: false,
       description: "Optional action button to display in the toast.",
     },
     {
-      name: "position",
-      type: '"top-left" | "top-right" | "top-center" | "bottom-left" | "bottom-right" | "bottom-center"',
+      name: "id",
+      type: "string | number",
       required: false,
-      default: '"bottom-right"',
-      description:
-        "Position of the toast on the screen. Can be set on the Toaster for global positioning or per-toast for individual control.",
+      description: "Custom ID for the toast. Useful for updating or dismissing specific toasts.",
     },
   ],
   toasterProps: [
@@ -132,175 +122,111 @@ toast({
   ],
   examples: [
     {
-      title: "Setup",
-      description: "Add the Toaster component to your app root.",
-      code: `// In your root layout or App component
-import { Toaster } from "@stackshift-ui/react";
-
-export default function RootLayout({ children }) {
-  return (
-    <html>
-      <body>
-        {children}
-        <Toaster />
-      </body>
-    </html>
-  );
-}`,
-    },
-    {
       title: "Basic Toast",
-      description: "Display a simple toast notification.",
-      code: `import { toast } from "@stackshift-ui/react";
-
-<Button
-  onClick={() => {
-    toast({
-      title: "Notification",
-      description: "This is a basic toast notification."
-    });
-  }}
->
-  Show Toast
-</Button>`,
-    },
-    {
-      title: "Success Toast",
-      description: "Show a success message.",
-      code: `<Button
-  onClick={() => {
-    toast({
-      title: "Success",
-      description: "Your changes have been saved successfully."
-    });
-  }}
->
-  Save Changes
-</Button>`,
-    },
-    {
-      title: "Error Toast",
-      description: "Display error notifications.",
-      code: `<Button
-  variant="destructive"
-  onClick={() => {
-    toast({
-      variant: "destructive",
-      title: "Error",
-      description: "Something went wrong. Please try again."
-    });
-  }}
->
-  Trigger Error
-</Button>`,
-    },
-    {
-      title: "With Action",
-      description: "Toast with an action button.",
-      code: `<Button
-  onClick={() => {
-    toast({
-      title: "File deleted",
-      description: "Your file has been permanently deleted.",
-      action: {
-        label: "Undo",
-        onClick: () => {
-          console.log("Undo clicked");
-        }
-      }
-    });
-  }}
->
-  Delete File
-</Button>`,
-    },
-    {
-      title: "Custom Duration",
-      description: "Control how long the toast is displayed.",
-      code: `<div className="flex gap-2">
+      description: "Display a simple toast notification. Note: Requires Toaster component in your app root.",
+      code: `<div>
+  <Toaster />
   <Button
     onClick={() => {
-      toast({
-        title: "Quick message",
-        duration: 2000
+      toast("Notification", {
+        description: "This is a basic toast notification."
       });
     }}
   >
-    2 seconds
-  </Button>
-  <Button
-    onClick={() => {
-      toast({
-        title: "Longer message",
-        duration: 10000
-      });
-    }}
-  >
-    10 seconds
+    Show Toast
   </Button>
 </div>`,
     },
     {
-      title: "Promise Toast",
-      description: "Show loading state and update based on promise result.",
-      code: `<Button
-  onClick={() => {
-    const promise = fetch("/api/data").then(res => res.json());
-
-    toast.promise(promise, {
-      loading: "Loading...",
-      success: (data) => \`Successfully loaded \${data.count} items\`,
-      error: "Failed to load data"
-    });
-  }}
->
-  Load Data
-</Button>`,
+      title: "Success Toast",
+      description: "Show a success message.",
+      code: `<div>
+  <Toaster />
+  <Button
+    onClick={() => {
+      toast.success("Your changes have been saved successfully.");
+    }}
+  >
+    Save Changes
+  </Button>
+</div>`,
     },
     {
-      title: "Positioning",
-      description:
-        "Configure where toasts appear on the screen. Set position on the Toaster component for global positioning.",
-      code: `// Top right (common for notifications)
-<Toaster position="top-right" />
-
-// Bottom center (common for mobile-friendly apps)
-<Toaster position="bottom-center" />
-
-// Top center (common for important alerts)
-<Toaster position="top-center" />
-
-// Available positions:
-// "top-left" | "top-right" | "top-center"
-// "bottom-left" | "bottom-right" | "bottom-center"`,
+      title: "Error Toast",
+      description: "Display error notifications.",
+      code: `<div>
+  <Toaster />
+  <Button
+    variant="destructive"
+    onClick={() => {
+      toast.error("Something went wrong. Please try again.");
+    }}
+  >
+    Trigger Error
+  </Button>
+</div>`,
     },
     {
-      title: "Per-Toast Position",
-      description: "Override the global position for individual toasts.",
-      code: `<Button
-  onClick={() => {
-    toast("This appears at top-center!", {
-      position: "top-center"
-    });
-  }}
->
-  Show at Top Center
-</Button>`,
+      title: "With Action",
+      description: "Toast with an action button.",
+      code: `<div>
+  <Toaster />
+  <Button
+    onClick={() => {
+      toast("File deleted", {
+        description: "Your file has been permanently deleted.",
+        action: {
+          label: "Undo",
+          onClick: () => console.log("Undo clicked")
+        }
+      });
+    }}
+  >
+    Delete File
+  </Button>
+</div>`,
     },
     {
-      title: "Custom Toaster Configuration",
-      description:
-        "Customize the Toaster with positioning, spacing, and appearance options.",
-      code: `// In your root layout
-<Toaster
-  position="top-right"
-  expand={true}
-  richColors
-  closeButton
-  visibleToasts={5}
-  offset={16}
-  gap={8}
-/>`,
+      title: "Custom Duration",
+      description: "Control how long the toast is displayed.",
+      code: `<div>
+  <Toaster />
+  <div className="flex gap-2">
+    <Button
+      onClick={() => {
+        toast("Quick message", { duration: 2000 });
+      }}
+    >
+      2 seconds
+    </Button>
+    <Button
+      onClick={() => {
+        toast("Longer message", { duration: 10000 });
+      }}
+    >
+      10 seconds
+    </Button>
+  </div>
+</div>`,
+    },
+    {
+      title: "Toaster Positions",
+      description: "The Toaster component supports different positions. Configure it in your app root.",
+      code: `<div className="space-y-2">
+  <Text className="text-sm text-muted-foreground">
+    Available positions: top-left, top-right, top-center, bottom-left, bottom-right, bottom-center
+  </Text>
+  <Toaster position="top-right" />
+  <Button
+    onClick={() => {
+      toast("Top Right", {
+        description: "This toast appears in the top right corner."
+      });
+    }}
+  >
+    Show Toast
+  </Button>
+</div>`,
     },
   ],
 };

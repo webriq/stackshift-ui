@@ -38,33 +38,25 @@ export const containerDoc: ComponentDoc = {
   examples: [
     {
       title: "Default Container",
-      code: `import { Container } from "@stackshift-ui/react";
-
-<Container>
+      code: `<Container>
   <p>Content inside a full-width container</p>
 </Container>`,
     },
     {
       title: "Container with Max Width",
-      code: `import { Container } from "@stackshift-ui/react";
-
-<Container maxWidth="lg">
+      code: `<Container maxWidth="lg">
   <p>Content constrained to large width (512px)</p>
 </Container>`,
     },
     {
       title: "Container with Custom Width",
-      code: `import { Container } from "@stackshift-ui/react";
-
-<Container maxWidth={800}>
+      code: `<Container maxWidth={800}>
   <p>Content constrained to 800px</p>
 </Container>`,
     },
     {
       title: "Container as Section",
-      code: `import { Container } from "@stackshift-ui/react";
-
-<Container as="section" maxWidth="xl" className="py-8">
+      code: `<Container as="section" maxWidth="xl" className="py-8">
   <h2>Section Title</h2>
   <p>Section content goes here.</p>
 </Container>`,

@@ -96,24 +96,30 @@ export const radioGroupDoc: ComponentDoc = {
     {
       title: "Controlled Radio Group",
       description: "Control the selected value with React state.",
-      code: `const [value, setValue] = React.useState("card");
+      code: `function PaymentSelector() {
+  const [value, setValue] = React.useState("card");
+  return (
+    <div>
+      <RadioGroup value={value} onValueChange={setValue}>
+        <div className="flex items-center space-x-2">
+          <RadioGroupItem value="card" id="pay-card" />
+          <Label htmlFor="pay-card">Credit Card</Label>
+        </div>
+        <div className="flex items-center space-x-2">
+          <RadioGroupItem value="paypal" id="pay-paypal" />
+          <Label htmlFor="pay-paypal">PayPal</Label>
+        </div>
+        <div className="flex items-center space-x-2">
+          <RadioGroupItem value="apple" id="pay-apple" />
+          <Label htmlFor="pay-apple">Apple Pay</Label>
+        </div>
+      </RadioGroup>
+      <Text className="mt-2 text-sm">Selected: {value}</Text>
+    </div>
+  );
+}
 
-<RadioGroup value={value} onValueChange={setValue}>
-  <div className="flex items-center space-x-2">
-    <RadioGroupItem value="card" id="card" />
-    <Label htmlFor="card">Credit Card</Label>
-  </div>
-  <div className="flex items-center space-x-2">
-    <RadioGroupItem value="paypal" id="paypal" />
-    <Label htmlFor="paypal">PayPal</Label>
-  </div>
-  <div className="flex items-center space-x-2">
-    <RadioGroupItem value="apple" id="apple" />
-    <Label htmlFor="apple">Apple Pay</Label>
-  </div>
-</RadioGroup>
-
-<p className="mt-2 text-sm">Selected: {value}</p>`,
+render(<PaymentSelector />)`,
     },
     {
       title: "With Descriptions",

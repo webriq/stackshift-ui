@@ -80,22 +80,29 @@ export const switchDoc: ComponentDoc = {
     {
       title: "Controlled Switch",
       description: "Control the switch state with React state.",
-      code: `const [enabled, setEnabled] = React.useState(false);
+      code: `function ControlledSwitch() {
+  const [enabled, setEnabled] = React.useState(false);
 
-<div className="flex items-center justify-between">
-  <Label htmlFor="notifications">Enable notifications</Label>
-  <Switch
-    id="notifications"
-    checked={enabled}
-    onCheckedChange={setEnabled}
-  />
-</div>
+  return (
+    <div className="space-y-2">
+      <div className="flex items-center justify-between">
+        <Label htmlFor="notifications">Enable notifications</Label>
+        <Switch
+          id="notifications"
+          checked={enabled}
+          onCheckedChange={setEnabled}
+        />
+      </div>
+      {enabled && (
+        <p className="text-sm text-muted-foreground">
+          Notifications are enabled
+        </p>
+      )}
+    </div>
+  );
+}
 
-{enabled && (
-  <p className="mt-2 text-sm text-muted-foreground">
-    Notifications are enabled
-  </p>
-)}`,
+render(<ControlledSwitch />);`,
     },
     {
       title: "Disabled Switch",

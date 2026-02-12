@@ -59,6 +59,20 @@ export const popoverDoc: ComponentDoc = {
       default: "false",
       description: "Whether the popover is modal.",
     },
+    {
+      name: "align",
+      type: '"start" | "center" | "end"',
+      required: false,
+      default: '"center"',
+      description: "The alignment of PopoverContent relative to the trigger.",
+    },
+    {
+      name: "sideOffset",
+      type: "number",
+      required: false,
+      default: "4",
+      description: "The distance in pixels from the trigger for PopoverContent.",
+    },
   ],
   examples: [
     {

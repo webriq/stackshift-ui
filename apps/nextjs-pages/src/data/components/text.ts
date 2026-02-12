@@ -19,37 +19,37 @@ export const textDoc: ComponentDoc = {
   props: [
     {
       name: "as",
-      type: '"p" | "span" | "div" | "label"',
+      type: "ElementType",
       required: false,
       default: '"p"',
       description: "The HTML element to render.",
     },
     {
       name: "fontSize",
-      type: '"xs" | "sm" | "base" | "lg" | "xl"',
+      type: '"xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl"',
       required: false,
       default: '"base"',
-      description: "The font fontSize of the text.",
+      description: "The font size of the text.",
     },
     {
       name: "weight",
-      type: '"normal" | "medium" | "semibold" | "bold"',
+      type: '"thin" | "extralight" | "light" | "normal" | "medium" | "semibold" | "bold" | "extrabold" | "black"',
       required: false,
       default: '"normal"',
       description: "The font weight of the text.",
     },
     {
-      name: "variant",
-      type: '"default" | "muted" | "primary" | "destructive"',
+      name: "muted",
+      type: "boolean",
       required: false,
-      default: '"default"',
-      description: "The color variant of the text.",
+      default: "false",
+      description: "Whether to render the text in a muted (gray) color.",
     },
     {
-      name: "align",
-      type: '"left" | "center" | "right" | "justify"',
+      name: "style",
+      type: "React.CSSProperties",
       required: false,
-      description: "Text alignment.",
+      description: "Inline styles to apply.",
     },
     {
       name: "className",
@@ -74,33 +74,38 @@ export const textDoc: ComponentDoc = {
     },
     {
       title: "Text Sizes",
-      description: "Different text fontSizes for various contexts.",
+      description: "Different text sizes for various contexts.",
       code: `<div className="space-y-2">
   <Text fontSize="xs">Extra small text</Text>
   <Text fontSize="sm">Small text</Text>
   <Text fontSize="base">Base text (default)</Text>
   <Text fontSize="lg">Large text</Text>
   <Text fontSize="xl">Extra large text</Text>
+  <Text fontSize="2xl">2XL text</Text>
+  <Text fontSize="3xl">3XL text</Text>
 </div>`,
     },
     {
       title: "Text Weights",
       description: "Different font weights for emphasis.",
       code: `<div className="space-y-2">
+  <Text weight="thin">Thin weight</Text>
+  <Text weight="light">Light weight</Text>
   <Text weight="normal">Normal weight (default)</Text>
   <Text weight="medium">Medium weight</Text>
   <Text weight="semibold">Semibold weight</Text>
   <Text weight="bold">Bold weight</Text>
+  <Text weight="extrabold">Extrabold weight</Text>
 </div>`,
     },
     {
       title: "Text Variants",
-      description: "Different color variants.",
+      description: "Different color styles using muted prop and className.",
       code: `<div className="space-y-2">
-  <Text variant="default">Default text color</Text>
-  <Text variant="muted">Muted text color</Text>
-  <Text variant="primary">Primary text color</Text>
-  <Text variant="destructive">Destructive text color</Text>
+  <Text>Default text color</Text>
+  <Text muted>Muted text color</Text>
+  <Text className="text-primary">Primary text color</Text>
+  <Text className="text-destructive">Destructive text color</Text>
 </div>`,
     },
     {
@@ -115,12 +120,12 @@ export const textDoc: ComponentDoc = {
     },
     {
       title: "Text Alignment",
-      description: "Control text alignment.",
+      description: "Control text alignment using className.",
       code: `<div className="space-y-2">
-  <Text align="left">Left aligned text</Text>
-  <Text align="center">Center aligned text</Text>
-  <Text align="right">Right aligned text</Text>
-  <Text align="justify">
+  <Text className="text-left">Left aligned text</Text>
+  <Text className="text-center">Center aligned text</Text>
+  <Text className="text-right">Right aligned text</Text>
+  <Text className="text-justify">
     Justified text that spans multiple lines and is aligned to both left and right margins.
   </Text>
 </div>`,

@@ -105,79 +105,74 @@ export const dataTableDoc: ComponentDoc = {
   ],
   examples: [
     {
-      title: "Basic Data Table",
-      description: "A simple data table with sortable columns.",
-      code: `const columns: ColumnDef<Payment>[] = [
-  {
-    accessorKey: "id",
-    header: "ID",
-  },
-  {
-    accessorKey: "amount",
-    header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Amount" />
-    ),
-  },
-  {
-    accessorKey: "status",
-    header: "Status",
-  },
-];
-
-<DataTable columns={columns} data={payments} />`,
+      title: "Simple Table (No Pagination)",
+      description: "Use the Table component directly for simple tables without pagination.",
+      code: `<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Name</TableHead>
+      <TableHead>Email</TableHead>
+      <TableHead>Role</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>John Doe</TableCell>
+      <TableCell>john@example.com</TableCell>
+      <TableCell>Admin</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Jane Smith</TableCell>
+      <TableCell>jane@example.com</TableCell>
+      <TableCell>User</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Bob Johnson</TableCell>
+      <TableCell>bob@example.com</TableCell>
+      <TableCell>Editor</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>`,
     },
     {
-      title: "With Pagination",
-      description: "Add pagination controls to the data table.",
-      code: `const table = useReactTable({
-  data,
-  columns,
-  getCoreRowModel: getCoreRowModel(),
-  getPaginationRowModel: getPaginationRowModel(),
-});
-
-<div>
-  <DataTable columns={columns} data={data} />
-  <DataTablePagination table={table} />
-</div>`,
+      title: "DataTable with Pagination",
+      description: "DataTable includes built-in pagination, sorting, and filtering.",
+      code: `<DataTable
+  columns={[
+    { accessorKey: "name", header: "Name" },
+    { accessorKey: "email", header: "Email" },
+    { accessorKey: "role", header: "Role" },
+  ]}
+  data={[
+    { name: "John Doe", email: "john@example.com", role: "Admin" },
+    { name: "Jane Smith", email: "jane@example.com", role: "User" },
+    { name: "Bob Johnson", email: "bob@example.com", role: "Editor" },
+  ]}
+/>`,
     },
     {
-      title: "With Column Visibility",
-      description: "Allow users to toggle column visibility.",
-      code: `const table = useReactTable({
-  data,
-  columns,
-  getCoreRowModel: getCoreRowModel(),
-});
-
-<div className="space-y-4">
-  <DataTableViewOptions table={table} />
-  <DataTable columns={columns} data={data} />
-</div>`,
-    },
+      title: "With Status Badges",
+      description: "Use custom cell renderers to display Badge components for status.",
+      code: `<DataTable
+  columns={[
+    { accessorKey: "id", header: "ID" },
+    { accessorKey: "amount", header: "Amount" },
     {
-      title: "With Custom Cells",
-      description: "Render custom components in table cells.",
-      code: `const columns: ColumnDef<User>[] = [
-  {
-    accessorKey: "name",
-    header: "Name",
-  },
-  {
-    accessorKey: "status",
-    header: "Status",
-    cell: ({ row }) => {
-      const status = row.getValue("status");
-      return (
-        <Badge variant={status === "active" ? "default" : "secondary"}>
-          {status}
+      accessorKey: "status",
+      header: "Status",
+      cell: ({ row }) => (
+        <Badge variant={row.getValue("status") === "Paid" ? "default" : "secondary"}>
+          {row.getValue("status")}
         </Badge>
-      );
+      ),
     },
-  },
-];
-
-<DataTable columns={columns} data={users} />`,
+  ]}
+  data={[
+    { id: "INV001", amount: "$250.00", status: "Paid" },
+    { id: "INV002", amount: "$150.00", status: "Pending" },
+    { id: "INV003", amount: "$350.00", status: "Paid" },
+  ]}
+/>`,
     },
   ],
 };

@@ -54,6 +54,12 @@ export const imageDoc: ComponentDoc = {
       description: "Loading strategy for the image.",
     },
     {
+      name: "priority",
+      type: "boolean",
+      required: false,
+      description: "When true, disables lazy loading for above-the-fold images.",
+    },
+    {
       name: "className",
       type: "string",
       required: false,
@@ -77,7 +83,7 @@ export const imageDoc: ComponentDoc = {
       title: "Basic Image",
       description: "A simple image with alt text.",
       code: `<Image
-  src="/photos/landscape.jpg"
+  src="/webriq-logo-lg.png"
   alt="Beautiful landscape"
   width={800}
   height={600}
@@ -87,16 +93,18 @@ export const imageDoc: ComponentDoc = {
       title: "Responsive Image",
       description: "Image that scales with its container.",
       code: `<Image
-  src="/photos/product.jpg"
+  src="/webriq-logo-lg.png"
   alt="Product photo"
   className="w-full h-auto"
+  width={800}
+  height={600}
 />`,
     },
     {
       title: "Rounded Image",
       description: "Apply border radius for rounded corners.",
       code: `<Image
-  src="/photos/avatar.jpg"
+  src="/webriq-logo-lg.png"
   alt="User avatar"
   width={200}
   height={200}
@@ -108,9 +116,11 @@ export const imageDoc: ComponentDoc = {
       description: "Maintain specific aspect ratio.",
       code: `<div className="aspect-video w-full overflow-hidden rounded-lg">
   <Image
-    src="/photos/video-thumbnail.jpg"
+    src="/webriq-logo-lg.png"
     alt="Video thumbnail"
     className="w-full h-full object-cover"
+    width={800}
+    height={450}
   />
 </div>`,
     },

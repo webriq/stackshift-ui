@@ -4,7 +4,7 @@ export const linkDoc: ComponentDoc = {
   name: "Link",
   slug: "link",
   description:
-    "A styled link component for navigation that extends the native anchor element. Supports internal and external links with consistent styling and hover states.",
+    "A link component for navigation that extends the native anchor element. Supports all standard anchor attributes and can be styled with Tailwind classes.",
   useCases: [
     "Navigation menu links",
     "In-content hyperlinks",
@@ -36,17 +36,10 @@ export const linkDoc: ComponentDoc = {
       description: "The relationship between the current and linked document.",
     },
     {
-      name: "variant",
-      type: '"default" | "underline" | "muted"',
-      required: false,
-      default: '"default"',
-      description: "The visual style variant of the link.",
-    },
-    {
       name: "className",
       type: "string",
       required: false,
-      description: "Additional CSS classes to apply.",
+      description: "CSS classes for styling the link.",
     },
     {
       name: "children",
@@ -73,24 +66,30 @@ export const linkDoc: ComponentDoc = {
 </Link>`,
     },
     {
-      title: "Link Variants",
-      description: "Different visual styles for links.",
+      title: "Link Styles",
+      description: "Different visual styles using CSS classes.",
       code: `<div className="space-y-2">
   <div>
-    <Link href="#" variant="default">Default Link</Link>
+    <Link href="#" className="text-primary hover:underline">
+      Default Link
+    </Link>
   </div>
   <div>
-    <Link href="#" variant="underline">Underlined Link</Link>
+    <Link href="#" className="underline text-primary hover:text-primary/80">
+      Underlined Link
+    </Link>
   </div>
   <div>
-    <Link href="#" variant="muted">Muted Link</Link>
+    <Link href="#" className="text-muted-foreground hover:text-foreground">
+      Muted Link
+    </Link>
   </div>
 </div>`,
     },
     {
       title: "Link with Icon",
       description: "Link with an accompanying icon.",
-      code: `<Link href="/docs" className="inline-flex items-center gap-2">
+      code: `<Link href="/docs" className="inline-flex items-center gap-2 text-primary hover:underline">
   <BookOpen className="h-4 w-4" />
   Documentation
 </Link>`,
@@ -99,9 +98,9 @@ export const linkDoc: ComponentDoc = {
       title: "Breadcrumb Links",
       description: "Links used in breadcrumb navigation.",
       code: `<nav className="flex items-center space-x-2 text-sm">
-  <Link href="/" variant="muted">Home</Link>
+  <Link href="/" className="text-muted-foreground hover:text-foreground">Home</Link>
   <ChevronRight className="h-4 w-4 text-muted-foreground" />
-  <Link href="/products" variant="muted">Products</Link>
+  <Link href="/products" className="text-muted-foreground hover:text-foreground">Products</Link>
   <ChevronRight className="h-4 w-4 text-muted-foreground" />
   <span className="text-foreground">Details</span>
 </nav>`,

@@ -65,9 +65,7 @@ export const flexDoc: ComponentDoc = {
   examples: [
     {
       title: "Basic Row Layout",
-      code: `import { Flex } from "@stackshift-ui/react";
-
-<Flex gap={4}>
+      code: `<Flex gap={4}>
   <div className="p-4 bg-blue-100">Item 1</div>
   <div className="p-4 bg-blue-100">Item 2</div>
   <div className="p-4 bg-blue-100">Item 3</div>
@@ -75,9 +73,7 @@ export const flexDoc: ComponentDoc = {
     },
     {
       title: "Column Layout",
-      code: `import { Flex } from "@stackshift-ui/react";
-
-<Flex direction="col" gap={4}>
+      code: `<Flex direction="col" gap={4}>
   <div className="p-4 bg-green-100">Item 1</div>
   <div className="p-4 bg-green-100">Item 2</div>
   <div className="p-4 bg-green-100">Item 3</div>
@@ -85,17 +81,13 @@ export const flexDoc: ComponentDoc = {
     },
     {
       title: "Centered Content",
-      code: `import { Flex } from "@stackshift-ui/react";
-
-<Flex align="center" justify="center" className="h-32 bg-gray-100">
+      code: `<Flex align="center" justify="center" className="h-32 bg-gray-100">
   <div className="p-4 bg-purple-100">Centered Content</div>
 </Flex>`,
     },
     {
       title: "Space Between",
-      code: `import { Flex } from "@stackshift-ui/react";
-
-<Flex justify="between" className="w-full">
+      code: `<Flex justify="between" className="w-full">
   <div className="p-4 bg-yellow-100">Left</div>
   <div className="p-4 bg-yellow-100">Center</div>
   <div className="p-4 bg-yellow-100">Right</div>
@@ -103,9 +95,7 @@ export const flexDoc: ComponentDoc = {
     },
     {
       title: "Wrapping Items",
-      code: `import { Flex } from "@stackshift-ui/react";
-
-<Flex wrap gap={4} className="max-w-md">
+      code: `<Flex wrap gap={4} className="max-w-md">
   {[1, 2, 3, 4, 5, 6].map((i) => (
     <div key={i} className="p-4 bg-pink-100 w-24">Item {i}</div>
   ))}

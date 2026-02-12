@@ -15,51 +15,32 @@ export const datePickerDoc: ComponentDoc = {
   category: "ui",
   importCode: `import { DatePicker, DatePickerInput, DatePickerTime } from "@stackshift-ui/react";`,
   individualImportCode: `import { DatePicker, DatePickerInput, DatePickerTime } from "@stackshift-ui/date-picker";`,
-  usageCode: `const [date, setDate] = React.useState<Date>();
-
-<DatePicker
-  selected={date}
-  onSelect={setDate}
-/>`,
+  usageCode: `<DatePicker label="Select Date" />`,
   props: [
     {
-      name: "selected",
-      type: "Date | undefined",
+      name: "label",
+      type: "string",
+      required: false,
+      description: "Label text displayed above the date picker.",
+    },
+    {
+      name: "mode",
+      type: '"single"',
+      required: false,
+      default: '"single"',
+      description: "The selection mode for the calendar. Use single for date selection.",
+    },
+    {
+      name: "selectedDate",
+      type: "Date",
       required: false,
       description: "The selected date value.",
     },
     {
       name: "onSelect",
-      type: "(date: Date | undefined) => void",
+      type: "(date: Date) => void",
       required: false,
       description: "Callback when a date is selected.",
-    },
-    {
-      name: "mode",
-      type: '"single" | "range"',
-      required: false,
-      default: '"single"',
-      description: "The selection mode for the date picker.",
-    },
-    {
-      name: "placeholder",
-      type: "string",
-      required: false,
-      default: '"Pick a date"',
-      description: "Placeholder text for the input field.",
-    },
-    {
-      name: "disabled",
-      type: "boolean | Date[] | ((date: Date) => boolean)",
-      required: false,
-      description: "Dates that should be disabled.",
-    },
-    {
-      name: "showTime",
-      type: "boolean",
-      required: false,
-      default: "false",
-      description: "Whether to show time selection.",
     },
     {
       name: "className",
@@ -70,62 +51,50 @@ export const datePickerDoc: ComponentDoc = {
   ],
   examples: [
     {
-      title: "Basic Date Picker",
-      description: "A simple date picker with calendar popup.",
-      code: `const [date, setDate] = React.useState<Date>();
+      title: "Basic DatePicker",
+      description: "A button-style date picker with calendar popup and dropdown navigation.",
+      code: `const [date, setDate] = React.useState(new Date());
 
 <DatePicker
-  selected={date}
+  label="Select Date"
+  mode="single"
+  selectedDate={date}
   onSelect={setDate}
-  placeholder="Select a date"
 />`,
     },
     {
-      title: "With Time Selection",
-      description: "Include time selection in the date picker.",
-      code: `const [date, setDate] = React.useState<Date>();
+      title: "DatePickerInput",
+      description: "A text input with calendar icon for typing or selecting dates.",
+      code: `const [date, setDate] = React.useState(new Date());
 
-<DatePicker
-  selected={date}
+<DatePickerInput
+  label="Birth Date"
+  selectedDate={date}
   onSelect={setDate}
-  showTime
-  placeholder="Select date and time"
 />`,
     },
     {
-      title: "Date Range Picker",
-      description: "Select a range of dates.",
-      code: `const [dateRange, setDateRange] = React.useState<DateRange>();
+      title: "DatePickerTime",
+      description: "Date picker combined with a time input field.",
+      code: `const [date, setDate] = React.useState(new Date());
 
-<DatePicker
-  mode="range"
-  selected={dateRange}
-  onSelect={setDateRange}
-  placeholder="Select date range"
+<DatePickerTime
+  label="Event Date"
+  selectedDate={date}
+  onSelect={setDate}
 />`,
     },
     {
-      title: "With Disabled Dates",
-      description: "Disable past dates or specific date ranges.",
-      code: `const [date, setDate] = React.useState<Date>();
+      title: "Calendar with Disabled Dates",
+      description: "Use Calendar directly to disable past dates or specific dates.",
+      code: `const [date, setDate] = React.useState(new Date());
 
-<DatePicker
+<Calendar
+  mode="single"
   selected={date}
   onSelect={setDate}
   disabled={(date) => date < new Date()}
-  placeholder="Select future date"
-/>`,
-    },
-    {
-      title: "Custom Date Input",
-      description: "Use DatePickerInput for custom styling.",
-      code: `const [date, setDate] = React.useState<Date>();
-
-<DatePickerInput
-  value={date}
-  onChange={setDate}
-  placeholder="MM/DD/YYYY"
-  className="w-full"
+  className="rounded-md border"
 />`,
     },
   ],

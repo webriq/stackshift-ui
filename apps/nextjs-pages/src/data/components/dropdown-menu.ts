@@ -84,8 +84,38 @@ export const dropdownMenuDoc: ComponentDoc = {
 </DropdownMenu>`,
     },
     {
-      title: "With Icons and Shortcuts",
-      description: "Add icons and keyboard shortcuts to menu items.",
+      title: "With Icons",
+      description: "Add icons to menu items for better visual clarity.",
+      code: `<DropdownMenu>
+  <DropdownMenuTrigger asChild>
+    <Button variant="outline">My Account</Button>
+  </DropdownMenuTrigger>
+  <DropdownMenuContent className="w-56">
+    <DropdownMenuLabel>My Account</DropdownMenuLabel>
+    <DropdownMenuSeparator />
+    <DropdownMenuItem>
+      <User className="mr-2 h-4 w-4" />
+      <span>Profile</span>
+    </DropdownMenuItem>
+    <DropdownMenuItem>
+      <Settings className="mr-2 h-4 w-4" />
+      <span>Settings</span>
+    </DropdownMenuItem>
+    <DropdownMenuItem>
+      <CreditCard className="mr-2 h-4 w-4" />
+      <span>Billing</span>
+    </DropdownMenuItem>
+    <DropdownMenuSeparator />
+    <DropdownMenuItem>
+      <LogOut className="mr-2 h-4 w-4" />
+      <span>Log out</span>
+    </DropdownMenuItem>
+  </DropdownMenuContent>
+</DropdownMenu>`,
+    },
+    {
+      title: "With Shortcuts",
+      description: "Add keyboard shortcuts to menu items.",
       code: `<DropdownMenu>
   <DropdownMenuTrigger asChild>
     <Button variant="outline">Actions</Button>
@@ -93,18 +123,18 @@ export const dropdownMenuDoc: ComponentDoc = {
   <DropdownMenuContent>
     <DropdownMenuItem>
       <User className="mr-2 h-4 w-4" />
-      <span>Profile</span>
+      Profile
       <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
     </DropdownMenuItem>
     <DropdownMenuItem>
       <Settings className="mr-2 h-4 w-4" />
-      <span>Settings</span>
+      Settings
       <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
     </DropdownMenuItem>
     <DropdownMenuSeparator />
     <DropdownMenuItem>
       <LogOut className="mr-2 h-4 w-4" />
-      <span>Log out</span>
+      Log out
     </DropdownMenuItem>
   </DropdownMenuContent>
 </DropdownMenu>`,

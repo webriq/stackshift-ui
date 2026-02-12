@@ -38,27 +38,21 @@ export const sectionDoc: ComponentDoc = {
   examples: [
     {
       title: "Basic Section",
-      code: `import { Section } from "@stackshift-ui/react";
-
-<Section className="py-12 bg-gray-50">
+      code: `<Section className="py-12 bg-gray-50">
   <h2 className="text-2xl font-bold mb-4">Section Title</h2>
   <p>Section content goes here.</p>
 </Section>`,
     },
     {
       title: "Constrained Width Section",
-      code: `import { Section } from "@stackshift-ui/react";
-
-<Section maxWidth="xl" className="py-8">
+      code: `<Section maxWidth="xl" className="py-8">
   <h2 className="text-2xl font-bold mb-4">Constrained Section</h2>
   <p>This content has a maximum width of 576px.</p>
 </Section>`,
     },
     {
       title: "Hero Section",
-      code: `import { Section, Flex } from "@stackshift-ui/react";
-
-<Section className="py-20 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+      code: `<Section className="py-20 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
   <Flex direction="col" align="center" justify="center" gap={4}>
     <h1 className="text-4xl font-bold">Welcome</h1>
     <p className="text-xl opacity-90">Build amazing experiences</p>

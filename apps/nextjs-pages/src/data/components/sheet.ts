@@ -85,7 +85,7 @@ export const sheetDoc: ComponentDoc = {
         This is a description of the sheet content.
       </SheetDescription>
     </SheetHeader>
-    <div className="py-4">
+    <div className="p-4">
       <p>Sheet content goes here.</p>
     </div>
   </SheetContent>
@@ -154,7 +154,7 @@ export const sheetDoc: ComponentDoc = {
         Make changes to your profile here.
       </SheetDescription>
     </SheetHeader>
-    <div className="grid gap-4 py-4">
+    <div className="grid gap-4 p-4">
       <div className="space-y-2">
         <Label htmlFor="name">Name</Label>
         <Input id="name" defaultValue="John Doe" />
@@ -185,7 +185,7 @@ export const sheetDoc: ComponentDoc = {
     <SheetHeader>
       <SheetTitle>Controlled Sheet</SheetTitle>
     </SheetHeader>
-    <div className="py-4">
+    <div className="p-4">
       <Button onClick={() => setOpen(false)}>Close Sheet</Button>
     </div>
   </SheetContent>

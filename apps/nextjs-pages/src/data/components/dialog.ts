@@ -73,6 +73,13 @@ export const dialogDoc: ComponentDoc = {
       default: "true",
       description: "Whether the dialog is modal (blocks interaction with content behind).",
     },
+    {
+      name: "showCloseButton",
+      type: "boolean",
+      required: false,
+      default: "true",
+      description: "Whether to show the close button in the top-right corner of DialogContent.",
+    },
   ],
   examples: [
     {
@@ -160,6 +167,31 @@ export const dialogDoc: ComponentDoc = {
     </DialogHeader>
     <DialogFooter>
       <Button onClick={() => setOpen(false)}>Close</Button>
+    </DialogFooter>
+  </DialogContent>
+</Dialog>`,
+    },
+    {
+      title: "Without Close Button",
+      description: "A dialog without the default close button. Users must use the action buttons to close.",
+      code: `<Dialog>
+  <DialogTrigger asChild>
+    <Button variant="outline">Open Dialog</Button>
+  </DialogTrigger>
+  <DialogContent showCloseButton={false}>
+    <DialogHeader>
+      <DialogTitle>Action Required</DialogTitle>
+      <DialogDescription>
+        Please confirm or cancel this action. The close button is hidden.
+      </DialogDescription>
+    </DialogHeader>
+    <DialogFooter>
+      <DialogClose asChild>
+        <Button variant="outline">Cancel</Button>
+      </DialogClose>
+      <DialogClose asChild>
+        <Button>Confirm</Button>
+      </DialogClose>
     </DialogFooter>
   </DialogContent>
 </Dialog>`,

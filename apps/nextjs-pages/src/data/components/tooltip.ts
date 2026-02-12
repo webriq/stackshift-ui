@@ -38,8 +38,8 @@ export const tooltipDoc: ComponentDoc = {
       name: "delayDuration",
       type: "number",
       required: false,
-      default: "700",
-      description: "Delay in milliseconds before showing the tooltip.",
+      default: "0",
+      description: "Delay in milliseconds before showing the tooltip (on TooltipProvider).",
     },
     {
       name: "skipDelayDuration",
@@ -65,6 +65,13 @@ export const tooltipDoc: ComponentDoc = {
       type: "(open: boolean) => void",
       required: false,
       description: "Callback when the open state changes.",
+    },
+    {
+      name: "sideOffset",
+      type: "number",
+      required: false,
+      default: "0",
+      description: "The distance in pixels from the trigger for TooltipContent.",
     },
   ],
   examples: [

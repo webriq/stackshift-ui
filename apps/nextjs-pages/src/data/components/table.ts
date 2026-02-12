@@ -134,13 +134,26 @@ export const tableDoc: ComponentDoc = {
     </TableRow>
   </TableHeader>
   <TableBody>
-    {users.map((user, index) => (
-      <TableRow key={user.id} className={index % 2 === 0 ? "bg-muted/50" : ""}>
-        <TableCell>{user.name}</TableCell>
-        <TableCell>{user.email}</TableCell>
-        <TableCell>{user.role}</TableCell>
-      </TableRow>
-    ))}
+    <TableRow className="bg-muted/50">
+      <TableCell>John Doe</TableCell>
+      <TableCell>john@example.com</TableCell>
+      <TableCell>Admin</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Jane Smith</TableCell>
+      <TableCell>jane@example.com</TableCell>
+      <TableCell>Editor</TableCell>
+    </TableRow>
+    <TableRow className="bg-muted/50">
+      <TableCell>Bob Johnson</TableCell>
+      <TableCell>bob@example.com</TableCell>
+      <TableCell>Viewer</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Alice Brown</TableCell>
+      <TableCell>alice@example.com</TableCell>
+      <TableCell>Editor</TableCell>
+    </TableRow>
   </TableBody>
 </Table>`,
     },

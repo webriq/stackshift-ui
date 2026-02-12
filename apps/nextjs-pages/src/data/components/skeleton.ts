@@ -63,7 +63,7 @@ export const skeletonDoc: ComponentDoc = {
     {
       title: "Article Skeleton",
       description: "Loading skeleton for an article or blog post.",
-      code: `<div className="space-y-4">
+      code: `<div className="w-[400px] space-y-4">
   <Skeleton className="h-[200px] w-full rounded-lg" />
   <div className="space-y-2">
     <Skeleton className="h-6 w-3/4" />
@@ -76,7 +76,7 @@ export const skeletonDoc: ComponentDoc = {
     {
       title: "Table Skeleton",
       description: "Loading skeleton for data tables.",
-      code: `<div className="space-y-2">
+      code: `<div className="w-[500px] space-y-2">
   <Skeleton className="h-10 w-full" />
   {Array.from({ length: 4 }).map((_, i) => (
     <Skeleton key={i} className="h-16 w-full" />

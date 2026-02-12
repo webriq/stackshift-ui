@@ -34,13 +34,13 @@ export const paginationDoc: ComponentDoc = {
   usageCode: `<Pagination>
   <PaginationContent>
     <PaginationItem>
-      <PaginationPrevious href="#" />
+      <PaginationPrevious onClick={() => {}} />
     </PaginationItem>
     <PaginationItem>
-      <PaginationLink href="#">1</PaginationLink>
+      <PaginationLink isActive>1</PaginationLink>
     </PaginationItem>
     <PaginationItem>
-      <PaginationNext href="#" />
+      <PaginationNext onClick={() => {}} />
     </PaginationItem>
   </PaginationContent>
 </Pagination>`,
@@ -55,23 +55,49 @@ export const paginationDoc: ComponentDoc = {
   examples: [
     {
       title: "Basic Pagination",
-      description: "A simple pagination with numbered pages.",
-      code: `<Pagination>
+      description: "A simple pagination with numbered pages and state management.",
+      code: `const [currentPage, setCurrentPage] = React.useState(1);
+
+<Pagination>
   <PaginationContent>
     <PaginationItem>
-      <PaginationPrevious href="#" />
+      <PaginationPrevious
+        onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+        className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
+      />
     </PaginationItem>
     <PaginationItem>
-      <PaginationLink href="#" isActive>1</PaginationLink>
+      <PaginationLink
+        onClick={() => setCurrentPage(1)}
+        isActive={currentPage === 1}
+        className="cursor-pointer"
+      >
+        1
+      </PaginationLink>
     </PaginationItem>
     <PaginationItem>
-      <PaginationLink href="#">2</PaginationLink>
+      <PaginationLink
+        onClick={() => setCurrentPage(2)}
+        isActive={currentPage === 2}
+        className="cursor-pointer"
+      >
+        2
+      </PaginationLink>
     </PaginationItem>
     <PaginationItem>
-      <PaginationLink href="#">3</PaginationLink>
+      <PaginationLink
+        onClick={() => setCurrentPage(3)}
+        isActive={currentPage === 3}
+        className="cursor-pointer"
+      >
+        3
+      </PaginationLink>
     </PaginationItem>
     <PaginationItem>
-      <PaginationNext href="#" />
+      <PaginationNext
+        onClick={() => setCurrentPage(p => Math.min(3, p + 1))}
+        className={currentPage === 3 ? "pointer-events-none opacity-50" : "cursor-pointer"}
+      />
     </PaginationItem>
   </PaginationContent>
 </Pagination>`,
@@ -79,64 +105,94 @@ export const paginationDoc: ComponentDoc = {
     {
       title: "With Ellipsis",
       description: "Pagination with ellipsis for large page counts.",
-      code: `<Pagination>
-  <PaginationContent>
-    <PaginationItem>
-      <PaginationPrevious href="#" />
-    </PaginationItem>
-    <PaginationItem>
-      <PaginationLink href="#">1</PaginationLink>
-    </PaginationItem>
-    <PaginationItem>
-      <PaginationEllipsis />
-    </PaginationItem>
-    <PaginationItem>
-      <PaginationLink href="#" isActive>5</PaginationLink>
-    </PaginationItem>
-    <PaginationItem>
-      <PaginationEllipsis />
-    </PaginationItem>
-    <PaginationItem>
-      <PaginationLink href="#">10</PaginationLink>
-    </PaginationItem>
-    <PaginationItem>
-      <PaginationNext href="#" />
-    </PaginationItem>
-  </PaginationContent>
-</Pagination>`,
-    },
-    {
-      title: "Controlled Pagination",
-      description: "Pagination with controlled state.",
-      code: `const [currentPage, setCurrentPage] = React.useState(1);
-const totalPages = 10;
+      code: `const [currentPage, setCurrentPage] = React.useState(5);
 
 <Pagination>
   <PaginationContent>
     <PaginationItem>
       <PaginationPrevious
         onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
-        disabled={currentPage === 1}
+        className="cursor-pointer"
       />
     </PaginationItem>
-    {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-      <PaginationItem key={page}>
-        <PaginationLink
-          onClick={() => setCurrentPage(page)}
-          isActive={currentPage === page}
-        >
-          {page}
-        </PaginationLink>
-      </PaginationItem>
-    ))}
+    <PaginationItem>
+      <PaginationLink
+        onClick={() => setCurrentPage(1)}
+        isActive={currentPage === 1}
+        className="cursor-pointer"
+      >
+        1
+      </PaginationLink>
+    </PaginationItem>
+    <PaginationItem>
+      <PaginationEllipsis />
+    </PaginationItem>
+    <PaginationItem>
+      <PaginationLink
+        onClick={() => setCurrentPage(5)}
+        isActive={currentPage === 5}
+        className="cursor-pointer"
+      >
+        5
+      </PaginationLink>
+    </PaginationItem>
+    <PaginationItem>
+      <PaginationEllipsis />
+    </PaginationItem>
+    <PaginationItem>
+      <PaginationLink
+        onClick={() => setCurrentPage(10)}
+        isActive={currentPage === 10}
+        className="cursor-pointer"
+      >
+        10
+      </PaginationLink>
+    </PaginationItem>
     <PaginationItem>
       <PaginationNext
-        onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
-        disabled={currentPage === totalPages}
+        onClick={() => setCurrentPage(p => Math.min(10, p + 1))}
+        className="cursor-pointer"
       />
     </PaginationItem>
   </PaginationContent>
 </Pagination>`,
+    },
+    {
+      title: "Dynamic Pagination",
+      description: "Pagination that dynamically renders page numbers.",
+      code: `const [currentPage, setCurrentPage] = React.useState(1);
+const totalPages = 5;
+
+<div className="space-y-2">
+  <Pagination>
+    <PaginationContent>
+      <PaginationItem>
+        <PaginationPrevious
+          onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+          className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
+        />
+      </PaginationItem>
+      {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+        <PaginationItem key={page}>
+          <PaginationLink
+            onClick={() => setCurrentPage(page)}
+            isActive={currentPage === page}
+            className="cursor-pointer"
+          >
+            {page}
+          </PaginationLink>
+        </PaginationItem>
+      ))}
+      <PaginationItem>
+        <PaginationNext
+          onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+          className={currentPage === totalPages ? "pointer-events-none opacity-50" : "cursor-pointer"}
+        />
+      </PaginationItem>
+    </PaginationContent>
+  </Pagination>
+  <Text className="text-sm text-center">Page {currentPage} of {totalPages}</Text>
+</div>`,
     },
   ],
 };
