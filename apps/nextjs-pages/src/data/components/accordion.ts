@@ -86,62 +86,68 @@ export const accordionDoc: ComponentDoc = {
     {
       title: "Default",
       description: "A simple accordion with single item expansion.",
-      code: `<Accordion type="single" collapsible className="w-full">
-  <AccordionItem value="item-1">
-    <AccordionTrigger>Is it accessible?</AccordionTrigger>
-    <AccordionContent>
-      Yes. It adheres to the WAI-ARIA design pattern.
-    </AccordionContent>
-  </AccordionItem>
-  <AccordionItem value="item-2">
-    <AccordionTrigger>Is it styled?</AccordionTrigger>
-    <AccordionContent>
-      Yes. It comes with default styles that match your theme.
-    </AccordionContent>
-  </AccordionItem>
-  <AccordionItem value="item-3">
-    <AccordionTrigger>Is it animated?</AccordionTrigger>
-    <AccordionContent>
-      Yes. It's animated by default, but you can disable it if you prefer.
-    </AccordionContent>
-  </AccordionItem>
-</Accordion>`,
+      code: `<div className="w-full max-w-md">
+  <Accordion type="single" collapsible className="w-full">
+    <AccordionItem value="item-1">
+      <AccordionTrigger>Is it accessible?</AccordionTrigger>
+      <AccordionContent>
+        Yes. It adheres to the WAI-ARIA design pattern.
+      </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+      <AccordionTrigger>Is it styled?</AccordionTrigger>
+      <AccordionContent>
+        Yes. It comes with default styles that match your theme.
+      </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-3">
+      <AccordionTrigger>Is it animated?</AccordionTrigger>
+      <AccordionContent>
+        Yes. It's animated by default, but you can disable it if you prefer.
+      </AccordionContent>
+    </AccordionItem>
+  </Accordion>
+</div>`,
     },
     {
       title: "Multiple",
       description: "Allow multiple items to be open at the same time.",
-      code: `<Accordion type="multiple" className="w-full">
-  <AccordionItem value="item-1">
-    <AccordionTrigger>Can I open multiple items?</AccordionTrigger>
-    <AccordionContent>
-      Yes! With type="multiple", you can have any number of items open.
-    </AccordionContent>
-  </AccordionItem>
-  <AccordionItem value="item-2">
-    <AccordionTrigger>How does it work?</AccordionTrigger>
-    <AccordionContent>
-      Each item operates independently. Opening one doesn't close others.
-    </AccordionContent>
-  </AccordionItem>
-</Accordion>`,
+      code: `<div className="w-full max-w-md">
+  <Accordion type="multiple" className="w-full">
+    <AccordionItem value="item-1">
+      <AccordionTrigger>Can I open multiple items?</AccordionTrigger>
+      <AccordionContent>
+        Yes! With type="multiple", you can have any number of items open.
+      </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+      <AccordionTrigger>How does it work?</AccordionTrigger>
+      <AccordionContent>
+        Each item operates independently. Opening one doesn't close others.
+      </AccordionContent>
+    </AccordionItem>
+  </Accordion>
+</div>`,
     },
     {
       title: "Default Open",
       description: "Set a default item to be expanded on mount.",
-      code: `<Accordion type="single" collapsible defaultValue="item-2" className="w-full">
-  <AccordionItem value="item-1">
-    <AccordionTrigger>First Item</AccordionTrigger>
-    <AccordionContent>
-      This item is closed by default.
-    </AccordionContent>
-  </AccordionItem>
-  <AccordionItem value="item-2">
-    <AccordionTrigger>Second Item (Default Open)</AccordionTrigger>
-    <AccordionContent>
-      This item is open by default using defaultValue="item-2".
-    </AccordionContent>
-  </AccordionItem>
-</Accordion>`,
+      code: `<div className="w-full max-w-md">
+  <Accordion type="single" collapsible defaultValue="item-2" className="w-full">
+    <AccordionItem value="item-1">
+      <AccordionTrigger>First Item</AccordionTrigger>
+      <AccordionContent>
+        This item is closed by default.
+      </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+      <AccordionTrigger>Second Item (Default Open)</AccordionTrigger>
+      <AccordionContent>
+        This item is open by default using defaultValue="item-2".
+      </AccordionContent>
+    </AccordionItem>
+  </Accordion>
+</div>`,
     },
   ],
 };
