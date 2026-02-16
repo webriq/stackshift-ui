@@ -324,7 +324,7 @@ export function LivePreview({ code }: LivePreviewProps) {
 
   return (
     <LiveProvider code={wrappedCode} scope={scope} noInline>
-      <ReactLivePreview />
+      <ReactLivePreview className="w-full" />
       <LiveError className="text-red-500 text-sm mt-2 p-2 bg-red-50 rounded" />
     </LiveProvider>
   );

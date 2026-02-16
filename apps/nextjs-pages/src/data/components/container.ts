@@ -4,7 +4,7 @@ export const containerDoc: ComponentDoc = {
   name: "Container",
   slug: "container",
   description:
-    "A layout component that wraps content with a maximum width constraint and centers it horizontally. Useful for creating consistent page layouts.",
+  "A layout component that wraps content with a maximum width constraint and centers it horizontally. Useful for creating consistent page layouts.",
   category: "layout",
   props: [
     {
@@ -38,26 +38,41 @@ export const containerDoc: ComponentDoc = {
   examples: [
     {
       title: "Default Container",
-      code: `<Container>
+      code: `<Container className="p-4 bg-blue-100">
   <p>Content inside a full-width container</p>
 </Container>`,
     },
     {
-      title: "Container with Max Width",
-      code: `<Container maxWidth="lg">
-  <p>Content constrained to large width (512px)</p>
-</Container>`,
+      title: "Container Sizes",
+      description: "Visual comparison of different container max-width options.",
+      code: `<div className="space-y-4">
+  <Container maxWidth="sm" className="p-4 bg-green-100">
+    <p className="text-sm">sm - 384px</p>
+  </Container>
+  <Container maxWidth="md" className="p-4 bg-yellow-100">
+    <p className="text-sm">md - 448px</p>
+  </Container>
+  <Container maxWidth="lg" className="p-4 bg-orange-100">
+    <p className="text-sm">lg - 512px</p>
+  </Container>
+  <Container maxWidth="xl" className="p-4 bg-pink-100">
+    <p className="text-sm">xl - 576px</p>
+  </Container>
+  <Container maxWidth="2xl" className="p-4 bg-purple-100">
+    <p className="text-sm">2xl - 672px</p>
+  </Container>
+</div>`,
     },
     {
       title: "Container with Custom Width",
-      code: `<Container maxWidth={800}>
+      code: `<Container maxWidth={800} className="p-4 bg-teal-100">
   <p>Content constrained to 800px</p>
 </Container>`,
     },
     {
       title: "Container as Section",
-      code: `<Container as="section" maxWidth="xl" className="py-8">
-  <h2>Section Title</h2>
+      code: `<Container as="section" maxWidth="xl" className="py-8 bg-indigo-100">
+  <h2 className="font-semibold mb-2">Section Title</h2>
   <p>Section content goes here.</p>
 </Container>`,
     },
