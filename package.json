@@ -14,7 +14,7 @@
     "typecheck": "turbo typecheck",
     "preinstall": "node scripts/update-pm.js",
     "rebrand": "node scripts/rebrand.js",
-    "next:pages": "turbo run dev --filter @apps/storybook",
+    "next:pages": "turbo run dev --filter @apps/nextjs-pages",
     "changeset": "changeset",
     "release:status": "changeset status --verbose",
     "release:version": "npx changeset version",
