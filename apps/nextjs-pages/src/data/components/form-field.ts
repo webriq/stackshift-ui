@@ -176,6 +176,7 @@ export const formFieldDoc: ComponentDoc = {
     type="inputFile"
     name="document"
     label="Upload Document"
+    className="file:text-primary file:mr-4 file:cursor-pointer"
   />
 </Form>`,
     },
