@@ -124,109 +124,146 @@ toast("Success", {
     {
       title: "Basic Toast",
       description: "Display a simple toast notification. Note: Requires Toaster component in your app root.",
-      code: `<div>
-  <Toaster />
-  <Button
-    onClick={() => {
-      toast("Notification", {
-        description: "This is a basic toast notification."
-      });
-    }}
-  >
-    Show Toast
-  </Button>
-</div>`,
+      code: `<Button
+  onClick={() => {
+    toast("Notification", {
+      description: "This is a basic toast notification."
+    });
+  }}
+>
+  Show Toast
+</Button>`,
     },
     {
       title: "Success Toast",
       description: "Show a success message.",
-      code: `<div>
-  <Toaster />
-  <Button
-    onClick={() => {
-      toast.success("Your changes have been saved successfully.");
-    }}
-  >
-    Save Changes
-  </Button>
-</div>`,
+      code: `<Button
+  onClick={() => {
+    toast.success("Your changes have been saved successfully.");
+  }}
+>
+  Save Changes
+</Button>`,
     },
     {
       title: "Error Toast",
       description: "Display error notifications.",
-      code: `<div>
-  <Toaster />
-  <Button
-    variant="destructive"
-    onClick={() => {
-      toast.error("Something went wrong. Please try again.");
-    }}
-  >
-    Trigger Error
-  </Button>
-</div>`,
+      code: `<Button
+  variant="destructive"
+  onClick={() => {
+    toast.error("Something went wrong. Please try again.");
+  }}
+>
+  Trigger Error
+</Button>`,
     },
     {
       title: "With Action",
       description: "Toast with an action button.",
-      code: `<div>
-  <Toaster />
-  <Button
-    onClick={() => {
-      toast("File deleted", {
-        description: "Your file has been permanently deleted.",
-        action: {
-          label: "Undo",
-          onClick: () => console.log("Undo clicked")
-        }
-      });
-    }}
-  >
-    Delete File
-  </Button>
-</div>`,
+      code: `<Button
+  onClick={() => {
+    toast("File deleted", {
+      description: "Your file has been permanently deleted.",
+      action: {
+        label: "Undo",
+        onClick: () => console.log("Undo clicked")
+      }
+    });
+  }}
+>
+  Delete File
+</Button>`,
     },
     {
       title: "Custom Duration",
       description: "Control how long the toast is displayed.",
-      code: `<div>
-  <Toaster />
-  <div className="flex gap-2">
-    <Button
-      onClick={() => {
-        toast("Quick message", { duration: 2000 });
-      }}
-    >
-      2 seconds
-    </Button>
-    <Button
-      onClick={() => {
-        toast("Longer message", { duration: 10000 });
-      }}
-    >
-      10 seconds
-    </Button>
-  </div>
+      code: `<div className="flex gap-2">
+  <Button
+    onClick={() => {
+      toast("Quick message", { duration: 2000 });
+    }}
+  >
+    2 seconds
+  </Button>
+  <Button
+    onClick={() => {
+      toast("Longer message", { duration: 10000 });
+    }}
+  >
+    10 seconds
+  </Button>
 </div>`,
     },
     {
       title: "Toaster Positions",
-      description: "The Toaster component supports different positions. Configure it in your app root.",
-      code: `<div className="space-y-2">
-  <Text className="text-sm text-muted-foreground">
-    Available positions: top-left, top-right, top-center, bottom-left, bottom-right, bottom-center
-  </Text>
-  <Toaster position="top-right" />
-  <Button
-    onClick={() => {
-      toast("Top Right", {
-        description: "This toast appears in the top right corner."
-      });
-    }}
-  >
-    Show Toast
-  </Button>
-</div>`,
+      description: "Control where toasts appear by setting the position prop on the Toaster component.",
+      code: `function ToasterPositions() {
+  const [position, setPosition] = React.useState("bottom-right");
+
+  return (
+    <>
+      <Toaster position={position} richColors closeButton />
+      <div className="flex flex-wrap gap-2">
+        <Button
+          variant={position === "top-left" ? "default" : "outline"}
+          onClick={() => {
+            setPosition("top-left");
+            toast("top-left", { description: "Toast appears at top-left" });
+          }}
+        >
+          top-left
+        </Button>
+        <Button
+          variant={position === "top-center" ? "default" : "outline"}
+          onClick={() => {
+            setPosition("top-center");
+            toast("top-center", { description: "Toast appears at top-center" });
+          }}
+        >
+          top-center
+        </Button>
+        <Button
+          variant={position === "top-right" ? "default" : "outline"}
+          onClick={() => {
+            setPosition("top-right");
+            toast("top-right", { description: "Toast appears at top-right" });
+          }}
+        >
+          top-right
+        </Button>
+        <Button
+          variant={position === "bottom-left" ? "default" : "outline"}
+          onClick={() => {
+            setPosition("bottom-left");
+            toast("bottom-left", { description: "Toast appears at bottom-left" });
+          }}
+        >
+          bottom-left
+        </Button>
+        <Button
+          variant={position === "bottom-center" ? "default" : "outline"}
+          onClick={() => {
+            setPosition("bottom-center");
+            toast("bottom-center", { description: "Toast appears at bottom-center" });
+          }}
+        >
+          bottom-center
+        </Button>
+        <Button
+          variant={position === "bottom-right" ? "default" : "outline"}
+          onClick={() => {
+            setPosition("bottom-right");
+            toast("bottom-right", { description: "Toast appears at bottom-right" });
+          }}
+        >
+          bottom-right
+        </Button>
+      </div>
+    </>
+  );
+}
+
+render(<ToasterPositions />);`,
     },
   ],
 };
