@@ -84,18 +84,5 @@ export const datePickerDoc: ComponentDoc = {
   onSelect={setDate}
 />`,
     },
-    {
-      title: "Calendar with Disabled Dates",
-      description: "Use Calendar directly to disable past dates or specific dates.",
-      code: `const [date, setDate] = React.useState(new Date());
-
-<Calendar
-  mode="single"
-  selected={date}
-  onSelect={setDate}
-  disabled={(date) => date < new Date()}
-  className="rounded-md border"
-/>`,
-    },
   ],
 };
