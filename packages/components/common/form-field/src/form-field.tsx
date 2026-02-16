@@ -86,7 +86,7 @@ export const FormField = ({
       return (
         <CheckboxGroup noLabel={noLabel} name={name} label={label} {...props}>
           {items?.map(item => (
-            <div className="flex flex-col gap-2 items-start">
+            <div className="flex flex-row gap-2 items-start">
               <Checkbox id={item} key={item} name={item} {...props} />
               <Label htmlFor={item}>{label}</Label>
             </div>
