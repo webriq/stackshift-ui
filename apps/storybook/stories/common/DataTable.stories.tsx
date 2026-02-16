@@ -1,3 +1,4 @@
+// @ts-nocheck - story demo file
 import {
   Badge,
   Button,
@@ -14,7 +15,7 @@ import {
   Input,
   Skeleton,
 } from "@stackshift-ui/react";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import {
   AlertTriangle,
   Calendar,

@@ -1,5 +1,6 @@
 import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
 import cn from "classnames";
+import * as React from "react";
 import type { ElementType, HTMLProps, ReactNode } from "react";
 import { FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa";
 
@@ -54,7 +55,7 @@ const InstagramIcon = (props: any) => {
   );
 };
 
-const SocialIconMap: Record<Socials, (x: any) => JSX.Element | ReactNode> = {
+const SocialIconMap: Record<Socials, (x: any) => React.JSX.Element | ReactNode> = {
   facebook: FacebookIcon,
   twitter: XIcon,
   instagram: InstagramIcon,

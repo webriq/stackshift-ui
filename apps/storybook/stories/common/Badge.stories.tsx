@@ -1,5 +1,6 @@
+// @ts-nocheck - story demo file
 import { Badge } from "@stackshift-ui/react";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 type BadgeProps = React.ComponentProps<typeof Badge> & {
   variant: "default" | "secondary" | "outline" | "destructive";

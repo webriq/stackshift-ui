@@ -12,7 +12,7 @@ import { NavigationProps } from ".";
 import { ConditionalLink, logoLink } from "./helper/index";
 import { LabeledRouteWithKey } from "./types";
 
-type DropdownRef = React.RefObject<HTMLDivElement>;
+type DropdownRef = React.RefObject<HTMLDivElement | null>;
 
 interface DropdownState {
   previous: number | null;

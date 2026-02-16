@@ -1,5 +1,6 @@
-import type { Meta, StoryObj } from "@storybook/react";
+// @ts-nocheck - story demo file
 import { Toggle } from "@stackshift-ui/react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { useState } from "react";
 
 const meta: Meta<typeof Toggle> = {
@@ -66,16 +67,10 @@ export const Controlled: Story = {
     const [pressed, setPressed] = useState(false);
     return (
       <div className="space-y-4">
-        <Toggle 
-          pressed={pressed} 
-          onPressedChange={setPressed}
-          {...args}
-        >
+        <Toggle pressed={pressed} onPressedChange={setPressed} {...args}>
           {pressed ? "On" : "Off"}
         </Toggle>
-        <p className="text-sm text-gray-600">
-          Toggle is {pressed ? "pressed" : "not pressed"}
-        </p>
+        <p className="text-sm text-gray-600">Toggle is {pressed ? "pressed" : "not pressed"}</p>
       </div>
     );
   },
@@ -86,20 +81,40 @@ export const WithIcons: Story = {
     <div className="flex gap-4">
       <Toggle aria-label="Bold">
         <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 4h8a4 4 0 014 4 4 4 0 01-4 4H6z" />
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 12h9a4 4 0 014 4 4 4 0 01-4 4H6z" />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M6 4h8a4 4 0 014 4 4 4 0 01-4 4H6z"
+          />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M6 12h9a4 4 0 014 4 4 4 0 01-4 4H6z"
+          />
         </svg>
       </Toggle>
-      
+
       <Toggle aria-label="Italic">
         <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 4l4 16M6 20h8M6 4h8" />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M10 4l4 16M6 20h8M6 4h8"
+          />
         </svg>
       </Toggle>
-      
+
       <Toggle aria-label="Underline">
         <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 4v12a4 4 0 004 4 4 4 0 004-4V4M4 20h16" />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M8 4v12a4 4 0 004 4 4 4 0 004-4V4M4 20h16"
+          />
         </svg>
       </Toggle>
     </div>
@@ -111,53 +126,65 @@ export const TextFormatting: Story = {
     const [bold, setBold] = useState(false);
     const [italic, setItalic] = useState(false);
     const [underline, setUnderline] = useState(false);
-    
+
     return (
       <div className="space-y-4">
         <div className="flex gap-2">
-          <Toggle 
-            pressed={bold} 
-            onPressedChange={setBold}
-            variant="outline"
-            aria-label="Bold"
-          >
+          <Toggle pressed={bold} onPressedChange={setBold} variant="outline" aria-label="Bold">
             <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 4h8a4 4 0 014 4 4 4 0 01-4 4H6z" />
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 12h9a4 4 0 014 4 4 4 0 01-4 4H6z" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 4h8a4 4 0 014 4 4 4 0 01-4 4H6z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 12h9a4 4 0 014 4 4 4 0 01-4 4H6z"
+              />
             </svg>
           </Toggle>
-          
-          <Toggle 
-            pressed={italic} 
+
+          <Toggle
+            pressed={italic}
             onPressedChange={setItalic}
             variant="outline"
-            aria-label="Italic"
-          >
+            aria-label="Italic">
             <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 4l4 16M6 20h8M6 4h8" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M10 4l4 16M6 20h8M6 4h8"
+              />
             </svg>
           </Toggle>
-          
-          <Toggle 
-            pressed={underline} 
+
+          <Toggle
+            pressed={underline}
             onPressedChange={setUnderline}
             variant="outline"
-            aria-label="Underline"
-          >
+            aria-label="Underline">
             <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 4v12a4 4 0 004 4 4 4 0 004-4V4M4 20h16" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M8 4v12a4 4 0 004 4 4 4 0 004-4V4M4 20h16"
+              />
             </svg>
           </Toggle>
         </div>
-        
+
         <div className="p-4 border rounded-md bg-gray-50">
-          <p 
+          <p
             className={`
-              ${bold ? 'font-bold' : ''}
-              ${italic ? 'italic' : ''}
-              ${underline ? 'underline' : ''}
-            `}
-          >
+              ${bold ? "font-bold" : ""}
+              ${italic ? "italic" : ""}
+              ${underline ? "underline" : ""}
+            `}>
             This text will be formatted based on the toggle states above.
           </p>
         </div>
@@ -170,7 +197,9 @@ export const Disabled: Story = {
   render: args => (
     <div className="flex gap-4">
       <Toggle disabled>Disabled Off</Toggle>
-      <Toggle disabled pressed>Disabled On</Toggle>
+      <Toggle disabled pressed>
+        Disabled On
+      </Toggle>
     </div>
   ),
 };
@@ -180,14 +209,24 @@ export const WithText: Story = {
     <div className="flex gap-4">
       <Toggle>
         <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+          />
         </svg>
         Like
       </Toggle>
-      
+
       <Toggle variant="outline">
         <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"
+          />
         </svg>
         Share
       </Toggle>
@@ -199,9 +238,5 @@ export const DefaultPressed: Story = {
   args: {
     defaultPressed: true,
   },
-  render: args => (
-    <Toggle {...args}>
-      Default Pressed
-    </Toggle>
-  ),
+  render: args => <Toggle {...args}>Default Pressed</Toggle>,
 };

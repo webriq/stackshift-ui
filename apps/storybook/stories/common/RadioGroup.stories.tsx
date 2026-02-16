@@ -1,6 +1,6 @@
-import { RadioGroup, RadioGroupItem } from "@stackshift-ui/react";
-import { Label } from "@stackshift-ui/react";
-import type { Meta, StoryObj } from "@storybook/react";
+// @ts-nocheck - story demo file
+import { Label, RadioGroup, RadioGroupItem } from "@stackshift-ui/react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { useState } from "react";
 
 const meta: Meta<typeof RadioGroup> = {
@@ -10,7 +10,8 @@ const meta: Meta<typeof RadioGroup> = {
     layout: "centered",
     docs: {
       description: {
-        component: "A radio group component built on Radix UI primitives for selecting a single option from multiple choices.",
+        component:
+          "A radio group component built on Radix UI primitives for selecting a single option from multiple choices.",
       },
     },
   },
@@ -154,21 +155,25 @@ export const Disabled: Story = {
           </div>
         </RadioGroup>
       </div>
-      
+
       <div>
         <h3 className="text-sm font-medium mb-3 text-muted-foreground">Disabled Radio Group</h3>
         <RadioGroup defaultValue="disabled1" disabled>
           <div className="flex items-center space-x-2">
             <RadioGroupItem value="disabled1" id="disabled1" />
-            <Label htmlFor="disabled1" className="text-muted-foreground">Option 1 (Disabled)</Label>
+            <Label htmlFor="disabled1" className="text-muted-foreground">
+              Option 1 (Disabled)
+            </Label>
           </div>
           <div className="flex items-center space-x-2">
             <RadioGroupItem value="disabled2" id="disabled2" />
-            <Label htmlFor="disabled2" className="text-muted-foreground">Option 2 (Disabled)</Label>
+            <Label htmlFor="disabled2" className="text-muted-foreground">
+              Option 2 (Disabled)
+            </Label>
           </div>
         </RadioGroup>
       </div>
-      
+
       <div>
         <h3 className="text-sm font-medium mb-3">Individual Disabled Options</h3>
         <RadioGroup defaultValue="enabled">
@@ -178,7 +183,9 @@ export const Disabled: Story = {
           </div>
           <div className="flex items-center space-x-2">
             <RadioGroupItem value="individual-disabled" id="individual-disabled" disabled />
-            <Label htmlFor="individual-disabled" className="text-muted-foreground">Disabled Option</Label>
+            <Label htmlFor="individual-disabled" className="text-muted-foreground">
+              Disabled Option
+            </Label>
           </div>
         </RadioGroup>
       </div>
@@ -196,7 +203,7 @@ export const Disabled: Story = {
 export const Controlled: Story = {
   render: () => {
     const [value, setValue] = useState("option2");
-    
+
     return (
       <div className="space-y-4">
         <RadioGroup value={value} onValueChange={setValue}>
@@ -213,28 +220,25 @@ export const Controlled: Story = {
             <Label htmlFor="controlled3">Option 3</Label>
           </div>
         </RadioGroup>
-        
+
         <div className="pt-4 border-t">
           <p className="text-sm text-muted-foreground">
             Selected value: <span className="font-medium">{value}</span>
           </p>
           <div className="flex gap-2 mt-2">
-            <button 
+            <button
               onClick={() => setValue("option1")}
-              className="px-3 py-1 text-xs bg-secondary rounded hover:bg-secondary/80"
-            >
+              className="px-3 py-1 text-xs bg-secondary rounded hover:bg-secondary/80">
               Select Option 1
             </button>
-            <button 
+            <button
               onClick={() => setValue("option2")}
-              className="px-3 py-1 text-xs bg-secondary rounded hover:bg-secondary/80"
-            >
+              className="px-3 py-1 text-xs bg-secondary rounded hover:bg-secondary/80">
               Select Option 2
             </button>
-            <button 
+            <button
               onClick={() => setValue("option3")}
-              className="px-3 py-1 text-xs bg-secondary rounded hover:bg-secondary/80"
-            >
+              className="px-3 py-1 text-xs bg-secondary rounded hover:bg-secondary/80">
               Select Option 3
             </button>
           </div>
@@ -267,7 +271,7 @@ export const PaymentMethod: Story = {
             </p>
           </div>
         </div>
-        
+
         <div className="flex items-start space-x-3 p-4 border rounded-lg">
           <RadioGroupItem value="paypal" id="paypal" className="mt-1" />
           <div className="flex-1">
@@ -279,7 +283,7 @@ export const PaymentMethod: Story = {
             </p>
           </div>
         </div>
-        
+
         <div className="flex items-start space-x-3 p-4 border rounded-lg">
           <RadioGroupItem value="bank" id="bank" className="mt-1" />
           <div className="flex-1">
@@ -320,7 +324,7 @@ export const DeliveryOptions: Story = {
           </div>
           <span className="text-sm font-medium">Free</span>
         </div>
-        
+
         <div className="flex items-center justify-between p-3 border rounded-lg">
           <div className="flex items-center space-x-3">
             <RadioGroupItem value="express" id="express" />
@@ -333,7 +337,7 @@ export const DeliveryOptions: Story = {
           </div>
           <span className="text-sm font-medium">$9.99</span>
         </div>
-        
+
         <div className="flex items-center justify-between p-3 border rounded-lg">
           <div className="flex items-center space-x-3">
             <RadioGroupItem value="overnight" id="overnight" />
@@ -365,7 +369,7 @@ export const SurveyQuestion: Story = {
         <h3 className="text-lg font-medium">How satisfied are you with our service?</h3>
         <p className="text-sm text-muted-foreground">Please select one option</p>
       </div>
-      
+
       <RadioGroup>
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="very-satisfied" id="very-satisfied" />
@@ -403,7 +407,7 @@ export const FormIntegration: Story = {
   render: () => (
     <form className="max-w-md space-y-6">
       <h2 className="text-xl font-bold">User Preferences</h2>
-      
+
       <div className="space-y-3">
         <Label className="text-sm font-medium">Preferred Contact Method</Label>
         <RadioGroup name="contact" defaultValue="email">
@@ -421,7 +425,7 @@ export const FormIntegration: Story = {
           </div>
         </RadioGroup>
       </div>
-      
+
       <div className="space-y-3">
         <Label className="text-sm font-medium">Newsletter Frequency</Label>
         <RadioGroup name="frequency" defaultValue="weekly">
@@ -443,11 +447,10 @@ export const FormIntegration: Story = {
           </div>
         </RadioGroup>
       </div>
-      
-      <button 
+
+      <button
         type="submit"
-        className="w-full bg-primary text-primary-foreground py-2 px-4 rounded-md hover:bg-primary/90 transition-colors"
-      >
+        className="w-full bg-primary text-primary-foreground py-2 px-4 rounded-md hover:bg-primary/90 transition-colors">
         Save Preferences
       </button>
     </form>

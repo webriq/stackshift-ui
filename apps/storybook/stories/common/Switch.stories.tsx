@@ -1,5 +1,6 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { Switch, Label } from "@stackshift-ui/react";
+// @ts-nocheck - story demo file
+import { Label, Switch } from "@stackshift-ui/react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { useState } from "react";
 
 const meta: Meta<typeof Switch> = {
@@ -37,14 +38,8 @@ export const Controlled: Story = {
     const [checked, setChecked] = useState(false);
     return (
       <div className="flex items-center space-x-2">
-        <Switch 
-          {...args} 
-          checked={checked} 
-          onCheckedChange={setChecked}
-        />
-        <span className="text-sm">
-          Switch is {checked ? "on" : "off"}
-        </span>
+        <Switch {...args} checked={checked} onCheckedChange={setChecked} />
+        <span className="text-sm">Switch is {checked ? "on" : "off"}</span>
       </div>
     );
   },

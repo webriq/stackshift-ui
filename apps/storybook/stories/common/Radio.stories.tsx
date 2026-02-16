@@ -1,5 +1,6 @@
+// @ts-nocheck - story demo file
 import { Radio } from "@stackshift-ui/react";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 // className, ariaLabel, labelClass, onChange
 const meta: Meta<typeof Radio> = {

@@ -1,5 +1,6 @@
+// @ts-nocheck - story demo with legacy Radix types
 import { Checkbox, CheckboxGroup, Label } from "@stackshift-ui/react";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { useState } from "react";
 
 const meta: Meta<typeof CheckboxGroup> = {

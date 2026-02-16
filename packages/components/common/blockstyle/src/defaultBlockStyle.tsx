@@ -3,9 +3,10 @@ import { Heading } from "@stackshift-ui/heading";
 import { Image } from "@stackshift-ui/image";
 import { Link } from "@stackshift-ui/link";
 import { Text } from "@stackshift-ui/text";
+import * as React from "react";
 
 export type MyPortableTextComponents = PortableTextComponents & {
-  code?: ({ value }: { value: { language?: string; code?: string } }) => JSX.Element;
+  code?: ({ value }: { value: { language?: string; code?: string } }) => React.JSX.Element;
 };
 
 export const defaultBlockStyle: MyPortableTextComponents = {

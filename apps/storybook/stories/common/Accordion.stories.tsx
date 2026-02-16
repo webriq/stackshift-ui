@@ -1,14 +1,15 @@
+// @ts-nocheck - story demo file
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@stackshift-ui/react";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { fn } from "storybook/test";
 
 const meta: Meta<typeof Accordion> = {
   title: "Common/Accordion",
   component: Accordion,
+  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ["autodocs"],
-  args: {
-    type: "single",
-    collapsible: true,
-  },
+  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#story-args
+  args: { onClick: fn() },
   argTypes: {
     type: {
       control: { type: "radio" },
@@ -18,11 +19,16 @@ const meta: Meta<typeof Accordion> = {
       control: { type: "boolean" },
     },
   },
+  parameters: {
+    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
+    layout: "centered",
+  },
 } satisfies Meta<typeof Accordion>;
 
 export default meta;
 type Story = StoryObj<typeof Accordion>;
 
+// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Single: Story = {
   render: args => (
     <Accordion {...args}>

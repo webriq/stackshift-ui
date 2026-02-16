@@ -1,4 +1,5 @@
 import { PortableTextComponents } from "@portabletext/react";
+import * as React from "react";
 import { ButtonProps } from ".";
 
 export type StyleVariants<T extends string> = Record<T, string>;
@@ -542,7 +543,7 @@ export declare interface Reference {
 }
 
 export type MyPortableTextComponents = PortableTextComponents & {
-  code?: ({ value }: { value: { language?: string; code?: string } }) => JSX.Element;
+  code?: ({ value }: { value: { language?: string; code?: string } }) => React.JSX.Element;
 };
 
 export interface ConditionalLinkTypes {

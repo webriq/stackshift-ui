@@ -1,5 +1,6 @@
-import type { Meta, StoryObj } from "@storybook/react";
+// @ts-nocheck - story demo file
 import { Skeleton } from "@stackshift-ui/react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 const meta: Meta<typeof Skeleton> = {
   title: "Common/Skeleton",
@@ -41,17 +42,17 @@ export const Shapes: Story = {
         <p className="text-sm font-medium">Rectangle</p>
         <Skeleton className="h-4 w-[250px]" />
       </div>
-      
+
       <div className="space-y-2">
         <p className="text-sm font-medium">Square</p>
         <Skeleton className="h-12 w-12" />
       </div>
-      
+
       <div className="space-y-2">
         <p className="text-sm font-medium">Circle</p>
         <Skeleton className="h-12 w-12 rounded-full" />
       </div>
-      
+
       <div className="space-y-2">
         <p className="text-sm font-medium">Rounded Rectangle</p>
         <Skeleton className="h-8 w-[200px] rounded-lg" />
@@ -113,7 +114,7 @@ export const TableSkeleton: Story = {
             <Skeleton className="h-4 w-[80px]" />
           </div>
         </div>
-        
+
         {/* Rows */}
         {Array.from({ length: 4 }).map((_, i) => (
           <div key={i} className="border-b last:border-b-0 p-4">
@@ -137,12 +138,12 @@ export const CustomAnimation: Story = {
         <p className="text-sm font-medium">Default Animation</p>
         <Skeleton className="h-4 w-[250px]" />
       </div>
-      
+
       <div className="space-y-2">
         <p className="text-sm font-medium">No Animation</p>
         <Skeleton className="h-4 w-[250px] animate-none" />
       </div>
-      
+
       <div className="space-y-2">
         <p className="text-sm font-medium">Custom Color</p>
         <Skeleton className="h-4 w-[250px] bg-blue-200" />

@@ -1,5 +1,6 @@
+// @ts-nocheck - story demo file
 import { Footer } from "@stackshift-ui/react";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 const meta: Meta<typeof Footer> = {
   title: "Components/Footer",
@@ -51,11 +52,12 @@ export const VariantA: Story = {
             socialMedia: "other",
             socialMediaPlatform: "LinkedIn",
             socialMediaIcon: {
-              image: "https://cdn.sanity.io/images/9itgab5x/production/ca072a00e238879ed4f071c63e763e217ad7a24d-860x861.png",
-              alt: "linkedin"
+              image:
+                "https://cdn.sanity.io/images/9itgab5x/production/ca072a00e238879ed4f071c63e763e217ad7a24d-860x861.png",
+              alt: "linkedin",
             },
-            socialMediaLink: "https://www.linkedin.com"
-          }
+            socialMediaLink: "https://www.linkedin.com",
+          },
         ],
       },
     },
@@ -99,11 +101,12 @@ export const VariantB: Story = {
             socialMedia: "other",
             socialMediaPlatform: "LinkedIn",
             socialMediaIcon: {
-              image: "https://cdn.sanity.io/images/9itgab5x/production/ca072a00e238879ed4f071c63e763e217ad7a24d-860x861.png",
-              alt: "linkedin"
+              image:
+                "https://cdn.sanity.io/images/9itgab5x/production/ca072a00e238879ed4f071c63e763e217ad7a24d-860x861.png",
+              alt: "linkedin",
             },
-            socialMediaLink: "https://www.linkedin.com"
-          }
+            socialMediaLink: "https://www.linkedin.com",
+          },
         ],
       },
     },
@@ -147,11 +150,12 @@ export const VariantC: Story = {
             socialMedia: "other",
             socialMediaPlatform: "LinkedIn",
             socialMediaIcon: {
-              image: "https://cdn.sanity.io/images/9itgab5x/production/ca072a00e238879ed4f071c63e763e217ad7a24d-860x861.png",
-              alt: "linkedin"
+              image:
+                "https://cdn.sanity.io/images/9itgab5x/production/ca072a00e238879ed4f071c63e763e217ad7a24d-860x861.png",
+              alt: "linkedin",
             },
-            socialMediaLink: "https://www.linkedin.com"
-          }
+            socialMediaLink: "https://www.linkedin.com",
+          },
         ],
       },
     },
@@ -206,11 +210,12 @@ export const VariantD: Story = {
             socialMedia: "other",
             socialMediaPlatform: "LinkedIn",
             socialMediaIcon: {
-              image: "https://cdn.sanity.io/images/9itgab5x/production/ca072a00e238879ed4f071c63e763e217ad7a24d-860x861.png",
-              alt: "linkedin"
+              image:
+                "https://cdn.sanity.io/images/9itgab5x/production/ca072a00e238879ed4f071c63e763e217ad7a24d-860x861.png",
+              alt: "linkedin",
             },
-            socialMediaLink: "https://www.linkedin.com"
-          }
+            socialMediaLink: "https://www.linkedin.com",
+          },
         ],
       },
     },

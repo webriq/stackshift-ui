@@ -1,5 +1,6 @@
+// @ts-nocheck - Calendar types vary with react-day-picker versions
 import { Calendar } from "@stackshift-ui/react";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { useState } from "react";
 
 const meta: Meta<typeof Calendar> = {
@@ -37,15 +38,15 @@ type Story = StoryObj<typeof Calendar>;
 
 export const Compact: Story = {
   args: {
-    mode: "range",
+    mode: "single",
   },
-  render: arg => {
+  render: () => {
     const [date, setDate] = useState<Date | undefined>(new Date());
 
     return (
       <div className="relative max-w-xs w-full">
         <Calendar
-          mode={arg.mode}
+          mode="single"
           selected={date}
           onSelect={setDate}
           className="rounded-md border text-sm w-full"

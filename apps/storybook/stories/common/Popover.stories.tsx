@@ -1,11 +1,6 @@
-import { 
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@stackshift-ui/react";
-import { Button } from "@stackshift-ui/react";
-import { Label } from "@stackshift-ui/react";
-import type { Meta, StoryObj } from "@storybook/react";
+// @ts-nocheck - story demo file
+import { Button, Label, Popover, PopoverContent, PopoverTrigger } from "@stackshift-ui/react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { useState } from "react";
 
 const meta: Meta<typeof Popover> = {
@@ -15,7 +10,8 @@ const meta: Meta<typeof Popover> = {
     layout: "centered",
     docs: {
       description: {
-        component: "A popover component built on Radix UI primitives for displaying rich content in a floating container.",
+        component:
+          "A popover component built on Radix UI primitives for displaying rich content in a floating container.",
       },
     },
   },
@@ -44,9 +40,7 @@ export const Default: Story = {
       <PopoverContent className="w-80">
         <div className="space-y-2">
           <h4 className="font-medium leading-none">Dimensions</h4>
-          <p className="text-sm text-muted-foreground">
-            Set the dimensions for the layer.
-          </p>
+          <p className="text-sm text-muted-foreground">Set the dimensions for the layer.</p>
         </div>
       </PopoverContent>
     </Popover>
@@ -67,9 +61,7 @@ export const WithForm: Story = {
           <div className="grid gap-4">
             <div className="space-y-2">
               <h4 className="font-medium leading-none">Dimensions</h4>
-              <p className="text-sm text-muted-foreground">
-                Set the dimensions for the layer.
-              </p>
+              <p className="text-sm text-muted-foreground">Set the dimensions for the layer.</p>
             </div>
             <div className="grid gap-2">
               <div className="grid grid-cols-3 items-center gap-4">
@@ -77,7 +69,7 @@ export const WithForm: Story = {
                 <input
                   id="width"
                   value={width}
-                  onChange={(e) => setWidth(e.target.value)}
+                  onChange={e => setWidth(e.target.value)}
                   className="col-span-2 h-8 px-2 border border-gray-300 rounded text-sm"
                 />
               </div>
@@ -86,7 +78,7 @@ export const WithForm: Story = {
                 <input
                   id="height"
                   value={height}
-                  onChange={(e) => setHeight(e.target.value)}
+                  onChange={e => setHeight(e.target.value)}
                   className="col-span-2 h-8 px-2 border border-gray-300 rounded text-sm"
                 />
               </div>
@@ -123,7 +115,7 @@ export const UserProfile: Story = {
               <p className="text-xs text-gray-500">john@example.com</p>
             </div>
           </div>
-          
+
           <div className="border-t pt-4">
             <div className="space-y-1">
               <Button variant="ghost" className="w-full justify-start" size="sm">
@@ -140,7 +132,7 @@ export const UserProfile: Story = {
               </Button>
             </div>
           </div>
-          
+
           <div className="border-t pt-4">
             <Button variant="ghost" className="w-full justify-start text-red-600" size="sm">
               Log out
@@ -155,9 +147,27 @@ export const UserProfile: Story = {
 export const NotificationCenter: Story = {
   render: () => {
     const notifications = [
-      { id: 1, title: "New message", description: "You have a new message from Sarah", time: "2 min ago", unread: true },
-      { id: 2, title: "System update", description: "System will be updated tonight", time: "1 hour ago", unread: true },
-      { id: 3, title: "Payment received", description: "Payment of $99 received", time: "3 hours ago", unread: false },
+      {
+        id: 1,
+        title: "New message",
+        description: "You have a new message from Sarah",
+        time: "2 min ago",
+        unread: true,
+      },
+      {
+        id: 2,
+        title: "System update",
+        description: "System will be updated tonight",
+        time: "1 hour ago",
+        unread: true,
+      },
+      {
+        id: 3,
+        title: "Payment received",
+        description: "Payment of $99 received",
+        time: "3 hours ago",
+        unread: false,
+      },
     ];
 
     return (
@@ -165,7 +175,12 @@ export const NotificationCenter: Story = {
         <PopoverTrigger asChild>
           <Button variant="outline" className="relative">
             <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-5 5v-5zM9 17H4l5 5v-5zM12 3v18" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 17h5l-5 5v-5zM9 17H4l5 5v-5zM12 3v18"
+              />
             </svg>
             Notifications
             <span className="absolute -top-1 -right-1 h-3 w-3 bg-red-500 rounded-full"></span>
@@ -179,15 +194,14 @@ export const NotificationCenter: Story = {
                 Mark all read
               </Button>
             </div>
-            
+
             <div className="space-y-3">
-              {notifications.map((notification) => (
+              {notifications.map(notification => (
                 <div
                   key={notification.id}
                   className={`p-3 rounded-lg border ${
                     notification.unread ? "bg-blue-50 border-blue-200" : "bg-gray-50"
-                  }`}
-                >
+                  }`}>
                   <div className="flex items-start justify-between">
                     <div className="space-y-1">
                       <p className="text-sm font-medium">{notification.title}</p>
@@ -201,7 +215,7 @@ export const NotificationCenter: Story = {
                 </div>
               ))}
             </div>
-            
+
             <Button variant="outline" className="w-full" size="sm">
               View All Notifications
             </Button>
@@ -227,7 +241,12 @@ export const SharePopover: Story = {
         <PopoverTrigger asChild>
           <Button variant="outline">
             <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"
+              />
             </svg>
             Share
           </Button>
@@ -235,22 +254,22 @@ export const SharePopover: Story = {
         <PopoverContent className="w-64">
           <div className="space-y-4">
             <h4 className="font-medium">Share this content</h4>
-            
+
             <div className="grid grid-cols-2 gap-2">
-              {shareOptions.map((option) => (
+              {shareOptions.map(option => (
                 <Button
                   key={option.name}
                   variant="ghost"
-                  className="h-auto p-3 flex flex-col items-center space-y-1"
-                >
-                  <div className={`w-8 h-8 rounded-full ${option.color} flex items-center justify-center text-white text-sm`}>
+                  className="h-auto p-3 flex flex-col items-center space-y-1">
+                  <div
+                    className={`w-8 h-8 rounded-full ${option.color} flex items-center justify-center text-white text-sm`}>
                     {option.icon}
                   </div>
                   <span className="text-xs">{option.name}</span>
                 </Button>
               ))}
             </div>
-            
+
             <div className="border-t pt-4">
               <div className="flex items-center space-x-2">
                 <input
@@ -274,12 +293,24 @@ export const SharePopover: Story = {
 export const ColorPicker: Story = {
   render: () => {
     const [selectedColor, setSelectedColor] = useState("#3b82f6");
-    
+
     const colors = [
-      "#ef4444", "#f97316", "#f59e0b", "#eab308",
-      "#84cc16", "#22c55e", "#10b981", "#14b8a6",
-      "#06b6d4", "#0ea5e9", "#3b82f6", "#6366f1",
-      "#8b5cf6", "#a855f7", "#d946ef", "#ec4899",
+      "#ef4444",
+      "#f97316",
+      "#f59e0b",
+      "#eab308",
+      "#84cc16",
+      "#22c55e",
+      "#10b981",
+      "#14b8a6",
+      "#06b6d4",
+      "#0ea5e9",
+      "#3b82f6",
+      "#6366f1",
+      "#8b5cf6",
+      "#a855f7",
+      "#d946ef",
+      "#ec4899",
     ];
 
     return (
@@ -295,9 +326,9 @@ export const ColorPicker: Story = {
         <PopoverContent className="w-64">
           <div className="space-y-4">
             <h4 className="font-medium">Pick a color</h4>
-            
+
             <div className="grid grid-cols-8 gap-1">
-              {colors.map((color) => (
+              {colors.map(color => (
                 <button
                   key={color}
                   onClick={() => setSelectedColor(color)}
@@ -308,26 +339,21 @@ export const ColorPicker: Story = {
                 />
               ))}
             </div>
-            
+
             <div className="space-y-2">
               <Label htmlFor="hex-input">Hex Color</Label>
               <input
                 id="hex-input"
                 type="text"
                 value={selectedColor}
-                onChange={(e) => setSelectedColor(e.target.value)}
+                onChange={e => setSelectedColor(e.target.value)}
                 className="w-full px-2 py-1 text-sm border rounded"
               />
             </div>
-            
+
             <div className="flex justify-between items-center">
-              <div className="text-sm text-gray-600">
-                Preview
-              </div>
-              <div
-                className="w-8 h-8 rounded border"
-                style={{ backgroundColor: selectedColor }}
-              />
+              <div className="text-sm text-gray-600">Preview</div>
+              <div className="w-8 h-8 rounded border" style={{ backgroundColor: selectedColor }} />
             </div>
           </div>
         </PopoverContent>
@@ -350,7 +376,7 @@ export const ControlledPopover: Story = {
             Close Popover
           </Button>
         </div>
-        
+
         <Popover open={open} onOpenChange={setOpen}>
           <PopoverTrigger asChild>
             <Button variant="outline">Trigger Button</Button>
@@ -383,7 +409,7 @@ export const PositionVariants: Story = {
           <p className="text-sm">Popover positioned on top</p>
         </PopoverContent>
       </Popover>
-      
+
       <Popover>
         <PopoverTrigger asChild>
           <Button variant="outline">Bottom</Button>
@@ -392,7 +418,7 @@ export const PositionVariants: Story = {
           <p className="text-sm">Popover positioned on bottom</p>
         </PopoverContent>
       </Popover>
-      
+
       <Popover>
         <PopoverTrigger asChild>
           <Button variant="outline">Left</Button>
@@ -401,7 +427,7 @@ export const PositionVariants: Story = {
           <p className="text-sm">Popover positioned on left</p>
         </PopoverContent>
       </Popover>
-      
+
       <Popover>
         <PopoverTrigger asChild>
           <Button variant="outline">Right</Button>

@@ -1,6 +1,7 @@
+// @ts-nocheck - story demo file
 import { PortableText } from "@portabletext/react";
 import { defaultBlockStyle, Heading } from "@stackshift-ui/react";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import deepmerge from "deepmerge";
 
 const DUMMY_PORTABLE_DATA = [
@@ -291,7 +292,7 @@ const myBlock = {
   block: {
     h1: ({ children }: any) => {
       return (
-        <Heading type="h1" weight="extra-bold" fontSize="2xl" className="text-black">
+        <Heading type="h1" weight="extrabold" fontSize="2xl" className="text-black">
           {children}
         </Heading>
       );
