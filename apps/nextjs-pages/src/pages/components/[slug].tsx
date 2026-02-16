@@ -1,4 +1,4 @@
-import { CodeBlock, DocsLayout, PropsTable, PreviewCodeTabs, LivePreview } from "@/components/docs";
+import { CodeBlock, DocsLayout, LivePreview, PreviewCodeTabs, PropsTable } from "@/components/docs";
 import {
   formatComponentName,
   formatDisplayName,
@@ -48,10 +48,11 @@ function InstallationTabs({ slug }: InstallationTabsProps) {
         <p className="font-medium mb-2">Installation Options</p>
         <ul className="list-disc list-inside space-y-1 text-gray-500">
           <li>
-            <strong>Full Library:</strong> Install all components at once
+            <strong>Full Library:</strong> Installation + Import from full library Individual
+            Component tab - installation + import from individual pkg
           </li>
           <li>
-            <strong>Individual:</strong> Install only this component for smaller bundles
+            <strong>Individual:</strong> Install only this component
           </li>
         </ul>
       </div>
