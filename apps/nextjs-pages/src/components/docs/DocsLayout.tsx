@@ -19,7 +19,7 @@ export function DocsLayout({ children }: DocsLayoutProps) {
         >
           <MenuIcon />
         </button>
-        <span className="text-lg font-semibold">StackShift UI</span>
+        <span className="text-lg font-semibold">Components Library</span>
         <div className="w-10" /> {/* Spacer for centering */}
       </header>
 

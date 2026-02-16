@@ -1,11 +1,11 @@
+import {
+  formatDisplayName,
+  getCategoriesWithRegisteredComponents,
+} from "@/data/components";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import {
-  getCategoriesWithRegisteredComponents,
-  formatDisplayName,
-} from "@/data/components";
 // Initialize registry to ensure components are registered
 import "@/data/components/registry";
 
@@ -51,7 +51,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
           {/* Logo/Title */}
           <Link
             href="/"
-            className="flex items-center gap-2 mb-6 hover:opacity-80 transition-opacity"
+            className="flex flex-wrap items-center justify-center gap-2 mb-6 hover:opacity-80 transition-opacity"
             onClick={onClose}
           >
             <Image
@@ -61,7 +61,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
               height={32}
               className="w-8 h-8"
             />
-            <span className="text-xl font-bold text-gray-900">StackShift UI</span>
+            <span className="text-xl font-bold text-gray-900">Components Library</span>
           </Link>
 
           {/* Navigation */}
