@@ -137,6 +137,7 @@ export const formDoc: ComponentDoc = {
     type="inputSelect"
     name="role"
     label="Role"
+    placeholder="Select a role"
     items={["Developer", "Designer", "Manager", "Other"]}
   />
   <Button type="submit" className="w-full">Create Account</Button>

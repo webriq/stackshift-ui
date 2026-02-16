@@ -138,6 +138,7 @@ export const formFieldDoc: ComponentDoc = {
     type="inputSelect"
     name="country"
     label="Country"
+    placeholder="Select a country"
     items={["United States", "Canada", "United Kingdom", "Australia"]}
   />
 </Form>`,
