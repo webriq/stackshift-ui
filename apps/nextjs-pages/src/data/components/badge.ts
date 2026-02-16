@@ -54,16 +54,6 @@ export const badgeDoc: ComponentDoc = {
 </div>`,
     },
     {
-      title: "Status Indicators",
-      description: "Use badges to show status information.",
-      code: `<div className="flex gap-2 flex-wrap">
-  <Badge variant="default">Active</Badge>
-  <Badge variant="secondary">Pending</Badge>
-  <Badge variant="destructive">Rejected</Badge>
-  <Badge variant="outline">Draft</Badge>
-</div>`,
-    },
-    {
       title: "With Icons",
       description: "Combine badges with icons for enhanced meaning.",
       code: `<div className="flex gap-2 flex-wrap">
