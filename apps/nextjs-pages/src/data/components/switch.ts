@@ -85,8 +85,8 @@ export const switchDoc: ComponentDoc = {
 
   return (
     <div className="space-y-2">
-      <div className="flex items-center justify-between">
-        <Label htmlFor="notifications">Enable notifications</Label>
+      <div className="flex items-center space-x-2">
+      <Label htmlFor="notifications">Enable notifications</Label>
         <Switch
           id="notifications"
           checked={enabled}
