@@ -1,5 +1,18 @@
 # @stackshift-ui/data-table
 
+## 1.0.0-beta.9
+
+### Patch Changes
+
+- fixed dist folder not included in package
+- Updated dependencies
+  - @stackshift-ui/dropdown-menu@1.0.0-beta.7
+  - @stackshift-ui/button@7.0.0-beta.8
+  - @stackshift-ui/select@7.0.0-beta.6
+  - @stackshift-ui/table@1.0.0-beta.7
+  - @stackshift-ui/system@7.0.0-beta.6
+  - @stackshift-ui/scripts@7.0.0-beta.5
+
 ## 1.0.0-beta.8
 
 ### Patch Changes

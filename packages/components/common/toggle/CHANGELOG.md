@@ -1,5 +1,14 @@
 # @stackshift-ui/toggle
 
+## 1.0.0-beta.7
+
+### Patch Changes
+
+- fixed dist folder not included in package
+- Updated dependencies
+  - @stackshift-ui/system@7.0.0-beta.6
+  - @stackshift-ui/scripts@7.0.0-beta.5
+
 ## 1.0.0-beta.6
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @stackshift-ui/scripts
 
+## 7.0.0-beta.5
+
+### Patch Changes
+
+- fixed dist folder not included in package
+
 ## 7.0.0-beta.4
 
 ### Patch Changes

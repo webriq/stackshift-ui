@@ -1,5 +1,15 @@
 # @stackshift-ui/button
 
+## 7.0.0-beta.8
+
+### Patch Changes
+
+- fixed dist folder not included in package
+- Updated dependencies
+  - @stackshift-ui/link@7.0.0-beta.6
+  - @stackshift-ui/system@7.0.0-beta.6
+  - @stackshift-ui/scripts@7.0.0-beta.5
+
 ## 7.0.0-beta.7
 
 ### Patch Changes
