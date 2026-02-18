@@ -1,5 +1,17 @@
 # @stackshift-ui/link
 
+## 7.0.0-beta.4
+
+### Major Changes
+
+- beta updates
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/system@7.0.0-beta.4
+  - @stackshift-ui/scripts@7.0.0-beta.3
+
 ## 6.1.0-beta.3
 
 ### Patch Changes

@@ -1,5 +1,21 @@
 # @stackshift-ui/blockstyle
 
+## 7.0.0-beta.5
+
+### Major Changes
+
+- beta updates
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/heading@7.0.0-beta.4
+  - @stackshift-ui/image@7.0.0-beta.5
+  - @stackshift-ui/link@7.0.0-beta.4
+  - @stackshift-ui/text@7.0.0-beta.4
+  - @stackshift-ui/system@7.0.0-beta.4
+  - @stackshift-ui/scripts@7.0.0-beta.3
+
 ## 7.0.0-beta.4
 
 ### Patch Changes

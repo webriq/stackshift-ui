@@ -1,7 +1,7 @@
 {
   "name": "@stackshift-ui/pagination",
   "description": "Pagination with page navigation, next and previous links.",
-  "version": "1.0.0-beta.6",
+  "version": "1.0.0-beta.7",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -48,7 +48,7 @@
     "lucide-react": "^0.468.0"
   },
   "peerDependencies": {
-    "@stackshift-ui/system": ">=6.1.0-beta.3",
+    "@stackshift-ui/system": ">=7.0.0-beta.4",
     "@types/react": "16.8 - 19",
     "next": "10 - 14",
     "react": "16.8 - 19",

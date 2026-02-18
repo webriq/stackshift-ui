@@ -1,5 +1,17 @@
 # @stackshift-ui/switch
 
+## 1.0.0-beta.5
+
+### Major Changes
+
+- beta updates
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/system@7.0.0-beta.4
+  - @stackshift-ui/scripts@7.0.0-beta.3
+
 ## 1.0.0-beta.4
 
 ### Patch Changes

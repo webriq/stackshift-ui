@@ -1,7 +1,7 @@
 {
   "name": "@stackshift-ui/stats-card",
   "description": "",
-  "version": "7.0.0-beta.3",
+  "version": "7.0.0-beta.4",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -51,7 +51,7 @@
     "next": "10 - 14",
     "react": "16.8 - 19",
     "react-dom": "16.8 - 19",
-    "@stackshift-ui/system": ">=6.1.0-beta.3"
+    "@stackshift-ui/system": ">=7.0.0-beta.4"
   },
   "peerDependenciesMeta": {
     "next": {

@@ -1,5 +1,29 @@
 # @stackshift-ui/call-to-action
 
+## 7.0.0-beta.9
+
+### Major Changes
+
+- beta updates
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/signin-signup@7.0.0-beta.9
+  - @stackshift-ui/container@7.0.0-beta.4
+  - @stackshift-ui/heading@7.0.0-beta.4
+  - @stackshift-ui/section@7.0.0-beta.4
+  - @stackshift-ui/button@7.0.0-beta.6
+  - @stackshift-ui/image@7.0.0-beta.5
+  - @stackshift-ui/input@7.0.0-beta.4
+  - @stackshift-ui/card@7.0.0-beta.4
+  - @stackshift-ui/form@7.0.0-beta.4
+  - @stackshift-ui/link@7.0.0-beta.4
+  - @stackshift-ui/text@7.0.0-beta.4
+  - @stackshift-ui/flex@7.0.0-beta.4
+  - @stackshift-ui/system@7.0.0-beta.4
+  - @stackshift-ui/scripts@7.0.0-beta.3
+
 ## 7.0.0-beta.8
 
 ### Patch Changes
