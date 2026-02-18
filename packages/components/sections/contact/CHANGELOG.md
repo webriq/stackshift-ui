@@ -1,5 +1,27 @@
 # @stackshift-ui/contact
 
+## 7.0.0-beta.9
+
+### Patch Changes
+
+- bump patch pkg version
+- Updated dependencies
+  - @stackshift-ui/social-icons@7.0.0-beta.5
+  - @stackshift-ui/form-field@7.0.0-beta.6
+  - @stackshift-ui/container@7.0.0-beta.5
+  - @stackshift-ui/checkbox@7.0.0-beta.5
+  - @stackshift-ui/heading@7.0.0-beta.5
+  - @stackshift-ui/section@7.0.0-beta.5
+  - @stackshift-ui/button@7.0.0-beta.7
+  - @stackshift-ui/image@7.0.0-beta.6
+  - @stackshift-ui/card@7.0.0-beta.5
+  - @stackshift-ui/form@7.0.0-beta.5
+  - @stackshift-ui/link@7.0.0-beta.5
+  - @stackshift-ui/text@7.0.0-beta.5
+  - @stackshift-ui/flex@7.0.0-beta.5
+  - @stackshift-ui/system@7.0.0-beta.5
+  - @stackshift-ui/scripts@7.0.0-beta.4
+
 ## 7.0.0-beta.8
 
 ### Major Changes

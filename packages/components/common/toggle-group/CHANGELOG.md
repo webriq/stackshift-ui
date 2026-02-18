@@ -1,5 +1,15 @@
 # @stackshift-ui/toggle-group
 
+## 1.0.0-beta.6
+
+### Patch Changes
+
+- bump patch pkg version
+- Updated dependencies
+  - @stackshift-ui/toggle@1.0.0-beta.6
+  - @stackshift-ui/system@7.0.0-beta.5
+  - @stackshift-ui/scripts@7.0.0-beta.4
+
 ## 1.0.0-beta.5
 
 ### Major Changes

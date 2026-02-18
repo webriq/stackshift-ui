@@ -1,5 +1,21 @@
 # @stackshift-ui/how-it-works
 
+## 7.0.0-beta.6
+
+### Patch Changes
+
+- bump patch pkg version
+- Updated dependencies
+  - @stackshift-ui/youtube-video@7.0.0-beta.5
+  - @stackshift-ui/container@7.0.0-beta.5
+  - @stackshift-ui/heading@7.0.0-beta.5
+  - @stackshift-ui/section@7.0.0-beta.5
+  - @stackshift-ui/card@7.0.0-beta.5
+  - @stackshift-ui/text@7.0.0-beta.5
+  - @stackshift-ui/flex@7.0.0-beta.5
+  - @stackshift-ui/system@7.0.0-beta.5
+  - @stackshift-ui/scripts@7.0.0-beta.4
+
 ## 7.0.0-beta.5
 
 ### Major Changes

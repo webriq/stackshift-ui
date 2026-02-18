@@ -1,5 +1,11 @@
 # @stackshift-ui/scripts
 
+## 7.0.0-beta.4
+
+### Patch Changes
+
+- bump patch pkg version
+
 ## 7.0.0-beta.3
 
 ### Major Changes

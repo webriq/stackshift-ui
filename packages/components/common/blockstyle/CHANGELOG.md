@@ -1,5 +1,18 @@
 # @stackshift-ui/blockstyle
 
+## 7.0.0-beta.6
+
+### Patch Changes
+
+- bump patch pkg version
+- Updated dependencies
+  - @stackshift-ui/heading@7.0.0-beta.5
+  - @stackshift-ui/image@7.0.0-beta.6
+  - @stackshift-ui/link@7.0.0-beta.5
+  - @stackshift-ui/text@7.0.0-beta.5
+  - @stackshift-ui/system@7.0.0-beta.5
+  - @stackshift-ui/scripts@7.0.0-beta.4
+
 ## 7.0.0-beta.5
 
 ### Major Changes

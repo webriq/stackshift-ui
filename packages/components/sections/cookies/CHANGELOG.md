@@ -1,5 +1,14 @@
 # @stackshift-ui/cookies
 
+## 7.0.0-beta.5
+
+### Patch Changes
+
+- bump patch pkg version
+- Updated dependencies
+  - @stackshift-ui/system@7.0.0-beta.5
+  - @stackshift-ui/scripts@7.0.0-beta.4
+
 ## 7.0.0-beta.4
 
 ### Major Changes

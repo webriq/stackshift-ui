@@ -1,5 +1,11 @@
 # @stackshift-ui/tailwind-config
 
+## 3.0.0-beta.4
+
+### Patch Changes
+
+- bump patch pkg version
+
 ## 3.0.0-beta.3
 
 ### Major Changes

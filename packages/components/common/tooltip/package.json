@@ -1,7 +1,7 @@
 {
   "name": "@stackshift-ui/tooltip",
   "description": "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-  "version": "1.0.0-beta.5",
+  "version": "1.0.0-beta.6",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -49,7 +49,7 @@
     "classnames": "^2.5.1"
   },
   "peerDependencies": {
-    "@stackshift-ui/system": ">=7.0.0-beta.4",
+    "@stackshift-ui/system": ">=7.0.0-beta.5",
     "@types/react": "16.8 - 19",
     "next": "10 - 14",
     "react": "16.8 - 19",
