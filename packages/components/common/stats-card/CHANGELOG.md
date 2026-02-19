@@ -1,5 +1,15 @@
 # @stackshift-ui/stats-card
 
+## 7.0.0-beta.7
+
+### Patch Changes
+
+- bump packages version
+- Updated dependencies
+  - @stackshift-ui/text@7.0.0-beta.7
+  - @stackshift-ui/system@7.0.0-beta.7
+  - @stackshift-ui/scripts@7.0.0-beta.6
+
 ## 7.0.0-beta.6
 
 ### Patch Changes

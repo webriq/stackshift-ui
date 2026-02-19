@@ -1,7 +1,7 @@
 {
   "name": "@stackshift-ui/data-table",
   "description": "Powerful table and datagrids built using TanStack Table.",
-  "version": "1.0.0-beta.9",
+  "version": "1.0.0-beta.10",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -54,7 +54,7 @@
     "lucide-react": "^0.468.0"
   },
   "peerDependencies": {
-    "@stackshift-ui/system": ">=7.0.0-beta.6",
+    "@stackshift-ui/system": ">=7.0.0-beta.7",
     "@types/react": "16.8 - 19",
     "next": "10 - 14",
     "react": "16.8 - 19",

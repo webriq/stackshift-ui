@@ -1,5 +1,11 @@
 # @stackshift-ui/scripts
 
+## 7.0.0-beta.6
+
+### Patch Changes
+
+- bump packages version
+
 ## 7.0.0-beta.5
 
 ### Patch Changes

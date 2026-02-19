@@ -1,5 +1,24 @@
 # @stackshift-ui/testimonial
 
+## 7.0.0-beta.10
+
+### Patch Changes
+
+- bump packages version
+- Updated dependencies
+  - @stackshift-ui/swiper-pagination@7.0.0-beta.7
+  - @stackshift-ui/swiper-button@7.0.0-beta.9
+  - @stackshift-ui/container@7.0.0-beta.7
+  - @stackshift-ui/heading@7.0.0-beta.7
+  - @stackshift-ui/section@7.0.0-beta.7
+  - @stackshift-ui/avatar@7.0.0-beta.8
+  - @stackshift-ui/image@7.0.0-beta.8
+  - @stackshift-ui/card@7.0.0-beta.7
+  - @stackshift-ui/text@7.0.0-beta.7
+  - @stackshift-ui/flex@7.0.0-beta.7
+  - @stackshift-ui/system@7.0.0-beta.7
+  - @stackshift-ui/scripts@7.0.0-beta.6
+
 ## 7.0.0-beta.9
 
 ### Patch Changes

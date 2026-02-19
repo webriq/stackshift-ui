@@ -1,7 +1,7 @@
 {
   "name": "@stackshift-ui/scroll-area",
   "description": "Augments native scroll functionality for custom, cross-browser styling.",
-  "version": "1.0.0-beta.7",
+  "version": "1.0.0-beta.8",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -47,7 +47,7 @@
     "classnames": "^2.5.1"
   },
   "peerDependencies": {
-    "@stackshift-ui/system": ">=7.0.0-beta.6",
+    "@stackshift-ui/system": ">=7.0.0-beta.7",
     "@types/react": "16.8 - 19",
     "next": "10 - 14",
     "react": "16.8 - 19",

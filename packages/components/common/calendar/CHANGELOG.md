@@ -1,5 +1,15 @@
 # @stackshift-ui/calendar
 
+## 1.0.0-beta.10
+
+### Patch Changes
+
+- bump packages version
+- Updated dependencies
+  - @stackshift-ui/button@7.0.0-beta.9
+  - @stackshift-ui/system@7.0.0-beta.7
+  - @stackshift-ui/scripts@7.0.0-beta.6
+
 ## 1.0.0-beta.9
 
 ### Patch Changes
