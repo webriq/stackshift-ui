@@ -1,47 +1,4 @@
-import * as React from "react";
-import { LiveProvider, LivePreview as ReactLivePreview, LiveError } from "react-live";
 import {
-  User,
-  Settings,
-  LogOut,
-  Mail,
-  MessageSquare,
-  PlusCircle,
-  CreditCard,
-  Keyboard,
-  Users,
-  UserPlus,
-  Github,
-  LifeBuoy,
-  Cloud,
-  // Toggle & Toggle Group icons
-  Bold,
-  Italic,
-  Underline,
-  Strikethrough,
-  AlignLeft,
-  AlignCenter,
-  AlignRight,
-  List,
-  Star,
-  // Link icons
-  ChevronRight,
-  BookOpen,
-  // Tooltip icons
-  Copy,
-  Trash,
-  Edit,
-  Share,
-  // Toggle Group icons
-  LayoutGrid,
-} from "lucide-react";
-import {
-  // Layout Components
-  Container,
-  Flex,
-  Grid,
-  GridItem,
-  Section,
   // UI Components
   Accordion,
   AccordionContent,
@@ -61,6 +18,8 @@ import {
   CardTitle,
   Checkbox,
   CheckboxGroup,
+  // Layout Components
+  Container,
   DataTable,
   DatePicker,
   DatePickerInput,
@@ -88,8 +47,11 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
+  Flex,
   Form,
   FormField,
+  Grid,
+  GridItem,
   Heading,
   Image,
   Input,
@@ -114,6 +76,7 @@ import {
   RadioGroupItem,
   ScrollArea,
   ScrollBar,
+  Section,
   Select,
   SelectContent,
   SelectGroup,
@@ -154,6 +117,43 @@ import {
   TooltipTrigger,
   Link as UILink,
 } from "@stackshift-ui/react";
+import {
+  AlignCenter,
+  AlignLeft,
+  AlignRight,
+  // Toggle & Toggle Group icons
+  Bold,
+  BookOpen,
+  // Link icons
+  ChevronRight,
+  Cloud,
+  // Tooltip icons
+  Copy,
+  CreditCard,
+  Edit,
+  Github,
+  Italic,
+  Keyboard,
+  // Toggle Group icons
+  LayoutGrid,
+  LifeBuoy,
+  List,
+  LogOut,
+  Mail,
+  MessageSquare,
+  PlusCircle,
+  Settings,
+  Share,
+  Star,
+  Strikethrough,
+  Trash,
+  Underline,
+  User,
+  UserPlus,
+  Users,
+} from "lucide-react";
+import * as React from "react";
+import { LiveError, LiveProvider, LivePreview as ReactLivePreview } from "react-live";
 
 interface LivePreviewProps {
   code: string;
@@ -318,13 +318,47 @@ const scope = {
   LayoutGrid,
 };
 
+// Components that need full width (no centering wrapper)
+const FULL_WIDTH_COMPONENTS = ["Container", "Section"];
+
+// Components that need a fixed width to prevent layout shift
+const FIXED_WIDTH_COMPONENTS = ["Accordion"];
+
+function getWrapperClassName(code: string): string {
+  const trimmedCode = code.trim();
+
+  // Check if code contains full-width components
+  const needsFullWidth = FULL_WIDTH_COMPONENTS.some((component) =>
+    trimmedCode.includes(`<${component}`)
+  );
+
+  if (needsFullWidth) {
+    return "w-full";
+  }
+
+  // Check if code contains fixed-width components (like Accordion)
+  const needsFixedWidth = FIXED_WIDTH_COMPONENTS.some((component) =>
+    trimmedCode.includes(`<${component}`)
+  );
+
+  if (needsFixedWidth) {
+    return "w-full flex items-center justify-center [&>*]:w-full [&>*]:max-w-md";
+  }
+
+  // Default: center the preview
+  return "w-full flex items-center justify-center";
+}
+
 export function LivePreview({ code }: LivePreviewProps) {
   // Transform code for react-live's noInline mode
   const wrappedCode = transformCodeForLive(code);
+  const wrapperClassName = getWrapperClassName(code);
 
   return (
     <LiveProvider code={wrappedCode} scope={scope} noInline>
-      <ReactLivePreview className="w-full" />
+      <div className={wrapperClassName}>
+        <ReactLivePreview />
+      </div>
       <LiveError className="text-red-500 text-sm mt-2 p-2 bg-red-50 rounded" />
     </LiveProvider>
   );
