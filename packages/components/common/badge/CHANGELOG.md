@@ -1,5 +1,38 @@
 # @stackshift-ui/badge
 
+## 7.0.0-beta.6
+
+### Patch Changes
+
+- fixed dist folder not included in package
+- Updated dependencies
+  - @stackshift-ui/flex@7.0.0-beta.6
+  - @stackshift-ui/system@7.0.0-beta.6
+  - @stackshift-ui/scripts@7.0.0-beta.5
+
+## 7.0.0-beta.5
+
+### Patch Changes
+
+- bump patch pkg version
+- Updated dependencies
+  - @stackshift-ui/flex@7.0.0-beta.5
+  - @stackshift-ui/system@7.0.0-beta.5
+  - @stackshift-ui/scripts@7.0.0-beta.4
+
+## 7.0.0-beta.4
+
+### Major Changes
+
+- beta updates
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/flex@7.0.0-beta.4
+  - @stackshift-ui/system@7.0.0-beta.4
+  - @stackshift-ui/scripts@7.0.0-beta.3
+
 ## 7.0.0-beta.3
 
 ### Patch Changes

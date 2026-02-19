@@ -1,5 +1,38 @@
 # @stackshift-ui/pagination
 
+## 1.0.0-beta.9
+
+### Patch Changes
+
+- fixed dist folder not included in package
+- Updated dependencies
+  - @stackshift-ui/button@7.0.0-beta.8
+  - @stackshift-ui/system@7.0.0-beta.6
+  - @stackshift-ui/scripts@7.0.0-beta.5
+
+## 1.0.0-beta.8
+
+### Patch Changes
+
+- bump patch pkg version
+- Updated dependencies
+  - @stackshift-ui/button@7.0.0-beta.7
+  - @stackshift-ui/system@7.0.0-beta.5
+  - @stackshift-ui/scripts@7.0.0-beta.4
+
+## 1.0.0-beta.7
+
+### Major Changes
+
+- beta updates
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/button@7.0.0-beta.6
+  - @stackshift-ui/system@7.0.0-beta.4
+  - @stackshift-ui/scripts@7.0.0-beta.3
+
 ## 1.0.0-beta.6
 
 ### Patch Changes

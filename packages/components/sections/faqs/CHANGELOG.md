@@ -1,5 +1,62 @@
 # @stackshift-ui/faqs
 
+## 7.0.0-beta.8
+
+### Patch Changes
+
+- fixed dist folder not included in package
+- Updated dependencies
+  - @stackshift-ui/accordion@1.0.0-beta.7
+  - @stackshift-ui/container@7.0.0-beta.6
+  - @stackshift-ui/heading@7.0.0-beta.6
+  - @stackshift-ui/section@7.0.0-beta.6
+  - @stackshift-ui/button@7.0.0-beta.8
+  - @stackshift-ui/input@7.0.0-beta.6
+  - @stackshift-ui/card@7.0.0-beta.6
+  - @stackshift-ui/text@7.0.0-beta.6
+  - @stackshift-ui/flex@7.0.0-beta.6
+  - @stackshift-ui/system@7.0.0-beta.6
+  - @stackshift-ui/scripts@7.0.0-beta.5
+
+## 7.0.0-beta.7
+
+### Patch Changes
+
+- bump patch pkg version
+- Updated dependencies
+  - @stackshift-ui/accordion@1.0.0-beta.6
+  - @stackshift-ui/container@7.0.0-beta.5
+  - @stackshift-ui/heading@7.0.0-beta.5
+  - @stackshift-ui/section@7.0.0-beta.5
+  - @stackshift-ui/button@7.0.0-beta.7
+  - @stackshift-ui/input@7.0.0-beta.5
+  - @stackshift-ui/card@7.0.0-beta.5
+  - @stackshift-ui/text@7.0.0-beta.5
+  - @stackshift-ui/flex@7.0.0-beta.5
+  - @stackshift-ui/system@7.0.0-beta.5
+  - @stackshift-ui/scripts@7.0.0-beta.4
+
+## 7.0.0-beta.6
+
+### Major Changes
+
+- beta updates
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/accordion@1.0.0-beta.5
+  - @stackshift-ui/container@7.0.0-beta.4
+  - @stackshift-ui/heading@7.0.0-beta.4
+  - @stackshift-ui/section@7.0.0-beta.4
+  - @stackshift-ui/button@7.0.0-beta.6
+  - @stackshift-ui/input@7.0.0-beta.4
+  - @stackshift-ui/card@7.0.0-beta.4
+  - @stackshift-ui/text@7.0.0-beta.4
+  - @stackshift-ui/flex@7.0.0-beta.4
+  - @stackshift-ui/system@7.0.0-beta.4
+  - @stackshift-ui/scripts@7.0.0-beta.3
+
 ## 7.0.0-beta.5
 
 ### Patch Changes

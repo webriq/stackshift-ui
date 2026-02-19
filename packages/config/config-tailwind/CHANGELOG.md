@@ -1,5 +1,23 @@
 # @stackshift-ui/tailwind-config
 
+## 3.0.0-beta.5
+
+### Patch Changes
+
+- fixed dist folder not included in package
+
+## 3.0.0-beta.4
+
+### Patch Changes
+
+- bump patch pkg version
+
+## 3.0.0-beta.3
+
+### Major Changes
+
+- beta updates
+
 ## 2.1.0-beta.2
 
 ### Patch Changes

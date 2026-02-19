@@ -49,7 +49,7 @@ export function DatePicker({
       </Label>
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
-          <Button variant="outline" id="date" className="w-48 justify-between font-normal">
+          <Button variant="outline" id="date" className="w-48 font-normal [&>span]:w-full [&>span]:justify-between">
             {date ? date.toLocaleDateString() : "Select date"}
             <ChevronDownIcon />
           </Button>
@@ -195,7 +195,7 @@ export function DatePickerTime({ label, selectedDate, onSelect, ...props }: Date
         </Label>
         <Popover open={open} onOpenChange={setOpen}>
           <PopoverTrigger asChild>
-            <Button variant="outline" id="date-picker" className="w-32 justify-between font-normal">
+            <Button variant="outline" id="date-picker" className="w-32 font-normal [&>span]:w-full [&>span]:justify-between">
               {date ? date.toLocaleDateString() : "Select date"}
               <ChevronDownIcon />
             </Button>
