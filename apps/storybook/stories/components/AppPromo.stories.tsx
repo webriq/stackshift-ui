@@ -1,5 +1,5 @@
 import { AppPromo } from "@stackshift-ui/react";
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 
 // Define the default export for Storybook
 const meta: Meta<typeof AppPromo> = {

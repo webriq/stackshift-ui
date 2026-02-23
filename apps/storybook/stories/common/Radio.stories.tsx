@@ -1,5 +1,5 @@
 import { Radio } from "@stackshift-ui/react";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 // className, ariaLabel, labelClass, onChange
 const meta: Meta<typeof Radio> = {

@@ -1,5 +1,5 @@
 import { StackShiftUIProvider } from "@stackshift-ui/react";
-import type { Preview } from "@storybook/react";
+import type { Preview } from "@storybook/react-vite";
 import React from "react";
 import "../../nextjs-pages/src/styles/globals.css";
 

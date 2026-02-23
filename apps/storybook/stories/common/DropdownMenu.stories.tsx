@@ -16,7 +16,7 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@stackshift-ui/react";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import {
   Archive,
   ChevronDown,

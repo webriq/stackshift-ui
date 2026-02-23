@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Switch, Label } from "@stackshift-ui/react";
 import { useState } from "react";
 

@@ -1,5 +1,5 @@
 import { Button } from "@stackshift-ui/react";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { ArrowRight, Download, Mail, Plus, Search, Settings, Trash2 } from "lucide-react";
 
 const meta: Meta<typeof Button> = {

@@ -1,5 +1,5 @@
 import { Button, DatePicker, DatePickerInput, DatePickerTime, Label } from "@stackshift-ui/react";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { useState } from "react";
 
 const meta: Meta<typeof DatePicker> = {

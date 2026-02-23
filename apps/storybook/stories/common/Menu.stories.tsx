@@ -11,7 +11,7 @@ import {
   NavigationMenuViewport,
 } from "@stackshift-ui/react";
 import { cn } from "@stackshift-ui/system";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 const meta: Meta<typeof NavigationMenu> = {
   title: "Common/NavigationMenu",

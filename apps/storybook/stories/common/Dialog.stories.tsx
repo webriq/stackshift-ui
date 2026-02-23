@@ -9,7 +9,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@stackshift-ui/react";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 const meta: Meta<typeof Dialog> = {
   title: "Common/Dialog",

@@ -1,5 +1,5 @@
 import { Badge } from "@stackshift-ui/react";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 type BadgeProps = React.ComponentProps<typeof Badge> & {
   variant: "default" | "secondary" | "outline" | "destructive";

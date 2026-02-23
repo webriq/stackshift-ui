@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Link } from "@stackshift-ui/react";
 
 const meta: Meta<typeof Link> = {
