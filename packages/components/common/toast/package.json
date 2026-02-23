@@ -1,7 +1,7 @@
 {
   "name": "@stackshift-ui/toast",
   "description": "An opinionated toast component for React.",
-  "version": "1.0.0-beta.8",
+  "version": "1.0.0",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -50,7 +50,7 @@
     "sonner": "^2.0.5"
   },
   "peerDependencies": {
-    "@stackshift-ui/system": ">=7.0.0-beta.7",
+    "@stackshift-ui/system": ">=7.0.0",
     "@types/react": "16.8 - 19",
     "next": "10 - 14",
     "react": "16.8 - 19",

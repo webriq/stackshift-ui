@@ -1,81 +1,187 @@
 # @stackshift-ui/react
 
+## 6.1.0
+
+### Major Changes
+
+- 9f1a207: beta updates
+
+### Minor Changes
+
+- 7fbe304: shadcn migration
+- 7fbe304: shadcn migration
+- b62501c: Packages updates and fixes
+
+### Patch Changes
+
+- fe05f8c: fixed dist folder not included in package
+- 9b890ff: bump pre publish version
+- 26e5867: bump patch pkg version
+- 90a34f2: bump packages version
+- Updated dependencies [7fbe304]
+- Updated dependencies [9f1a207]
+- Updated dependencies [fe05f8c]
+- Updated dependencies [4bb0316]
+- Updated dependencies [7fbe304]
+- Updated dependencies [9b890ff]
+- Updated dependencies [5509b94]
+- Updated dependencies [2ca8560]
+- Updated dependencies [b62501c]
+- Updated dependencies [26e5867]
+- Updated dependencies [bde75dc]
+- Updated dependencies [90a34f2]
+- Updated dependencies [2ca8560]
+  - @stackshift-ui/dropdown-menu@1.0.0
+  - @stackshift-ui/toggle-group@1.0.0
+  - @stackshift-ui/logo-cloud@6.1.0
+  - @stackshift-ui/date-picker@1.0.0
+  - @stackshift-ui/scroll-area@1.0.0
+  - @stackshift-ui/data-table@1.0.0
+  - @stackshift-ui/form-field@6.1.0
+  - @stackshift-ui/pagination@1.0.0
+  - @stackshift-ui/features@6.1.0
+  - @stackshift-ui/accordion@1.0.0
+  - @stackshift-ui/calendar@1.0.0
+  - @stackshift-ui/skeleton@1.0.0
+  - @stackshift-ui/popover@1.0.0
+  - @stackshift-ui/tooltip@1.0.0
+  - @stackshift-ui/dialog@1.0.0
+  - @stackshift-ui/switch@1.0.0
+  - @stackshift-ui/toggle@1.0.0
+  - @stackshift-ui/label@1.0.0
+  - @stackshift-ui/sheet@1.0.0
+  - @stackshift-ui/table@1.0.0
+  - @stackshift-ui/toast@1.0.0
+  - @stackshift-ui/menu@1.0.0
+  - @stackshift-ui/swiper-pagination@6.1.0
+  - @stackshift-ui/call-to-action@6.1.0
+  - @stackshift-ui/text-component@6.1.0
+  - @stackshift-ui/signin-signup@6.1.0
+  - @stackshift-ui/checkbox-group@6.1.0
+  - @stackshift-ui/how-it-works@6.1.0
+  - @stackshift-ui/swiper-button@6.1.0
+  - @stackshift-ui/youtube-video@6.1.0
+  - @stackshift-ui/testimonial@6.1.0
+  - @stackshift-ui/social-icons@6.1.0
+  - @stackshift-ui/navigation@6.1.0
+  - @stackshift-ui/newsletter@6.1.0
+  - @stackshift-ui/statistics@6.1.0
+  - @stackshift-ui/radio-group@6.1.0
+  - @stackshift-ui/webriq-form@6.1.0
+  - @stackshift-ui/app-promo@6.1.0
+  - @stackshift-ui/portfolio@6.1.0
+  - @stackshift-ui/blockstyle@6.1.0
+  - @stackshift-ui/input-file@6.1.0
+  - @stackshift-ui/stats-card@6.1.0
+  - @stackshift-ui/container@6.1.0
+  - @stackshift-ui/grid-item@6.1.0
+  - @stackshift-ui/contact@6.1.0
+  - @stackshift-ui/cookies@6.1.0
+  - @stackshift-ui/checkbox@6.1.0
+  - @stackshift-ui/textarea@6.1.0
+  - @stackshift-ui/footer@6.1.0
+  - @stackshift-ui/header@6.1.0
+  - @stackshift-ui/heading@6.1.0
+  - @stackshift-ui/section@6.1.0
+  - @stackshift-ui/avatar@6.1.0
+  - @stackshift-ui/button@6.1.0
+  - @stackshift-ui/select@6.1.0
+  - @stackshift-ui/blog@6.1.0
+  - @stackshift-ui/faqs@6.1.0
+  - @stackshift-ui/team@6.1.0
+  - @stackshift-ui/badge@6.1.0
+  - @stackshift-ui/image@6.1.0
+  - @stackshift-ui/input@6.1.0
+  - @stackshift-ui/radio@6.1.0
+  - @stackshift-ui/card@6.1.0
+  - @stackshift-ui/form@6.1.0
+  - @stackshift-ui/link@6.1.0
+  - @stackshift-ui/text@6.1.0
+  - @stackshift-ui/flex@6.1.0
+  - @stackshift-ui/grid@6.1.0
+  - @stackshift-ui/system@6.1.0
+  - @stackshift-ui/scripts@6.1.0
+
+## 7.0.0-beta (Deprecated)
+
+> All 7.0.0-beta versions have been deprecated. These versions were published by mistake. Please use 6.1.0 instead.
+
 ## 7.0.0-beta.12
 
 ### Patch Changes
 
 - bump packages version
 - Updated dependencies
-  - @stackshift-ui/swiper-pagination@7.0.0-beta.7
-  - @stackshift-ui/call-to-action@7.0.0-beta.12
-  - @stackshift-ui/text-component@7.0.0-beta.7
-  - @stackshift-ui/signin-signup@7.0.0-beta.12
-  - @stackshift-ui/checkbox-group@7.0.0-beta.7
-  - @stackshift-ui/how-it-works@7.0.0-beta.8
+  - @stackshift-ui/swiper-pagination@6.1.0-beta.7
+  - @stackshift-ui/call-to-action@6.1.0-beta.12
+  - @stackshift-ui/text-component@6.1.0-beta.7
+  - @stackshift-ui/signin-signup@6.1.0-beta.12
+  - @stackshift-ui/checkbox-group@6.1.0-beta.7
+  - @stackshift-ui/how-it-works@6.1.0-beta.8
   - @stackshift-ui/dropdown-menu@1.0.0-beta.8
-  - @stackshift-ui/swiper-button@7.0.0-beta.9
-  - @stackshift-ui/youtube-video@7.0.0-beta.7
-  - @stackshift-ui/testimonial@7.0.0-beta.10
-  - @stackshift-ui/social-icons@7.0.0-beta.7
+  - @stackshift-ui/swiper-button@6.1.0-beta.9
+  - @stackshift-ui/youtube-video@6.1.0-beta.7
+  - @stackshift-ui/testimonial@6.1.0-beta.10
+  - @stackshift-ui/social-icons@6.1.0-beta.7
   - @stackshift-ui/toggle-group@1.0.0-beta.8
-  - @stackshift-ui/logo-cloud@7.0.0-beta.11
-  - @stackshift-ui/navigation@7.0.0-beta.11
-  - @stackshift-ui/newsletter@7.0.0-beta.11
-  - @stackshift-ui/statistics@7.0.0-beta.9
+  - @stackshift-ui/logo-cloud@6.1.0-beta.11
+  - @stackshift-ui/navigation@6.1.0-beta.11
+  - @stackshift-ui/newsletter@6.1.0-beta.11
+  - @stackshift-ui/statistics@6.1.0-beta.9
   - @stackshift-ui/date-picker@1.0.0-beta.10
-  - @stackshift-ui/radio-group@7.0.0-beta.7
+  - @stackshift-ui/radio-group@6.1.0-beta.7
   - @stackshift-ui/scroll-area@1.0.0-beta.8
-  - @stackshift-ui/webriq-form@7.0.0-beta.7
-  - @stackshift-ui/app-promo@7.0.0-beta.10
-  - @stackshift-ui/portfolio@7.0.0-beta.11
-  - @stackshift-ui/blockstyle@7.0.0-beta.8
+  - @stackshift-ui/webriq-form@6.1.0-beta.7
+  - @stackshift-ui/app-promo@6.1.0-beta.10
+  - @stackshift-ui/portfolio@6.1.0-beta.11
+  - @stackshift-ui/blockstyle@6.1.0-beta.8
   - @stackshift-ui/data-table@1.0.0-beta.10
-  - @stackshift-ui/form-field@7.0.0-beta.8
-  - @stackshift-ui/input-file@7.0.0-beta.7
+  - @stackshift-ui/form-field@6.1.0-beta.8
+  - @stackshift-ui/input-file@6.1.0-beta.7
   - @stackshift-ui/pagination@1.0.0-beta.10
-  - @stackshift-ui/stats-card@7.0.0-beta.7
-  - @stackshift-ui/features@7.0.0-beta.12
+  - @stackshift-ui/stats-card@6.1.0-beta.7
+  - @stackshift-ui/features@6.1.0-beta.12
   - @stackshift-ui/accordion@1.0.0-beta.8
-  - @stackshift-ui/container@7.0.0-beta.7
-  - @stackshift-ui/grid-item@7.0.0-beta.7
-  - @stackshift-ui/contact@7.0.0-beta.11
-  - @stackshift-ui/cookies@7.0.0-beta.7
+  - @stackshift-ui/container@6.1.0-beta.7
+  - @stackshift-ui/grid-item@6.1.0-beta.7
+  - @stackshift-ui/contact@6.1.0-beta.11
+  - @stackshift-ui/cookies@6.1.0-beta.7
   - @stackshift-ui/calendar@1.0.0-beta.10
-  - @stackshift-ui/checkbox@7.0.0-beta.7
+  - @stackshift-ui/checkbox@6.1.0-beta.7
   - @stackshift-ui/skeleton@1.0.0-beta.8
-  - @stackshift-ui/textarea@7.0.0-beta.7
-  - @stackshift-ui/footer@7.0.0-beta.11
-  - @stackshift-ui/header@7.0.0-beta.12
-  - @stackshift-ui/heading@7.0.0-beta.7
+  - @stackshift-ui/textarea@6.1.0-beta.7
+  - @stackshift-ui/footer@6.1.0-beta.11
+  - @stackshift-ui/header@6.1.0-beta.12
+  - @stackshift-ui/heading@6.1.0-beta.7
   - @stackshift-ui/popover@1.0.0-beta.8
   - @stackshift-ui/tooltip@1.0.0-beta.8
-  - @stackshift-ui/section@7.0.0-beta.7
-  - @stackshift-ui/avatar@7.0.0-beta.8
-  - @stackshift-ui/button@7.0.0-beta.9
+  - @stackshift-ui/section@6.1.0-beta.7
+  - @stackshift-ui/avatar@6.1.0-beta.8
+  - @stackshift-ui/button@6.1.0-beta.9
   - @stackshift-ui/dialog@1.0.0-beta.8
-  - @stackshift-ui/select@7.0.0-beta.7
+  - @stackshift-ui/select@6.1.0-beta.7
   - @stackshift-ui/switch@1.0.0-beta.8
   - @stackshift-ui/toggle@1.0.0-beta.8
-  - @stackshift-ui/blog@7.0.0-beta.10
-  - @stackshift-ui/faqs@7.0.0-beta.9
-  - @stackshift-ui/team@7.0.0-beta.10
-  - @stackshift-ui/badge@7.0.0-beta.7
-  - @stackshift-ui/image@7.0.0-beta.8
-  - @stackshift-ui/input@7.0.0-beta.7
+  - @stackshift-ui/blog@6.1.0-beta.10
+  - @stackshift-ui/faqs@6.1.0-beta.9
+  - @stackshift-ui/team@6.1.0-beta.10
+  - @stackshift-ui/badge@6.1.0-beta.7
+  - @stackshift-ui/image@6.1.0-beta.8
+  - @stackshift-ui/input@6.1.0-beta.7
   - @stackshift-ui/label@1.0.0-beta.8
-  - @stackshift-ui/radio@7.0.0-beta.7
+  - @stackshift-ui/radio@6.1.0-beta.7
   - @stackshift-ui/sheet@1.0.0-beta.8
   - @stackshift-ui/table@1.0.0-beta.8
   - @stackshift-ui/toast@1.0.0-beta.8
-  - @stackshift-ui/card@7.0.0-beta.7
-  - @stackshift-ui/form@7.0.0-beta.7
-  - @stackshift-ui/link@7.0.0-beta.7
+  - @stackshift-ui/card@6.1.0-beta.7
+  - @stackshift-ui/form@6.1.0-beta.7
+  - @stackshift-ui/link@6.1.0-beta.7
   - @stackshift-ui/menu@1.0.0-beta.8
-  - @stackshift-ui/text@7.0.0-beta.7
-  - @stackshift-ui/flex@7.0.0-beta.7
-  - @stackshift-ui/grid@7.0.0-beta.7
-  - @stackshift-ui/system@7.0.0-beta.7
-  - @stackshift-ui/scripts@7.0.0-beta.6
+  - @stackshift-ui/text@6.1.0-beta.7
+  - @stackshift-ui/flex@6.1.0-beta.7
+  - @stackshift-ui/grid@6.1.0-beta.7
+  - @stackshift-ui/system@6.1.0-beta.7
+  - @stackshift-ui/scripts@6.1.0-beta.6
 
 ## 7.0.0-beta.11
 
@@ -83,76 +189,76 @@
 
 - fixed dist folder not included in package
 - Updated dependencies
-  - @stackshift-ui/swiper-pagination@7.0.0-beta.6
-  - @stackshift-ui/call-to-action@7.0.0-beta.11
-  - @stackshift-ui/text-component@7.0.0-beta.6
-  - @stackshift-ui/signin-signup@7.0.0-beta.11
-  - @stackshift-ui/checkbox-group@7.0.0-beta.6
-  - @stackshift-ui/how-it-works@7.0.0-beta.7
+  - @stackshift-ui/swiper-pagination@6.1.0-beta.6
+  - @stackshift-ui/call-to-action@6.1.0-beta.11
+  - @stackshift-ui/text-component@6.1.0-beta.6
+  - @stackshift-ui/signin-signup@6.1.0-beta.11
+  - @stackshift-ui/checkbox-group@6.1.0-beta.6
+  - @stackshift-ui/how-it-works@6.1.0-beta.7
   - @stackshift-ui/dropdown-menu@1.0.0-beta.7
-  - @stackshift-ui/swiper-button@7.0.0-beta.8
-  - @stackshift-ui/youtube-video@7.0.0-beta.6
-  - @stackshift-ui/testimonial@7.0.0-beta.9
-  - @stackshift-ui/social-icons@7.0.0-beta.6
+  - @stackshift-ui/swiper-button@6.1.0-beta.8
+  - @stackshift-ui/youtube-video@6.1.0-beta.6
+  - @stackshift-ui/testimonial@6.1.0-beta.9
+  - @stackshift-ui/social-icons@6.1.0-beta.6
   - @stackshift-ui/toggle-group@1.0.0-beta.7
-  - @stackshift-ui/logo-cloud@7.0.0-beta.10
-  - @stackshift-ui/navigation@7.0.0-beta.10
-  - @stackshift-ui/newsletter@7.0.0-beta.10
-  - @stackshift-ui/statistics@7.0.0-beta.8
+  - @stackshift-ui/logo-cloud@6.1.0-beta.10
+  - @stackshift-ui/navigation@6.1.0-beta.10
+  - @stackshift-ui/newsletter@6.1.0-beta.10
+  - @stackshift-ui/statistics@6.1.0-beta.8
   - @stackshift-ui/date-picker@1.0.0-beta.9
-  - @stackshift-ui/radio-group@7.0.0-beta.6
+  - @stackshift-ui/radio-group@6.1.0-beta.6
   - @stackshift-ui/scroll-area@1.0.0-beta.7
-  - @stackshift-ui/webriq-form@7.0.0-beta.6
-  - @stackshift-ui/app-promo@7.0.0-beta.9
-  - @stackshift-ui/portfolio@7.0.0-beta.10
-  - @stackshift-ui/blockstyle@7.0.0-beta.7
+  - @stackshift-ui/webriq-form@6.1.0-beta.6
+  - @stackshift-ui/app-promo@6.1.0-beta.9
+  - @stackshift-ui/portfolio@6.1.0-beta.10
+  - @stackshift-ui/blockstyle@6.1.0-beta.7
   - @stackshift-ui/data-table@1.0.0-beta.9
-  - @stackshift-ui/form-field@7.0.0-beta.7
-  - @stackshift-ui/input-file@7.0.0-beta.6
+  - @stackshift-ui/form-field@6.1.0-beta.7
+  - @stackshift-ui/input-file@6.1.0-beta.6
   - @stackshift-ui/pagination@1.0.0-beta.9
-  - @stackshift-ui/stats-card@7.0.0-beta.6
-  - @stackshift-ui/features@7.0.0-beta.11
+  - @stackshift-ui/stats-card@6.1.0-beta.6
+  - @stackshift-ui/features@6.1.0-beta.11
   - @stackshift-ui/accordion@1.0.0-beta.7
-  - @stackshift-ui/container@7.0.0-beta.6
-  - @stackshift-ui/grid-item@7.0.0-beta.6
-  - @stackshift-ui/contact@7.0.0-beta.10
-  - @stackshift-ui/cookies@7.0.0-beta.6
+  - @stackshift-ui/container@6.1.0-beta.6
+  - @stackshift-ui/grid-item@6.1.0-beta.6
+  - @stackshift-ui/contact@6.1.0-beta.10
+  - @stackshift-ui/cookies@6.1.0-beta.6
   - @stackshift-ui/calendar@1.0.0-beta.9
-  - @stackshift-ui/checkbox@7.0.0-beta.6
+  - @stackshift-ui/checkbox@6.1.0-beta.6
   - @stackshift-ui/skeleton@1.0.0-beta.7
-  - @stackshift-ui/textarea@7.0.0-beta.6
-  - @stackshift-ui/footer@7.0.0-beta.10
-  - @stackshift-ui/header@7.0.0-beta.11
-  - @stackshift-ui/heading@7.0.0-beta.6
+  - @stackshift-ui/textarea@6.1.0-beta.6
+  - @stackshift-ui/footer@6.1.0-beta.10
+  - @stackshift-ui/header@6.1.0-beta.11
+  - @stackshift-ui/heading@6.1.0-beta.6
   - @stackshift-ui/popover@1.0.0-beta.7
   - @stackshift-ui/tooltip@1.0.0-beta.7
-  - @stackshift-ui/section@7.0.0-beta.6
-  - @stackshift-ui/avatar@7.0.0-beta.7
-  - @stackshift-ui/button@7.0.0-beta.8
+  - @stackshift-ui/section@6.1.0-beta.6
+  - @stackshift-ui/avatar@6.1.0-beta.7
+  - @stackshift-ui/button@6.1.0-beta.8
   - @stackshift-ui/dialog@1.0.0-beta.7
-  - @stackshift-ui/select@7.0.0-beta.6
+  - @stackshift-ui/select@6.1.0-beta.6
   - @stackshift-ui/switch@1.0.0-beta.7
   - @stackshift-ui/toggle@1.0.0-beta.7
-  - @stackshift-ui/blog@7.0.0-beta.9
-  - @stackshift-ui/faqs@7.0.0-beta.8
-  - @stackshift-ui/team@7.0.0-beta.9
-  - @stackshift-ui/badge@7.0.0-beta.6
-  - @stackshift-ui/image@7.0.0-beta.7
-  - @stackshift-ui/input@7.0.0-beta.6
+  - @stackshift-ui/blog@6.1.0-beta.9
+  - @stackshift-ui/faqs@6.1.0-beta.8
+  - @stackshift-ui/team@6.1.0-beta.9
+  - @stackshift-ui/badge@6.1.0-beta.6
+  - @stackshift-ui/image@6.1.0-beta.7
+  - @stackshift-ui/input@6.1.0-beta.6
   - @stackshift-ui/label@1.0.0-beta.7
-  - @stackshift-ui/radio@7.0.0-beta.6
+  - @stackshift-ui/radio@6.1.0-beta.6
   - @stackshift-ui/sheet@1.0.0-beta.7
   - @stackshift-ui/table@1.0.0-beta.7
   - @stackshift-ui/toast@1.0.0-beta.7
-  - @stackshift-ui/card@7.0.0-beta.6
-  - @stackshift-ui/form@7.0.0-beta.6
-  - @stackshift-ui/link@7.0.0-beta.6
+  - @stackshift-ui/card@6.1.0-beta.6
+  - @stackshift-ui/form@6.1.0-beta.6
+  - @stackshift-ui/link@6.1.0-beta.6
   - @stackshift-ui/menu@1.0.0-beta.7
-  - @stackshift-ui/text@7.0.0-beta.6
-  - @stackshift-ui/flex@7.0.0-beta.6
-  - @stackshift-ui/grid@7.0.0-beta.6
-  - @stackshift-ui/system@7.0.0-beta.6
-  - @stackshift-ui/scripts@7.0.0-beta.5
+  - @stackshift-ui/text@6.1.0-beta.6
+  - @stackshift-ui/flex@6.1.0-beta.6
+  - @stackshift-ui/grid@6.1.0-beta.6
+  - @stackshift-ui/system@6.1.0-beta.6
+  - @stackshift-ui/scripts@6.1.0-beta.5
 
 ## 7.0.0-beta.10
 
@@ -160,76 +266,76 @@
 
 - bump patch pkg version
 - Updated dependencies
-  - @stackshift-ui/swiper-pagination@7.0.0-beta.5
-  - @stackshift-ui/call-to-action@7.0.0-beta.10
-  - @stackshift-ui/text-component@7.0.0-beta.5
-  - @stackshift-ui/signin-signup@7.0.0-beta.10
-  - @stackshift-ui/checkbox-group@7.0.0-beta.5
-  - @stackshift-ui/how-it-works@7.0.0-beta.6
+  - @stackshift-ui/swiper-pagination@6.1.0-beta.5
+  - @stackshift-ui/call-to-action@6.1.0-beta.10
+  - @stackshift-ui/text-component@6.1.0-beta.5
+  - @stackshift-ui/signin-signup@6.1.0-beta.10
+  - @stackshift-ui/checkbox-group@6.1.0-beta.5
+  - @stackshift-ui/how-it-works@6.1.0-beta.6
   - @stackshift-ui/dropdown-menu@1.0.0-beta.6
-  - @stackshift-ui/swiper-button@7.0.0-beta.7
-  - @stackshift-ui/youtube-video@7.0.0-beta.5
-  - @stackshift-ui/testimonial@7.0.0-beta.8
-  - @stackshift-ui/social-icons@7.0.0-beta.5
+  - @stackshift-ui/swiper-button@6.1.0-beta.7
+  - @stackshift-ui/youtube-video@6.1.0-beta.5
+  - @stackshift-ui/testimonial@6.1.0-beta.8
+  - @stackshift-ui/social-icons@6.1.0-beta.5
   - @stackshift-ui/toggle-group@1.0.0-beta.6
-  - @stackshift-ui/logo-cloud@7.0.0-beta.9
-  - @stackshift-ui/navigation@7.0.0-beta.9
-  - @stackshift-ui/newsletter@7.0.0-beta.9
-  - @stackshift-ui/statistics@7.0.0-beta.7
+  - @stackshift-ui/logo-cloud@6.1.0-beta.9
+  - @stackshift-ui/navigation@6.1.0-beta.9
+  - @stackshift-ui/newsletter@6.1.0-beta.9
+  - @stackshift-ui/statistics@6.1.0-beta.7
   - @stackshift-ui/date-picker@1.0.0-beta.8
-  - @stackshift-ui/radio-group@7.0.0-beta.5
+  - @stackshift-ui/radio-group@6.1.0-beta.5
   - @stackshift-ui/scroll-area@1.0.0-beta.6
-  - @stackshift-ui/webriq-form@7.0.0-beta.5
-  - @stackshift-ui/app-promo@7.0.0-beta.8
-  - @stackshift-ui/portfolio@7.0.0-beta.9
-  - @stackshift-ui/blockstyle@7.0.0-beta.6
+  - @stackshift-ui/webriq-form@6.1.0-beta.5
+  - @stackshift-ui/app-promo@6.1.0-beta.8
+  - @stackshift-ui/portfolio@6.1.0-beta.9
+  - @stackshift-ui/blockstyle@6.1.0-beta.6
   - @stackshift-ui/data-table@1.0.0-beta.8
-  - @stackshift-ui/form-field@7.0.0-beta.6
-  - @stackshift-ui/input-file@7.0.0-beta.5
+  - @stackshift-ui/form-field@6.1.0-beta.6
+  - @stackshift-ui/input-file@6.1.0-beta.5
   - @stackshift-ui/pagination@1.0.0-beta.8
-  - @stackshift-ui/stats-card@7.0.0-beta.5
-  - @stackshift-ui/features@7.0.0-beta.10
+  - @stackshift-ui/stats-card@6.1.0-beta.5
+  - @stackshift-ui/features@6.1.0-beta.10
   - @stackshift-ui/accordion@1.0.0-beta.6
-  - @stackshift-ui/container@7.0.0-beta.5
-  - @stackshift-ui/grid-item@7.0.0-beta.5
-  - @stackshift-ui/contact@7.0.0-beta.9
-  - @stackshift-ui/cookies@7.0.0-beta.5
+  - @stackshift-ui/container@6.1.0-beta.5
+  - @stackshift-ui/grid-item@6.1.0-beta.5
+  - @stackshift-ui/contact@6.1.0-beta.9
+  - @stackshift-ui/cookies@6.1.0-beta.5
   - @stackshift-ui/calendar@1.0.0-beta.8
-  - @stackshift-ui/checkbox@7.0.0-beta.5
+  - @stackshift-ui/checkbox@6.1.0-beta.5
   - @stackshift-ui/skeleton@1.0.0-beta.6
-  - @stackshift-ui/textarea@7.0.0-beta.5
-  - @stackshift-ui/footer@7.0.0-beta.9
-  - @stackshift-ui/header@7.0.0-beta.10
-  - @stackshift-ui/heading@7.0.0-beta.5
+  - @stackshift-ui/textarea@6.1.0-beta.5
+  - @stackshift-ui/footer@6.1.0-beta.9
+  - @stackshift-ui/header@6.1.0-beta.10
+  - @stackshift-ui/heading@6.1.0-beta.5
   - @stackshift-ui/popover@1.0.0-beta.6
   - @stackshift-ui/tooltip@1.0.0-beta.6
-  - @stackshift-ui/section@7.0.0-beta.5
-  - @stackshift-ui/avatar@7.0.0-beta.6
-  - @stackshift-ui/button@7.0.0-beta.7
+  - @stackshift-ui/section@6.1.0-beta.5
+  - @stackshift-ui/avatar@6.1.0-beta.6
+  - @stackshift-ui/button@6.1.0-beta.7
   - @stackshift-ui/dialog@1.0.0-beta.6
-  - @stackshift-ui/select@7.0.0-beta.5
+  - @stackshift-ui/select@6.1.0-beta.5
   - @stackshift-ui/switch@1.0.0-beta.6
   - @stackshift-ui/toggle@1.0.0-beta.6
-  - @stackshift-ui/blog@7.0.0-beta.8
-  - @stackshift-ui/faqs@7.0.0-beta.7
-  - @stackshift-ui/team@7.0.0-beta.8
-  - @stackshift-ui/badge@7.0.0-beta.5
-  - @stackshift-ui/image@7.0.0-beta.6
-  - @stackshift-ui/input@7.0.0-beta.5
+  - @stackshift-ui/blog@6.1.0-beta.8
+  - @stackshift-ui/faqs@6.1.0-beta.7
+  - @stackshift-ui/team@6.1.0-beta.8
+  - @stackshift-ui/badge@6.1.0-beta.5
+  - @stackshift-ui/image@6.1.0-beta.6
+  - @stackshift-ui/input@6.1.0-beta.5
   - @stackshift-ui/label@1.0.0-beta.6
-  - @stackshift-ui/radio@7.0.0-beta.5
+  - @stackshift-ui/radio@6.1.0-beta.5
   - @stackshift-ui/sheet@1.0.0-beta.6
   - @stackshift-ui/table@1.0.0-beta.6
   - @stackshift-ui/toast@1.0.0-beta.6
-  - @stackshift-ui/card@7.0.0-beta.5
-  - @stackshift-ui/form@7.0.0-beta.5
-  - @stackshift-ui/link@7.0.0-beta.5
+  - @stackshift-ui/card@6.1.0-beta.5
+  - @stackshift-ui/form@6.1.0-beta.5
+  - @stackshift-ui/link@6.1.0-beta.5
   - @stackshift-ui/menu@1.0.0-beta.6
-  - @stackshift-ui/text@7.0.0-beta.5
-  - @stackshift-ui/flex@7.0.0-beta.5
-  - @stackshift-ui/grid@7.0.0-beta.5
-  - @stackshift-ui/system@7.0.0-beta.5
-  - @stackshift-ui/scripts@7.0.0-beta.4
+  - @stackshift-ui/text@6.1.0-beta.5
+  - @stackshift-ui/flex@6.1.0-beta.5
+  - @stackshift-ui/grid@6.1.0-beta.5
+  - @stackshift-ui/system@6.1.0-beta.5
+  - @stackshift-ui/scripts@6.1.0-beta.4
 
 ## 7.0.0-beta.9
 
@@ -240,91 +346,91 @@
 ### Patch Changes
 
 - Updated dependencies
-  - @stackshift-ui/swiper-pagination@7.0.0-beta.4
-  - @stackshift-ui/call-to-action@7.0.0-beta.9
-  - @stackshift-ui/text-component@7.0.0-beta.4
-  - @stackshift-ui/signin-signup@7.0.0-beta.9
-  - @stackshift-ui/checkbox-group@7.0.0-beta.4
-  - @stackshift-ui/how-it-works@7.0.0-beta.5
+  - @stackshift-ui/swiper-pagination@6.1.0-beta.4
+  - @stackshift-ui/call-to-action@6.1.0-beta.9
+  - @stackshift-ui/text-component@6.1.0-beta.4
+  - @stackshift-ui/signin-signup@6.1.0-beta.9
+  - @stackshift-ui/checkbox-group@6.1.0-beta.4
+  - @stackshift-ui/how-it-works@6.1.0-beta.5
   - @stackshift-ui/dropdown-menu@1.0.0-beta.5
-  - @stackshift-ui/swiper-button@7.0.0-beta.6
-  - @stackshift-ui/youtube-video@7.0.0-beta.4
-  - @stackshift-ui/testimonial@7.0.0-beta.7
-  - @stackshift-ui/social-icons@7.0.0-beta.4
+  - @stackshift-ui/swiper-button@6.1.0-beta.6
+  - @stackshift-ui/youtube-video@6.1.0-beta.4
+  - @stackshift-ui/testimonial@6.1.0-beta.7
+  - @stackshift-ui/social-icons@6.1.0-beta.4
   - @stackshift-ui/toggle-group@1.0.0-beta.5
-  - @stackshift-ui/logo-cloud@7.0.0-beta.8
-  - @stackshift-ui/navigation@7.0.0-beta.8
-  - @stackshift-ui/newsletter@7.0.0-beta.8
-  - @stackshift-ui/statistics@7.0.0-beta.6
+  - @stackshift-ui/logo-cloud@6.1.0-beta.8
+  - @stackshift-ui/navigation@6.1.0-beta.8
+  - @stackshift-ui/newsletter@6.1.0-beta.8
+  - @stackshift-ui/statistics@6.1.0-beta.6
   - @stackshift-ui/date-picker@1.0.0-beta.7
-  - @stackshift-ui/radio-group@7.0.0-beta.4
+  - @stackshift-ui/radio-group@6.1.0-beta.4
   - @stackshift-ui/scroll-area@1.0.0-beta.5
-  - @stackshift-ui/webriq-form@7.0.0-beta.4
-  - @stackshift-ui/app-promo@7.0.0-beta.7
-  - @stackshift-ui/portfolio@7.0.0-beta.8
-  - @stackshift-ui/blockstyle@7.0.0-beta.5
+  - @stackshift-ui/webriq-form@6.1.0-beta.4
+  - @stackshift-ui/app-promo@6.1.0-beta.7
+  - @stackshift-ui/portfolio@6.1.0-beta.8
+  - @stackshift-ui/blockstyle@6.1.0-beta.5
   - @stackshift-ui/data-table@1.0.0-beta.7
-  - @stackshift-ui/form-field@7.0.0-beta.5
-  - @stackshift-ui/input-file@7.0.0-beta.4
+  - @stackshift-ui/form-field@6.1.0-beta.5
+  - @stackshift-ui/input-file@6.1.0-beta.4
   - @stackshift-ui/pagination@1.0.0-beta.7
-  - @stackshift-ui/stats-card@7.0.0-beta.4
-  - @stackshift-ui/features@7.0.0-beta.9
+  - @stackshift-ui/stats-card@6.1.0-beta.4
+  - @stackshift-ui/features@6.1.0-beta.9
   - @stackshift-ui/accordion@1.0.0-beta.5
-  - @stackshift-ui/container@7.0.0-beta.4
-  - @stackshift-ui/grid-item@7.0.0-beta.4
-  - @stackshift-ui/contact@7.0.0-beta.8
-  - @stackshift-ui/cookies@7.0.0-beta.4
+  - @stackshift-ui/container@6.1.0-beta.4
+  - @stackshift-ui/grid-item@6.1.0-beta.4
+  - @stackshift-ui/contact@6.1.0-beta.8
+  - @stackshift-ui/cookies@6.1.0-beta.4
   - @stackshift-ui/calendar@1.0.0-beta.7
-  - @stackshift-ui/checkbox@7.0.0-beta.4
+  - @stackshift-ui/checkbox@6.1.0-beta.4
   - @stackshift-ui/skeleton@1.0.0-beta.5
-  - @stackshift-ui/textarea@7.0.0-beta.4
-  - @stackshift-ui/footer@7.0.0-beta.8
-  - @stackshift-ui/header@7.0.0-beta.9
-  - @stackshift-ui/heading@7.0.0-beta.4
+  - @stackshift-ui/textarea@6.1.0-beta.4
+  - @stackshift-ui/footer@6.1.0-beta.8
+  - @stackshift-ui/header@6.1.0-beta.9
+  - @stackshift-ui/heading@6.1.0-beta.4
   - @stackshift-ui/popover@1.0.0-beta.5
   - @stackshift-ui/tooltip@1.0.0-beta.5
-  - @stackshift-ui/section@7.0.0-beta.4
-  - @stackshift-ui/avatar@7.0.0-beta.5
-  - @stackshift-ui/button@7.0.0-beta.6
+  - @stackshift-ui/section@6.1.0-beta.4
+  - @stackshift-ui/avatar@6.1.0-beta.5
+  - @stackshift-ui/button@6.1.0-beta.6
   - @stackshift-ui/dialog@1.0.0-beta.5
-  - @stackshift-ui/select@7.0.0-beta.4
+  - @stackshift-ui/select@6.1.0-beta.4
   - @stackshift-ui/switch@1.0.0-beta.5
   - @stackshift-ui/toggle@1.0.0-beta.5
-  - @stackshift-ui/blog@7.0.0-beta.7
-  - @stackshift-ui/faqs@7.0.0-beta.6
-  - @stackshift-ui/team@7.0.0-beta.7
-  - @stackshift-ui/badge@7.0.0-beta.4
-  - @stackshift-ui/image@7.0.0-beta.5
-  - @stackshift-ui/input@7.0.0-beta.4
+  - @stackshift-ui/blog@6.1.0-beta.7
+  - @stackshift-ui/faqs@6.1.0-beta.6
+  - @stackshift-ui/team@6.1.0-beta.7
+  - @stackshift-ui/badge@6.1.0-beta.4
+  - @stackshift-ui/image@6.1.0-beta.5
+  - @stackshift-ui/input@6.1.0-beta.4
   - @stackshift-ui/label@1.0.0-beta.5
-  - @stackshift-ui/radio@7.0.0-beta.4
+  - @stackshift-ui/radio@6.1.0-beta.4
   - @stackshift-ui/sheet@1.0.0-beta.5
   - @stackshift-ui/table@1.0.0-beta.5
   - @stackshift-ui/toast@1.0.0-beta.5
-  - @stackshift-ui/card@7.0.0-beta.4
-  - @stackshift-ui/form@7.0.0-beta.4
-  - @stackshift-ui/link@7.0.0-beta.4
+  - @stackshift-ui/card@6.1.0-beta.4
+  - @stackshift-ui/form@6.1.0-beta.4
+  - @stackshift-ui/link@6.1.0-beta.4
   - @stackshift-ui/menu@1.0.0-beta.5
-  - @stackshift-ui/text@7.0.0-beta.4
-  - @stackshift-ui/flex@7.0.0-beta.4
-  - @stackshift-ui/grid@7.0.0-beta.4
-  - @stackshift-ui/system@7.0.0-beta.4
-  - @stackshift-ui/scripts@7.0.0-beta.3
+  - @stackshift-ui/text@6.1.0-beta.4
+  - @stackshift-ui/flex@6.1.0-beta.4
+  - @stackshift-ui/grid@6.1.0-beta.4
+  - @stackshift-ui/system@6.1.0-beta.4
+  - @stackshift-ui/scripts@6.1.0-beta.3
 
 ## 7.0.0-beta.8
 
 ### Patch Changes
 
 - Updated dependencies
-  - @stackshift-ui/signin-signup@7.0.0-beta.8
-  - @stackshift-ui/how-it-works@7.0.0-beta.4
-  - @stackshift-ui/navigation@7.0.0-beta.7
-  - @stackshift-ui/newsletter@7.0.0-beta.7
-  - @stackshift-ui/portfolio@7.0.0-beta.7
-  - @stackshift-ui/features@7.0.0-beta.8
-  - @stackshift-ui/footer@7.0.0-beta.7
-  - @stackshift-ui/header@7.0.0-beta.8
-  - @stackshift-ui/call-to-action@7.0.0-beta.8
+  - @stackshift-ui/signin-signup@6.1.0-beta.8
+  - @stackshift-ui/how-it-works@6.1.0-beta.4
+  - @stackshift-ui/navigation@6.1.0-beta.7
+  - @stackshift-ui/newsletter@6.1.0-beta.7
+  - @stackshift-ui/portfolio@6.1.0-beta.7
+  - @stackshift-ui/features@6.1.0-beta.8
+  - @stackshift-ui/footer@6.1.0-beta.7
+  - @stackshift-ui/header@6.1.0-beta.8
+  - @stackshift-ui/call-to-action@6.1.0-beta.8
 
 ## 7.0.0-beta.7
 
@@ -332,22 +438,22 @@
 
 - Updated dependencies
   - @stackshift-ui/image@6.1.0-beta.4
-  - @stackshift-ui/avatar@7.0.0-beta.4
-  - @stackshift-ui/blockstyle@7.0.0-beta.4
-  - @stackshift-ui/app-promo@7.0.0-beta.6
-  - @stackshift-ui/blog@7.0.0-beta.6
-  - @stackshift-ui/call-to-action@7.0.0-beta.7
-  - @stackshift-ui/contact@7.0.0-beta.7
-  - @stackshift-ui/features@7.0.0-beta.7
-  - @stackshift-ui/footer@7.0.0-beta.6
-  - @stackshift-ui/header@7.0.0-beta.7
+  - @stackshift-ui/avatar@6.1.0-beta.4
+  - @stackshift-ui/blockstyle@6.1.0-beta.4
+  - @stackshift-ui/app-promo@6.1.0-beta.6
+  - @stackshift-ui/blog@6.1.0-beta.6
+  - @stackshift-ui/call-to-action@6.1.0-beta.7
+  - @stackshift-ui/contact@6.1.0-beta.7
+  - @stackshift-ui/features@6.1.0-beta.7
+  - @stackshift-ui/footer@6.1.0-beta.6
+  - @stackshift-ui/header@6.1.0-beta.7
   - @stackshift-ui/logo-cloud@6.1.0-beta.7
-  - @stackshift-ui/navigation@7.0.0-beta.6
-  - @stackshift-ui/newsletter@7.0.0-beta.6
-  - @stackshift-ui/portfolio@7.0.0-beta.6
-  - @stackshift-ui/signin-signup@7.0.0-beta.7
-  - @stackshift-ui/team@7.0.0-beta.6
-  - @stackshift-ui/testimonial@7.0.0-beta.6
+  - @stackshift-ui/navigation@6.1.0-beta.6
+  - @stackshift-ui/newsletter@6.1.0-beta.6
+  - @stackshift-ui/portfolio@6.1.0-beta.6
+  - @stackshift-ui/signin-signup@6.1.0-beta.7
+  - @stackshift-ui/team@6.1.0-beta.6
+  - @stackshift-ui/testimonial@6.1.0-beta.6
 
 ## 7.0.0-beta.6
 
@@ -355,74 +461,74 @@
 
 - bump pre publish version
 - Updated dependencies
-  - @stackshift-ui/swiper-pagination@7.0.0-beta.3
-  - @stackshift-ui/call-to-action@7.0.0-beta.6
-  - @stackshift-ui/text-component@7.0.0-beta.3
-  - @stackshift-ui/signin-signup@7.0.0-beta.6
-  - @stackshift-ui/checkbox-group@7.0.0-beta.3
-  - @stackshift-ui/how-it-works@7.0.0-beta.3
+  - @stackshift-ui/swiper-pagination@6.1.0-beta.3
+  - @stackshift-ui/call-to-action@6.1.0-beta.6
+  - @stackshift-ui/text-component@6.1.0-beta.3
+  - @stackshift-ui/signin-signup@6.1.0-beta.6
+  - @stackshift-ui/checkbox-group@6.1.0-beta.3
+  - @stackshift-ui/how-it-works@6.1.0-beta.3
   - @stackshift-ui/dropdown-menu@1.0.0-beta.4
-  - @stackshift-ui/swiper-button@7.0.0-beta.5
-  - @stackshift-ui/youtube-video@7.0.0-beta.3
-  - @stackshift-ui/testimonial@7.0.0-beta.5
-  - @stackshift-ui/social-icons@7.0.0-beta.3
+  - @stackshift-ui/swiper-button@6.1.0-beta.5
+  - @stackshift-ui/youtube-video@6.1.0-beta.3
+  - @stackshift-ui/testimonial@6.1.0-beta.5
+  - @stackshift-ui/social-icons@6.1.0-beta.3
   - @stackshift-ui/toggle-group@1.0.0-beta.4
   - @stackshift-ui/logo-cloud@6.1.0-beta.6
-  - @stackshift-ui/navigation@7.0.0-beta.5
-  - @stackshift-ui/newsletter@7.0.0-beta.5
-  - @stackshift-ui/statistics@7.0.0-beta.5
+  - @stackshift-ui/navigation@6.1.0-beta.5
+  - @stackshift-ui/newsletter@6.1.0-beta.5
+  - @stackshift-ui/statistics@6.1.0-beta.5
   - @stackshift-ui/date-picker@1.0.0-beta.6
-  - @stackshift-ui/radio-group@7.0.0-beta.3
+  - @stackshift-ui/radio-group@6.1.0-beta.3
   - @stackshift-ui/scroll-area@1.0.0-beta.4
-  - @stackshift-ui/webriq-form@7.0.0-beta.3
-  - @stackshift-ui/app-promo@7.0.0-beta.5
-  - @stackshift-ui/portfolio@7.0.0-beta.5
-  - @stackshift-ui/blockstyle@7.0.0-beta.3
+  - @stackshift-ui/webriq-form@6.1.0-beta.3
+  - @stackshift-ui/app-promo@6.1.0-beta.5
+  - @stackshift-ui/portfolio@6.1.0-beta.5
+  - @stackshift-ui/blockstyle@6.1.0-beta.3
   - @stackshift-ui/data-table@1.0.0-beta.6
-  - @stackshift-ui/form-field@7.0.0-beta.4
-  - @stackshift-ui/input-file@7.0.0-beta.3
+  - @stackshift-ui/form-field@6.1.0-beta.4
+  - @stackshift-ui/input-file@6.1.0-beta.3
   - @stackshift-ui/pagination@1.0.0-beta.6
-  - @stackshift-ui/stats-card@7.0.0-beta.3
-  - @stackshift-ui/features@7.0.0-beta.6
+  - @stackshift-ui/stats-card@6.1.0-beta.3
+  - @stackshift-ui/features@6.1.0-beta.6
   - @stackshift-ui/accordion@1.0.0-beta.4
-  - @stackshift-ui/container@7.0.0-beta.3
-  - @stackshift-ui/grid-item@7.0.0-beta.3
-  - @stackshift-ui/contact@7.0.0-beta.6
-  - @stackshift-ui/cookies@7.0.0-beta.3
+  - @stackshift-ui/container@6.1.0-beta.3
+  - @stackshift-ui/grid-item@6.1.0-beta.3
+  - @stackshift-ui/contact@6.1.0-beta.6
+  - @stackshift-ui/cookies@6.1.0-beta.3
   - @stackshift-ui/calendar@1.0.0-beta.6
-  - @stackshift-ui/checkbox@7.0.0-beta.3
+  - @stackshift-ui/checkbox@6.1.0-beta.3
   - @stackshift-ui/skeleton@1.0.0-beta.4
-  - @stackshift-ui/textarea@7.0.0-beta.3
-  - @stackshift-ui/footer@7.0.0-beta.5
-  - @stackshift-ui/header@7.0.0-beta.6
-  - @stackshift-ui/heading@7.0.0-beta.3
+  - @stackshift-ui/textarea@6.1.0-beta.3
+  - @stackshift-ui/footer@6.1.0-beta.5
+  - @stackshift-ui/header@6.1.0-beta.6
+  - @stackshift-ui/heading@6.1.0-beta.3
   - @stackshift-ui/popover@1.0.0-beta.4
   - @stackshift-ui/tooltip@1.0.0-beta.4
-  - @stackshift-ui/section@7.0.0-beta.3
-  - @stackshift-ui/avatar@7.0.0-beta.3
+  - @stackshift-ui/section@6.1.0-beta.3
+  - @stackshift-ui/avatar@6.1.0-beta.3
   - @stackshift-ui/button@6.1.0-beta.5
   - @stackshift-ui/dialog@1.0.0-beta.4
-  - @stackshift-ui/select@7.0.0-beta.3
+  - @stackshift-ui/select@6.1.0-beta.3
   - @stackshift-ui/switch@1.0.0-beta.4
   - @stackshift-ui/toggle@1.0.0-beta.4
-  - @stackshift-ui/blog@7.0.0-beta.5
-  - @stackshift-ui/faqs@7.0.0-beta.5
-  - @stackshift-ui/team@7.0.0-beta.5
-  - @stackshift-ui/badge@7.0.0-beta.3
+  - @stackshift-ui/blog@6.1.0-beta.5
+  - @stackshift-ui/faqs@6.1.0-beta.5
+  - @stackshift-ui/team@6.1.0-beta.5
+  - @stackshift-ui/badge@6.1.0-beta.3
   - @stackshift-ui/image@6.1.0-beta.3
-  - @stackshift-ui/input@7.0.0-beta.3
+  - @stackshift-ui/input@6.1.0-beta.3
   - @stackshift-ui/label@1.0.0-beta.4
-  - @stackshift-ui/radio@7.0.0-beta.3
+  - @stackshift-ui/radio@6.1.0-beta.3
   - @stackshift-ui/sheet@1.0.0-beta.4
   - @stackshift-ui/table@1.0.0-beta.4
   - @stackshift-ui/toast@1.0.0-beta.4
-  - @stackshift-ui/card@7.0.0-beta.3
-  - @stackshift-ui/form@7.0.0-beta.3
+  - @stackshift-ui/card@6.1.0-beta.3
+  - @stackshift-ui/form@6.1.0-beta.3
   - @stackshift-ui/link@6.1.0-beta.3
   - @stackshift-ui/menu@1.0.0-beta.4
-  - @stackshift-ui/text@7.0.0-beta.3
-  - @stackshift-ui/flex@7.0.0-beta.3
-  - @stackshift-ui/grid@7.0.0-beta.3
+  - @stackshift-ui/text@6.1.0-beta.3
+  - @stackshift-ui/flex@6.1.0-beta.3
+  - @stackshift-ui/grid@6.1.0-beta.3
   - @stackshift-ui/system@6.1.0-beta.3
   - @stackshift-ui/scripts@6.1.0-beta.2
 
@@ -435,74 +541,74 @@
 ### Patch Changes
 
 - Updated dependencies
-  - @stackshift-ui/swiper-pagination@7.0.0-beta.2
-  - @stackshift-ui/call-to-action@7.0.0-beta.5
-  - @stackshift-ui/text-component@7.0.0-beta.2
-  - @stackshift-ui/signin-signup@7.0.0-beta.5
-  - @stackshift-ui/checkbox-group@7.0.0-beta.2
-  - @stackshift-ui/how-it-works@7.0.0-beta.2
+  - @stackshift-ui/swiper-pagination@6.1.0-beta.2
+  - @stackshift-ui/call-to-action@6.1.0-beta.5
+  - @stackshift-ui/text-component@6.1.0-beta.2
+  - @stackshift-ui/signin-signup@6.1.0-beta.5
+  - @stackshift-ui/checkbox-group@6.1.0-beta.2
+  - @stackshift-ui/how-it-works@6.1.0-beta.2
   - @stackshift-ui/dropdown-menu@1.0.0-beta.3
-  - @stackshift-ui/swiper-button@7.0.0-beta.4
-  - @stackshift-ui/youtube-video@7.0.0-beta.2
-  - @stackshift-ui/testimonial@7.0.0-beta.4
-  - @stackshift-ui/social-icons@7.0.0-beta.2
+  - @stackshift-ui/swiper-button@6.1.0-beta.4
+  - @stackshift-ui/youtube-video@6.1.0-beta.2
+  - @stackshift-ui/testimonial@6.1.0-beta.4
+  - @stackshift-ui/social-icons@6.1.0-beta.2
   - @stackshift-ui/toggle-group@1.0.0-beta.3
   - @stackshift-ui/logo-cloud@6.1.0-beta.5
-  - @stackshift-ui/navigation@7.0.0-beta.4
-  - @stackshift-ui/newsletter@7.0.0-beta.4
-  - @stackshift-ui/statistics@7.0.0-beta.4
+  - @stackshift-ui/navigation@6.1.0-beta.4
+  - @stackshift-ui/newsletter@6.1.0-beta.4
+  - @stackshift-ui/statistics@6.1.0-beta.4
   - @stackshift-ui/date-picker@1.0.0-beta.5
-  - @stackshift-ui/radio-group@7.0.0-beta.2
+  - @stackshift-ui/radio-group@6.1.0-beta.2
   - @stackshift-ui/scroll-area@1.0.0-beta.3
-  - @stackshift-ui/webriq-form@7.0.0-beta.2
-  - @stackshift-ui/app-promo@7.0.0-beta.4
-  - @stackshift-ui/portfolio@7.0.0-beta.4
-  - @stackshift-ui/blockstyle@7.0.0-beta.2
+  - @stackshift-ui/webriq-form@6.1.0-beta.2
+  - @stackshift-ui/app-promo@6.1.0-beta.4
+  - @stackshift-ui/portfolio@6.1.0-beta.4
+  - @stackshift-ui/blockstyle@6.1.0-beta.2
   - @stackshift-ui/data-table@1.0.0-beta.5
-  - @stackshift-ui/form-field@7.0.0-beta.3
-  - @stackshift-ui/input-file@7.0.0-beta.2
+  - @stackshift-ui/form-field@6.1.0-beta.3
+  - @stackshift-ui/input-file@6.1.0-beta.2
   - @stackshift-ui/pagination@1.0.0-beta.5
-  - @stackshift-ui/stats-card@7.0.0-beta.2
-  - @stackshift-ui/features@7.0.0-beta.5
+  - @stackshift-ui/stats-card@6.1.0-beta.2
+  - @stackshift-ui/features@6.1.0-beta.5
   - @stackshift-ui/accordion@1.0.0-beta.3
-  - @stackshift-ui/container@7.0.0-beta.2
-  - @stackshift-ui/grid-item@7.0.0-beta.2
-  - @stackshift-ui/contact@7.0.0-beta.5
-  - @stackshift-ui/cookies@7.0.0-beta.2
+  - @stackshift-ui/container@6.1.0-beta.2
+  - @stackshift-ui/grid-item@6.1.0-beta.2
+  - @stackshift-ui/contact@6.1.0-beta.5
+  - @stackshift-ui/cookies@6.1.0-beta.2
   - @stackshift-ui/calendar@1.0.0-beta.5
-  - @stackshift-ui/checkbox@7.0.0-beta.2
+  - @stackshift-ui/checkbox@6.1.0-beta.2
   - @stackshift-ui/skeleton@1.0.0-beta.3
-  - @stackshift-ui/textarea@7.0.0-beta.2
-  - @stackshift-ui/footer@7.0.0-beta.4
-  - @stackshift-ui/header@7.0.0-beta.5
-  - @stackshift-ui/heading@7.0.0-beta.2
+  - @stackshift-ui/textarea@6.1.0-beta.2
+  - @stackshift-ui/footer@6.1.0-beta.4
+  - @stackshift-ui/header@6.1.0-beta.5
+  - @stackshift-ui/heading@6.1.0-beta.2
   - @stackshift-ui/popover@1.0.0-beta.3
   - @stackshift-ui/tooltip@1.0.0-beta.3
-  - @stackshift-ui/section@7.0.0-beta.2
-  - @stackshift-ui/avatar@7.0.0-beta.2
+  - @stackshift-ui/section@6.1.0-beta.2
+  - @stackshift-ui/avatar@6.1.0-beta.2
   - @stackshift-ui/button@6.1.0-beta.4
   - @stackshift-ui/dialog@1.0.0-beta.3
-  - @stackshift-ui/select@7.0.0-beta.2
+  - @stackshift-ui/select@6.1.0-beta.2
   - @stackshift-ui/switch@1.0.0-beta.3
   - @stackshift-ui/toggle@1.0.0-beta.3
-  - @stackshift-ui/blog@7.0.0-beta.4
-  - @stackshift-ui/faqs@7.0.0-beta.4
-  - @stackshift-ui/team@7.0.0-beta.4
-  - @stackshift-ui/badge@7.0.0-beta.2
+  - @stackshift-ui/blog@6.1.0-beta.4
+  - @stackshift-ui/faqs@6.1.0-beta.4
+  - @stackshift-ui/team@6.1.0-beta.4
+  - @stackshift-ui/badge@6.1.0-beta.2
   - @stackshift-ui/image@6.1.0-beta.2
-  - @stackshift-ui/input@7.0.0-beta.2
+  - @stackshift-ui/input@6.1.0-beta.2
   - @stackshift-ui/label@1.0.0-beta.3
-  - @stackshift-ui/radio@7.0.0-beta.2
+  - @stackshift-ui/radio@6.1.0-beta.2
   - @stackshift-ui/sheet@1.0.0-beta.3
   - @stackshift-ui/table@1.0.0-beta.3
   - @stackshift-ui/toast@1.0.0-beta.3
-  - @stackshift-ui/card@7.0.0-beta.2
-  - @stackshift-ui/form@7.0.0-beta.2
+  - @stackshift-ui/card@6.1.0-beta.2
+  - @stackshift-ui/form@6.1.0-beta.2
   - @stackshift-ui/link@6.1.0-beta.2
   - @stackshift-ui/menu@1.0.0-beta.3
-  - @stackshift-ui/text@7.0.0-beta.2
-  - @stackshift-ui/flex@7.0.0-beta.2
-  - @stackshift-ui/grid@7.0.0-beta.2
+  - @stackshift-ui/text@6.1.0-beta.2
+  - @stackshift-ui/flex@6.1.0-beta.2
+  - @stackshift-ui/grid@6.1.0-beta.2
   - @stackshift-ui/system@6.1.0-beta.2
   - @stackshift-ui/scripts@6.1.0-beta.1
 
@@ -516,23 +622,23 @@
   - @stackshift-ui/data-table@1.0.0-beta.4
   - @stackshift-ui/date-picker@1.0.0-beta.4
   - @stackshift-ui/pagination@1.0.0-beta.4
-  - @stackshift-ui/swiper-button@7.0.0-beta.3
-  - @stackshift-ui/blog@7.0.0-beta.3
-  - @stackshift-ui/call-to-action@7.0.0-beta.4
-  - @stackshift-ui/contact@7.0.0-beta.4
-  - @stackshift-ui/faqs@7.0.0-beta.3
-  - @stackshift-ui/features@7.0.0-beta.4
-  - @stackshift-ui/footer@7.0.0-beta.3
-  - @stackshift-ui/header@7.0.0-beta.4
+  - @stackshift-ui/swiper-button@6.1.0-beta.3
+  - @stackshift-ui/blog@6.1.0-beta.3
+  - @stackshift-ui/call-to-action@6.1.0-beta.4
+  - @stackshift-ui/contact@6.1.0-beta.4
+  - @stackshift-ui/faqs@6.1.0-beta.3
+  - @stackshift-ui/features@6.1.0-beta.4
+  - @stackshift-ui/footer@6.1.0-beta.3
+  - @stackshift-ui/header@6.1.0-beta.4
   - @stackshift-ui/logo-cloud@6.1.0-beta.4
-  - @stackshift-ui/navigation@7.0.0-beta.3
-  - @stackshift-ui/newsletter@7.0.0-beta.3
-  - @stackshift-ui/portfolio@7.0.0-beta.3
-  - @stackshift-ui/signin-signup@7.0.0-beta.4
-  - @stackshift-ui/statistics@7.0.0-beta.3
-  - @stackshift-ui/team@7.0.0-beta.3
-  - @stackshift-ui/app-promo@7.0.0-beta.3
-  - @stackshift-ui/testimonial@7.0.0-beta.3
+  - @stackshift-ui/navigation@6.1.0-beta.3
+  - @stackshift-ui/newsletter@6.1.0-beta.3
+  - @stackshift-ui/portfolio@6.1.0-beta.3
+  - @stackshift-ui/signin-signup@6.1.0-beta.4
+  - @stackshift-ui/statistics@6.1.0-beta.3
+  - @stackshift-ui/team@6.1.0-beta.3
+  - @stackshift-ui/app-promo@6.1.0-beta.3
+  - @stackshift-ui/testimonial@6.1.0-beta.3
 
 ## 7.0.0-beta.3
 
@@ -544,23 +650,23 @@
   - @stackshift-ui/data-table@1.0.0-beta.3
   - @stackshift-ui/date-picker@1.0.0-beta.3
   - @stackshift-ui/pagination@1.0.0-beta.3
-  - @stackshift-ui/swiper-button@7.0.0-beta.2
-  - @stackshift-ui/blog@7.0.0-beta.2
-  - @stackshift-ui/call-to-action@7.0.0-beta.3
-  - @stackshift-ui/contact@7.0.0-beta.3
-  - @stackshift-ui/faqs@7.0.0-beta.2
-  - @stackshift-ui/features@7.0.0-beta.3
-  - @stackshift-ui/footer@7.0.0-beta.2
-  - @stackshift-ui/header@7.0.0-beta.3
+  - @stackshift-ui/swiper-button@6.1.0-beta.2
+  - @stackshift-ui/blog@6.1.0-beta.2
+  - @stackshift-ui/call-to-action@6.1.0-beta.3
+  - @stackshift-ui/contact@6.1.0-beta.3
+  - @stackshift-ui/faqs@6.1.0-beta.2
+  - @stackshift-ui/features@6.1.0-beta.3
+  - @stackshift-ui/footer@6.1.0-beta.2
+  - @stackshift-ui/header@6.1.0-beta.3
   - @stackshift-ui/logo-cloud@6.1.0-beta.3
-  - @stackshift-ui/navigation@7.0.0-beta.2
-  - @stackshift-ui/newsletter@7.0.0-beta.2
-  - @stackshift-ui/portfolio@7.0.0-beta.2
-  - @stackshift-ui/signin-signup@7.0.0-beta.3
-  - @stackshift-ui/statistics@7.0.0-beta.2
-  - @stackshift-ui/team@7.0.0-beta.2
-  - @stackshift-ui/app-promo@7.0.0-beta.2
-  - @stackshift-ui/testimonial@7.0.0-beta.2
+  - @stackshift-ui/navigation@6.1.0-beta.2
+  - @stackshift-ui/newsletter@6.1.0-beta.2
+  - @stackshift-ui/portfolio@6.1.0-beta.2
+  - @stackshift-ui/signin-signup@6.1.0-beta.3
+  - @stackshift-ui/statistics@6.1.0-beta.2
+  - @stackshift-ui/team@6.1.0-beta.2
+  - @stackshift-ui/app-promo@6.1.0-beta.2
+  - @stackshift-ui/testimonial@6.1.0-beta.2
 
 ## 7.0.0-beta.2
 
@@ -569,73 +675,73 @@
 - Updated dependencies
   - @stackshift-ui/system@6.1.0-beta.1
   - @stackshift-ui/accordion@1.0.0-beta.2
-  - @stackshift-ui/avatar@7.0.0-beta.1
-  - @stackshift-ui/badge@7.0.0-beta.1
-  - @stackshift-ui/blockstyle@7.0.0-beta.1
+  - @stackshift-ui/avatar@6.1.0-beta.1
+  - @stackshift-ui/badge@6.1.0-beta.1
+  - @stackshift-ui/blockstyle@6.1.0-beta.1
   - @stackshift-ui/button@6.1.0-beta.1
   - @stackshift-ui/calendar@1.0.0-beta.2
-  - @stackshift-ui/card@7.0.0-beta.1
-  - @stackshift-ui/checkbox@7.0.0-beta.1
-  - @stackshift-ui/checkbox-group@7.0.0-beta.1
+  - @stackshift-ui/card@6.1.0-beta.1
+  - @stackshift-ui/checkbox@6.1.0-beta.1
+  - @stackshift-ui/checkbox-group@6.1.0-beta.1
   - @stackshift-ui/data-table@1.0.0-beta.2
   - @stackshift-ui/date-picker@1.0.0-beta.2
   - @stackshift-ui/dialog@1.0.0-beta.2
   - @stackshift-ui/dropdown-menu@1.0.0-beta.2
-  - @stackshift-ui/form@7.0.0-beta.1
-  - @stackshift-ui/form-field@7.0.0-beta.2
-  - @stackshift-ui/heading@7.0.0-beta.1
+  - @stackshift-ui/form@6.1.0-beta.1
+  - @stackshift-ui/form-field@6.1.0-beta.2
+  - @stackshift-ui/heading@6.1.0-beta.1
   - @stackshift-ui/image@6.1.0-beta.1
-  - @stackshift-ui/input@7.0.0-beta.1
-  - @stackshift-ui/input-file@7.0.0-beta.1
+  - @stackshift-ui/input@6.1.0-beta.1
+  - @stackshift-ui/input-file@6.1.0-beta.1
   - @stackshift-ui/label@1.0.0-beta.2
   - @stackshift-ui/link@6.0.12-beta.1
   - @stackshift-ui/menu@1.0.0-beta.2
   - @stackshift-ui/pagination@1.0.0-beta.2
   - @stackshift-ui/popover@1.0.0-beta.2
-  - @stackshift-ui/radio@7.0.0-beta.1
-  - @stackshift-ui/radio-group@7.0.0-beta.1
+  - @stackshift-ui/radio@6.1.0-beta.1
+  - @stackshift-ui/radio-group@6.1.0-beta.1
   - @stackshift-ui/scroll-area@1.0.0-beta.2
-  - @stackshift-ui/select@7.0.0-beta.1
+  - @stackshift-ui/select@6.1.0-beta.1
   - @stackshift-ui/sheet@1.0.0-beta.2
   - @stackshift-ui/skeleton@1.0.0-beta.2
-  - @stackshift-ui/social-icons@7.0.0-beta.1
-  - @stackshift-ui/stats-card@7.0.0-beta.1
-  - @stackshift-ui/swiper-button@7.0.0-beta.1
-  - @stackshift-ui/swiper-pagination@7.0.0-beta.1
+  - @stackshift-ui/social-icons@6.1.0-beta.1
+  - @stackshift-ui/stats-card@6.1.0-beta.1
+  - @stackshift-ui/swiper-button@6.1.0-beta.1
+  - @stackshift-ui/swiper-pagination@6.1.0-beta.1
   - @stackshift-ui/switch@1.0.0-beta.2
   - @stackshift-ui/table@1.0.0-beta.2
-  - @stackshift-ui/text@7.0.0-beta.1
-  - @stackshift-ui/textarea@7.0.0-beta.1
+  - @stackshift-ui/text@6.1.0-beta.1
+  - @stackshift-ui/textarea@6.1.0-beta.1
   - @stackshift-ui/toast@1.0.0-beta.2
   - @stackshift-ui/toggle@1.0.0-beta.2
   - @stackshift-ui/toggle-group@1.0.0-beta.2
   - @stackshift-ui/tooltip@1.0.0-beta.2
-  - @stackshift-ui/webriq-form@7.0.0-beta.1
-  - @stackshift-ui/youtube-video@7.0.0-beta.1
-  - @stackshift-ui/container@7.0.0-beta.1
-  - @stackshift-ui/flex@7.0.0-beta.1
-  - @stackshift-ui/grid@7.0.0-beta.1
-  - @stackshift-ui/grid-item@7.0.0-beta.1
-  - @stackshift-ui/section@7.0.0-beta.1
-  - @stackshift-ui/app-promo@7.0.0-beta.1
-  - @stackshift-ui/blog@7.0.0-beta.1
-  - @stackshift-ui/call-to-action@7.0.0-beta.2
-  - @stackshift-ui/contact@7.0.0-beta.2
-  - @stackshift-ui/cookies@7.0.0-beta.1
-  - @stackshift-ui/faqs@7.0.0-beta.1
-  - @stackshift-ui/features@7.0.0-beta.2
-  - @stackshift-ui/footer@7.0.0-beta.1
-  - @stackshift-ui/header@7.0.0-beta.2
-  - @stackshift-ui/how-it-works@7.0.0-beta.1
+  - @stackshift-ui/webriq-form@6.1.0-beta.1
+  - @stackshift-ui/youtube-video@6.1.0-beta.1
+  - @stackshift-ui/container@6.1.0-beta.1
+  - @stackshift-ui/flex@6.1.0-beta.1
+  - @stackshift-ui/grid@6.1.0-beta.1
+  - @stackshift-ui/grid-item@6.1.0-beta.1
+  - @stackshift-ui/section@6.1.0-beta.1
+  - @stackshift-ui/app-promo@6.1.0-beta.1
+  - @stackshift-ui/blog@6.1.0-beta.1
+  - @stackshift-ui/call-to-action@6.1.0-beta.2
+  - @stackshift-ui/contact@6.1.0-beta.2
+  - @stackshift-ui/cookies@6.1.0-beta.1
+  - @stackshift-ui/faqs@6.1.0-beta.1
+  - @stackshift-ui/features@6.1.0-beta.2
+  - @stackshift-ui/footer@6.1.0-beta.1
+  - @stackshift-ui/header@6.1.0-beta.2
+  - @stackshift-ui/how-it-works@6.1.0-beta.1
   - @stackshift-ui/logo-cloud@6.1.0-beta.2
-  - @stackshift-ui/navigation@7.0.0-beta.1
-  - @stackshift-ui/newsletter@7.0.0-beta.1
-  - @stackshift-ui/portfolio@7.0.0-beta.1
-  - @stackshift-ui/signin-signup@7.0.0-beta.2
-  - @stackshift-ui/statistics@7.0.0-beta.1
-  - @stackshift-ui/team@7.0.0-beta.1
-  - @stackshift-ui/testimonial@7.0.0-beta.1
-  - @stackshift-ui/text-component@7.0.0-beta.1
+  - @stackshift-ui/navigation@6.1.0-beta.1
+  - @stackshift-ui/newsletter@6.1.0-beta.1
+  - @stackshift-ui/portfolio@6.1.0-beta.1
+  - @stackshift-ui/signin-signup@6.1.0-beta.2
+  - @stackshift-ui/statistics@6.1.0-beta.1
+  - @stackshift-ui/team@6.1.0-beta.1
+  - @stackshift-ui/testimonial@6.1.0-beta.1
+  - @stackshift-ui/text-component@6.1.0-beta.1
 
 ## 7.0.0-beta.1
 
@@ -652,9 +758,9 @@
   - @stackshift-ui/date-picker@1.0.0-beta.1
   - @stackshift-ui/scroll-area@1.0.0-beta.1
   - @stackshift-ui/data-table@1.0.0-beta.1
-  - @stackshift-ui/form-field@7.0.0-beta.1
+  - @stackshift-ui/form-field@6.1.0-beta.1
   - @stackshift-ui/pagination@1.0.0-beta.1
-  - @stackshift-ui/features@7.0.0-beta.1
+  - @stackshift-ui/features@6.1.0-beta.1
   - @stackshift-ui/accordion@1.0.0-beta.1
   - @stackshift-ui/calendar@1.0.0-beta.1
   - @stackshift-ui/skeleton@1.0.0-beta.1
@@ -668,10 +774,10 @@
   - @stackshift-ui/table@1.0.0-beta.1
   - @stackshift-ui/toast@1.0.0-beta.1
   - @stackshift-ui/menu@1.0.0-beta.1
-  - @stackshift-ui/contact@7.0.0-beta.1
-  - @stackshift-ui/signin-signup@7.0.0-beta.1
-  - @stackshift-ui/call-to-action@7.0.0-beta.1
-  - @stackshift-ui/header@7.0.0-beta.1
+  - @stackshift-ui/contact@6.1.0-beta.1
+  - @stackshift-ui/signin-signup@6.1.0-beta.1
+  - @stackshift-ui/call-to-action@6.1.0-beta.1
+  - @stackshift-ui/header@6.1.0-beta.1
 
 ## 7.0.0-beta.0
 
@@ -682,76 +788,76 @@
 ### Patch Changes
 
 - Updated dependencies
-  - @stackshift-ui/swiper-pagination@7.0.0-beta.0
-  - @stackshift-ui/call-to-action@7.0.0-beta.0
-  - @stackshift-ui/text-component@7.0.0-beta.0
-  - @stackshift-ui/signin-signup@7.0.0-beta.0
-  - @stackshift-ui/checkbox-group@7.0.0-beta.0
-  - @stackshift-ui/how-it-works@7.0.0-beta.0
+  - @stackshift-ui/swiper-pagination@6.1.0-beta.0
+  - @stackshift-ui/call-to-action@6.1.0-beta.0
+  - @stackshift-ui/text-component@6.1.0-beta.0
+  - @stackshift-ui/signin-signup@6.1.0-beta.0
+  - @stackshift-ui/checkbox-group@6.1.0-beta.0
+  - @stackshift-ui/how-it-works@6.1.0-beta.0
   - @stackshift-ui/dropdown-menu@1.0.0-beta.0
-  - @stackshift-ui/swiper-button@7.0.0-beta.0
-  - @stackshift-ui/youtube-video@7.0.0-beta.0
-  - @stackshift-ui/testimonial@7.0.0-beta.0
+  - @stackshift-ui/swiper-button@6.1.0-beta.0
+  - @stackshift-ui/youtube-video@6.1.0-beta.0
+  - @stackshift-ui/testimonial@6.1.0-beta.0
   - @stackshift-ui/toggle-group@1.0.0-beta.0
   - @stackshift-ui/logo-cloud@6.1.0-beta.0
-  - @stackshift-ui/navigation@7.0.0-beta.0
-  - @stackshift-ui/newsletter@7.0.0-beta.0
-  - @stackshift-ui/statistics@7.0.0-beta.0
+  - @stackshift-ui/navigation@6.1.0-beta.0
+  - @stackshift-ui/newsletter@6.1.0-beta.0
+  - @stackshift-ui/statistics@6.1.0-beta.0
   - @stackshift-ui/date-picker@1.0.0-beta.0
-  - @stackshift-ui/radio-group@7.0.0-beta.0
+  - @stackshift-ui/radio-group@6.1.0-beta.0
   - @stackshift-ui/scroll-area@1.0.0-beta.0
-  - @stackshift-ui/app-promo@7.0.0-beta.0
-  - @stackshift-ui/portfolio@7.0.0-beta.0
-  - @stackshift-ui/blockstyle@7.0.0-beta.0
+  - @stackshift-ui/app-promo@6.1.0-beta.0
+  - @stackshift-ui/portfolio@6.1.0-beta.0
+  - @stackshift-ui/blockstyle@6.1.0-beta.0
   - @stackshift-ui/data-table@1.0.0-beta.0
-  - @stackshift-ui/form-field@7.0.0-beta.0
+  - @stackshift-ui/form-field@6.1.0-beta.0
   - @stackshift-ui/pagination@1.0.0-beta.0
-  - @stackshift-ui/stats-card@7.0.0-beta.0
-  - @stackshift-ui/features@7.0.0-beta.0
+  - @stackshift-ui/stats-card@6.1.0-beta.0
+  - @stackshift-ui/features@6.1.0-beta.0
   - @stackshift-ui/accordion@1.0.0-beta.0
-  - @stackshift-ui/container@7.0.0-beta.0
-  - @stackshift-ui/grid-item@7.0.0-beta.0
-  - @stackshift-ui/contact@7.0.0-beta.0
-  - @stackshift-ui/cookies@7.0.0-beta.0
+  - @stackshift-ui/container@6.1.0-beta.0
+  - @stackshift-ui/grid-item@6.1.0-beta.0
+  - @stackshift-ui/contact@6.1.0-beta.0
+  - @stackshift-ui/cookies@6.1.0-beta.0
   - @stackshift-ui/calendar@1.0.0-beta.0
-  - @stackshift-ui/checkbox@7.0.0-beta.0
+  - @stackshift-ui/checkbox@6.1.0-beta.0
   - @stackshift-ui/skeleton@1.0.0-beta.0
-  - @stackshift-ui/textarea@7.0.0-beta.0
-  - @stackshift-ui/footer@7.0.0-beta.0
-  - @stackshift-ui/header@7.0.0-beta.0
-  - @stackshift-ui/heading@7.0.0-beta.0
+  - @stackshift-ui/textarea@6.1.0-beta.0
+  - @stackshift-ui/footer@6.1.0-beta.0
+  - @stackshift-ui/header@6.1.0-beta.0
+  - @stackshift-ui/heading@6.1.0-beta.0
   - @stackshift-ui/popover@1.0.0-beta.0
   - @stackshift-ui/tooltip@1.0.0-beta.0
-  - @stackshift-ui/section@7.0.0-beta.0
-  - @stackshift-ui/avatar@7.0.0-beta.0
+  - @stackshift-ui/section@6.1.0-beta.0
+  - @stackshift-ui/avatar@6.1.0-beta.0
   - @stackshift-ui/button@6.1.0-beta.0
   - @stackshift-ui/dialog@1.0.0-beta.0
-  - @stackshift-ui/select@7.0.0-beta.0
+  - @stackshift-ui/select@6.1.0-beta.0
   - @stackshift-ui/switch@1.0.0-beta.0
   - @stackshift-ui/toggle@1.0.0-beta.0
-  - @stackshift-ui/blog@7.0.0-beta.0
-  - @stackshift-ui/faqs@7.0.0-beta.0
-  - @stackshift-ui/team@7.0.0-beta.0
-  - @stackshift-ui/badge@7.0.0-beta.0
+  - @stackshift-ui/blog@6.1.0-beta.0
+  - @stackshift-ui/faqs@6.1.0-beta.0
+  - @stackshift-ui/team@6.1.0-beta.0
+  - @stackshift-ui/badge@6.1.0-beta.0
   - @stackshift-ui/image@6.1.0-beta.0
-  - @stackshift-ui/input@7.0.0-beta.0
+  - @stackshift-ui/input@6.1.0-beta.0
   - @stackshift-ui/label@1.0.0-beta.0
-  - @stackshift-ui/radio@7.0.0-beta.0
+  - @stackshift-ui/radio@6.1.0-beta.0
   - @stackshift-ui/sheet@1.0.0-beta.0
   - @stackshift-ui/table@1.0.0-beta.0
   - @stackshift-ui/toast@1.0.0-beta.0
-  - @stackshift-ui/card@7.0.0-beta.0
-  - @stackshift-ui/form@7.0.0-beta.0
+  - @stackshift-ui/card@6.1.0-beta.0
+  - @stackshift-ui/form@6.1.0-beta.0
   - @stackshift-ui/menu@1.0.0-beta.0
-  - @stackshift-ui/text@7.0.0-beta.0
-  - @stackshift-ui/flex@7.0.0-beta.0
-  - @stackshift-ui/grid@7.0.0-beta.0
+  - @stackshift-ui/text@6.1.0-beta.0
+  - @stackshift-ui/flex@6.1.0-beta.0
+  - @stackshift-ui/grid@6.1.0-beta.0
   - @stackshift-ui/system@6.1.0-beta.0
   - @stackshift-ui/scripts@6.1.0-beta.0
-  - @stackshift-ui/input-file@7.0.0-beta.0
+  - @stackshift-ui/input-file@6.1.0-beta.0
   - @stackshift-ui/link@6.0.12-beta.0
-  - @stackshift-ui/social-icons@7.0.0-beta.0
-  - @stackshift-ui/webriq-form@7.0.0-beta.0
+  - @stackshift-ui/social-icons@6.1.0-beta.0
+  - @stackshift-ui/webriq-form@6.1.0-beta.0
 
 ## 6.0.23
 

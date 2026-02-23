@@ -1,20 +1,60 @@
 # @stackshift-ui/how-it-works
 
+## 6.1.0
+
+### Major Changes
+
+- 9f1a207: beta updates
+
+### Minor Changes
+
+- 7fbe304: shadcn migration
+- b62501c: Packages updates and fixes
+
+### Patch Changes
+
+- fe05f8c: fixed dist folder not included in package
+- 9b890ff: bump pre publish version
+- 5509b94: fix ui issues
+- 26e5867: bump patch pkg version
+- 90a34f2: bump packages version
+- Updated dependencies [9f1a207]
+- Updated dependencies [fe05f8c]
+- Updated dependencies [4bb0316]
+- Updated dependencies [7fbe304]
+- Updated dependencies [9b890ff]
+- Updated dependencies [b62501c]
+- Updated dependencies [26e5867]
+- Updated dependencies [90a34f2]
+  - @stackshift-ui/youtube-video@6.1.0
+  - @stackshift-ui/container@6.1.0
+  - @stackshift-ui/heading@6.1.0
+  - @stackshift-ui/section@6.1.0
+  - @stackshift-ui/card@6.1.0
+  - @stackshift-ui/text@6.1.0
+  - @stackshift-ui/flex@6.1.0
+  - @stackshift-ui/system@6.1.0
+  - @stackshift-ui/scripts@6.1.0
+
+## 7.0.0-beta (Deprecated)
+
+> All 7.0.0-beta versions have been deprecated. These versions were published by mistake. Please use 6.1.0 instead.
+
 ## 7.0.0-beta.8
 
 ### Patch Changes
 
 - bump packages version
 - Updated dependencies
-  - @stackshift-ui/youtube-video@7.0.0-beta.7
-  - @stackshift-ui/container@7.0.0-beta.7
-  - @stackshift-ui/heading@7.0.0-beta.7
-  - @stackshift-ui/section@7.0.0-beta.7
-  - @stackshift-ui/card@7.0.0-beta.7
-  - @stackshift-ui/text@7.0.0-beta.7
-  - @stackshift-ui/flex@7.0.0-beta.7
-  - @stackshift-ui/system@7.0.0-beta.7
-  - @stackshift-ui/scripts@7.0.0-beta.6
+  - @stackshift-ui/youtube-video@6.1.0-beta.7
+  - @stackshift-ui/container@6.1.0-beta.7
+  - @stackshift-ui/heading@6.1.0-beta.7
+  - @stackshift-ui/section@6.1.0-beta.7
+  - @stackshift-ui/card@6.1.0-beta.7
+  - @stackshift-ui/text@6.1.0-beta.7
+  - @stackshift-ui/flex@6.1.0-beta.7
+  - @stackshift-ui/system@6.1.0-beta.7
+  - @stackshift-ui/scripts@6.1.0-beta.6
 
 ## 7.0.0-beta.7
 
@@ -22,15 +62,15 @@
 
 - fixed dist folder not included in package
 - Updated dependencies
-  - @stackshift-ui/youtube-video@7.0.0-beta.6
-  - @stackshift-ui/container@7.0.0-beta.6
-  - @stackshift-ui/heading@7.0.0-beta.6
-  - @stackshift-ui/section@7.0.0-beta.6
-  - @stackshift-ui/card@7.0.0-beta.6
-  - @stackshift-ui/text@7.0.0-beta.6
-  - @stackshift-ui/flex@7.0.0-beta.6
-  - @stackshift-ui/system@7.0.0-beta.6
-  - @stackshift-ui/scripts@7.0.0-beta.5
+  - @stackshift-ui/youtube-video@6.1.0-beta.6
+  - @stackshift-ui/container@6.1.0-beta.6
+  - @stackshift-ui/heading@6.1.0-beta.6
+  - @stackshift-ui/section@6.1.0-beta.6
+  - @stackshift-ui/card@6.1.0-beta.6
+  - @stackshift-ui/text@6.1.0-beta.6
+  - @stackshift-ui/flex@6.1.0-beta.6
+  - @stackshift-ui/system@6.1.0-beta.6
+  - @stackshift-ui/scripts@6.1.0-beta.5
 
 ## 7.0.0-beta.6
 
@@ -38,15 +78,15 @@
 
 - bump patch pkg version
 - Updated dependencies
-  - @stackshift-ui/youtube-video@7.0.0-beta.5
-  - @stackshift-ui/container@7.0.0-beta.5
-  - @stackshift-ui/heading@7.0.0-beta.5
-  - @stackshift-ui/section@7.0.0-beta.5
-  - @stackshift-ui/card@7.0.0-beta.5
-  - @stackshift-ui/text@7.0.0-beta.5
-  - @stackshift-ui/flex@7.0.0-beta.5
-  - @stackshift-ui/system@7.0.0-beta.5
-  - @stackshift-ui/scripts@7.0.0-beta.4
+  - @stackshift-ui/youtube-video@6.1.0-beta.5
+  - @stackshift-ui/container@6.1.0-beta.5
+  - @stackshift-ui/heading@6.1.0-beta.5
+  - @stackshift-ui/section@6.1.0-beta.5
+  - @stackshift-ui/card@6.1.0-beta.5
+  - @stackshift-ui/text@6.1.0-beta.5
+  - @stackshift-ui/flex@6.1.0-beta.5
+  - @stackshift-ui/system@6.1.0-beta.5
+  - @stackshift-ui/scripts@6.1.0-beta.4
 
 ## 7.0.0-beta.5
 
@@ -57,15 +97,15 @@
 ### Patch Changes
 
 - Updated dependencies
-  - @stackshift-ui/youtube-video@7.0.0-beta.4
-  - @stackshift-ui/container@7.0.0-beta.4
-  - @stackshift-ui/heading@7.0.0-beta.4
-  - @stackshift-ui/section@7.0.0-beta.4
-  - @stackshift-ui/card@7.0.0-beta.4
-  - @stackshift-ui/text@7.0.0-beta.4
-  - @stackshift-ui/flex@7.0.0-beta.4
-  - @stackshift-ui/system@7.0.0-beta.4
-  - @stackshift-ui/scripts@7.0.0-beta.3
+  - @stackshift-ui/youtube-video@6.1.0-beta.4
+  - @stackshift-ui/container@6.1.0-beta.4
+  - @stackshift-ui/heading@6.1.0-beta.4
+  - @stackshift-ui/section@6.1.0-beta.4
+  - @stackshift-ui/card@6.1.0-beta.4
+  - @stackshift-ui/text@6.1.0-beta.4
+  - @stackshift-ui/flex@6.1.0-beta.4
+  - @stackshift-ui/system@6.1.0-beta.4
+  - @stackshift-ui/scripts@6.1.0-beta.3
 
 ## 7.0.0-beta.4
 
@@ -79,13 +119,13 @@
 
 - bump pre publish version
 - Updated dependencies
-  - @stackshift-ui/youtube-video@7.0.0-beta.3
-  - @stackshift-ui/container@7.0.0-beta.3
-  - @stackshift-ui/heading@7.0.0-beta.3
-  - @stackshift-ui/section@7.0.0-beta.3
-  - @stackshift-ui/card@7.0.0-beta.3
-  - @stackshift-ui/text@7.0.0-beta.3
-  - @stackshift-ui/flex@7.0.0-beta.3
+  - @stackshift-ui/youtube-video@6.1.0-beta.3
+  - @stackshift-ui/container@6.1.0-beta.3
+  - @stackshift-ui/heading@6.1.0-beta.3
+  - @stackshift-ui/section@6.1.0-beta.3
+  - @stackshift-ui/card@6.1.0-beta.3
+  - @stackshift-ui/text@6.1.0-beta.3
+  - @stackshift-ui/flex@6.1.0-beta.3
   - @stackshift-ui/system@6.1.0-beta.3
   - @stackshift-ui/scripts@6.1.0-beta.2
 
@@ -98,13 +138,13 @@
 ### Patch Changes
 
 - Updated dependencies
-  - @stackshift-ui/youtube-video@7.0.0-beta.2
-  - @stackshift-ui/container@7.0.0-beta.2
-  - @stackshift-ui/heading@7.0.0-beta.2
-  - @stackshift-ui/section@7.0.0-beta.2
-  - @stackshift-ui/card@7.0.0-beta.2
-  - @stackshift-ui/text@7.0.0-beta.2
-  - @stackshift-ui/flex@7.0.0-beta.2
+  - @stackshift-ui/youtube-video@6.1.0-beta.2
+  - @stackshift-ui/container@6.1.0-beta.2
+  - @stackshift-ui/heading@6.1.0-beta.2
+  - @stackshift-ui/section@6.1.0-beta.2
+  - @stackshift-ui/card@6.1.0-beta.2
+  - @stackshift-ui/text@6.1.0-beta.2
+  - @stackshift-ui/flex@6.1.0-beta.2
   - @stackshift-ui/system@6.1.0-beta.2
   - @stackshift-ui/scripts@6.1.0-beta.1
 
@@ -114,13 +154,13 @@
 
 - Updated dependencies
   - @stackshift-ui/system@6.1.0-beta.1
-  - @stackshift-ui/card@7.0.0-beta.1
-  - @stackshift-ui/heading@7.0.0-beta.1
-  - @stackshift-ui/text@7.0.0-beta.1
-  - @stackshift-ui/youtube-video@7.0.0-beta.1
-  - @stackshift-ui/container@7.0.0-beta.1
-  - @stackshift-ui/flex@7.0.0-beta.1
-  - @stackshift-ui/section@7.0.0-beta.1
+  - @stackshift-ui/card@6.1.0-beta.1
+  - @stackshift-ui/heading@6.1.0-beta.1
+  - @stackshift-ui/text@6.1.0-beta.1
+  - @stackshift-ui/youtube-video@6.1.0-beta.1
+  - @stackshift-ui/container@6.1.0-beta.1
+  - @stackshift-ui/flex@6.1.0-beta.1
+  - @stackshift-ui/section@6.1.0-beta.1
 
 ## 7.0.0-beta.0
 
@@ -131,13 +171,13 @@
 ### Patch Changes
 
 - Updated dependencies
-  - @stackshift-ui/youtube-video@7.0.0-beta.0
-  - @stackshift-ui/container@7.0.0-beta.0
-  - @stackshift-ui/heading@7.0.0-beta.0
-  - @stackshift-ui/section@7.0.0-beta.0
-  - @stackshift-ui/card@7.0.0-beta.0
-  - @stackshift-ui/text@7.0.0-beta.0
-  - @stackshift-ui/flex@7.0.0-beta.0
+  - @stackshift-ui/youtube-video@6.1.0-beta.0
+  - @stackshift-ui/container@6.1.0-beta.0
+  - @stackshift-ui/heading@6.1.0-beta.0
+  - @stackshift-ui/section@6.1.0-beta.0
+  - @stackshift-ui/card@6.1.0-beta.0
+  - @stackshift-ui/text@6.1.0-beta.0
+  - @stackshift-ui/flex@6.1.0-beta.0
   - @stackshift-ui/system@6.1.0-beta.0
   - @stackshift-ui/scripts@6.1.0-beta.0
 

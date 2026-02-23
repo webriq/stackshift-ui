@@ -1,5 +1,23 @@
 # @stackshift-ui/tailwind-config
 
+## 3.0.0
+
+### Major Changes
+
+- 9f1a207: beta updates
+
+### Minor Changes
+
+- 7fbe304: shadcn migration
+- b62501c: Packages updates and fixes
+
+### Patch Changes
+
+- fe05f8c: fixed dist folder not included in package
+- 9b890ff: bump pre publish version
+- 26e5867: bump patch pkg version
+- 90a34f2: bump packages version
+
 ## 3.0.0-beta.6
 
 ### Patch Changes

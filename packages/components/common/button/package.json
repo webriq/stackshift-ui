@@ -1,6 +1,6 @@
 {
   "name": "@stackshift-ui/button",
-  "version": "7.0.0-beta.9",
+  "version": "6.1.0",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",
