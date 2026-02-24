@@ -3,6 +3,7 @@ packages:
   - "packages/components/common/*"
   - "packages/components/layout/*"
   - "packages/components/sections/*"
+  - "packages/components/shadcn"
   - "packages/components/core/*"
   - "packages/config/*"
   - "packages/core/*"

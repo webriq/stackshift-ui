@@ -1,4 +1,4 @@
-import { Card } from "@stackshift-ui/card";
+import { Card, CardContent } from "@stackshift-ui/card";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
@@ -72,11 +72,11 @@ function TestimonialSwiper({
   if (!testimony) return null;
 
   return (
-    <div className="w-full lg:w-1/5">
+    <div className="w-full lg:w-1/5 flex items-center gap-4">
       {testimony && testimony?.length >= 4 && (
         <SwiperButton
           type="left"
-          className="order-last p-5 mr-4 bg-white lg:order-first"
+          className="order-last p-5 mr-4 bg-white lg:order-first w-12 h-12 flex items-center justify-center"
           onClick={() => slider("prev")}
           ariaLabel="Show previous testimonial"
         />
@@ -84,7 +84,7 @@ function TestimonialSwiper({
       {testimony && testimony?.length >= 4 && (
         <SwiperButton
           type="right"
-          className="order-last p-5 bg-white"
+          className="order-last p-5 bg-white w-12 h-12 flex items-center justify-center"
           onClick={() => slider("next")}
           ariaLabel="Show next testimonial"
         />
@@ -114,25 +114,27 @@ function TestimonialItem({ item, index }: { item?: iTestimonial; index: number }
 
   return (
     <div className="flex-1 w-full px-3 mb-4 lg:w-1/3" key={index}>
-      <Card className="p-8 text-center h-full items-center" borderRadius="md">
-        <Text className="mb-8 leading-loose" muted>
-          {item?.testimony}
-        </Text>
-        {item?.mainImage?.image && (
-          <div className="w-[48px] h-[48px] mx-auto border-0">
-            <Image
-              className="w-full h-full object-cover rounded-full"
-              width={48}
-              height={48}
-              src={`${item?.mainImage?.image}`}
-              alt={item?.mainImage?.alt ?? `testimonial-source-${item?.name}-profile-image`}
-            />
-          </div>
-        )}
-        <Text className="mb-1" fontSize="2xl" weight="bold">
-          {item?.name}
-        </Text>
-        <Text muted>{item?.jobTitle}</Text>
+      <Card className="p-8 text-center h-full items-center rounded-md">
+        <CardContent>
+          <Text className="mb-8 leading-loose" muted>
+            {item?.testimony}
+          </Text>
+          {item?.mainImage?.image && (
+            <div className="w-[48px] h-[48px] mx-auto border-0">
+              <Image
+                className="w-full h-full object-cover rounded-full"
+                width={48}
+                height={48}
+                src={`${item?.mainImage?.image}`}
+                alt={item?.mainImage?.alt ?? `testimonial-source-${item?.name}-profile-image`}
+              />
+            </div>
+          )}
+          <Text className="mb-1" fontSize="2xl" weight="bold">
+            {item?.name}
+          </Text>
+          <Text muted>{item?.jobTitle}</Text>
+        </CardContent>
       </Card>
     </div>
   );

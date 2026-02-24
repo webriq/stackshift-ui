@@ -1,6 +1,6 @@
 {
   "name": "@stackshift-ui/tailwind-config",
-  "version": "2.0.8",
+  "version": "3.0.0",
   "private": false,
   "exports": {
     "./tailwind": "./tailwind.config.ts",
@@ -10,6 +10,7 @@
     "tailwindcss": "^3.4.1"
   },
   "devDependencies": {
-    "@stackshift-ui/typescript-config": "workspace:*"
+    "@stackshift-ui/typescript-config": "workspace:*",
+    "tailwindcss-animate": "^1.0.7"
   }
 }

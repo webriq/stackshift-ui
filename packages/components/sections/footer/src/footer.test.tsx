@@ -7,7 +7,7 @@ describe.concurrent("footer", () => {
 
   test.skip("Dummy test - test if renders without errors", ({ expect }) => {
     const clx = "my-class";
-    render(<Footer />);
-    expect(screen.getByTestId("{ kebabCase name }}").classList).toContain(clx);
+    render(<Footer data-testid="footer" />);
+    expect(screen.getByTestId("footer").classList).toContain(clx);
   });
 });

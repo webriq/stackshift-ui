@@ -1,5 +1,5 @@
 import { Header } from "@stackshift-ui/react";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 const meta: Meta<typeof Header> = {
   title: "Components/Header",
@@ -52,6 +52,9 @@ export const VariantB: Story = {
         primaryButton: {
           label: "Get Started",
           ariaLabel: "Click primary",
+          externalLink: "https://www.webriq.com/",
+          linkTarget: "_blank",
+          type: "linkExternal",
         },
         secondaryButton: {
           label: "How it works",

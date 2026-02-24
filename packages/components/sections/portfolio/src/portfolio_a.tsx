@@ -6,7 +6,6 @@ import { Image } from "@stackshift-ui/image";
 import { Section } from "@stackshift-ui/section";
 import { Text } from "@stackshift-ui/text";
 import React from "react";
-
 import { PortfolioProps } from ".";
 import { Content, LabeledRoute, PortfoliosWithCategories } from "./types";
 
@@ -15,6 +14,7 @@ export default function Portfolio_A({
   title,
   portfoliosWithCategory,
   length = 8,
+  primaryButton,
 }: PortfolioProps): React.JSX.Element {
   const portfolioLength = length; //set initial number of portfolios to display for this variant
   const [activeTab, setActiveTab] = React.useState(portfoliosWithCategory?.[0]?.category); //set the first index category as initial value
@@ -37,7 +37,7 @@ export default function Portfolio_A({
           portfolios={portfoliosPerCategory?.content}
           portfolioLength={portfolioLength}
         />
-        <PrimaryButton button={portfoliosPerCategory?.primaryButton} />
+        <PrimaryButton button={primaryButton} />
       </Container>
     </Section>
   );
@@ -67,7 +67,7 @@ function PrimaryButton({ button }: { button?: LabeledRoute | null }) {
 
   return (
     <div className="text-center">
-      <Button as="link" ariaLabel={button?.label} link={button}>
+      <Button as="link" link={button}>
         {button?.label}
       </Button>
     </div>
@@ -89,14 +89,12 @@ function PortfolioCategories({
     <Flex className="inline-flex px-2 py-1 text-sm bg-white rounded" wrap>
       {categories?.map((content, index) => (
         <Button
-          variant="tab"
-          as="button"
-          ariaLabel={content?.category ?? `Category button ${index + 1}`}
-          className="my-1"
+          variant="ghost"
+          aria-label={content?.category ?? `Category button ${index + 1}`}
+          className="my-1 data-[active=true]:text-primary"
           key={content?._key}
-          isActive={activeTab === content?.category}
-          onClick={() => onClickFn?.(content?.category)}
-        >
+          data-active={activeTab === content?.category}
+          onClick={() => onClickFn?.(content?.category)}>
           {content?.category}
         </Button>
       ))}
@@ -129,10 +127,10 @@ function PortfolioContent({
               {content?.primaryButton?.label && (
                 <Button
                   as="link"
-                  variant="outline"
-                  ariaLabel={content?.primaryButton?.label}
                   link={content?.primaryButton}
-                  className="bg-transparent border-secondary outline text-white hover:bg-secondary/20 hover:border-secondary/20 inline-block rounded-global font-bold transition duration-200 px-3 py-4">
+                  variant="outline"
+                  aria-abel={content?.primaryButton?.label}
+                  className="w-fit h-fit flex items-center justify-center bg-transparent border-secondary outline text-white hover:bg-secondary/20 hover:border-secondary/20 rounded-global hover:text-secondary-foreground font-bold transition duration-200 px-3 py-4">
                   {content?.primaryButton?.label}
                 </Button>
               )}

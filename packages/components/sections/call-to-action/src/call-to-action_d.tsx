@@ -1,16 +1,17 @@
-import React from "react";
-import { CTAProps } from ".";
-import { SigninSignup_A } from "@stackshift-ui/signin-signup";
 import { Button } from "@stackshift-ui/button";
-import { Link } from "@stackshift-ui/link";
-import { Image } from "@stackshift-ui/image";
-import { Heading } from "@stackshift-ui/heading";
-import { Text } from "@stackshift-ui/text";
-import { Section } from "@stackshift-ui/section";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
-import { Form as iForm, LabeledRoute, LabeledRouteWithKey, Logo } from "./types";
+import { Heading } from "@stackshift-ui/heading";
+import { Image } from "@stackshift-ui/image";
+import { Link } from "@stackshift-ui/link";
+import { Section } from "@stackshift-ui/section";
+import { SigninSignup_A } from "@stackshift-ui/signin-signup";
+import { buildSanityLink } from "@stackshift-ui/system";
+import { Text } from "@stackshift-ui/text";
+import React from "react";
+import { CTAProps } from ".";
 import { logoLink } from "./helper";
+import { Form as iForm, LabeledRoute, LabeledRouteWithKey, Logo } from "./types";
 
 export default function CallToAction_D({
   logo,
@@ -43,7 +44,7 @@ function LogoSection({ logo }: { logo?: Logo }) {
   return (
     <Link
       aria-label={logoLink(logo) === "/" ? "Go to home page" : `Go to ${logoLink(logo)}`}
-      className="inline-block mb-10 text-3xl font-bold leading-none"
+      className="inline-block text-3xl font-bold leading-none"
       href={logoLink(logo)}
       target={logo?.linkTarget}
       rel={logo?.linkTarget === "_blank" ? "noopener noreferrer" : ""}>
@@ -52,7 +53,7 @@ function LogoSection({ logo }: { logo?: Logo }) {
         alt={logo?.alt ?? "callToAction-logo"}
         width={56}
         height={56}
-        className="inline-block mb-10 text-3xl font-bold leading-none"
+        className="inline-block text-3xl font-bold leading-none mb-8"
       />
     </Link>
   );
@@ -78,9 +79,13 @@ function TitleAndText({ title, text }: { title?: string; text?: string }) {
 function CTABtton({ button }: { button?: LabeledRoute }) {
   if (!button?.label) return null;
 
+  const link = buildSanityLink(button);
+
   return (
-    <Button as="link" link={button} ariaLabel={button?.label}>
-      {button?.label}
+    <Button aria-label={button?.label} asChild>
+      <Link href={link.href} target={link.target} rel={link.rel}>
+        {button?.label}
+      </Link>
     </Button>
   );
 }

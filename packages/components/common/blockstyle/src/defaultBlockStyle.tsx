@@ -1,8 +1,8 @@
-import { Heading } from "@stackshift-ui/heading";
-import { Text } from "@stackshift-ui/text";
-import { Link } from "@stackshift-ui/link";
-import { Image } from "@stackshift-ui/image";
 import { PortableTextComponents } from "@portabletext/react";
+import { Heading } from "@stackshift-ui/heading";
+import { Image } from "@stackshift-ui/image";
+import { Link } from "@stackshift-ui/link";
+import { Text } from "@stackshift-ui/text";
 
 export type MyPortableTextComponents = PortableTextComponents & {
   code?: ({ value }: { value: { language?: string; code?: string } }) => JSX.Element;
@@ -11,21 +11,31 @@ export type MyPortableTextComponents = PortableTextComponents & {
 export const defaultBlockStyle: MyPortableTextComponents = {
   block: {
     h1: ({ children }) => (
-      <Heading fontSize="3xl" weight="bold" className="mb-8 leading-normal text-black">
+      <Heading fontSize="5xl" weight="bold" className="mb-8 leading-normal text-black">
         {children}
       </Heading>
     ),
     h2: ({ children }) => (
-      <Heading type="h2" weight="bold" fontSize="2xl" className="mb-8 text-black">
+      <Heading type="h2" weight="bold" fontSize="4xl" className="mb-8 text-black">
         {children}
       </Heading>
     ),
     h3: ({ children }) => (
-      <Heading type="h3" fontSize="xl" weight="bold" className="mb-8 leading-normal text-black">
+      <Heading type="h3" fontSize="3xl" weight="bold" className="mb-8 leading-normal text-black">
         {children}
       </Heading>
     ),
     h4: ({ children }) => (
+      <Heading type="h4" weight="bold" fontSize="2xl" className="mb-8 leading-normal text-black">
+        {children}
+      </Heading>
+    ),
+    h5: ({ children }) => (
+      <Heading type="h4" weight="bold" fontSize="xl" className="mb-8 leading-normal text-black">
+        {children}
+      </Heading>
+    ),
+    h6: ({ children }) => (
       <Heading type="h4" weight="bold" fontSize="lg" className="mb-8 leading-normal text-black">
         {children}
       </Heading>

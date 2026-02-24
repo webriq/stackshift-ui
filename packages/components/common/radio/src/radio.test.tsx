@@ -7,14 +7,17 @@ describe.concurrent("radio", () => {
 
   test("Common: Radio - test if renders without errors", ({ expect }) => {
     const clx = "my-class";
-    render(
+    const { unmount } = render(
       <Radio
         className={clx}
         name="stackshift-radio"
         ariaLabel="stackshift radio input"
         item="StackShift"
+        data-testid="radio-input"
       />,
     );
-    expect(screen.getByTestId("label").classList).toBeDefined();
+
+    expect(screen.getAllByTestId("radio-input").length).toBe(2); // label and input
+    unmount();
   });
 });

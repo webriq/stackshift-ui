@@ -59,28 +59,24 @@ function Buttons({
   return (
     <Flex
       align="center"
-      className="flex items-center justify-center lg:justify-start gap-2 flex-col md:flex-row"
-      gap={2}>
-      {primaryButton?.label ? (
-        <Button
-          as="link"
-          link={primaryButton}
-          ariaLabel={primaryButton?.ariaLabel ?? primaryButton?.label}
-          variant="solid"
-          className="bg-primary hover:bg-primary/50 rounded-global px-6 py-3 text-white">
-          {primaryButton.label}
+      justify="center"
+      gap={2}
+      direction="col"
+      className="lg:justify-start md:flex-row">
+      {primaryButton?.label && (
+        <Button as="link" link={primaryButton}>
+          {primaryButton?.label}
         </Button>
-      ) : null}
-      {secondaryButton?.label ? (
+      )}
+      {secondaryButton?.label && (
         <Button
           as="link"
           link={secondaryButton}
-          ariaLabel={secondaryButton.ariaLabel ?? secondaryButton?.label}
-          variant="solid"
-          className="bg-secondary hover:bg-secondary/50 rounded-global px-6 py-3">
-          {secondaryButton.label}
+          variant="secondary"
+          className="bg-transparent border hover:bg-gray-300 inline-block font-default text-default transition duration-200 rounded-global">
+          {secondaryButton?.label}
         </Button>
-      ) : null}
+      )}
     </Flex>
   );
 }

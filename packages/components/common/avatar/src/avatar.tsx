@@ -1,76 +1,63 @@
-import { Flex } from "@stackshift-ui/flex";
-import { Image } from "@stackshift-ui/image";
-import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
-import cn from "classnames";
-import type { ElementType, HTMLProps, ReactNode } from "react";
-import { useState } from "react";
+import * as AvatarPrimitive from "@radix-ui/react-avatar";
+import { cn, DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
+import * as React from "react";
 
-type ImageSize = "sm" | "md" | "lg" | "xl";
+const displayNameAvatar = "Avatar";
+const displayNameAvatarImage = "AvatarImage";
+const displayNameAvatarFallback = "AvatarFallback";
 
-export interface AvatarProps extends Omit<HTMLProps<HTMLElement>, "as" | "size"> {
-  src: string;
-  alt: string;
-  size?: ImageSize | number;
-  text?: string;
-  children?: ReactNode;
-  className?: string;
-  as?: ElementType;
-}
-
-const displayName = "Avatar";
-
-export const Avatar: React.FC<AvatarProps> = ({
-  src,
-  alt = "image",
-  size = "sm",
-  text,
-  children,
-  className,
-  as,
-  ...props
-}) => {
-  const components = useStackShiftUIComponents();
-  const { [displayName]: Component = DefaultComponent } = components;
-
-  const [loaded, setLoaded] = useState(false);
-  const sizeMap = {
-    sm: 40,
-    md: 80,
-    lg: 120,
-    xl: 160,
-  };
-  const avatarSize = typeof size === "number" ? `${size}px` : `${sizeMap[size]}px`;
-  const initials = text ? text?.split(" ")?.reduce((acc, curr) => acc + curr[0], "") : "AB";
-  const baseClass = `relative flex rounded-full aspect-square overflow-hidden border-2 border-solid border-primary`;
+const Avatar = React.forwardRef<
+  React.ElementRef<typeof AvatarPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>
+>(({ className, ...props }, ref) => {
+  const { [displayNameAvatar]: Component = DefaultComponent } = useStackShiftUIComponents();
 
   return (
     <Component
-      as={as}
-      className={cn(baseClass, className)}
-      style={{ maxWidth: avatarSize }}
+      as={AvatarPrimitive.Root}
+      ref={ref}
+      className={cn("relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full", className)}
       {...props}
-      data-testid={displayName}>
-      {(!loaded || !src) && (
-        <Flex align="center" justify="center" className="w-full h-full bg-primary">
-          <p
-            style={{
-              fontSize: `calc(${avatarSize}/2)`,
-            }}
-            className="text-white">
-            {initials}
-          </p>
-        </Flex>
-      )}
-      {src && (
-        <Image
-          className="object-cover object-center w-[100%] h-[100%]"
-          src={src}
-          alt={alt}
-          width={100}
-          height={100}
-          onLoad={() => setLoaded(true)}
-        />
-      )}
-    </Component>
+    />
   );
-};
+});
+Avatar.displayName = displayNameAvatar;
+
+const AvatarImage = React.forwardRef<
+  React.ElementRef<typeof AvatarPrimitive.Image>,
+  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>
+>(({ className, ...props }, ref) => {
+  const { [displayNameAvatarImage]: Component = DefaultComponent } = useStackShiftUIComponents();
+
+  return (
+    <Component
+      as={AvatarPrimitive.Image}
+      ref={ref}
+      className={cn("aspect-square h-full w-full", className)}
+      {...props}
+    />
+  );
+});
+AvatarImage.displayName = displayNameAvatarImage;
+
+const AvatarFallback = React.forwardRef<
+  React.ElementRef<typeof AvatarPrimitive.Fallback>,
+  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback>
+>(({ className, ...props }, ref) => {
+  const { [displayNameAvatarFallback]: Component = DefaultComponent } = useStackShiftUIComponents();
+
+  return (
+    <Component
+      as={AvatarPrimitive.Fallback}
+      ref={ref}
+      className={cn(
+        "flex h-full w-full items-center justify-center rounded-full bg-muted",
+        className,
+      )}
+      {...props}
+    />
+  );
+});
+AvatarFallback.displayName = displayNameAvatarFallback;
+
+export { Avatar, AvatarFallback, AvatarImage };

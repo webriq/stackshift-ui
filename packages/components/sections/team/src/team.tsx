@@ -1,11 +1,15 @@
-import { lazy } from "react";
+import React from "react";
 import { SectionsProps, Team as ITeam } from "./types";
+import TeamA from "./team_a";
+import TeamB from "./team_b";
+import TeamC from "./team_c";
+import TeamD from "./team_d";
 
 const Variants = {
-  variant_a: lazy(() => import("./team_a")),
-  variant_b: lazy(() => import("./team_b")),
-  variant_c: lazy(() => import("./team_c")),
-  variant_d: lazy(() => import("./team_d")),
+  variant_a: TeamA,
+  variant_b: TeamB,
+  variant_c: TeamC,
+  variant_d: TeamD,
 };
 
 export interface MemberTextProps {

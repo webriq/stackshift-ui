@@ -1,6 +1,6 @@
 import { PortableText } from "@portabletext/react";
 import { defaultBlockStyle, Heading } from "@stackshift-ui/react";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import deepmerge from "deepmerge";
 
 const DUMMY_PORTABLE_DATA = [

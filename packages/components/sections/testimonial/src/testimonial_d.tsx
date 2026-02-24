@@ -1,4 +1,4 @@
-import { Card } from "@stackshift-ui/card";
+import { Card, CardContent } from "@stackshift-ui/card";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Image } from "@stackshift-ui/image";
@@ -38,7 +38,7 @@ export default function Testimonial_D({ testimonials }: TestimonialProps) {
             {testimonials && testimonials?.length > 1 && (
               <SwiperButton
                 type="left"
-                className="p-4 mr-6 bg-white lg:order-first lg:mr-0"
+                className="p-4 mr-6 bg-white lg:order-first lg:mr-0 w-12 h-12 flex items-center justify-center"
                 onClick={() => handleSlider("prev")}
                 ariaLabel="Show previous testimonial"
               />
@@ -46,7 +46,7 @@ export default function Testimonial_D({ testimonials }: TestimonialProps) {
             {testimonials && testimonials?.length > 1 && (
               <SwiperButton
                 type="right"
-                className="p-4 mr-6 bg-white lg:order-first lg:mr-0"
+                className="p-4 mr-6 bg-white lg:order-first lg:mr-0 w-12 h-12 flex items-center justify-center"
                 onClick={() => handleSlider("next")}
                 ariaLabel="Show next testimonial"
               />
@@ -55,56 +55,58 @@ export default function Testimonial_D({ testimonials }: TestimonialProps) {
           {testimonials && testimonials?.length > 1 && (
             <SwiperButton
               type="left"
-              className="hidden p-4 mr-6 bg-white lg:block lg:order-first lg:mr-0"
+              className="hidden p-4 mr-6 bg-white lg:flex lg:order-first lg:mr-0 w-12 h-12 items-center justify-center"
               onClick={() => handleSlider("prev")}
               ariaLabel="Show previous testimonial"
             />
           )}
           {testimonials?.[currentIndex] && (
-            <Card className="flex flex-wrap w-full" borderRadius="md">
-              {testimonials?.[currentIndex]?.rating && (
-                <div className="w-full py-10 text-center border-b lg:border-r lg:border-b-0 lg:w-1/3">
-                  <span className="text-5xl font-bold lg:text-6xl">
-                    {`${testimonials?.[currentIndex]?.rating}.0`}
-                  </span>
-                  <Flex align="center" justify="center" className="mb-6 text-primary">
-                    {testimonials?.[currentIndex]?.rating !== undefined &&
-                      getRatingToArray(Number(testimonials?.[currentIndex]?.rating)).map(
-                        (_, idx) => <RatingIcon key={idx} />,
+            <Card className="w-full h-full">
+              <CardContent className="flex flex-wrap w-full rounded-md p-0">
+                {testimonials?.[currentIndex]?.rating && (
+                  <div className="w-full py-10 text-center border-b lg:border-r lg:border-b-0 lg:w-1/3">
+                    <span className="text-5xl font-bold lg:text-6xl">
+                      {`${testimonials?.[currentIndex]?.rating}.0`}
+                    </span>
+                    <Flex align="center" justify="center" className="mb-6 text-primary">
+                      {testimonials?.[currentIndex]?.rating !== undefined &&
+                        getRatingToArray(Number(testimonials?.[currentIndex]?.rating)).map(
+                          (_, idx) => <RatingIcon key={idx} />,
+                        )}
+                    </Flex>
+                    <div className="object-contain w-32 h-24 mx-auto mb-6 rounded-full">
+                      {testimonials[currentIndex]?.mainImage?.image && (
+                        <Image
+                          className="h-[96px] w-[128px] object-scale-down"
+                          src={`${testimonials[currentIndex]?.mainImage?.image}`}
+                          width={128}
+                          height={96}
+                          alt={
+                            testimonials[currentIndex]?.mainImage?.alt ??
+                            `testimonial-source-profile-image${currentIndex}`
+                          }
+                        />
                       )}
-                  </Flex>
-                  <div className="object-contain w-32 h-24 mx-auto mb-6 rounded-full">
-                    {testimonials[currentIndex]?.mainImage?.image && (
-                      <Image
-                        className="h-[96px] w-[128px] object-scale-down"
-                        src={`${testimonials[currentIndex]?.mainImage?.image}`}
-                        width={128}
-                        height={96}
-                        alt={
-                          testimonials[currentIndex]?.mainImage?.alt ??
-                          `testimonial-source-profile-image${currentIndex}`
-                        }
-                      />
-                    )}
+                    </div>
                   </div>
+                )}
+                <div className="w-full px-6 py-10 lg:w-2/3">
+                  <QuoteIcon />
+                  <Text muted className="mb-10 text-xl leading-loose lg:text-2xl">
+                    {testimonials[currentIndex]?.testimony}
+                  </Text>
+                  <Text weight="bold" fontSize="2xl">
+                    {testimonials[currentIndex]?.name}
+                  </Text>
+                  <Text muted>{testimonials[currentIndex]?.jobTitle}</Text>
                 </div>
-              )}
-              <div className="w-full px-6 py-10 lg:w-2/3">
-                <QuoteIcon />
-                <Text muted className="mb-10 text-xl leading-loose lg:text-2xl">
-                  {testimonials[currentIndex]?.testimony}
-                </Text>
-                <Text weight="bold" fontSize="2xl">
-                  {testimonials[currentIndex]?.name}
-                </Text>
-                <Text muted>{testimonials[currentIndex]?.jobTitle}</Text>
-              </div>
+              </CardContent>
             </Card>
           )}
           {testimonials && testimonials?.length > 1 && (
             <SwiperButton
               type="right"
-              className="hidden bg-white lg:block p-4 mr-6 lg:mr-0"
+              className="hidden bg-white lg:flex p-4 mr-6 lg:mr-0 w-12 h-12 items-center justify-center"
               onClick={() => handleSlider("next")}
               ariaLabel="Show next testimonial"
             />

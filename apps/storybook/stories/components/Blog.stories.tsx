@@ -1,5 +1,5 @@
 import { Blog } from "@stackshift-ui/react";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 const meta: Meta<typeof Blog> = {
   title: "Components/Blog",
@@ -29,6 +29,8 @@ export const VariantA: StoryObj<typeof Blog> = {
           {
             authors: [{ name: "John Doe" }],
             title: "Lorem ipsum dolor sit amet",
+            excerpt:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan arcu. Integer euismod, nisi eu consectetur blandit, neque metus varius elit, nec ultrices nunc magna in justo. Sed vitae sapien non libero tincidunt ullamcorper. Maecenas vel suscipit justo, non interdum nibh.",
             categories: [{ title: "TRAVEL" }],
             publishedAt: "2021-11-22T03:17:00.000Z",
             link: "aenean-convalli-sapone-a-degnissimo-placerat",
@@ -39,6 +41,8 @@ export const VariantA: StoryObj<typeof Blog> = {
           {
             authors: [{ name: "John Doe" }],
             title: "Vestibulum vehicle leo eget libero eleifend 2",
+            excerpt:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan arcu. Integer euismod, nisi eu consectetur blandit, neque metus varius elit, nec ultrices nunc magna in justo. Sed vitae sapien non libero tincidunt ullamcorper. Maecenas vel suscipit justo, non interdum nibh.",
             categories: [{ title: "CULTURE" }],
             publishedAt: "2021-11-22T03:17:00.000Z",
             link: "vestibulum-vehicle-leo-eget-libero-eleifend",
@@ -49,6 +53,8 @@ export const VariantA: StoryObj<typeof Blog> = {
           {
             authors: [{ name: "John Doe" }],
             title: "Aenean convalli sapone a degnissimo placerat.",
+            excerpt:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan arcu. Integer euismod, nisi eu consectetur blandit, neque metus varius elit, nec ultrices nunc magna in justo. Sed vitae sapien non libero tincidunt ullamcorper. Maecenas vel suscipit justo, non interdum nibh.",
             categories: [{ title: "TRAVEL" }],
             publishedAt: "2021-11-22T03:17:00.000Z",
             link: "aenean-convalli-sapone-a-degnissimo-placerat",
@@ -59,6 +65,9 @@ export const VariantA: StoryObj<typeof Blog> = {
           {
             authors: [{ name: "John Doe" }],
             title: "Vestibulum vehicle leo eget libero eleifend 2",
+            excerpt:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan arcu. Integer euismod, nisi eu consectetur blandit, neque metus varius elit, nec ultrices nunc magna in justo. Sed vitae sapien non libero tincidunt ullamcorper. Maecenas vel suscipit justo, non interdum nibh.",
+
             categories: [{ title: "TRAVEL" }, { title: "CULTURE" }],
             publishedAt: "2021-11-22T03:17:00.000Z",
             link: "vestibulum-vehicle-leo-eget-libero-eleifend",
@@ -69,6 +78,8 @@ export const VariantA: StoryObj<typeof Blog> = {
           {
             authors: [{ name: "John Doe" }],
             title: "Aenean convalli sapone a degnissimo placerat.",
+            excerpt:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan arcu. Integer euismod, nisi eu consectetur blandit, neque metus varius elit, nec ultrices nunc magna in justo. Sed vitae sapien non libero tincidunt ullamcorper. Maecenas vel suscipit justo, non interdum nibh.",
             categories: [{ title: "TRAVEL" }],
             publishedAt: "2021-11-22T03:17:00.000Z",
             link: "aenean-convalli-sapone-a-degnissimo-placerat",
@@ -79,6 +90,8 @@ export const VariantA: StoryObj<typeof Blog> = {
           {
             authors: [{ name: "John Doe" }],
             title: "Lorem ipsum dolor sit amet",
+            excerpt:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan arcu. Integer euismod, nisi eu consectetur blandit, neque metus varius elit, nec ultrices nunc magna in justo. Sed vitae sapien non libero tincidunt ullamcorper. Maecenas vel suscipit justo, non interdum nibh.",
             categories: [{ title: "TRAVEL" }],
             publishedAt: "2021-11-22T03:17:00.000Z",
             link: "lorem-ipsum-dolor-sit-amet",
@@ -195,6 +208,7 @@ export const VariantC: StoryObj<typeof Blog> = {
             excerpt: "Writing sample excerpt to test Grammarly.",
             categories: [{ title: "TRAVEL" }],
             publishedAt: "2021-11-22T03:17:00.000Z",
+            authors: [{ name: "John Doe" }],
             link: "aenean-convalli-sapone-a-degnissimo-placerat",
             mainImage:
               "https://cdn.sanity.io/images/9itgab5x/staging/fc4752283bb0c4bf2d6f2b71411407315298952d-968x726.jpg?fm=webp&w=1200&q=75",
@@ -205,6 +219,7 @@ export const VariantC: StoryObj<typeof Blog> = {
             excerpt: "Writing sample excerpt to test Grammarly.",
             categories: [{ title: "CULTURE" }],
             publishedAt: "2021-11-22T03:17:00.000Z",
+            authors: [{ name: "John Doe" }],
             link: "vestibulum-vehicle-leo-eget-libero-eleifend",
             mainImage:
               "https://cdn.sanity.io/images/9itgab5x/staging/fc4752283bb0c4bf2d6f2b71411407315298952d-968x726.jpg?fm=webp&w=1200&q=75",
@@ -215,6 +230,7 @@ export const VariantC: StoryObj<typeof Blog> = {
             excerpt: "Writing sample excerpt to test Grammarly.",
             categories: [{ title: "TRAVEL" }],
             publishedAt: "2021-11-22T03:17:00.000Z",
+            authors: [{ name: "John Doe" }],
             link: "aenean-convalli-sapone-a-degnissimo-placerat",
             mainImage:
               "https://cdn.sanity.io/images/9itgab5x/staging/fc4752283bb0c4bf2d6f2b71411407315298952d-968x726.jpg?fm=webp&w=1200&q=75",
@@ -225,6 +241,7 @@ export const VariantC: StoryObj<typeof Blog> = {
             excerpt: "Writing sample excerpt to test Grammarly.",
             categories: [{ title: "TRAVEL" }, { title: "CULTURE" }],
             publishedAt: "2021-11-22T03:17:00.000Z",
+            authors: [{ name: "John Doe" }],
             link: "vestibulum-vehicle-leo-eget-libero-eleifend",
             mainImage:
               "https://cdn.sanity.io/images/9itgab5x/staging/fc4752283bb0c4bf2d6f2b71411407315298952d-968x726.jpg?fm=webp&w=1200&q=75",
@@ -234,6 +251,7 @@ export const VariantC: StoryObj<typeof Blog> = {
             title: "Aenean convalli sapone a degnissimo placerat.",
             excerpt: "Writing sample excerpt to test Grammarly.",
             categories: [{ title: "TRAVEL" }],
+            authors: [{ name: "John Doe" }],
             publishedAt: "2021-11-22T03:17:00.000Z",
             link: "aenean-convalli-sapone-a-degnissimo-placerat",
             mainImage:
@@ -244,6 +262,7 @@ export const VariantC: StoryObj<typeof Blog> = {
             title: "Lorem ipsum dolor sit amet",
             excerpt: "Writing sample excerpt to test Grammarly.",
             categories: [{ title: "TRAVEL" }],
+            authors: [{ name: "John Doe" }],
             publishedAt: "2021-11-22T03:17:00.000Z",
             link: "lorem-ipsum-dolor-sit-amet",
             mainImage:

@@ -8,19 +8,19 @@ import { Image } from "@stackshift-ui/image";
 import { Input } from "@stackshift-ui/input";
 import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
+import { buildSanityLink } from "@stackshift-ui/system";
 import { Text } from "@stackshift-ui/text";
 import React from "react";
-
 import { SignUpFormProps } from ".";
 import { logoLink, thankYouPageLink } from "./helper";
 import { LabeledRoute, LabeledRouteWithKey, Logo, Form as iForm } from "./types";
 
 export default function SigninSignup_A({ logo, form, formLinks, signInLink }: SignUpFormProps) {
   return (
-    <Section className="py-10 rounded-md bg-gray-50 lg:py-20">
-      <Container maxWidth={576} className="px-4">
+    <Section className="py-10 rounded-md lg:py-20">
+      <Container maxWidth={576}>
         <LogoSection logo={logo} />
-        <Container className="mb-6 px-4 text-center lg:mb-10">
+        <Container className="mb-6 text-center lg:mb-10">
           <SubtitleAndHeadingText form={form} />
           <SignupForm
             form={form}
@@ -104,9 +104,8 @@ function SignupForm({
       <div className="text-center">
         {form?.buttonLabel && (
           <Button
-            as="button"
-            variant="custom"
-            ariaLabel={form?.buttonLabel ?? "Sign Up form submit button"}
+            variant="default"
+            aria-label={form?.buttonLabel ?? "Sign Up form submit button"}
             className="w-full py-4 text-sm font-bold tex-gray-50"
             type="submit">
             {form?.buttonLabel}
@@ -129,25 +128,22 @@ function FormFields({
 }) {
   return (
     <>
-      <Flex wrap className="-mx-2">
+      <Flex wrap className="-mx-2 lg:gap-0 gap-3">
         {form?.fields?.slice(0, 2).map((formFields, index) => (
-          <div className="w-full px-2 mb-3 lg:w-1/2" key={index}>
+          <div className="w-full px-2 lg:w-1/2" key={index}>
             {formFields.type === "inputText" ? (
               <Input
-                textSize="sm"
-                variant="primary"
-                noLabel
                 placeholder={formFields?.placeholder}
                 required={formFields?.isRequired}
-                className="w-full py-4 text-xs bg-white"
+                className="w-full py-4 text-base bg-white"
                 name={formFields?.name}
-                ariaLabel={formFields?.label}
+                aria-label={formFields?.label}
                 {...formFields}
                 type="text"
               />
             ) : (
               <FormField
-                className="py-4"
+                className="py-4 bg-white"
                 textSize="sm"
                 noLabel
                 variant="primary"
@@ -172,7 +168,7 @@ function FormFields({
             />
           ) : (
             <FormField
-              className="py-4"
+              className="py-4 bg-white"
               textSize="sm"
               noLabel
               variant="primary"
@@ -198,10 +194,9 @@ function SignInLink({ signInLink }: { signInLink?: LabeledRoute }) {
       <span className="text-xs text-gray-500">Already have an account? </span>
       <Button
         as="link"
-        variant="link"
         link={signInLink}
-        className="text-xs text-primary cursor-pointer hover:underline"
-        ariaLabel={signInLink?.label}>
+        variant="link"
+        className="text-xs text-primary cursor-pointer hover:underline">
         {signInLink?.label}
       </Button>
     </div>
@@ -218,13 +213,10 @@ function PasswordField({
   togglePassword: () => void;
 }) {
   return (
-    <div className="flex flex-col sm:flex-row gap-2 sm:items-center">
+    <div className="flex flex-col sm:flex-row gap-2 sm:items-center relative">
       <Input
-        className="py-4"
-        textSize="sm"
-        noLabel
+        className="py-4 bg-white pr-12"
         aria-label={formFields?.placeholder ?? formFields?.name}
-        variant="primary"
         type={showPassword ? "text" : "password"}
         placeholder={formFields?.placeholder}
         name={formFields?.name}
@@ -233,9 +225,8 @@ function PasswordField({
       {/* SVG icon on the right of the password input field */}
       <Button
         variant="unstyled"
-        as="button"
-        ariaLabel={showPassword ? "Show password" : "Hide password"}
-        className="focus:outline-none"
+        aria-label={showPassword ? "Show password" : "Hide password"}
+        className="focus:outline-none px-0 py-0 absolute right-4"
         type="button"
         onClick={togglePassword}>
         <span className="block sm:hidden text-right">{showPassword ? "Hide" : "Show"}</span>
@@ -252,15 +243,14 @@ function FormLinks({ formLinks }: { formLinks?: LabeledRouteWithKey[] }) {
 
   return (
     <p className="mt-10 lg:mt-3 text-xs text-center text-gray-700">
-      {formLinks?.map((link: any, index: number, { length }: any) => (
+      {formLinks?.map((link_: any, index: number, { length }: any) => (
         <span key={index}>
           <Button
             as="link"
+            link={link_}
             variant="link"
-            link={link}
-            className="text-xs text-primary cursor-pointer hover:underline"
-            ariaLabel={link?.label}>
-            {link?.label}
+            className="text-xs text-primary cursor-pointer hover:underline">
+            {link_?.label}
           </Button>
           {index === length - 1 ? null : index === length - 2 ? (
             <span>&nbsp;and&nbsp;</span>
@@ -278,7 +268,7 @@ function PasswordIcon({ showPassword }: { showPassword: boolean }) {
     <>
       {showPassword ? (
         <svg
-          className="w-5 h-5 my-auto ml-4 text-gray-500"
+          className="w-5 h-5 my-auto text-gray-500"
           xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true"
           role="img"
@@ -294,7 +284,7 @@ function PasswordIcon({ showPassword }: { showPassword: boolean }) {
         </svg>
       ) : (
         <svg
-          className="w-5 h-5 my-auto ml-4 text-gray-500"
+          className="w-5 h-5 my-auto text-gray-500"
           xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true"
           role="img"

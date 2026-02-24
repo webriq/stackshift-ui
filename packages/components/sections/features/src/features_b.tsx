@@ -5,7 +5,6 @@ import { Heading } from "@stackshift-ui/heading";
 import { Image } from "@stackshift-ui/image";
 import { Section } from "@stackshift-ui/section";
 import { Text } from "@stackshift-ui/text";
-import React from "react";
 import { FeaturesProps } from ".";
 import { ArrayOfImageTitleAndText } from "./types";
 
@@ -37,7 +36,7 @@ function FeatureInfo({
   description?: string;
 }) {
   return (
-    <div className="flex flex-col gap-3">
+    <Flex direction="col" gap={3}>
       {caption && (
         <Text weight="bold" className="text-secondary">
           {caption}
@@ -49,7 +48,7 @@ function FeatureInfo({
           {description}
         </Text>
       )}
-    </div>
+    </Flex>
   );
 }
 
@@ -60,7 +59,7 @@ function TagList({ tags }: { tags?: string[] }) {
     <ul>
       {tags &&
         tags.map(item => (
-          <li className="flex mb-4" key={item}>
+          <Flex as="li" className="mb-4" key={item}>
             <svg
               className="w-6 h-6 mr-2 text-secondary"
               xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +74,7 @@ function TagList({ tags }: { tags?: string[] }) {
             <Text muted weight="bold">
               {item}
             </Text>
-          </li>
+          </Flex>
         ))}
     </ul>
   );
@@ -91,7 +90,7 @@ function FeaturesLists({ features }: { features?: ArrayOfImageTitleAndText[] }) 
           <div
             className={`w-full px-4 mb-8 md:w-1/2 ${index % 2 === 0 ? `lg:mb-0` : "lg:mt-12"}`}
             key={index}>
-            <Card className="py-6 pl-6 pr-4 mb-8 bg-white" borderRadius="md">
+            <Card className="py-6 pl-6 pr-4 mb-8 bg-white rounded-md">
               {feature?.mainImage?.image && (
                 <span className="inline-block p-3 mb-4 rounded-lg bg-secondary/50">
                   <Image
@@ -103,10 +102,10 @@ function FeaturesLists({ features }: { features?: ArrayOfImageTitleAndText[] }) 
                   />
                 </span>
               )}
-              <Text weight="bold" className="text-xl md:text-2xl mb-2 text-gray-500 break-all">
+              <Text weight="bold" className="text-xl md:text-2xl mb-2 text-gray-500 break-normal">
                 {feature?.title}
               </Text>
-              <Text muted className="leading-loose break-all">
+              <Text muted className="leading-loose break-normal">
                 {feature?.plainText}
               </Text>
             </Card>

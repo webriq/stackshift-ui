@@ -1,6 +1,6 @@
+import { PortableText } from "@portabletext/react";
 import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
 import type { ElementType, HTMLProps, ReactNode } from "react";
-import { PortableText } from "@portabletext/react";
 import { defaultBlockStyle } from "./defaultBlockStyle";
 
 export interface BlockstyleProps extends Omit<HTMLProps<HTMLElement>, "as"> {
@@ -22,7 +22,7 @@ export const Blockstyle: React.FC<BlockstyleProps> = ({
   const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
 
   return (
-    <Component as={as} className={className} {...props} data-testid={displayName}>
+    <Component as={as} className={className} {...props}>
       {content ? <PortableText value={content} components={defaultBlockStyle} /> : children}
     </Component>
   );

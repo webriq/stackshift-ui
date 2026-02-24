@@ -1,10 +1,12 @@
 import { Button } from "@stackshift-ui/button";
+import { Card, CardContent } from "@stackshift-ui/card";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
 import { Image } from "@stackshift-ui/image";
 import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
+import { buildSanityLink } from "@stackshift-ui/system";
 import { Text } from "@stackshift-ui/text";
 import { format } from "date-fns";
 import { BlogProps } from ".";
@@ -50,12 +52,12 @@ function BlogPosts({
 }) {
   return (
     <Flex wrap justify="center" className="mb-16" gap={4}>
-      <div className="w-full lg:w-[45%]">
+      <div className="w-full lg:w-[40%]">
         {posts
           ?.slice(count, count + 1)
           .map((post, key) => <BlogItem size="lg" post={post} key={key} />)}
       </div>
-      <Flex wrap className="w-full lg:w-[45%]" gap={4}>
+      <Flex wrap className="w-full lg:w-[50%]" gap={4}>
         {posts?.slice(count + 1, blogsPerPage).map((post, key) => (
           <div className="w-full lg:basis-[45%]" key={key}>
             <BlogItem post={post} size="sm" key={key} />
@@ -70,56 +72,50 @@ function BlogItem({ post, size, key }: { post: BlogPost; size?: string; key: num
   const breakpoints = useMediaQuery("1024");
 
   return (
-    <div className="overflow-hidden rounded-md shadow">
+    <Card className="overflow-hidden rounded-md shadow">
       {post?.mainImage ? (
         <ImageContainer post={post} size={size} breakpoints={breakpoints} key={key} />
       ) : null}
-      <div className="p-6 bg-white flex flex-col justify-between" style={{ height: "295px" }}>
-        <div>
-          <Flex align="center">
-            {post?.publishedAt ? (
-              <Text muted className="text-sm">
-                {format(new Date(post.publishedAt), " dd MMM, yyyy")}
-              </Text>
-            ) : null}
-            {post?.authors && (
-              <>
-                <span className="mx-2 w-1 h-1 bg-gray-500 rounded-full"></span>
-                <div className="flex mt-auto text-sm text-gray-500">
-                  {post?.authors?.map((author, index, { length }) => (
-                    <>
-                      <Text className="italic" fontSize="sm">
-                        {author?.name}
-                      </Text>
-                      {index + 1 !== length ? <span>&nbsp;,&nbsp;</span> : null}
-                    </>
-                  ))}
-                </div>
-              </>
-            )}
-          </Flex>
-
-          {post?.title ? (
-            <Heading type="h4" className="my-2">
-              {post.title.length > 25 ? `${post.title.substring(0, 25)}...` : post.title}
-            </Heading>
-          ) : null}
-          {post?.excerpt ? (
-            <Text muted className="mb-6 text-justify">
-              {post.excerpt.length > 41 ? `${post.excerpt.substring(0, 41)}...` : post.excerpt}
+      <Flex direction="col" className="bg-white justify-between" style={{ height: "295px" }}>
+        <CardContent className="p-4">
+          {post?.publishedAt ? (
+            <Text muted className="text-sm">
+              {format(new Date(post.publishedAt), " dd MMM, yyyy")}
             </Text>
           ) : null}
-        </div>
+          {post?.title ? (
+            <Heading type="h4" className="line-clamp-3 !text-2xl">
+              {post.title}
+            </Heading>
+          ) : null}
+          {post?.authors && (
+            <Flex className="mt-auto text-sm text-gray-500">
+              {post?.authors?.map((author, index, { length }) => (
+                <>
+                  <Text className="italic" fontSize="sm">
+                    {author?.name}
+                  </Text>
+                  {index + 1 !== length ? <span>&nbsp;,&nbsp;</span> : null}
+                </>
+              ))}
+            </Flex>
+          )}
+          {post?.excerpt ? (
+            <Text muted className="my-2 text-justify line-clamp-3">
+              {post.excerpt}
+            </Text>
+          ) : null}
+        </CardContent>
         {post?.link ? (
           <Link
             aria-label="View Blog Post"
-            className="font-bold text-primary hover:text-secondary"
+            className="font-bold text-primary hover:text-secondary px-4 pb-4"
             href={`/${post?.link}`}>
             View Blog Post
           </Link>
         ) : null}
-      </div>
-    </div>
+      </Flex>
+    </Card>
   );
 }
 
@@ -134,42 +130,46 @@ function ImageContainer({
   breakpoints: boolean;
   key: number;
 }) {
-  return (
-    <>
-      {breakpoints ? (
-        <Image
-          className="object-cover w-full overflow-hidden"
-          src={`${post.mainImage}`}
-          sizes="100vw"
-          style={{ width: "100%", height: "auto", objectFit: "cover" }}
-          width={271}
-          height={248}
-          alt={post?.mainImage ?? `blog-variantB-image-${key}`}
-        />
-      ) : (
-        <div className={`${size === "lg" ? "h-[44.5rem]" : "h-[12.5rem]"}`}>
-          <Image
-            className="object-cover w-full overflow-hidden rounded-t-md"
-            src={`${post.mainImage}`}
-            sizes="100vw"
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            width={271}
-            height={248}
-            alt={`blog-variantB-image-${post.title}`}
-          />
-        </div>
-      )}
-    </>
+  return breakpoints ? (
+    <Image
+      className="object-cover w-full overflow-hidden"
+      src={`${post.mainImage}`}
+      sizes="100vw"
+      style={{ width: "100%", height: "auto", objectFit: "cover" }}
+      width={271}
+      height={248}
+      alt={post?.mainImage ?? `blog-variantB-image-${key}`}
+    />
+  ) : (
+    <div className={`${size === "lg" ? "h-[44.5rem]" : "h-[12.5rem]"}`}>
+      <Image
+        className="object-cover w-full overflow-hidden rounded-t-md"
+        src={`${post.mainImage}`}
+        sizes="100vw"
+        style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        width={271}
+        height={248}
+        alt={`blog-variantB-image-${post.title}`}
+      />
+    </div>
   );
 }
 
 function PrimaryButton({ primaryButton }: { primaryButton?: LabeledRoute }) {
   if (!primaryButton?.label) return null;
 
+  const link = buildSanityLink(primaryButton);
+
   return (
     <div className="text-center">
-      <Button as="link" link={primaryButton} ariaLabel={primaryButton?.label}>
-        {primaryButton?.label}
+      <Button aria-label={primaryButton?.label} asChild>
+        <Link
+          href={link.href}
+          target={link.target}
+          rel={link.rel}
+          aria-label={primaryButton?.label}>
+          {primaryButton?.label}
+        </Link>
       </Button>
     </div>
   );

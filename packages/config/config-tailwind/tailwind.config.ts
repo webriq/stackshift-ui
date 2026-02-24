@@ -12,8 +12,32 @@ const config = {
     extend: {
       colors: {
         primary: "#0045d8",
+        'primary-foreground': '#ffffff',
         secondary: "#3576ff",
+        'secondary-foreground': '#ffffff',
         background: "#F9FAFB",
+        foreground: '#0b1220',            // hsl(222, 84%, 5%) approx
+        card: '#ffffff',
+        'card-foreground': '#0b1220',
+        popover: '#ffffff',
+        'popover-foreground': '#0b1220',
+        muted: '#d9e6f9',
+        'muted-foreground': '#77828a',   // hsl(215, 16%, 47%)
+        accent: '#d9e6f9',
+        'accent-foreground': '#1a2c3f',
+        destructive: '#f06666',           // hsl(0, 84%, 60%)
+        'destructive-foreground': '#e6f0fc',
+        border: '#e6eaf2',                // hsl(214, 32%, 91%)
+        input: '#e6eaf2',
+        ring: '#0b1220',
+        sidebar: '#fbfbfb',
+        'sidebar-foreground': '#252525',
+        'sidebar-primary': '#343434',
+        'sidebar-primary-foreground': '#fbfbfb',
+        'sidebar-accent': '#f7f7f7',
+        'sidebar-accent-foreground': '#343434',
+        'sidebar-border': '#ebebeb',
+        'sidebar-ring': '#b5b5b5'
       },
       borderRadius: {
         none: "0px",
@@ -61,8 +85,27 @@ const config = {
         //global: "calc(100 + var(--font-weight))",
         global: "400",
       },
+      keyframes: {
+         "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
+
     },
   },
+  plugins: [
+		require("tailwindcss-animate"),
+		// ...
+	]
 } satisfies Config;
 
 export default config;

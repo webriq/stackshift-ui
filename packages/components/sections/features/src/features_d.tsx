@@ -1,11 +1,10 @@
-import { Card } from "@stackshift-ui/card";
+import { Card, CardTitle } from "@stackshift-ui/card";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
 import { Image } from "@stackshift-ui/image";
 import { Section } from "@stackshift-ui/section";
 import { Text } from "@stackshift-ui/text";
-import React from "react";
 import { FeaturesProps } from ".";
 import { ArrayOfImageTitleAndText } from "./types";
 
@@ -13,7 +12,7 @@ export default function Features_D({ caption, title, description, features }: Fe
   return (
     <Section className="py-20 bg-background">
       <Container maxWidth={1280}>
-        <Container maxWidth={448} className="mb-8 text-center">
+        <Container maxWidth={640} className="mb-8 text-center">
           <CaptionAndTitleSection caption={caption} title={title} description={description} />
         </Container>
         <FeatureItems features={features} />
@@ -32,7 +31,7 @@ function CaptionAndTitleSection({
   description?: string;
 }) {
   return (
-    <div className="flex flex-col gap-3">
+    <Flex direction="col" gap={3} align="center">
       {caption ? (
         <Text weight="bold" className="text-secondary">
           {caption}
@@ -44,7 +43,7 @@ function CaptionAndTitleSection({
           {description}
         </Text>
       ) : null}
-    </div>
+    </Flex>
   );
 }
 
@@ -63,7 +62,7 @@ function FeatureItems({ features }: { features?: ArrayOfImageTitleAndText[] }) {
 function FeatureItem({ feature }: { feature: ArrayOfImageTitleAndText }) {
   return (
     <div className="w-full px-4 mt-8 lg:mb-0 lg:w-1/3">
-      <Card className="h-full px-6 py-12 text-center bg-white" borderRadius="md">
+      <Card className="h-full px-6 py-12 text-center bg-white rounded-md">
         <div className="self-start inline-block p-3 mb-6 rounded-lg bg-secondary/50 md:p-5">
           {feature?.mainImage?.image && (
             <Image
@@ -75,9 +74,9 @@ function FeatureItem({ feature }: { feature: ArrayOfImageTitleAndText }) {
             />
           )}
         </div>
-        <Text fontSize="xl" weight="bold" className="px-8 mb-4 text-gray-500">
+        <CardTitle className="px-8 mb-4 text-gray-500 font-bold text-xl">
           {feature?.title}
-        </Text>
+        </CardTitle>
         <Text muted>{feature?.plainText}</Text>
       </Card>
     </div>

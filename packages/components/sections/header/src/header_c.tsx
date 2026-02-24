@@ -65,18 +65,18 @@ function Buttons({
   secondaryButton?: ButtonProps;
 }) {
   return (
-    <Flex align="center" gap={4} justify="center" className="flex-col lg:flex-row">
+    <Flex align="center" justify="center" gap={2} direction="col" className="md:flex-row">
       {primaryButton?.label && (
-        <Button as="link" ariaLabel={primaryButton?.label} link={primaryButton}>
+        <Button as="link" link={primaryButton}>
           {primaryButton?.label}
         </Button>
       )}
       {secondaryButton?.label && (
         <Button
           as="link"
-          ariaLabel={secondaryButton?.label}
           link={secondaryButton}
-          className="bg-secondary hover:bg-secondary/50 inline-block rounded-global font-bold transition duration-200 px-6 py-3">
+          variant="secondary"
+          className="bg-transparent border hover:bg-gray-300 inline-block font-default text-default transition duration-200 rounded-global">
           {secondaryButton?.label}
         </Button>
       )}

@@ -14,11 +14,13 @@
     "typecheck": "turbo typecheck",
     "preinstall": "node scripts/update-pm.js",
     "rebrand": "node scripts/rebrand.js",
-    "next:pages": "turbo run dev --filter @apps/storybook",
+    "next:pages": "turbo run dev --filter @apps/nextjs-pages",
+    "enter:prerelease": "npx changeset pre enter alpha",
+    "exit:prerelease": "npx changeset pre exit",
     "changeset": "changeset",
     "release:status": "changeset status --verbose",
     "release:version": "npx changeset version",
-    "release": "changeset publish",
+    "release": "turbo build && changeset publish",
     "generate": "plop"
   },
   "devDependencies": {
@@ -37,7 +39,7 @@
     "typedoc-plugin-rename-defaults": "^0.7.3",
     "typedoc-plugin-zod": "^1.4.0"
   },
-  "packageManager": "pnpm@9.15.4",
+  "packageManager": "pnpm@10.13.1",
   "engines": {
     "node": ">=18"
   },

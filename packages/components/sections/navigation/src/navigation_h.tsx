@@ -23,7 +23,7 @@ import { GoPerson } from "react-icons/go";
 import { LiaSearchSolid } from "react-icons/lia";
 import { SlLocationPin } from "react-icons/sl";
 import { NavigationProps } from ".";
-import { logoLink } from "./helper";
+import { ConditionalLink, logoLink } from "./helper";
 import { LabeledRouteWithKey, Logo, MegaMenu } from "./types";
 
 interface AccordionProps {
@@ -177,7 +177,9 @@ const MobileMenuContent = ({ data, showMobileMenu, setShowMobileMenu }: MobileMe
       ref={ref}
       className="fixed w-[75%] h-screen top-0 right-0 bg-white md:hidden z-50 py-10 px-5 overflow-y-auto">
       <Accordion>
-        {data?.map(item => <MobileMenuContentItem key={item._key} megaMenu={item} />)}
+        {data?.map(item => (
+          <MobileMenuContentItem key={item._key} megaMenu={item} />
+        ))}
       </Accordion>
     </div>
   );
@@ -222,10 +224,9 @@ const MobileMenuContentItem = React.memo(({ megaMenu }: MobileMenuContentItemPro
                   {groupedLinksItem.links?.map(link => (
                     <Button
                       key={`MobileMenuContent-Item-Group-Link-${link._key}`}
-                      ariaLabel={link.label ?? ""}
                       as="link"
-                      link={link ?? {}}
-                      variant="unstyled"
+                      variant="ghost"
+                      link={link}
                       className="text-black text-sm font-normal font-heading-kb leading-[30px] hover:underline block ml-4">
                       {link.label}
                     </Button>
@@ -239,10 +240,9 @@ const MobileMenuContentItem = React.memo(({ megaMenu }: MobileMenuContentItemPro
         {megaMenu.showcaseLink?.map((link, i) => (
           <div key={`MobileMenuContent-Item-Images-${link._key}-${i}`} className="mt-4 pl-4">
             <Button
-              ariaLabel={link.primaryButton?.label ?? ""}
               as="link"
-              link={link.primaryButton ?? {}}
-              variant="unstyled"
+              variant="ghost"
+              link={link.primaryButton}
               className="text-black text-sm font-normal font-heading-kb leading-[30px]">
               <Flex direction="col" gap={3}>
                 <Image
@@ -414,11 +414,7 @@ const NavItem = ({ link, isIcon }: NavItemProps) => {
 
   return (
     <li>
-      <Button
-        as="link"
-        ariaLabel={link?.label}
-        link={link}
-        className="text-sm font-label tracking-wide">
+      <Button as="link" link={link} variant="unstyled" className="text-sm font-label tracking-wide">
         {!isIcon ? link?.label : icon}
       </Button>
     </li>
@@ -497,10 +493,7 @@ interface MegaMenuNavLinkProps {
 const MegaMenuNavLink = ({ link, className }: MegaMenuNavLinkProps) => {
   return (
     <Button
-      ariaLabel={`Go to ${link.label}`}
-      as="link"
       variant="unstyled"
-      link={link}
       className={cn(
         "relative text-black text-sm font-normal font-label uppercase tracking-widest group",
         className,
@@ -676,11 +669,12 @@ function MegaDropdownGroupedLinks({ groupedLinks }: { groupedLinks: LabeledRoute
                         {link.links?.map((link: any, i: number) => {
                           return (
                             <Button
-                              key={`MegaDropdownContent-Item-Link-${link._key}-${i}`}
-                              ariaLabel={link.label ?? ""}
                               as="link"
-                              link={link ?? {}}
+                              link={link}
+                              key={`MegaDropdownContent-Item-Link-${link._key}-${i}`}
+                              aria-label={link.label ?? ""}
                               variant="unstyled"
+                              asChild
                               className="text-black text-sm font-normal font-heading-kb leading-[30px] hover:underline">
                               {link?.label}
                             </Button>
@@ -714,11 +708,12 @@ function MegaDropdownShowcaseLinks({
 
         return (
           <Button
-            key={`MegaDropdownContent-Item-Images-${link._key}-${i}`}
-            ariaLabel={link.primaryButton?.label ?? ""}
             as="link"
-            link={link.primaryButton ?? {}}
+            link={link.primaryButton}
+            key={`MegaDropdownContent-Item-Images-${link._key}-${i}`}
+            aria-label={link.primaryButton?.label ?? ""}
             variant="unstyled"
+            asChild
             className="text-center text-black text-sm font-normal font-heading-kb leading-[30px] hover:underline">
             <Flex direction="col" align="center" justify="center" gap={3}>
               <Image

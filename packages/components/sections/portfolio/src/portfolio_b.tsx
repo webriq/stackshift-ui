@@ -6,7 +6,6 @@ import { Image } from "@stackshift-ui/image";
 import { Section } from "@stackshift-ui/section";
 import { Text } from "@stackshift-ui/text";
 import React from "react";
-
 import { PortfolioProps } from ".";
 import { Content } from "./types";
 
@@ -26,7 +25,7 @@ export default function Portfolio_B({
           <CaptionAndTitleText caption={caption} title={title} />
           <div className="hidden mt-5 text-right md:mt-0 lg:mt-0 lg:block xl:mt-0">
             {primaryButton?.label && (
-              <Button as="link" ariaLabel={primaryButton?.label} link={primaryButton}>
+              <Button as="link" link={primaryButton} variant="link">
                 {primaryButton?.label}
               </Button>
             )}
@@ -35,7 +34,7 @@ export default function Portfolio_B({
         <PortfolioContent portfolios={portfolios} portfolioLength={portfolioLength} />
         <div className="block mt-5 text-center md:mt-0 lg:mt-0 lg:hidden xl:mt-0">
           {primaryButton?.label && (
-            <Button as="link" ariaLabel={primaryButton?.label} link={primaryButton}>
+            <Button as="link" link={primaryButton} variant="link">
               {primaryButton?.label}
             </Button>
           )}
@@ -93,10 +92,9 @@ function ProjectItem({ content }: { content: Content }) {
           {content?.primaryButton?.label && (
             <Button
               as="link"
-              variant="outline"
-              ariaLabel={content?.primaryButton?.label}
               link={content?.primaryButton}
-              className="bg-transparent border-secondary outline text-white hover:bg-secondary/20 hover:border-secondary/20 inline-block rounded-global font-bold transition duration-200 px-3 py-4">
+              variant="outline"
+              className="w-fit h-fit flex items-center justify-center bg-transparent border-secondary outline text-white hover:bg-secondary/20 hover:border-secondary/20 rounded-global hover:text-secondary-foreground font-bold transition duration-200 px-3 py-4">
               {content?.primaryButton?.label}
             </Button>
           )}
@@ -117,9 +115,9 @@ function PortfolioContent({
 
   return (
     <Flex wrap className="mb-4 ">
-      {portfolios
-        ?.slice(0, portfolioLength)
-        .map(content => <ProjectItem content={content} key={content._key} />)}
+      {portfolios?.slice(0, portfolioLength).map(content => (
+        <ProjectItem content={content} key={content._key} />
+      ))}
     </Flex>
   );
 }

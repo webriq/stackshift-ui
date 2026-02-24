@@ -1,4 +1,4 @@
-import { Card } from "@stackshift-ui/card";
+import { Card, CardContent } from "@stackshift-ui/card";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
@@ -49,16 +49,18 @@ function StepItem({ index, step }: { index: number; step?: ArrayOfTitleAndText }
 
   return (
     <Flex align="stretch" className="w-full px-4 mt-8 md:w-1/2 lg:mb-0 lg:w-1/3" key={index}>
-      <Card className="px-6 py-10 text-center bg-white" borderRadius="md">
-        <span className="inline-flex items-center justify-center w-16 h-16 mb-6 text-2xl font-bold rounded-global bg-secondary/50 text-primary">
-          {index + 1}
-        </span>
-        <Text weight="bold" fontSize="2xl" className="text-gray-500 mb-4">
-          {step?.title}
-        </Text>
-        <Text muted className="leading-loose">
-          {step?.plainText}
-        </Text>
+      <Card className="px-6 py-10 text-center bg-white rounded-md">
+        <CardContent className="p-0 w-full h-full">
+          <span className="inline-flex items-center justify-center w-16 h-16 mb-6 text-2xl font-bold rounded-global bg-secondary/50 text-primary">
+            {index + 1}
+          </span>
+          <Text weight="bold" fontSize="2xl" className="text-gray-500 mb-4">
+            {step?.title}
+          </Text>
+          <Text muted className="leading-loose">
+            {step?.plainText}
+          </Text>
+        </CardContent>
       </Card>
     </Flex>
   );

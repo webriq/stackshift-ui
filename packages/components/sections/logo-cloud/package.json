@@ -1,7 +1,7 @@
 {
   "name": "@stackshift-ui/logo-cloud",
   "description": "",
-  "version": "6.0.14",
+  "version": "6.1.0",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -41,6 +41,7 @@
     "vitest": "^2.1.1"
   },
   "dependencies": {
+    "@portabletext/react": "^3.1.0",
     "@stackshift-ui/scripts": "workspace:*",
     "@stackshift-ui/system": "workspace:*",
     "@stackshift-ui/button": "workspace:*",
@@ -49,6 +50,7 @@
     "@stackshift-ui/image": "workspace:*",
     "@stackshift-ui/section": "workspace:*",
     "@stackshift-ui/container": "workspace:*",
+    "@stackshift-ui/link": "workspace:*",
     "@stackshift-ui/flex": "workspace:*"
   },
   "peerDependencies": {

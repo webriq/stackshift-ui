@@ -1,11 +1,15 @@
-import React, { lazy } from "react";
-import { SectionsProps, Logo, ContactDetails, SocialLink, LabeledRouteWithKey } from "./types";
+import React from "react";
+import FooterA from "./footer_a";
+import FooterB from "./footer_b";
+import FooterC from "./footer_c";
+import FooterD from "./footer_d";
+import { ContactDetails, LabeledRouteWithKey, Logo, SectionsProps, SocialLink } from "./types";
 
 const Variants = {
-  variant_a: lazy(() => import("./footer_a")),
-  variant_b: lazy(() => import("./footer_b")),
-  variant_c: lazy(() => import("./footer_c")),
-  variant_d: lazy(() => import("./footer_d")),
+  variant_a: FooterA,
+  variant_b: FooterB,
+  variant_c: FooterC,
+  variant_d: FooterD,
 };
 
 export interface FooterProps {

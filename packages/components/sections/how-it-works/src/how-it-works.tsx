@@ -1,12 +1,17 @@
-import { lazy } from "react";
-import { SectionsProps, ArrayOfTitleAndText } from "./types";
+import React from "react";
+import HowItWorksA from "./how_it_works_a";
+import HowItWorksB from "./how_it_works_b";
+import HowItWorksC from "./how_it_works_c";
+import HowItWorksD from "./how_it_works_d";
+import HowItWorksE from "./how_it_works_e";
+import { ArrayOfTitleAndText, SectionsProps } from "./types";
 
 const Variants = {
-  variant_a: lazy(() => import("./how_it_works_a")),
-  variant_b: lazy(() => import("./how_it_works_b")),
-  variant_c: lazy(() => import("./how_it_works_c")),
-  variant_d: lazy(() => import("./how_it_works_d")),
-  variant_e: lazy(() => import("./how_it_works_e")),
+  variant_a: HowItWorksA,
+  variant_b: HowItWorksB,
+  variant_c: HowItWorksC,
+  variant_d: HowItWorksD,
+  variant_e: HowItWorksE,
 };
 
 export interface HowItWorksProps {

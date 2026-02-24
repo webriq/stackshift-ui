@@ -89,9 +89,10 @@ function NavItem({ link }: { link?: LabeledRouteWithKey }) {
   return (
     <li>
       <Button
+        variant="unstyled"
         as="link"
-        ariaLabel={link?.label}
         link={link}
+        aria-label={link?.label}
         className="text-sm text-gray-500 no-underline hover:text-gray-900">
         {link?.label}
       </Button>
@@ -130,18 +131,18 @@ function Buttons({
       {primaryButton?.label && (
         <Button
           as="link"
-          ariaLabel={primaryButton?.label}
           link={primaryButton}
-          className="hidden lg:flex px-4 py-3 leading-loose text-center font-semibold text-gray-900 rounded-global bg-secondary hover:bg-secondary/50">
+          aria-label={primaryButton?.label}
+          className="hidden lg:flex px-4 py-3 leading-loose text-center font-semibold text-secondary-foreground rounded-global bg-secondary hover:bg-secondary/50">
           {primaryButton?.label}
         </Button>
       )}
       {secondaryButton?.label && (
         <Button
           as="link"
-          ariaLabel={secondaryButton?.label}
           link={secondaryButton}
-          className="hidden lg:flex px-4 py-3 leading-loose text-center font-semibold text-white bg-primary hover:bg-primary-foreground rounded-global">
+          aria-label={secondaryButton?.label}
+          className="hidden lg:flex px-4 py-3 leading-loose text-center font-semibold text-primary-foreground bg-primary hover:bg-primary/50 rounded-global">
           {secondaryButton?.label}
         </Button>
       )}
@@ -153,9 +154,7 @@ function MobileMenu({ showMenu }: { showMenu: () => void }) {
   return (
     <div className="lg:hidden">
       <Button
-        variant="unstyled"
-        as="button"
-        ariaLabel="Navigation menu"
+        aria-label="Navigation menu"
         className="flex items-center p-3 navbar-burger text-primary"
         onClick={showMenu}>
         <svg
@@ -183,12 +182,7 @@ function ResponsiveNavLinks({
         <div className="fixed inset-0 bg-gray-800 opacity-25 navbar-backdrop" onClick={showMenu} />
         <nav className="fixed top-0 bottom-0 left-0 flex flex-col w-5/6 max-w-sm px-6 py-6 overflow-y-auto bg-white border-r">
           <div className="flex items-center mb-8">
-            <Button
-              variant="unstyled"
-              as="button"
-              ariaLabel="Navigation menu"
-              className="navbar-close"
-              onClick={showMenu}>
+            <Button aria-label="Close navigation menu" className="navbar-close" onClick={showMenu}>
               <svg
                 className="w-6 h-6 text-gray-500 cursor-pointer hover:text-gray-500"
                 xmlns="http://www.w3.org/2000/svg"
@@ -210,8 +204,8 @@ function ResponsiveNavLinks({
                 <li className="mb-1" key={index}>
                   <Button
                     as="link"
-                    ariaLabel={link?.label}
                     link={link}
+                    aria-label={link?.label}
                     className="block p-4 text-sm font-semibold text-gray-700 no-underline rounded hover:bg-secondary-foreground hover:text-primary">
                     {link?.label}
                   </Button>
@@ -224,8 +218,8 @@ function ResponsiveNavLinks({
               {primaryButton?.label && (
                 <Button
                   as="link"
-                  ariaLabel={primaryButton?.label}
                   link={primaryButton}
+                  aria-label={primaryButton?.label}
                   className="block px-4 py-3 mb-2 text-gray-900 text-center lg:ml-auto lg:mr-3 font-semibold rounded-global bg-secondary hover:bg-secondary/50">
                   {primaryButton?.label}
                 </Button>
@@ -233,8 +227,8 @@ function ResponsiveNavLinks({
               {secondaryButton?.label && (
                 <Button
                   as="link"
-                  ariaLabel={secondaryButton?.label}
                   link={secondaryButton}
+                  aria-label={secondaryButton?.label}
                   className="block px-4 py-3 mb-2 leading-loose text-center text-white font-semibold bg-primary hover:bg-primary-foreground rounded-global">
                   {secondaryButton?.label}
                 </Button>

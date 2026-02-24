@@ -1,4 +1,4 @@
-import { Card } from "@stackshift-ui/card";
+import { Card, CardContent } from "@stackshift-ui/card";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
@@ -20,11 +20,13 @@ export default function Testimonial_A({ testimonials }: TestimonialProps) {
   return (
     <Section className="py-20 bg-background">
       <Container maxWidth={1280}>
-        <Card className="py-10" borderRadius="md">
-          <Flex wrap align="center" justify="center" className="max-w-5xl p-4">
-            <AvatarSection testimonials={testimonials} testimony={testimony} />
-            <TestimonyContent testimonials={testimonials} testimony={testimony} slider={slider} />
-          </Flex>
+        <Card className="py-10 rounded-md">
+          <CardContent className="p-0 w-full h-full">
+            <Flex wrap align="center" justify="center" className="max-w-5xl p-4">
+              <AvatarSection testimonials={testimonials} testimony={testimony} />
+              <TestimonyContent testimonials={testimonials} testimony={testimony} slider={slider} />
+            </Flex>
+          </CardContent>
         </Card>
       </Container>
     </Section>

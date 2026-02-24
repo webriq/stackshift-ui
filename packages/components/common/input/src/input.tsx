@@ -1,92 +1,27 @@
-import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
-import cn from "classnames";
-import type { ElementType, HTMLProps, ReactNode } from "react";
+import * as React from "react";
 
-type StyleVariants<T extends string> = Record<T, string>;
-type Variant = "primary" | "outline" | "secondary";
-type InputType = "number" | "password" | "email" | "text";
-type TextSize = "sm" | "md" | "lg";
-
-export interface InputProps extends Omit<HTMLProps<HTMLInputElement>, "as"> {
-  noLabel?: boolean;
-  label?: string;
-  ariaLabel?: string;
-  required?: boolean;
-  name?: string;
-  labelClass?: string;
-  placeholder?: string;
-  type?: InputType;
-  variant?: Variant;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  textSize?: TextSize;
-  [key: string]: any;
-  children?: ReactNode;
-  className?: string;
-  as?: ElementType;
-}
+import { cn, DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
 
 const displayName = "Input";
 
-export const Input: React.FC<InputProps> = ({
-  noLabel,
-  label,
-  ariaLabel,
-  required = false,
-  name,
-  labelClass,
-  placeholder,
-  type = "text",
-  variant = "primary",
-  onChange,
-  textSize = "md",
-  children,
-  className,
-  as = "input",
-  ...props
-}) => {
+function Input({ className, type, ...props }: React.ComponentProps<"input">) {
   const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
 
-  const commonStyle = "w-full rounded-global px-4 py-2 leading-loose";
-  const primary = `${commonStyle}`;
-  const secondary = `${commonStyle} bg-gray-100 p-4 text-xs outline-none`;
-  const outline = `${commonStyle} text-xs py-3 border border-slate-300`;
-
-  const text = {
-    sm: "text-xs",
-    md: "text-base",
-    lg: "text-lg",
-  }[textSize];
-
-  const variants: StyleVariants<Variant> = {
-    primary,
-    secondary,
-    outline,
-  };
-
-  const variantClass = variants[variant] ?? primary;
-
   return (
-    <>
-      {!noLabel && (
-        <label className={labelClass} htmlFor={name}>
-          {label || name}
-        </label>
+    <Component
+      as="input"
+      type={type}
+      data-slot="input"
+      className={cn(
+        "file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground border-input flex h-10 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-semibold disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+        "focus-visible:border-primary focus-visible:ring-primary/50 focus-visible:ring-[3px] bg-white",
+        "aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
+        className,
       )}
-      <Component
-        name={name}
-        id={name}
-        placeholder={placeholder}
-        required={required}
-        aria-label={ariaLabel || name}
-        type={type}
-        as={as}
-        className={cn(variantClass, text, className)}
-        onChange={onChange}
-        {...props}
-        data-testid={displayName}
-      />
-    </>
+      {...props}
+    />
   );
-};
-
+}
 Input.displayName = displayName;
+
+export { Input };

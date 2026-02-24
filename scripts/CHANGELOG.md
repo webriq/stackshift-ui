@@ -1,5 +1,69 @@
 # @stackshift-ui/scripts
 
+## 6.1.0
+
+### Major Changes
+
+- 9f1a207: beta updates
+
+### Minor Changes
+
+- 7fbe304: shadcn migration
+- b62501c: Packages updates and fixes
+
+### Patch Changes
+
+- fe05f8c: fixed dist folder not included in package
+- 9b890ff: bump pre publish version
+- 26e5867: bump patch pkg version
+- 90a34f2: bump packages version
+
+## 7.0.0-beta (Deprecated)
+
+> All 7.0.0-beta versions have been deprecated. These versions were published by mistake. Please use 6.1.0 instead.
+
+## 7.0.0-beta.6
+
+### Patch Changes
+
+- bump packages version
+
+## 7.0.0-beta.5
+
+### Patch Changes
+
+- fixed dist folder not included in package
+
+## 7.0.0-beta.4
+
+### Patch Changes
+
+- bump patch pkg version
+
+## 7.0.0-beta.3
+
+### Major Changes
+
+- beta updates
+
+## 6.1.0-beta.2
+
+### Patch Changes
+
+- bump pre publish version
+
+## 6.1.0-beta.1
+
+### Minor Changes
+
+- Packages updates and fixes
+
+## 6.1.0-beta.0
+
+### Minor Changes
+
+- shadcn migration
+
 ## 6.0.10
 
 ### Patch Changes

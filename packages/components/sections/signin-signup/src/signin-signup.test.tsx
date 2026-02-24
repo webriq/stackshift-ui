@@ -7,7 +7,7 @@ describe.concurrent("signin-signup", () => {
 
   test.skip("Dummy test - test if renders without errors", ({ expect }) => {
     const clx = "my-class";
-    render(<SigninSignup />);
-    expect(screen.getByTestId("{ kebabCase name }}").classList).toContain(clx);
+    render(<SigninSignup data-testid="signin-signup" />);
+    expect(screen.getByTestId("signin-signup").classList).toContain(clx);
   });
 });

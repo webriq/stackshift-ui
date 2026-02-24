@@ -7,7 +7,7 @@ describe.concurrent("logo-cloud", () => {
 
   test.skip("Dummy test - test if renders without errors", ({ expect }) => {
     const clx = "my-class";
-    render(<LogoCloud />);
-    expect(screen.getByTestId("{ kebabCase name }}").classList).toContain(clx);
+    render(<LogoCloud data-testid="logo-cloud" />);
+    expect(screen.getByTestId("logo-cloud").classList).toContain(clx);
   });
 });

@@ -1,10 +1,13 @@
-import { lazy } from "react";
+import React from "react";
 import { SectionsProps, StatItems } from "./types";
+import StatisticsA from "./statistics_a";
+import StatisticsB from "./statistics_b";
+import StatisticsC from "./statistics_c";
 
 const Variants = {
-  variant_a: lazy(() => import("./statistics_a")),
-  variant_b: lazy(() => import("./statistics_b")),
-  variant_c: lazy(() => import("./statistics_c")),
+  variant_a: StatisticsA,
+  variant_b: StatisticsB,
+  variant_c: StatisticsC,
 };
 
 export interface StatsProps {

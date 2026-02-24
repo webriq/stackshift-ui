@@ -62,9 +62,14 @@ function Buttons({
   secondaryButton?: ButtonProps;
 }) {
   return (
-    <Flex align="center" gap={2} className="flex-col md:flex-row justify-center lg:justify-start">
+    <Flex
+      align="center"
+      justify="center"
+      gap={2}
+      direction="col"
+      className="lg:justify-start md:flex-row">
       {primaryButton?.label && (
-        <Button as="link" link={primaryButton} ariaLabel={primaryButton?.label}>
+        <Button variant="default" as="link" link={primaryButton}>
           {primaryButton?.label}
         </Button>
       )}
@@ -72,8 +77,8 @@ function Buttons({
         <Button
           as="link"
           link={secondaryButton}
-          className="bg-secondary hover:bg-secondary/50 inline-block rounded-global font-bold transition duration-200 px-6 py-3"
-          ariaLabel={secondaryButton?.label}>
+          variant="secondary"
+          className="bg-transparent border hover:bg-gray-300 inline-block font-default text-default transition duration-200 rounded-global">
           {secondaryButton?.label}
         </Button>
       )}

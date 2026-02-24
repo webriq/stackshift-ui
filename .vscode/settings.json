@@ -15,5 +15,8 @@
 
 	"editor.codeActionsOnSave": {
     "source.sortImports": "explicit"
-  },
+},
+"[typescript]": {
+	"editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+},
 }

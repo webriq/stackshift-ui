@@ -1,6 +1,6 @@
 import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
-import type { ElementType, HTMLProps, ReactNode } from "react";
 import cn from "classnames";
+import type { ElementType, HTMLProps, ReactNode } from "react";
 
 type Width = "sm" | "md" | "lg" | "xl" | "2xl" | "full" | number;
 
@@ -39,12 +39,7 @@ export const Section: React.FC<SectionProps> = ({
   const classes = "mx-auto w-full px-4";
 
   return (
-    <Component
-      as={as}
-      className={cn(classes, className)}
-      style={{ maxWidth: width }}
-      {...props}
-      data-testid={displayName}>
+    <Component as={as} className={cn(classes, className)} style={{ maxWidth: width }} {...props}>
       {children}
     </Component>
   );

@@ -18,7 +18,7 @@ export const {{capitalize componentName}}: React.FC<{{capitalize componentName}}
   const { [displayName]: Component = DefaultComponent } = useStackShiftUIComponents();
 
   return (
-    <Component as={as} className={className} {...props} data-testid={displayName}>
+    <Component as={as} className={className} {...props} >
       {children}
     </Component>
   );

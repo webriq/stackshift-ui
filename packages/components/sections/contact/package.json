@@ -1,7 +1,7 @@
 {
   "name": "@stackshift-ui/contact",
   "description": "",
-  "version": "6.0.14",
+  "version": "6.1.0",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -47,6 +47,7 @@
     "@stackshift-ui/container": "workspace:*",
     "@stackshift-ui/flex": "workspace:*",
     "@stackshift-ui/form": "workspace:*",
+    "@stackshift-ui/checkbox": "workspace:*",
     "@stackshift-ui/form-field": "workspace:*",
     "@stackshift-ui/heading": "workspace:*",
     "@stackshift-ui/image": "workspace:*",
@@ -59,7 +60,7 @@
     "classnames": "^2.5.1"
   },
   "peerDependencies": {
-    "@stackshift-ui/system": ">=6.0.11",
+    "@stackshift-ui/system": ">=7.0.0",
     "@types/react": "16.8 - 19",
     "next": "10 - 14",
     "react": "16.8 - 19",

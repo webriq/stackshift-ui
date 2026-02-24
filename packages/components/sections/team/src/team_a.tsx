@@ -1,4 +1,4 @@
-import { Card } from "@stackshift-ui/card";
+import { Card, CardContent } from "@stackshift-ui/card";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
@@ -46,19 +46,19 @@ function Teams({ team }: { team?: iTeam[] }) {
     <Flex wrap align="center" justify="center" gap={6}>
       {team?.map(member => (
         <div className="w-full [@media(min-width:421px)]:w-96 sm:w-1/2 lg:w-1/3" key={member?.name}>
-          <Card
-            className="py-10 [@media(min-width:320px)]:py-20 items-center text-center shadow-lg bg-white flex flex-col gap-4"
-            borderRadius="md">
-            {member?.mainImage?.image && (
-              <Image
-                width={96}
-                height={96}
-                className="border-0 w-28 h-28 object-cover rounded-full"
-                src={`${member?.mainImage?.image}`}
-                alt={member?.mainImage?.alt ?? `team-member-${member?.name}-profile-image`}
-              />
-            )}
-            <TeamMemberText member={member} />
+          <Card className="py-10 [@media(min-width:320px)]:py-20 items-center text-center shadow-lg bg-white flex flex-col gap-4 rounded-md">
+            <CardContent className="flex gap-4 p-0 items-center">
+              {member?.mainImage?.image && (
+                <Image
+                  width={96}
+                  height={96}
+                  className="border-0 w-28 h-28 object-cover rounded-full"
+                  src={`${member?.mainImage?.image}`}
+                  alt={member?.mainImage?.alt ?? `team-member-${member?.name}-profile-image`}
+                />
+              )}
+              <TeamMemberText member={member} />
+            </CardContent>
           </Card>
         </div>
       ))}

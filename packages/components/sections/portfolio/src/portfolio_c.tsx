@@ -3,11 +3,12 @@ import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
 import { Image } from "@stackshift-ui/image";
+import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
+import { buildSanityLink } from "@stackshift-ui/system";
 import { Text } from "@stackshift-ui/text";
-
 import { PortfolioProps } from ".";
-import { Content } from "./types";
+import { Content, LabeledRoute } from "./types";
 
 export default function Portfolio_C({
   caption,
@@ -17,7 +18,6 @@ export default function Portfolio_C({
   length = 6,
 }: PortfolioProps) {
   const portfolioLength = length; //set initial number of portfolios to display for this variant
-
   return (
     <Section className="py-20 bg-background">
       <Container maxWidth={1280}>
@@ -25,7 +25,7 @@ export default function Portfolio_C({
           <CaptionAndTitleText caption={caption} title={title} />
           <div className="hidden mt-5 text-right md:mt-0 lg:mt-0 lg:block xl:mt-0">
             {primaryButton?.label && (
-              <Button as="link" ariaLabel={primaryButton?.label} link={primaryButton}>
+              <Button as="link" link={primaryButton}>
                 {primaryButton?.label}
               </Button>
             )}
@@ -34,7 +34,7 @@ export default function Portfolio_C({
         <PortfolioContent portfolios={portfolios} portfolioLength={portfolioLength} />
         <div className="block mt-5 text-center md:mt-0 lg:mt-0 lg:hidden xl:mt-0">
           {primaryButton?.label && (
-            <Button as="link" ariaLabel={primaryButton?.label} link={primaryButton}>
+            <Button as="link" link={primaryButton}>
               {primaryButton?.label}
             </Button>
           )}
@@ -87,10 +87,9 @@ function ProjectItem({ content }: { content: Content }) {
             {content?.primaryButton?.label && (
               <Button
                 as="link"
-                variant="link"
-                ariaLabel={content?.primaryButton?.label}
                 link={content?.primaryButton}
-                className="font-bold no-underline text-primary transition-200 hover:text-primary/50">
+                variant="link"
+                className="font-bold no-underline text-primary transition-200 hover:text-primary/50 px-0">
                 {content?.primaryButton?.label}
               </Button>
             )}
@@ -112,9 +111,9 @@ function PortfolioContent({
 
   return (
     <Flex wrap className="mb-4">
-      {portfolios
-        ?.slice(0, portfolioLength)
-        .map(content => <ProjectItem content={content} key={content._key} />)}
+      {portfolios?.slice(0, portfolioLength).map(content => (
+        <ProjectItem content={content} key={content._key} />
+      ))}
     </Flex>
   );
 }

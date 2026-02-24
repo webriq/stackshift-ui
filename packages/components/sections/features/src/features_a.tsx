@@ -4,7 +4,6 @@ import { Heading } from "@stackshift-ui/heading";
 import { Image } from "@stackshift-ui/image";
 import { Section } from "@stackshift-ui/section";
 import { Text } from "@stackshift-ui/text";
-import React from "react";
 import { FeaturesProps } from ".";
 import { ArrayOfImageTitleAndText, Images } from "./types";
 
@@ -40,7 +39,7 @@ function CaptionAndTitleText({
   description?: string;
 }) {
   return (
-    <div className="flex flex-col gap-3">
+    <Flex direction="col" gap={3} align="center">
       {caption ? (
         <Text weight="bold" className="text-secondary">
           {caption}
@@ -48,7 +47,7 @@ function CaptionAndTitleText({
       ) : null}
       {title ? <Heading fontSize="3xl">{title}</Heading> : null}
       {description ? <Text muted>{description}</Text> : null}
-    </div>
+    </Flex>
   );
 }
 

@@ -56,7 +56,7 @@ function LogoSection({ logo }: { logo?: Logo }) {
   return (
     <Link
       aria-label={`Go to ${logoLink(logo) === "/" ? "home page" : logoLink(logo)}`}
-      className="inline-block p-5 mb-8 bg-white rounded-lg"
+      className="inline-block p-5 rounded-lg"
       href={logoLink(logo)}
       target={logo?.linkTarget}
       rel={logo?.linkTarget === "_blank" ? "noopener noreferrer" : ""}>

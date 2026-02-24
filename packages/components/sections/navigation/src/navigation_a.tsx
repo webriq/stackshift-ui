@@ -105,7 +105,8 @@ function NavItem({ link }: { link?: LabeledRoute }) {
       <Button
         as="link"
         link={link}
-        ariaLabel={link?.label}
+        variant="unstyled"
+        aria-label={link?.label}
         className="text-sm text-gray-500 no-underline hover:text-gray-900">
         {link?.label}
       </Button>
@@ -135,9 +136,10 @@ function ResponsiveNavLinks({
                 <li className="mb-1" key={index}>
                   <Button
                     as="link"
-                    ariaLabel={link?.label}
-                    className="block w-full cursor-pointer p-4 text-sm font-semibold text-gray-900 no-underline rounded hover:bg-secondary-foreground hover:text-primary"
-                    link={link}>
+                    link={link}
+                    variant="unstyled"
+                    aria-label={link?.label}
+                    className="block w-full cursor-pointer p-4 text-sm font-semibold text-gray-900 no-underline rounded hover:bg-secondary-foreground hover:text-primary">
                     {link?.label}
                   </Button>
                 </li>
@@ -151,8 +153,8 @@ function ResponsiveNavLinks({
               <Button
                 as="link"
                 link={primaryButton}
-                ariaLabel={primaryButton?.label}
-                variant="outline"
+                aria-label={primaryButton?.label}
+                variant="unstyled"
                 className="block w-full px-4 py-3 mb-3 text-xs cursor-pointer font-semibold leading-loose text-center text-gray-900 rounded-global bg-secondary hover:bg-secondary/50">
                 {primaryButton?.label}
               </Button>
@@ -161,8 +163,8 @@ function ResponsiveNavLinks({
               <Button
                 as="link"
                 link={secondaryButton}
-                ariaLabel={secondaryButton?.label}
-                variant="solid"
+                aria-label={secondaryButton?.label}
+                variant="unstyled"
                 className={`block w-full px-4 py-3 mb-2 cursor-pointer leading-loose text-xs text-center font-semibold bg-primary hover:bg-primary-foreground rounded-global`}>
                 {secondaryButton?.label}
               </Button>
@@ -181,9 +183,7 @@ function MobileMenu({ showMenu }: { showMenu: () => void }) {
   return (
     <div className="lg:hidden">
       <Button
-        variant="unstyled"
-        as="button"
-        ariaLabel="Navigation Menu"
+        aria-label="Navigation Menu"
         className="flex items-center p-3 navbar-burger text-primary"
         onClick={showMenu}>
         <svg
@@ -211,9 +211,9 @@ function Buttons({
         <Button
           as="link"
           link={primaryButton}
-          ariaLabel={primaryButton?.label}
-          variant="outline"
-          className="hidden lg:flex px-4 py-3 leading-loose text-center font-semibold text-gray-900 rounded-global bg-secondary hover:bg-secondary/50">
+          aria-label={primaryButton?.label}
+          variant="unstyled"
+          className="hidden lg:flex px-4 py-3 leading-loose text-center font-semibold text-secondary-foreground rounded-global bg-secondary hover:bg-secondary/50">
           {primaryButton?.label}
         </Button>
       ) : null}
@@ -221,9 +221,9 @@ function Buttons({
         <Button
           as="link"
           link={secondaryButton}
-          ariaLabel={secondaryButton?.label}
-          variant="solid"
-          className="hidden lg:flex px-4 py-3 leading-loose text-center font-semibold text-white bg-primary hover:bg-primary-foreground rounded-global">
+          aria-label={secondaryButton?.label}
+          variant="unstyled"
+          className="hidden lg:flex px-4 py-3 leading-loose text-center font-semibold text-primary-foreground bg-primary hover:bg-primary/50 rounded-global">
           {secondaryButton?.label}
         </Button>
       ) : null}
@@ -234,12 +234,7 @@ function Buttons({
 function BurgerMenuIcon({ showMenu }: { showMenu: () => void }) {
   return (
     <div className="flex items-center mb-8">
-      <Button
-        variant="unstyled"
-        as="button"
-        ariaLabel="Navigation Menu"
-        className="navbar-close"
-        onClick={showMenu}>
+      <Button aria-label="Close Navigation Menu" className="navbar-close" onClick={showMenu}>
         <svg
           className="w-6 h-6 text-gray-500 cursor-pointer hover:text-gray-500"
           xmlns="http://www.w3.org/2000/svg"

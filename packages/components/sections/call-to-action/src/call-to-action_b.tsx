@@ -69,10 +69,10 @@ function CTAForm({ form }: { form?: iForm }) {
       thankyouPage={thankYouPageLink(form?.thankYouPage)}>
       <div className="flex flex-col sm:items-center sm:flex-row lg:justify-between gap-3">
         <FormFields fields={form?.fields?.slice(0, 2)} />
+        <CTABtton form={form} />
         <div>
           <div className="webriq-recaptcha" />
         </div>
-        <CTABtton form={form} />
       </div>
     </Form>
   );
@@ -82,19 +82,19 @@ function FormFields({ fields }: { fields?: iForm["fields"] }) {
   if (!fields) return null;
 
   return (
-    <div className="flex flex-col sm:items-center sm:flex-row lg:justify-between gap-3">
+    <Flex gap={3} className="flex-col sm:items-center sm:flex-row lg:justify-center">
       {fields.map(field => (
         <Input
-          noLabel
           key={field?._key}
-          ariaLabel={field?.placeholder ?? field?.name}
+          aria-label={field?.placeholder ?? field?.name}
           type={getInputType(field?.type)}
           placeholder={field?.placeholder}
           name={field?.name}
           required={field?.isRequired}
+          className="bg-white"
         />
       ))}
-    </div>
+    </Flex>
   );
 }
 
@@ -117,7 +117,7 @@ function CTABtton({ form }: { form?: iForm }) {
   if (!form?.buttonLabel) return null;
 
   return (
-    <Button as="button" className="w-full sm:w-1/4" ariaLabel={form?.buttonLabel} type="submit">
+    <Button className="w-full sm:w-1/4" aria-label={form?.buttonLabel} type="submit">
       {form?.buttonLabel}
     </Button>
   );

@@ -1,10 +1,9 @@
-import React, { lazy, Suspense } from "react";
-import { Testimonial as ITestimonial, SectionsProps } from "./types";
-
+import React from "react";
 import TestimonialA from "./testimonial_a";
 import TestimonialB from "./testimonial_b";
 import TestimonialC from "./testimonial_c";
 import TestimonialD from "./testimonial_d";
+import { Testimonial as ITestimonial, SectionsProps } from "./types";
 
 export interface TestimonialProps {
   caption?: string;
@@ -29,13 +28,7 @@ export const Testimonial: React.FC<SectionsProps> = ({ data }) => {
     testimonials: data?.variants?.testimonials ?? undefined,
   };
 
-  if (!Variant) return null;
-
-  return (
-    <Suspense fallback={null}>
-      <Variant {...props} />
-    </Suspense>
-  );
+  return Variant ? <Variant {...props} /> : null;
 };
 
 Testimonial.displayName = "Testimonial";

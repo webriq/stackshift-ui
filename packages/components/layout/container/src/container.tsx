@@ -1,6 +1,6 @@
 import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
-import type { ElementType, HTMLProps, ReactNode } from "react";
 import cn from "classnames";
+import type { ElementType, HTMLProps, ReactNode } from "react";
 
 export interface ContainerProps extends Omit<HTMLProps<HTMLElement>, "as"> {
   children?: ReactNode;
@@ -38,12 +38,7 @@ export const Container: React.FC<ContainerProps> = ({
   const classes = "mx-auto w-full lg:px-4";
 
   return (
-    <Component
-      as={as}
-      className={cn(classes, className)}
-      style={{ maxWidth: width }}
-      {...props}
-      data-testid={displayName}>
+    <Component as={as} className={cn(classes, className)} style={{ maxWidth: width }} {...props}>
       {children}
     </Component>
   );

@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import { CallToAction } from "@stackshift-ui/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 const meta: Meta<typeof CallToAction> = {
   title: "Components/Call To Action",
@@ -135,7 +135,7 @@ export const VariantD: StoryObj<typeof CallToAction> = {
             },
             {
               name: "Email Address",
-              placeholder: "Entrer your Email Address",
+              placeholder: "Enter your Email Address",
               type: "inputEmail",
             },
             {

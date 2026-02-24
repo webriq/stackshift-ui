@@ -1,18 +1,17 @@
-import React from "react";
 import { Button } from "@stackshift-ui/button";
+import { Container } from "@stackshift-ui/container";
+import { Flex } from "@stackshift-ui/flex";
 import { Form } from "@stackshift-ui/form";
 import { Heading } from "@stackshift-ui/heading";
 import { Image } from "@stackshift-ui/image";
 import { Input } from "@stackshift-ui/input";
-import { Text } from "@stackshift-ui/text";
 import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
-import { Container } from "@stackshift-ui/container";
-import { Flex } from "@stackshift-ui/flex";
-
-import { Form as FormFields, Logo } from "./types";
-import { getInputType, logoLink, thankYouPageLink } from "./helper";
+import { Text } from "@stackshift-ui/text";
+import React from "react";
 import { NewsletterProps } from ".";
+import { getInputType, logoLink, thankYouPageLink } from "./helper";
+import { Form as FormFields, Logo } from "./types";
 
 export default function Newsletter_A({
   logo,
@@ -53,7 +52,7 @@ function LogoSection({ logo }: { logo?: Logo | null }) {
         alt={logo.alt ?? "newsletter-logo"}
         width={48}
         height={48}
-        className="inline-block mb-6 text-3xl font-bold leading-none"
+        className="inline-block text-3xl font-bold leading-none"
       />
     </Link>
   );
@@ -95,10 +94,8 @@ function NewsletterForm({ id, fields, thankYouPage, buttonLabel }: FormFields) {
       thankyouPage={thankYouPageLink(thankYouPage)}>
       <Flex align="center" gap={2} className="max-w-md mx-auto">
         <Input
-          variant="outline"
-          noLabel
-          ariaLabel={fields[0]?.placeholder ?? fields[0]?.name}
-          className="flex-grow w-full"
+          aria-label={fields[0]?.placeholder ?? fields[0]?.name}
+          className="flex-grow w-full bg-white"
           type={getInputType(fields[0]?.type)}
           placeholder={fields[0]?.placeholder}
           name={fields[0]?.name}
@@ -110,8 +107,7 @@ function NewsletterForm({ id, fields, thankYouPage, buttonLabel }: FormFields) {
         </div>
         {buttonLabel && (
           <Button
-            as="button"
-            ariaLabel={buttonLabel ?? "Newsletter form submit button"}
+            aria-label={buttonLabel ?? "Newsletter form submit button"}
             type="submit"
             className="w-1/2 text-white">
             {buttonLabel}

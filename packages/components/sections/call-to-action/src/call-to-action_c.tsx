@@ -40,7 +40,6 @@ function FormSection({ form, features }: { form?: iForm; features?: string[] }) 
   return (
     <div className="w-full px-4 lg:w-1/2">
       {form?.fields ? <ActionForm form={form} /> : null}
-
       {features?.length ? <FeaturesList features={features} /> : null}
     </div>
   );
@@ -60,12 +59,12 @@ function ActionForm({ form }: { form?: iForm }) {
         align="center"
         justify="center"
         direction="col"
-        className="lg:items-start lg:justify-start sm:flex-row">
+        className="lg:items-start lg:justify-end sm:flex-row w-full">
         {form?.fields?.[0] ? <CTAInput field={form.fields[0]} /> : null}
+        <CTAButton form={form} />
         <div>
           <div className="webriq-recaptcha" />
         </div>
-        <CTAButton form={form} />
       </Flex>
     </Form>
   );
@@ -76,9 +75,8 @@ function CTAInput({ field }: { field?: any }) {
 
   return (
     <Input
-      noLabel
-      ariaLabel={field?.placeholder ?? field?.name}
-      className="w-full sm:max-w-md mr-2"
+      aria-label={field?.placeholder ?? field?.name}
+      className="w-full sm:max-w-60 bg-white"
       type={inputType}
       placeholder={field?.placeholder}
       name={field?.name}
@@ -109,10 +107,10 @@ function FeaturesList({ features }: { features: string[] }) {
       gap={4}
       wrap>
       {features.map((feature, index) => (
-        <li className="flex items-center" key={index}>
+        <Flex as="li" align="center" key={index}>
           <CheckIcon />
           <Text muted>{feature}</Text>
-        </li>
+        </Flex>
       ))}
     </Flex>
   );
@@ -140,9 +138,8 @@ function CTAButton({ form }: { form?: iForm }) {
 
   return (
     <Button
-      as="button"
       className="w-full sm:w-fit"
-      ariaLabel={form?.buttonLabel ?? "Call to action form submit button"}
+      aria-label={form?.buttonLabel ?? "Call to action form submit button"}
       type="submit">
       {form?.buttonLabel}
     </Button>

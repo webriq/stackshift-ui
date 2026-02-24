@@ -67,7 +67,7 @@ export const Flex: React.FC<FlexProps> = ({
   } gap-${gap ? gap : 0}`;
 
   return (
-    <Component as={as} className={cn(classes, className)} {...props} data-testid="flex">
+    <Component as={as} className={cn(classes, className)} {...props}>
       {children}
     </Component>
   );

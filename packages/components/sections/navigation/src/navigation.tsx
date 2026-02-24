@@ -1,22 +1,29 @@
-import { lazy } from "react";
+import React from "react";
+import NavigationA from "./navigation_a";
+import NavigationB from "./navigation_b";
+import NavigationC from "./navigation_c";
+import NavigationD from "./navigation_d";
+import NavigationF from "./navigation_f";
+import NavigationG from "./navigation_g";
+import NavigationH from "./navigation_h";
 import {
-  LabeledRoute,
-  LabeledRouteWithKey,
-  Logo,
-  Logos,
-  MegaMenu,
-  SectionsProps,
-  SocialLink,
+    LabeledRoute,
+    LabeledRouteWithKey,
+    Logo,
+    Logos,
+    MegaMenu,
+    SectionsProps,
+    SocialLink,
 } from "./types";
 
 const Variants = {
-  variant_a: lazy(() => import("./navigation_a")),
-  variant_b: lazy(() => import("./navigation_b")),
-  variant_c: lazy(() => import("./navigation_c")),
-  variant_d: lazy(() => import("./navigation_d")),
-  variant_f: lazy(() => import("./navigation_f")),
-  variant_g: lazy(() => import("./navigation_g")),
-  variant_h: lazy(() => import("./navigation_h")),
+  variant_a: NavigationA,
+  variant_b: NavigationB,
+  variant_c: NavigationC,
+  variant_d: NavigationD,
+  variant_f: NavigationF,
+  variant_g: NavigationG,
+  variant_h: NavigationH,
 };
 
 export interface ResponsiveNavLinksProps {

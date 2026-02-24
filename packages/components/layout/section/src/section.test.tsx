@@ -7,7 +7,7 @@ describe.concurrent("section", () => {
 
   test("Layout: Section - test if renders without errors", ({ expect }) => {
     const clx = "section-class";
-    render(<Section className={clx} />);
+    render(<Section data-testid="div" className={clx} />);
     expect(screen.getByTestId("div").classList).toContain(clx);
   });
 });

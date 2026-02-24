@@ -1,5 +1,204 @@
 # @stackshift-ui/form-field
 
+## 6.1.0
+
+### Major Changes
+
+- 9f1a207: beta updates
+
+### Minor Changes
+
+- 7fbe304: shadcn migration
+- 7fbe304: shadcn migration
+- b62501c: Packages updates and fixes
+
+### Patch Changes
+
+- fe05f8c: fixed dist folder not included in package
+- 9b890ff: bump pre publish version
+- 26e5867: bump patch pkg version
+- 90a34f2: bump packages version
+- Updated dependencies [7fbe304]
+- Updated dependencies [9f1a207]
+- Updated dependencies [fe05f8c]
+- Updated dependencies [4bb0316]
+- Updated dependencies [7fbe304]
+- Updated dependencies [9b890ff]
+- Updated dependencies [b62501c]
+- Updated dependencies [26e5867]
+- Updated dependencies [90a34f2]
+  - @stackshift-ui/label@1.0.0
+  - @stackshift-ui/checkbox-group@6.1.0
+  - @stackshift-ui/radio-group@6.1.0
+  - @stackshift-ui/checkbox@6.1.0
+  - @stackshift-ui/textarea@6.1.0
+  - @stackshift-ui/select@6.1.0
+  - @stackshift-ui/input@6.1.0
+  - @stackshift-ui/radio@6.1.0
+  - @stackshift-ui/system@6.1.0
+  - @stackshift-ui/scripts@6.1.0
+
+## 7.0.0-beta (Deprecated)
+
+> All 7.0.0-beta versions have been deprecated. These versions were published by mistake. Please use 6.1.0 instead.
+
+## 7.0.0-beta.8
+
+### Patch Changes
+
+- bump packages version
+- Updated dependencies
+  - @stackshift-ui/checkbox-group@6.1.0-beta.7
+  - @stackshift-ui/radio-group@6.1.0-beta.7
+  - @stackshift-ui/checkbox@6.1.0-beta.7
+  - @stackshift-ui/textarea@6.1.0-beta.7
+  - @stackshift-ui/select@6.1.0-beta.7
+  - @stackshift-ui/input@6.1.0-beta.7
+  - @stackshift-ui/label@1.0.0-beta.8
+  - @stackshift-ui/radio@6.1.0-beta.7
+  - @stackshift-ui/system@6.1.0-beta.7
+  - @stackshift-ui/scripts@6.1.0-beta.6
+
+## 7.0.0-beta.7
+
+### Patch Changes
+
+- fixed dist folder not included in package
+- Updated dependencies
+  - @stackshift-ui/checkbox-group@6.1.0-beta.6
+  - @stackshift-ui/radio-group@6.1.0-beta.6
+  - @stackshift-ui/checkbox@6.1.0-beta.6
+  - @stackshift-ui/textarea@6.1.0-beta.6
+  - @stackshift-ui/select@6.1.0-beta.6
+  - @stackshift-ui/input@6.1.0-beta.6
+  - @stackshift-ui/label@1.0.0-beta.7
+  - @stackshift-ui/radio@6.1.0-beta.6
+  - @stackshift-ui/system@6.1.0-beta.6
+  - @stackshift-ui/scripts@6.1.0-beta.5
+
+## 7.0.0-beta.6
+
+### Patch Changes
+
+- bump patch pkg version
+- Updated dependencies
+  - @stackshift-ui/checkbox-group@6.1.0-beta.5
+  - @stackshift-ui/radio-group@6.1.0-beta.5
+  - @stackshift-ui/checkbox@6.1.0-beta.5
+  - @stackshift-ui/textarea@6.1.0-beta.5
+  - @stackshift-ui/select@6.1.0-beta.5
+  - @stackshift-ui/input@6.1.0-beta.5
+  - @stackshift-ui/label@1.0.0-beta.6
+  - @stackshift-ui/radio@6.1.0-beta.5
+  - @stackshift-ui/system@6.1.0-beta.5
+  - @stackshift-ui/scripts@6.1.0-beta.4
+
+## 7.0.0-beta.5
+
+### Major Changes
+
+- beta updates
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/checkbox-group@6.1.0-beta.4
+  - @stackshift-ui/radio-group@6.1.0-beta.4
+  - @stackshift-ui/checkbox@6.1.0-beta.4
+  - @stackshift-ui/textarea@6.1.0-beta.4
+  - @stackshift-ui/select@6.1.0-beta.4
+  - @stackshift-ui/input@6.1.0-beta.4
+  - @stackshift-ui/label@1.0.0-beta.5
+  - @stackshift-ui/radio@6.1.0-beta.4
+  - @stackshift-ui/system@6.1.0-beta.4
+  - @stackshift-ui/scripts@6.1.0-beta.3
+
+## 7.0.0-beta.4
+
+### Patch Changes
+
+- bump pre publish version
+- Updated dependencies
+  - @stackshift-ui/checkbox-group@6.1.0-beta.3
+  - @stackshift-ui/radio-group@6.1.0-beta.3
+  - @stackshift-ui/checkbox@6.1.0-beta.3
+  - @stackshift-ui/textarea@6.1.0-beta.3
+  - @stackshift-ui/select@6.1.0-beta.3
+  - @stackshift-ui/input@6.1.0-beta.3
+  - @stackshift-ui/label@1.0.0-beta.4
+  - @stackshift-ui/radio@6.1.0-beta.3
+  - @stackshift-ui/system@6.1.0-beta.3
+  - @stackshift-ui/scripts@6.1.0-beta.2
+
+## 7.0.0-beta.3
+
+### Minor Changes
+
+- Packages updates and fixes
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/checkbox-group@6.1.0-beta.2
+  - @stackshift-ui/radio-group@6.1.0-beta.2
+  - @stackshift-ui/input-file@6.1.0-beta.2
+  - @stackshift-ui/checkbox@6.1.0-beta.2
+  - @stackshift-ui/textarea@6.1.0-beta.2
+  - @stackshift-ui/select@6.1.0-beta.2
+  - @stackshift-ui/input@6.1.0-beta.2
+  - @stackshift-ui/label@1.0.0-beta.3
+  - @stackshift-ui/radio@6.1.0-beta.2
+  - @stackshift-ui/system@6.1.0-beta.2
+  - @stackshift-ui/scripts@6.1.0-beta.1
+
+## 7.0.0-beta.2
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/system@6.1.0-beta.1
+  - @stackshift-ui/checkbox@6.1.0-beta.1
+  - @stackshift-ui/checkbox-group@6.1.0-beta.1
+  - @stackshift-ui/input@6.1.0-beta.1
+  - @stackshift-ui/input-file@6.1.0-beta.1
+  - @stackshift-ui/label@1.0.0-beta.2
+  - @stackshift-ui/radio@6.1.0-beta.1
+  - @stackshift-ui/radio-group@6.1.0-beta.1
+  - @stackshift-ui/select@6.1.0-beta.1
+  - @stackshift-ui/textarea@6.1.0-beta.1
+
+## 7.0.0-beta.1
+
+### Minor Changes
+
+- shadcn migration
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/label@1.0.0-beta.1
+
+## 7.0.0-beta.0
+
+### Minor Changes
+
+- shadcn migration
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/checkbox-group@6.1.0-beta.0
+  - @stackshift-ui/radio-group@6.1.0-beta.0
+  - @stackshift-ui/checkbox@6.1.0-beta.0
+  - @stackshift-ui/textarea@6.1.0-beta.0
+  - @stackshift-ui/select@6.1.0-beta.0
+  - @stackshift-ui/input@6.1.0-beta.0
+  - @stackshift-ui/label@1.0.0-beta.0
+  - @stackshift-ui/radio@6.1.0-beta.0
+  - @stackshift-ui/system@6.1.0-beta.0
+  - @stackshift-ui/scripts@6.1.0-beta.0
+  - @stackshift-ui/input-file@6.1.0-beta.0
+
 ## 6.0.13
 
 ### Patch Changes

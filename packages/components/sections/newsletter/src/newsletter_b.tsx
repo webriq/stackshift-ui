@@ -1,18 +1,17 @@
 import { Button } from "@stackshift-ui/button";
+import { Container } from "@stackshift-ui/container";
+import { Flex } from "@stackshift-ui/flex";
 import { Form } from "@stackshift-ui/form";
 import { Heading } from "@stackshift-ui/heading";
 import { Image } from "@stackshift-ui/image";
 import { Input } from "@stackshift-ui/input";
-import { Text } from "@stackshift-ui/text";
 import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
-import { Container } from "@stackshift-ui/container";
-import { Flex } from "@stackshift-ui/flex";
+import { Text } from "@stackshift-ui/text";
 import React from "react";
-
-import { Form as FormFields, Logo } from "./types";
-import { getInputType, logoLink, thankYouPageLink } from "./helper";
 import { NewsletterProps } from ".";
+import { getInputType, logoLink, thankYouPageLink } from "./helper";
+import { Form as FormFields, Logo } from "./types";
 
 export default function Newsletter_B({
   logo,
@@ -99,10 +98,8 @@ function NewsletterForm({ id, fields, thankYouPage, buttonLabel }: FormFields) {
       thankyouPage={thankYouPageLink(thankYouPage)}>
       <div className="flex flex-col [@media(min-width:900px)]:flex-row gap-3">
         <Input
-          variant="outline"
-          noLabel
-          ariaLabel={fields[0]?.placeholder ?? fields[0]?.name}
-          className="flex-grow w-full"
+          aria-label={fields[0]?.placeholder ?? fields[0]?.name}
+          className="flex-grow w-full bg-white"
           type={getInputType(fields[0]?.type)}
           placeholder={fields[0]?.placeholder}
           name={fields[0]?.name}
@@ -114,8 +111,7 @@ function NewsletterForm({ id, fields, thankYouPage, buttonLabel }: FormFields) {
         </div>
         {buttonLabel && (
           <Button
-            as="button"
-            ariaLabel={buttonLabel ?? "Newsletter form submit button"}
+            aria-label={buttonLabel ?? "Newsletter form submit button"}
             type="submit"
             className="text-white">
             {buttonLabel}

@@ -4,7 +4,7 @@ import type { ElementType, HTMLProps, ReactNode } from "react";
 
 type StyleVariants<T extends string> = Record<T, string>;
 type Type = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
-type fontSize = "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "4xl";
+type fontSize = "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl";
 type Weight =
   | "thin"
   | "extralight"
@@ -51,6 +51,7 @@ export const Heading: React.FC<HeadingProps> = ({
     "2xl": "text-2xl",
     "3xl": "text-3xl",
     "4xl": "text-4xl",
+    "5xl": "text-5xl",
   };
 
   const fontWeightMap = {
@@ -84,11 +85,7 @@ export const Heading: React.FC<HeadingProps> = ({
   const variantClass = variants[Element] ?? variants.h1;
 
   return (
-    <Component
-      as={type}
-      className={cn(variantClass, className)}
-      {...props}
-      data-testid={displayName}>
+    <Component as={type} className={cn(variantClass, className)} {...props}>
       {children}
     </Component>
   );

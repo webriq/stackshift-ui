@@ -1,9 +1,11 @@
-import React, { lazy } from "react";
-import { SectionsProps, Logo, LabeledRoute, LabeledRouteWithKey, Form } from "./types";
+import React from "react";
+import SigninSignupA from "./signin_signup_a";
+import SigninSignupB from "./signin_signup_b";
+import { Form, LabeledRoute, LabeledRouteWithKey, Logo, SectionsProps } from "./types";
 
 const Variants = {
-  variant_a: lazy(() => import("./signin_signup_a")),
-  variant_b: lazy(() => import("./signin_signup_b")),
+  variant_a: SigninSignupA,
+  variant_b: SigninSignupB,
 };
 
 export interface SignUpFormProps {

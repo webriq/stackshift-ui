@@ -1,7 +1,7 @@
 {
   "name": "@stackshift-ui/call-to-action",
   "description": "",
-  "version": "6.0.14",
+  "version": "6.1.0",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -43,6 +43,7 @@
   "dependencies": {
     "@stackshift-ui/scripts": "workspace:*",
     "@stackshift-ui/system": "workspace:*",
+    "@stackshift-ui/card": "workspace:*",
     "@stackshift-ui/text": "workspace:*",
     "@stackshift-ui/heading": "workspace:*",
     "@stackshift-ui/button": "workspace:*",
@@ -60,7 +61,7 @@
     "next": "10 - 14",
     "react": "16.8 - 19",
     "react-dom": "16.8 - 19",
-    "@stackshift-ui/system": ">=6.0.11"
+    "@stackshift-ui/system": ">=7.0.0"
   },
   "peerDependenciesMeta": {
     "next": {

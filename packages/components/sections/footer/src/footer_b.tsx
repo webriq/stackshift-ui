@@ -7,7 +7,6 @@ import { Section } from "@stackshift-ui/section";
 import { SocialIcons } from "@stackshift-ui/social-icons";
 import { Text } from "@stackshift-ui/text";
 import React from "react";
-
 import { FooterProps } from ".";
 import { logoLink } from "./helper";
 import { LabeledRoute, LabeledRouteWithKey, Logo, SocialLink, Socials } from "./types";
@@ -33,7 +32,7 @@ function LogoSection({ logo }: { logo?: Logo }) {
   if (!logo?.image) return null;
 
   return (
-    <div className="mb-8 xl:mb-0 w-full lg:w-1/5">
+    <div className="w-full lg:w-1/5">
       <Link
         aria-label={logoLink(logo) === "/" ? "Go to home page" : `Go to ${logoLink(logo)}`}
         className="w-40 h-14 flex items-center"
@@ -51,7 +50,7 @@ function MenuLists({ menu }: { menu?: LabeledRouteWithKey[] }) {
 
   return (
     <div className="w-full lg:w-auto">
-      <Flex wrap align="center" justify="between" as="ul" gap={5} className="mt-8">
+      <Flex wrap align="center" justify="between" as="ul" gap={5}>
         {menu?.map((links, index, { length }) => (
           <React.Fragment key={links?._key || index}>
             <MenuList links={links} />
@@ -71,8 +70,10 @@ function MenuList({ links, index }: { links?: LabeledRoute; index?: number }) {
       <Button
         as="link"
         link={links}
+        variant="unstyled"
         className="text-gray-500 no-underline lg:text-sm hover:text-gray-700"
-        ariaLabel={links?.label}>
+        aria-label={links?.label}
+        asChild>
         {links?.label}
       </Button>
     </li>
@@ -114,7 +115,9 @@ function SocialMediaContainer({ socialMedia }: { socialMedia?: SocialLink[] }) {
 
   return (
     <div className="order-first mb-4 lg:order-last lg:mb-0">
-      {socialMedia?.map(social => <SocialMediaLink social={social} />)}
+      {socialMedia?.map(social => (
+        <SocialMediaLink social={social} />
+      ))}
     </div>
   );
 }

@@ -6,7 +6,6 @@ import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
 import { SocialIcons } from "@stackshift-ui/social-icons";
 import { Text } from "@stackshift-ui/text";
-
 import { FooterProps } from ".";
 import { logoLink } from "./helper";
 import { LabeledRoute, LabeledRouteWithKey, Logo, SocialLink, Socials } from "./types";
@@ -71,7 +70,9 @@ function MenuLists({ menu }: { menu?: LabeledRouteWithKey[] }) {
         as="ul"
         align="center"
         justify="center">
-        {menu?.map((links, index) => <MenuList links={links} index={index} />)}
+        {menu?.map((links, index) => (
+          <MenuList links={links} index={index} />
+        ))}
       </Flex>
     </div>
   );
@@ -85,8 +86,10 @@ function MenuList({ links, index }: { links?: LabeledRoute; index?: number }) {
       <Button
         as="link"
         link={links}
+        variant="unstyled"
+        asChild
         className="text-sm text-center text-black no-underline hover:text-gray-500 whitespace-nowrap"
-        ariaLabel={links?.label}>
+        aria-label={links?.label}>
         {links?.label}
       </Button>
     </li>
@@ -98,7 +101,9 @@ function SocialMediaContainer({ socialMedia }: { socialMedia?: SocialLink[] }) {
 
   return (
     <Flex wrap justify="center" align="center" className="gap-5">
-      {socialMedia?.map((social, index) => <SocialMediaLink social={social} key={index} />)}
+      {socialMedia?.map((social, index) => (
+        <SocialMediaLink social={social} key={index} />
+      ))}
     </Flex>
   );
 }
@@ -130,23 +135,23 @@ function SocialMediaLink({ social }: { social?: SocialLink }) {
 
 function BorderStyle() {
   return (
-    <div className="flex w-full">
-      <div className="flex w-1/3">
+    <Flex className="w-full">
+      <Flex className="w-1/3">
         <div className="w-1/3 py-1 bg-secondary" />
         <div className="w-1/3 py-1 bg-primary" />
         <div className="w-1/3 py-1 bg-primary" />
-      </div>
-      <div className="flex w-1/3">
+      </Flex>
+      <Flex className="w-1/3">
         <div className="w-1/3 py-1 bg-secondary" />
         <div className="w-1/3 py-1 bg-primary" />
         <div className="w-1/3 py-1 bg-primary" />
-      </div>
-      <div className="flex w-1/3">
+      </Flex>
+      <Flex className="w-1/3">
         <div className="w-1/3 py-1 bg-secondary" />
         <div className="w-1/3 py-1 bg-primary" />
         <div className="w-1/3 py-1 bg-primary" />
-      </div>
-    </div>
+      </Flex>
+    </Flex>
   );
 }
 

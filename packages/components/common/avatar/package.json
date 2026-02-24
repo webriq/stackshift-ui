@@ -1,7 +1,7 @@
 {
   "name": "@stackshift-ui/avatar",
   "description": "",
-  "version": "6.0.13",
+  "version": "6.1.0",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -24,6 +24,8 @@
     "@stackshift-ui/eslint-config": "workspace:*",
     "@stackshift-ui/typescript-config": "workspace:*",
     "@testing-library/react": "^16.0.1",
+    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/user-event": "^14.6.1",
     "@types/node": "^22.7.0",
     "@types/react": "^18.3.9",
     "@types/react-dom": "^18.3.0",
@@ -41,18 +43,19 @@
     "vitest": "^2.1.1"
   },
   "dependencies": {
-    "@stackshift-ui/scripts": "workspace:*",
-    "@stackshift-ui/system": "workspace:*",
+    "@radix-ui/react-avatar": "^1.1.10",
     "@stackshift-ui/flex": "workspace:*",
     "@stackshift-ui/image": "workspace:*",
+    "@stackshift-ui/scripts": "workspace:*",
+    "@stackshift-ui/system": "workspace:*",
     "classnames": "^2.5.1"
   },
   "peerDependencies": {
+    "@stackshift-ui/system": ">=7.0.0",
     "@types/react": "16.8 - 19",
     "next": "10 - 14",
     "react": "16.8 - 19",
-    "react-dom": "16.8 - 19",
-    "@stackshift-ui/system": ">=6.0.11"
+    "react-dom": "16.8 - 19"
   },
   "peerDependenciesMeta": {
     "next": {

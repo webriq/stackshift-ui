@@ -1,5 +1,6 @@
 import { PortableText, PortableTextComponents } from "@portabletext/react";
 import { Button } from "@stackshift-ui/button";
+import { Checkbox } from "@stackshift-ui/checkbox";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Form } from "@stackshift-ui/form";
@@ -10,8 +11,6 @@ import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
 import { SocialIcons } from "@stackshift-ui/social-icons";
 import { Text } from "@stackshift-ui/text";
-import React from "react";
-
 import { ContactProps } from ".";
 import { thankYouPageLink } from "./helper";
 import { SocialLink, Form as iForm } from "./types";
@@ -54,14 +53,14 @@ function ContactTitleAndDescription({
   contactDescription?: string;
 }) {
   return (
-    <div>
+    <Flex direction="col">
       {title && <Heading>{title}</Heading>}
       {contactDescription && (
         <Text muted className="mt-5 leading-loose">
           {contactDescription}
         </Text>
       )}
-    </div>
+    </Flex>
   );
 }
 
@@ -79,7 +78,7 @@ function OfficeInformation({
   return (
     <Flex gap={8} justify="between" className="flex-col w-full md:flex-row">
       <div>
-        <Heading type="h2">{"Office"}</Heading>
+        <Heading type="h2">Office</Heading>
         {officeInformation && (
           <Text className="mt-3" muted>
             {officeInformation}
@@ -87,13 +86,17 @@ function OfficeInformation({
         )}
       </div>
       <div>
-        <Heading type="h2">{"Contacts"}</Heading>
-        <Text className="my-3" muted>
-          {contactEmail && <Link href={`mailto:${contactEmail}`}>{contactEmail}</Link>}
-        </Text>
-        <Text muted>
-          {contactNumber && <Link href={`tel:${contactNumber}`}>{contactNumber}</Link>}
-        </Text>
+        <Heading type="h2">Contacts</Heading>
+        {contactEmail && (
+          <Text className="mt-3" muted>
+            <Link href={`mailto:${contactEmail}`}>{contactEmail}</Link>
+          </Text>
+        )}
+        {contactNumber && (
+          <Text muted className="mt-3">
+            <Link href={`tel:${contactNumber}`}>{contactNumber}</Link>
+          </Text>
+        )}
       </div>
     </Flex>
   );
@@ -106,9 +109,7 @@ function SocialLinksCard({ socialLinks }: { socialLinks?: SocialLink[] }) {
       <Heading type="h2" fontSize="2xl" className="mb-2">
         Socials
       </Heading>
-      <Flex gap={4}>
-        <SocialLinks socialLinks={socialLinks} />
-      </Flex>
+      <SocialLinks socialLinks={socialLinks} />
     </div>
   );
 }
@@ -117,7 +118,7 @@ function SocialLinks({ socialLinks }: { socialLinks?: SocialLink[] }) {
   if (!socialLinks) return null;
 
   return (
-    <React.Fragment>
+    <Flex gap={4}>
       {socialLinks?.map(social => (
         <Link
           aria-label={social?.socialMedia || social?.socialMediaPlatform || ""}
@@ -138,7 +139,7 @@ function SocialLinks({ socialLinks }: { socialLinks?: SocialLink[] }) {
           )}
         </Link>
       ))}
-    </React.Fragment>
+    </Flex>
   );
 }
 
@@ -180,6 +181,7 @@ function FormFields({
                   placeholder={formFields?.placeholder}
                   required={formFields?.isRequired}
                   {...formFields}
+                  className="bg-white"
                 />
               ) : (
                 <FormField
@@ -189,6 +191,7 @@ function FormFields({
                   placeholder={formFields?.name}
                   required={formFields?.isRequired}
                   {...formFields}
+                  className="bg-white resize-none"
                 />
               )}
             </div>
@@ -196,10 +199,9 @@ function FormFields({
           <div className="items-center sm:flex sm:justify-between">
             {block && (
               <div className="inline-flex mt-2">
-                <input
+                <Checkbox
                   aria-label="Agree to terms"
                   className="mt-1 mr-2"
-                  type="checkbox"
                   id="terms"
                   name="terms"
                   defaultValue={1}
@@ -214,14 +216,13 @@ function FormFields({
                 </span>
               </div>
             )}
-            <div>
-              <div className="webriq-recaptcha" />
-            </div>
+            {/*! CAPTCHA - DO NOT DELETE */}
+            <div className="webriq-recaptcha" />
+
             {form?.buttonLabel && (
               <Button
-                as="button"
-                ariaLabel={form?.buttonLabel ?? "Contact form submit button"}
-                className="inline-block px-6 py-2 mt-5 font-bold leading-loose text-white transition duration-200 rounded-global bg-primary hover:bg-primary-foreground sm:mt-0"
+                aria-label={form?.buttonLabel ?? "Contact form submit button"}
+                className="inline-block px-6 py-2 mt-5 font-bold leading-loose text-white transition duration-200 rounded-global bg-primary hover:scale-105 sm:mt-0"
                 type="submit">
                 {form?.buttonLabel}
               </Button>

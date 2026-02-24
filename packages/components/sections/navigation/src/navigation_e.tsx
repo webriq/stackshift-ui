@@ -6,7 +6,7 @@ import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
 import { Fragment, useEffect, useRef, useState } from "react";
 import { NavigationProps, ResponsiveNavLinksProps } from ".";
-import { logoLink } from "./helper";
+import { ConditionalLink, logoLink } from "./helper";
 import { blockStyle } from "./helper/blockStyle";
 import { LabeledRouteWithKey, Logo } from "./types";
 
@@ -145,16 +145,16 @@ function NavItem({ link }: { link?: LabeledRouteWithKey }) {
   return (
     <li>
       <Button
-        as="link"
+        asChild
         variant="link"
-        ariaLabel={link?.label}
-        link={link}
         className={
           link?.type === "linkInternal"
             ? "xl:mr-12 lg:mr-8 font-bold font-heading hover:text-gray-600 no-underline text-black"
             : "mr-12 font-bold font-heading hover:text-gray-600 no-underline text-black"
         }>
-        {link?.label}
+        <ConditionalLink ariaLabel={link?.label || "Navigation link"} link={link}>
+          {link?.label}
+        </ConditionalLink>
       </Button>
     </li>
   );
@@ -169,9 +169,8 @@ function SearchButton({
 }) {
   return (
     <Button
-      as="button"
-      variant="unstyled"
-      ariaLabel="Search button"
+      variant="ghost"
+      aria-label="Search button"
       type="button"
       onClick={() => setShowSearchBar(!showSearchBar)}>
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -213,9 +212,8 @@ function SearchForm({
         type="search"
       />
       <Button
-        as="button"
-        variant="unstyled"
-        ariaLabel="Submit product search"
+        variant="ghost"
+        aria-label="Submit product search"
         className={`mt-1 inline-flex h-[35px] w-10 items-center justify-center bg-primary ${
           productQuery === ""
             ? "cursor-not-allowed opacity-50"
@@ -234,9 +232,8 @@ function SearchForm({
 function MenuIcon({ showMenu }: { showMenu: () => void }) {
   return (
     <Button
-      variant="unstyled"
-      as="button"
-      ariaLabel="Nav Sidebar"
+      variant="ghost"
+      aria-label="Nav Sidebar"
       className="self-center mr-12 navbar-burger lg:hidden"
       onClick={showMenu}>
       <svg
@@ -322,9 +319,8 @@ function ResponsiveNavLinks({
           )}
 
           <Button
-            variant="unstyled"
-            as="button"
-            ariaLabel="Close navigation menu"
+            variant="ghost"
+            aria-label="Close navigation menu"
             className="ml-auto"
             onClick={showMenu}>
             <svg
@@ -361,9 +357,8 @@ function ResponsiveNavLinks({
             type="search"
           />
           <Button
-            variant="unstyled"
-            as="button"
-            ariaLabel="Submit product search"
+            variant="ghost"
+            aria-label="Submit product search"
             className={`inline-flex h-full w-10 items-center justify-center bg-primary ${
               productQuery === ""
                 ? "cursor-not-allowed opacity-50"
@@ -391,12 +386,14 @@ function ResponsiveNavLinks({
               <Fragment key={index}>
                 <li className="mb-8">
                   <Button
-                    as="link"
+                    asChild
                     variant="link"
-                    ariaLabel={link?.label ?? `navigation link ${index + 1}`}
-                    link={link}
                     className="font-bold text-black no-underline font-heading hover:text-gray-600">
-                    {link?.label}
+                    <ConditionalLink
+                      ariaLabel={link?.label || `navigation link ${index + 1}`}
+                      link={link}>
+                      {link?.label}
+                    </ConditionalLink>
                   </Button>
                 </li>
               </Fragment>

@@ -7,7 +7,6 @@ import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
 import { SocialIcons } from "@stackshift-ui/social-icons";
 import { Text } from "@stackshift-ui/text";
-
 import { FooterProps } from ".";
 import { logoLink } from "./helper";
 import { ContactDetails, Logo, SocialLink, Socials } from "./types";
@@ -124,7 +123,9 @@ function SocialMediaContainer({ socialMedia }: { socialMedia?: SocialLink[] }) {
 
   return (
     <Flex wrap className="gap-5">
-      {socialMedia?.map((social, index) => <SocialMediaLink social={social} key={index} />)}
+      {socialMedia?.map((social, index) => (
+        <SocialMediaLink social={social} key={index} />
+      ))}
     </Flex>
   );
 }

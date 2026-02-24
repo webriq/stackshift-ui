@@ -8,8 +8,10 @@ import { Text } from "@stackshift-ui/text";
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 import { customBlockStyle } from "./utils/portableText/customBlockStyle";
 
+import { Link } from "@stackshift-ui/link";
+import { buildSanityLink } from "@stackshift-ui/system";
 import { HeaderProps } from ".";
-import { HeaderBox, HeaderSections } from "./types";
+import { HeaderBox, HeaderSections, LabeledRoute } from "./types";
 
 const IMAGE_HEIGHT_CLASSES = {
   lg: "min-h-[200px] sm:min-h-[400px] md:min-h-[600px] lg:min-h-[800px] xl:min-h-[1150px]",
@@ -159,21 +161,30 @@ const HeaderTitleSection = ({ header }: { header: HeaderBox }) => (
   </div>
 );
 
-const HeaderButton = ({ header }: { header: HeaderSections }) => (
-  <div className={`flex justify-${header?.alignment} gap-4`}>
-    {header?.primaryButton?.label && (
-      <Button
-        as="link"
-        link={header?.primaryButton}
-        ariaLabel={header?.primaryButton?.label}
-        className="border border-black px-14 py-3.5 text-sm">
-        <span className="flex items-center gap-2 font-label text-sm font-normal uppercase tracking-widest">
-          {header?.primaryButton?.label} <LiaLongArrowAltRightSolid />
-        </span>
-      </Button>
-    )}
-  </div>
-);
+const HeaderButton = ({ header }: { header: HeaderSections }) => {
+  const primaryButtonLink = buildSanityLink(header.primaryButton as LabeledRoute);
+
+  return (
+    <div className={`flex justify-${header?.alignment} gap-4`}>
+      {header?.primaryButton?.label && (
+        <Button
+          variant="link"
+          aria-label={header?.primaryButton?.label}
+          className="border border-black px-14 py-3.5 text-sm"
+          asChild>
+          <Link
+            href={primaryButtonLink.href}
+            target={primaryButtonLink.target}
+            rel={primaryButtonLink.rel}>
+            <span className="flex items-center gap-2 font-label text-sm font-normal uppercase tracking-widest">
+              {header?.primaryButton?.label} <LiaLongArrowAltRightSolid />
+            </span>
+          </Link>
+        </Button>
+      )}
+    </div>
+  );
+};
 
 const HeaderItem = ({ header, isImageLeft }: { header: HeaderSections; isImageLeft: boolean }) => (
   <div

@@ -1,5 +1,5 @@
 import { Button } from "@stackshift-ui/button";
-import { Card } from "@stackshift-ui/card";
+import { Card, CardContent } from "@stackshift-ui/card";
 import { Container } from "@stackshift-ui/container";
 import { Flex } from "@stackshift-ui/flex";
 import { Heading } from "@stackshift-ui/heading";
@@ -114,7 +114,7 @@ export default function Blog_D({ subtitle, title, posts }: BlogProps) {
 }
 
 function NoPostsMessage({ message = "No post available." }) {
-  return <div className="w-full px-3 lg:w-3/4 font-medium text-lg">{message}</div>;
+  return <Text className="w-full px-3 lg:w-3/4 font-medium text-lg">{message}</Text>;
 }
 
 function SubtitleAndTitleText({ subtitle, title }: { subtitle?: string; title?: string }) {
@@ -145,10 +145,9 @@ function SearchInput({
         onChange={handleSearchChange}
       />
       <Button
-        as="button"
         variant="unstyled"
-        ariaLabel="Search button"
-        className="absolute right-0 top-0 h-full px-3 bg-white border-r rounded-global text-primary flex items-center">
+        aria-label="Search button"
+        className="absolute right-0 top-0 h-full px-3 border-r rounded-global text-primary flex items-center">
         <svg
           className="w-6 h-6"
           fill="none"
@@ -177,7 +176,7 @@ function CategoryTab({
   setActiveTab: (category: string) => void;
 }) {
   return (
-    <Card className="w-full px-3 mb-8 bg-white lg:mb-0 lg:w-1/4" borderRadius="md">
+    <Card className="w-full p-3 mb-8 bg-white lg:mb-0 lg:w-1/4 rounded-md">
       {categories && (
         <React.Fragment>
           <Heading
@@ -220,9 +219,8 @@ function CategoryItem({
   return (
     <li key={key}>
       <Button
-        as="button"
         variant="unstyled"
-        ariaLabel="Show all blog posts"
+        aria-label="Show all blog posts"
         className={`mb-4 block ${
           !category ? "hidden" : "block"
         } px-3 py-2 hover:bg-secondary-foreground focus:outline-none w-full text-left rounded ${
@@ -263,10 +261,10 @@ function PostItem({ post }: { post?: BlogPost }) {
   if (!post) return null;
 
   return (
-    <Flex wrap className="mb-8 lg:mb-6 bg-white shadow rounded-lg">
+    <Card className="flex flex-wrap mb-8 lg:mb-6 bg-white shadow rounded-lg">
       <div className="w-full h-full mb-4 lg:mb-0 lg:w-1/4">
         <Image
-          className="object-cover w-full h-full overflow-hidden rounded"
+          className="object-cover w-full h-full overflow-hidden rounded-l"
           src={`${post?.mainImage}`}
           sizes="100vw"
           width={188}
@@ -274,38 +272,35 @@ function PostItem({ post }: { post?: BlogPost }) {
           alt={post?.alt ?? `blog-variantD-image-${post?.title}`}
         />
       </div>
-      <div className="w-full px-3 py-2 lg:w-3/4">
+      <CardContent className="w-full px-3 py-2 lg:w-3/4">
+        {post?.publishedAt ? (
+          <Text muted>{format(new Date(post?.publishedAt), " dd MMM, yyyy")}</Text>
+        ) : null}
         {post?.title && (
           <Link
             aria-label={post?.title}
-            className="mb-1 text-2xl font-bold hover:text-secondary font-heading"
+            className="mb-1 text-2xl font-bold hover:text-secondary font-heading line-clamp-3 sm:line-clamp-1"
             href={`/${post?.link ?? "page-not-added"}`}>
-            {post?.title.length > 25 ? post?.title?.substring(0, 25) + "..." : post?.title}
+            {post?.title}
           </Link>
         )}
-        <Flex wrap align="center" gap={1} className="mb-2 text-sm">
-          {post?.authors
-            ? post?.authors?.map((author, index, { length }) => (
-                <Flex key={index}>
-                  <Text className="text-primary">{author?.name}</Text>
-                  {index + 1 !== length ? <span>&nbsp;,&nbsp;</span> : null}
-                </Flex>
-              ))
-            : null}
-          {post?.publishedAt && post?.authors ? (
-            <span className="mx-2 text-gray-500">•</span>
-          ) : null}
-          {post?.publishedAt ? (
-            <Text muted>{format(new Date(post?.publishedAt), " dd MMM, yyyy")}</Text>
-          ) : null}
-        </Flex>
+        {post?.authors ? (
+          <Flex align="center">
+            {post?.authors?.map((author, index, { length }) => (
+              <Text className="text-primary">
+                {author?.name}
+                {index + 1 !== length ? <span>&nbsp;,&nbsp;</span> : null}
+              </Text>
+            ))}
+          </Flex>
+        ) : null}
         {post?.excerpt ? (
-          <Text muted>
-            {post?.excerpt.length > 60 ? post?.excerpt.substring(0, 60) + "..." : post?.excerpt}
+          <Text muted className="line-clamp-6 sm:line-clamp-3">
+            {post?.excerpt}
           </Text>
         ) : null}
-      </div>
-    </Flex>
+      </CardContent>
+    </Card>
   );
 }
 
@@ -330,8 +325,7 @@ function Pagination({ blogsPerPage, totalBlogs, paginate, currentPage }: Paginat
         {pageNumber.map(number => (
           <Button
             variant="unstyled"
-            as="button"
-            ariaLabel={`Page ${number}`}
+            aria-label={`Page ${number}`}
             key={number}
             className={`${
               currentPage === number

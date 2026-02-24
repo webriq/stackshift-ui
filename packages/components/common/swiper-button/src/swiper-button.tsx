@@ -5,7 +5,7 @@ import type { ElementType, HTMLProps, ReactNode } from "react";
 
 type Variant = "variant_a" | "variant_b";
 
-export interface SwiperButtonProps extends Omit<HTMLProps<HTMLElement>, "as" | "size"> {
+export interface SwiperButtonProps extends Omit<HTMLProps<HTMLButtonElement>, "as" | "size"> {
   variant?: Variant;
   type?: "left" | "right";
   onClick?: () => void;
@@ -36,7 +36,8 @@ export const SwiperButton: React.FC<SwiperButtonProps> = ({
   };
 
   const Element = variantList[variant] || VariantA;
-  const commonStyle = "inline-block p-2 text-primary rounded-full shadow focus:outline-none";
+  const commonStyle =
+    "inline-block p-4 text-primary rounded-full shadow focus:outline-none h-fit w-fit";
 
   const variantClasses = {
     variant_a: commonStyle,
@@ -47,12 +48,11 @@ export const SwiperButton: React.FC<SwiperButtonProps> = ({
 
   return (
     <Component
-      as="button"
       variant="unstyled"
       onClick={onClick}
       className={cn(classes, className)}
       data-testid={displayName.toLowerCase()}
-      ariaLabel={ariaLabel}
+      aria-label={ariaLabel}
       {...props}>
       {children ? children : <Element type={type} />}
     </Component>

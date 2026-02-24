@@ -1,11 +1,15 @@
-import React, { lazy } from "react";
-import { SectionsProps, Images, LabeledRoute } from "./types";
+import React from "react";
+import LogoCloudA from "./logo-cloud_a";
+import LogoCloudB from "./logo-cloud_b";
+import LogoCloudC from "./logo-cloud_c";
+import LogoCloudD from "./logo-cloud_d";
+import { Images, LabeledRoute, SectionsProps } from "./types";
 
 const Variants = {
-  variant_a: lazy(() => import("./logo-cloud_a")),
-  variant_b: lazy(() => import("./logo-cloud_b")),
-  variant_c: lazy(() => import("./logo-cloud_c")),
-  variant_d: lazy(() => import("./logo-cloud_d")),
+  variant_a: LogoCloudA,
+  variant_b: LogoCloudB,
+  variant_c: LogoCloudC,
+  variant_d: LogoCloudD,
 };
 
 export interface LogoCloudProps {

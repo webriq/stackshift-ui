@@ -4,6 +4,7 @@ import { Heading } from "@stackshift-ui/heading";
 import { Image } from "@stackshift-ui/image";
 import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
+import { buildSanityLink } from "@stackshift-ui/system";
 import { Text } from "@stackshift-ui/text";
 import React from "react";
 import { CTAProps } from ".";
@@ -37,7 +38,7 @@ function LogoSection({ logo }: { logo?: Logo }) {
         alt={logo?.alt ?? "callToAction-logo"}
         width={64}
         height={64}
-        className="inline-block mb-6 text-3xl font-bold leading-none"
+        className="inline-block text-3xl font-bold leading-none"
       />
     </Link>
   );
@@ -59,9 +60,13 @@ function HeadingAndText({ title, text }: { title?: string; text?: string }) {
 function CTAButton({ button }: { button?: LabeledRoute }) {
   if (!button?.label) return null;
 
+  const link = buildSanityLink(button);
+
   return (
-    <Button as="link" link={button} ariaLabel={button?.label}>
-      {button?.label}
+    <Button aria-label={button?.label}>
+      <Link href={link.href} target={link.target} rel={link.rel}>
+        {button?.label}
+      </Link>
     </Button>
   );
 }

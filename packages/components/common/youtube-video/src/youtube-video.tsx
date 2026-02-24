@@ -23,7 +23,7 @@ export const YoutubeVideo: React.FC<YoutubeVideoProps> = ({
   const defaultClass = "aspect-video";
 
   return (
-    <Component as={as} className={defaultClass} {...props} data-testid={displayName}>
+    <Component as={as} className={defaultClass} {...props}>
       <iframe
         aria-label="Show Video Frame"
         className="w-full h-full rounded-lg"

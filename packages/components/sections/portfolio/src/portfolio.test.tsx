@@ -7,7 +7,7 @@ describe.concurrent("portfolio", () => {
 
   test.skip("Dummy test - test if renders without errors", ({ expect }) => {
     const clx = "my-class";
-    render(<Portfolio />);
-    expect(screen.getByTestId("{ kebabCase name }}").classList).toContain(clx);
+    render(<Portfolio data-testid="portfolio" />);
+    expect(screen.getByTestId("portfolio").classList).toContain(clx);
   });
 });
