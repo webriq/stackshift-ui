@@ -1,5 +1,16 @@
 # @stackshift-ui/react
 
+## 7.0.0-alpha.0
+
+### Major Changes
+
+- Embeddable AI Chatbot feature
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/ai-chatbot@1.0.0-alpha.0
+
 ## 6.1.0
 
 ### Major Changes
