@@ -1,5 +1,18 @@
 # @stackshift-ui/react
 
+## 7.0.0
+
+### Major Changes
+
+- Bump package version
+- 9bfd720: Embeddable AI Chatbot feature
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [9bfd720]
+  - @stackshift-ui/ai-chatbot@1.0.0
+
 ## 7.0.0-alpha.0
 
 ### Major Changes
