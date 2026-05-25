@@ -142,6 +142,7 @@ export {
 } from "@stackshift-ui/system";
 
 // Components
+export { AIChatbot, AIChatbot_A } from "@stackshift-ui/ai-chatbot";
 export { AppPromo, AppPromo_A, AppPromo_B, AppPromo_C } from "@stackshift-ui/app-promo";
 export { Blog, Blog_A, Blog_B, Blog_C, Blog_D } from "@stackshift-ui/blog";
 export {

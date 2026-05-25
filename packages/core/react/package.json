@@ -1,6 +1,6 @@
 {
   "name": "@stackshift-ui/react",
-  "version": "6.1.0",
+  "version": "7.0.0",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -37,6 +37,7 @@
     "vitest": "^2.1.1"
   },
   "dependencies": {
+    "@stackshift-ui/ai-chatbot": "workspace:*",
     "@stackshift-ui/app-promo": "workspace:*",
     "@stackshift-ui/avatar": "workspace:*",
     "@stackshift-ui/badge": "workspace:*",
