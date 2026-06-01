@@ -1,5 +1,14 @@
 # @stackshift-ui/social-icons
 
+## 6.1.1-fixes.1
+
+### Patch Changes
+
+- fix build publish
+- Updated dependencies
+  - @stackshift-ui/system@6.1.1-fixes.0
+  - @stackshift-ui/scripts@6.1.1-fixes.0
+
 ## 6.1.1-fixes.0
 
 ### Patch Changes

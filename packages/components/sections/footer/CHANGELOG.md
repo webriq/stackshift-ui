@@ -1,5 +1,24 @@
 # @stackshift-ui/footer
 
+## 6.1.1-fixes.1
+
+### Patch Changes
+
+- fix build publish
+- Updated dependencies
+  - @stackshift-ui/button@6.1.1-fixes.0
+  - @stackshift-ui/image@6.1.1-fixes.0
+  - @stackshift-ui/link@6.1.1-fixes.0
+  - @stackshift-ui/social-icons@6.1.1-fixes.1
+  - @stackshift-ui/text@6.1.1-fixes.1
+  - @stackshift-ui/container@6.1.1-fixes.1
+  - @stackshift-ui/flex@6.1.1-fixes.1
+  - @stackshift-ui/grid@6.1.1-fixes.1
+  - @stackshift-ui/grid-item@6.1.1-fixes.1
+  - @stackshift-ui/section@6.1.1-fixes.1
+  - @stackshift-ui/system@6.1.1-fixes.0
+  - @stackshift-ui/scripts@6.1.1-fixes.0
+
 ## 6.1.1-fixes.0
 
 ### Patch Changes

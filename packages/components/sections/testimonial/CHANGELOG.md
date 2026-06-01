@@ -1,5 +1,24 @@
 # @stackshift-ui/testimonial
 
+## 6.1.1-fixes.1
+
+### Patch Changes
+
+- fix build publish
+- Updated dependencies
+  - @stackshift-ui/avatar@6.1.1-fixes.1
+  - @stackshift-ui/card@6.1.1-fixes.0
+  - @stackshift-ui/heading@6.1.1-fixes.1
+  - @stackshift-ui/image@6.1.1-fixes.0
+  - @stackshift-ui/swiper-button@6.1.1-fixes.1
+  - @stackshift-ui/swiper-pagination@6.1.1-fixes.1
+  - @stackshift-ui/text@6.1.1-fixes.1
+  - @stackshift-ui/container@6.1.1-fixes.1
+  - @stackshift-ui/flex@6.1.1-fixes.1
+  - @stackshift-ui/section@6.1.1-fixes.1
+  - @stackshift-ui/system@6.1.1-fixes.0
+  - @stackshift-ui/scripts@6.1.1-fixes.0
+
 ## 6.1.1-fixes.0
 
 ### Patch Changes

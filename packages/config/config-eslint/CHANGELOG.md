@@ -1,5 +1,11 @@
 # @stackshift-ui/eslint-config
 
+## 6.0.11-fixes.0
+
+### Patch Changes
+
+- fix build publish
+
 ## 6.0.10
 
 ### Patch Changes

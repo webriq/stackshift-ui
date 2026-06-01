@@ -1,5 +1,15 @@
 # @stackshift-ui/form
 
+## 6.1.1-fixes.0
+
+### Patch Changes
+
+- fix build publish
+- Updated dependencies
+  - @stackshift-ui/webriq-form@6.1.1-fixes.0
+  - @stackshift-ui/system@6.1.1-fixes.0
+  - @stackshift-ui/scripts@6.1.1-fixes.0
+
 ## 6.1.0
 
 ### Major Changes

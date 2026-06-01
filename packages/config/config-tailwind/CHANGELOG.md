@@ -1,5 +1,11 @@
 # @stackshift-ui/tailwind-config
 
+## 3.0.1-fixes.0
+
+### Patch Changes
+
+- fix build publish
+
 ## 3.0.0
 
 ### Major Changes

@@ -1,5 +1,15 @@
 # @stackshift-ui/toggle-group
 
+## 1.0.1-fixes.0
+
+### Patch Changes
+
+- fix build publish
+- Updated dependencies
+  - @stackshift-ui/toggle@1.0.1-fixes.0
+  - @stackshift-ui/system@6.1.1-fixes.0
+  - @stackshift-ui/scripts@6.1.1-fixes.0
+
 ## 1.0.0
 
 ### Major Changes

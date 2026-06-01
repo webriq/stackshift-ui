@@ -83,6 +83,7 @@
     "@stackshift-ui/scripts": "6.1.0"
   },
   "changesets": [
+    "eleven-plants-slide",
     "nine-hotels-jump"
   ]
 }
