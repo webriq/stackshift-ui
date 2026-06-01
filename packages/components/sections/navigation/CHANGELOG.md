@@ -1,5 +1,19 @@
 # @stackshift-ui/navigation
 
+## 6.1.1-fixes.0
+
+### Patch Changes
+
+- Changin of import cn from 'classnames' to import cn from @stackshift-ui/system
+- Updated dependencies
+  - @stackshift-ui/social-icons@6.1.1-fixes.0
+  - @stackshift-ui/container@6.1.1-fixes.0
+  - @stackshift-ui/heading@6.1.1-fixes.0
+  - @stackshift-ui/section@6.1.1-fixes.0
+  - @stackshift-ui/text@6.1.1-fixes.0
+  - @stackshift-ui/flex@6.1.1-fixes.0
+  - @stackshift-ui/grid@6.1.1-fixes.0
+
 ## 6.1.0
 
 ### Major Changes

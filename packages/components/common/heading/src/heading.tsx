@@ -1,5 +1,5 @@
 import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
-import cn from "classnames";
+import { cn } from "@stackshift-ui/system";
 import type { ElementType, HTMLProps, ReactNode } from "react";
 
 type StyleVariants<T extends string> = Record<T, string>;
@@ -33,7 +33,7 @@ export const Heading: React.FC<HeadingProps> = ({
   type = "h1",
   style,
   muted = false,
-  weight = "bold",
+  weight,
   fontSize = "3xl",
   children,
   className,
@@ -67,17 +67,16 @@ export const Heading: React.FC<HeadingProps> = ({
   };
 
   const size = fontSizeMap[fontSize];
-  const fontWeight = fontWeightMap[weight];
-  const commonClass = `text-primary ${muted && "text-gray-500"} ${
-    weight ? `${fontWeight}` : "font-bold"
-  } `;
+  const effectiveWeight = weight ?? (type === "h5" || type === "h6" ? "medium" : "bold");
+  const fontWeight = fontWeightMap[effectiveWeight];
+  const commonClass = `text-primary ${muted && "text-gray-500"} ${fontWeight} `;
   const variants: StyleVariants<Type> = {
-    h1: `${commonClass} font-bold font-heading ${size ?? `text-4xl lg:text-5xl`} `,
-    h2: `${commonClass} ${size ?? `text-3xl lg:text-4xl`} font-bold`,
-    h3: `${commonClass} font-bold ${size ?? `text-2xl lg:text-3xl`}`,
-    h4: `${commonClass} font-bold text-2xl ${size}`,
-    h5: `${commonClass} font-medium text-xl ${size}`,
-    h6: `${commonClass} font-medium text-lg ${size}`,
+    h1: `${commonClass} font-heading ${size ?? `text-4xl lg:text-5xl`} `,
+    h2: `${commonClass} ${size ?? `text-3xl lg:text-4xl`}`,
+    h3: `${commonClass} ${size ?? `text-2xl lg:text-3xl`}`,
+    h4: `${commonClass} text-2xl ${size}`,
+    h5: `${commonClass} text-xl ${size}`,
+    h6: `${commonClass} text-lg ${size}`,
   };
 
   const Element: Type = ["h1", "h2", "h3", "h4", "h5", "h6"].includes(type) ? type : "h1";

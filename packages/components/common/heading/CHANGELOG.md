@@ -1,5 +1,11 @@
 # @stackshift-ui/heading
 
+## 6.1.1-fixes.0
+
+### Patch Changes
+
+- Changin of import cn from 'classnames' to import cn from @stackshift-ui/system
+
 ## 6.1.0
 
 ### Major Changes

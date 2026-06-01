@@ -1,6 +1,6 @@
 import { Button } from "@stackshift-ui/button";
 import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
-import cn from "classnames";
+import { cn } from "@stackshift-ui/system";
 import type { ElementType, HTMLProps, ReactNode } from "react";
 
 type Variant = "variant_a" | "variant_b";

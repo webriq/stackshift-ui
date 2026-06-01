@@ -1,6 +1,6 @@
 import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
 import { Text } from "@stackshift-ui/text";
-import cn from "classnames";
+import { cn } from "@stackshift-ui/system";
 import type { ElementType, HTMLProps, ReactNode } from "react";
 
 type VariantType = "inline" | "stacked";

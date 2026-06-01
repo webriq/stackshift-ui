@@ -7,7 +7,7 @@ import { Link } from "@stackshift-ui/link";
 import { Section } from "@stackshift-ui/section";
 import { Text } from "@stackshift-ui/text";
 import { useClickAway, useWindowScroll } from "@uidotdev/usehooks";
-import cn from "classnames";
+import { cn } from "@stackshift-ui/system";
 import React, {
   createContext,
   forwardRef,

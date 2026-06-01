@@ -1,7 +1,7 @@
 {
   "name": "@stackshift-ui/navigation",
   "description": "",
-  "version": "6.1.0",
+  "version": "6.1.1-fixes.0",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -41,7 +41,6 @@
     "vitest": "^2.1.1"
   },
   "dependencies": {
-    "classnames": "^2.5.1",
     "@portabletext/react": "^3.1.0",
     "@react-spring/web": "^10.0.1",
     "@stackshift-ui/button": "workspace:*",

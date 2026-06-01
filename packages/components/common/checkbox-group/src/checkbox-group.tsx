@@ -1,5 +1,5 @@
 import { DefaultComponent, useStackShiftUIComponents } from "@stackshift-ui/system";
-import cn from "classnames";
+import { cn } from "@stackshift-ui/system";
 import { forwardRef, Fragment, type ElementType, type HTMLProps, type ReactNode } from "react";
 
 type StyleVariants<T extends string> = Record<T, string>;

@@ -1,5 +1,13 @@
 # @stackshift-ui/blockstyle
 
+## 6.1.1-fixes.0
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/heading@6.1.1-fixes.0
+  - @stackshift-ui/text@6.1.1-fixes.0
+
 ## 6.1.0
 
 ### Major Changes
