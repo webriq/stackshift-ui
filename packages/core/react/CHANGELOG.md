@@ -1,5 +1,84 @@
 # @stackshift-ui/react
 
+## 7.0.1
+
+### Patch Changes
+
+- 3902d79: fix build publish
+- Updated dependencies [3902d79]
+- Updated dependencies [0ff6eb9]
+  - @stackshift-ui/accordion@1.0.1
+  - @stackshift-ui/avatar@6.1.1
+  - @stackshift-ui/badge@6.1.1
+  - @stackshift-ui/blockstyle@6.1.1
+  - @stackshift-ui/button@6.1.1
+  - @stackshift-ui/calendar@1.0.1
+  - @stackshift-ui/card@6.1.1
+  - @stackshift-ui/checkbox@6.1.1
+  - @stackshift-ui/checkbox-group@6.1.1
+  - @stackshift-ui/data-table@1.0.1
+  - @stackshift-ui/date-picker@1.0.1
+  - @stackshift-ui/dialog@1.0.1
+  - @stackshift-ui/dropdown-menu@1.0.1
+  - @stackshift-ui/form@6.1.1
+  - @stackshift-ui/form-field@6.1.1
+  - @stackshift-ui/heading@6.1.1
+  - @stackshift-ui/image@6.1.1
+  - @stackshift-ui/input@6.1.1
+  - @stackshift-ui/input-file@6.1.1
+  - @stackshift-ui/label@1.0.1
+  - @stackshift-ui/link@6.1.1
+  - @stackshift-ui/menu@1.0.1
+  - @stackshift-ui/pagination@1.0.1
+  - @stackshift-ui/popover@1.0.1
+  - @stackshift-ui/radio@6.1.1
+  - @stackshift-ui/radio-group@6.1.1
+  - @stackshift-ui/scroll-area@1.0.1
+  - @stackshift-ui/select@6.1.1
+  - @stackshift-ui/sheet@1.0.1
+  - @stackshift-ui/skeleton@1.0.1
+  - @stackshift-ui/social-icons@6.1.1
+  - @stackshift-ui/stats-card@6.1.1
+  - @stackshift-ui/swiper-button@6.1.1
+  - @stackshift-ui/swiper-pagination@6.1.1
+  - @stackshift-ui/switch@1.0.1
+  - @stackshift-ui/table@1.0.1
+  - @stackshift-ui/text@6.1.1
+  - @stackshift-ui/textarea@6.1.1
+  - @stackshift-ui/toast@1.0.1
+  - @stackshift-ui/toggle@1.0.1
+  - @stackshift-ui/toggle-group@1.0.1
+  - @stackshift-ui/tooltip@1.0.1
+  - @stackshift-ui/webriq-form@6.1.1
+  - @stackshift-ui/youtube-video@6.1.1
+  - @stackshift-ui/container@6.1.1
+  - @stackshift-ui/flex@6.1.1
+  - @stackshift-ui/grid@6.1.1
+  - @stackshift-ui/grid-item@6.1.1
+  - @stackshift-ui/section@6.1.1
+  - @stackshift-ui/ai-chatbot@1.0.1
+  - @stackshift-ui/app-promo@6.1.1
+  - @stackshift-ui/blog@6.1.1
+  - @stackshift-ui/call-to-action@6.1.1
+  - @stackshift-ui/contact@6.1.1
+  - @stackshift-ui/cookies@6.1.1
+  - @stackshift-ui/faqs@6.1.1
+  - @stackshift-ui/features@6.1.1
+  - @stackshift-ui/footer@6.1.1
+  - @stackshift-ui/header@6.1.1
+  - @stackshift-ui/how-it-works@6.1.1
+  - @stackshift-ui/logo-cloud@6.1.1
+  - @stackshift-ui/navigation@6.1.1
+  - @stackshift-ui/newsletter@6.1.1
+  - @stackshift-ui/portfolio@6.1.1
+  - @stackshift-ui/signin-signup@6.1.1
+  - @stackshift-ui/statistics@6.1.1
+  - @stackshift-ui/team@6.1.1
+  - @stackshift-ui/testimonial@6.1.1
+  - @stackshift-ui/text-component@6.1.1
+  - @stackshift-ui/system@6.1.1
+  - @stackshift-ui/scripts@6.1.1
+
 ## 7.0.1-fixes.1
 
 ### Patch Changes

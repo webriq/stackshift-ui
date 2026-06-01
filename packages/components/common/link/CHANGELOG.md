@@ -1,5 +1,14 @@
 # @stackshift-ui/link
 
+## 6.1.1
+
+### Patch Changes
+
+- 3902d79: fix build publish
+- Updated dependencies [3902d79]
+  - @stackshift-ui/system@6.1.1
+  - @stackshift-ui/scripts@6.1.1
+
 ## 6.1.1-fixes.0
 
 ### Patch Changes

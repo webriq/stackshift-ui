@@ -1,5 +1,11 @@
 # @stackshift-ui/jest-presets
 
+## 2.0.9
+
+### Patch Changes
+
+- 3902d79: fix build publish
+
 ## 2.0.9-fixes.0
 
 ### Patch Changes

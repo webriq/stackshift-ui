@@ -1,6 +1,6 @@
 {
   "name": "@stackshift-ui/jest-presets",
-  "version": "2.0.9-fixes.0",
+  "version": "2.0.9",
   "private": false,
   "license": "MIT",
   "files": [

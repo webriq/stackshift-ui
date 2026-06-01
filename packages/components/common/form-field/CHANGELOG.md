@@ -1,5 +1,23 @@
 # @stackshift-ui/form-field
 
+## 6.1.1
+
+### Patch Changes
+
+- 3902d79: fix build publish
+- Updated dependencies [3902d79]
+- Updated dependencies [0ff6eb9]
+  - @stackshift-ui/checkbox@6.1.1
+  - @stackshift-ui/checkbox-group@6.1.1
+  - @stackshift-ui/input@6.1.1
+  - @stackshift-ui/label@1.0.1
+  - @stackshift-ui/radio@6.1.1
+  - @stackshift-ui/radio-group@6.1.1
+  - @stackshift-ui/select@6.1.1
+  - @stackshift-ui/textarea@6.1.1
+  - @stackshift-ui/system@6.1.1
+  - @stackshift-ui/scripts@6.1.1
+
 ## 6.1.1-fixes.0
 
 ### Patch Changes

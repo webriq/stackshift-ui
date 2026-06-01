@@ -1,5 +1,15 @@
 # @stackshift-ui/pagination
 
+## 1.0.1
+
+### Patch Changes
+
+- 3902d79: fix build publish
+- Updated dependencies [3902d79]
+  - @stackshift-ui/button@6.1.1
+  - @stackshift-ui/system@6.1.1
+  - @stackshift-ui/scripts@6.1.1
+
 ## 1.0.1-fixes.0
 
 ### Patch Changes
