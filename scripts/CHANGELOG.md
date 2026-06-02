@@ -1,5 +1,17 @@
 # @stackshift-ui/scripts
 
+## 6.1.1
+
+### Patch Changes
+
+- 3902d79: fix build publish
+
+## 6.1.1-fixes.0
+
+### Patch Changes
+
+- fix build publish
+
 ## 6.1.0
 
 ### Major Changes

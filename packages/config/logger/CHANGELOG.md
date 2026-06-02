@@ -1,5 +1,17 @@
 # @stackshift-ui/logger
 
+## 2.0.9
+
+### Patch Changes
+
+- 3902d79: fix build publish
+
+## 2.0.9-fixes.0
+
+### Patch Changes
+
+- fix build publish
+
 ## 2.0.8
 
 ### Patch Changes

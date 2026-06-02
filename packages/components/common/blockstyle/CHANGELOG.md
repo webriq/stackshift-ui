@@ -1,5 +1,32 @@
 # @stackshift-ui/blockstyle
 
+## 6.1.1
+
+### Patch Changes
+
+- 3902d79: fix build publish
+- Updated dependencies [3902d79]
+- Updated dependencies [0ff6eb9]
+  - @stackshift-ui/heading@6.1.1
+  - @stackshift-ui/image@6.1.1
+  - @stackshift-ui/link@6.1.1
+  - @stackshift-ui/text@6.1.1
+  - @stackshift-ui/system@6.1.1
+  - @stackshift-ui/scripts@6.1.1
+
+## 6.1.1-fixes.1
+
+### Patch Changes
+
+- fix build publish
+- Updated dependencies
+  - @stackshift-ui/heading@6.1.1-fixes.1
+  - @stackshift-ui/image@6.1.1-fixes.0
+  - @stackshift-ui/link@6.1.1-fixes.0
+  - @stackshift-ui/text@6.1.1-fixes.1
+  - @stackshift-ui/system@6.1.1-fixes.0
+  - @stackshift-ui/scripts@6.1.1-fixes.0
+
 ## 6.1.1-fixes.0
 
 ### Patch Changes

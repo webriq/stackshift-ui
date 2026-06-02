@@ -1,5 +1,17 @@
 # @stackshift-ui/typescript-config
 
+## 6.0.11
+
+### Patch Changes
+
+- 3902d79: fix build publish
+
+## 6.0.11-fixes.0
+
+### Patch Changes
+
+- fix build publish
+
 ## 6.0.10
 
 ### Patch Changes

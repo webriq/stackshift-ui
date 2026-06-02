@@ -1,5 +1,24 @@
 # @stackshift-ui/input-file
 
+## 6.1.1
+
+### Patch Changes
+
+- 3902d79: fix build publish
+- 0ff6eb9: Changin of import cn from 'classnames' to import cn from @stackshift-ui/system
+- Updated dependencies [3902d79]
+  - @stackshift-ui/system@6.1.1
+  - @stackshift-ui/scripts@6.1.1
+
+## 6.1.1-fixes.1
+
+### Patch Changes
+
+- fix build publish
+- Updated dependencies
+  - @stackshift-ui/system@6.1.1-fixes.0
+  - @stackshift-ui/scripts@6.1.1-fixes.0
+
 ## 6.1.1-fixes.0
 
 ### Patch Changes
