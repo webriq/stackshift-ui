@@ -193,6 +193,7 @@ export {
   LogoCloud_C,
   LogoCloud_D,
 } from "@stackshift-ui/logo-cloud";
+export { MarkdownSection, Markdown_A } from "@stackshift-ui/markdown";
 export {
   Navigation,
   Navigation_A,

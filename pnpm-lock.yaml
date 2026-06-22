@@ -219,7 +219,7 @@ importers:
         version: 0.468.0(react@18.3.1)
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -301,7 +301,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -383,7 +383,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -465,7 +465,7 @@ importers:
         version: link:../text
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -544,7 +544,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
       react-icons:
         specifier: ^5.3.0
         version: 5.5.0(react@18.3.1)
@@ -626,7 +626,7 @@ importers:
         version: 0.468.0(react@18.3.1)
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
       react-day-picker:
         specifier: ^9.7.0
         version: 9.8.0(react@18.3.1)
@@ -705,7 +705,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -787,7 +787,7 @@ importers:
         version: 0.468.0(react@18.3.1)
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -852,12 +852,9 @@ importers:
       '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      classnames:
-        specifier: ^2.5.1
-        version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -951,7 +948,7 @@ importers:
         version: 0.468.0(react@18.3.1)
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -1048,7 +1045,7 @@ importers:
         version: 0.468.0(react@18.3.1)
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -1130,7 +1127,7 @@ importers:
         version: 0.468.0(react@18.3.1)
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -1212,7 +1209,7 @@ importers:
         version: 0.468.0(react@18.3.1)
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -1288,7 +1285,7 @@ importers:
         version: link:../webriq-form
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -1379,7 +1376,7 @@ importers:
         version: link:../textarea
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -1453,12 +1450,9 @@ importers:
       '@testing-library/jest-dom':
         specifier: ^6.5.0
         version: 6.6.3
-      classnames:
-        specifier: ^2.5.1
-        version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -1525,7 +1519,7 @@ importers:
         version: link:../../../core/system
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -1595,7 +1589,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -1660,12 +1654,9 @@ importers:
       '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      classnames:
-        specifier: ^2.5.1
-        version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -1741,7 +1732,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -1808,7 +1799,7 @@ importers:
         version: link:../../../core/system
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -1887,7 +1878,7 @@ importers:
         version: 0.468.0(react@18.3.1)
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -1963,7 +1954,7 @@ importers:
         version: 0.468.0(react@18.3.1)
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -2039,7 +2030,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
       pnpm:
         specifier: ^10.12.4
         version: 10.13.1
@@ -2113,12 +2104,9 @@ importers:
       '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      classnames:
-        specifier: ^2.5.1
-        version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -2194,7 +2182,7 @@ importers:
         version: 0.468.0(react@18.3.1)
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -2267,7 +2255,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -2343,7 +2331,7 @@ importers:
         version: 0.468.0(react@18.3.1)
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -2419,7 +2407,7 @@ importers:
         version: 0.468.0(react@18.3.1)
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -2495,7 +2483,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -2560,12 +2548,9 @@ importers:
       '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      classnames:
-        specifier: ^2.5.1
-        version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
       react-icons:
         specifier: ^5.3.0
         version: 5.5.0(react@18.3.1)
@@ -2636,12 +2621,9 @@ importers:
       '@stackshift-ui/text':
         specifier: workspace:*
         version: link:../text
-      classnames:
-        specifier: ^2.5.1
-        version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -2709,12 +2691,9 @@ importers:
       '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      classnames:
-        specifier: ^2.5.1
-        version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -2779,12 +2758,9 @@ importers:
       '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      classnames:
-        specifier: ^2.5.1
-        version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -2857,7 +2833,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -2927,7 +2903,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -2992,12 +2968,9 @@ importers:
       '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      classnames:
-        specifier: ^2.5.1
-        version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -3067,7 +3040,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -3137,7 +3110,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
       next-themes:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -3225,7 +3198,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -3304,7 +3277,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -3377,7 +3350,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -3450,7 +3423,7 @@ importers:
         version: link:../../../core/system
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -3517,7 +3490,7 @@ importers:
         version: link:../../../core/system
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -3582,12 +3555,9 @@ importers:
       '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      classnames:
-        specifier: ^2.5.1
-        version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -3652,12 +3622,9 @@ importers:
       '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      classnames:
-        specifier: ^2.5.1
-        version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -3722,12 +3689,9 @@ importers:
       '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      classnames:
-        specifier: ^2.5.1
-        version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -3792,12 +3756,9 @@ importers:
       '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      classnames:
-        specifier: ^2.5.1
-        version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -3862,12 +3823,9 @@ importers:
       '@stackshift-ui/system':
         specifier: workspace:*
         version: link:../../../core/system
-      classnames:
-        specifier: ^2.5.1
-        version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -4037,7 +3995,7 @@ importers:
         version: link:../../common/text
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -4140,7 +4098,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -4246,7 +4204,7 @@ importers:
         version: link:../../common/text
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -4358,7 +4316,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -4425,7 +4383,7 @@ importers:
         version: link:../../../core/system
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
       vanilla-cookieconsent:
         specifier: 3.0.1
         version: 3.0.1
@@ -4525,7 +4483,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -4622,7 +4580,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -4725,7 +4683,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -4825,7 +4783,7 @@ importers:
         version: link:../../common/text
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
       react:
         specifier: 16.8 - 19
         version: 18.3.1
@@ -4919,7 +4877,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -5013,7 +4971,110 @@ importers:
         version: link:../../common/text
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+    devDependencies:
+      '@stackshift-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../../config/config-eslint
+      '@stackshift-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../../config/config-typescript
+      '@testing-library/react':
+        specifier: ^16.0.1
+        version: 16.3.0(@testing-library/dom@10.4.0)(@types/react-dom@18.3.7(@types/react@18.3.23))(@types/react@18.3.23)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@types/node':
+        specifier: ^22.7.0
+        version: 22.16.5
+      '@types/react':
+        specifier: ^18.3.9
+        version: 18.3.23
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.7(@types/react@18.3.23)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.1
+        version: 4.7.0(vite@5.4.19(@types/node@22.16.5)(sass@1.89.2))
+      '@vitest/coverage-v8':
+        specifier: ^2.1.1
+        version: 2.1.9(vitest@2.1.9(@types/node@22.16.5)(jsdom@25.0.1)(sass@1.89.2))
+      esbuild-plugin-rdi:
+        specifier: ^0.0.0
+        version: 0.0.0
+      esbuild-plugin-react18:
+        specifier: ^0.2.5
+        version: 0.2.6
+      esbuild-plugin-react18-css:
+        specifier: ^0.0.4
+        version: 0.0.4
+      jsdom:
+        specifier: ^25.0.1
+        version: 25.0.1
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+      tsup:
+        specifier: ^8.3.0
+        version: 8.5.0(jiti@1.21.7)(postcss@8.5.6)(typescript@5.8.3)(yaml@2.8.0)
+      typescript:
+        specifier: ^5.6.2
+        version: 5.8.3
+      vite-tsconfig-paths:
+        specifier: ^5.0.1
+        version: 5.1.4(typescript@5.8.3)(vite@5.4.19(@types/node@22.16.5)(sass@1.89.2))
+      vitest:
+        specifier: ^2.1.1
+        version: 2.1.9(@types/node@22.16.5)(jsdom@25.0.1)(sass@1.89.2)
+
+  packages/components/sections/markdown:
+    dependencies:
+      '@stackshift-ui/scripts':
+        specifier: workspace:*
+        version: link:../../../../scripts
+      '@stackshift-ui/section':
+        specifier: workspace:*
+        version: link:../../layout/section
+      '@stackshift-ui/system':
+        specifier: workspace:*
+        version: link:../../../core/system
+      classnames:
+        specifier: ^2.5.1
+        version: 2.5.1
+      date-fns:
+        specifier: ^4.1.0
+        version: 4.1.0
+      lucide-react:
+        specifier: ^0.468.0
+        version: 0.468.0(react@18.3.1)
+      next:
+        specifier: 10 - 14
+        version: 14.2.35(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+      react-day-picker:
+        specifier: ^9.7.0
+        version: 9.8.0(react@18.3.1)
+      rehype-sanitize:
+        specifier: ^6.0.0
+        version: 6.0.0
+      rehype-stringify:
+        specifier: ^10.0.1
+        version: 10.0.1
+      remark:
+        specifier: ^15.0.1
+        version: 15.0.1
+      remark-html:
+        specifier: ^16.0.1
+        version: 16.0.1
+      remark-parse:
+        specifier: ^11.0.0
+        version: 11.0.0
+      remark-rehype:
+        specifier: ^11.1.2
+        version: 11.1.2
+      unified:
+        specifier: 11.0.5
+        version: 11.0.5
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -5117,12 +5178,9 @@ importers:
       '@uidotdev/usehooks':
         specifier: ^2.4.1
         version: 2.4.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      classnames:
-        specifier: ^2.5.1
-        version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
       react-icons:
         specifier: ^5.3.0
         version: 5.5.0(react@18.3.1)
@@ -5222,7 +5280,7 @@ importers:
         version: link:../../common/text
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -5316,7 +5374,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -5422,7 +5480,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -5510,7 +5568,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -5607,7 +5665,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -5707,7 +5765,7 @@ importers:
         version: 2.5.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -5792,7 +5850,7 @@ importers:
         version: link:../../../core/system
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
     devDependencies:
       '@stackshift-ui/eslint-config':
         specifier: workspace:*
@@ -5876,6 +5934,9 @@ importers:
 
   packages/config/config-tailwind:
     dependencies:
+      '@tailwindcss/typography':
+        specifier: ^0.5.15
+        version: 0.5.20(tailwindcss@3.4.17)
       tailwindcss:
         specifier: ^3.4.1
         version: 3.4.17
@@ -6039,6 +6100,9 @@ importers:
       '@stackshift-ui/logo-cloud':
         specifier: workspace:*
         version: link:../../components/sections/logo-cloud
+      '@stackshift-ui/markdown':
+        specifier: workspace:*
+        version: link:../../components/sections/markdown
       '@stackshift-ui/menu':
         specifier: workspace:*
         version: link:../../components/common/menu
@@ -6143,7 +6207,7 @@ importers:
         version: link:../../components/common/youtube-video
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
       react:
         specifier: 16.8 - 19
         version: 18.3.1
@@ -6210,7 +6274,7 @@ importers:
         version: 2.1.1
       next:
         specifier: 10 - 14
-        version: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+        version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
       nextjs-darkmode:
         specifier: ^1.0.4
         version: 1.0.10(@types/react@18.3.23)(react@18.3.1)
@@ -8086,6 +8150,11 @@ packages:
 
   '@swc/helpers@0.5.5':
     resolution: {integrity: sha512-KGYxvIOXcceOAbEk4bi/dVLEK9z8sZ0uBB3Il5b1rhfClSpcX0yfRO0KmTkqR2cnQDymwLB+25ZyMzICg/cm/A==}
+
+  '@tailwindcss/typography@0.5.20':
+    resolution: {integrity: sha512-hwbzQuNUfcPvbegQFatVPl/MY/tcM9KLl963hQ5laJKPh81TEZ1+dNG9PirGvcaDBkp+BCshExAyKVPW91dozw==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || >=4.0.0 || insiders'
 
   '@tanstack/react-table@8.21.3':
     resolution: {integrity: sha512-5nNMTSETP4ykGegmVkhjcS8tTLW6Vl4axfEGQN3v0zdHYbK4UfoqfPChclTrJ4EoK9QynqAu9oUf8VEmrpZ5Ww==}
@@ -10108,6 +10177,9 @@ packages:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
     engines: {node: '>= 0.4'}
 
+  hast-util-sanitize@5.0.2:
+    resolution: {integrity: sha512-3yTWghByc50aGS7JlGhk61SPenfE/p1oaFeNwkOOyrscaOkMGrcW9+Cy/QAIOBpZxP1yqDIzFMR0+Np0i0+usg==}
+
   hast-util-to-html@9.0.5:
     resolution: {integrity: sha512-OguPdidb+fbHQSU4Q4ZiLKnzWo8Wwsf5bZfbvu7//a9oTYoqD/fWpe96NuHkoS9h0ccGOTe0C4NGXdtS0iObOw==}
 
@@ -11618,6 +11690,10 @@ packages:
     peerDependencies:
       postcss: ^8.2.14
 
+  postcss-selector-parser@6.0.10:
+    resolution: {integrity: sha512-IQ7TZdoaqbT+LCpShg46jnZVlhWD2w6iQYAcYXfHARZ7X1t/UGhhceQDs5X0cGqKvYlHNOuv7Oa1xmb0oQuA3w==}
+    engines: {node: '>=4'}
+
   postcss-selector-parser@6.1.2:
     resolution: {integrity: sha512-Q8qQfPiZ+THO/3ZrOrO0cJJKfpYCagtMUkXbnEfmgUjwXg6z/WBeOyS9APBBPCTSiDV+s4SwQGu8yFsiMRIudg==}
     engines: {node: '>=4'}
@@ -11901,14 +11977,29 @@ packages:
     resolution: {integrity: sha512-qx+xQGZVsy55CH0a1hiVwHmqjLryfh7wQyF5HO07XJ9f7dQMY/gPQHhlyDkIzJKC+x2fUCpCcUODUUUFrm7SHA==}
     hasBin: true
 
+  rehype-sanitize@6.0.0:
+    resolution: {integrity: sha512-CsnhKNsyI8Tub6L4sm5ZFsme4puGfc6pYylvXo1AeqaGbjOYyzNv3qZPwvs0oMJ39eryyeOdmxwUIo94IpEhqg==}
+
+  rehype-stringify@10.0.1:
+    resolution: {integrity: sha512-k9ecfXHmIPuFVI61B9DeLPN0qFHfawM6RsuX48hoqlaKSF61RskNjSm1lI8PhBEM0MRdLxVVm4WmTqJQccH9mA==}
+
+  remark-html@16.0.1:
+    resolution: {integrity: sha512-B9JqA5i0qZe0Nsf49q3OXyGvyXuZFDzAP2iOFLEumymuYJITVpiH1IgsTEwTpdptDmZlMDMWeDmSawdaJIGCXQ==}
+
   remark-mdx@3.1.0:
     resolution: {integrity: sha512-Ngl/H3YXyBV9RcRNdlYsZujAmhsxwzxpDzpDEhFBVAGthS4GDgnctpDjgFl/ULx5UEDzqtW1cyBSNKqYYrqLBA==}
 
   remark-parse@11.0.0:
     resolution: {integrity: sha512-FCxlKLNGknS5ba/1lmpYijMUzX2esxW5xQqjWxw2eHFfS2MSdaHVINFmhjo+qN1WhZhNimq0dZATN9pH0IDrpA==}
 
+  remark-rehype@11.1.2:
+    resolution: {integrity: sha512-Dh7l57ianaEoIpzbp0PC9UKAdCSVklD8E5Rpw7ETfbTl3FqcOOgq5q2LVDhgGCkaBv7p24JXikPdvhhmHvKMsw==}
+
   remark-stringify@11.0.0:
     resolution: {integrity: sha512-1OSmLd3awB/t8qdoEOMazZkNsfVTeY4fTsgzcQFdXNq8ToTN4ZGwrMnlda4K6smTFKD+GRV6O48i6Z4iKgPPpw==}
+
+  remark@15.0.1:
+    resolution: {integrity: sha512-Eht5w30ruCXgFmxVUSlNWQ9iiimq07URKeFS3hNc8cUWy1llX4KDWfyEDZRycMc+znsN9Ux5/tJ/BFdgdOwA3A==}
 
   require-directory@2.1.1:
     resolution: {integrity: sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==}
@@ -14965,6 +15056,11 @@ snapshots:
       '@swc/counter': 0.1.3
       tslib: 2.8.1
 
+  '@tailwindcss/typography@0.5.20(tailwindcss@3.4.17)':
+    dependencies:
+      postcss-selector-parser: 6.0.10
+      tailwindcss: 3.4.17
+
   '@tanstack/react-table@8.21.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@tanstack/table-core': 8.21.3
@@ -16635,7 +16731,7 @@ snapshots:
       '@typescript-eslint/parser': 8.38.0(eslint@8.57.1)(typescript@5.8.3)
       eslint: 8.57.1
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.38.0(eslint@8.57.1)(typescript@5.8.3))(eslint@8.57.1))(eslint@8.57.1)
+      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.32.0)(eslint@8.57.1)
       eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.38.0(eslint@8.57.1)(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.1)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@8.57.1)
       eslint-plugin-react: 7.37.5(eslint@8.57.1)
@@ -16666,21 +16762,6 @@ snapshots:
       debug: 3.2.7
       is-core-module: 2.16.1
       resolve: 1.22.10
-    transitivePeerDependencies:
-      - supports-color
-
-  eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.38.0(eslint@8.57.1)(typescript@5.8.3))(eslint@8.57.1))(eslint@8.57.1):
-    dependencies:
-      '@nolyfill/is-core-module': 1.0.39
-      debug: 4.4.3
-      eslint: 8.57.1
-      get-tsconfig: 4.10.1
-      is-bun-module: 2.0.0
-      stable-hash: 0.0.5
-      tinyglobby: 0.2.15
-      unrs-resolver: 1.11.1
-    optionalDependencies:
-      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.38.0(eslint@8.57.1)(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -16730,14 +16811,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.1(@typescript-eslint/parser@8.38.0(eslint@8.57.1)(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.38.0(eslint@8.57.1)(typescript@5.8.3))(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1):
+  eslint-module-utils@2.12.1(@typescript-eslint/parser@8.38.0(eslint@8.57.1)(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.1):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
       '@typescript-eslint/parser': 8.38.0(eslint@8.57.1)(typescript@5.8.3)
       eslint: 8.57.1
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.38.0(eslint@8.57.1)(typescript@5.8.3))(eslint@8.57.1))(eslint@8.57.1)
+      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.32.0)(eslint@8.57.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -16787,7 +16868,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 8.57.1
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.1(@typescript-eslint/parser@8.38.0(eslint@8.57.1)(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.38.0(eslint@8.57.1)(typescript@5.8.3))(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1)
+      eslint-module-utils: 2.12.1(@typescript-eslint/parser@8.38.0(eslint@8.57.1)(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.1)
       hasown: 2.0.2
       is-core-module: 2.16.1
       is-glob: 4.0.3
@@ -17405,6 +17486,12 @@ snapshots:
   hasown@2.0.2:
     dependencies:
       function-bind: 1.1.2
+
+  hast-util-sanitize@5.0.2:
+    dependencies:
+      '@types/hast': 3.0.4
+      '@ungap/structured-clone': 1.3.0
+      unist-util-position: 5.0.0
 
   hast-util-to-html@9.0.5:
     dependencies:
@@ -18834,7 +18921,7 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  next@14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2):
+  next@14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2):
     dependencies:
       '@next/env': 14.2.15
       '@swc/helpers': 0.5.5
@@ -18844,7 +18931,7 @@ snapshots:
       postcss: 8.4.31
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
-      styled-jsx: 5.1.1(@babel/core@7.28.0)(react@18.3.1)
+      styled-jsx: 5.1.1(react@18.3.1)
     optionalDependencies:
       '@next/swc-darwin-arm64': 14.2.15
       '@next/swc-darwin-x64': 14.2.15
@@ -18870,7 +18957,7 @@ snapshots:
       postcss: 8.4.31
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
-      styled-jsx: 5.1.1(@babel/core@7.28.0)(react@18.3.1)
+      styled-jsx: 5.1.1(react@18.3.1)
     optionalDependencies:
       '@next/swc-darwin-arm64': 14.2.33
       '@next/swc-darwin-x64': 14.2.33
@@ -18898,7 +18985,7 @@ snapshots:
       r18gs: 3.0.1(@types/react@18.3.23)(react@18.3.1)
       react: 18.3.1
     optionalDependencies:
-      next: 14.2.15(@babel/core@7.28.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
+      next: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.89.2)
 
   no-case@3.0.4:
     dependencies:
@@ -19335,6 +19422,11 @@ snapshots:
       postcss: 8.5.6
       postcss-selector-parser: 6.1.2
 
+  postcss-selector-parser@6.0.10:
+    dependencies:
+      cssesc: 3.0.0
+      util-deprecate: 1.0.2
+
   postcss-selector-parser@6.1.2:
     dependencies:
       cssesc: 3.0.0
@@ -19640,6 +19732,25 @@ snapshots:
     dependencies:
       jsesc: 0.5.0
 
+  rehype-sanitize@6.0.0:
+    dependencies:
+      '@types/hast': 3.0.4
+      hast-util-sanitize: 5.0.2
+
+  rehype-stringify@10.0.1:
+    dependencies:
+      '@types/hast': 3.0.4
+      hast-util-to-html: 9.0.5
+      unified: 11.0.5
+
+  remark-html@16.0.1:
+    dependencies:
+      '@types/mdast': 4.0.4
+      hast-util-sanitize: 5.0.2
+      hast-util-to-html: 9.0.5
+      mdast-util-to-hast: 13.2.0
+      unified: 11.0.5
+
   remark-mdx@3.1.0:
     dependencies:
       mdast-util-mdx: 3.0.0
@@ -19656,11 +19767,28 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  remark-rehype@11.1.2:
+    dependencies:
+      '@types/hast': 3.0.4
+      '@types/mdast': 4.0.4
+      mdast-util-to-hast: 13.2.0
+      unified: 11.0.5
+      vfile: 6.0.3
+
   remark-stringify@11.0.0:
     dependencies:
       '@types/mdast': 4.0.4
       mdast-util-to-markdown: 2.1.2
       unified: 11.0.5
+
+  remark@15.0.1:
+    dependencies:
+      '@types/mdast': 4.0.4
+      remark-parse: 11.0.0
+      remark-stringify: 11.0.0
+      unified: 11.0.5
+    transitivePeerDependencies:
+      - supports-color
 
   require-directory@2.1.1: {}
 
@@ -20142,12 +20270,10 @@ snapshots:
 
   strip-json-comments@3.1.1: {}
 
-  styled-jsx@5.1.1(@babel/core@7.28.0)(react@18.3.1):
+  styled-jsx@5.1.1(react@18.3.1):
     dependencies:
       client-only: 0.0.1
       react: 18.3.1
-    optionalDependencies:
-      '@babel/core': 7.28.0
 
   sucrase@3.35.0:
     dependencies:
