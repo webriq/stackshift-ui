@@ -67,6 +67,7 @@
     "@stackshift-ui/input-file": "workspace:*",
     "@stackshift-ui/link": "workspace:*",
     "@stackshift-ui/logo-cloud": "workspace:*",
+    "@stackshift-ui/markdown": "workspace:*",
     "@stackshift-ui/navigation": "workspace:*",
     "@stackshift-ui/newsletter": "workspace:*",
     "@stackshift-ui/portfolio": "workspace:*",
