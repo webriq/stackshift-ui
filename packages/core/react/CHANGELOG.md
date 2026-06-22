@@ -1,5 +1,16 @@
 # @stackshift-ui/react
 
+## 7.1.0-alpha.0
+
+### Minor Changes
+
+- add markdown component section
+
+### Patch Changes
+
+- Updated dependencies
+  - @stackshift-ui/markdown@1.0.0-alpha.0
+
 ## 7.0.1
 
 ### Patch Changes

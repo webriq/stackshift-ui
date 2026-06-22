@@ -1,5 +1,11 @@
 # @stackshift-ui/tailwind-config
 
+## 3.1.0-alpha.0
+
+### Minor Changes
+
+- add markdown component section
+
 ## 3.0.1
 
 ### Patch Changes

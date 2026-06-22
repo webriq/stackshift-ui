@@ -1,7 +1,7 @@
 {
   "name": "@stackshift-ui/markdown",
   "description": "Write your content using Markdown syntax",
-  "version": "0.0.0",
+  "version": "1.0.0-alpha.0",
   "private": false,
   "sideEffects": false,
   "main": "./dist/index.js",
